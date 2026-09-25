@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-118",
+  "title": "Observing conformal Floquet dynamics on a digital quantum processor",
+  "authors": ["Liang-Hong Mo", "Bastien Lapierre", "Qiang Miao"],
+  "date": "2026-05-26",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.27530",
+  "arxiv_id": "2605.27530",
+  "abstract": "First experimental observation of non-equilibrium Floquet dynamics starting from a many-body critical state prepared via a logarithmic-depth MERA-based circuit on a trapped-ion processor. Extracts central charge c=1/2 (Ising) from Loschmidt-echo decay; observes spatial energy localization and finite-time revivals in the non-heating phase.",
+  "relevance": 3,
+  "tags": ["MERA", "trapped-ion", "hardware-demo", "Floquet-CFT", "Ising", "central-charge", "state-prep", "log-depth-circuit"],
+  "key_claims": [
+    "MERA-prepared critical state used as input to Floquet dynamics on a real trapped-ion processor (log-depth circuit).",
+    "Central charge c=1/2 extracted from Loschmidt-echo decay; CFT verification protocol demonstrated on hardware.",
+    "Directly transferable methodology template for testing holographic observables on MERA-prepared states on hardware."
+  ],
+  "hardware_used": "trapped-ion digital quantum processor",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-06-16"
+}

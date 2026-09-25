@@ -1,0 +1,19 @@
+{
+  "id": "PAPER-2026-117",
+  "title": "Soliton-antisoliton pairs in the supersymmetric gapped phase of an interacting Majorana chain",
+  "authors": ["Alberto Nocera", "Mobin Shakeri", "Armin Rahmani", "Ian Affleck"],
+  "date": "2026-06-03",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.05095",
+  "arxiv_id": "2606.05095",
+  "abstract": "Examines an interacting Majorana fermion chain that realizes the supersymmetric tricritical Ising phase. Shows that supersymmetry persists into the gapped phase beyond the tricritical point, with the lowest excitations being soliton-antisoliton pairs that each bind a localized Majorana mode. Characterizes the excitation/gap structure of the SUSY-TCI neighborhood; no MERA, holography, or stress-tensor correlators.",
+  "relevance": 3,
+  "tags": ["tricritical-ising", "SUSY", "Majorana-chain", "soliton", "gapped-phase", "HYP-027-context"],
+  "key_claims": [
+    "SUSY persists into the gapped phase beyond the TCI point of an interacting Majorana chain.",
+    "Lowest excitations are soliton-antisoliton pairs, each binding a localized Majorana mode.",
+    "Sets the energy scales/excitation structure a chi=3 MERA would need to capture near the TCI fixed point."
+  ],
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-06-16"
+}

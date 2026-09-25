@@ -1,0 +1,37 @@
+{
+  "id": "PAPER-2026-132",
+  "title": "Holographic Dual of PT Symmetric BCFT",
+  "authors": [
+    "Ryota Maeda",
+    "Nanami Nakamura",
+    "Tadashi Takayanagi"
+  ],
+  "date": "2026-06-17",
+  "arxiv_id": "2606.18629",
+  "relevance": 4,
+  "abstract": "Constructs the holographic dual of a 2d CFT with non-Hermitian but PT-symmetric boundary conditions via AdS/BCFT with an imaginary scalar field localized on an end-of-the-world brane. Predicts a spontaneous PT-breaking transition as the non-Hermitian coupling grows and entanglement-entropy growth exceeding standard Cardy-state results.",
+  "tags": [
+    "PT-symmetry",
+    "non-Hermitian",
+    "AdS/BCFT",
+    "end-of-the-world-brane",
+    "PT-breaking-transition",
+    "entanglement-entropy",
+    "Takayanagi"
+  ],
+  "key_claims": [
+    "PT-symmetric (non-Hermitian) boundary criticality in 2d CFT admits a controlled geometric dual: AdS/BCFT with an imaginary scalar on an end-of-the-world brane.",
+    "Predicts a spontaneous PT-breaking transition as the non-Hermitian coupling grows -- directly analogous to the PT-breaking edge that closed the project's ED route at N<=16 (SIM-055).",
+    "Predicts entanglement-entropy growth exceeding standard Cardy-state results -- a concrete, checkable validation signature for a future non-Hermitian MERA."
+  ],
+  "relevance_note": "WATCH (deferred from scan #13, catalogued scan #14). Holographic counterpart of exactly the structure HYP-028 needs. Two payoffs: (1) legitimizes the non-Hermitian MERA target -- if PT-symmetric boundary criticality has a controlled bulk geometry, a non-Hermitian tensor-network discretization of it is discretizing a genuine geometry, the same MERA-equals-discrete-AdS logic behind the alpha=4 force program; (2) supplies concrete validation observables (PT-breaking transition location, super-Cardy entanglement growth) for any future non-Hermitian MERA. Takayanagi-group provenance; tooling/legitimation reference for the HYP-028 thread, not a competitor result.",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-028"
+  ],
+  "anchor_contradiction": "None. Reinforces (does not challenge) the PT-breaking-edge phenomenology behind the SIM-055 ED closure; no contact with alpha=4 or transport anchors.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.18629",
+  "discovered_by": "weekly-scan-14",
+  "discovered_date": "2026-07-02"
+}

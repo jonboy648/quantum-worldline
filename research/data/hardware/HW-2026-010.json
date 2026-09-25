@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-010",
+  "organization": "IonQ",
+  "processor": "Tempo",
+  "date": "2025-10-21",
+  "source_url": "https://ionq.com/news/ionq-achieves-record-breaking-quantum-performance-milestone-of-aq-64",
+  "physical_qubits": 100,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": 0.9999,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "IonQ Tempo: 100-qubit trapped-ion system. First and only company to achieve 99.99% two-qubit gate fidelity (four nines) using Electronic Qubit Control (EQC) technology from acquired Oxford Ionics. Algorithmic qubits #AQ 64 -- achieved 3 months ahead of schedule. Roadmap: 256 qubits at 99.99% fidelity by 2026, >10,000 qubits with 99.99999% logical fidelity by 2027."
+}

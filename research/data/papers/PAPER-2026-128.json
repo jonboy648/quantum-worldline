@@ -1,0 +1,37 @@
+{
+  "id": "PAPER-2026-128",
+  "title": "Nonadiabatic Holonomic Single-Qubit Gates in Non-Hermitian Systems",
+  "authors": [
+    "Wei Li",
+    "Yue Zhang",
+    "Yu Kun Chen",
+    "Jia Yao Liang"
+  ],
+  "date": "2026-06-25",
+  "arxiv_id": "2606.26798",
+  "relevance": 3.5,
+  "abstract": "A nonadiabatic holonomic approach for driven three-level systems under non-unitary dynamics. A biorthogonal framework with tailored complex pulses enforces exact closure of the computational-subspace evolution without cyclic evolution, folding decay and dephasing across all eigenstates directly into pulse design and maintaining gate fidelity despite dissipation -- an advance over previous non-Hermitian treatments.",
+  "tags": [
+    "non-Hermitian",
+    "biorthogonal",
+    "holonomic-gates",
+    "non-unitary-dynamics",
+    "PT-symmetry",
+    "dissipation"
+  ],
+  "key_claims": [
+    "A biorthogonal (left/right eigenstate) framework supports exact subspace-closure gate construction in genuinely non-unitary, dissipative settings.",
+    "Decay and dephasing across all eigenstates are incorporated directly into the pulse/observable design rather than treated perturbatively.",
+    "Demonstrates a worked biorthogonal-observable methodology in a non-Hermitian system -- the same metric/biorthogonal machinery HYP-028 needs for a real non-unitary fixed-point force test."
+  ],
+  "relevance_note": "WATCH. Method/gate-synthesis paper, NOT a physics-result challenging anchors (no alpha, no transport, no CFT-universality claim). Catalogued because it is directly on-pathway for HYP-028 (INCONCLUSIVE, SIM-053): SIM-053 showed the uniform i*gamma Ising realization is structurally obstructed (Yang-Lee point sits AT the PT-breaking edge, kappa_c ~ 1/N), and the result note flags that a real test needs a biorthogonal / metric-inner-product formulation that stays PT-unbroken at a finite-distance fixed point. This paper's biorthogonal complex-pulse construction with dissipation folded into the design is a candidate template for that observable layer. Pairs with PAPER-2026-119 (seed of HYP-028).",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-028"
+  ],
+  "anchor_contradiction": "None. Orthogonal to alpha~4 (=2*Delta_T), transport residual ~-1.2% at N=16, and chi-bound anchors.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.26798",
+  "discovered_by": "weekly-scan-12",
+  "discovered_date": "2026-06-26"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-046",
+  "organization": "Quantinuum",
+  "processor": "Helios",
+  "date": "2026-05-07",
+  "source_url": "https://www.quantinuum.com/products-solutions/quantinuum-systems/helios",
+  "physical_qubits": 98,
+  "logical_qubits": 48,
+  "error_correction_ratio": "2.04:1",
+  "two_qubit_gate_fidelity": 0.99921,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "2026-05-07: University of Southern Denmark (SDU) gained research access to Quantinuum Helios via DeiC (Danish e-Infrastructure Consortium). SDU is testing fault-tolerant algorithms and error-correction codes at 48 logical qubit scale. This is a deployment/access milestone confirming Helios is available commercially beyond US borders as a research cloud service. Hardware specs unchanged from Feb 2026 iceberg-code paper (arXiv 2602.22211): 98 physical / 94 logical (error-detection mode) / 48 logical (error-correction mode). Logical gate error rate ~1e-4. This is an availability update, not a performance update — no new frontier numbers. RELEVANCE TO OUR WORK: SDU access confirms Helios is obtainable for independent research partnerships. Our QCUP PHY204 2-point force-existence proposal would run on exactly this hardware at this logical qubit count."
+}

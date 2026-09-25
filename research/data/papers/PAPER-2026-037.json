@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-037",
+  "arxiv_id": "2507.22118",
+  "title": "CFT Complexity and Penalty Factors",
+  "authors": ["S. Baiguera", "N. Chagnet", "S. Chapman", "et al."],
+  "published": "2025-07",
+  "journal": "Journal of High Energy Physics, Feb 2026, article 247",
+  "doi": "10.1007/JHEP02(2026)247",
+  "url": "https://arxiv.org/abs/2507.22118",
+  "status": "WATCH",
+  "relevance": 3,
+  "topic": "Worldline formalism / holographic transport / MERA-AdS connections",
+  "summary": "General framework for quantum complexity of CFT states using penalty factors that assign relative weights to generators of the conformal group. Uses (pseudo-)Riemannian submersions to construct a complexity metric on coset spaces. Contains a MERA complexity connection and treats holographic complexity observables as probing black hole interiors.",
+  "key_findings": [
+    "Penalty factors on Lie group generators yield richer complexity geometry than uniform cost",
+    "Framework applies to CFT complexity measured via MERA circuits as a concrete realization",
+    "Positive-definite metric with complexity interpretation exists for specific penalty factor choices",
+    "Direct holographic connection: complexity probes black hole interior geometry"
+  ],
+  "project_relevance": "Relevant background for HYP-2026-008 (stress-tensor excitations and graviton forces). The penalty factor framework could formalize the distinction between scalar (Delta=1) vs stress-tensor (Delta=2) excitations in our force measurement: they correspond to different generators of the conformal group with different weights. Not immediately actionable but relevant to theoretical interpretation of our force profile measurements.",
+  "recommended_followup": "none",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

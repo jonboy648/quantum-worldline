@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-082",
+  "title": "Essay: Emergent Holographic Spacetime from Quantum Information",
+  "authors": ["Tadashi Takayanagi"],
+  "date": "2025-06-07",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2506.06595",
+  "arxiv_id": "2506.06595",
+  "abstract": "PRL essay by Takayanagi (inventor of the RT formula) exploring how gravitational theories can emerge from quantum many-body systems through holographic duality. Argues that entanglement entropy in quantum many-body systems, calculable from the area of an extremal surface in the dual gravitational spacetime, implies that a gravitational spacetime can emerge from an enormous number of entangled qubits. Discusses what kind of quantum circuits correspond to each holographic spacetime (drawing on quantum complexity theory), extending holography to general spacetimes including cosmological ones, and proposes pseudo-entropy and time-like entanglement as tools for addressing how time emerges.",
+  "relevance": 3,
+  "tags": ["holographic-spacetime", "entanglement-entropy", "Ryu-Takayanagi", "pseudo-entropy", "time-like-entanglement", "quantum-complexity", "emergent-gravity", "PRL"],
+  "key_claims": [
+    "Gravitational spacetime emerges from entangled qubits via the RT formula",
+    "Quantum circuits can be mapped to holographic spacetimes via complexity theory",
+    "Pseudo-entropy and time-like entanglement proposed as probes of time emergence",
+    "Vision for extending holography to cosmological spacetimes",
+    "PRL essay format — authoritative perspective from RT-formula inventor"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — Takayanagi's essay reinforces the theoretical foundation of our MERA holographic force project. His framing of spacetime emergent from entangled qubits is the conceptual basis of our published results. No new results that contradict alpha=4."
+}

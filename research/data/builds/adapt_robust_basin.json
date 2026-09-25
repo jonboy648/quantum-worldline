@@ -1,0 +1,216 @@
+{
+  "L": 8,
+  "sigma_train": 0.01,
+  "K_train": 8,
+  "point_optimized_reference": {
+    "fail_rate_pct_at_0.01": "86.7-100 (verify_adapt_force_robust + meta-check)",
+    "n_ops": 25
+  },
+  "n_ops_final": 22,
+  "trace": [
+    {
+      "step": 1,
+      "added": "Y0Z1",
+      "robust_loss": -8.236056107521023,
+      "clean_energy": -8.236060483651059,
+      "gs_overlap": 0.45412766533663845,
+      "force_rmse": 0.6902337119585228
+    },
+    {
+      "step": 2,
+      "added": "Y5Z6",
+      "robust_loss": -8.472112215043053,
+      "clean_energy": -8.472120961804585,
+      "gs_overlap": 0.4894262493765429,
+      "force_rmse": 0.690233036907966
+    },
+    {
+      "step": 3,
+      "added": "Z1Y2",
+      "robust_loss": -8.720468926827849,
+      "clean_energy": -8.720481557921083,
+      "gs_overlap": 0.533589282790062,
+      "force_rmse": 0.750903275924967
+    },
+    {
+      "step": 4,
+      "added": "Y7Z0",
+      "robust_loss": -8.970254181458376,
+      "clean_energy": -8.97027055662422,
+      "gs_overlap": 0.5843398070386672,
+      "force_rmse": 0.953987368272177
+    },
+    {
+      "step": 5,
+      "added": "Y3Z4",
+      "robust_loss": -9.20631028898572,
+      "clean_energy": -9.206331043432876,
+      "gs_overlap": 0.6314534265090295,
+      "force_rmse": 0.4856010095841524
+    },
+    {
+      "step": 6,
+      "added": "Z2Y3",
+      "robust_loss": -9.388288351582073,
+      "clean_energy": -9.388312430779227,
+      "gs_overlap": 0.6688204141046884,
+      "force_rmse": 0.34025733218521137
+    },
+    {
+      "step": 7,
+      "added": "Y4Z5",
+      "robust_loss": -9.586822842607734,
+      "clean_energy": -9.586850145832031,
+      "gs_overlap": 0.7164596035012691,
+      "force_rmse": 0.3075462178472454
+    },
+    {
+      "step": 8,
+      "added": "Y6Z7",
+      "robust_loss": -9.765647548125532,
+      "clean_energy": -9.765678338217576,
+      "gs_overlap": 0.7565932007709281,
+      "force_rmse": 0.30627773434616584
+    },
+    {
+      "step": 9,
+      "added": "Z3Y4",
+      "robust_loss": -9.832439023059502,
+      "clean_energy": -9.832470379427251,
+      "gs_overlap": 0.785863054633452,
+      "force_rmse": 0.29088158013892124
+    },
+    {
+      "step": 10,
+      "added": "Y3Z4",
+      "robust_loss": -9.888443649275025,
+      "clean_energy": -9.888476447608113,
+      "gs_overlap": 0.8057468806583121,
+      "force_rmse": 0.25689099108750574
+    },
+    {
+      "step": 11,
+      "added": "Y5Z6",
+      "robust_loss": -9.908188244359351,
+      "clean_energy": -9.908219450058834,
+      "gs_overlap": 0.8187506708870531,
+      "force_rmse": 0.24672350729506717
+    },
+    {
+      "step": 12,
+      "added": "Y1Z2",
+      "robust_loss": -9.923722548662665,
+      "clean_energy": -9.923753142554052,
+      "gs_overlap": 0.8320428237339283,
+      "force_rmse": 0.2398937978091404
+    },
+    {
+      "step": 13,
+      "added": "Z7Y0",
+      "robust_loss": -9.944639163977069,
+      "clean_energy": -9.944668296154742,
+      "gs_overlap": 0.8522821747195239,
+      "force_rmse": 0.2170904094585734
+    },
+    {
+      "step": 14,
+      "added": "Y4Z5",
+      "robust_loss": -10.026207169464495,
+      "clean_energy": -10.026232132592991,
+      "gs_overlap": 0.8994671947943397,
+      "force_rmse": 0.20113248081632742
+    },
+    {
+      "step": 15,
+      "added": "Z6Y7",
+      "robust_loss": -10.069282423908444,
+      "clean_energy": -10.06930712172797,
+      "gs_overlap": 0.933163636069522,
+      "force_rmse": 0.15777882440044844
+    },
+    {
+      "step": 16,
+      "added": "Y2Z3",
+      "robust_loss": -10.131509995951703,
+      "clean_energy": -10.131542074158562,
+      "gs_overlap": 0.9681032869933874,
+      "force_rmse": 0.08717623127231715
+    },
+    {
+      "step": 17,
+      "added": "Z4Y5",
+      "robust_loss": -10.182536388617734,
+      "clean_energy": -10.182691091618672,
+      "gs_overlap": 0.9834310221640945,
+      "force_rmse": 0.07051054058569646
+    },
+    {
+      "step": 18,
+      "added": "Z0Y1",
+      "robust_loss": -10.19301864621433,
+      "clean_energy": -10.193185320428501,
+      "gs_overlap": 0.9866798793131742,
+      "force_rmse": 0.04396487239231844
+    },
+    {
+      "step": 19,
+      "added": "Y7Z0",
+      "robust_loss": -10.205704272276794,
+      "clean_energy": -10.205910511309174,
+      "gs_overlap": 0.9890141468083138,
+      "force_rmse": 0.03463315082115791
+    },
+    {
+      "step": 20,
+      "added": "Y6Z7",
+      "robust_loss": -10.221462311102032,
+      "clean_energy": -10.221698269616407,
+      "gs_overlap": 0.9937650156857434,
+      "force_rmse": 0.036880586532878484
+    },
+    {
+      "step": 21,
+      "added": "Y1Z2",
+      "robust_loss": -10.232380497826266,
+      "clean_energy": -10.232626096266173,
+      "gs_overlap": 0.9962259752535535,
+      "force_rmse": 0.031095742623637568
+    },
+    {
+      "step": 22,
+      "added": "Y7Z0",
+      "robust_loss": -10.238920499522843,
+      "clean_energy": -10.239159630609027,
+      "gs_overlap": 0.9976785216031873,
+      "force_rmse": 0.008619539454699076
+    }
+  ],
+  "final": {
+    "step": 22,
+    "added": "Y7Z0",
+    "robust_loss": -10.238920499522843,
+    "clean_energy": -10.239159630609027,
+    "gs_overlap": 0.9976785216031873,
+    "force_rmse": 0.008619539454699076
+  },
+  "jitter_eval": {
+    "0.001": {
+      "fail_rate_pct": 0.0,
+      "rmse_mean": 0.008972780771762657,
+      "rmse_max": 0.014905654811280531
+    },
+    "0.003": {
+      "fail_rate_pct": 15.0,
+      "rmse_mean": 0.014064565311634757,
+      "rmse_max": 0.04591327780352056
+    },
+    "0.01": {
+      "fail_rate_pct": 85.0,
+      "rmse_mean": 0.04618965176306015,
+      "rmse_max": 0.10278376179443321
+    }
+  },
+  "verdict": "PARTIAL: robust training reaches the force gate cleanly but still fails 1% jitter (85%) -- fragility partly intrinsic",
+  "wall_seconds": 644.5136501789093,
+  "status": "done"
+}

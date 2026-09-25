@@ -1,0 +1,160 @@
+{
+  "sim_id": "SIM-2026-007",
+  "hypothesis": "HYP-2026-007",
+  "description": "Worldline MC on H^2 vs MERA force profile (SIM-2026-002)",
+  "algorithm": "Camporesi-Higuchi exact heat kernel + Brownian bridge MC validation",
+  "reference": "Corradini-Muratori arXiv:2006.02911",
+  "parameters": {
+    "l_AdS": 1.443,
+    "mass": 1.0,
+    "T_min": 0.02,
+    "T_max": 20.0,
+    "N_T_points": 120,
+    "N_paths_mc": 100000,
+    "N_steps_mc": 200,
+    "seed": 42,
+    "geometry": "Poincare disk H^2, curvature R=-2/l^2"
+  },
+  "heat_kernel_validation": {
+    "Delta_theory": 2.0271702590084706,
+    "Delta_fit": 2.2820801432826285,
+    "xi_theory": 0.7118297013225717,
+    "xi_from_analytic_fit": 0.6323178457371508,
+    "test_points": [
+      {
+        "r_over_l": 0.5,
+        "log_G": 3.0304592448009826
+      },
+      {
+        "r_over_l": 1.0,
+        "log_G": 1.6925913491452833
+      },
+      {
+        "r_over_l": 1.5000000000000002,
+        "log_G": 0.5639602916891793
+      },
+      {
+        "r_over_l": 2.0,
+        "log_G": -0.5309557609950324
+      },
+      {
+        "r_over_l": 3.0000000000000004,
+        "log_G": -2.732755869864678
+      }
+    ]
+  },
+  "force_profile": {
+    "dr_vals": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "r_geod_vals": [
+      1.443,
+      2.886,
+      4.329000000000001,
+      5.772,
+      7.215,
+      8.658000000000001,
+      10.101
+    ],
+    "log_G_worldline_mc": [
+      1.6925913491452833,
+      -0.5309557609950324,
+      -2.732755869864678,
+      -4.972704145447496,
+      -7.242322453619527,
+      -9.533195464736167,
+      -11.84045687679787
+    ],
+    "mera_V": [
+      -0.011402896709332033,
+      -0.007167633556286579,
+      0.00018471246420415088,
+      1.6883716620341715e-06,
+      -2.9976021664879227e-15,
+      2.4424906541753444e-15,
+      2.220446049250313e-15
+    ],
+    "log_mera_V_abs": [
+      -4.473887858549114,
+      -4.938179726786132,
+      -8.59671018952678,
+      -13.291746007096135,
+      null,
+      null,
+      null
+    ]
+  },
+  "decay_analysis": {
+    "xi_worldline_mc": 0.4436473533213959,
+    "xi_theory": 0.7118297013225717,
+    "xi_mera_fitted": 1.233,
+    "xi_mera_2pt": 2.1538176057167275,
+    "l_AdS": 1.443,
+    "ratio_worldline_over_mera_fit": 0.3598113165623648,
+    "ratio_worldline_over_mera_2pt": 0.2059818585119992,
+    "m_eff_to_match_mera_fit": 0.30939508139367344,
+    "m_eff_to_match_mera_2pt": NaN
+  },
+  "mc_validation": {
+    "mean_offset_log_K": -211.1233446772798,
+    "std_offset_log_K": 33.4180782351263,
+    "slope_log_K_mc_vs_exact": 26.33657112661278,
+    "mc_quality": "POOR: slope=26.337 != 1.0. Flat Euclidean bridge is a poor importance sampler for H^2. The offset varies with (r,T), meaning the MC does not correctly estimate relative K values. Analytical result (Camporesi-Higuchi) is preferred.",
+    "test_cases": [
+      {
+        "r_over_l": 0.5,
+        "T": 1.0,
+        "log_K_mc": -179.2914365337011,
+        "log_K_exact": 1.7118399290328985,
+        "offset": -181.003276462734
+      },
+      {
+        "r_over_l": 1.0,
+        "T": 1.0,
+        "log_K_mc": -196.47946627287905,
+        "log_K_exact": 0.7936437493701809,
+        "offset": -197.27311002224923
+      },
+      {
+        "r_over_l": 1.0,
+        "T": 2.0,
+        "log_K_mc": -200.83331974179274,
+        "log_K_exact": -0.04775038285306654,
+        "offset": -200.78556935893968
+      },
+      {
+        "r_over_l": 2.0,
+        "T": 2.0,
+        "log_K_mc": -278.20444997442183,
+        "log_K_exact": -1.8269416716819253,
+        "offset": -276.3775083027399
+      },
+      {
+        "r_over_l": 1.0,
+        "T": 0.5,
+        "log_K_mc": -198.97467399882382,
+        "log_K_exact": 1.202585240912242,
+        "offset": -200.17725923973606
+      }
+    ],
+    "interpretation": "The flat Euclidean Brownian bridge is a poor importance sampler for H^2 at these parameters. The offset varies strongly with (r,T) -- slope=26.337 vs ideal 1.0. This means the MC does not reliably estimate relative K values. The Camporesi-Higuchi formula is the exact result of the worldline path integral and is used as the authoritative propagator. Future work: implement geodesic Brownian motion (Ito SDE on H^2) for proper MC."
+  },
+  "comparison": {
+    "verdict": "MISMATCH",
+    "description": "Decay rates differ by factor 0.36x. Consistent with mass renormalization (m_eff=0.309)",
+    "mera_source": "SIM-2026-002",
+    "mera_V_dr1": -0.011402896709332033,
+    "mera_V_dr2": -0.007167633556286579,
+    "mera_V_ratio": 0.6285800651356115,
+    "physical_interpretation": "xi_worldline=0.4436 < xi_MERA=1.2330. The worldline decay is faster than the MERA force profile. This is consistent with the MERA having a UV lattice cutoff that renormalizes the effective mass from m=1.000 to m_eff~0.309. The FUNCTIONAL FORM (exponential decay matching G~exp(-Delta*r/l)) is confirmed; the RATE requires mass renormalization to agree quantitatively."
+  },
+  "elapsed_seconds": 8.292778015136719,
+  "visualization_path": "D:/quantum-worldline/research/data/simulations/worldline_mc_comparison.png",
+  "timestamp": "2026-03-11"
+}

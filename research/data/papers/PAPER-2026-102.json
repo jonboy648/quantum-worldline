@@ -1,0 +1,34 @@
+{
+  "id": "PAPER-2026-102",
+  "title": "Emergent statistical mechanics in holographic random tensor networks",
+  "authors": [
+    "Shozab Qasim",
+    "Jens Eisert",
+    "Alexander Jahn"
+  ],
+  "date": "2025-08-22",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2508.16570",
+  "arxiv_id": "2508.16570",
+  "abstract": "Recent years have enjoyed substantial progress in capturing properties of complex quantum systems by means of random tensor networks (RTNs), which form ensembles of quantum states that depend only on the tensor network geometry and bond dimensions. Of particular interest are RTNs on hyperbolic geometries, with local tensors typically chosen from the unitary Haar measure, that model critical boundary states of holographic bulk-boundary dualities. In this work, we elevate static pictures of ensemble averages to a dynamical one, to show that RTN states exhibit equilibration of time-averaged operator expectation values under a highly generic class of Hamiltonians with non-degenerate spectra. We prove that RTN states generally equilibrate at large bond dimension and also in the scaling limit for three classes of geometries: those of matrix product states, regular hyperbolic tilings, and single black-hole tensors. Furthermore, we prove a hierarchy of equilibration between finite-dimensional instances of these classes for bulk and boundary states with small entanglement. This suggests an equivalent hierarchy between corresponding many-body phases, and reproduces a holographic degree-of-freedom counting for the effective dimension of each system. These results demonstrate that RTN techniques can probe aspects of late-time dynamics of quantum many-body phases and suggest a new approach to describing aspects of holographic dualities using techniques from statistical mechanics.",
+  "relevance": 3,
+  "tags": [
+    "random-tensor-network",
+    "holography",
+    "hyperbolic-geometry",
+    "equilibration",
+    "statistical-mechanics",
+    "degree-of-freedom-counting",
+    "hologron-lifetime-watch"
+  ],
+  "key_claims": [
+    "Proves RTN states equilibrate (time-averaged operator expectation values) at large bond dimension and in the scaling limit",
+    "Three geometry classes: MPS, regular hyperbolic tilings, single black-hole tensors",
+    "Hierarchy of equilibration reproduces holographic degree-of-freedom counting for effective dimension",
+    "WATCH: hierarchical holographic DOF counting may give an independent handle on bulk excitation lifetimes (HYP-017 R1 hologron-decay physics)"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

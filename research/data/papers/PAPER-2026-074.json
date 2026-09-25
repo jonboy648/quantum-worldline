@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-074",
+  "title": "Scalable cold-atom quantum simulator of a 3+1D U(1) lattice gauge theory with dynamical matter",
+  "authors": ["Simone Orlando", "Guo-Xian Su", "Bing Yang", "Jad C. Halimeh"],
+  "date": "2026-01-07",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.04345",
+  "arxiv_id": "2601.04345",
+  "abstract": "Proposes an experimentally feasible cold-atom quantum simulator for a U(1) quantum link model of quantum electrodynamics in 3+1 dimensions with dynamical matter. Employs linear gauge protection to maintain gauge invariance, validated with tree tensor network simulations showing excellent agreement with ideal gauge theory. Introduces an analog quantum error mitigation method addressing unwanted tunneling processes. The approach enables realistic 3+1D lattice gauge theory quantum simulators capable of exploring regimes beyond classical computation.",
+  "relevance": 3,
+  "tags": ["lattice-gauge-theory", "cold-atoms", "3+1D", "U(1)-QED", "quantum-simulation", "gauge-protection", "error-mitigation"],
+  "key_claims": [
+    "First scalable proposal for 3+1D U(1) lattice gauge theory quantum simulation (prior work limited to 1-2D)",
+    "Linear gauge protection effectively stabilizes gauge invariance in experiment",
+    "Analog error mitigation substantially improves simulator fidelity",
+    "Enables exploration of QCD-like regimes unreachable classically",
+    "Tree tensor network validation confirms near-equilibrium and far-from-equilibrium agreement"
+  ],
+  "hardware_used": "Cold atoms in optical lattice (proposed experimental platform)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — extends QFT-on-hardware scope to 3+1D, relevant context for our lattice field theory simulation work. No direct bearing on holographic force result."
+}

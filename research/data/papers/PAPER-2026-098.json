@@ -1,0 +1,43 @@
+{
+  "id": "PAPER-2026-098",
+  "title": "Engineering quantum criticality and dynamics on an analog-digital simulator",
+  "authors": [
+    "Alexandra A. Geim",
+    "Nazli Ugur Koyluoglu",
+    "Simon J. Evered",
+    "Rahul Sahay",
+    "Sophie H. Li",
+    "et al.",
+    "Markus Greiner",
+    "Vladan Vuletic",
+    "Mikhail D. Lukin"
+  ],
+  "date": "2026-02-20",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2602.18555",
+  "arxiv_id": "2602.18555",
+  "abstract": "We explore emergent phenomena in out-of-equilibrium interacting many-body systems using neutral atom arrays with analog-digital simulation techniques. By combining analog and digital quantum operations and coherent mapping between Rydberg and hyperfine qubits, we engineer complex quantum dynamics including ring-exchange and particle hopping behaviors. We target a Rokhsar-Kivelson type quantum spin liquid state on a 271-site kagome lattice, observing many-body coherences between nearly equal-amplitude dimer configurations over up to 18 sites.",
+  "relevance": 3,
+  "tags": [
+    "neutral-atom",
+    "analog-digital",
+    "Rydberg",
+    "quantum-spin-liquid",
+    "kagome",
+    "Lukin-group",
+    "Sahay",
+    "many-body-coherence",
+    "271-qubit"
+  ],
+  "key_claims": [
+    "271-site kagome lattice quantum spin liquid with many-body coherences over 18 sites",
+    "Analog-digital hybrid technique using Rydberg + hyperfine coherent mapping",
+    "Rahul Sahay (hologron paper co-author) is an author -- same Lukin group",
+    "Demonstrates advanced control over Rydberg arrays at scales relevant to holographic simulation",
+    "Largest Rydberg simulator result in 2026 window"
+  ],
+  "hardware_used": "Neutral-atom Rydberg array (Harvard Lukin group), 271 atoms",
+  "qubit_count": 271,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

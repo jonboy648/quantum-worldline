@@ -1,0 +1,88 @@
+QUANTUM WORLDLINE — SPOKEN SUMMARY
+ElevenLabs voiceover script. Plain English, start to finish.
+Approx 6 to 7 minutes at a calm narration pace. No jargon left unexplained.
+(Stage directions in brackets are for delivery and are not meant to be read aloud.)
+
+======================================================================
+
+[warm, unhurried, the tone of someone telling you about something they find genuinely beautiful]
+
+Let me tell you about a question that sounds like science fiction, but isn't.
+
+What if space itself is not fundamental? What if gravity, the force holding you to the floor right now, is not a basic ingredient of the universe, but something that emerges from something deeper? The way a wave emerges from water, or a traffic jam emerges from individual cars. Real, but not a thing in its own right.
+
+That is the idea this project set out to test. And the surprising part is, it found evidence that the idea might actually be true.
+
+[slight pause]
+
+So let me build it up from the beginning.
+
+There is a famous idea in physics called holography. The name comes from holograms, those flat shiny cards that show a full three dimensional image. The physics version says something strange and wonderful. It says a universe with gravity inside it can be completely described by information living on its outer edge. The inside, with all its depth and curvature, is like the three dimensional image. The edge is like the flat card. Everything in the deep interior is somehow written on the boundary.
+
+And the deepest version of this idea says something even bolder. It says that space, and distance, and gravity, are all made of quantum entanglement. Entanglement is the strange quantum connection between particles, where two things behave as one no matter how far apart they are. The claim is that if you weave enough of these connections together in the right pattern, geometry appears. Distance appears. Gravity appears. Out of pure information.
+
+It is a gorgeous idea. The problem is testing it. You cannot exactly build a baby universe in a laboratory.
+
+[a beat]
+
+But you can build a very, very simple version on a computer. And that is what we did.
+
+Here is the picture. Imagine a row of quantum bits. Just a line of them, like beads on a string. Physicists call this a spin chain. Now we tune that chain to a very special, delicate setting, right on the knife's edge between two different states of matter. At that exact setting, something mathematically rich happens.
+
+Then we take that flat line of quantum bits and we organize it into layers. Each layer is a slightly blurrier, more zoomed out summary of the one below it. Stack those layers up. And here is the magic. That stack of layers behaves exactly like an extra dimension of curved space. The flat chain is the edge of the hologram. The stack of layers is the deep interior it encodes. We have built, in miniature, the two halves of the holographic idea.
+
+So now we can finally ask the real question. If this little system truly contains gravity, then if I poke it in two places along the edge, those two pokes should pull toward each other. They should feel a force. An emergent gravitational attraction, born from entanglement.
+
+And not just any force. Einstein's theory makes a very precise demand. It says the strength of that pull must fade with distance in one exact way. It must drop off as the distance to the fourth power. Double the distance, and the force becomes sixteen times weaker. Not four times, which would mean a different, more ordinary kind of force. Sixteen. The fourth power is the unmistakable fingerprint of gravity carried by the right messenger.
+
+[lean in slightly]
+
+So we measured it. We poked the system at many different separations and measured how the attraction faded.
+
+And it faded as the fourth power. Almost exactly.
+
+We did this measurement three completely separate ways, to make sure it was not a fluke. A smaller system, a larger system, and the full holographic network itself. The three answers came back at three point nine, three point nine seven, and four point oh seven. All three, circling the number four, exactly as Einstein's math demanded. The slogan, geometry is made of entanglement, had become a number you can actually measure. And the number was four.
+
+[settle]
+
+That was the headline. But it was not the only thing.
+
+We found two more fingerprints of curved space hiding in the same little system. First, we sent a ripple traveling along the edge and timed how long it took to cross. In a curved space, that travel time is set by the geometry, and there is a formula for it. Our measured time matched the formula to about one percent. The signal moved exactly as if it were crossing a real, curved spacetime.
+
+And second, there is an effect where something that has no weight on the edge gains a specific weight when you view it as a particle living inside the curved interior. The theory predicts a precise number for that weight. The simulation produced it, matching to within three and a half percent.
+
+So now we had three independent clues. A force, a travel time, and a mass. All three pointing at the same hidden geometry. That convergence is what turned a hopeful idea into a result solid enough to publish.
+
+[shift tone, a little more grounded, honest]
+
+Now, here is the part of research that most people never see, and the part I am actually proudest of.
+
+We spent just as much effort trying to destroy these results as we spent finding them. Because a result you have not attacked is not a result. It is just a wish.
+
+So every promising finding got handed to independent reviewers whose entire job was to kill it. And plenty died. One tempting shortcut looked like it reproduced the gravity force, until we checked the full curve and it disagreed wildly. It had been a coincidence in a single number, dressed up as physics. We threw it out. Another time we had a real experiment planned on an actual quantum computer, and a quick test showed the measurement was broken before we spent a single dollar. So we cancelled it. We even caught ourselves publishing one number slightly too optimistically, and we corrected it in the open, in an errata file, where anyone can see it. The result still held. It just got more honest.
+
+That is what real science feels like. Most ideas die. The survivors are stronger for it. And the discipline is in writing down the deaths, not hiding them.
+
+[forward, building]
+
+So where does this go next?
+
+The computer simulations are settled. The exciting frontier now is whether we can see this gravitational force on a real quantum computer. To our knowledge, nobody has ever measured emergent gravity on real quantum hardware. It would be a genuine first.
+
+The obstacle has always been noise. Today's quantum machines make small errors on every step, and if the recipe needs too many steps, those errors pile up and bury the signal. So the most recent work attacked exactly that. Using a clever method that builds the circuit one careful piece at a time, we found a recipe that does the job in just thirty three delicate operations, down from four hundred and fifty one in the original. That is roughly fourteen times cheaper, and we confirmed it with a real compiler against a real machine's instruction set.
+
+It is not a finished victory yet. The cheap recipe is still a bit fragile, and it does not yet scale to larger sizes. But a door that looked welded shut turned out to be merely heavy. And a new opportunity appeared, a two hundred and sixty qubit machine with an open collaboration program, that could run this physics at full scale.
+
+[slow down, land it]
+
+So let me leave you with the honest size of this.
+
+We did not prove that our universe is a hologram. That would be too grand. What we did show is smaller and, I think, more meaningful. In the simplest toy universe you can build out of pure quantum entanglement, a gravitational force really does appear. And it has the exact shape that Einstein's theory requires, confirmed three separate ways, backed by two more signatures of curved space.
+
+The mechanism is real. It is measurable. And there is now a concrete path to seeing it on a real quantum computer.
+
+An old, beautiful slogan said that geometry is made of entanglement.
+
+We turned it into a number you can measure. And the number was four.
+
+[end]

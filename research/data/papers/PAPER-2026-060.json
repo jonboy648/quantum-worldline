@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-060",
+  "title": "Predicting topological entanglement entropy in a Rydberg analogue simulator",
+  "authors": ["(Harvard/MIT group)"],
+  "date": "2025-01-01",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s41567-025-02944-3",
+  "arxiv_id": null,
+  "abstract": "Proposes time-dependent correlated ansatz for dynamical preparation of quantum-spin-liquid states on Rydberg atom simulators. Enables access to topological entanglement entropy. Uses Rydberg blockade mechanism to engineer target states. Nature Physics 2025.",
+  "relevance": 2,
+  "tags": ["Rydberg-atoms", "topological-entanglement", "quantum-spin-liquid", "entanglement-entropy"],
+  "key_claims": [
+    "Rydberg blockade mechanism enables topological entanglement entropy measurement",
+    "Correlated ansatz captures quantum-spin-liquid ground state features",
+    "Topological entanglement entropy accessible in near-term Rydberg hardware"
+  ],
+  "hardware_used": "Rydberg tweezer array (neutral atom)",
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-04-26"
+}

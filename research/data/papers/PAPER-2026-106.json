@@ -1,0 +1,33 @@
+{
+  "id": "PAPER-2026-106",
+  "title": "Critical spin models from holographic disorder",
+  "authors": [
+    "Dimitris Saraidaris",
+    "Alexander Jahn"
+  ],
+  "date": "2024-09-25",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2409.17235",
+  "arxiv_id": "2409.17235",
+  "abstract": "Discrete models of holographic dualities, typically modeled by tensor networks on hyperbolic tilings, produce quantum states with a characteristic quasiperiodic disorder not present in continuum holography. In this work, we study the behavior of XXZ spin chains with such symmetries, showing that lessons learned from previous non-interacting (matchgate) tensor networks generalize to more generic Hamiltonians under holographic disorder: While the disorder breaks translation invariance, site-averaged correlations and entanglement of the disorder-free critical phase are preserved at a plateau of nonzero disorder even at large system sizes. In particular, we show numerically that the entanglement entropy curves in this disordered phase follow the expected scaling of a conformal field theory (CFT) in the continuum limit. This property is shown to be non-generic for other types of quasiperiodic disorder, only appearing when our boundary disorder ansatz is described by a dual bulk hyperbolic tiling. Our results therefore suggest the existence of a whole class of critical phases whose symmetries are derived from models of discrete holography.",
+  "relevance": 3,
+  "tags": [
+    "holographic-disorder",
+    "tensor-network",
+    "hyperbolic-tiling",
+    "XXZ-spin-chain",
+    "CFT-scaling",
+    "disorder-robustness",
+    "hyp-015-support"
+  ],
+  "key_claims": [
+    "XXZ spin chains under holographic (quasiperiodic) disorder preserve site-averaged correlations and entanglement of the critical phase on a nonzero-disorder plateau, even at large system size",
+    "Entanglement entropy curves follow CFT scaling in the continuum limit under this disorder",
+    "Preservation is non-generic: only when the boundary disorder ansatz corresponds to a dual bulk hyperbolic tiling",
+    "Mild support for robustness of the chi=3 force methodology under disorder (cf. HYP-015 MERA force degradation under disorder)"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

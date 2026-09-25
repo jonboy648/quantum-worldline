@@ -1,0 +1,28 @@
+/workspace/hyp033/networks/chi6_h1.00_seed1 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed2 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed3 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed4 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed5 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed6 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed7 --gates
+/workspace/hyp033/networks/chi6_h1.00_seed8 --gates
+/workspace/hyp033/networks/haar_chi6_seed1 --gates
+/workspace/hyp033/networks/haar_chi6_seed2 --gates
+/workspace/hyp033/networks/haar_chi6_seed3 --gates
+/workspace/hyp033/networks/haar_chi6_seed4 --gates
+/workspace/hyp033/networks/haar_chi6_seed5 --gates
+/workspace/hyp033/networks/haar_chi6_seed6 --gates
+/workspace/hyp033/networks/haar_chi6_seed7 --gates
+/workspace/hyp033/networks/haar_chi6_seed8 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed1 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed2 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed3 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed4 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed5 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed6 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed7 --gates
+/workspace/hyp033/networks/chi6_h1.50_seed8 --gates
+/workspace/hyp033/networks/chi8_h1.00_seed1 --gates --chi8
+/workspace/hyp033/networks/chi8_h1.00_seed2 --gates --chi8
+/workspace/hyp033/networks/chi8_h1.00_seed3 --gates --chi8
+/workspace/hyp033/networks/chi8_h1.00_seed4 --gates --chi8

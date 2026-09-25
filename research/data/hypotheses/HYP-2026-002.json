@@ -1,0 +1,62 @@
+{
+  "id": "HYP-2026-002",
+  "claim": "The emergent holographic forces measured in MERA tensor networks (PAPER-2026-003) can be experimentally verified on a quantum simulator by preparing two-hologron states in a critical Ising chain, time-evolving under the critical Hamiltonian, and measuring the interaction potential to confirm quantitative agreement with AdS gravity predictions (C1=0.080, C2=13.6).",
+  "confidence": "medium",
+  "source_findings": ["PAPER-2026-003", "HW-2026-004", "SIM-2026-011"],
+  "testable": true,
+  "test_design": "Prepare a critical Ising chain on 40-56 qubits using Quantinuum H2 (all-to-all connectivity ideal for MERA circuits). Create two-hologron excitations at known bulk positions. Time-evolve and measure correlation functions to extract the interaction potential. Compare extracted C1, C2 coefficients to the MERA numerical predictions.",
+  "refutation_criteria": "If the experimentally measured interaction potential deviates from the predicted exponential form by more than 20%, or if the extracted AdS curvature scale deviates significantly from log(2), the hypothesis that MERA faithfully captures holographic gravity is weakened.",
+  "hardware_required": "Quantinuum H2 (56 qubits, all-to-all connectivity) or equivalent",
+  "earliest_testable": "2026",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "philosophical_implications": "Experimental confirmation that tensor network states on quantum hardware reproduce gravitational forces would provide the first laboratory evidence that spacetime geometry emerges from quantum entanglement structure. This would support the ER=EPR conjecture and the idea that gravity is an entropic/emergent force rather than a fundamental interaction.",
+  "status": "PARTIALLY_CONFIRMED",
+  "justified_by": ["SIM-2026-001", "SIM-2026-002", "SIM-2026-003", "SIM-2026-005", "SIM-2026-006", "SIM-2026-009", "SIM-2026-010", "SIM-2026-011-interaction"],
+  "justified_by_note": "Added 2026-08-17 per audit D-10 so status and evidence are machine-checkable. SIM-2026-009 carries verdict INCONCLUSIVE_WRONG_GROUND_STATE and is listed for completeness of the chain, not as support.",
+  "evidence_withdrawal_2026_08_17": "experimental_evidence.power_law_fit_dr_ge2 records alpha = 3.9218 +/- 0.159 with 'deviation_from_stress_tensor_pct: 1.96' and 'within_1sigma: true'. That fit is WITHDRAWN by SIM-2026-072: it is an artifact of unweighted least squares in linear space, with 95.8% of the objective carried by the single point dr = 2. The corrected measurement is alpha = 2.6 +/- 0.2 and the exchange channel is OPEN -- 2*Delta_T = 4 and 2*Delta_epsilon = 2 are both outside the plateau band. The block is preserved unaltered per section 32. WHAT SURVIVES: the record's what_is_confirmed statement (attractive forces exist in the exact TFIM ground state and are measurable via the interaction-energy observable) and its what_is_refuted statement (the Sahay et al. exponential form is not the governing form; xi = 0.63 is 56% off l_AdS) are BOTH unaffected -- a shallower power law is still a power law and is still not that exponential. WHAT DOES NOT: 'power-law alpha is 2% off the stress-tensor prediction' in model_discrimination, and the whole of what_is_open, which is written around whether alpha converges to exactly 4.0. It does not; it converges to ~2.6, and the question is now which channel that corresponds to.",
+  "confidence_update_rationale": "SIM-2026-011 confirms holographic forces ARE present and attractive in the exact 24q OBC TFIM ground state via the interaction energy observable F(dr) = E_dual - E_0 - 2*(E_single - E_0). 12 clean data points (dr=1..12) all show F(dr) < 0 (attractive). The CORE claim -- that holographic forces exist in the MERA system and are measurable -- is confirmed. HOWEVER: the functional form is POWER LAW, not exponential. The Sahay et al. exponential form V ~ exp(-dr/xi) is REFUTED as the governing functional form. The exponential fit for dr>=2 gives xi=0.63 (56% off l_AdS=1.443). The power-law fit for dr>=2 gives alpha=3.92 +/- 0.16, within 2% of the stress-tensor prediction alpha=4.0. This is a partial confirmation: forces exist and are holographic in character, but Sahay et al.'s specific exponential form was the wrong model. The power-law form is consistent with AdS/CFT bulk-boundary propagators for a marginal operator (Delta~2).",
+  "experimental_evidence": {
+    "sim_id": "SIM-2026-011",
+    "observable": "F(dr) = E_dual - E_0 - 2*dE_single_avg (interaction energy)",
+    "ground_state": "exact eigsh, 24q OBC TFIM, E0=-30.199712",
+    "excitation": "boundary-primary sigma_j = 0.635*(X_j + X_{j+1}) - 0.026*(X_j Z_{j+1} + Z_j X_{j+1})",
+    "n_clean_points": 12,
+    "all_attractive": true,
+    "F_values": {
+      "dr=1": -2.352,
+      "dr=2": -0.574,
+      "dr=3": -0.103,
+      "dr=4": -0.049,
+      "dr=5": -0.028,
+      "dr=6": -0.018,
+      "dr=7": -0.012,
+      "dr=8": -0.009,
+      "dr=9": -0.006,
+      "dr=10": -0.004,
+      "dr=11": -0.003,
+      "dr=12": -0.002
+    },
+    "power_law_fit_dr_ge2": {
+      "alpha": 3.9218,
+      "dalpha": 0.1590,
+      "expected_stress_tensor": 4.0,
+      "deviation_from_stress_tensor_pct": 1.96,
+      "within_1sigma": true
+    },
+    "exponential_fit_dr_ge2": {
+      "xi": 0.630,
+      "l_AdS": 1.4427,
+      "xi_deviation_pct": 56.3,
+      "verdict": "REFUTED as governing form"
+    },
+    "key_caveat": "dr=1 excluded from fits as contact term (adjacent excitations). All fits use dr>=2.",
+    "model_discrimination": "Power law fits significantly better than exponential for dr>=2. Exponential xi is 56% off l_AdS. Power-law alpha is 2% off stress-tensor prediction.",
+    "data_file": "research/data/simulations/SIM-2026-011-interaction.json"
+  },
+  "what_is_confirmed": "Holographic attractive forces exist in the exact TFIM ground state and are measurable via the interaction energy observable. The MERA-AdS correspondence produces real, quantitative force signals.",
+  "what_is_refuted": "The Sahay et al. exponential functional form V ~ C1 - C2*exp(-dr/xi) is not the correct governing form for this observable. The ZZ correlator change was also identified as the wrong observable (destroys all correlations). The interaction energy F(dr) is the correct observable.",
+  "what_is_open": "The power-law exponent alpha=3.92 is consistent with stress-tensor exchange (Delta=2, predicting alpha=2*Delta=4) BUT the boundary-primary operator used (Zou-Milsted-Vidal epsilon-sector, Delta~1) does not obviously correspond to the stress tensor. Whether alpha=3.92 reflects operator mixing, finite-size effects, or genuine stress-tensor-like exchange requires further analysis. Chi=3 bond dimension would test whether alpha converges to 4.0 exactly.",
+  "created_date": "2026-03-10",
+  "last_updated": "2026-03-18",
+  "created_by": "theory-lead"
+}

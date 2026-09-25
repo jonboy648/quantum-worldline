@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-003",
+  "title": "Emergent Holographic Forces from Tensor Networks and Criticality",
+  "authors": ["Rahul Sahay", "Mikhail D. Lukin", "Jordan Cotler"],
+  "date": "2024-01-24",
+  "source": "prl",
+  "source_url": "https://doi.org/10.1103/PhysRevX.15.021078",
+  "arxiv_id": "2401.13595",
+  "abstract": "Demonstrates that MERA tensor networks mapping 1D critical spin systems to 2D bulk theories produce excitations (hologrons) exhibiting characteristic features of matter coupled to AdS gravity. Bulk excitations display exponential potentials matching classical AdS predictions with emergent curvature scale approximately log(2). Two-hologron interactions show attractive, quasi-local forces quantitatively consistent with gravity calculations. Published in Physical Review X 2025.",
+  "relevance": 5,
+  "tags": ["AdS-CFT", "holographic", "tensor-network", "MERA", "emergent-gravity", "hologrons"],
+  "key_claims": [
+    "MERA tensor networks produce excitations with properties matching AdS gravity predictions",
+    "Emergent curvature scale approximately equal to log(2)",
+    "Two-hologron interaction potential matches AdS predictions: V ~ C1 - C2*exp(-Delta_rho/l_AdS)",
+    "Quantitative coefficients C1=0.080(8) and C2=13.6(8) consistent with gravity calculations",
+    "Provides pathway to probe quantum gravity through quantum critical systems on contemporary quantum simulators"
+  ],
+  "hardware_used": "Classical simulation / quantum simulator target",
+  "qubit_count": 0,
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-03-10"
+}

@@ -1,0 +1,265 @@
+{
+  "n": 16,
+  "anchor": 4,
+  "E0": -20.016387900485118,
+  "rng_seed": 20260817,
+  "preregistration": "research/tools/channel-test/PREREGISTRATION.md",
+  "validation_gate": {
+    "checked": false,
+    "passed": null,
+    "max_rel_err": null,
+    "detail": {}
+  },
+  "arms": {
+    "eps": {
+      "F": {
+        "1": -2.3162137379915606,
+        "2": -0.5521907915194184,
+        "3": -0.09950883096473717,
+        "4": -0.04600913791044192,
+        "5": -0.025767699158794954,
+        "6": -0.015698277369700975,
+        "7": -0.00986948406997712,
+        "8": -0.006115225748288822,
+        "9": -0.0034774167880726736,
+        "10": -0.0015080628526504825
+      },
+      "sign_flips_in_window": [],
+      "max_dr_valid": 10,
+      "sign_changes_below_window_informational": [],
+      "sign_note": "Reference sign taken at dr=3 (window start), not dr=1. Points below the window are contact terms and their sign is not evidence of anything. Truncation is at the first sign change at or after dr=3, which is also where the profile meets the numerical noise floor.",
+      "primary_window_dr_ge3": {
+        "n_pts": 8,
+        "alpha_log_ols": 3.2576845594462163,
+        "sigma_fit": 0.24082704135674143,
+        "alpha_relerr": 3.3586200413252527,
+        "alpha_linear_unweighted_BANNED": 2.725215576898936,
+        "bootstrap": {
+          "mean": 3.286185533134433,
+          "std": 0.34610113158053607,
+          "ci_lo": 2.762871447558619,
+          "ci_hi": 4.090555809655579,
+          "n": 1999
+        },
+        "amplitude_at_dr3": -0.09950883096473717
+      },
+      "secondary_window_dr_ge2": {
+        "alpha_log_ols": 3.334701072766365
+      },
+      "local_slopes": [
+        {
+          "dr_mid": 1.5,
+          "slope": 2.068529655517774
+        },
+        {
+          "dr_mid": 2.5,
+          "slope": 4.226374095970819
+        },
+        {
+          "dr_mid": 3.5,
+          "slope": 2.681454426682037
+        },
+        {
+          "dr_mid": 4.5,
+          "slope": 2.597961207505991
+        },
+        {
+          "dr_mid": 5.5,
+          "slope": 2.718113869930715
+        },
+        {
+          "dr_mid": 6.5,
+          "slope": 3.0107126718196886
+        },
+        {
+          "dr_mid": 7.5,
+          "slope": 3.5846693764787294
+        },
+        {
+          "dr_mid": 8.5,
+          "slope": 4.792642391857149
+        },
+        {
+          "dr_mid": 9.5,
+          "slope": 7.92957174189721
+        }
+      ],
+      "plateau": {
+        "n_slopes": 4,
+        "mean_slope": 2.7520605439846078,
+        "tol_rel": 0.15
+      }
+    },
+    "T": {
+      "F": {
+        "1": -2.9897310978016804,
+        "2": 0.00023570645716652905,
+        "3": -0.01942237776714073,
+        "4": -0.013830362357582615,
+        "5": -0.00902729856755613,
+        "6": -0.005769070273515808,
+        "7": -0.003520074231557757,
+        "8": -0.0018821570917140207,
+        "9": -0.0006263830119106473,
+        "10": 0.0003052059608901203
+      },
+      "sign_flips_in_window": [
+        10
+      ],
+      "max_dr_valid": 9,
+      "sign_changes_below_window_informational": [
+        2
+      ],
+      "sign_note": "Reference sign taken at dr=3 (window start), not dr=1. Points below the window are contact terms and their sign is not evidence of anything. Truncation is at the first sign change at or after dr=3, which is also where the profile meets the numerical noise floor.",
+      "primary_window_dr_ge3": {
+        "n_pts": 7,
+        "alpha_log_ols": 2.8809043918552257,
+        "sigma_fit": 0.45927858723304243,
+        "alpha_relerr": 3.029638849603578,
+        "alpha_linear_unweighted_BANNED": 1.8799082229945068,
+        "bootstrap": {
+          "mean": 2.973919417404546,
+          "std": 0.6807574340378831,
+          "ci_lo": 1.919322337534467,
+          "ci_hi": 4.5385276043283485,
+          "n": 1989
+        },
+        "amplitude_at_dr3": -0.01942237776714073
+      },
+      "secondary_window_dr_ge2": {
+        "alpha_log_ols": -0.040618393437281235
+      },
+      "local_slopes": [
+        {
+          "dr_mid": 1.5,
+          "slope": 13.630736829337636
+        },
+        {
+          "dr_mid": 2.5,
+          "slope": -10.880329478306347
+        },
+        {
+          "dr_mid": 3.5,
+          "slope": 1.1803291925490955
+        },
+        {
+          "dr_mid": 4.5,
+          "slope": 1.9118329117792916
+        },
+        {
+          "dr_mid": 5.5,
+          "slope": 2.455783244504457
+        },
+        {
+          "dr_mid": 6.5,
+          "slope": 3.2048438520400238
+        },
+        {
+          "dr_mid": 7.5,
+          "slope": 4.688512246369502
+        },
+        {
+          "dr_mid": 8.5,
+          "slope": 9.341003626195182
+        },
+        {
+          "dr_mid": 9.5,
+          "slope": 6.823952875627044
+        }
+      ],
+      "plateau": {
+        "n_slopes": 0,
+        "mean_slope": NaN,
+        "tol_rel": 0.15
+      }
+    },
+    "X": {
+      "F": {
+        "1": -3.36175662284969,
+        "2": -0.4064932384360258,
+        "3": -0.210570103588962,
+        "4": -0.12072058473686731,
+        "5": -0.07586081607021988,
+        "6": -0.05081106675614144,
+        "7": -0.03551145789106336,
+        "8": -0.025474724173683683,
+        "9": -0.01851279217530788,
+        "10": -0.013585808556925372
+      },
+      "sign_flips_in_window": [],
+      "max_dr_valid": 10,
+      "sign_changes_below_window_informational": [],
+      "sign_note": "Reference sign taken at dr=3 (window start), not dr=1. Points below the window are contact terms and their sign is not evidence of anything. Truncation is at the first sign change at or after dr=3, which is also where the profile meets the numerical noise floor.",
+      "primary_window_dr_ge3": {
+        "n_pts": 8,
+        "alpha_log_ols": 2.265755975887972,
+        "sigma_fit": 0.062135396430893115,
+        "alpha_relerr": 2.2658334749603726,
+        "alpha_linear_unweighted_BANNED": 2.080736149042962,
+        "bootstrap": {
+          "mean": 2.281149280479605,
+          "std": 0.09385299693539588,
+          "ci_lo": 2.1227222546670808,
+          "ci_hi": 2.497236855049555,
+          "n": 1999
+        },
+        "amplitude_at_dr3": -0.210570103588962
+      },
+      "secondary_window_dr_ge2": {
+        "alpha_log_ols": 2.1178804713445643
+      },
+      "local_slopes": [
+        {
+          "dr_mid": 1.5,
+          "slope": 3.047912023272902
+        },
+        {
+          "dr_mid": 2.5,
+          "slope": 1.6222078071007227
+        },
+        {
+          "dr_mid": 3.5,
+          "slope": 1.9338708471534594
+        },
+        {
+          "dr_mid": 4.5,
+          "slope": 2.0819708285134557
+        },
+        {
+          "dr_mid": 5.5,
+          "slope": 2.1982376656067157
+        },
+        {
+          "dr_mid": 6.5,
+          "slope": 2.3240817289250044
+        },
+        {
+          "dr_mid": 7.5,
+          "slope": 2.4875697291519336
+        },
+        {
+          "dr_mid": 8.5,
+          "slope": 2.7102781641900116
+        },
+        {
+          "dr_mid": 9.5,
+          "slope": 2.9369275640484425
+        }
+      ],
+      "plateau": {
+        "n_slopes": 3,
+        "mean_slope": 2.071359780424544,
+        "tol_rel": 0.15
+      }
+    }
+  },
+  "discrimination": {
+    "alpha_T": 2.8809043918552257,
+    "alpha_X": 2.265755975887972,
+    "separation_sigma": 0.8951564658624168,
+    "abs_gap": 0.6151484159672536,
+    "amplitude_ratio": 10.84162331273413,
+    "VERDICT": "D_INDETERMINATE",
+    "reading": "Separation falls between the pre-registered thresholds, or form and amplitude disagree. Underpowered. Do NOT round toward A."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "HW-2026-019",
+  "system": "IonQ Forte / Tempo 256-qubit (Cambridge deployment)",
+  "vendor": "IonQ",
+  "announced": "2026-03-12",
+  "status": "PARTNERSHIP ANNOUNCED — deployment in progress",
+  "qubits": 256,
+  "qubit_type": "trapped ion",
+  "gate_fidelity_2q": 0.9999,
+  "AQ": 64,
+  "connectivity": "all-to-all (within trap zones)",
+  "access": "on-premise at University of Cambridge Cavendish Laboratory",
+  "key_facts": [
+    "IonQ partnered with University of Cambridge to deploy 256-qubit system at Cavendish Laboratory",
+    "Will be the most powerful quantum computer in the UK once installed",
+    "256-qubit demonstration target for 2026 (R&D lab prototypes achieved this already)",
+    "IonQ Tempo 5th-gen systems at 99.99% two-qubit gate fidelity (four-nines, first in industry)",
+    "Roadmap: 256q in 2026 → 10,000 physical / 800 logical qubits in 2027 → 2M physical / 80K logical in 2030",
+    "Cambridge deployment creates potential academic access path for research collaborations"
+  ],
+  "mera_relevance": "The Cambridge academic deployment creates a potential access route for our MERA experiments — UK academic institutions may gain research access. The 256q scale with all-to-all connectivity would support significantly larger MERA than our current 24q simulations. Four-nines fidelity means raw circuit execution quality is competitive with Helios.",
+  "source": "https://bebeez.eu/2026/03/12/ionq-partners-with-the-university-of-cambridge-for-256-qubit-quantum-computer/",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

@@ -1,0 +1,32 @@
+{
+  "id": "SIM-2026-054",
+  "hypothesis_id": "HYP-2026-029",
+  "date": "2026-06-26",
+  "type": "resource-estimation",
+  "hardware": "none (literature-grounded costing, local CPU only; NO quantum hardware run authorized)",
+  "question": "Does the N=16 static alpha=4 stress-tensor force (critical/tricritical Ising MERA boundary chain) fit a single-digit-megaquop neutral-atom STAR fault-tolerant budget within ~2x of the QuEra STAR 8x8-TFIM datapoint?",
+  "primary_sources": {
+    "PAPER-2026-120 (2606.25011, high-rate STAR)": "8x8 TFIM: 2,240 physical qubits, ~200 s/shot, ~5.5x space reduction vs surface-code STAR, 73 Trotter steps to T*~8(zJ)^-1. Footprint inferred: bicycle chain [[42,6,6]] d=6, ~7 phys/logical, magic-state factory ~4,410 qubits. T-COUNT / LOGICAL DEPTH NOT PUBLISHED.",
+    "PAPER-2026-127 (2509.18294, transversal STAR)": "~10,000 physical qubits at p=1e-3; simulation-volume capacity >600 (units undefined). Code distance not stated.",
+    "SIM-2026-019": "force-detection SNR_10k by dr {1:44.4, 2:10.4, 3:1.9, 4:0.85, 5:0.47, 6:0.29}; shots-for-5sigma = 10000*(5/SNR)^2.",
+    "SIM-2026-015d": "validated N=16 force V_data {dr1:-2.27..dr6:-0.0145}, alpha=3.97 (exact) / 4.07 (chi3 MERA)."
+  },
+  "estimate": {
+    "logical_qubits": "~20 (16 boundary sites + ~4 workspace; vs ~12 for the 8x8 TFIM datapoint, ratio ~1.7x)",
+    "stateprep_MERA_route": "log-depth ansatz: ~114-142 two-qubit gates, ~342-426 non-Clifford (cross-checked vs the proven ADAPT-VQE critical prep, overlap 0.9998). Logical volume ~0.03x the 8x8 datapoint.",
+    "stateprep_adiabatic_route": "polynomial in N: heuristic T~1/gap=N -> ~0.6x volume; rigorous T~1/gap^2=N^2 (non-Clifford ~N^3) -> ~9.4x volume. Polynomial, so does NOT trigger the super-polynomial REFUTE clause.",
+    "measurement": "energy-difference force = ~64 Clifford-measurable Pauli strings, zero non-Clifford (the non-Clifford cost is all in state-prep, as intended).",
+    "physical_qubits": "high-rate STAR single register ~3,700-4,550 (sourced 2,240 scaled by Lq ratio 20/12 + factory); transversal baseline ~9,000-11,000.",
+    "shots": "FT per-shot logical error ~1e-9 collapses the Helios 2.81% noise floor; dr=1..4 detectable in ~16k shots (vs >400k on Helios); dr>=3 becomes shot-limited not feasibility-limited. Cost is wall-clock (200s/shot), not qubits."
+  },
+  "ceilings_check": {
+    "ceiling1_logical_volume": "MERA route ~0.03x (SUPPORTED, <2x); adiabatic rigorous ~9.4x (touches but does not breach the 10x REFUTE band).",
+    "ceiling2_physical_qubits": "high-rate ~4.5k (SUPPORTED, <5k); transversal ~9-11k (over 5k SUPPORTED line, well under 25k REFUTE).",
+    "ceiling3_stateprep_depth": "polynomial / log-depth -> super-polynomial REFUTE clause NOT triggered."
+  },
+  "analog_vs_digital": "Analog FT neutral-atom MERA (HYP-016, ~75-1,500 atoms after the 25x drop) is ~3-50x CHEAPER in qubit count than digital high-rate STAR for the SAME static force, and equally R1-immune (hologron decay only kills the DYNAMIC analog measurement that shelved HYP-017). BUT the analog estimate is far less mature (no isometry->qLDPC mapping). Cheaper: analog. More defensible: digital STAR.",
+  "verdict": "SUPPORTED (conditional; confidence LOW)",
+  "verdict_detail": "SUPPORTED specifically on the high-rate-STAR + MERA-prep combination: clears all three pre-registered ceilings (logical volume ~0.03x, physical qubits ~4.5k < 5k, prep log-depth). The PHYSICAL-QUBIT figure (~4.5k) is the ROBUST part -- anchored to the sourced 2,240 scaled by the logical-qubit ratio, independent of the unknown T-count. CONDITIONALITY (kept LOW, not raised to medium): (1) the LOGICAL-VOLUME ratio rests on an INFERRED 8x8 reference volume (~87,600) because PAPER-120 does NOT publish the T-count or logical depth -- it is directionally safe ONLY because the MERA route is ~30x under the ceiling, a margin large enough to absorb a wrong denominator; (2) the verdict depends on MERA/log-depth prep -- the adiabatic route alone reaches ~9.4x volume at the rigorous N^3 bound, borderline-REFUTE; (3) the transversal-vs-high-rate gate-model gap is the pre-registered INCONCLUSIVE driver but is bounded (<25k). HONEST NET: the force is hardware-reachable in principle within the current FT roadmap (the meaningful answer), but the tight quantitative ratio needs appendix-level T-count extraction from 2606.25011 / 2509.18294 to harden beyond 'directionally SUPPORTED'.",
+  "no_hardware_run": "Confirmed: this is a budget estimate only. No FT hardware run is proposed, scheduled, or authorized; any such run is a separate, later, explicitly-approved decision.",
+  "status": "COMPLETE"
+}

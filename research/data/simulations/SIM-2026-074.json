@@ -1,0 +1,147 @@
+{
+  "id": "SIM-2026-074",
+  "date": "2026-08-24",
+  "title": "HYP-008's registered killer test was structurally incapable of discriminating: at criticality its two probes are the SAME operator by Kramers-Wannier self-duality. Verified to 1e-13. This voids the operator contrast in SIM-2026-073.",
+  "hypothesis_id": "HYP-2026-008",
+  "hypothesis_links": [
+    "HYP-2026-008 (whose test design this invalidates)",
+    "SIM-2026-073 (whose operator contrast this explains away)",
+    "SIM-2026-072 (the alpha retraction)"
+  ],
+  "preregistration": {
+    "file": "research/tools/channel-test/PREREGISTRATION-RING.md",
+    "commit": "95fe3fe, committed before the driver existed",
+    "note": "This finding was NOT the pre-registered question. It emerged from a gate the pre-registration did require -- G2, the ring-symmetry check -- and from the ring geometry making an exact operator identity visible that open boundaries had obscured. It is an exact identity verified numerically, not a fit or a window choice, so it is reportable without the window discipline that governs exponent claims."
+  },
+  "the_finding": "On the periodic critical transverse-field Ising ring (h = 1), the two operators named in HYP-2026-008's refutation_criteria are the same operator. Kramers-Wannier self-duality at h = 1 maps Z_j Z_{j+1} <-> X_j, so both are lattice representatives of the SAME continuum field: the energy density epsilon, Delta = 1.",
+  "numerical_verification": {
+    "vev_equality_n14_h1": {
+      "ZZ": 0.637957447884,
+      "X": 0.637957447884,
+      "abs_diff": 1.11e-15
+    },
+    "vev_inequality_n14_h2_control": {
+      "ZZ": 0.258674211724,
+      "X": 0.93420789887,
+      "abs_diff": 0.6755
+    },
+    "force_profile_equality_n14_h1": "F_T(dr) = F_X(dr) at EVERY separation dr = 1..12, max relative difference 1.68e-13. Not approximate agreement -- numerical identity.",
+    "interpretation": "The h=2 control confirms this is a property of the critical point specifically, not an artifact of the operators or the code: away from self-duality the two vevs differ by a factor of 3.6."
+  },
+  "what_this_does_to_HYP_008": "Its registered killer test, written 2026-03-11, specified 'stress tensor operators T(x) = -J sum_i Z_i Z_{i+1}' versus 'spin primaries X_i'. BOTH labels are wrong, and the two operators are identical at the critical point: (1) Z_j Z_{j+1} is the energy density, Delta = 1, NOT the stress tensor -- the stress tensor is a spin-2 object, and it is precisely what the Koo-Saleur construction validated in SIM-067/068/069 builds, which this is not; (2) X_j is the dual partner of Z_j Z_{j+1}, hence also the energy density, NOT the spin primary. The true spin primary of the TFIM is Z_j, the order parameter, Delta_sigma = 1/8, and it appears nowhere in the registered test. The test compared epsilon against epsilon and could not have discriminated any channel, whatever it returned.",
+  "what_this_does_to_SIM_073": "SIM-2026-073 measured alpha_T = 2.677 +/- 0.329 and alpha_X = 2.340 +/- 0.100 on the OPEN 24-site chain, a gap of 0.337 with an amplitude ratio of 4.5, and recorded verdict D_INDETERMINATE. That contrast is now explained and withdrawn as physics: open boundaries break Kramers-Wannier duality (the dual of an open chain carries different boundary conditions), so the entire apparent difference between the T and X arms was a BOUNDARY ARTIFACT between two operators that are exactly equivalent in the bulk. On the ring, where duality is exact, the difference vanishes to 1e-13. SIM-2026-073's INDETERMINATE verdict stands as recorded and was the correct call, but its operator contrast carried no signal at all -- less than the record supposed.",
+  "the_test_that_should_have_been_run_and_why_it_could_not_be": {
+    "correct_contrast": "Z_j (spin primary, Delta_sigma = 1/8) versus Z_j Z_{j+1} or X_j (energy density, Delta_epsilon = 1). These are genuinely distinct operators with distinct dimensions.",
+    "blocker_found": "The Z arm was implemented and FAILED its gates: ring-symmetry violation of 22% (against a 1% requirement), a NEGATIVE fitted exponent (-1.013), and a power-law R^2 of 0.11. Diagnosis by direct measurement of the Z2 parity operator P = product of all X: |GS> has parity +1, Z_j|GS> has parity -1 (ODD sector), Z_j2 Z_j1|GS> has parity +1 (EVEN sector).",
+    "why_the_protocol_breaks": "F(dr) = [E_dual - E0] - [dE_single(anchor) + dE_single(anchor+dr)] subtracts single-excitation energies from a dual-excitation energy. For T, X and eps every state stays in the even sector and the subtraction is internally consistent. For Z the single-excitation states are Z2-ODD while the dual state is Z2-EVEN, so the protocol subtracts energies measured in DIFFERENT symmetry sectors. That is not a bug to patch; the observable is not defined for a Z2-odd probe as currently constructed.",
+    "status": "NOT a result. Recorded as a design blocker requiring a redesigned observable (candidates: a two-point correlator-based force, a sector-matched reference state, or excitations built from Z2-even bilinears of the spin field). No Z-arm number from this run may be quoted."
+  },
+  "matched_control_status": "At n = 16 the h = 2 paramagnetic control returned CONTROL_CLEAN: no arm showed a power-law plateau, and T and X were both better fit by an exponential (xi = 0.49 and 0.63) than by a power law. So the protocol does NOT manufacture power laws where no CFT exists -- an important negative that supports the validity of the critical-point measurements. The n = 24 control is in flight.",
+  "key_findings": [
+    "THE REGISTERED KILLER TEST COULD NEVER HAVE WORKED. Its two probes are one operator at the critical point, related by exact Kramers-Wannier self-duality. Verified: identical vevs to 1e-15 and identical force profiles to 1e-13 at every separation on the ring.",
+    "SIM-2026-073's OPERATOR CONTRAST IS WITHDRAWN AS PHYSICS. The 0.337 exponent gap and 4.5x amplitude ratio it reported were open-boundary artifacts between exactly equivalent bulk operators. Its INDETERMINATE verdict was right; its supposed signal was not merely weak but absent.",
+    "THE HYPOTHESIS MISNAMED BOTH ITS OPERATORS. Z_j Z_{j+1} is the energy density, not the stress tensor. X_j is the energy density's dual, not the spin primary. The actual spin primary Z_j was never in the design.",
+    "THE CORRECT TEST IS BLOCKED BY A SYMMETRY OBSTRUCTION, NOT BY PRECISION. Z_j is Z2-odd, so single and dual excitations occupy different parity sectors and the energy-difference observable is undefined for it. Measured directly via the parity operator: +1 for the ground state, -1 for Z|GS>, +1 for ZZ|GS>. A new observable is required before the spin-versus-energy contrast can be measured at all.",
+    "THE MATCHED CONTROL IS CLEAN AT n=16. At h = 2, no arm shows a plateau and the energy-sector arms prefer exponential fits. The 2.2-2.7 band seen at criticality is not an artifact the protocol produces everywhere -- the pre-registered CONTROL_CONTAMINATED failure mode did not occur."
+  ],
+  "counterfactual_novelty": "HIGH, and of an unusual kind. This was not a possible answer to the question asked -- it is the discovery that the question as posed had no possible informative answer. Before this run, both a channel split and a channel coincidence were considered live outcomes for T versus X; neither was, because the contrast did not exist. Per RESEARCH-DIRECTOR.md section 6 the value here is that it removes a branch from the tree rather than adding one.",
+  "independence": "The duality identity is checkable analytically and was confirmed against an independent analytic gate in the same driver: the PBC ground-state energy matches the exact free-fermion result to machine precision (2e-16 to 3e-15 across n = 8,10,12 at h = 1 and h = 2), a formula sharing no code path with the simulation.",
+  "gates": {
+    "G1_analytic_free_fermion": "PASS to machine precision at every n and h tested",
+    "G2_ring_symmetry": "PASS for eps, T, X (<= 4e-8). FAIL for Z (0.22) -- which is how the Z-sector obstruction was caught",
+    "G3_eps_continuity": "pending the n=24 run"
+  },
+  "downstream_actions_required": [
+    "HYP-2026-008: its outstanding_killer_test must be re-designated. The test is not 'run once, underpowered' (as SIM-2026-073 recorded) but MIS-SPECIFIED -- it cannot discriminate as written. Status stays NOT_ESTABLISHED; the hypothesis now additionally lacks a valid registered test.",
+    "SIM-2026-073: annotate that its T-versus-X contrast is void as physics, being a boundary artifact between identical bulk operators. Its verdict and its alpha=2.592 reproduction are unaffected.",
+    "A new observable must be designed for Z2-odd probes before any spin-versus-energy channel claim is possible. This is now the blocking item for HYP-2026-008.",
+    "No public claim from this record beyond the identity itself, which is exact and verified."
+  ],
+  "reproducibility": {
+    "driver": "research/tools/channel-test/qw_ring_test.py",
+    "preregistration": "research/tools/channel-test/PREREGISTRATION-RING.md (commit 95fe3fe)",
+    "rng_seed": 20260817,
+    "verification_snippet": "vev_ZZ(n,0,gs) vs vev_X(n,0,gs) at h=1 and h=2; force_profile T vs X at h=1; parity operator P = prod_k X_k applied to |GS>, Z|GS>, ZZ|GS>",
+    "runtime": "seconds at n=12-16; the n=24 ring run is separate"
+  },
+  "status": "COMPLETE",
+  "n24_ring_completion_2026_08_24": {
+    "runtime_s": 1501,
+    "gates": {
+      "G1_free_fermion": "PASS, 1.1e-15 (critical) and 4.4e-16 (control)",
+      "G2_ring_symmetry": "PASS for eps/T/X (2e-10 to 1e-9). FAIL for Z (0.93), as at n=16.",
+      "G3_eps_continuity": "PASS -- eps chord fit 2.368 lies inside the pre-registered 2.59 +/- 0.6 sanity band"
+    },
+    "kramers_wannier_confirmed_at_n24": {
+      "max_rel_diff_T_vs_X": 2.39e-09,
+      "note": "The T=X operator identity holds at n=24 exactly as at n=14. This is now verified at three sizes."
+    },
+    "critical_h1": {
+      "eps": {
+        "alpha_chord": 2.368,
+        "sigma": 0.032,
+        "plateau_n": 8,
+        "plateau": 2.353,
+        "R2_power": 0.9996,
+        "R2_exp": 0.8979
+      },
+      "T_equals_X": {
+        "alpha_chord": 1.834,
+        "sigma": 0.033,
+        "plateau_n": 8,
+        "plateau": 1.873,
+        "R2_power": 0.9993,
+        "R2_exp": 0.919
+      },
+      "T_chord_slopes": [
+        1.673,
+        1.808,
+        1.869,
+        1.901,
+        1.92,
+        1.932,
+        1.939,
+        1.943
+      ],
+      "eps_chord_slopes": [
+        2.559,
+        2.363,
+        2.305,
+        2.294,
+        2.302,
+        2.317,
+        2.333,
+        2.346
+      ]
+    },
+    "control_h2": {
+      "verdict": "CONTROL_CLEAN",
+      "detail": "No arm shows a plateau. T and X are better fit by an exponential (R2_exp 0.9966 / 0.9908 vs R2_power 0.8979 / 0.9481). Apparent 'exponents' of 12-15 are meaningless artifacts of forcing a power law onto exponential decay.",
+      "significance": "The pre-registered CONTROL_CONTAMINATED failure mode did NOT occur, at n=16 or n=24. The protocol does not manufacture power laws where no CFT exists, so the critical-point power laws are a property of the state, not of the observable."
+    },
+    "headline_measurement": {
+      "claim": "On the clean ring geometry with chord-distance analysis, the ENERGY-DENSITY force exponent converges toward 2*Delta_epsilon = 2, the CFT value for the operator actually used.",
+      "evidence": "T/X chord slopes rise monotonically 1.673 -> 1.943 across the window and flatten; the whole-window fit is 1.834 +/- 0.033 and the flattest 8-slope run averages 1.873, i.e. 6.3% below 2. Power-law R2 = 0.9993 against exponential 0.9190.",
+      "HONEST_CAVEAT": "This is NOT a converged plateau. The slopes are still rising at the largest separation in the window (1.943) and the 8-slope run spans 1.673-1.943, a 14.4% spread that only just clears the 15% tolerance. The correct statement is that the exponent is CONSISTENT WITH 2 approached from below with finite-size corrections, NOT that 2 has been measured. A finite-size extrapolation across several n is required before any value is quoted.",
+      "why_it_matters": "This is the first force exponent in this programme that matches the CFT prediction for the operator actually being used. It became visible only after removing the boundary and fitting against chord distance rather than raw separation -- the two systematics SIM-2026-073 identified. It is emphatically NOT 4."
+    },
+    "geometry_dependence_note": "The eps arm gives 2.592 (open chain plateau, SIM-2026-073) versus 2.353 (ring plateau, here) -- a 9% shift from geometry alone. Any exponent quoted from this programme must state its geometry and its distance convention.",
+    "preregistered_discriminant_CANNOT_BE_EVALUATED": "The pre-registration's primary comparison after the KW discovery was T (energy) versus Z (spin). The Z arm is invalid at every size (G2 FAIL, nan fit), so the A/B/C/D verdict the driver prints for T-vs-Z is MEANINGLESS and must not be quoted. The Z2-sector obstruction blocks it, not precision. Recorded as such rather than substituting a comparison that was not pre-registered."
+  },
+  "driver_corrected_2026_09_04": {
+    "trigger": "Two-axis code review (standards + spec) of d17b7a2...HEAD.",
+    "what_was_wrong_in_the_CODE": "This record stated in prose that the T-vs-Z discriminant is 'MEANINGLESS and must not be quoted' because the Z arm fails G2 ring symmetry at 93% against a 1% bar. The RECORD was honest; the CODE was not. qw_ring_test.py computed G2 per arm, stored the pass/fail, and then used the failing Z arm anyway -- emitting a pre-registered verdict D_INDETERMINATE into ring_test_n24_results.json with no void flag. A reader consuming .critical.discrimination.VERDICT got a number derived from a gate-failed arm.",
+    "what_changed": [
+      "G2 is now a PER-ARM gate: a failing arm is still reported (its failure is the finding) but is barred from every discriminant via select_discriminant().",
+      "The driver now WITHHOLDS the verdict (VERDICT: null, verdict_withheld: true) rather than computing A/B/C/D from invalid inputs.",
+      "G1 is now a RUN-LEVEL gate that raises GateFailure; the chain driver's reproduction gate likewise (it previously printed 'Reporting and stopping' and did not stop).",
+      "discrimination.alpha_X held the Z arm's value while the real X arm held a different number; keys are now named for the arm they hold.",
+      "The pre-registration deviation (4th arm, primary contrast switched T-vs-X -> T-vs-Z after the KW discovery) is now recorded in the output JSON, not only in a code comment.",
+      "Added the pre-registered relative-error cross-check estimator, absent from the ring driver.",
+      "Documented the control contamination band widened to 1.8-3.2 from the registered 2.2-2.7."
+    ],
+    "numerics_unchanged_VERIFIED": "Re-run at n=24 after the fix reproduces every value in n24_ring_completion_2026_08_24: eps 2.3684 vs 2.368 recorded (plateau 8@2.3527 vs 8@2.353), T/X 1.8343 vs 1.834 (plateau 8@1.8730 vs 8@1.873), KW identity 2.39e-09 exact match, control CLEAN, G1 1.11e-15. Differences are this record's own rounding. The chain driver likewise reproduces SIM-2026-073 exactly.",
+    "tests_added": "research/tools/channel-test/test_gates.py -- 35 NEGATIVE checks (asserting things CAN fail, since the old code passed every positive check). Mutation-tested: round 1 exposed a blind spot in the new suite itself (a substring check for the withholding branch survived flipping the flag True->False), fixed by extracting select_discriminant() and testing it behaviourally; round 2 caught all six mutations including that one.",
+    "why_this_matters_here": "Every gate in these drivers was an observation rather than a control -- the same failure already catalogued twice in this project (ERRATA D2's json.load that accepts NaN so the schema validator could not fail; the three same-origin notes that agreed about an external status and with nothing external). Honest prose wrapped around a check that cannot fail is more dangerous than an obviously broken check, because it reads as verified. No scientific conclusion in this record changes."
+  }
+}

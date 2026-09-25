@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-068",
+  "title": "Exploring the Intersection of Brain-Computer Interfaces and Quantum Sensing: A Review of Research Progress and Future Trends",
+  "authors": ["Liao, K.", "Yang, Z.", "Tao, D.", "et al."],
+  "date": "2024-01",
+  "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/qute.202300185",
+  "doi": "10.1002/qute.202300185",
+  "journal": "Advanced Quantum Technologies",
+  "domain": "BCI / quantum sensing / review",
+  "status": "CONFIRMED",
+  "relevance": 4,
+  "summary": "Comprehensive peer-reviewed review (2024) of quantum sensing for BCI. Covers OPM-MEG, SQUID-MEG, NV-diamond for neural sensing. Identifies OPM-MEG as the leading near-term quantum BCI approach. Discusses feasibility constraints and future directions. Key reference: confirms the field is recognized but nascent. Does not identify a novel sub-$20k architecture.",
+  "key_numbers": {
+    "mcg_field": "~50 pT",
+    "meg_field": "~1-10 fT",
+    "opm_sensitivity": "5-15 fT/sqrt(Hz) commercial",
+    "squid_sensitivity": "~1 fT/sqrt(Hz)"
+  },
+  "bci_relevance": "Best existing review of the intersection. Confirms no quantum BCI exists below $20k. OPM-MEG is the technology to beat for independent researcher innovation.",
+  "independent_researcher_budget": "Review confirms commercial OPM-MEG systems well above $20k per system. Gap opportunity: novel single/few-channel OPM designs with DIY magnetic shielding."
+}

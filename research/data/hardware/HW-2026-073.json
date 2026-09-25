@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-073",
+  "title": "Oratomic $300M Series A: fault-tolerant QC via reconfigurable neutral-atom arrays",
+  "vendor": "Oratomic",
+  "date": "2026-07-07",
+  "source_url": "https://quantumcomputingreport.com/oratomic-secures-300m-series-a-to-build-fault-tolerant-quantum-computers-via-reconfigurable-neutral-atom-arrays/",
+  "relevance": 3,
+  "summary": "New heavily-funded entrant pursuing FTQC on reconfigurable optical-tweezer neutral-atom arrays, the same modality as QuEra's gigaquop path (HW-068).",
+  "tags": ["Oratomic", "neutral-atom", "FTQC", "funding", "optical-tweezer"],
+  "key_specs": {"funding": "$300M Series A", "modality": "reconfigurable neutral-atom arrays"},
+  "actionable": "Second serious neutral-atom FT effort; watch for concrete logical-qubit/error-rate specs that could compete with or corroborate QuEra timelines (HW-068 anchor).",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

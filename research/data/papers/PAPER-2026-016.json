@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-016",
+  "title": "Probing Entanglement Scaling Across a Quantum Phase Transition on a Quantum Computer",
+  "authors": ["Qiang Miao", "Tianyi Wang", "Kenneth R. Brown", "Thomas Barthel", "Marko Cetina"],
+  "date": "2024-12-24",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2412.18602",
+  "arxiv_id": "2412.18602",
+  "abstract": "First demonstration of logarithmic entanglement scaling at criticality on a digital quantum computer using MERA on trapped-ion hardware. Reveals quantum phase transition with spontaneous symmetry breaking. Accurately represents infinite systems and long-range correlations with few qubits.",
+  "relevance": 4,
+  "tags": ["MERA", "trapped-ion", "entanglement-scaling", "critical-point", "quantum-phase-transition", "quantum-hardware"],
+  "key_claims": [
+    "First observation of log-law entanglement scaling at criticality on quantum hardware",
+    "MERA efficiently captures infinite-system properties with few qubits",
+    "Trapped-ion implementation of MERA circuits",
+    "Spontaneous symmetry breaking observed across quantum phase transition"
+  ],
+  "hardware_used": "trapped-ion quantum computer",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

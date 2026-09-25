@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-037",
+  "organization": "DARPA",
+  "processor": "Quantum Apertures (QA) Program + EQSTRA + SAVaNT",
+  "date": "2021-01-01",
+  "source_url": "https://www.darpa.mil/research/programs/quantum-apertures",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Three active DARPA programs funding Rydberg sensor development: (1) Quantum Apertures (QA, launched 2021): teams include ColdQuanta/Infleqtion, Honeywell, Northrop Grumman, SRI International. Goal: operationally deployable Rydberg apertures. (2) SAVaNT (Science of Atomic Vapors for New Technologies): goal to improve Rydberg electrometry sensitivity and develop vector atomic magnetometry. (3) EQSTRA (Enhancing Quantum Sensor Technologies with Rydberg Atoms): advance TRL of Rydberg vapor sensors for electrometry, imaging, communications. Feb 2025 BAA: explicitly aimed at taking Rydberg sensors out of lab onto defense platforms. Applications: EW, SIGINT, communications, radar. This is the funding context for Infleqtion's SqyWire work."
+}

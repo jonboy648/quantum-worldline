@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-081",
+  "title": "Computing with many encoded logical qubits beyond break-even",
+  "authors": ["Shival Dasu", "Matthew DeCross", "Andrew Y. Guo", "Ali Lavasani", "et al. (41 collaborators, Quantinuum)"],
+  "date": "2026-02-25",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2602.22211",
+  "arxiv_id": "2602.22211",
+  "abstract": "Demonstrates quantum computations that outperform their unencoded counterparts using high-rate quantum error correcting codes on a trapped-ion system. Employs high-rate iceberg quantum error detecting codes and two-level concatenated iceberg QEC codes on the 98-qubit Quantinuum Helios trapped-ion quantum processor, yielding 94 error-detected logical qubits and 48 error-corrected logical qubits from 98 physical qubits. Verifies functionality through a partially-fault-tolerant quantum simulation of the three-dimensional XY model of quantum magnetism using 64 error-detected logical qubits. GHZ state of 94 logical qubits achieved with fidelity 94.9%.",
+  "relevance": 3,
+  "tags": ["quantum-error-correction", "logical-qubits", "trapped-ion", "Quantinuum", "Helios", "iceberg-codes", "XY-model", "fault-tolerant", "quantum-simulation"],
+  "key_claims": [
+    "94 error-detected logical qubits and 48 error-corrected logical qubits from 98 physical qubits",
+    "Near-1:1 physical-to-logical ratio for error detection; 2:1 for error correction",
+    "Logical error rates 10-100x below physical counterparts — beyond break-even",
+    "3D XY model quantum simulation executed with 64 logical qubits",
+    "State-of-the-art logical component and state fidelities demonstrated"
+  ],
+  "hardware_used": "Quantinuum Helios (98-qubit trapped-ion)",
+  "qubit_count": 98,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — demonstrates that Helios (the hardware we flagged in HYP-013/016 for our circuit) is now achieving dramatically better logical qubit ratios than we modeled. Raises the ceiling for viable MERA simulations on Helios-class hardware."
+}

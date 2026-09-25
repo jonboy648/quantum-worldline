@@ -1,0 +1,3 @@
+network /workspace/hyp033/networks/chi6_h1.50_seed8: chi=6 h=1.5000 seed=8 E_inf=-1.671926201696 basin_clean=false | ring E0/3=-1.671926 gap=0.0584 herm=1.1e-16
+  gates: G1 |f(cone)-1|=0.0e+00 f(out)=3.8e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 4.5e-11 | G3 worst 2.3e-14 | PASS [306.4s]
+  done: /workspace/hyp033/networks/chi6_h1.50_seed8/hyp033_both.json [0.0s]

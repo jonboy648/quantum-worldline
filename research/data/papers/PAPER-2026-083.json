@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-083",
+  "title": "Multi-particle quantum systems within the Worldline Monte Carlo formalism",
+  "authors": ["Ivan Ahumada", "et al. (11 total authors)"],
+  "date": "2025-12-31",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2512.24942",
+  "arxiv_id": "2512.24942",
+  "abstract": "Extends the Worldline Monte Carlo approach to computationally simulating the Feynman path integral of non-relativistic multi-particle quantum-mechanical systems. Shows how to generate an arbitrary number of worldlines distributed according to the free kinetic part of the multi-particle quantum dynamics and how to simulate interactions between worldlines in the ensemble. Formalism tested with two- and three-particle quantum mechanical systems, both with long-range Coulomb-like interactions between particles and external fields acting separately on the particles, in various spatial dimensionality.",
+  "relevance": 3,
+  "tags": ["worldline-Monte-Carlo", "Feynman-path-integral", "multi-particle", "quantum-mechanics", "Coulomb-interaction", "numerical-methods"],
+  "key_claims": [
+    "Extension of worldline Monte Carlo to arbitrary numbers of interacting quantum particles",
+    "Worldlines generated from free kinetic distribution, interactions sampled perturbatively",
+    "Two- and three-particle validation with Coulomb-like and external field interactions",
+    "Works in various spatial dimensionality",
+    "Provides a non-relativistic multi-particle version of worldline path integral methods"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "NEUTRAL — directly advances worldline Monte Carlo methodology (HYP-003/007). Provides a numerical framework for multi-particle worldline simulations. Not directly about holographic forces but strengthens the classical simulation toolkit we use alongside quantum hardware."
+}

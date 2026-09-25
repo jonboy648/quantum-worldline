@@ -1,0 +1,28 @@
+{
+  "id": "SIM-2026-070",
+  "date": "2026-08-11",
+  "title": "HYP-028 Phase 1: PAPER-133 Yang-Lee boundary-data reproduction PASSED (R_inf = -1.61820 vs -(1+sqrt5)/2, 0.01%; g_1 = 0.72535 vs 0.725073, 0.04%)",
+  "hypothesis_links": ["HYP-2026-028"],
+  "method": "Sparse-ED reproduction of PAPER-133 (2606.16785v2) projected-partition-function spectroscopy on the periodic PT-symmetric Ising chain H_YL = -sum(sz sz + lambda sx + i h sz), lambda=4. Finite-size exceptional points h_c^L located by bisection on Im(E) of the lowest pair (L=8..18, KrylovKit smallest-real-part Arnoldi); h_c^inf = 1.5587127 from fixed-exponent fit (b=12/5 + L^-4 subleading; free-b gives 2.33-2.37 vs theory y_phi=12/5=2.4). Biorthogonal projections at h=h_c^inf (PT-unbroken at every finite L): Z_{X,i} = <X|Psi_iR><Psi_iL|X>/<Psi_iL|Psi_iR> with eta=parity so left = P*right (real spectrum), X = product (|up>+|down>)/sqrt2 preparation. L=8..20 (2^20 = 1M-dim top rung).",
+  "results": {
+    "hcL": [[8,1.5863321],[10,1.5750539],[12,1.5693276],[14,1.5660746],[16,1.5640705],[18,1.5627601]],
+    "hc_inf": 1.5587127,
+    "R_by_L": [[8,-1.012298],[10,-1.118291],[12,-1.19362],[14,-1.249659],[16,-1.292888],[18,-1.327222],[20,-1.355149]],
+    "R_inf": {"value": -1.61820, "method": "two-level Richardson (pairwise 1/L intercepts, then geometric tail sum; intercept sequence -1.5423..-1.6065, ratios 0.56->0.72)", "exact": -1.618034, "dev_pct": 0.01},
+    "g1": {"value": 0.725347, "window": "L>=10 (window spread 0.7246-0.7265 brackets exact)", "exact": 0.725073, "dev_pct": 0.04, "paper_value": "0.725339(51) -- our L>=10 value matches the paper's own number"},
+    "Z1_sign": "NEGATIVE at every L (the unitarity-forbidden sign; Z_phi real to machine precision, |Im| <= 3e-10 relative)"
+  },
+  "key_findings": [
+    "PAPER-133's periodic-chain route to nonunitary boundary data is CONFIRMED at ED scale: the negative excited-to-ground amplitude ratio -- impossible in any unitary CFT -- is reproduced at 0.01% with plain sparse ED plus the eta=parity left-pairing. HYP-028's G4-gate prerequisite is satisfied.",
+    "h-sensitivity grows as L^{12/5} (relevant-direction flow): refining h_c^inf by 1.2e-4 visibly moved L>=16 amplitudes. Extrapolation quality is limited by h_c^inf precision before anything else -- pin h_c^inf with the theory-fixed exponent, never a free-b fit alone.",
+    "Naive polynomial-in-1/L extrapolation over wide L-windows OVERSHOOTS (curvature at small L; free-power fits gave -1.75); pairwise-linear intercepts + Richardson on the intercept sequence is the stable estimator at these sizes.",
+    "Working point must be h_c^inf (PT-unbroken at all finite L) -- everything is regular there; no exceptional-point pathology encountered anywhere in the pipeline."
+  ],
+  "verdict": "PASSED. Phase 2 unlocked: biorthogonal Koo-Saleur elements at the same working point -- product-form c_KS = 2<0_L|H_-2|T_R><T_L|H_+2|0_R>/(norms) with the conformal vacuum |1> = SECOND k=0 state, testing c=-22/5 vs c_eff=2/5. Design: research/tools/yanglee-pt/HYP028-BIORTHO-KS-DESIGN.md (Phase-2 refinements section).",
+  "files": {
+    "driver": "research/tools/yanglee-pt/qw_yanglee_pt.jl",
+    "logs": "research/tools/yanglee-pt/yl_run_8_18.log, yl_proj.log",
+    "design": "research/tools/yanglee-pt/HYP028-BIORTHO-KS-DESIGN.md",
+    "paper": "research/downloads/2606.16785v2.pdf"
+  }
+}

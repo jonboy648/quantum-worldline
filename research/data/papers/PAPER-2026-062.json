@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-062",
+  "title": "Simulating Holographic Conformal Field Theories on Hyperbolic Lattices",
+  "authors": ["(Multiple groups, 2024)"],
+  "date": "2024-04-04",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2404.03062",
+  "arxiv_id": "2404.03062",
+  "abstract": "Demonstrates that hyperbolic lattice settings combining nonlinear dynamics universally encode aspects of AdS/CFT bulk-boundary correspondence. Features emergent CFTs with nontrivial correlations on the boundary. Rydberg arrays are a proposed experimental realization. Published Phys. Rev. Lett. 2024.",
+  "relevance": 3,
+  "tags": ["hyperbolic-lattice", "AdS-CFT", "holographic-CFT", "tensor-network", "Rydberg-simulator"],
+  "key_claims": [
+    "Hyperbolic lattice + nonlinear dynamics encodes AdS/CFT",
+    "Boundary CFT emerges with correct nontrivial correlations",
+    "Rydberg arrays are natural experimental platform for hyperbolic holographic models",
+    "Gravitational self-interactions in bulk simulated via nonlinear dynamics"
+  ],
+  "hardware_used": "Theoretical; Rydberg arrays proposed",
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-04-26"
+}

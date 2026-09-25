@@ -1,0 +1,5 @@
+{
+  "name": "quantum-worldline",
+  "description": "Multi-tier agent team for quantum physics and worldline simulation research. Automates the research cycle: discover, hypothesize, gate, test, interpret.",
+  "version": "0.1.0"
+}

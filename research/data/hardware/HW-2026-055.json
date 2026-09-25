@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-055",
+  "organization": "Trapped-ion group (IonQ-affiliated authors; Tham, Goldman, Debnath, Delfosse et al.)",
+  "processor": "Breakeven qLDPC demonstration device (trapped ion)",
+  "date": "2026-06-04",
+  "source_url": "https://arxiv.org/abs/2606.06455",
+  "arxiv_id": "2606.06455",
+  "physical_qubits": 18,
+  "logical_qubits": 4,
+  "error_correction_ratio": "18 physical / 4 logical (qLDPC)",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "logical_qubits",
+  "notes": "Breakeven demonstration of quantum low-density parity-check (qLDPC) codes. Implements nine quantum error-correcting codes with starkly different qubit connectivity requirements on a single trapped-ion device, achieving breakeven (logical outperforms physical) with logical error rates up to 9x better than previous demonstrations. 4 logical / 18 physical. RELEVANCE 3/5: confirms trapped-ion path to logical qubits and continues the FT trend, but small scale. Lowers the fault-tolerant cost trajectory for the 16q-transport / MERA-on-hardware path; does not change our physics anchors."
+}

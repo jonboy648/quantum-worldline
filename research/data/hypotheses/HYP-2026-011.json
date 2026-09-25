@@ -1,0 +1,33 @@
+{
+  "id": "HYP-2026-011",
+  "claim": "The power-law force F(dr)~dr^{-3.92} measured at the MERA boundary reflects the 2D CFT conformal block for stress-tensor exchange (operator dimension Delta=2, giving a 1/r^4 propagator in flat 2D space), while Sahay-Lukin-Cotler's exponential force V(dr) ~ exp(-dr/l_AdS) reflects the AdS bulk graviton propagator evaluated in proper geodesic distance. The two are related by a boundary-to-bulk integral: the CFT power-law is the boundary projection of the bulk exponential via the AdS Poisson/bulk-to-boundary propagator K(z, x) = (z / (z^2 + x^2))^Delta. Specifically: V_boundary(dr) = integral_0^inf K(z, dr) * V_bulk(z) dz, where V_bulk(z) ~ exp(-z/l_AdS) is the bulk potential at depth z, and this integral over all bulk depths reproduces V ~ dr^{-2*Delta} = dr^{-4} for Delta=2. This explains why boundary observers see power-law gravity while bulk observers see exponential decay in the same MERA.",
+  "confidence": "medium",
+  "confidence_rationale": "The CFT conformal block formula for a spin-2 (stress-tensor) primary in 2D gives a 1/r^4 two-point function, consistent with our measured alpha=3.92 to within 2%. The Poisson kernel integral connecting bulk exponential to boundary power-law is standard AdS/CFT machinery (HKLL reconstruction). The specific form of the integral is analytically tractable. Confidence is medium (not high) because: (1) we have not yet explicitly computed the integral and verified it reproduces the Sahay-Lukin-Cotler amplitude C2=13.6(8) alongside the power law; (2) the crossover depth z* where the transition from power-law to exponential occurs has not been computed for our MERA geometry.",
+  "source_findings": ["SCAN-001", "PAPER-2026-023", "SIM-2026-011", "PAPER-2026-009"],
+  "testable": true,
+  "test_design": "Analytic test (no new simulations required): 1. Compute the 2D CFT four-point conformal block for stress-tensor exchange T(x1)T(x2) at boundary separation dr. The result is G(dr) ~ dr^{-4*Delta_T/2} = dr^{-4} for Delta_T=2. Extract the amplitude and compare to our measured A (from power-law fit F = A * dr^{-3.92}). 2. Compute the AdS/CFT Poisson kernel integral: V_boundary(dr) = integral_z K(z,dr)^2 * exp(-z/l_AdS) dz / normalization. Evaluate analytically (Mathematica) and check whether the result is a power law with alpha~4 and with amplitude consistent with Sahay-Lukin-Cotler C2=13.6. 3. If the two match within 10%, the unified picture is confirmed. 4. Numerical cross-check: compute our force measurement at different MERA 'depths' (layers) to trace the crossover from CFT (boundary) to bulk (deep layers). This requires extracting inter-hologron energy at each MERA layer separately.",
+  "refutation_criteria": "If the Poisson kernel integral gives a power-law with alpha significantly different from 4.0 (outside 3.5-4.5), the CFT conformal block picture is wrong. If the amplitude from the integral disagrees with Sahay-Lukin-Cotler by more than a factor of 3, the unified picture is quantitatively wrong. If layer-by-layer force measurements in our MERA do NOT show a crossover from power-law (surface) to exponential (deep layers), the boundary/bulk distinction hypothesis is wrong.",
+  "hardware_required": "Mathematica or SymPy for the analytic integral. Optional: local GPU for layer-by-layer MERA force measurements on 16q system (SIM-2026-002 circuit).",
+  "earliest_testable": "2026-Q2",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "philosophical_implications": "If confirmed, this finding reframes holographic gravity as observer-dependent: boundary observers see power-law (CFT) gravity; bulk observers see exponential (AdS) gravity. Both are correct descriptions of the same emergent geometry, related by the HKLL map. This is the tensor-network realization of the holographic dictionary: the same physical state has two valid descriptions that appear to have different force laws. It also means that measuring F~dr^{-4} at the boundary is not evidence against Sahay-Lukin-Cotler -- it is complementary evidence for a complete AdS/CFT duality in the MERA. The two results together constrain both the boundary CFT (power-law amplitude) and the bulk geometry (AdS curvature l_AdS) from a single simulation.",
+  "status": "PARTIALLY_SUPPORTED",
+  "justified_by": ["SIM-2026-014"],
+  "status_writeback_2026_08_17": {
+    "from": "proposed",
+    "to": "PARTIALLY_SUPPORTED",
+    "trigger": "docs/governance/AUDIT-2026-08-11.md defect D-10.",
+    "verified_against": "SIM-2026-014.json, verdict field reads PARTIALLY_SUPPORTED verbatim (Poisson kernel integral test, 2026-03-26, status COMPLETE). The status written here is the SIM record's own verdict, not an inference from it.",
+    "reproducibility_caveat": "SIM-2026-014 is a thin record: it carries a description, a verdict and a status, and no results block, no fit output, no script path and no environment metadata. It documents that the test was performed and how it came out; it does not let a reader reconstruct the number. Per RESEARCH-DIRECTOR.md section 21 this is below standard, and the PARTIALLY_SUPPORTED status inherits that weakness."
+  },
+  "claim_dependency_alert_2026_08_17": "This record's claim is stated in terms of 'the power-law force F(dr) ~ dr^{-3.92} measured at the MERA boundary'. That exponent is WITHDRAWN as of 2026-08-17: SIM-2026-072 shows 3.92 is an artifact of unweighted least squares in linear space (95.8% of the fit objective on the single point dr=2) and the measured intermediate-separation exponent is alpha = 2.6 +/- 0.2, matching neither 2*Delta_T = 4 nor 2*Delta_epsilon = 2. The claim text is left unaltered per section 32, but note the consequence for the refutation_criteria above: the criterion 'the Poisson kernel integral gives alpha outside 3.5-4.5 => the CFT conformal block picture is wrong' was written to be judged against a boundary exponent of ~4. Against the corrected 2.6 +/- 0.2 the comparison target moves and the boundary/bulk duality reading of this hypothesis must be re-derived before PARTIALLY_SUPPORTED can be strengthened. The layer-by-layer crossover test in step 4 of the test design was never run.",
+  "created_date": "2026-03-26",
+  "last_updated": "2026-08-17",
+  "created_by": "theory-lead",
+  "speculative_flag": true,
+  "pipeline_provenance": {
+    "conjecture_stage": "Generated from SCAN-001 (Sahay-Lukin-Cotler contrast) and math bridge finding #1",
+    "feasibility_stage": "TESTABLE_NOW: analytic derivation requires only Mathematica/SymPy; layer-by-layer MERA test requires existing 16q circuit",
+    "philosophy_stage": "Observer-dependent force law — boundary vs bulk duality confirmed in same tensor network"
+  }
+}

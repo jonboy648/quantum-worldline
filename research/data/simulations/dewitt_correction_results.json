@@ -1,0 +1,22 @@
+{
+  "test": "DeWitt supermetric correction",
+  "hypothesis": "Roux PAPER-2026-023 predicts r_eff = r_geod / (chi * ghost_factor)",
+  "parameters": {
+    "l_AdS": 1.443,
+    "m": 1.0,
+    "chi": 2,
+    "ghost_factor": 1.4,
+    "total_correction": 2.8
+  },
+  "results": {
+    "xi_mera_2pt": 2.156530931659465,
+    "xi_original": 0.7197923777991233,
+    "xi_dewitt_chi2": 0.5761999273772793,
+    "xi_dewitt_plus_ghost": 0.48220490815312,
+    "best_fit_alpha": 0.5,
+    "ratio_original": 0.33377326855462175,
+    "ratio_dewitt": 0.26718834351886134,
+    "ratio_full": 0.22360212926881604
+  },
+  "verdict": "PARTIAL"
+}

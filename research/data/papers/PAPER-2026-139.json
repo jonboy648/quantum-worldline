@@ -1,0 +1,50 @@
+{
+  "source": "arxiv",
+  "discovered_by": "worldline-orchestrator (HYP-032 prior-art gate, section 8)",
+  "discovered_date": "2026-09-06",
+  "anchor_contradiction": null,
+  "seeds_hypothesis": "HYP-2026-032",
+  "related_hypotheses": [
+    "HYP-2026-032",
+    "HYP-2026-028"
+  ],
+  "categories": [
+    "hep-th"
+  ],
+  "id": "PAPER-2026-139",
+  "title": "Timelike entanglement entropy",
+  "authors": [
+    "Kazuki Doi",
+    "Jonathan Harper",
+    "Ali Mollabashi",
+    "Tadashi Takayanagi",
+    "Yusuke Taki"
+  ],
+  "date": "2023-02-22",
+  "arxiv_id": "2302.11695",
+  "relevance": 5,
+  "abstract": "Defines a complex-valued measure, the timelike entanglement entropy, as a Wick rotation of a spacelike boundary subregion to a timelike one. Gives an explicit definition in 2d field theories, numerical computations (free scalar, free Dirac fermion, on a lattice) agreeing with the analytic continuation of the replica method, and argues it is the pseudo entropy of a reduced transition matrix. The imaginary part is proposed to describe an emergent time. Holographically it is the total complex area of a stationary combination of spacelike and timelike extremal surfaces.",
+  "tags": [
+    "timelike-entanglement",
+    "pseudo-entropy",
+    "emergent-time",
+    "AdS3/CFT2",
+    "free-fermion",
+    "lattice-numerics"
+  ],
+  "key_claims": [
+    "CFT2 interval of temporal length T: S = (c/3) log(T/eps) + i pi c / 6 (finite ring: (c/3) log((R/pi) sin(pi T/R)) + const, same imaginary part)",
+    "Lattice numerics via Gaussian correlation matrices with a Wick-rotated correlator prescription; the paper states the prescription is adopted by fiat on the lattice",
+    "Equivalent definition as pseudo entropy of a transition matrix built from a thermofield double at imaginary temperature",
+    "Imaginary part interpreted as emergent time, generalizing emergent space from entanglement"
+  ],
+  "relevance_note": "The literal physics of the project's origin video (correlation between time-separated slices of one system; 'emergent time'). Record of authority for HYP-2026-032's Level-1 gate: c = 1/2 predicts slope 1/6 and Im S = pi/12. Its by-fiat lattice prescription is exactly what the transition-matrix cross-check in HYP-032 tests.",
+  "related_papers": [
+    "PAPER-2026-140",
+    "PAPER-2026-141",
+    "PAPER-2026-020",
+    "PAPER-2026-119",
+    "PAPER-2026-138"
+  ],
+  "source_url": "https://arxiv.org/abs/2302.11695"
+}

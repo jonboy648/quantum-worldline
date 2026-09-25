@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-054",
+  "organization": "IonQ / KISTI (Korea Institute of Science and Technology Information)",
+  "processor": "IonQ Tempo (100-qubit, 5th-gen trapped-ion)",
+  "date": "2026-01-16",
+  "source_url": "https://www.datacenterdynamics.com/en/news/ionq-finalizes-agreement-with-south-koreas-kisti-for-delivery-of-tempo-quantum-computer/",
+  "physical_qubits": 100,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": 0.9999,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Agreement finalized 2026-01-16 (first announced May 2025). IonQ delivers 100-qubit Tempo quantum computer to KISTI for integration with KISTI-6, South Korea's largest HPC cluster — first onsite hybrid quantum-classical integration in South Korea. System made available to South Korean academia and enterprise via private cloud. KISTI identified as primary quantum technology provider for South Korea's National Quantum Computing Center of Excellence. Fidelity: Tempo carries 99.99% 2Q fidelity (world record as of scan date). This is an availability/deployment milestone, not a new hardware specification. RELEVANCE TO OUR WORK: Relevance 2/5. Confirms Tempo (99.99% 2Q fidelity) is being deployed internationally as a commercial system, not just a research prototype. Access path through KISTI (international research partnership) is a potential alternative to Quantinuum Helios or direct IonQ cloud access for high-fidelity trapped-ion circuits. The 99.99% fidelity record is already in the frontier table and unchanged by this entry."
+}

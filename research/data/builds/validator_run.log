@@ -1,0 +1,4 @@
+validator_main: verdict=FAIL
+validator_main: reason=alpha=0.725 outside validator window [2.0, 6.0]
+validator_main: alpha=0.725  TEE=3.7327  peak_rss=0.20 GB
+validator_main: results -> D:\quantum-worldline\research\data\builds\HYP-2026-017-validator-results.json

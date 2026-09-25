@@ -1,0 +1,19 @@
+{
+  "id": "PAPER-2026-116",
+  "title": "Hidden Conformal Boundary Data in Finite-Temperature Stabilizer Entropy",
+  "authors": ["Reyhaneh Khasseh", "M. A. Rajabpour"],
+  "date": "2026-06-07",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.08606",
+  "arxiv_id": "2606.08606",
+  "abstract": "The finite-temperature stabilizer Renyi entropy (index 1/2) of the open critical transverse-field Ising chain is expressed as a sum over absolute square-minors of a finite-T correlation matrix and reduced exactly to a single Pfaffian with block Toeplitz-Hankel structure. In the crossover regime beta proportional to L the stabilizer entropy factorizes into an extensive piece plus a universal finite-size scaling function that is a level-8 eta quotient (not the ordinary free-boundary Majorana thermal factor), yielding a Cardy-like asymptotic and revealing defect-like conformal data invisible to ordinary thermodynamic probes.",
+  "relevance": 4,
+  "tags": ["TFIM", "stabilizer-entropy", "magic", "finite-temperature", "CFT-from-lattice", "Pfaffian", "Toeplitz-Hankel", "boundary-CFT", "free-fermion"],
+  "key_claims": [
+    "Finite-T stabilizer Renyi entropy of the critical TFIM reduces exactly to a Pfaffian (block Toeplitz-Hankel), same free-fermion correlation-matrix formalism as exact-diagonalization force measurements.",
+    "Universal finite-size scaling function in the beta~L regime is a level-8 eta quotient with a Cardy-like asymptotic.",
+    "Reveals defect-like / boundary conformal data invisible to thermodynamic probes -- a finite-T-only sensitivity."
+  ],
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-06-16"
+}

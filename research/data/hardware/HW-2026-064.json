@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-064",
+  "organization": "QuEra / AWS",
+  "processor": "Libra (roadmap target, 2028)",
+  "date": "2026-06-15",
+  "source_url": "https://www.prnewswire.com/news-releases/quera-announces-2028-fault-tolerant-quantum-computer-and-expanded-multi-year-strategic-collaboration-with-aws-302799818.html",
+  "physical_qubits": null,
+  "logical_qubits": 256,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": "logical_qubits",
+  "notes": "ROADMAP TARGET, not a demonstrated result. QuEra announced a 2028 fault-tolerant 'Libra' system: 256 logical qubits, target logical error rate ~1e-6, ~1 million reliable logical operations (megaquop-class), reconfigurable neutral-atom (Rydberg) arrays with all-to-all connectivity and transversal codes. Underpinned by a demonstrated 3,000-physical-qubit continuously-operating neutral-atom array (the demonstrated capability; the 256-logical/1e-6 numbers are projections). Delivered via expanded multi-year QuEra-AWS collaboration on Amazon Braket (cloud access). Extends HW-2026-062 (QuEra Gemini 260q/99.2% 2Q, collaboration-available) -- same vendor/platform family, same AWS Braket access path used for our prior Aquila work. RELEVANCE 4/5: if realized, 256 logical qubits at 1e-6 would trivially run our alpha~4 force circuit (16q at dr=1..4) and 16q transport; the collaboration route is directly connected to the HW-062 path. Do NOT update the frontier table with these roadmap numbers. Discovered_by hardware-tracker 2026-06-16."
+}

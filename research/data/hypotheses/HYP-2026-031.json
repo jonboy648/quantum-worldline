@@ -1,0 +1,100 @@
+{
+  "id": "HYP-2026-031",
+  "category": "non-unitary-lattice-virasoro",
+  "name": "Biorthogonal Koo-Saleur extraction measures the TRUE central charge, sign included, at a non-unitary lattice critical point",
+  "created_date": "2026-08-17",
+  "last_updated": "2026-08-17",
+  "created_by": "records-remediation (audit D-11 split of HYP-2026-028)",
+  "speculative_flag": false,
+  "provenance": {
+    "why_this_record_exists": "docs/governance/AUDIT-2026-08-11.md defect D-11. HYP-2026-028 was advanced to SUPPORTED on a question it never registered: its claim and refutation_criteria are about a force exponent alpha, while SIM-2026-070 and SIM-2026-071 measured boundary-state observables and a biorthogonal central charge. Rather than retro-fit HYP-028's pre-registration to the result that was actually obtained -- which would be goalpost movement of exactly the kind RESEARCH-DIRECTOR.md section 36 exists to prevent -- the biorthogonal-Koo-Saleur proposition is registered here as a separate hypothesis with its own claim, its own refutation criteria, its own killer test and its own literature gate. HYP-2026-028's alpha question is restored to OPEN and remains untested.",
+    "pre_registration_honesty_statement": "This record is written AFTER the measurement it evaluates. That is stated plainly rather than disguised: the claim, refutation_criteria and killer_test below are reconstructions of what SHOULD have been registered before SIM-2026-070/071 ran, and the evaluation section separates what the existing runs can and cannot decide. The genuinely pre-registered content is the escalation in `pre_registered_predictions_for_the_next_run`, which is written before those rungs exist and must not be edited after they are computed."
+  },
+  "claim": "On a periodic non-Hermitian critical spin chain sitting at a NON-UNITARY fixed point, the Koo-Saleur lattice construction of the Virasoro generators, evaluated with a biorthogonal (left-eigenvector / right-eigenvector) bilinear pairing rather than the Hermitian inner product, yields a central-charge estimator c_KS whose value converges to the TRUE central charge c of the non-unitary CFT -- INCLUDING ITS SIGN -- and not to the positive effective central charge c_eff = c - 24*h_min that governs Casimir/free-energy finite-size scaling. Concretely at the Yang-Lee point M(2,5): c_KS -> c = -22/5 = -4.4, and c_eff = +2/5 is excluded. The construction under test is c_KS = 2*<T_L|H_{+2}|0_R> / <T_L|0_L-normalisation> in the product form recorded in research/tools/yanglee-pt/, with the vacuum and stress-tensor states identified by a Delta-gate above the biorthogonal vacuum.",
+  "confidence": "medium",
+  "confidence_rationale": "Medium, and split by sub-claim rather than averaged. (1) The SIGN sub-claim is well supported: the biorthogonal Koo-Saleur product is negative at every L, in both chiralities, under all three defensible working points, corroborated independently by <1|1> < 0, and reproduced to six decimal places by an independently written Python/ARPACK port that does not share the Julia analysis path. It is the one place in this program where the pre-calculation outcome space had more than one physically meaningful member. (2) The MAGNITUDE sub-claim is NOT supported at the precision it was reported: 82% of the -4.29 figure is extrapolation from a two-sample tail ratio, the h_c^inf model choice alone moves it from -3.67 to -7.04, a defensible pipeline zoo spans [-5.6, -2.6], and a known-answer calibration of the same estimator implies +/-0.86 rather than +/-0.15. (3) CONVERGENCE IS NOT ESTABLISHED: the KS product element scales as L^-1.03 where convergence of c_KS requires L^-2, the unitary control on the same code path gives L^-2.05, and a DIVERGENT logarithm fits the five available points 18x better than any two-parameter convergent model. Confidence is held at medium and not high because a divergent sequence whose sign is stable would reproduce observation (1) while falsifying the claim as stated.",
+  "source_findings": [
+    "HYP-2026-028",
+    "PAPER-2026-133",
+    "PAPER-2026-119",
+    "SIM-2026-070"
+  ],
+  "testable": true,
+  "test_design": "Executed portion (SIM-2026-070, SIM-2026-071) and required escalation. (1) PHASE 1 -- calibrate the working point. Reproduce PAPER-2026-133's periodic PT-symmetric Ising chain data at lambda = 4 by sparse exact diagonalization at L <= 18: the boundary-state ratio R_inf and the overlap g1, with the critical field located by bisection. This fixes h_c^inf and validates the root-finder. (2) PHASE 2 -- build the biorthogonal layer. Obtain left and right eigenvectors by non-Hermitian sparse eigensolve (eigs, not eigsh); define every matrix element as <L|O|R> with the biorthogonal normalisation, NOT <R|O|R>; verify the biorthogonal norms and record their signs. (3) IDENTIFY THE STATES BY A DELTA-GATE, NOT BY MAGNITUDE. At Yang-Lee the unitary identification rule INVERTS: the cross-module phi-descendant element is ~10-11x LARGER than T's and of opposite sign, so selecting the dominant element selects the wrong state. Select T by its scaling dimension above the biorthogonal vacuum. Note also that the vacuum |1> is the SECOND k=0 state and carries a negative biorthogonal norm. (4) FORM c_KS from the product of the two chiralities' KS elements and extrapolate in L. (5) UNITARY CONTROL -- run the identical code path on the critical TFIM with the non-Hermitian coupling set to zero and require recovery of c = 1/2. (6) ESCALATE -- see pre_registered_predictions_for_the_next_run.",
+  "refutation_criteria": "The claim is REFUTED if ANY of the following holds. (a) SIGN: the biorthogonal Koo-Saleur product is positive, or its sign is not stable across L, chirality, and the choice of working point within the PT-unbroken window -- in which case the estimator does not carry the true c and the c_eff branch is not excluded. (b) CONVERGENCE: the L-dependence of the KS product element is fitted better by a divergent model (a growing logarithm, or a power with a positive exponent) than by any two-parameter convergent model, at L rungs extending to at least 24 -- in which case c_KS has no limit and 'converges to c' is false regardless of the sign. This criterion is CURRENTLY FAILING at L <= 18 and is the single most likely killer. (c) MAGNITUDE: with h_c^inf fixed at the published value 1.55872195(5) rather than the in-house fit 1.5587127, the extrapolated |c_KS| falls outside [3.5, 5.5], i.e. outside a band that could plausibly contain 22/5 -- in which case the estimator carries a sign but not a value. (d) CONTROL: the unitary control on the identical code path fails to return c = 1/2 to better than 1%. (e) ARTEFACT: the result is shown to depend on the biorthogonal normalisation convention or on the choice of metric operator. This sub-criterion is DISCHARGED -- c_KS is provably invariant under eigenvector rescaling and under the full pseudo-Hermitian metric family eta -> eta*p(H), proved analytically twice by independent routes. The claim is NOT_ESTABLISHED (neither supported nor refuted) if the L-scaling remains ambiguous between convergent and divergent models at the available rungs.",
+  "killer_test": {
+    "name": "The L^-2 convergence killer",
+    "statement": "Convergence of c_KS to any limit requires the Koo-Saleur product element to approach its asymptote as L^-2. The unitary control on the same code path obeys this (measured exponent -2.05). The Yang-Lee sequence does NOT: the measured exponent is -1.03, and over the five available rungs a divergent logarithm outperforms every two-parameter convergent model by a factor of ~18 in fit quality. If rungs at L = 24 and L = 28 confirm the L^-1 scaling and the divergent fit continues to win, the claim 'c_KS converges to the true c' is REFUTED and what survives is strictly weaker: a sign-definite, non-convergent diagnostic that distinguishes c < 0 from c_eff > 0 without measuring either.",
+    "why_this_is_the_right_killer": "It attacks the load-bearing assumption rather than the headline number. RESEARCH-DIRECTOR.md section 12 lists the Yang-Lee method killer as normalisation convention, eigenvector conditioning, state misidentification, or exceptional-point instability. Normalisation is discharged by the invariance proof; state misidentification is discharged by the Delta-gate; exceptional-point proximity is addressed by the PT-unbroken working point. What none of those touches is whether the lattice-to-Virasoro correspondence CONVERGES at all off unitarity -- which is precisely the thing no theorem covers and precisely what the data currently dispute.",
+    "status": "NOT RUN. L = 24 and L = 28 rungs do not exist."
+  },
+  "hardware_required": "Local CPU. Sparse non-Hermitian eigensolve (ARPACK via scipy.sparse.linalg.eigs or Julia equivalent) in the k = 0 and |k| = 2 momentum sectors of a periodic chain. L <= 18 is already done and cheap. L = 24 in the momentum-resolved sectors is the first rung that needs care with memory and with ARPACK convergence on a non-normal operator; budget a re-run rather than an interactive session, and restart the interpreter between rungs per the local memory-pressure protocol. No quantum hardware, no cloud.",
+  "earliest_testable": "2026-Q3 (the L = 24 / L = 28 escalation is available now)",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "status": "PARTIALLY_SUPPORTED",
+  "status_rationale": "The sign sub-claim and the exclusion of c_eff are supported and were a genuine measurement with more than one possible outcome. The magnitude sub-claim and the convergence sub-claim are NOT_ESTABLISHED, and the convergence sub-claim is currently trending toward refutation. Reporting this as flatly SUPPORTED -- as HYP-2026-028 did -- overstates it by conflating three sub-claims of very different evidential standing.",
+  "justified_by": ["SIM-2026-070", "SIM-2026-071"],
+  "justified_by_note": "SIM-2026-070 is the Phase-1 calibration and validation record (PAPER-133 reproduction). SIM-2026-071 is the Phase-2 measurement. Note the dependency this creates: SIM-2026-070 is simultaneously the gate, the supplier of the h_c^inf parameter, and the calibration case for the extrapolator that SIM-2026-071 then uses in a regime with a 16x larger lever arm. The two are NOT independent.",
+  "prior_art": {
+    "gate_run": "2026-08-17, per RESEARCH-DIRECTOR.md section 8. Two independent literature agents worked this claim from disjoint endpoints -- one arXiv-export-API only, one WebSearch / Semantic Scholar / INSPIRE / ar5iv / publisher pages only -- and converged on the same nearest prior art without contact.",
+    "verdict": "The priority framing previously attached to this result does not survive. The result is positioned below as a reproduction-plus-extension, with the nearest prior work named.",
+    "nearest_prior_art": [
+      {
+        "ref": "arXiv:2602.02649",
+        "authors": "Io, Huang & Hsieh",
+        "title": "Non-Hermitian free-fermion critical systems and logarithmic conformal field theory",
+        "venue": "cond-mat.str-el; v1 2026-02-02, v2 2026-04-06",
+        "relation": "Six of six overlapping elements: a 1+1D non-Hermitian critical lattice chain; a biorthogonal left/right pairing; Koo-Saleur Fourier modes, named; the central term of the resulting Virasoro algebra; the value obtained is the TRUE negative c (= -2), not c_eff; and an explicit claim that the KS / stress-tensor route survives non-unitarity. They cite Koo-Saleur 1994 (hep-th/9312156) and Milsted-Vidal 2017 (arXiv:1706.01436) -- the identical two references this pipeline rests on. Published six months and nine days before SIM-2026-071.",
+        "aggravating": "This paper is reference [24] of PAPER-2026-133, the paper this project downloaded, logged a full v2 read for, and designed this phase around, on the same day. The pointer was in hand and was not followed."
+      },
+      {
+        "ref": "PRL 119, 040601 (2017); arXiv:1611.08506",
+        "authors": "Couvreur, Jacobsen & Saleur",
+        "title": "Entanglement in non-unitary quantum critical spin chains",
+        "relation": "Left-and-right eigenstate entropies on non-Hermitian critical chains that scale with the TRUE c, with a lattice measurement of a negative true c (-3/5) presented side by side with the positive c_eff of the same model. Its introduction names this project's exact headline pair verbatim: 'for the Yang-Lee singularity, c = -22/5 but c_e = 2/5.' Nine years prior, in PRL."
+      }
+    ],
+    "premise_that_was_false_not_merely_unnovel": "The framing 'standard approaches obtain only c_eff from Casimir scaling' is contradicted by Tang et al., PRL 133, 076504 (2024) (complex c from biorthogonal Casimir scaling); Zhou & Wang, arXiv:2405.01640 (negative c from open-boundary energy scaling); Tu, Tzeng & Chang, SciPost Phys. 12, 194 (2022); Chang et al., PRResearch 2, 033069 (2020); and Shimizu & Kawabata, PRB 112, 085112 (2025) -- the last by the same senior author whose paper SIM-2026-070 reproduces. Independently, c = c_eff + 24*h_min makes c recoverable from c_eff by arithmetic, so 'the biorthogonal element structure sees what the energy spectrum cannot' is also false.",
+    "exact_difference_from_the_nearest_prior_work": [
+      "Interacting rather than free: arXiv:2602.02649 treats a quadratic (free-fermion) model at c = -2, a LOGARITHMIC CFT; this is the interacting PT-symmetric Ising chain at M(2,5), c = -22/5, which is non-logarithmic.",
+      "Numerical rather than analytic: they fix c analytically and fit the indecomposability parameters beta_M; this measures a finite-L ladder with error bars and extrapolates.",
+      "Regime: theirs sits AT an exceptional point; this sits inside the PT-unbroken interior.",
+      "A provable rescaling and metric invariance of the product-form estimator, which does not appear in either prior work and is the cheapest publishable item here.",
+      "The state-identification INVERSION (the cross-module phi-descendant element being ~10-11x larger than T's, with opposite sign), for which no prior statement was found by either literature agent."
+    ],
+    "positioning_sentence_to_use": "We reproduce the biorthogonal Koo-Saleur extraction of a true negative central charge -- established analytically for free-fermion non-Hermitian chains by Io, Huang & Hsieh (arXiv:2602.02649) and measured on non-unitary critical chains by Couvreur, Jacobsen & Saleur (PRL 119, 040601) -- at an INTERACTING non-Hermitian critical point, M(2,5) Yang-Lee, and report the finite-L behaviour of the estimator together with the failure of the unitary state-identification rule in that setting.",
+    "search_plan_remaining": [
+      "INSPIRE, Crossref and Semantic Scholar were not swept (rate limits / budget).",
+      "Forward citations of arXiv:1611.08506 (a highly cited PRL) were not walked.",
+      "HIGHEST VALUE OPEN CHECK: whether arXiv:2007.11539 Appendix A already fits c numerically from Koo-Saleur matrix elements in a logarithmic model. A hit there pushes the prior art back to 2020 and erases most of the residue above.",
+      "L. Liu's 2023 Saleur-school thesis, and arXiv:2604.25999 / arXiv:2606.19732, were surfaced but not opened.",
+      "Neither arXiv:2602.02649 nor arXiv:1611.08506 has a PAPER record in this repository. Cataloguing them is a prerequisite to any write-up and is outside this pass's ownership."
+    ],
+    "systematic_the_prior_work_documents_that_this_project_does_not_address": "Io, Huang & Hsieh report that the BARE Koo-Saleur density fails at a non-Hermitian critical point and requires a lattice total-derivative improvement. That is a live candidate explanation for the unexplained residual here and for the L^-1 rather than L^-2 approach recorded in the killer test."
+  },
+  "pre_registered_predictions_for_the_next_run": {
+    "locked": "2026-08-17, before the L = 24 and L = 28 rungs exist and before the h = 1.55872195 re-run is performed. Per RESEARCH-DIRECTOR.md section 36 this entry must not be altered after the results are seen; a superseding entry may be added alongside it.",
+    "run_1_published_h_c": {
+      "change": "Re-run the existing L <= 18 ladder with h_c^inf fixed at PAPER-2026-133's published 1.55872195(5) instead of the in-house fit 1.5587127. The two differ by 9.25e-6, which is 185x the paper's quoted uncertainty, and h_c^inf is by SIM-2026-070's own key_findings the most lever-armed parameter in the result.",
+      "prediction_if_the_claim_is_true": "|c_KS| moves but stays inside [3.5, 5.5] and the sign does not change.",
+      "prediction_if_the_estimator_is_h_dominated": "|c_KS| leaves [3.5, 5.5]. Refutation criterion (c) fires.",
+      "cost": "~1 hour. This is the cheapest informative test available to the program and either outcome changes a decision."
+    },
+    "run_2_L24_L28": {
+      "prediction_A_convergent": "The KS product element's approach exponent moves toward -2 as the rungs are added, and a two-parameter convergent fit overtakes the divergent logarithm. Claim SUPPORTED on all three sub-claims.",
+      "prediction_B_divergent": "The exponent stays near -1 and the divergent logarithm continues to win. Killer fires; the claim is REFUTED as stated and is restated as a sign-definite non-convergent diagnostic.",
+      "prediction_C_ambiguous": "Model selection remains within noise. Status stays PARTIALLY_SUPPORTED and the magnitude is reported as an interval, not a value.",
+      "reporting_rule_locked_in_advance": "Whichever of A/B/C obtains, the magnitude is to be reported as an interval derived from the pipeline zoo, and the sign as the primary result. No single-number c_KS with a covariance-only error bar is to be quoted again."
+    }
+  },
+  "what_must_not_be_claimed": [
+    "Any priority or precedence formulation. The literature gate above was run and did not clear one.",
+    "c_KS = -4.29 +/- 0.15 as a measurement. The band is not defensible; audit D-8.",
+    "That the G4 criticality gate registered in HYP-2026-028 was satisfied. It was substituted, not met.",
+    "That C_TTT being imaginary at c < 0 is a finding. It is one line of arithmetic on a known identity and is correctly flagged Phase-3, open."
+  ],
+  "relation_to_other_records": {
+    "HYP-2026-028": "Parent. Its force-exponent question is restored to OPEN and remains untested; this record carries the biorthogonal-KS proposition that SIM-2026-070/071 actually tested.",
+    "note": "Splitting the two is what makes both auditable: HYP-028 can now record an honest negative about a structurally obstructed route, and this record can carry a real measurement without borrowing that route's pre-registration."
+  }
+}

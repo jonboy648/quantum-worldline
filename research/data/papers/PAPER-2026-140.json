@@ -1,0 +1,45 @@
+{
+  "source": "arxiv",
+  "discovered_by": "worldline-orchestrator (HYP-032 prior-art gate, section 8)",
+  "discovered_date": "2026-09-06",
+  "anchor_contradiction": null,
+  "seeds_hypothesis": "HYP-2026-032",
+  "related_hypotheses": [
+    "HYP-2026-032",
+    "HYP-2026-028"
+  ],
+  "categories": [
+    "hep-th"
+  ],
+  "id": "PAPER-2026-140",
+  "title": "Pseudo Entropy in dS/CFT and Time-like Entanglement Entropy",
+  "authors": [
+    "Kazuki Doi",
+    "Jonathan Harper",
+    "Ali Mollabashi",
+    "Tadashi Takayanagi",
+    "Yusuke Taki"
+  ],
+  "date": "2022-10-17",
+  "arxiv_id": "2210.09457",
+  "relevance": 4,
+  "abstract": "We study holographic entanglement entropy in dS/CFT and introduce time-like entanglement entropy in CFTs. Both of them take complex values in general and are related with each other via an analytical continuation. We argue that they are correctly understood as pseudo entropy. We find that the imaginary part of pseudo entropy implies an emergence of time in dS/CFT.",
+  "tags": [
+    "timelike-entanglement",
+    "pseudo-entropy",
+    "dS/CFT",
+    "emergent-time"
+  ],
+  "key_claims": [
+    "Timelike EE and dS/CFT holographic EE are both complex and related by analytic continuation",
+    "Both are pseudo entropy",
+    "Imaginary part implies emergence of time in dS/CFT"
+  ],
+  "relevance_note": "PRL 130, 031601 (2023). The dS/CFT side of HYP-2026-032: the route where an emergent TIME direction exists in the network (HYP-2026-028's cMERA-dS lineage). Not the first target; the plain-MERA leg is decidable on paper (no time direction).",
+  "related_papers": [
+    "PAPER-2026-139",
+    "PAPER-2026-119",
+    "PAPER-2026-138"
+  ],
+  "source_url": "https://arxiv.org/abs/2210.09457"
+}

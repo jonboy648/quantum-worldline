@@ -1,0 +1,47 @@
+{
+ "id": "PAPER-2026-144",
+ "title": "Non-Hermitian free-fermion critical systems and logarithmic conformal field theory",
+ "authors": [
+  "Iao-Fai Io",
+  "Fu-Hsiang Huang",
+  "Chang-Tse Hsieh"
+ ],
+ "date": "2026-02-02",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2602.02649",
+ "arxiv_id": "2602.02649",
+ "categories": [
+  "cond-mat.str-el",
+  "cond-mat.stat-mech",
+  "hep-th",
+  "quant-ph"
+ ],
+ "abstract": "Asks whether a 1+1D gapless non-Hermitian system admits a conformal description, for a PT-symmetric free-fermion field theory. In the biorthogonal formalism, constructs a traceless energy-momentum tensor whose Fourier modes generate a Virasoro algebra with c=-2: a non-Hermitian biorthogonal realization of a logarithmic CFT with staggered Virasoro modules and universal indecomposability parameters. A microscopic lattice construction at exceptional-point criticality reproduces the same conformal data with finite-size corrections. v1 2026-02-02, v2 2026-04-06.",
+ "relevance": 4,
+ "tags": [
+  "non-Hermitian",
+  "biorthogonal",
+  "Koo-Saleur",
+  "logarithmic-CFT",
+  "negative-central-charge",
+  "prior-art",
+  "catalogue-debt"
+ ],
+ "key_claims": [
+  "Biorthogonal Koo-Saleur lattice Fourier modes (their Eq. 25/S68, citing Koo-Saleur 1994 and Milsted-Vidal 2017) carry a negative true central charge c=-2 on a PT-symmetric critical chain",
+  "c is read from the central term of [L_m, L_n], derived analytically in the scaling limit (free-fermion model), not fitted; fitted lattice quantities are the indecomposability parameters beta_1, beta_2 with (2pi/N)^2 corrections",
+  "Works AT the exceptional point (log-CFT), whereas our SIM-2026-071 works deliberately away from it at the Yang-Lee M(2,5) point"
+ ],
+ "relevance_note": "CATALOGUE DEBT closed in scan #20 (2026-09-23). This is the prior art that failed the RESEARCH-DIRECTOR section 8 gate for the HYP-2026-028 / SIM-2026-071 biorthogonal Koo-Saleur central-charge claim (claims C2 and C5 in research/data/audit/raw/novelty-yanglee-arxiv.md). Posted 6 months 9 days before SIM-071. It is reference [24] of PAPER-2026-133. Residual difference from our work is estimator form (single off-diagonal matrix element vs commutator central term) and model (interacting M(2,5) vs free-fermion c=-2 LCFT) - a difference of application, not of method. Must be cited in any HYP-028 write-up. Details read in full by the 2026-08 audit, not re-read here.",
+ "related_hypotheses": [
+  "HYP-2026-028"
+ ],
+ "related_papers": [
+  "PAPER-2026-133",
+  "PAPER-2026-145"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "2026-08 novelty audit (docs/governance/AUDIT-2026-08-11.md); catalogued by literature-lead scan #20",
+ "discovered_date": "2026-09-23"
+}

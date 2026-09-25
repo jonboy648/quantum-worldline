@@ -1,0 +1,41 @@
+{
+ "id": "PAPER-2026-147",
+ "title": "An Algebraic Obstruction to Ising Criticality for Finite-BCH Entanglers in Wavelet MERA",
+ "authors": [
+  "Enrico Bertuzzo",
+  "Olindo Corradini",
+  "Claudia Frugiuele"
+ ],
+ "date": "2026-08-27",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2608.27564",
+ "arxiv_id": "2608.27564",
+ "categories": [
+  "hep-th",
+  "hep-ph",
+  "quant-ph"
+ ],
+ "abstract": "In wavelet MERA for interacting 2D phi^4, any polynomial entangler whose BCH expansion terminates at finite order generates an effective potential of Landau form in the generic case, fixing mean-field universality; degenerate cases depart from mean-field but still miss Ising. Numerically beta stays at 1/2 with no drift toward 1/8 as nonlocality range or variational complexity grows.",
+ "relevance": 3,
+ "tags": [
+  "MERA",
+  "wavelet-MERA",
+  "continuum-MERA",
+  "Ising",
+  "no-go",
+  "phi4"
+ ],
+ "key_claims": [
+  "Finite-BCH polynomial entanglers in wMERA are confined to mean-field universality (generic case)",
+  "Reproducing Ising criticality in continuum MERA may need non-polynomial or infinite-BCH entanglers"
+ ],
+ "relevance_note": "Abstract only. A continuum-MERA no-go, not a lattice one: our lattice MERAs reach Ising, TCI and Potts conformal data, so there is no contradiction with any anchor. Useful as a boundary on the ansatz class if a cMERA route is revived (non-unitary cMERA was HYP-028's designated fallback in scans #11/#18). Not HYP-033 relevant beyond sharing the word MERA.",
+ "related_hypotheses": [
+  "HYP-2026-028"
+ ],
+ "related_papers": [],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "literature-lead scan #20 (sequential arXiv export API)",
+ "discovered_date": "2026-09-23"
+}

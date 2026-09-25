@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-080",
+  "title": "Stabilization of bulk quantum orders in finite Rydberg atom arrays",
+  "authors": ["Yash M. Lokare", "Matthew J. Coley-O'Rourke"],
+  "date": "2026-04-20",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2604.18890",
+  "arxiv_id": "2604.18890",
+  "abstract": "Addresses a fundamental challenge in Rydberg atom array experiments: theoretical bulk quantum phases diverge from experimental realizations on finite-sized arrays due to strong boundary effects. Proposes a general, experimentally straightforward strategy to mitigate boundary effects by leveraging the disordered phase in Rydberg systems to drive boundaries into configurations determined by bulk physics. Numerically demonstrated in one- and two-dimensional systems for both ordered and critical phases. Over 200 atoms now reliably exhibit bulk-like quantum order, compared to previous limits of approximately 50 atoms.",
+  "relevance": 4,
+  "tags": ["Rydberg-atoms", "boundary-effects", "bulk-quantum-order", "finite-size", "quantum-simulation", "critical-phases", "Aquila"],
+  "key_claims": [
+    "Boundary effects suppressed using disordered-phase regions at array edges",
+    "Protocol works for both ordered and critical bulk phases in 1D and 2D",
+    "200+ atom arrays now reliably show bulk-like quantum order (was ~50 atoms before)",
+    "Experimentally straightforward — no exotic controls required",
+    "Directly addresses a known failure mode in finite Rydberg MERA implementations"
+  ],
+  "hardware_used": "Rydberg atom arrays (Aquila-class neutral atom)",
+  "qubit_count": 200,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — directly addresses the boundary pathology that plagued our HYP-017 validator attempts (15- and 20-atom geometries showed boundary-dominated behavior). This protocol could allow smaller test arrays to exhibit bulk holographic behavior, potentially resurrecting a reduced-scale validator approach."
+}

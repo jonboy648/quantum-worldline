@@ -1,0 +1,21 @@
+{
+  "id": "HYP-2026-030",
+  "category": "universality-extension",
+  "name": "alpha = 2*Delta_T = 4 holds along a CONTINUOUS moduli line of CFTs (c=1 compactified boson, all radii)",
+  "claim": "The holographic force exponent alpha = 2*Delta_T = 4 -- verified at the three discrete unitary classes c=1/2, 7/10, 4/5 (HYP-008/027/025) -- also holds at every point of the c=1 compactified-boson moduli line, because Delta_T=2 is kinematic. A tensor-network spectral measurement (fixed-point tensors per arXiv:2607.03534, or a U(1)-symmetric MERA) at 3+ radii (e.g. R = 1/sqrt(2), 1, sqrt(2)) should find Delta_T = 2.00 and hence alpha = 4.00 at each, upgrading the universality claim from three points to a continuum.",
+  "confidence": "medium",
+  "confidence_rationale": "The CFT prediction is as kinematic as for the minimal models, so the physics risk is low; the confidence is 'medium' only because the measurement machinery at c=1 is new to us: either adopt the 2607.03534 TCR fixed-point route (external code, boundary-state construction) or build a U(1)-graded MERA (our symmetric-tensor pattern extends, but the compact boson tower is dense and chi-hungry, and their reported residual-marginal-perturbation caveat (MSBC) can split the Delta=2 multiplet spuriously).",
+  "source_findings": ["PAPER-2026-135 (arXiv:2607.03534)"],
+  "testable": true,
+  "test_design": "Stage 1 (cheap, decisive): U(1)-symmetric ternary MERA on the XX chain (free compact boson at a fixed radius) with charge-sector-resolved scalingdimensions -- the exact analog of the validated Z2/Z3 drivers; gate: known c=1 primary tower + Delta_T=2.0 in the charge-0 sector. Stage 2: marginal deformation (XXZ line: Delta_z in (-1,1] maps to varying compactification radius) at 2-3 couplings; measure Delta_T at each; alpha=2*Delta_T=4.00 everywhere is the prediction. Stage 3 (only if 1-2 clean): C_TTT = 2*sqrt(2)/sqrt(1) = 2.828 along the line as the continuum extension of the C_TTT program.",
+  "refutation_criteria": "A clean, chi-converged (chi >= 12 equivalent), multi-basin-stable Delta_T that deviates from 2.0 by more than 2% at any XXZ coupling in the critical window would contradict the kinematic-universality mechanism and cap the alpha=4 claim at the rational points.",
+  "hardware_required": "NONE (classical tensor-network computation; local CPU for smoke, RunPod CPU for chi escalation, same pattern as SIM-062/063).",
+  "earliest_testable": "2026-Q3",
+  "feasibility_verdict": "TESTABLE_NEAR_TERM",
+  "feasibility_notes": "Provisional lead verdict (scan-15 synthesis; feasibility-checker pass pending). The XXZ/U(1) route reuses the validated symmetric-tensor pattern (Z2 SIM-061, Z3 SIM-062) with U1Space -- MERAKit/TensorKit support U(1) grading (DemoTools XXZ_hamiltonian already ships a :U1 build). Risks: denser tower at c=1 (chi-starvation like Potts, mitigated by the known chi=6->9->12 escalation playbook) and marginal-operator contamination of the Delta~2 block (the 2607.03534 MSBC caveat; our C_TTT block-projection machinery with a tight window is the control).",
+  "status": "proposed",
+  "created_date": "2026-07-14",
+  "last_updated": "2026-07-14",
+  "created_by": "weekly-scan-15 synthesis",
+  "speculative_flag": false
+}

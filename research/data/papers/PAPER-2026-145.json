@@ -1,0 +1,46 @@
+{
+ "id": "PAPER-2026-145",
+ "title": "Entanglement in non-unitary quantum critical spin chains",
+ "authors": [
+  "Romain Couvreur",
+  "Jesper Lykke Jacobsen",
+  "Hubert Saleur"
+ ],
+ "date": "2016-11-25",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/1611.08506",
+ "arxiv_id": "1611.08506",
+ "journal_ref": "Phys. Rev. Lett. 119, 040601 (2017)",
+ "categories": [
+  "cond-mat.stat-mech",
+  "math-ph"
+ ],
+ "abstract": "Extends entanglement entropy to non-unitary quantum mechanics for quantum-group and supergroup symmetric spin chains. Using left and right eigenstates with appropriate trace definitions gives a natural Renyi entropy, interpreted via loop models, whose conformal scaling distinguishes the central charge from the effective central charge in rational minimal models; also defines an effective central charge in less understood cases (sl(2|1) alternating chain for percolation).",
+ "relevance": 4,
+ "tags": [
+  "non-unitary-CFT",
+  "effective-central-charge",
+  "left-right-eigenstates",
+  "Yang-Lee",
+  "entanglement-entropy",
+  "prior-art",
+  "catalogue-debt"
+ ],
+ "key_claims": [
+  "Left+right-eigenstate (modified-trace) entanglement entropy scales with the TRUE central charge c even in non-unitary models, while the naive entropy gives c_eff",
+  "Introduction names the Yang-Lee fork explicitly: c=-22/5 but c_eff=2/5; RSOS (m,p)=(4,3) is the Yang-Lee class",
+  "Lattice numerics (M=400) show both c and c_eff extracted from the same chain"
+ ],
+ "relevance_note": "CATALOGUE DEBT closed in scan #20 (2026-09-23). Second, independent prior-art kill of the HYP-2026-028 framing (audit claims C1, C3, C4): the premise 'standard approaches obtain only c_eff' written into SIM-2026-071 is false as stated - this 2016/PRL 2017 paper measures a negative true c on a lattice and states our exact c vs c_eff pair for Yang-Lee. Also defines the biorthogonal entanglement-entropy route that HYP-028's own G4 gate mandated but never performed. Must be cited in any HYP-028 write-up. Read in full (main text + RSOS supplement) by the 2026-08 audit, not re-read here.",
+ "related_hypotheses": [
+  "HYP-2026-028"
+ ],
+ "related_papers": [
+  "PAPER-2026-144",
+  "PAPER-2026-133"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "2026-08 novelty audit (docs/governance/AUDIT-2026-08-11.md); catalogued by literature-lead scan #20",
+ "discovered_date": "2026-09-23"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-048",
+  "organization": "CAS Cold Atom Technology (Wuhan, China)",
+  "processor": "Hanyuan-2",
+  "date": "2026-05-08",
+  "source_url": "https://thequantuminsider.com/2026/05/08/china-claims-first-dual-core-neutral-atom-quantum-computer/",
+  "physical_qubits": 200,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Announced 2026-05-08. World's first dual-core neutral-atom quantum computer. 100 Rb-85 atoms (core 1) + 100 Rb-87 atoms (core 2) = 200 total physical qubits. Two cores operate in parallel (efficiency mode) or main+auxiliary (stability mode for logical qubits). Power consumption < 7 kW — no dilution refrigerator required. Standard cabinet form factor, deployable in ordinary indoor spaces. NO gate fidelity or benchmark results published — claim is architecture novelty, not performance. Context: Atom Computing demonstrated 1,180 qubits and 28 logical qubits (Bernstein-Vazirani, error-corrected) in 2024, well exceeding Hanyuan-2 in both metrics. DISPUTED ASPECTS: No independent verification; performance benchmarks absent. RELEVANCE TO OUR WORK: Low relevance. 200 physical qubits with no stated fidelity is not a useful target for MERA holographic circuits. Architecture novelty (dual-core) is interesting but no demonstrated gate-level operations reported."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-038",
+  "arxiv_id": "2512.21037",
+  "title": "Black hole as a multipartite entangler: multi-entropy in AdS3/CFT2",
+  "authors": ["Takanori Anegawa", "Shota Suzuki", "Kotaro Tamaoka"],
+  "published": "2025-12-24",
+  "journal": "Progress of Theoretical and Experimental Physics, 2026",
+  "doi": "10.1093/ptep/ptag047",
+  "url": "https://arxiv.org/abs/2512.21037",
+  "status": "WATCH",
+  "relevance": 3,
+  "topic": "Worldline formalism / holographic transport / AdS-CFT tensor network",
+  "summary": "Studies multipartite entanglement in BTZ black hole dual states using multi-entropy and Steiner tree geodesic networks. At high temperature, genuine tripartite multi-entropy shows volume-law scaling (vs size-independent in vacuum AdS3). Provides a new bulk geometric probe of multipartite entanglement structure.",
+  "key_findings": [
+    "Genuine tripartite multi-entropy volume-law scaling at high temperature — new phase not seen in vacuum AdS",
+    "Steiner tree (minimal geodesic network) is the bulk dual of multi-entropy",
+    "Phase transition when one subsystem exceeds half the total: genuine tripartite entanglement vanishes",
+    "Radial cutoff dependence of multi-entropy gives nontrivial size dependence even for tripartite case"
+  ],
+  "project_relevance": "Tangentially relevant. The Steiner tree formalism is a generalization of the Ryu-Takayanagi geodesic that underlies our l_AdS measurements. If our MERA develops multipartite entanglement structure at finite temperature, the force profile could acquire corrections from non-minimal geodesic networks. Monitor for future relevance when we move to finite-temperature simulations.",
+  "recommended_followup": "none",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

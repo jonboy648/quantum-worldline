@@ -1,0 +1,82 @@
+{
+  "id": "SIM-2026-072",
+  "date": "2026-08-17",
+  "title": "Re-analysis of the force exponent alpha: the published 3.92 +/- 0.16 is an estimator artifact; the data plateau at alpha = 2.6 +/- 0.2. RETRACTION-GRADE.",
+  "hypothesis_id": "HYP-2026-008",
+  "hypothesis_links": [
+    "HYP-2026-008 (stress-tensor power law)",
+    "HYP-2026-002",
+    "supersedes the fits in SIM-2026-011-interaction, SIM-2026-015d, SIM-2026-017-statistics"
+  ],
+  "trigger": "docs/governance/AUDIT-2026-08-11.md defects D-2 and D-3, raised by the 23-agent scientific audit and confirmed by independent recomputation before any action was taken.",
+  "method": "No new simulation. The three force datasets already on disk were re-analysed under a 3 x 5 matrix of standard estimator x fit-window choices, plus leverage, local-log-slope, plateau-scan and nonparametric bootstrap diagnostics. Estimators: (1) unweighted nonlinear least squares on F in LINEAR space -- the PUBLISHED choice; (2) NLS with errors proportional to |F| (relative-error weighting -- discards nothing, changes only the error model); (3) ordinary least squares on log|F| vs log(dr) -- the textbook power-law estimator. Windows: dr_min = 2..6. Driver: research/tools/force-reanalysis/qw_alpha_reanalysis.py (seed 20260817, fully deterministic); figure: qw_alpha_figure.py.",
+  "datasets": {
+    "D1_N24_exact": "SIM-2026-011-interaction.json .F_interaction_avg (the manuscript's headline)",
+    "D2_N16_exact": "SIM-2026-015d.json .exact.V_data",
+    "D3_N16_mera_chi3": "SIM-2026-015d.json .mera.V_data"
+  },
+  "results": {
+    "leverage": "The single point dr=2 carries 95.8% (D1), 96.0% (D2), 96.3% (D3) of the unweighted least-squares objective. The published alpha is, to within 8%, the dr=2->3 local slope (4.2315) and not a property of the profile.",
+    "window_weighting_matrix_D1": {
+      "linear_unweighted_PUBLISHED": {
+        "dr>=2": 3.922,
+        "dr>=3": 2.559,
+        "dr>=4": 2.534,
+        "dr>=5": 2.621,
+        "dr>=6": 2.756
+      },
+      "linear_relative_error": {
+        "dr>=2": 2.822,
+        "dr>=3": 2.71,
+        "dr>=4": 2.768,
+        "dr>=5": 2.864,
+        "dr>=6": 2.986
+      },
+      "log_space_OLS": {
+        "dr>=2": 2.89,
+        "dr>=3": 2.7,
+        "dr>=4": 2.76,
+        "dr>=5": 2.858,
+        "dr>=6": 2.981
+      }
+    },
+    "spread": "D1 alpha spans 2.534-3.922 over 15 defensible choices; the PUBLISHED value is the MAXIMUM of all 15. D2: 2.753-3.975, published value again the maximum. D3: 2.633-4.788.",
+    "plateau": "A true power law has a FLAT local log-slope. D1 has a genuine plateau -- 6 consecutive local slopes flat to +/-7.5% -- centred on 2.592. D2: 4 slopes at 2.745. D3: 2 slopes at 2.471. NO dataset shows any flat region at 4. The local slopes of D1 run 2.035, 4.232, 2.603, 2.456, 2.461, 2.533, 2.658, 2.841, 3.102, 3.482, 4.064: a spike at dr=2 and a rise at the far end bracket a genuine intermediate plateau at ~2.6.",
+    "bootstrap_published_estimator": "D1 mean 3.358, sigma 0.635, 95% CI [2.52, 4.18] (2000 resamples, seed 20260817), reproducing the project's own SIM-2026-017 bootstrap (3.369 +/- 0.6335) which the manuscript never quotes.",
+    "NEW_DEFECT_sign_flips": "D3 (the chi=3 MERA profile) CHANGES SIGN at dr=9 and dr=10 (F = +1.20e-3 and +3.65e-4 against a negative branch elsewhere). The published chi=3 fit is stated as dr_min=2, n_pts=10, i.e. dr=2..11 -- so it fits a fixed-sign power law A*dr^(-alpha) THROUGH TWO POINTS OF THE WRONG SIGN. A power law cannot change sign; the chi=3 evaluation is invalid beyond dr=8 and its published alpha=4.071 should not be quoted at all. This defect was not found by the audit; it emerged from the sign audit built into the re-analysis driver."
+  },
+  "key_findings": [
+    "THE PUBLISHED alpha = 3.92 +/- 0.16 IS AN ESTIMATOR ARTIFACT, not a measurement. Unweighted least squares in linear space on a steeply falling profile concentrates 95.8% of its objective on the largest-magnitude point; the reported exponent is that one point's local slope. Changing NOTHING but the error model -- discarding no data -- gives 2.82 (relative-error) or 2.89 (log-space OLS).",
+    "THE DATA DO CONTAIN A POWER LAW, AND IT IS NOT THE CLAIMED ONE. The intermediate-separation plateau is alpha = 2.6 +/- 0.2, stable across all three datasets and across estimator choice. This is the quantity the experiment actually measured.",
+    "alpha = 2.6 MATCHES NEITHER CANDIDATE CHANNEL. 2*Delta_T = 4 (stress tensor) is excluded by the plateau; 2*Delta_epsilon = 2 (scalar) is also outside the plateau band. The channel identification is therefore OPEN -- which, per RESEARCH-DIRECTOR.md section 6, gives the corrected result NON-ZERO counterfactual novelty, unlike alpha = 4 which conformal symmetry fixed in advance.",
+    "THE 'alpha = 2 IS EXCLUDED' CLAIM DOES NOT SURVIVE AT THE STATED SIGNIFICANCE. At the published +/-0.16 the exclusion is ~12 sigma; at the project's own bootstrap sigma = 0.635 it is ~2.2 sigma, and under any dr>=3 window the point estimate itself falls to ~2.56.",
+    "THE THREE 'INDEPENDENT EVALUATIONS' FAIL TOGETHER. N=24 exact, N=16 exact and N=16 chi=3 MERA move in lockstep under the dominant systematic (3.92->2.56, 3.97->2.75, 4.07->2.63 on dropping dr=2), because they share one observable, one operator, one fit window and one fitting routine. Agreement among them measured the estimator, not the physics.",
+    "WHY dr=2 IS THE WRONG ANCHOR: dr=2 is the unique separation at which a Hamiltonian bond bridges the two operator supports, i.e. a contact term. The manuscript already excludes dr=1 on exactly this reasoning and then rests its result on the next point in the same family."
+  ],
+  "verdict": "The published central finding is WITHDRAWN as stated. Corrected measurement: the intermediate-separation force exponent is alpha = 2.6 +/- 0.2, with the exchange-channel identification OPEN. The correction strengthens the scientific content: the withdrawn number was fixed in advance by a Virasoro theorem (near-zero counterfactual novelty); the measured number is not predicted by either candidate channel and is therefore a real, if modest, open question.",
+  "counterfactual_novelty": "Of the re-analysis itself: HIGH. Before running it, the possible outcomes were (a) the published fit is robust to estimator choice, (b) it is not. Outcome (b) obtained, decisively.",
+  "independence": "Fully independent of the original analysis path: separate driver, separate author, raw records as the only shared input. Reproduces the original fit exactly (3.9218 vs 3.9218 recorded) before diverging, which rules out an implementation difference as the cause.",
+  "killer_test_status": "This IS the killer for the alpha=4 claim as published, and it fired. Per RESEARCH-DIRECTOR section 12 the outcome forces rejection of the claim as stated.",
+  "reproducibility": {
+    "driver": "research/tools/force-reanalysis/qw_alpha_reanalysis.py",
+    "figure_script": "research/tools/force-reanalysis/qw_alpha_figure.py",
+    "outputs": "alpha_reanalysis_results.json, alpha_reanalysis_figure.{pdf,png}",
+    "rng_seed": 20260817,
+    "inputs": "SIM-2026-011-interaction.json, SIM-2026-015d.json (both tracked)",
+    "environment": "python 3.12, numpy, scipy, matplotlib; one command: python qw_alpha_reanalysis.py"
+  },
+  "downstream_actions_required": [
+    "PRD accession DV13971 (with editors): correction required. See docs/governance/PRD-CORRECTION-PACKAGE.md.",
+    "ERRATA.md: new entry E6.",
+    "HYP-2026-008 status must fall from SUPPORTED; its registered killer (V_T vs V_X channel discrimination) was never executed and is now the outstanding test.",
+    "README.md headline and the Zenodo record inherit the withdrawn number.",
+    "SIM-2026-011-interaction.json, SIM-2026-015d.json, SIM-2026-017-statistics.json each need a verdict_SUPERSEDED_2026_08_17 field pointing here (the SIM-036 pattern, per ERRATA D5)."
+  ],
+  "status": "COMPLETE",
+  "independently_reproduced_2026_08_23": {
+    "by": "SIM-2026-073",
+    "what": "This record's local-slope plateau value 2.592 was reproduced as 2.5920966 by a fully rewritten code path (different operator implementation, different Hamiltonian routine, different analysis file), with the eps-arm validation gate against SIM-2026-011-interaction passing at 0.000% max relative error.",
+    "why_it_matters": "The withdrawal of alpha = 3.92 and the corrected value 2.6 +/- 0.2 no longer rest on a single script. Per RESEARCH-DIRECTOR.md section 7 this is a genuinely independent implementation, not a same-origin restatement.",
+    "caveat": "SIM-2026-073 also identifies an open-boundary edge effect inflating whole-window fits at large dr. It does not change the plateau, which is measured in the interior, but it does explain why this record's whole-window numbers and its plateau disagree."
+  }
+}

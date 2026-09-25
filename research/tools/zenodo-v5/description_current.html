@@ -1,0 +1,43 @@
+<p>
+<strong>CORRECTION NOTICE (v5, 2026-08-24). The central result of v1&ndash;v4 is WITHDRAWN.</strong></p>
+
+<p><strong>What is wrong.</strong> The force exponent reported in earlier versions as alpha = 3.92 +/- 0.16 is an
+artifact of the fitting procedure, not a property of the data. The fit was unweighted least squares in linear space
+applied to a steeply falling profile, which places <strong>95.8 percent of its objective on the single point</strong>
+at the shortest retained separation. Re-fitting the same data with nothing discarded, changing only the error model,
+gives 2.82 (relative-error weighting) or 2.89 (log-space regression). Across fifteen combinations of standard
+estimator and fit window the exponent spans 2.53 to 3.92, and <strong>the previously published value is the largest
+of them</strong>.</p>
+
+<p><strong>What the data actually show.</strong> The corrected measurement is <strong>alpha = 2.6 +/- 0.2</strong>, a
+genuine plateau in the local logarithmic slope over six consecutive separations, since reproduced independently at
+2.5921 by a separately written implementation. This value matches neither stress-tensor exchange (2*Delta_T = 4) nor
+scalar exchange (2*Delta_epsilon = 2), so <strong>the exchange channel is an open question</strong> rather than an
+identification.</p>
+
+<p><strong>Also withdrawn.</strong> (1) The claim that the exponent is <em>universal</em> across the three CFT classes:
+the exponent was measured only at Ising, and the tricritical and Potts results are accurate measurements of the
+operator spectra, not of the force exponent. (2) The third &ldquo;independent evaluation&rdquo;, alpha = 4.07, whose
+profile changes sign within its own fit window and cannot be described by a fixed-sign power law. (3) The geometric
+reading of the transport result, disputed on two independent grounds and now unresolved.</p>
+
+<p><strong>Not previously reported.</strong> The published fit has a reduced chi-squared of 6.008 on 9 degrees of
+freedom, and a bootstrap standard deviation of 0.63 rather than the quoted 0.16. Both were computed before release
+and were omitted.</p>
+
+<p><strong>What is unaffected.</strong> The two-phase ALM + Z2-projection optimizer, the chi = 3 criticality
+threshold, the exact-diagonalization gates, the measured OPE coefficient C_sigma-sigma-epsilon = 0.50 +/- 0.03
+against the exact 1/2, the conformal towers at all three classes, and the C_TTT stress-tensor self-coupling values
+(3.9936 / 3.381 / 3.163 against 4.000 / 3.3806 / 3.16228).</p>
+
+<p><strong>Provenance.</strong> The error was found by an internal adversarial audit after submission. This work was
+not peer-reviewed: it was submitted to Physical Review D and <strong>rejected on 2026-08-12</strong>, on separate
+grounds and before this error was found. The two facts are independent and should not be conflated. Files in this
+record include the full re-analysis (SIM-2026-072), the pre-registered follow-up channel test (SIM-2026-073), the
+error register (ERRATA.md) and runnable drivers.</p>
+
+<p><em>The abstract of the original manuscript follows unchanged, for the record. Every claim in
+it about the force exponent should be read against the correction above.</em></p>
+
+
+<p>We report results from classical simulation of critical spin chains that establish quantitative physical content in the MERA-AdS correspondence. First, the interaction energy between boundary-primary excitations follows a power law F(dr) ~ dr^(-alpha) with three consistent evaluations yielding alpha = 3.92 +/- 0.16 (24q), 3.97 +/- 0.15 (16q), and 4.07 +/- 0.18 (16q chi=3 MERA), all consistent with stress-tensor exchange (alpha = 2*Delta_T = 4) and inconsistent with scalar exchange (alpha = 2); the exponent is explained by the Ising CFT fusion rule eps x eps = [1]. Because Delta_T = 2 is fixed by conformal symmetry in every unitary 2D CFT, alpha = 4 is universal: we confirm this at two further fixed points - the tricritical Ising model (c = 7/10), where a scale-invariant MERA recovers the full M(4,5) primary spectrum (Delta_sigma = 0.092, Delta_eps = 0.204, Delta_T = 1.999), and the three-state Potts model (c = 4/5), where a Z3-symmetric MERA at chi = 12 recovers Delta_sigma = 0.134, Delta_eps = 0.805, Delta_T = 2.001 - giving alpha = 4.00 at all three universality classes. Second, the holographic transport time matches the AdS_3 null geodesic prediction T = (pi/2) l_AdS to 1.2% at N = 16 sites on a time-grid-converged measurement, with the residual shrinking from 2.8% at N = 12. Third, we introduce a two-phase optimization method (ALM + Z2 projection) for Z2-symmetric MERA ground states at 24 qubits. Fourth, extending the MERA bond dimension from chi=2 to chi=3 overcomes the expressibility barrier, achieving 0.15% energy error at 16 qubits and enabling the first holographic force measurement from an optimized tensor network state. The OPE coefficient is also measured directly from the fixed-point tensors: C_sigma-sigma-eps = 0.50 +/- 0.03 against the exact Ising value 1/2. A hardware path is designed for Quantinuum Helios (57 CNOTs, 0.57% logical error).</p><p><strong>Version 4 changes (relative to v3):</strong></p><ul><li>Transport: N=16 residual restated as the time-grid-converged value of -1.21% (dt = 1e-3), with -2.78% at N=12 showing the finite-size trend; the 0.72% figure in v3 was an artifact of the dt = 0.05 integration grid and is now labeled as such. The N=24 transport point carries a new reliability caveat (double-lobe trace structure).</li><li>The l_AdS comparison table is recomputed against the converged transport time (best fit 1.425, deviation 1.21%).</li><li>Effective-mass derivation rewritten in a consistent AdS3 convention m^2 l^2 = Delta(Delta-2); m_eff = 0.693 = 1/l_AdS follows from Delta = 1 exactly.</li><li>NEW: universality section extended to a third fixed point - a Z3-symmetric MERA at chi = 12 recovers the three-state Potts (c = 4/5) tower, giving alpha = 4.00 at all three universality classes (c = 1/2, 7/10, 4/5).</li><li>NEW: the OPE coefficient C_sigma-sigma-eps = 0.50 +/- 0.03 measured directly from the fixed-point tensors, with C_sigma-sigma-sigma = 0 at machine precision as the Z2 structural check.</li><li>Supplemental table row SIM-007 annotated (record lost; script preserved); data availability expanded; Zenodo DOI added to the front matter.</li></ul>

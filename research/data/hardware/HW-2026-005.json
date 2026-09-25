@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-005",
+  "organization": "IonQ",
+  "processor": "Tempo",
+  "date": "2026-01-01",
+  "source_url": "https://www.ionq.com/roadmap",
+  "physical_qubits": 100,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": 0.996,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": false,
+  "frontier_category": "physical_qubits",
+  "notes": "64 algorithmic qubits (#AQ 64), 100 physical qubits. 99.9% one-qubit gate fidelity, 99.6% two-qubit gate fidelity. All-to-all connectivity. Acoustic-optic deflector gate control. Doubled from 32 AQ in 2024. Coherence times 100x longer than superconducting alternatives."
+}

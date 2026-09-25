@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-058",
+  "title": "MEMS Vapor Cells-based Rydberg-atom Electrometry Toward Miniaturization",
+  "authors": ["(NIST/University group)"],
+  "date": "2025-09-02",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2509.01911",
+  "arxiv_id": "2509.01911",
+  "abstract": "Demonstrates Rydberg-atom electrometry using MEMS-fabricated vapor cells. Addresses the challenge of miniaturizing vapor cell quantum sensors. MEMS fabrication for Rydberg sensors is more demanding than for atomic clocks due to higher temperature requirements and optical access needs. Shows path toward chip-scale Rydberg RF sensors.",
+  "relevance": 3,
+  "tags": ["Rydberg-electrometry", "MEMS", "miniaturization", "chip-scale", "vapor-cell"],
+  "key_claims": [
+    "First demonstration of Rydberg electrometry with MEMS-fabricated vapor cells",
+    "MEMS Rydberg cells more demanding than clock cells due to temperature and optical access",
+    "Demonstrates path to chip-scale Rydberg RF sensor",
+    "Connects to Kitching NIST MEMS atomic device program"
+  ],
+  "hardware_used": "MEMS microfabricated Rb/Cs vapor cells",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "HYP-2026-005",
+  "claim": "The inter-hologron force profile V(dr) measured in MERA circuits can be reinterpreted as a discretized worldline propagator in the emergent AdS bulk. Specifically, the exponential decay V ~ C1 - C2*exp(-dr/l_AdS) corresponds to the geodesic approximation of the bulk-to-bulk scalar propagator G(x,x') ~ exp(-m*d_geo(x,x')) in AdS space, where the MERA network distance maps to geodesic distance and the hologron mass m maps to the scalar field mass. This connects our lattice ZZ correlator measurements to worldline path integrals on AdS via the Ashok-Murthy worldline-to-bulk correspondence (arXiv:1712.00885).",
+  "confidence": "low",
+  "confidence_rationale": "Downgraded from medium. The functional form is consistent with the worldline propagator (both decay exponentially with MERA network distance), but the quantitative test failed on three counts: (1) SIM-2026-002 has only 2 real signal points (V(dr=1) and V(dr=2)); V(dr=3+) is numerical noise at the 10^-4 level. With 2 points, xi is underdetermined. (2) The reported xi=1.233 was fit to approximate/visual data, not the actual simulation output; refit from actual data gives xi_2pt=2.154 from the V(2)/V(1) ratio. (3) The extracted mass m ~ 0.31 does not match Sahay et al. mc^2=2.5 -- off by factor ~8x. The 15% discrepancy vs l_AdS is not the main problem; the sparse signal and normalization mismatch are.",
+  "source_findings": ["PAPER-2026-009", "PAPER-2026-012", "HYP-2026-002", "SIM-2026-002"],
+  "testable": true,
+  "test_design": "Requires a simulation with more than 2 signal points in V(dr). Options: (1) larger MERA (N>=24, 5+ layers) where the bulk sites are farther from boundaries, giving more non-zero V(dr) values; (2) anchor hologrons at the center of the chain (site 8 of 16 is already done -- the signal range is limited by the 3-layer MERA depth); (3) use PBC instead of OBC to eliminate boundary contamination. Once 5+ signal points are obtained, fit the full AdS_2 scalar propagator G(sigma) ~ sigma^(-Delta)*2F1(...) without geodesic approximation, and compare Delta to the Sahay value mc^2=2.5.",
+  "refutation_criteria": "If V(dr) has fewer than 5 non-zero signal points in a well-optimized (energy error < 0.5%) 5-layer MERA, the functional form test cannot be performed and the hypothesis is unfalsifiable at this system size. If 5+ points are obtained and the functional form is NOT exponential (e.g., power-law), the hypothesis is refuted. If the decay length disagrees with l_AdS by more than 50% in a well-converged simulation, it is also refuted.",
+  "hardware_required": "None (classical numerical comparison of existing data for analytical test; 5-layer MERA simulation for quantitative test)",
+  "earliest_testable": "2026",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "analysis": {
+    "date": "2026-03-11",
+    "performed_by": "theory-lead",
+    "method": "Analytical computation of Poincare AdS_2 geodesic distances on MERA discrete metric; exponential fits to actual SIM-2026-002 force profile data; mass extraction via conformal dimension formula for AdS_2",
+    "key_findings": [
+      "FINDING 1 (SUPPORTED): Functional form is consistent. V(dr) ~ exp(-dr/xi) matches the large-distance form of the AdS bulk-to-bulk propagator in geodesic approximation.",
+      "FINDING 2 (CRITICAL BUG IN PRIOR ANALYSIS): SIM-2026-002 has signal only at dr=1 and dr=2. V(dr=3+) is numerical noise. The xi=1.233 reported in project memory was fit to APPROXIMATE values read from visualization plots, not the actual V_quantum array. Actual data: V(1)=-0.01140, V(2)=-0.00717, V(3)=+1.8e-4 (noise).",
+      "FINDING 3: With 2 real data points, the only meaningful xi estimate is from the ratio V(2)/V(1) = exp(-1/xi), giving xi_2pt = 2.154. This is 49% ABOVE l_AdS = 1.443, not 15% below.",
+      "FINDING 4: The Poincare AdS_2 geodesic distance at dr=1 gives sigma = cosh(d_geo/l_AdS) = 1.24. This is far from the large-sigma (geodesic approximation) regime. The geodesic approximation is poor for our data range.",
+      "FINDING 5: Mass extracted from xi_2pt gives m^2 * l_AdS^2 = Delta*(Delta-1) where Delta = l_AdS/xi_2pt = 0.670. This gives m^2 < 0 (tachyonic or alternate quantization), contradicting Sahay mc^2 = 2.5. Normalization mismatch between raw ZZ correlators and MERA tensor units is the likely cause.",
+      "FINDING 6: The geodesic approximation correction acts in the WRONG direction to explain any discrepancy. The full propagator decays faster than exp(-m*d_geo) at small sigma, which would make the effective xi smaller, not larger.",
+      "FINDING 7: The stored fit parameters (xi=1.233, C2=0.0278) in SIM-2026-002.json are INCORRECT -- they were fit to approximate visual data, not V_quantum. The fit predicts V(dr=3)=-0.0020, but actual V(dr=3)=+1.85e-4."
+    ],
+    "discrepancy_analysis": {
+      "reported_xi": 1.2327465560669981,
+      "actual_xi_2pt": 2.1538,
+      "l_AdS_theory": 1.4427,
+      "xi_2pt_over_l_AdS": 1.493,
+      "root_cause_of_reported_xi": "xi=1.233 was fit to approximate V values read from force profile plots, not the actual V_quantum simulation output. The actual simulation data has signal only at dr=1,2."
+    },
+    "geodesic_distances": {
+      "case_A_poincare": {
+        "formula": "d_geo = l_AdS * arccosh(1 + dr^2 / (2*z0^2)), z0=l_AdS",
+        "dr1": 0.9810,
+        "dr2": 1.8670,
+        "sigma_dr1": 1.2402,
+        "sigma_dr2": 1.9609,
+        "regime": "small-sigma (NOT geodesic approximation regime)"
+      },
+      "case_B_linear": {
+        "formula": "d_geo = dr (network hops, Swingle 2012)",
+        "note": "Gives xi = l_AdS in large-N limit; xi_2pt/l_AdS = 1.49 with actual data"
+      }
+    },
+    "normalization_note": "Sahay et al. C1=0.08, C2=13.6 are in MERA tensor-network (reduced density matrix) units. Our C2~0.015 is in raw ZZ correlator units. The ratio ~900x means normalization matching is essential before any amplitude comparison. xi is dimensionless and should be convention-independent, but mass extraction from amplitude is unreliable until normalization is matched.",
+    "literature_search": "arXiv MCP search (2026-03-11) returned only recent papers (recency-sorted feed), not the foundational MERA/AdS geodesic papers. No new literature found beyond existing catalog. Key foundational results used from training knowledge: Swingle 2012 (arXiv:0905.1317) MERA-AdS correspondence; Nozaki-Takayanagi-Ugajin 2012 (arXiv:1205.1573) bulk operators from MERA; Bao et al. 2015 (arXiv:1504.06632) MERA as a toy model of holography."
+  },
+  "required_next_steps": [
+    "CRITICAL: Re-run force profile with 5-layer MERA (SIM-2026-006 results) and measure V(dr) for dr=1..10. Check whether signal extends beyond dr=2.",
+    "CRITICAL: Re-run force profile fit using actual V_quantum values (not visual approximations). Update xi in SIM-2026-002.json.",
+    "ANALYTICAL: Compute full AdS_2 scalar propagator G(sigma) = sigma^(-Delta) * 2F1(Delta/2, Delta/2+1/2; 2*Delta; 1/sigma^2) for the 2 real data points and extract Delta.",
+    "NORMALIZATION: Convert raw ZZ correlator output to Sahay et al. normalization (reduced density matrix basis) before comparing C1, C2, m.",
+    "SIMULATION: Run with larger N (32-48q) or PBC to get more signal points at larger dr."
+  ],
+  "philosophical_implications": "If the MERA force profile literally IS a discretized worldline propagator, it provides the first concrete computational bridge between first-quantized worldline QFT and tensor-network holography. This would unify two historically separate approaches to quantum gravity: the worldline formalism (Strassler/Schubert) which computes QFT amplitudes from particle paths, and the MERA/AdS correspondence which builds spacetime from entanglement. The implication is that entanglement renormalization IS worldline propagation in disguise. CAVEAT: The current evidence is too sparse (2 data points) to support this strong claim. The philosophical implication is compelling but premature.",
+  "status": "analyzed",
+  "justified_by": [],
+  "justified_by_note": "Added 2026-08-17 per audit D-10. DELIBERATELY EMPTY and correct: this record's status is 'analyzed', which rests on the analytic work in the `analysis` field, not on any simulation. No SIM record has ever been run against it, and required_next_steps remains outstanding. An empty justified_by on an analytic status is a true statement, not a gap.",
+  "created_date": "2026-03-11",
+  "last_updated": "2026-03-11",
+  "created_by": "worldline-orchestrator",
+  "analyzed_by": "theory-lead",
+  "speculative_flag": true
+}

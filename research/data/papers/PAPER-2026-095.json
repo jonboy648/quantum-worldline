@@ -1,0 +1,39 @@
+{
+  "id": "PAPER-2026-095",
+  "title": "Observation of hadron scattering in a lattice gauge theory on a quantum computer",
+  "authors": [
+    "Julian Schuhmacher",
+    "Guo-Xian Su",
+    "Jesse J. Osborne",
+    "Anthony Gandon",
+    "Jad C. Halimeh",
+    "Ivano Tavernelli"
+  ],
+  "date": "2025-05-26",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2505.20387",
+  "arxiv_id": "2505.20387",
+  "abstract": "We report the first quantum simulation of particle collisions within a lattice gauge theory framework. Experiments performed on IBM's ibm_marrakesh quantum computer simulate electron-positron and meson interactions in a U(1) lattice gauge theory representing 1+1D quantum electrodynamics. We observe two distinct post-collision regimes: particle delocalization when a topological parameter is weak, and localized particle behavior when this parameter becomes significant. By tuning a topological term, we demonstrate how colliding particles spread ballistically when the term vanishes, whereas they bind back together in its presence. We also observe inelastic scattering with substantial matter production when manipulating fermionic mass values.",
+  "relevance": 3,
+  "tags": [
+    "lattice-gauge-theory",
+    "QFT-hardware",
+    "IBM-quantum",
+    "hadron-scattering",
+    "1+1D-QED",
+    "Schwinger-model",
+    "confinement",
+    "ibm-marrakesh"
+  ],
+  "key_claims": [
+    "First quantum simulation of scattering processes in a lattice gauge theory on real hardware",
+    "Performed on IBM ibm_marrakesh quantum computer",
+    "Observes ballistic vs confined post-collision regimes tunable by topological theta parameter",
+    "Inelastic scattering with matter production demonstrated",
+    "Demonstrates real-time LGT dynamics accessible on current NISQ hardware"
+  ],
+  "hardware_used": "IBM ibm_marrakesh",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

@@ -1,0 +1,16 @@
+{
+  "hw_id": "HW-2026-029",
+  "vendor": "Microsoft / Atom Computing",
+  "system_name": "Magne (50 logical qubits from ~1200 physical)",
+  "qubit_count": 1200,
+  "qubit_count_logical": 50,
+  "fidelity_2q": null,
+  "announcement_date": "2026 (operational target start of 2027)",
+  "headline": "Microsoft + Atom Computing delivering Magne: 50 logical qubits, first error-corrected quantum computer deployment",
+  "details": "Partnership delivering Magne to Export and Investment Fund of Denmark + Novo Nordisk Foundation. 50 logical qubits from ~1200 physical neutral atom qubits. Microsoft error correction software + Atom Computing neutral atom hardware. Operational target: start of 2027. Microsoft also launching 2026 Quantum Pioneers Program (QuPP) with up to $1M grants. Majorana 1 chip: topological qubits (8 on chip, designed to scale to 1M).",
+  "source_url": "https://quantum.microsoft.com/en-us/vision/quantum-roadmap",
+  "relevance": 3,
+  "relevance_reason": "50 logical qubits = sufficient for a small but meaningful fault-tolerant MERA. Timeline (start 2027) aligns with our research trajectory. Microsoft QuPP grants are a funding mechanism.",
+  "access_path": "Microsoft Quantum Pioneers Program 2026 (research grants up to $1M). Atom Computing cloud access. Monitor Magne deployment timeline.",
+  "scan_date": "2026-04-26"
+}

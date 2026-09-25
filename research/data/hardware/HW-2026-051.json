@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-051",
+  "organization": "IonQ",
+  "processor": "6th-gen 256-qubit chip-based trapped-ion (fabrication milestone)",
+  "date": "2026-05-06",
+  "source_url": "https://investors.ionq.com/news/news-details/2026/IonQ-Announces-First-Quarter-2026-Financial-Results/default.aspx",
+  "physical_qubits": 256,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Disclosed in IonQ Q1 2026 earnings (released 2026-05-06). Two milestones confirmed: (1) First ion trap chip samples returned from semiconductor fabrication facility — IonQ is now moving from component-level to system-level testing of the 256-qubit architecture. (2) First 256-qubit 6th-generation system sold (to University of Cambridge, separately confirmed in earlier scan HW-2026-049). IonQ received first quarter revenue of $64.7M (755% YoY growth), raised full-year guidance to $260-270M. The ion trap chip fab program uses GlobalFoundries processes and diamond-based quantum memories. ALSO NOTED: IonQ was selected for DARPA HARQ (Heterogeneous Architectures for Quantum) program (announced 2026-04-14, see HW-2026-052), focusing on quantum memories and modular multi-technology networking (trapped ion + neutral atom + superconducting). No new fidelity benchmarks for the 256q system at this stage — the performance record remains IonQ Tempo at 99.99% 2Q fidelity. RELEVANCE TO OUR WORK: Fabrication milestone confirms the 256q system is progressing through manufacturing. When commissioned at Cambridge, fidelity benchmarks expected H2 2026. If Tempo-level fidelity is achieved at 256q, this becomes the strongest NISQ platform for deep MERA holographic circuits (L=768, 8+ layer MERA)."
+}

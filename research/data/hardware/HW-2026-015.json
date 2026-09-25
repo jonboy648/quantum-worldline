@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-015",
+  "organization": "Pasqal",
+  "processor": "Vela QPU (neutral atom)",
+  "date": "2026-03-04",
+  "source_url": "https://www.pasqal.com/blog/inside-pasqals-2026-vision-on-quantum-for-industry-and-research/",
+  "physical_qubits": 256,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": false,
+  "frontier_category": "physical_qubits",
+  "notes": "Pasqal's next-generation Vela QPU launching 2026: 256+ high-quality neutral atom qubits, engineered for quantum advantage. Live logical qubit demos in early 2026. 140-qubit system delivered to Italy's CINECA (integrated with Leonardo supercomputer). 250-qubit QPU optimized for quantum advantage demo in H1 2026. Achieved 1,000-qubit milestone in 2024, targeting 10,000 qubits by 2026. Going public via SPAC merger at $2B valuation. Multiple QPUs live on Azure, Google Cloud, OVHcloud."
+}

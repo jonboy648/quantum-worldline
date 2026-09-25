@@ -1,0 +1,82 @@
+{
+ "id": "SIM-2026-079",
+ "hypothesis_id": "HYP-2026-033",
+ "date": "2026-09-24",
+ "status": "COMPLETE (chi 6 grid); chi 8 truncated (OOM), G5 NOT EVALUABLE",
+ "preregistration": "research/tools/bulk-recovery/PREREGISTRATION-HYP033.md (registered 03df0d0, v3 amendment approved 2026-09-22); analysis interpretations I1-I7 + T1 fixed before unblinding in hyp033_analyze.py (e82a367, c7414d8)",
+ "question": "In an optimized critical-Ising ternary MERA (27 sites, chi 6), does recoverability of the lower leg of a layer-2 bond from boundary intervals A_m track the causal cone, the minimal cut, or neither (smooth)? Matched against Haar-random networks on the same graph (C-HAAR) and a gapped h=1.5 pipeline (C-GAPPED).",
+ "driver": "research/tools/bulk-recovery/hyp033_grid.py; analysis research/tools/bulk-recovery/hyp033_analyze.py",
+ "compute": "RunPod pod 67iskx7js1nimw (RTX 4000 Ada host, 16 vCPU, 62 GB, 0.28 USD/h), 2026-09-22T23:27Z to 2026-09-23T22:30Z, ~23 h, ~6.5 USD at pod price (attempts 3-4 on other pods not included). Pod deleted, list verified empty.",
+ "pass_rule": "v3: cut-like = seed-mean m_0.9 >= 6 on both edges AND >= C-HAAR mean + 3 (applied first); cone-like = m_half <= 2; smooth = w > 6 and not cut-like.",
+ "gates": {
+  "G1": "PASS 24/24",
+  "G2": "PASS 24/24",
+  "G3": "PASS 24/24 (gauge invariance)",
+  "G4": "primary 8/8 clean; not applied at h=1.5 (I7, approved by Jon)",
+  "G5": "NOT EVALUABLE: all 4 chi-8 networks OOM-killed (rc=137) in their gates at 62 GB (T1, Jon 2026-09-24)"
+ },
+ "VERDICT": "OUTCOME 4: SMOOTH. Primary verdict SMOOTH (w interp 7.76 > 6). Not cut-like: seed-mean m_0.9 = 4.75/4.34 (< 6), and 4.55 vs C-HAAR 4.62 (needs +3). Not cone-like: m_half = 8.50. This was the pre-registered EXPECTED outcome.",
+ "groups_seed_means": {
+  "primary": {
+   "m_L": 8.7,
+   "m_R": 8.3,
+   "m_half": 8.5,
+   "m09_L": 4.75,
+   "m09_R": 4.34,
+   "m09": 4.55,
+   "w_L": 7.77,
+   "w_R": 7.76,
+   "w": 7.76,
+   "wg": 7.38,
+   "n": 8
+  },
+  "C-HAAR": {
+   "m_L": 8.5,
+   "m_R": 8.5,
+   "m_half": 8.5,
+   "m09_L": 4.62,
+   "m09_R": 4.62,
+   "m09": 4.62,
+   "w_L": 6.06,
+   "w_R": 6.05,
+   "w": 6.06,
+   "wg": 6.0,
+   "n": 8
+  },
+  "C-GAPPED": {
+   "m_L": 8.6,
+   "m_R": 8.4,
+   "m_half": 8.5,
+   "m09_L": 4.91,
+   "m09_R": 4.19,
+   "m09": 4.55,
+   "w_L": 7.52,
+   "w_R": 7.66,
+   "w": 7.59,
+   "wg": 7.31,
+   "n": 8
+  }
+ },
+ "key_findings": [
+  "The optimized MERA's onset of recovery loss (m_0.9 ~ 4.5 sites of 17) is indistinguishable from Haar-random networks on the same graph (4.62). The registered cut-vs-random test finds no difference.",
+  "m_half = 8.50 in every network, optimized or random, as the v3 identity requires (m_L + m_R = 17 to 1e-2): confirms the devil's-advocate finding on registered data.",
+  "C-GAPPED (h=1.5) is also SMOOTH with seed means close to the critical primary (m_0.9 4.91/4.19, w 7.59): no sign that the recovery profile depends on criticality.",
+  "C-HAAR is marginal on the smooth threshold: w interp 6.06 vs grid-point w 6.00 (I6 flag). This does not affect the primary outcome."
+ ],
+ "exploratory_not_registered": [
+  "Optimized networks (critical and gapped) have broader loss curves than Haar (w ~7.6-7.8 vs 6.06) and strong seed-dependent left/right asymmetry (|m_L - m_R| up to 1.90 sites in the primary group, 2.26 in C-GAPPED) where Haar's is <= 0.04. POST-HOC; no registered test; not evidence for anything. A registered follow-up would be needed to say anything."
+ ],
+ "claim_level": "Level 2 (outcome 4). Per the kill conditions no geometric language ('geometry', 'wedge', 'emergent') is used. Whether 'C-HAAR differs' (which would make it Level 3 negative) has no registered test beyond m_0.9, and on m_0.9 it does not differ.",
+ "counterfactual_novelty": "4 outcomes were registered as genuinely possible; outcome 4 was the stated prior. Moderate information, low surprise.",
+ "what_would_change_this": "A chi-8 run (G5) showing the onset moves by >= 2 sites; a larger chi where 1601.01694 predicts sharp minimal-cut behaviour; a registered test of the width/asymmetry difference.",
+ "downstream_actions_required": [
+  "HYP-2026-033 status -> TESTED: outcome 4 (smooth), Level 2",
+  "Jon: C-REWIRE drop vs mirror-rewire (now moot for a positive claim; outcome is not cut-like)",
+  "Trunk-paper outline: take the outcome-4 branch",
+  "Cite PAPER-142 (1701.00050), PAPER-148/149; claim none of their results"
+ ],
+ "files": [
+  "research/tools/bulk-recovery/runpod_033/networks/*/hyp033_both.json",
+  "research/tools/bulk-recovery/runpod_033/UNBLINDED_REPORT_v3.txt"
+ ]
+}

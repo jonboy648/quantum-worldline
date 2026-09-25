@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-063",
+  "title": "Rydberg atom-based sensors for radio-frequency electric field metrology, sensing, and communications (Review)",
+  "authors": ["David H. Meyer", "Kevin C. Cox", "Paul D. Kunz", "et al. (ARL)"],
+  "date": "2021-06-01",
+  "source": "other",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S2665917421002361",
+  "arxiv_id": null,
+  "abstract": "Comprehensive review of Rydberg atom-based sensors from Army Research Lab. Covers fundamental physics (EIT, Autler-Townes), sensitivity analysis across the full spectrum (DC to THz), comparison with classical antennas, dynamic range, and defense applications. Reports sensitivity on order of nV/cm/sqrt(Hz) experimentally verified.",
+  "relevance": 4,
+  "tags": ["Rydberg-electrometry", "ARL", "review", "RF-sensing", "EIT", "defense", "sensitivity"],
+  "key_claims": [
+    "Experimentally verified sensitivity ~nV/cm/sqrt(Hz) (= ~100 uV/m/sqrt(Hz))",
+    "Coverage DC to THz with single sensor type",
+    "Absolute SI-traceable measurement at 0.1% precision level, >10x classical antenna improvement",
+    "First team to achieve wide-bandwidth continuous Rydberg spectrum coverage (2021)",
+    "ARL lead researchers: Meyer, Cox, Kunz"
+  ],
+  "hardware_used": "Cs vapor cells (ARL)",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

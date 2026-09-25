@@ -1,0 +1,22 @@
+{
+  "id": "HW-2026-042",
+  "name": "DeteQt Diamond-on-Silicon Chip Platform",
+  "organization": "DeteQt (Australia)",
+  "technology": "NV-centre diamond",
+  "type": "nanoscale scanning magnetometer",
+  "date": "2024",
+  "status": "COMMERCIAL (R&D instruments)",
+  "specs": {
+    "sensitivity": "~100 pT/sqrt(Hz) in scanning mode; best lab NV: 9.4 pT/sqrt(Hz) (Tokyo Tech 2024)",
+    "spatial_resolution": "<100 nm (scanning probe)",
+    "operating_temp": "room temperature",
+    "form_factor": "chip-scale, scanning probe or contact mode"
+  },
+  "cost": {
+    "system": "not publicly stated; comparable R&D systems ~$100k-300k",
+    "diamond_sample": "Element Six NV ensemble: ~$500-2,000 for small sample"
+  },
+  "deployment": "Commercialized for biological cell imaging with 100 nm spatial resolution. Single-neuron magnetic imaging capability demonstrated (not whole-brain).",
+  "bci_relevance": "NV-diamond enables single-neuron magnetic imaging impossible for OPM or SQUID (spatial resolution advantage). Sensitivity (pT not fT) limits to peripheral nerve / MCG, not MEG. For independent researcher: DIY NV-diamond bench setup ~$15-20k achieves ~10-50 pT/sqrt(Hz) — viable for magnetomyography, not MEG.",
+  "trl": 5
+}

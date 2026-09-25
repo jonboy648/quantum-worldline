@@ -1,0 +1,30 @@
+{
+  "id": "PAPER-2026-109",
+  "title": "Induced quantum gravity from QFT vector models",
+  "authors": [
+    "Matti Raasakka"
+  ],
+  "date": "2025-07-22",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2507.16346",
+  "arxiv_id": "2507.16346",
+  "abstract": "QFT vector models are a newly developed approach to quantum gravity, which are based on induced gravity in discrete spacetimes. Here we review some basic definitions and properties of these models and point out directions for future research.",
+  "relevance": 2,
+  "tags": [
+    "emergent-gravity",
+    "QFT-vector-model",
+    "induced-gravity",
+    "discrete-spacetime",
+    "review",
+    "cross-framework-watch"
+  ],
+  "key_claims": [
+    "Short review/proceedings of the QFT vector model approach to quantum gravity (induced gravity in discrete spacetimes)",
+    "Companion to 2505.07102 (PAPER-2026-108); math-bridge notes it is a 2-paragraph proceedings adding nothing beyond 2505.07102",
+    "Relevance 2: pointer to a cross-framework lineage, no new computable bridge to our MERA machinery"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-06-11"
+}

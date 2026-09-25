@@ -1,0 +1,52 @@
+{
+  "id": "SIM-2026-039",
+  "type": "classical",
+  "date": "2026-06-17",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage-2d: autograd (reverse-mode AD) chi=3 MERA at the O'Brien-Fendley point. EXACT architecture from SIM-015d/036, gradient engine swapped from finite-difference to autograd (Cayley-transform unitaries, sparse-H primitive with H^T VJP, all verified vs finite-diff to ~1e-10). Ising control (lam3=0) validates the machinery; TCI (lam3=0.856) is the universality test. Gate: energy AND entanglement AND overlap.",
+  "circuit": {
+    "qubits": 16,
+    "chi": 3,
+    "n_params": 1246,
+    "script_path": "research/data/simulations/sim039_autograd_mera.py"
+  },
+  "hardware_target": "local CPU",
+  "results": {
+    "ising_control": {
+      "label": "ISING_CONTROL",
+      "lam3": 0.0,
+      "E_exact": -40.032775800970306,
+      "S_half_exact": 0.4234093173529793,
+      "E_mera": -39.959440661093026,
+      "rel_err_pct": 0.18318774656515877,
+      "overlap": 0.9939928102269605,
+      "S_half": 0.4402215538087519,
+      "S_ratio": 1.0397068174145938,
+      "gate_pass": true,
+      "niter": 800,
+      "wall_s": 267.30334758758545,
+      "checkpoint": "D:/quantum-worldline/research/data/simulations/theta_autograd_SIM2026039_ISING_CONTROL.npy"
+    },
+    "tci": {
+      "label": "TCI",
+      "lam3": 0.856,
+      "E_exact": -32.70280774083221,
+      "S_half_exact": 0.17948328498526941,
+      "E_mera": -32.67404509286196,
+      "rel_err_pct": 0.08795161625936253,
+      "overlap": 0.9942687432822898,
+      "S_half": 0.13363662177362512,
+      "S_ratio": 0.7445630482225293,
+      "gate_pass": false,
+      "niter": 800,
+      "wall_s": 272.4439103603363,
+      "checkpoint": "D:/quantum-worldline/research/data/simulations/theta_autograd_SIM2026039_TCI.npy"
+    },
+    "control_validated": true,
+    "status": "CHI3_FAITHFUL_ENERGY_PARTIAL_ENTANGLEMENT_CHI4_EARNED_FOR_FORCE",
+    "verdict": "TWO findings, stated precisely (the auto-generated 'collapses' wording is CORRECTED -- this is NOT a collapse). (1) ERRATA D5 FULLY VINDICATED: the SIM-036 product-state collapse (S_half 0.0002, ratio 0.001) was 100% an optimizer/objective artifact. With exact autograd gradients + the Z2-projected-energy objective, the SAME chi=3 architecture reaches S_half 0.1336 (ratio 0.745) -- a ~670x increase in captured entanglement -- at rel_err 0.088% and overlap 0.9943. The Ising control PASSES cleanly (rel 0.183%, ov 0.994, S_ratio 1.040) under the IDENTICAL protocol, validating the machinery, so this contrast is trustworthy. (2) chi=3 is SUFFICIENT for energy+overlap at the TCI point but reaches only ~74.5% of the true half-chain entanglement entropy -- the c=7/10 multicritical Schmidt tail exceeds a 3-dim bond. Because the optimizer is now definitively ruled out (control passed, exact gradients), chi=4 IS earned FOR THE FORCE READ-OUT SPECIFICALLY (the stress-tensor channel lives in the entanglement tail that chi=3 misses). This is a DIFFERENT, stronger basis than the retracted SIM-036 chi-4 call (which rested on a collapsed state + confounded optimizer). NEXT: chi=4 MERA at the TCI point (same autograd machinery, bond 3->4), then the force read-out. HYP-027 representability question = RESOLVED (chi=3 energy-faithful, entanglement-partial); universality alpha question = still OPEN, now on a sound chi=4 footing."
+  },
+  "comparison": "classical_wins",
+  "notes": "Root-cause fix for the SIM-036/037/038 product-state collapse: exact gradients via autograd instead of finite differences on 1246 angles. Cayley transform replaces scipy.expm (no autograd VJP). The Ising control is the trust anchor; only a passing control makes the TCI verdict meaningful.",
+  "wall_seconds": 542.6553294658661
+}

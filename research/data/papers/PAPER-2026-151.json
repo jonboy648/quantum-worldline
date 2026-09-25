@@ -1,0 +1,37 @@
+{
+ "id": "PAPER-2026-151",
+ "title": "Yang-Lee Criticality as a Dissipative Dynamical Phase Transition: Quantum Simulation of non-Hermitian Physics without Post-selection",
+ "authors": [
+  "Stephen W. Yan"
+ ],
+ "date": "2026-08-26",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2608.26082",
+ "arxiv_id": "2608.26082",
+ "categories": [
+  "quant-ph",
+  "cond-mat.stat-mech"
+ ],
+ "abstract": "Realizes the d+0 dimensional Yang-Lee theory (Ising spins in imaginary field) without post-selection in a (d-1)+1 open system of local unitaries plus engineered dissipation. The generator of the relevant linear observables is the non-Hermitian Yang-Lee transfer matrix; spin correlators and a Loschmidt-echo correlator of the Yang-Lee theory are directly measurable. Dissipation built from local 2-qubit gates; generalizes to embedding arbitrary non-Hermitian Hamiltonians in Lindbladian dynamics.",
+ "relevance": 3,
+ "tags": [
+  "Yang-Lee",
+  "non-Hermitian",
+  "open-quantum-system",
+  "no-postselection",
+  "quantum-simulation"
+ ],
+ "key_claims": [
+  "Yang-Lee criticality realized as an underdamped/overdamped dynamical transition without post-selection",
+  "Yang-Lee correlation functions measurable on near-term simulators with local 2-qubit dissipation"
+ ],
+ "relevance_note": "Abstract only. A hardware route for Yang-Lee physics that avoids exponential post-selection cost, relevant if HYP-028 ever wants an experimental leg. Does not supply lattice CFT data or touch the c vs c_eff question.",
+ "related_hypotheses": [
+  "HYP-2026-028"
+ ],
+ "related_papers": [],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "literature-lead scan #20 (sequential arXiv export API)",
+ "discovered_date": "2026-09-23"
+}

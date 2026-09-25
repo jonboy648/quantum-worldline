@@ -1,0 +1,32 @@
+{
+  "id": "PAPER-2026-104",
+  "title": "Energy transport in holographic junctions",
+  "authors": [
+    "Yan Liu",
+    "Chuan-Yi Wang"
+  ],
+  "date": "2025-06-24",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2506.19553",
+  "arxiv_id": "2506.19553",
+  "abstract": "We study energy transport in a conformal junction connecting three 2D conformal field theories using the AdS/CFT correspondence. The holographic dual consists of three AdS3 spacetimes joined along the worldsheet of a tensile string anchored at the junction. Within a specific range of string tension, where the bulk solution is uniquely determined, we find that all energy reflection and transmission coefficients vary monotonically with the string tension. Notably, the total energy transmission, which quantifies the energy flux from one CFT through the junction, is bounded above by the effective central charge associated with both the CFTs and the junction. Results for energy transport in conformal interfaces are recovered in a special limit. Furthermore, we extend our analysis to junctions connecting N 2D CFTs.",
+  "relevance": 3,
+  "tags": [
+    "holographic-transport",
+    "AdS3-CFT2",
+    "conformal-junction",
+    "energy-transmission",
+    "central-charge",
+    "hyp-023-crosscheck"
+  ],
+  "key_claims": [
+    "Energy reflection/transmission coefficients vary monotonically with junction string tension (AdS3/CFT2)",
+    "Total energy transmission bounded above by effective central charge",
+    "Conformal-interface results recovered as a limit; extends to N joined 2D CFTs",
+    "Same holographic-transport family as our boundary transport T=(pi/2)*l_AdS; possible cross-check for HYP-023 composite-geodesic framing; no conflict with anchor"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

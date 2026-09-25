@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-032",
+  "title": "Dual holography as functional renormalization group",
+  "authors": ["Ki-Seok Kim", "Arpita Mitra", "Debangshu Mukherjee", "Seung-Jong Yoo"],
+  "date": "2026-03-09",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2511.05786",
+  "arxiv_id": "2511.05786",
+  "abstract": "Investigates the relationship between functional renormalization group (RG) and dual holography in path integral formulation. Reformulates Fokker-Planck type functional RG equations using path integral representations, deriving Hamilton-Jacobi equations for effective renormalized actions. For Einstein-Hilbert gravity coupled to scalars, demonstrates that dual holographic path integrals formally solve functional RG equations. Proposes generalized dual holography framework where RG flow is explicitly incorporated into bulk effective action. Revised v3 March 2026.",
+  "relevance": 3,
+  "tags": ["holography", "renormalization-group", "path-integral", "Einstein-Hilbert", "Hamilton-Jacobi", "dual-holography"],
+  "key_claims": [
+    "Functional RG flow is essentially identical to dual holographic path integral",
+    "Fokker-Planck RG equations solved by holographic path integrals",
+    "Hamilton-Jacobi equation for renormalized on-shell action derived",
+    "Generalized framework incorporating RG flow into bulk action"
+  ],
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

@@ -1,0 +1,179 @@
+{
+ "N": 27,
+ "chi": 8,
+ "k": 2,
+ "x": 1,
+ "run": false,
+ "rows": [
+  {
+   "m": 0,
+   "sites": 17,
+   "D_A": 8192,
+   "D_AR": 1024,
+   "peak_gb": 1.0,
+   "flops": 373589649408.0,
+   "f": null,
+   "seconds": 3.3
+  },
+  {
+   "m": 1,
+   "sites": 16,
+   "D_A": 32768,
+   "D_AR": 4096,
+   "peak_gb": 16.0,
+   "flops": 408519219584.0,
+   "f": null,
+   "seconds": 3.3
+  },
+  {
+   "m": 2,
+   "sites": 15,
+   "D_A": 8192,
+   "D_AR": 1024,
+   "peak_gb": 1.0,
+   "flops": 373710353792.0,
+   "f": null,
+   "seconds": 3.6
+  },
+  {
+   "m": 3,
+   "sites": 14,
+   "D_A": 32768,
+   "D_AR": 4096,
+   "peak_gb": 16.0,
+   "flops": 2452042240640.0,
+   "f": null,
+   "seconds": 3.6
+  },
+  {
+   "m": 4,
+   "sites": 13,
+   "D_A": 131072,
+   "D_AR": 16384,
+   "peak_gb": 256.0,
+   "flops": 842053410944.0,
+   "f": null,
+   "seconds": 4.0
+  },
+  {
+   "m": 5,
+   "sites": 12,
+   "D_A": 32768,
+   "D_AR": 4096,
+   "peak_gb": 16.0,
+   "flops": 322397563264.0,
+   "f": null,
+   "seconds": 3.8
+  },
+  {
+   "m": 6,
+   "sites": 11,
+   "D_A": 8192,
+   "D_AR": 1024,
+   "peak_gb": 1.0,
+   "flops": 311269834496.0,
+   "f": null,
+   "seconds": 3.5
+  },
+  {
+   "m": 7,
+   "sites": 10,
+   "D_A": 16384,
+   "D_AR": 4096,
+   "peak_gb": 4.0,
+   "flops": 876715314048.0,
+   "f": null,
+   "seconds": 3.3
+  },
+  {
+   "m": 8,
+   "sites": 9,
+   "D_A": 4096,
+   "D_AR": 1024,
+   "peak_gb": 1.0,
+   "flops": 335658707072.0,
+   "f": null,
+   "seconds": 3.3
+  },
+  {
+   "m": 9,
+   "sites": 8,
+   "D_A": 1024,
+   "D_AR": 4096,
+   "peak_gb": 1.0,
+   "flops": 306557366272.0,
+   "f": null,
+   "seconds": 3.5
+  },
+  {
+   "m": 10,
+   "sites": 7,
+   "D_A": 2048,
+   "D_AR": 16384,
+   "peak_gb": 4.0,
+   "flops": 1454378256000.0,
+   "f": null,
+   "seconds": 3.7
+  },
+  {
+   "m": 11,
+   "sites": 6,
+   "D_A": 512,
+   "D_AR": 4096,
+   "peak_gb": 1.0,
+   "flops": 571757307008.0,
+   "f": null,
+   "seconds": 3.5
+  },
+  {
+   "m": 12,
+   "sites": 5,
+   "D_A": 128,
+   "D_AR": 1024,
+   "peak_gb": 1.0,
+   "flops": 713229743360.0,
+   "f": null,
+   "seconds": 3.1
+  },
+  {
+   "m": 13,
+   "sites": 4,
+   "D_A": 256,
+   "D_AR": 2048,
+   "peak_gb": 4.0,
+   "flops": 937939995264.0,
+   "f": null,
+   "seconds": 3.4
+  },
+  {
+   "m": 14,
+   "sites": 3,
+   "D_A": 64,
+   "D_AR": 512,
+   "peak_gb": 1.0,
+   "flops": 465817379712.0,
+   "f": null,
+   "seconds": 3.1
+  },
+  {
+   "m": 15,
+   "sites": 2,
+   "D_A": 16,
+   "D_AR": 128,
+   "peak_gb": 1.0,
+   "flops": 438929714176.0,
+   "f": null,
+   "seconds": 3.6
+  },
+  {
+   "m": 16,
+   "sites": 1,
+   "D_A": 4,
+   "D_AR": 32,
+   "peak_gb": 1.0,
+   "flops": 757528071936.0,
+   "f": null,
+   "seconds": 7.6
+  }
+ ]
+}

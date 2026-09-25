@@ -1,0 +1,21 @@
+
+============================================================================
+EXPERIMENT 1 -- CRITICAL  --  n=24, h=1.0, PBC ring
+============================================================================
+  GS in 349s   |E0/n - exact| = 2.22e-16  -> G1 PASS
+  H  358.2s  force alpha_chord= 7.009+/-2.072  plateau 0@nan  | two-point exp= 6.572 (want 4) G4 False  G2 PASS (1.0e-11)  R2 pow=0.8204 exp=0.9333
+  E  322.3s  force alpha_chord= 8.224+/-0.555  plateau 0@nan  | two-point exp= 4.087 (want 2) G4 False  G2 PASS (6.2e-11)  R2 pow=0.9874 exp=0.9211
+
+============================================================================
+MATCHED CONTROL (h=2)  --  n=24, h=2.0, PBC ring
+============================================================================
+  GS in 254s   |E0/n - exact| = 2.66e-15  -> G1 PASS
+  H  342.9s  force alpha_chord=17.407+/-2.424  plateau 0@nan  | two-point exp=10.873 (want 4) G4 None  G2 FAIL (9.5e-01)  R2 pow=0.7704 exp=0.9528
+  E  355.9s  force alpha_chord=15.337+/-2.140  plateau 3@33.714  | two-point exp=12.466 (want 2) G4 None  G2 FAIL (3.1e-01)  R2 pow=0.8925 exp=0.9897
+
+############################################################################
+  CONTROL: CONTROL_CLEAN   usable arms at h=1: []
+  H: force alpha_chord = 7.009 +/- 2.072   two-point exponent = 6.572 (null 4)   VOID ARM
+  E: force alpha_chord = 8.224 +/- 0.555   two-point exponent = 4.087 (null 2)   VOID ARM
+############################################################################
+wrote D:\quantum-worldline\research\tools\channel-test\stress_test_n24_smear1.5_results.json  (1984s)

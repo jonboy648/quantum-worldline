@@ -1,0 +1,29 @@
+{
+ "id": "HW-2026-075",
+ "title": "Quantinuum Helix: [[20,2,6]] C4-Helix code on Helios, logical Clifford error 2.8e-4 (4.28x below physical), 10 ions per logical qubit",
+ "vendor": "Quantinuum",
+ "date": "2026-09-02",
+ "source_url": "https://arxiv.org/abs/2609.03194",
+ "relevance": 3,
+ "summary": "Preprint arXiv:2609.03194 (Berthusen et al., submitted 2026-09-02, announced 2026-09-08) validates the Helix compact fault-tolerant architecture on the 98-qubit Helios: [[20,2,6]] code (10 physical ions per logical qubit at distance 6), logical memory 4.6e-5 per logical qubit per cycle with no post-selection, logical Clifford gates at 2.8e-4 per gate (4.28x cleaner than the physical gates), and entanglement between two different codes.",
+ "tags": [
+  "Quantinuum",
+  "Helios",
+  "QEC",
+  "logical-gates",
+  "below-physical",
+  "trapped-ion"
+ ],
+ "key_specs": {
+  "code": "[[20,2,6]] C4-Helix",
+  "physical_per_logical": 10,
+  "logical_memory_error": "4.6e-5 per logical qubit per cycle, no post-selection",
+  "logical_clifford_error": "2.8e-4 per gate",
+  "gain_over_physical": "4.28x",
+  "platform": "Helios, 98 qubits"
+ },
+ "actionable": "Frontier number for logical-gate fidelity at distance 6 on a commercial trapped-ion machine. Helios is this project's designated hardware anchor (HYP-013 platform). Does not change HYP-029, which is conditional on the withdrawn alpha input (ERRATA D8). Numbers taken from a secondary report of the preprint (quantum-brief.com, 2026-09-11); the preprint itself was not read.",
+ "source": "arxiv-preprint",
+ "discovered_by": "weekly-scan-20",
+ "discovered_date": "2026-09-23"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-072",
+  "title": "Chips JU + Pasqal launch EUR 50M Q-PLANET pilot line for neutral-atom quantum chips",
+  "vendor": "Pasqal / Chips JU",
+  "date": "2026-07-13",
+  "source_url": "https://quantumcomputingreport.com/chips-ju-and-pasqal-launch-e50m-57-2m-usd-q-planet-pilot-line-to-industrialize-neutral-atom-quantum-chips/",
+  "relevance": 3,
+  "summary": "Pan-European fabrication backbone for laser-on-chip systems, atom chips, and microfabricated vapor cells, standardizing neutral-atom manufacturing.",
+  "tags": ["Pasqal", "neutral-atom", "supply-chain", "Europe", "fabrication"],
+  "key_specs": {"funding": "EUR 50M", "scope": "laser-on-chip, atom chips, vapor cells pilot line"},
+  "actionable": "Supply-chain maturation for the neutral-atom platform class our FT MERA feasibility work (HYP-016/HYP-029 lineage) prices against; no logical-qubit numbers, infrastructure-level only.",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

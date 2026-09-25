@@ -1,0 +1,35 @@
+PASS state unsubmitted (nothing published)
+PASS version v5
+PASS publication_date 2026-09-06
+PASS title unchanged
+PASS creator + orcid survived PUT
+PASS license survived PUT
+PASS related_identifiers survived PUT
+PASS description leads with correction
+PASS description says not peer reviewed
+PASS description does NOT name the journal
+PASS description flags replacement as provisional
+PASS description carries SIM-074 / Kramers-Wannier
+PASS description keeps original abstract
+PASS no em dash in description
+PASS file present + size matches: paper-draft-scipost.pdf
+PASS file present + size matches: SIM-2026-072-alpha-retraction.json
+PASS file present + size matches: SIM-2026-073-channel-test.json
+PASS file present + size matches: SIM-2026-074-kramers-wannier-ring.json
+PASS file present + size matches: channel-test-PREREGISTRATION.md
+PASS file present + size matches: ring-test-PREREGISTRATION-RING.md
+PASS file present + size matches: qw_channel_test.py
+PASS file present + size matches: qw_ring_test.py
+PASS file present + size matches: qw_channel_common.py
+PASS file present + size matches: test_gates.py
+PASS file present + size matches: qw_alpha_reanalysis.py
+PASS file present + size matches: qw_alpha_figure.py
+PASS file present + size matches: alpha_reanalysis_figure.pdf
+PASS file present + size matches: ERRATA.md
+PASS no stale files on draft  set()
+PASS remote PDF page count = notice + 24  26
+PASS remote PDF page 1 is the notice
+PASS remote PDF notice has no journal name
+PASS manuscript body unaltered (page after notice = original page 1)
+
+33/33 checks pass

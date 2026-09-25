@@ -1,0 +1,46 @@
+{
+  "id": "PAPER-2026-099",
+  "title": "Fault-tolerant execution of error-corrected quantum algorithms",
+  "authors": [
+    "Michael A. Perlin",
+    "Zichang He",
+    "Anthony Alexiades Armenakas",
+    "Pablo Andres-Martinez",
+    "Tianyi Hao",
+    "Dylan Herman",
+    "Yuwei Jin",
+    "Karl Mayer",
+    "Chris Self",
+    "David Amaro",
+    "Ciaran Ryan-Anderson",
+    "Ruslan Shaydulin"
+  ],
+  "date": "2026-03-04",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.04584",
+  "arxiv_id": "2603.04584",
+  "abstract": "We demonstrate the end-to-end execution of fault-tolerant quantum algorithms on trapped-ion quantum processors. We successfully run QAOA and the HHL algorithm using the Steane error correction code on Quantinuum and Helios systems. The largest circuits tested contain 12 logical qubits with 97 physical qubits. We show performance improvements from increasing QAOA layers and demonstrate that adding active QEC cycles and increasing the repeat-until-success limit of state preparation subroutines can improve algorithm performance, marking near break-even performance of complex error-corrected algorithmic quantum circuits using only FT components.",
+  "relevance": 2,
+  "tags": [
+    "fault-tolerant",
+    "quantum-error-correction",
+    "trapped-ion",
+    "Quantinuum",
+    "Helios",
+    "Steane-code",
+    "logical-qubit",
+    "QAOA",
+    "HHL"
+  ],
+  "key_claims": [
+    "End-to-end fault-tolerant execution of QAOA and HHL on Quantinuum Helios",
+    "12 logical qubits, 97 physical qubits -- largest FT demonstration on Helios to date",
+    "Near break-even performance for complex error-corrected circuits",
+    "Active QEC cycles during algorithm execution demonstrated",
+    "Relevant to Helios as simulation platform (HYP-013 reframed Helios for force-existence detection)"
+  ],
+  "hardware_used": "Quantinuum Helios (trapped-ion)",
+  "qubit_count": 97,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

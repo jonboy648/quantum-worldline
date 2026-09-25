@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-058",
+  "organization": "Columbia University (Will group; Holman, Sun, Seo, Will et al.)",
+  "processor": "Strontium mid-infrared tweezer-array platform",
+  "date": "2026-06-01",
+  "source_url": "https://arxiv.org/abs/2606.02560",
+  "arxiv_id": "2606.02560",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "A mid-infrared platform based on strontium tweezer arrays. Demonstrates high-fidelity single-atom preparation and resolved-sideband cooling using mid-IR transitions, enabling collective-emission and dipolar many-body physics with flexible atomic arrangements. RELEVANCE 2/5: new species/transition for neutral-atom many-body physics; substrate-level interest for the Rydberg/neutral-atom MERA family, not a logical-qubit or fidelity-record milestone. Does not change physics anchors."
+}

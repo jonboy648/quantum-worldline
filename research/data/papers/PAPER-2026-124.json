@@ -1,0 +1,32 @@
+{
+  "id": "PAPER-2026-124",
+  "title": "A spool for every quotient: One-loop partition functions in AdS3 gravity",
+  "authors": [
+    "Robert Bourne",
+    "Jackson R. Fliss",
+    "Bob Knighton"
+  ],
+  "date": "2025-07-07",
+  "arxiv_id": "2507.05364",
+  "relevance": 3,
+  "abstract": "One-loop partition functions in AdS3 gravity via a worldline / heat-kernel 'spool' construction over quotients of hyperbolic space. NOTE: 2025 paper, catalogued as a REFERENCE, not a scan-window headline.",
+  "tags": [
+    "AdS3",
+    "worldline",
+    "path-integral",
+    "hyperbolic-space",
+    "one-loop",
+    "REFERENCE",
+    "2025"
+  ],
+  "key_claims": [
+    "Cleanest recent worldline-path-integral-on-hyperbolic-space formalism.",
+    "The right tool IF the worldline/MERA correspondence (m_eff, F(dr)) is pushed from boundary-correlator to genuine bulk-worldline computation.",
+    "Reference, not a new finding."
+  ],
+  "reference_tag": true,
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2507.05364",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-084",
+  "title": "Variational Quantum Simulation of the Interacting Schwinger Model on a Trapped-Ion Quantum Processor",
+  "authors": ["Christian Melzer", "Stephan Schuster", "Diego Alberto Olvera Millan", "Janine Hilder", "Ulrich Poschinger", "Karl Jansen", "Ferdinand Schmidt-Kaler"],
+  "date": "2025-04-29",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2504.20824",
+  "arxiv_id": "2504.20824",
+  "abstract": "Explores the multi-flavor lattice Schwinger model — a toy model for QCD — in 1+1 dimensions with nonzero chemical potential via variational quantum simulation on a shuttling-based trapped-ion quantum processor. Fermionic problem intractable classically due to sign problem. Employs parametric quantum circuit to identify ground states in different parameter regimes, mapping out a quantum phase transition. Output states analyzed via quantum state tomography to reveal how correlations change across the phase transition.",
+  "relevance": 2,
+  "tags": ["Schwinger-model", "lattice-QED", "trapped-ion", "variational-quantum-simulation", "sign-problem", "phase-transition", "quantum-state-tomography"],
+  "key_claims": [
+    "Multi-flavor Schwinger model with nonzero chemical potential simulated on trapped-ion hardware",
+    "Sign problem evaded by variational approach on quantum hardware",
+    "Quantum phase transition mapped out and analyzed via state tomography",
+    "Demonstrates trapped-ion processor utility for 1+1D QFT beyond classical reach"
+  ],
+  "hardware_used": "Shuttling-based trapped-ion quantum processor",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "NEUTRAL — demonstrates QFT-on-hardware capability for 1+1D model (same dimensionality as our Ising CFT). No direct bearing on holographic force result; contextually relevant as sign-problem-evading hardware QFT."
+}

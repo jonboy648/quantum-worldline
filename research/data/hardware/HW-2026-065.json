@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-065",
+  "organization": "Microsoft / Quantinuum",
+  "processor": "Helios trapped-ion QCCD + Microsoft qubit-virtualization (Knill / tesseract color codes)",
+  "date": "2026-06-10",
+  "source_url": "https://www.nature.com/articles/s41586-026-10628-y",
+  "physical_qubits": 98,
+  "logical_qubits": 12,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": "error_rate",
+  "notes": "PUBLICATION MILESTONE (peer-reviewed in Nature 2026-06-10), not a new experimental demonstration -- results first appeared in an April-2024 preprint. Up to 12 parallelized logical qubits demonstrated; 4 via a 16-qubit 4D tesseract color code [[16,4,?]], 2 via a 12-qubit Knill-inspired [[12,2,?]] code, on the Quantinuum Helios platform (98 Ba ions, already on record as HW-061-family). Headline metric: logical error rate up to 800x lower than physical baseline (Bell-state physical 0.8% -> logical 0.001%); 51x suppression per correction round; 22x for 12-qubit GHZ/cat prep; range 11x-800x across circuit types. RELEVANCE 2-3/5: validates Quantinuum as a high-fidelity QEC platform but 12 logical qubits in these codes is below our 16q transport target; the catalogued Helios 48-logical spec is what matters for us. First journal-validated result of this 800x magnitude on real hardware. Distinct from the preprint milestone. Discovered_by hardware-tracker 2026-06-16."
+}

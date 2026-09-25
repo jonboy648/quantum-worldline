@@ -1,0 +1,19 @@
+{
+  "id": "HW-2026-070",
+  "title": "NVIDIA open 'Ising' neural decoder family: 347.7x LER suppression on d=31 color codes",
+  "vendor": "NVIDIA (hardware-agnostic QEC)",
+  "date": "2026-07-13",
+  "source_url": "https://quantumcomputingreport.com/nvidia-launches-open-ising-decoder-architecture-to-suppress-quantum-color-code-error-rates-by-347x/",
+  "relevance": 4,
+  "summary": "Open-source 17-layer 3D-CNN pre-decoder (2.9M params) cuts triangular color-code logical error rate 347.7x at 0.3% circuit-level noise, 7.3x faster than Chromobius; targets real-time lattice surgery for utility-scale FTQC. NOTE: 'Ising' is the decoder brand name, NOT fault-tolerant Ising-model simulation.",
+  "tags": ["NVIDIA", "QEC", "neural-decoder", "color-code", "FTQC", "open-source"],
+  "key_specs": {
+    "suppression": "347.7x LER at 0.3% circuit noise, d=31 triangular color code",
+    "speed": "7.3x faster than Chromobius",
+    "architecture": "17-layer 3D CNN, 2.9M params, open-source"
+  },
+  "actionable": "Shifts the decoder side of FT cost models behind HYP-2026-029's STAR-budget estimate; better decoders lower the effective logical-error floor any FT alpha=4 force experiment budgets against.",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

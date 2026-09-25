@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-032",
+  "organization": "Infleqtion (formerly ColdQuanta)",
+  "processor": "SqyWire Quantum RF Receiver (Rydberg atom-based)",
+  "date": "2023-10-01",
+  "source_url": "https://www.infleqtion.com/news/infleqtions-quantum-rf-solution-excels-at-army-c5isr-netmodx23-assessment",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "SqyWire is a portable Rydberg-atom QRF receiver leveraging Cs/Rb vapor cells. Demonstrated at Army C5ISR NetModX23 at Joint Base McGuire-Dix-Lakehurst NJ (open-air tests). Operates HF through SHF (3 MHz - 30 GHz+). Integrated with SINCGARS tactical radio and electronic warfare sensor. Three-step process: laser excitation to Rydberg state, RF field perturbs energy levels, optical detection. Sugar-cube size claim (~1 cm^3 active element). Marketing language 'collapses km-long antennas to sugar cube' is plausible for narrowband EIT but bandwidth vs sensitivity tradeoff is real. No independent peer-reviewed sensitivity numbers published for SqyWire specifically as of 2026-04-26. Army 2023 field test showed operational integration but did not publish quantitative sensitivity floor."
+}

@@ -1,0 +1,295 @@
+  gpu 'NVIDIA RTX 4000 Ada Generation' x 16 SECURE unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX A4500' x 16 SECURE unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX A6000' x 16 SECURE unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA A40' x 16 SECURE unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX 2000 Ada Generation' x 16 SECURE unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX A6000' x 16 COMMUNITY unavailable: {"error":"create pod: There are no instances currently available","status":500}
+[2026-09-22T17:16:03Z] got gpu 'NVIDIA GeForce RTX 4090' x 16 vCPU (COMMUNITY) -> pod topel5v6bm71sm
+  waiting for pod (1): cost=0.34 gpu=1 vcpu=85 ram=167
+[2026-09-22T17:16:20Z] pod topel5v6bm71sm costPerHr=0.34 gpuCount=1 vcpu=85 ramGB=167 ssh 38.65.239.57:18304
+[2026-09-22T17:16:20Z] NJOBS=4 from ramGB=167
+[2026-09-22T17:16:20Z] cap 25 USD at 0.34 USD/h = 73.53 h; deadline 2026-09-25T18:48:08Z
+  ssh not ready (1)
+  ssh not ready (2)
+256
+               total        used        free      shared  buff/cache   available
+Mem:             503          14         348           0         141         486
+Python 3.10.12
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+numpy 1.21.5 scipy 1.8.0
+julia version 1.8.5
+julia version 1.8.5
+[2026-09-22T17:17:09Z] selftests on the pod
+selftest haar N=9: max|S-S_dense| dense=8.9e-16 chol=8.9e-16  f(cone)=1.000000000000 f(out)=-3.2e-16
+[2026-09-22T17:17:19Z] launching hyp033_pod.sh detached (NJOBS=4 SEEDS6=8 SEEDS8=4 SEEDS_GAP=8)
+client_loop: send disconnect: Connection reset by peer
+    [2026-09-22T17:17:20Z] pod topel5v6bm71sm nproc=85 njobs=4 julia_par=16 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+    [2026-09-22T17:18:17Z] julia instantiated
+    [2026-09-22T17:17:20Z] pod topel5v6bm71sm nproc=85 njobs=4 julia_par=16 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+    [2026-09-22T17:18:17Z] julia instantiated
+    [2026-09-22T17:17:20Z] pod topel5v6bm71sm nproc=85 njobs=4 julia_par=16 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+    [2026-09-22T17:18:17Z] julia instantiated
+    [2026-09-22T17:17:20Z] pod topel5v6bm71sm nproc=85 njobs=4 julia_par=16 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+    [2026-09-22T17:18:17Z] julia instantiated
+    [2026-09-22T17:17:20Z] pod topel5v6bm71sm nproc=85 njobs=4 julia_par=16 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+    [2026-09-22T17:18:17Z] julia instantiated
+    seed 4  chi 8  h 1.00  E=-1.27323656  Dsig=0.1232 Deps=0.9994  clean=true  [595s] -> /workspace/hyp033/networks/chi8_h1.00_seed4
+    [2026-09-22T17:34:43Z] stage 1 done: 20 optimized networks
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T17:52:25Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T17:56:25Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:00:25Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:04:26Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:08:26Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:12:26Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:16:26Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:20:26Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:24:26Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:28:27Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:32:27Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:36:27Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:40:27Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:44:27Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:48:28Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:52:28Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T18:56:28Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:00:28Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:04:28Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:08:28Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:12:29Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:16:29Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:20:29Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:24:29Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:28:30Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:32:30Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:36:30Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:40:30Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:44:30Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:48:31Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:52:31Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T19:56:31Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:00:31Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:04:32Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:08:32Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:12:32Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:16:32Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:20:32Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:24:33Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:28:33Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:32:33Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:36:33Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:40:34Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:44:34Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:48:34Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:52:34Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T20:56:34Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:00:35Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:04:35Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:08:35Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:12:35Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:16:35Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:20:36Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:24:36Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:28:36Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:32:36Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:36:36Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:40:37Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:44:37Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:48:37Z] ssh lost; retrying
+Terminated
+[2026-09-22T21:49:57Z] deleting pod topel5v6bm71sm
+  pod GET after delete: HTTP 404
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads
+[2026-09-22T21:51:04Z] ssh lost; retrying
+ssh: connect to host 38.65.239.57 port 18304: Connection timed out
+    [2026-09-22T17:38:36Z] first-network gates PASS:   gates: G1 |f(cone)-1|=7.8e-16 f(out)=4.0e-12 S_R=1.7918/1.7918 norm=5.999999999999 | G2 worst 3.9e-11 | G3 worst 2.6e-15 | PASS [225.8s]
+    [2026-09-22T17:38:36Z] stage 3: 28 grid jobs, 4 parallel x 21 threads

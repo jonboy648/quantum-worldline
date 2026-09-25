@@ -1,0 +1,27 @@
+{
+  "id": "HW-2026-069",
+  "title": "Pasqal Inaugurates SOL (140-qubit Orion neutral-atom QPU) at CINECA, Italy",
+  "vendor": "Pasqal",
+  "date": "2026-06-11",
+  "source_url": "https://thequantuminsider.com/ (press release)",
+  "relevance": 3,
+  "summary": "Pasqal's 140-qubit Orion analog Rydberg neutral-atom QPU inaugurated at CINECA (Italy), coupled to the Leonardo EuroHPC supercomputer; Europe's third Pasqal system.",
+  "tags": [
+    "Pasqal",
+    "neutral-atom",
+    "Rydberg",
+    "analog",
+    "EuroHPC",
+    "CINECA"
+  ],
+  "key_specs": {
+    "qubits": 140,
+    "modality": "analog Rydberg neutral-atom",
+    "fidelity": "not disclosed",
+    "access": "EuroHPC/CINECA (not US cloud)"
+  },
+  "actionable": "Second analog-Rydberg vendor in the HYP-017/018/019 family; correct modality but no error/fidelity specs and no MERA/holography hooks. Backup analog platform only; revisit if specs publish.",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

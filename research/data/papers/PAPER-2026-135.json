@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-135",
+  "title": "Fixed-point tensor network for compactified boson conformal field theory",
+  "authors": ["Cheng (first author)", "Bao", "Gu"],
+  "date": "2026-07-03",
+  "arxiv_id": "2607.03534",
+  "relevance": 4,
+  "abstract": "First fixed-point tensor construction beyond rational CFT: FP tensors for the 2D compactified boson at generic radius, built from boundary-changing-operator three-point data with Dirichlet/Neumann conformal boundary conditions; a shrinkable weighted superposition of Cardy states projects onto the vacuum Ishibashi state. A Loop-TNR-adapted 'tensor complex renormalization' (TCR) algorithm gives stable RG flows at chi=20-50 and reproduces the closed-string spectrum: at the self-dual point Delta=0.500(1)/1.0000(2)/2.001(9) with the full 17-fold Delta=2 multiplet (containing the stress tensor) resolved, and c=1.0000(2) across R=1/sqrt(2), 1, sqrt(2). Spins from twisted transfer matrices. A single-tensor exactly-marginal deformation moves continuously and stably along the c=1 moduli line.",
+  "tags": ["fixed-point-tensors", "compactified-boson", "c=1", "marginal-deformation", "tensor-RG", "stress-tensor", "conformal-boundary-conditions"],
+  "key_claims": [
+    "Fixed-point tensors now exist for a CONTINUOUS family of CFTs (c=1 compact boson, generic radius), not just rational minimal models.",
+    "The Delta=2 multiplet containing the stress tensor is resolved to 2.001(9) at the self-dual point -- consistent with Delta_T=2 exactly, as conformal symmetry requires.",
+    "An exactly-marginal single-tensor deformation tunes the radius continuously with stable RG flows -- a one-parameter moduli line of distinct CFTs in one framework.",
+    "CAVEAT they report: an FP tensor from a single boundary-condition family retains a residual marginal perturbation that splits degenerate multiplets; cured by a mixed shrinkable boundary condition (MSBC)."
+  ],
+  "relevance_note": "ACTIONABLE / SHARPENS. Offers the natural FOURTH-CLASS-AND-BEYOND test of alpha=2*Delta_T=4 universality: instead of a fourth discrete point, a continuous c=1 moduli line where Delta_T=2 must hold at every radius. Upgrading our Ising/TCI/Potts ladder to a moduli-line statement would be a qualitatively stronger universality claim. Their MSBC caveat (residual marginal perturbation splits the Delta=2 tower) is an operational warning for any such test: the Delta~2 block identification must control marginal-operator contamination -- directly relevant to the C_TTT Delta~2-block machinery being built now. Seeds HYP-2026-030.",
+  "seeds_hypothesis": "HYP-2026-030",
+  "related_hypotheses": ["HYP-2026-025", "HYP-2026-027", "HYP-2026-030"],
+  "anchor_contradiction": "None. Delta=2.001(9) stress-tensor multiplet at c=1 is consistent with the alpha=2*Delta_T=4 mechanism.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2607.03534",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

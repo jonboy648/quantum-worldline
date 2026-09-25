@@ -1,0 +1,19 @@
+{
+  "id": "PAPER-2026-065",
+  "title": "Multichannel highly sensitive diamond quantum magnetometer",
+  "authors": ["multiple"],
+  "date": "2025-09",
+  "source": "arxiv:2509.20055",
+  "domain": "NV-diamond / quantum sensing / biomagnetics",
+  "status": "CONFIRMED",
+  "relevance": 4,
+  "summary": "First 2-channel simultaneous NV-diamond magnetometer using frequency-division multiplexing. Two NV ensembles separated 3.6 mm; achieves 21-22 pT/sqrt(Hz) (photon shot-noise limit 6.1-7.5 pT/sqrt(Hz)), gradiometric sensitivity 14 pT/sqrt(Hz). Bandwidth 25-300 Hz. Designed for rat brain imaging. No cost data provided.",
+  "key_numbers": {
+    "sensitivity": "21-22 pT/sqrt(Hz) achieved; 6.1-7.5 pT/sqrt(Hz) photon-shot-noise limit",
+    "gradiometric": "14 pT/sqrt(Hz)",
+    "channel_separation": "3.6 mm",
+    "bandwidth": "25-300 Hz"
+  },
+  "bci_relevance": "Current sensitivity 21 pT/sqrt(Hz) is ~20x short of MEG-grade (1 fT/sqrt(Hz)), ~1000x short of OPM-MEG. Adequate for MCG (~50 pT) and peripheral nerve (~100 pT) but NOT brain MEG at room temperature without massive improvement. Shot-noise limit 6-7 pT/sqrt(Hz) still falls short. Independent researcher cannot bridge this gap without custom diamond growth.",
+  "independent_researcher_budget": "Diamond NV ensembles from Element Six ~$500-2000 for small samples; laser + optics + lock-in ~$10k-15k. Total ~$15k-20k for single-channel at pT level. fT MEG sensitivity not achievable at this budget."
+}

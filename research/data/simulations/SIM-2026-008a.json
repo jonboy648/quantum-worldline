@@ -1,0 +1,42 @@
+{
+  "id": "SIM-2026-008a",
+  "experiment": "8q_parity_preserving_mera_validation",
+  "n_qubits": 8,
+  "n_layers": 3,
+  "n_params": 84,
+  "E0_exact": -9.837951447459433,
+  "gate_set": "Rx (single-qubit) + Rxx, Ryy, Rzz (two-qubit)",
+  "initial_state": "|+>^N (P=+1 eigenstate)",
+  "results": [
+    {
+      "seed": 7,
+      "E_final": -9.208627471630713,
+      "error_pct": 6.396900606693255,
+      "P_init": 1.0000000000000004,
+      "P_final": 0.999999999999999,
+      "M_init": 1.7950322218213133e-17,
+      "M_final": -2.3275681223327473e-17,
+      "evals": 4947,
+      "elapsed_s": 83.45087170600891
+    },
+    {
+      "seed": 42,
+      "E_final": -9.208627455192847,
+      "error_pct": 6.396900773779525,
+      "P_init": 1.0000000000000004,
+      "P_final": 1.0000000000000007,
+      "M_init": 5.285485590866834e-18,
+      "M_final": -9.301817214545595e-18,
+      "evals": 5243,
+      "elapsed_s": 92.39785861968994
+    }
+  ],
+  "best_seed": 7,
+  "best_E": -9.208627471630713,
+  "best_error_pct": 6.396900606693255,
+  "best_P": 0.999999999999999,
+  "best_M": -2.3275681223327473e-17,
+  "z2_preserved": true,
+  "energy_pass": false,
+  "verdict": "FAIL"
+}

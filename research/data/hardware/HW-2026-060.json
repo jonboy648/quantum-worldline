@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-060",
+  "organization": "FAU Erlangen-Nuremberg (Hartmann/Schmidt groups; Marti, Wolf, Schmidt, Hartmann et al.)",
+  "processor": "20-qubit trapped-ion QPU (NLCE + quantum algorithm)",
+  "date": "2026-05-27",
+  "source_url": "https://arxiv.org/abs/2605.28599",
+  "arxiv_id": "2605.28599",
+  "physical_qubits": 20,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Thermodynamic-limit dispersion relations on trapped-ion quantum hardware. Runs a numerical linked-cluster expansion with a quantum algorithm (NLCE+QA) on a 20-qubit trapped-ion QPU, computing ground-state energies and one-quasiparticle dispersions in the thermodynamic limit for transverse-field Ising models; explores whether current hardware gives expectation values accurate enough to survive nonlinear classical post-processing. RELEVANCE 3/5: INDEPENDENTLY CONFIRMS the measurement-noise wall for VQE/adiabatic TFIM preparation on real hardware -- consistent with task #95's finding that the ADAPT state's force observable is noise-fragile. Same critical-Ising target as our MERA work. Does not change physics anchors."
+}

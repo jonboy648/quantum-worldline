@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Power-Law Holographic Forces and Causal Transport in MERA Quantum Circuits",
+    "upload_type": "publication",
+    "publication_type": "article",
+    "description": "We report four results from classical simulation of critical transverse-field Ising model chains on up to 24 qubits establishing quantitative physical content in the MERA-AdS correspondence: (1) power-law holographic forces F(dr) ~ dr^{-alpha} with alpha = 3.92 +/- 0.16, consistent with stress-tensor exchange (alpha = 4); (2) holographic transport matching the AdS_3 null geodesic prediction to 0.72%; (3) a two-phase ALM + projection method for Z2-symmetric MERA optimization at 24 qubits; (4) chi=3 MERA overcoming the expressibility barrier to enable the first MERA-based holographic force measurement.",
+    "creators": [
+      {
+        "name": "Cackler, Jon",
+        "affiliation": "Independent Researcher",
+        "orcid": "0009-0008-2011-5944"
+      }
+    ],
+    "keywords": [
+      "MERA",
+      "tensor networks",
+      "AdS/CFT",
+      "holographic forces",
+      "quantum simulation",
+      "conformal field theory",
+      "stress-tensor exchange"
+    ],
+    "related_identifiers": [
+      {
+        "relation": "isSupplementedBy",
+        "identifier": "https://github.com/jonboy648/quantum-worldline",
+        "resource_type": "software",
+        "scheme": "url"
+      }
+    ],
+    "license": "cc-by-4.0",
+    "access_right": "open"
+  }
+}

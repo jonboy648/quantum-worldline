@@ -1,0 +1,16 @@
+{
+  "hw_id": "HW-2026-023",
+  "vendor": "IBM",
+  "system_name": "Kookaburra (1386q module) + 4158q multi-chip system",
+  "qubit_count": 1386,
+  "qubit_count_multimodule": 4158,
+  "fidelity_2q": null,
+  "announcement_date": "2026 (roadmap, targeted delivery 2026)",
+  "headline": "IBM Kookaburra: First QEC-enabled module with qLDPC memory + logical processing unit",
+  "details": "Kookaburra is IBM's 2026 roadmap target: 1386-qubit single module, three modules interconnected via chip-to-chip couplers = 4158-qubit system. First QPU capable of storing information in a qLDPC memory and processing with an attached LPU. Quantum-centric supercomputer blueprint. IBM targeting quantum advantage in 2026.",
+  "source_url": "https://www.ibm.com/roadmaps/quantum/2026/",
+  "relevance": 4,
+  "relevance_reason": "4158 logical-qubit-capable system could run full fault-tolerant MERA. qLDPC + LPU is exactly the architecture needed for scalable holographic circuits. IBM credits program provides academic access path.",
+  "access_path": "IBM Quantum Credits program (tenure-track academic staff eligible). NERSC IBM Quantum Innovation Center 2026 call for proposals. 180 min free on Open Plan.",
+  "scan_date": "2026-04-26"
+}

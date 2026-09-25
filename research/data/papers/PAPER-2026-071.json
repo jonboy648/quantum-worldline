@@ -1,0 +1,17 @@
+{
+  "id": "PAPER-2026-071",
+  "title": "Quantum Computing Enhanced Sensing",
+  "authors": ["multiple"],
+  "date": "2025-01",
+  "source": "arxiv:2501.07625",
+  "domain": "NV-diamond / quantum computing / sensing",
+  "status": "WATCH",
+  "relevance": 2,
+  "summary": "Proposes using quantum computing algorithms (Grover-Heisenberg limit protocol) to enhance sensing of weak oscillating fields with unknown parameters. Demonstrated on NV centers in diamond. Claims 'outperforms all existing approaches' but no quantitative sensitivity number given in abstract. No biological or BCI application addressed.",
+  "key_numbers": {
+    "theoretical_limit": "Grover-Heisenberg limit (new bound proposed)",
+    "demonstrated_on": "NV centers in diamond"
+  },
+  "bci_relevance": "Theoretical framework only. No demonstrated sensitivity improvement for biological field sensing. WATCH only — if Grover-Heisenberg protocol scales to ensemble NV sensors, could improve neural field detection.",
+  "independent_researcher_budget": "N/A — theoretical framework paper, not hardware."
+}

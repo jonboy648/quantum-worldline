@@ -1,0 +1,41 @@
+{
+  "id": "PAPER-2026-134",
+  "title": "Defect Conformal Manifolds along RG Domain Walls between Z_N-Parafermions and Minimal Models",
+  "authors": [
+    "Jin-Rui Zhang",
+    "Jing-Hao Jin",
+    "Ting-Kai Chen",
+    "Jin Chen"
+  ],
+  "date": "2026-05-24",
+  "arxiv_id": "2605.24978",
+  "relevance": 3,
+  "abstract": "Studies defect conformal manifolds along RG domain walls between Z_N parafermion CFTs (c=2(N-1)/(N+2)) and minimal models M_{N+1}, including a spin-2 W^(3)-descendant operator on the wall, exactly computed parameter-dependent transmission coefficients, and non-invertible so(3)_N symmetry tracking.",
+  "tags": [
+    "parafermions",
+    "minimal-models",
+    "RG-domain-walls",
+    "defect-conformal-manifold",
+    "transmission-coefficients",
+    "non-invertible-symmetry",
+    "Potts",
+    "stress-tensor"
+  ],
+  "key_claims": [
+    "RG domain walls connect Z_N parafermion CFTs to minimal models M_{N+1}: N=2 is Ising c=1/2 and N=3 is 3-state Potts c=4/5 -- i.e. the walls link the exact CFT classes on the project's universality ladder (Ising, TCI, Potts).",
+    "A spin-2 W^(3)-descendant operator on the wall constrains stress-tensor mixing across the defect -- the spin-2/stress sector is the rigid, protected structure across these theories, conceptually adjacent to the stress-tensor-exchange mechanism behind alpha=4=2*Delta_T.",
+    "Exactly computed, parameter-dependent transmission coefficients on the defect conformal manifold -- natural benchmarks if the project ever probes interfaces between its three CFT classes in MERA (e.g. a TCI-Potts wall).",
+    "Non-invertible so(3)_N symmetry tracking is the modern categorical-symmetry framing of the Kramers-Wannier-type structures exploited in the Z2 C_sss selection-rule probe."
+  ],
+  "relevance_note": "WATCH (deferred from scan #13, catalogued scan #14). Formal context for the HYP-025 Potts lineage rather than a simulation target. The wall physics reaffirms that the spin-2/stress sector is protected across the Ising/TCI/Potts ladder (consistent with alpha=4 universality, HYP-027/025), and the exact transmission coefficients become benchmarks only if a cross-class MERA interface experiment is ever attempted. No routing required.",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-025",
+    "HYP-2026-027"
+  ],
+  "anchor_contradiction": "None. No direct contradiction or sharpening of any anchor; conceptually consistent with the protected spin-2/stress-tensor sector behind alpha=4=2*Delta_T.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.24978",
+  "discovered_by": "weekly-scan-14",
+  "discovered_date": "2026-07-02"
+}

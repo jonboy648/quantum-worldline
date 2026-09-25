@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-055",
+  "title": "Optically-biased Rydberg microwave receiver enabled by hybrid nonlinear interferometry",
+  "authors": ["Sebastian Borówka", "Mateusz Mazelanik", "Wojciech Wasilewski", "Michal Parniak"],
+  "date": "2024-03-08",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s41467-025-63951-9",
+  "arxiv_id": "2403.05310",
+  "abstract": "All-optical readout approach maintaining fully optical operation while achieving 35 dB improvement in SNR over conventional EIT readout. Reports sensitivity of ~176 nV/cm/sqrt(Hz). Uses optical bias field to replace local oscillator, enabling homodyne-like detection without RF LO. Published Nature Communications 2025.",
+  "relevance": 4,
+  "tags": ["Rydberg-electrometry", "sensitivity", "nonlinear-interferometry", "SNR-improvement"],
+  "key_claims": [
+    "35 dB SNR improvement over standard EIT readout",
+    "Sensitivity ~176 nV/cm/sqrt(Hz)",
+    "Fully optical operation - no RF local oscillator required",
+    "Optical bias field enables homodyne-equivalent detection"
+  ],
+  "hardware_used": "Rb vapor cell with optical bias field",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

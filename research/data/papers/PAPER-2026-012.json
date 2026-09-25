@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-012",
+  "title": "A view of the bulk from the worldline",
+  "authors": ["Sujay K. Ashok", "Sameer Murthy"],
+  "date": "2017-12-03",
+  "source": "other",
+  "source_url": "https://arxiv.org/abs/1712.00885",
+  "arxiv_id": "1712.00885",
+  "abstract": "Develops worldline quantum mechanics as a framework for understanding gravity-coupled particle dynamics in AdS/CFT. Derives the AdS heat kernel from worldline quantum mechanics, computes four-point functions and conformal blocks from worldline path integrals. Establishes gauge-fixed worldline path integrals, perturbation theory, vertex operators, and connects to geodesic Witten diagrams. Directly bridges worldline formalism to bulk geometry and boundary CFT correlators.",
+  "relevance": 5,
+  "tags": ["worldline", "AdS/CFT", "heat-kernel", "bulk-propagator", "geodesic-Witten-diagram", "conformal-blocks"],
+  "key_claims": [
+    "AdS heat kernel derived from worldline quantum mechanics",
+    "Four-point functions computed from worldline path integrals in AdS",
+    "Gauge-fixed worldline path integrals with vertex operators map to conformal blocks",
+    "Geodesic Witten diagrams emerge from worldline perturbation theory",
+    "Worldline formalism provides efficient computation of bulk-boundary correlators"
+  ],
+  "hardware_used": "analytical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

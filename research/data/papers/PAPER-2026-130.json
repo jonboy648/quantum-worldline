@@ -1,0 +1,37 @@
+{
+  "id": "PAPER-2026-130",
+  "title": "Complex Conformal Manifolds",
+  "authors": [
+    "Yuma Furuta",
+    "Wataru Harada",
+    "Yuya Kusuki",
+    "Yin Tang"
+  ],
+  "date": "2026-06-29",
+  "arxiv_id": "2606.30720",
+  "relevance": 3,
+  "abstract": "Constructs complex CFTs by analytic continuation of exactly marginal couplings and argues genuinely complex RATIONAL CFTs do not exist -- rational points are confined to the real regime -- with verification against non-Hermitian critical lattice systems.",
+  "tags": [
+    "complex-CFT",
+    "conformal-manifold",
+    "non-Hermitian",
+    "rational-CFT",
+    "analytic-continuation",
+    "hep-th"
+  ],
+  "key_claims": [
+    "Complex CFTs can be constructed by analytically continuing exactly marginal couplings into the complex plane.",
+    "Claims genuinely complex rational CFTs do not exist: rational points on conformal manifolds are confined to the real regime.",
+    "Verified against non-Hermitian critical systems, mapping the landscape of complex fixed points (5-state-Potts-type walking RG scenarios)."
+  ],
+  "relevance_note": "WATCH. Landscape context for the non-Hermitian/complex-CFT side of HYP-028. Important scoping fact: Yang-Lee M(2,5) is a REAL non-unitary rational CFT, so the no-complex-rational-CFT claim constrains the complex-CFT (5-state-Potts-type) sector, NOT the M(2,5) target of HYP-028. No routing required; keep as boundary-of-landscape reference if the non-Hermitian program ever drifts toward complex fixed points.",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-028"
+  ],
+  "anchor_contradiction": "None. Does not touch alpha=4, transport, or the ED-inaccessibility finding; constrains a different (complex-rational) sector than the real non-unitary M(2,5) target.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.30720",
+  "discovered_by": "weekly-scan-14",
+  "discovered_date": "2026-07-02"
+}

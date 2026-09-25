@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-053",
+  "organization": "Google Quantum AI",
+  "processor": "Willow (105-qubit superconducting)",
+  "date": "2026-05-15",
+  "source_url": "https://quantumai.google/willowearlyaccess",
+  "physical_qubits": 105,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Google Quantum AI opened the Willow Early Access Program (EAP) for research proposals, with deadline 2026-05-15 (today) and selection notification scheduled 2026-07-01. Selected researchers gain exclusive access to the 105-qubit Willow processor — not yet publicly available. Proposals must specify executable quantum circuits, measurable outcomes, and a dedicated researcher. Selection criteria: feasibility on current hardware (including noise considerations) and potential for high-impact scientific results or new experimental techniques. Context: Google Willow was announced December 2024 with below-threshold QEC on 105 qubits — first demonstration of exponentially suppressing errors as system scales. Willow achieved a benchmark computation in <5 minutes that would take a classical supercomputer 10 septillion years. The EAP deadline closes today; IonQ 256q and Quantinuum Helios remain the leading accessible platforms for MERA holographic experiments. RELEVANCE TO OUR WORK: Relevance 3/5. Willow is superconducting (not trapped-ion or neutral atom), so gate fidelities are lower (~99.5-99.6% 2Q vs 99.9%+ for trapped-ion). However, 105 qubits with below-threshold QEC is interesting for holographic circuits if a proposal were accepted. The EAP deadline has passed as of this scan; note for the next access window. The 2026-07-01 selection results should be monitored."
+}

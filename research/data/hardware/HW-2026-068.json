@@ -1,0 +1,29 @@
+{
+  "id": "HW-2026-068",
+  "title": "QuEra Unveils Gigaquop-Class Fault-Tolerant Roadmap and Launches FTQC Founders Circle",
+  "vendor": "QuEra Computing",
+  "date": "2026-06-25",
+  "source_url": "https://thequantuminsider.com/ (press release; backed by arXiv:2606.25011)",
+  "relevance": 5,
+  "summary": "QuEra gigaquop FT roadmap: post-Libra >1,000 logical / >20,000 physical qubits, ~1e-9 logical error, near-50% qLDPC encoding, tricycle magic-state codes, BB-STAR simulation architecture, NVIDIA real-time decoding (2028-2029). Flagship benchmark = FT simulation of the 8x8 transverse-field Ising model (the project's exact spin model). Launches the FTQC Founders Circle co-design program.",
+  "tags": [
+    "QuEra",
+    "neutral-atom",
+    "fault-tolerant",
+    "gigaquop",
+    "qLDPC",
+    "roadmap",
+    "TFIM",
+    "collaboration-route"
+  ],
+  "key_specs": {
+    "logical_qubits": ">1000 (2028-2029 gigaquop target)",
+    "physical_qubits": ">20000",
+    "logical_error": "~1e-9",
+    "flagship_benchmark": "FT 8x8 TFIM simulation"
+  },
+  "actionable": "FTQC Founders Circle = concrete co-design outreach hook; extends the live HW-064 QuEra inquiry (thread 19ed11650e5ed845). Does NOT change near-term analog (HYP-017-class) feasibility; FT digital is 2028+.",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

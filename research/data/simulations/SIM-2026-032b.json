@@ -1,0 +1,116 @@
+{
+  "id": "SIM-2026-032b",
+  "type": "classical",
+  "date": "2026-06-08",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage 1b: point-calibrated excitation operators (max-creation-amplitude generalized eigenproblem over a 6-element 2-site basis) for the alpha dichotomy at Ising vs TCI points of the O'Brien-Fendley chain.",
+  "circuit": {
+    "qubits": 16,
+    "script_path": "research/data/simulations/sim032b_tci_operator_calibration.py"
+  },
+  "hardware_target": "local CPU (exact statevector)",
+  "results": {
+    "ising_control": {
+      "lam3": 0.0,
+      "target_exc": 1,
+      "creation_prob": 0.5591483052909484,
+      "coef": {
+        "Z": [
+          -0.017960486650545105,
+          -0.9283150429699489
+        ],
+        "ZZ": [
+          8.58799513244668e-15,
+          1.916050829677121e-13
+        ],
+        "X": [
+          -3.900923481004634e-15,
+          -3.8690592420073226e-14
+        ],
+        "XZ+ZX": [
+          -0.007183516968368635,
+          -0.37129098965493734
+        ],
+        "YY": [
+          1.0019344890506158e-14,
+          2.289865511401792e-13
+        ],
+        "XX": [
+          4.2028947152589545e-15,
+          1.523237458762307e-13
+        ]
+      },
+      "F": {
+        "1": -0.2725408692511877,
+        "2": 0.13276359708533647,
+        "3": 0.03948972589144972,
+        "4": 0.01771173687295402,
+        "5": 0.009877287913752753,
+        "6": 0.006147701717971188,
+        "7": 0.004071970453537688,
+        "8": 0.0027889031852126323,
+        "9": 0.0019286802485893872,
+        "10": 0.0013091660971653596,
+        "11": 0.0008303643543499106
+      },
+      "alpha": 2.918972852082645,
+      "alpha_err": 0.02789305740820467,
+      "n_fit_pts": 10
+    },
+    "tci_point": {
+      "lam3": 0.856,
+      "target_exc": 2,
+      "creation_prob": 0.396464413696626,
+      "coef": {
+        "Z": [
+          6.3078330703190114e-15,
+          -1.0486949140767784e-14
+        ],
+        "ZZ": [
+          0.02691272280551366,
+          0.6976084046483819
+        ],
+        "X": [
+          -0.010232125178770023,
+          -0.2652283298760649
+        ],
+        "XZ+ZX": [
+          1.1876492751965881e-17,
+          -2.1458164866969196e-15
+        ],
+        "YY": [
+          0.02472115270272567,
+          0.6408004133451773
+        ],
+        "XX": [
+          0.006779864760295066,
+          0.1757418107911223
+        ]
+      },
+      "F": {
+        "1": 0.12381739605351427,
+        "2": -0.634981681843449,
+        "3": -0.7132555110007637,
+        "4": -0.12397067774066883,
+        "5": -0.2750018630240021,
+        "6": -0.33919494084512536,
+        "7": -0.337539987361577,
+        "8": -0.32203938232651197,
+        "9": -0.30523649192450364,
+        "10": -0.2836411970677801,
+        "11": -0.31911075912663733
+      },
+      "alpha": 0.5545615097320237,
+      "alpha_err": 0.2045520177421029,
+      "n_fit_pts": 10
+    },
+    "verdict": "METHOD_NOT_VALIDATED: calibrated-Ising alpha=2.92 outside (3.2, 4.8) \u2014 the calibration principle does not reproduce the published pipeline; TCI number not interpretable this way",
+    "dichotomy": {
+      "universal": 4.0,
+      "primary_tracking": 0.4
+    }
+  },
+  "comparison": "classical_wins",
+  "notes": "Protocol: OBC, anchor=2, dr=2..11 fit, per-site dE_single subtraction (SIM-032 final config).",
+  "wall_seconds": 5.477196216583252
+}

@@ -1,0 +1,91 @@
+{
+  "adapt_compiled_2q": 33,
+  "chi3_compiled_2q": 451,
+  "p2q_helios": 0.0007899999999999574,
+  "ideal_force_rms": 1.473322656843189,
+  "scan": [
+    {
+      "n_compiled_2q": 33,
+      "F1_noisy": -2.4432073592952808,
+      "F_noisy": {
+        "1": -2.4432073592952808,
+        "2": -0.6244880467946761,
+        "3": -0.14978825762829473
+      },
+      "surv_rms": 0.9899406415609694,
+      "surv_dr1": 0.9908851508566531,
+      "dr1_negative": true,
+      "purity": 0.9572695540312657
+    },
+    {
+      "n_compiled_2q": 75,
+      "F1_noisy": -2.4214303863061524,
+      "F_noisy": {
+        "1": -2.4214303863061524,
+        "2": -0.616294066242288,
+        "3": -0.14962060218088347
+      },
+      "surv_rms": 0.980890222816967,
+      "surv_dr1": 0.9820531214820535,
+      "dr1_negative": true,
+      "purity": 0.9056456624682845
+    },
+    {
+      "n_compiled_2q": 150,
+      "F1_noisy": -2.3800311389948323,
+      "F_noisy": {
+        "1": -2.3800311389948323,
+        "2": -0.5997322248745576,
+        "3": -0.14431065171106816
+      },
+      "surv_rms": 0.9634774280366708,
+      "surv_dr1": 0.9652629381759334,
+      "dr1_negative": true,
+      "purity": 0.8206190371366839
+    },
+    {
+      "n_compiled_2q": 300,
+      "F1_noisy": -2.2990333355204537,
+      "F_noisy": {
+        "1": -2.2990333355204537,
+        "2": -0.5646173411140545,
+        "3": -0.13117899601767036
+      },
+      "surv_rms": 0.9291155639894259,
+      "surv_dr1": 0.9324128731131313,
+      "dr1_negative": true,
+      "purity": 0.6748538786949579
+    },
+    {
+      "n_compiled_2q": 451,
+      "F1_noisy": -2.224345678646481,
+      "F_noisy": {
+        "1": -2.224345678646481,
+        "2": -0.5354055697267679,
+        "3": -0.12261605898667582
+      },
+      "surv_rms": 0.8978352445981456,
+      "surv_dr1": 0.9021219975281612,
+      "dr1_negative": true,
+      "purity": 0.5555254026027604
+    },
+    {
+      "n_compiled_2q": 600,
+      "F1_noisy": -2.152289670372962,
+      "F_noisy": {
+        "1": -2.152289670372962,
+        "2": -0.5073234030504814,
+        "3": -0.11218874534476964
+      },
+      "surv_rms": 0.8676450139148686,
+      "surv_dr1": 0.8728984327101393,
+      "dr1_negative": true,
+      "purity": 0.4595686308668724
+    }
+  ],
+  "adapt_survival_rms": 0.9899406415609694,
+  "chi3equiv_survival_rms": 0.8978352445981456,
+  "model_reproduces_chi3_kill": false,
+  "note": "MODEL DOES NOT REPRODUCE the chi3 ~30% kill: under pure 2q-depolarizing, even 451 gates retain >50% force RMS. The chi3 hold must be driven by error sources this model omits (SPAM, idle/decoherence over depth, crosstalk, shot noise) OR by the 16q register's extra ancilla/readout burden. So 'fewer gates reopens the budget' is PLAUSIBLE but NOT PROVEN by gate-depolarizing alone.",
+  "wall_seconds": 266.6354281902313
+}

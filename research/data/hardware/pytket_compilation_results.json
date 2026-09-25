@@ -1,0 +1,164 @@
+{
+  "16q/3-layer (baseline)": {
+    "n_qubits": 16,
+    "n_layers": 3,
+    "n_params": 146,
+    "original": {
+      "cx_count": 29,
+      "ry_count": 102,
+      "rz_count": 44,
+      "sq_count": 146,
+      "depth": 25
+    },
+    "optimized_cx_target": {
+      "cx_count": 29,
+      "depth": 15
+    },
+    "optimized_tk2_target": {
+      "tk2_count": 15,
+      "depth": 9
+    },
+    "native_quantinuum": {
+      "zzphase_count": 29,
+      "phasedx_count": 0,
+      "rz_count": 0,
+      "tk1_count": 74,
+      "total_2q": 29,
+      "total_1q": 74,
+      "depth": 15
+    },
+    "cx_to_zzphase": {
+      "zzphase_count": 29,
+      "total_2q": 29
+    },
+    "best": {
+      "method": "TK2->ZZPhase",
+      "two_q_count": 29,
+      "depth": 15,
+      "savings_count": 0,
+      "savings_pct": 0.0
+    },
+    "hqc": {
+      "original_10k": 79000.0,
+      "optimized_10k": 79000.0,
+      "savings_10k": 0.0,
+      "savings_10k_pct": 0.0,
+      "original_280k": 2212000.0,
+      "optimized_280k": 2212000.0,
+      "savings_280k": 0.0
+    },
+    "error_budget": {
+      "original_pct": 0.2895943651625821,
+      "optimized_pct": 0.2895943651625821,
+      "improvement_pct": 0.0
+    }
+  },
+  "24q/5-layer (current sim)": {
+    "n_qubits": 24,
+    "n_layers": 5,
+    "n_params": 230,
+    "original": {
+      "cx_count": 46,
+      "ry_count": 161,
+      "rz_count": 69,
+      "sq_count": 230,
+      "depth": 35
+    },
+    "optimized_cx_target": {
+      "cx_count": 46,
+      "depth": 21
+    },
+    "optimized_tk2_target": {
+      "tk2_count": 23,
+      "depth": 11
+    },
+    "native_quantinuum": {
+      "zzphase_count": 46,
+      "phasedx_count": 0,
+      "rz_count": 0,
+      "tk1_count": 116,
+      "total_2q": 46,
+      "total_1q": 116,
+      "depth": 21
+    },
+    "cx_to_zzphase": {
+      "zzphase_count": 46,
+      "total_2q": 46
+    },
+    "best": {
+      "method": "TK2->ZZPhase",
+      "two_q_count": 46,
+      "depth": 21,
+      "savings_count": 0,
+      "savings_pct": 0.0
+    },
+    "hqc": {
+      "original_10k": 96000.0,
+      "optimized_10k": 96000.0,
+      "savings_10k": 0.0,
+      "savings_10k_pct": 0.0,
+      "original_280k": 2688000.0,
+      "optimized_280k": 2688000.0,
+      "savings_280k": 0.0
+    },
+    "error_budget": {
+      "original_pct": 0.4589665163694745,
+      "optimized_pct": 0.4589665163694745,
+      "improvement_pct": 0.0
+    }
+  },
+  "32q/3-layer (Helios target)": {
+    "n_qubits": 32,
+    "n_layers": 3,
+    "n_params": 286,
+    "original": {
+      "cx_count": 57,
+      "ry_count": 200,
+      "rz_count": 86,
+      "sq_count": 286,
+      "depth": 25
+    },
+    "optimized_cx_target": {
+      "cx_count": 57,
+      "depth": 15
+    },
+    "optimized_tk2_target": {
+      "tk2_count": 29,
+      "depth": 9
+    },
+    "native_quantinuum": {
+      "zzphase_count": 57,
+      "phasedx_count": 0,
+      "rz_count": 0,
+      "tk1_count": 146,
+      "total_2q": 57,
+      "total_1q": 146,
+      "depth": 15
+    },
+    "cx_to_zzphase": {
+      "zzphase_count": 57,
+      "total_2q": 57
+    },
+    "best": {
+      "method": "TK2->ZZPhase",
+      "two_q_count": 57,
+      "depth": 15,
+      "savings_count": 0,
+      "savings_pct": 0.0
+    },
+    "hqc": {
+      "original_10k": 107000.0,
+      "optimized_10k": 107000.0,
+      "savings_10k": 0.0,
+      "savings_10k_pct": 0.0,
+      "original_280k": 2996000.0,
+      "optimized_280k": 2996000.0,
+      "savings_280k": 0.0
+    },
+    "error_budget": {
+      "original_pct": 0.5684069220540211,
+      "optimized_pct": 0.5684069220540211,
+      "improvement_pct": 0.0
+    }
+  }
+}

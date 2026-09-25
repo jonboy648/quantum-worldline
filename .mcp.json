@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "paper-search": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "D:/quantum-worldline/.mcp-servers/paper-search",
+        "-m",
+        "paper_search_mcp.server"
+      ]
+    }
+  }
+}

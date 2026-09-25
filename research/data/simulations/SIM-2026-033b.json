@@ -1,0 +1,68 @@
+{
+  "id": "SIM-2026-033b",
+  "type": "classical",
+  "date": "2026-06-08",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Channel-projected force at the TCI point: remove K lightest-primary components from the energy-density excitation, measure residual (stress-tensor-ward) force exponent, with strict Ising-control validation.",
+  "circuit": {
+    "qubits": 16,
+    "script_path": "research/data/simulations/sim033b_tci_channel_projected.py"
+  },
+  "hardware_target": "local CPU (exact statevector)",
+  "results": {
+    "ising": {
+      "0": {
+        "alpha": 3.9100131474187045,
+        "alpha_err": 0.15301690600361442,
+        "n_fit": 10
+      },
+      "1": {
+        "alpha": 3.910013148972427,
+        "alpha_err": 0.15301690619697247,
+        "n_fit": 10
+      },
+      "2": {
+        "alpha": 3.9100131489274608,
+        "alpha_err": 0.15301690719954306,
+        "n_fit": 10
+      },
+      "3": {
+        "alpha": 5.079625687295914,
+        "alpha_err": 0.661215178869622,
+        "n_fit": 10
+      }
+    },
+    "tci": {
+      "0": {
+        "alpha": 1.3234631129302183,
+        "alpha_err": 0.09150837874167315,
+        "n_fit": 10
+      },
+      "1": {
+        "alpha": 1.3234631141087614,
+        "alpha_err": 0.0915083801435994,
+        "n_fit": 10
+      },
+      "2": {
+        "alpha": 1.6270950052836701,
+        "alpha_err": 0.15715420373556355,
+        "n_fit": 10
+      },
+      "3": {
+        "alpha": 1.6270950074606665,
+        "alpha_err": 0.15715420230478325,
+        "n_fit": 10
+      }
+    },
+    "ising_validated_K": [
+      0,
+      1,
+      2
+    ],
+    "universal_K": [],
+    "verdict": "STAGE_2_REQUIRED: Ising control validates (K in [0, 1, 2], alpha~3.9-4.0) but TCI alpha does NOT reach [3.6,4.4] under exact-diag light-projection (TCI alphas seen: 1.32, 1.32, 1.63, 1.63). At N=16 the dense c=7/10 spectrum mixes channels beyond what local projection separates. The clean test is the chi>=3 multicritical MERA (stage 2), which projects onto scaling operators directly. This is the honest exact-diag ceiling, not a refutation."
+  },
+  "comparison": "classical_wins",
+  "notes": "Follow-up to SIM-033; isolates the stress-tensor channel by Gram-Schmidt removal of light primaries.",
+  "wall_seconds": 8.437495470046997
+}

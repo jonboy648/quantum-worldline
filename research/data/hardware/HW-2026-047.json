@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-047",
+  "organization": "Pasqal",
+  "processor": "Pasqal neutral-atom QPU (Fresnel generation)",
+  "date": "2026-04-10",
+  "source_url": "https://www.pasqal.com/blog/a-landmark-first-solving-differential-equations-with-logical-neutral-atom-qubits/",
+  "physical_qubits": null,
+  "logical_qubits": 2,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "2026-04-10 blog post. First end-to-end application solved using logical qubits on neutral-atom hardware: differential equations via quantum kernels. 2 logical qubits used; logical qubits outperformed physical qubits due to natural noise suppression for this problem class. arXiv paper announced as 'coming soon' — not yet posted at scan date. Physical qubit count not disclosed. Error correction code not specified. This is a CATCH-UP milestone (just before our April 26 window start). RELEVANCE TO OUR WORK: Low logical qubit count (2) — not directly applicable to MERA circuits. Significant as the first neutral-atom end-to-end logical application. Pasqal Vela (256+ physical qubits, H1 2026 target) still not launched as of scan close date (2026-05-12)."
+}

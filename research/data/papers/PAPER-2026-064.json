@@ -1,0 +1,18 @@
+{
+  "id": "PAPER-2026-064",
+  "title": "Characterizing Timing Parameters in Commercial SERF-OPM Multichannel Systems for Biomagnetic Field Sensing",
+  "authors": ["multiple"],
+  "date": "2025-09",
+  "source": "arxiv:2509.22198",
+  "domain": "BCI / quantum sensing / OPM-MEG",
+  "status": "CONFIRMED",
+  "relevance": 4,
+  "summary": "Head-to-head characterization of four commercial SERF-OPM systems (QuSpin Neuro-1, FieldLine HEDscan, FieldLine FLv2, QuSpin QZFM Gen.2). All achieve intrinsic noise well below 50 fT/sqrt(Hz). Key specs: Neuro-1 triaxial 19/21 heads; HEDscan dual-axis 18/24 heads; FLv2 single-axis 17/17 heads; QZFM Gen.2 dual-axis 13/16 heads. Time delay at 28 Hz: Neuro-1 8.7-9.3 ms, HEDscan 1.8-1.9 ms, FLv2 1.2 ms. Bandwidth: Neuro-1 ~150 Hz, HEDscan ~250 Hz, FLv2 ~360 Hz. Authors note simulation studies still required before clinical deployment.",
+  "key_numbers": {
+    "sensitivity": "<50 fT/sqrt(Hz) for all four systems",
+    "bandwidth": "150-360 Hz depending on model",
+    "latency_28Hz": "1.2 ms (FLv2) to 9.3 ms (Neuro-1)"
+  },
+  "bci_relevance": "Definitive benchmark for commercial wearable OPM-MEG. Shows timing inter-channel spread is <0.3 ms — adequate for BCI decoding. Not yet clinical-grade.",
+  "independent_researcher_budget": "QuSpin QZFM Gen.2 sensors ~$7,700 each in quantity 32 (~$247k for 32-ch array). Single-channel bench setup much cheaper."
+}

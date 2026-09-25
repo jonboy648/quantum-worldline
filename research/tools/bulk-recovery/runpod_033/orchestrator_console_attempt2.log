@@ -1,0 +1,12 @@
+  gpu 'NVIDIA RTX 4000 Ada Generation' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX A4500' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX 2000 Ada Generation' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA A40' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX A6000' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  cpu 'cpu5c' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu3c' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5g' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5c' x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  gpu 'NVIDIA RTX 4000 Ada Generation' x 8 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+  gpu 'NVIDIA RTX A4500' x 8 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+pod create FAILED on every rung

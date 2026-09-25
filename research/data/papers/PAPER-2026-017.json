@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-017",
+  "title": "Holographic quantum simulation of entanglement renormalization circuits",
+  "authors": ["Sajant Anand", "Johannes Hauschild", "Yuxuan Zhang", "Andrew C. Potter", "Michael P. Zaletel"],
+  "date": "2023-07-01",
+  "source": "prx",
+  "source_url": "https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.4.030334",
+  "arxiv_id": "2203.00886",
+  "abstract": "Demonstrates D-dimensional system simulation with D-1 dimensional qubit subset using holographic quantum simulation. Prepares ground states of critical systems and measures long-range correlations using fewer qubits. Uses generalized MERA (gMERA) networks on Quantinuum trapped-ion quantum computer with 10 qubits to simulate L=32 critical perturbed Ising model.",
+  "relevance": 5,
+  "tags": ["MERA", "gMERA", "holographic-simulation", "Quantinuum", "trapped-ion", "critical-Ising", "quantum-hardware"],
+  "key_claims": [
+    "D-dimensional system simulated with D-1 dimensional qubits",
+    "gMERA captures longer correlations than standard MERA with same qubit count",
+    "10 qubits simulate L=32 critical Ising model on Quantinuum hardware",
+    "Optimal network choice depends on noise level, qubit count, and target state"
+  ],
+  "hardware_used": "Quantinuum trapped-ion",
+  "qubit_count": 10,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

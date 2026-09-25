@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "claim", "confidence", "source_findings", "testable", "status", "created_date"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^HYP-\\d{4}-\\d{3,}$" },
+    "claim": { "type": "string" },
+    "confidence": { "type": "string", "enum": ["low", "medium", "high"] },
+    "source_findings": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+    "testable": { "type": "boolean" },
+    "test_design": { "type": "string" },
+    "refutation_criteria": { "type": "string" },
+    "hardware_required": { "type": "string" },
+    "earliest_testable": { "type": "string" },
+    "feasibility_verdict": { "type": "string", "enum": ["TESTABLE_NOW", "TESTABLE_NEAR_TERM", "TESTABLE_FUTURE", "INFEASIBLE", "NEEDS_REFINEMENT"] },
+    "philosophical_implications": { "type": "string" },
+    "status": { "type": "string", "enum": ["proposed", "under_review", "tested", "refuted", "supported", "archived"] },
+    "created_date": { "type": "string", "format": "date" },
+    "last_updated": { "type": "string", "format": "date" },
+    "created_by": { "type": "string" }
+  }
+}

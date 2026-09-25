@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-027",
+  "title": "Velocity Verlet-based optimization for variational quantum eigensolvers",
+  "authors": ["Rinka Miura"],
+  "date": "2026-03-10",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.09862",
+  "arxiv_id": "2603.09862",
+  "abstract": "Proposes adapting the velocity Verlet algorithm from molecular dynamics to optimize VQE circuit parameters. By introducing an inertial velocity term, the method efficiently explores complex energy landscapes. For H2 molecules, achieves chemical accuracy with fewer circuit evaluations than L-BFGS-B. For LiH, attains the lowest final energy among tested approaches. The momentum-based approach helps escape local minima that trap gradient-based optimizers.",
+  "relevance": 4,
+  "tags": ["VQE", "optimization", "velocity-Verlet", "molecular-dynamics", "L-BFGS-B", "landscape-navigation", "convergence"],
+  "key_claims": [
+    "Velocity Verlet VQE optimizer outperforms L-BFGS-B on H2 in circuit evaluations",
+    "Achieves lowest final energy for LiH among tested optimizers",
+    "Inertial velocity term helps navigate complex VQE energy landscapes",
+    "Momentum enables escape from local minima trapping gradient-based methods"
+  ],
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "PAPER-2026-129",
+  "title": "Exactly solvable non-unitary conformal interfaces in unitary CFTs",
+  "authors": [
+    "Qicheng Tang",
+    "Zixia Wei",
+    "Xueda Wen"
+  ],
+  "date": "2026-06-30",
+  "arxiv_id": "2606.32035",
+  "relevance": 4,
+  "abstract": "Exactly solvable lattice constructions of non-unitary conformal interfaces embedded in unitary CFTs, with biorthogonal boundary-state data and complex effective central charges computed in closed form.",
+  "tags": [
+    "non-unitary",
+    "conformal-interface",
+    "biorthogonal",
+    "boundary-states",
+    "complex-central-charge",
+    "exactly-solvable",
+    "lattice-benchmark"
+  ],
+  "key_claims": [
+    "Provides exactly solvable lattice models realizing non-unitary conformal interfaces inside unitary CFTs.",
+    "Extracts biorthogonal boundary-state data and complex effective central charges exactly -- closed-form benchmarks for non-unitary conformal data extraction.",
+    "Supplies lattice-exact validation targets for any numerical method (e.g. a non-Hermitian MERA) claiming to recover biorthogonal/non-unitary conformal data."
+  ],
+  "relevance_note": "ACTIONABLE. Direct methodological tooling for the HYP-028 non-Hermitian program: the planned non-Hermitian MERA route to Yang-Lee M(2,5) needs exact benchmarks for biorthogonal conformal-data extraction, and this paper provides precisely that machinery (lattice-exact non-unitary interfaces with known biorthogonal boundary-state data and complex effective central charges). Route to HYP-028 as a validation-suite reference before any non-Hermitian MERA run. Pairs with PAPER-2026-128 (biorthogonal observable layer) and PAPER-2026-133 (periodic-chain Yang-Lee extraction).",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-028"
+  ],
+  "anchor_contradiction": "None. Tooling/benchmark paper; no contact with alpha=4 (=2*Delta_T), transport residual, or chi-bound anchors.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.32035",
+  "discovered_by": "weekly-scan-14",
+  "discovered_date": "2026-07-02"
+}

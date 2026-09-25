@@ -1,0 +1,41 @@
+{
+ "id": "PAPER-2026-150",
+ "title": "Holographic Bit Threads from String-Diagrammatic Quantum Information Flow",
+ "authors": [
+  "Yi-Yu Lin",
+  "Song Cheng"
+ ],
+ "date": "2026-08-19",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2608.19428",
+ "arxiv_id": "2608.19428",
+ "categories": [
+  "hep-th",
+  "quant-ph"
+ ],
+ "abstract": "Applies Coecke's quantum information flow (categorical QM) to holographic tensor networks: QIF trajectories in the discrete bulk obey the divergence-free and density-bound bit-thread conditions, and bit-thread non-uniqueness corresponds to different protocols for the same distillation task. For stabilizer holographic networks, ZX diagrams show QIF trajectories probe entanglement structure finer than entanglement entropy.",
+ "relevance": 3,
+ "tags": [
+  "bit-threads",
+  "tensor-network",
+  "ZX-calculus",
+  "stabilizer-codes",
+  "holography"
+ ],
+ "key_claims": [
+  "QIF trajectories on a holographic tensor network satisfy bit-thread conditions",
+  "Bit-thread non-uniqueness corresponds to protocol non-uniqueness for a fixed distillation task",
+  "ZX analysis of stabilizer networks resolves structure beyond entanglement entropy"
+ ],
+ "relevance_note": "Abstract only. Same first author as the thread-embodiment paper catalogued as PAPER-2026-036 (arXiv:2501.10691). A network-level (not state-level) object, the class RESEARCH-DIRECTOR section 29 and the 2026-09-14 valuable-questions review say this program lacks, but stated for stabilizer networks, not an optimized CFT MERA. WATCH for a MERA version; no HYP-033 bearing now.",
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "related_papers": [
+  "PAPER-2026-036"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "literature-lead scan #20 (sequential arXiv export API)",
+ "discovered_date": "2026-09-23"
+}

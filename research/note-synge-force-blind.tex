@@ -1,0 +1,306 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+\title{Emergent distance is force-blind: why a correlator-built\\
+geometry cannot carry the holographic force}
+\author{Jon Cackler\thanks{Independent researcher.}}
+\date{8 June 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\textbf{RETRACTION NOTICE (2026-08-17):} the force
+exponent $\alpha = 3.92 \pm 0.16$ stated in this note is an estimator artifact (95.8\% of the fit objective
+sits on one point). The measured value is $2.6 \pm 0.2$ and the channel is open. Interpretations built on
+$\alpha = 4$ are withdrawn. See \texttt{research/ERRATA.md} and the Zenodo v5 correction,
+doi:10.5281/zenodo.22080720.}}
+\medskip
+
+\begin{abstract}
+In a critical-Ising multiscale entanglement renormalization ansatz (MERA), a two-point
+correlator $C(r)$ can be turned into an emergent distance via the Synge world-function map
+$d(r)=\sqrt{-2\,\epsilon^{2}\ln C(r)}$ of Ansel~\cite{Ansel2024}. We show that this distance,
+while a legitimate and monotone emergent-geometry object, is \emph{force-blind}: its
+logarithmic slope is set by the lightest primary that appears in $C(r)$ --- the spin field
+$\sigma$ with scaling dimension $\Delta_\sigma=1/8$ --- giving $\kappa=2\Delta_\sigma=1/4$,
+whereas the holographic force measured elsewhere in this program scales with exponent
+$\alpha\approx4$ and is carried by the stress tensor $T$ with $\Delta_T=2$. We confirm this
+with a three-tier pre-registered test. On a synthetic CFT correlator $C=r^{-1/4}$ the map
+returns $\kappa=0.250$ exactly; on the exact 16-qubit critical transverse-field Ising
+ground-state connected $\langle Z_iZ_j\rangle$ we measure $\kappa_{\mathrm{chord}}=0.243$;
+a known-pathological control fails the monotonicity gate as predicted. The result is
+\textbf{SUPPORTED}. Because distance and force are carried by operators of different
+dimension, a geometry reconstructed from a single correlator \emph{cannot}, even in
+principle, reproduce the stress-tensor force. This closes the
+``correlator $\to$ geometry $\to$ force'' thread and explains, with one clean measurement,
+why two earlier and structurally distinct approaches in this program failed.
+\end{abstract}
+
+\section{Setup: the MERA holographic dictionary and the \texorpdfstring{$\alpha\approx4$}{alpha=4} force}
+\label{sec:setup}
+
+The multiscale entanglement renormalization ansatz (MERA) is widely read as a discrete
+realization of the holographic principle: its layered causal structure reproduces a
+hyperbolic ($\mathrm{AdS}$-like) bulk emerging from a critical boundary conformal field
+theory~\cite{Swingle2012,EvenblyVidal2011}. Within this dictionary one can ask whether
+the bulk supports a genuine \emph{force} between boundary insertions. The companion paper
+to this note answers that affirmatively for the critical Ising chain: a holographic force
+$F(\Delta r)\sim\Delta r^{-\alpha}$ is observed with
+\begin{equation}
+  \alpha\approx4,
+  \label{eq:alpha}
+\end{equation}
+established by three independent measurements that converge on the same value ---
+$\alpha=3.92$ (24-qubit exact diagonalization), $\alpha=3.97$ (16-qubit exact), and
+$\alpha=4.07$ (16-qubit $\chi=3$ MERA).\footnote{Companion preprint, Zenodo record
+\href{https://doi.org/10.5281/zenodo.19661227}{10.5281/zenodo.19661227} (v3).} The exponent
+$\alpha\approx4$ is the signature of \emph{stress-tensor exchange}: in a two-dimensional
+CFT the stress tensor $T$ has scaling dimension $\Delta_T=2$, and a $T$-mediated
+interaction between two boundary operators falls as $r^{-2\Delta_T}=r^{-4}$. This force sits
+in the same lineage as the ``hologron'' excitations of
+Sahay, Lukin and Cotler~\cite{SahayLukinCotler2024} and the boundary-CFT primary modes of
+Wang and He~\cite{WangHe2025}, which together frame what kinds of bulk excitations a
+critical-chain tensor network can carry.
+
+The question taken up here is narrower and prior: before asking whether the bulk has a
+force, can one even reconstruct a bulk \emph{distance} from boundary data, and if so, what
+does that distance know about? A natural and tempting route is to build the geometry from a
+two-point correlator. We show below that this route yields a real distance that is
+nonetheless deaf to the stress tensor, and therefore deaf to the force of
+Eq.~\eqref{eq:alpha}.
+
+\section{The Synge map and the operator-dimension argument}
+\label{sec:synge}
+
+Ansel~\cite{Ansel2024} proposes that an emergent distance can be read off a two-point
+function through the world-function (Synge) map
+\begin{equation}
+  d(r) \;=\; \sqrt{-2\,\epsilon^{2}\,\ln C(r)},
+  \label{eq:synge}
+\end{equation}
+where $C(r)$ is a (normalized, $0<C\le1$) correlator between sites separated by $r$, and
+$\epsilon$ is a fixed length scale. The construction is geometrically sensible: a perfectly
+correlated pair ($C\to1$) sits at zero distance, decorrelation drives $d$ upward, and for a
+monotonically decaying $C(r)$ the resulting $d(r)$ is monotone increasing. Equation
+\eqref{eq:synge} is the object we test.
+
+\paragraph{What sets the slope.}
+At a 2D critical point a two-point function of a primary $\mathcal{O}$ of scaling dimension
+$\Delta_{\mathcal{O}}$ decays as a power law,
+\begin{equation}
+  C(r)\;\sim\;r^{-2\Delta_{\mathcal{O}}}.
+  \label{eq:cft}
+\end{equation}
+We define the dimensionless log-slope of the correlator
+\begin{equation}
+  \kappa \;\equiv\; -\,\frac{d\ln|C|}{d\ln r}\;=\;2\Delta_{\mathcal{O}},
+  \label{eq:kappa}
+\end{equation}
+so that $\kappa$ directly reports \emph{which operator dominates} the correlator at the
+separations probed. This is the crux. A correlator built from the spin field $\sigma$ ---
+the connected $\langle Z_iZ_j\rangle$ of the Ising chain --- is dominated by the lightest
+primary, $\Delta_\sigma=1/8$, so
+\begin{equation}
+  \kappa_\sigma \;=\; 2\Delta_\sigma \;=\; \tfrac14 \;=\; 0.25 .
+  \label{eq:kappasigma}
+\end{equation}
+The holographic force, by contrast, is a stress-tensor effect with $\Delta_T=2$, which would
+register as
+\begin{equation}
+  \kappa_T \;=\; 2\Delta_T \;=\; 4 .
+  \label{eq:kappaT}
+\end{equation}
+Equations~\eqref{eq:kappasigma} and \eqref{eq:kappaT} are the pre-registered dichotomy: a
+distance reconstructed from the spin--spin correlator must report $\kappa\approx0.25$, not
+$\kappa\approx4$. If the Synge distance secretly carried the force, it would have to read out
+$\kappa_T=4$; if it is force-blind, it reads out $\kappa_\sigma=0.25$.
+
+\paragraph{A wording correction.}
+It is worth being precise about the \emph{shape} of $d(r)$, because an earlier informal
+statement of this result called it ``linear.''\footnote{We correct that wording here. For the
+clean CFT correlator $C=r^{-1/4}$, substituting into Eq.~\eqref{eq:synge} gives
+$d(r)=\sqrt{-2\epsilon^{2}\ln r^{-1/4}}=\epsilon\sqrt{\tfrac12\ln r}$ --- a
+\emph{square-root-logarithmic} curve. It is monotone increasing but is neither linear in $r$
+nor a power law; a linear fit to it returns $R^{2}\approx0.73$ over $r\in[1,8]$, confirming
+it is only approximately straight. The pre-registered refutation gates (monotonicity and the
+$\kappa$ dichotomy) are unaffected by this shape correction, since both are read from
+$\ln|C|$ versus $\ln r$, not from the linearity of $d(r)$.}
+Explicitly,
+\begin{equation}
+  C(r)=r^{-1/4}\;\;\Longrightarrow\;\;
+  d(r)=\epsilon\,\sqrt{\tfrac12\,\ln r}.
+  \label{eq:sqrtlog}
+\end{equation}
+The scale $\epsilon$ enters Eq.~\eqref{eq:synge} as a pure multiplicative prefactor, so the
+monotonicity verdict and the log-slope $\kappa$ are both $\epsilon$-independent by
+construction; we set $\epsilon=1$ throughout.
+
+\section{Numerical test: a three-tier pre-registered protocol}
+\label{sec:numerics}
+
+The test (recorded as run \texttt{SIM-2026-031}) was pre-registered with two refutation
+gates and three tiers. The \emph{geometric} half is refuted if $d(r)$ is non-monotone on the
+artifact-free synthetic tier; the \emph{force-blindness} half is refuted if the measured
+$\kappa$ lands closer to $4$ than to $0.25$; the test is inconclusive if no fit reaches
+$R^{2}>0.9$. We took $r=1,\dots,8$ ($=N/2$) and $\epsilon=1$.
+
+\paragraph{Tier 1 --- synthetic CFT (primary).}
+The clean correlator $C(r)=r^{-1/4}$, with $d(r)$ from Eq.~\eqref{eq:synge}. The map returns
+a monotone $d(r)$ and a log-slope
+\begin{equation}
+  \kappa^{\text{(syn)}} = 0.250 \quad\text{(exactly)},
+\end{equation}
+matching Eq.~\eqref{eq:kappasigma}. As anticipated in Eq.~\eqref{eq:sqrtlog}, the
+square-root-log shape gives only $R^{2}=0.73$ for a \emph{linear} fit of $d$ versus $r$,
+which is the basis for the wording correction above.
+
+\paragraph{Tier 2 --- exact 16-qubit critical TFIM (physical).}
+We diagonalize the critical transverse-field Ising Hamiltonian
+$H=-\sum_i X_i-\sum_i Z_iZ_{i+1}$ on $N=16$ sites with periodic boundary conditions
+(ground-state energy $E_0=-20.4046$; $\langle Z_i\rangle$ vanishes to $\sim10^{-13}$ as the
+$\mathbb{Z}_2$ symmetry requires), and form the connected correlator
+$C(r)=\langle Z_iZ_{i+r}\rangle-\langle Z_i\rangle\langle Z_{i+r}\rangle$ averaged over $i$.
+The Synge distance is again monotone increasing. To deconvolve finite-size curvature we read
+the log-slope against the periodic chord variable $(N/\pi)\sin(\pi r/N)$ rather than the raw
+$r$, giving
+\begin{equation}
+  \kappa^{\text{(16q)}}_{\mathrm{chord}} = 0.243 ,
+\end{equation}
+in clear agreement with $\kappa_\sigma=0.25$ and far from $\kappa_T=4$. (The uncorrected
+raw-$r$ slope is $0.196$; the chord correction restores it toward the CFT value, as
+expected.) The best-fit form for $d(r)$ on this tier is a power law with $R^{2}=0.95$,
+satisfying the conclusiveness gate.
+
+\paragraph{Tier 3 --- pathological control.}
+As a negative control we feed the flat, $r=4$-anomalous $\langle ZZ\rangle$ proxy data from
+an earlier record (\texttt{SIM-2026-011}) through the same map. As designed, this tier
+\emph{fails} the monotonicity gate ($d(r)$ non-monotone) and returns a meaningless slope
+($\kappa=0.089$), confirming that the protocol's gates actually discriminate good geometric
+input from bad rather than passing everything.
+
+\paragraph{Verdict.}
+Both pre-registered gates point the same way: the distance is monotone (geometric half
+\emph{not} refuted) and its slope is $\kappa\approx0.25$, not $\approx4$ (force-blindness
+half \emph{not} refuted), with the conclusiveness threshold met at $R^{2}=0.95$. The
+hypothesis is \textbf{SUPPORTED}: the Synge distance is a genuine emergent-geometry object
+that is blind to the holographic force. Table~\ref{tab:results} collects the numbers.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lccc}
+    \hline
+    Tier & $C(r)$ source & monotone $d(r)$? & $\kappa$ \\
+    \hline
+    1 (synthetic) & $C=r^{-1/4}$ & yes & $0.250$ (exact) \\
+    2 (physical)  & exact 16q connected $\langle ZZ\rangle$ & yes & $0.243$ (chord) \\
+    3 (control)   & \texttt{SIM-2026-011} proxy & no (as predicted) & $0.089$ (garbage) \\
+    \hline
+    \multicolumn{2}{l}{prediction $\kappa_\sigma=2\Delta_\sigma$} & --- & $0.250$ \\
+    \multicolumn{2}{l}{force prediction $\kappa_T=2\Delta_T$} & --- & $4$ \\
+    \hline
+  \end{tabular}
+  \caption{Three-tier pre-registered test of the Synge map. The measured slopes track the
+  spin-field value $2\Delta_\sigma=0.25$, not the stress-tensor value $2\Delta_T=4$: the
+  emergent distance is force-blind.}
+  \label{tab:results}
+\end{table}
+
+\section{Discussion: why the CMI and Crofton routes failed}
+\label{sec:discussion}
+
+The value of this measurement is not the distance itself --- which is unsurprising once one
+writes Eq.~\eqref{eq:kappa} --- but what it explains in retrospect. Two earlier attempts in
+this program tried to recover the $\alpha\approx4$ force from boundary correlation data, and
+both failed. The present result shows that they failed for the \emph{same structural reason},
+not for separate technical ones.
+
+\paragraph{The conditional-mutual-information route.}
+An early hypothesis posited that the holographic force could be read directly from a
+correlation measure --- a conditional mutual information (CMI) between boundary regions. That
+route did not reproduce $\alpha\approx4$. The operator-dimension argument says why it could
+not: any quantity built from the spin--spin correlator is dominated by the $\sigma$ primary,
+$\Delta_\sigma=1/8$, and so reports the physics of $\kappa=2\Delta_\sigma=0.25$. The force
+lives in a different sector entirely, the stress tensor $\Delta_T=2$. No amount of
+post-processing of a $\sigma$-dominated correlator manufactures a $T$-dominated exponent.
+
+\paragraph{The Crofton / integral-geometry route.}
+A second family of hypotheses tried to obtain the force from integral geometry --- a Crofton
+or kinematic-space construction that turns correlator-derived distances into a measure on
+geodesics. These too were refuted. Again the reason is now visible upstream of the
+integral-geometry machinery: the input distance is the same force-blind, $\sigma$-governed
+object tested here. Integrating a force-blind distance over kinematic space cannot conjure a
+stress-tensor force; the failure was inherited from the input, not introduced by the
+transform.
+
+\paragraph{The unifying statement.}
+Distance and force in this system are carried by operators of \emph{different} scaling
+dimension --- $\Delta_\sigma=1/8$ for the correlator-built geometry, $\Delta_T=2$ for the
+force. A geometry reconstructed from a single two-point correlator is therefore force-blind
+by construction, and no map that takes only that correlator as input
+($d=f(C)$, Crofton of $d$, CMI of the same state's correlations) can recover the
+stress-tensor force, even in principle. This is a genuine no-go for the
+``correlator $\to$ geometry $\to$ force'' strategy as a whole, and it is consistent with a
+companion finding in this program that no state-only normalization of a correlator yields a
+chain-independent transport degradation: in both cases the obstruction is that a single
+low-dimension observable does not contain the higher-dimension data one is trying to extract.
+Recovering the force requires an observable that couples to $T$ directly --- the
+stress-tensor correlator itself, as used in the $\alpha\approx4$ measurements --- rather than
+any reprocessing of the $\sigma$ sector.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+The Synge world-function map turns a critical-Ising correlator into a legitimate, monotone,
+emergent distance --- but that distance is force-blind. Its log-slope is fixed by the
+lightest primary in the correlator ($\kappa=2\Delta_\sigma=0.25$, measured as $0.243$ on the
+exact 16-qubit ground state) and not by the stress tensor that carries the $\alpha\approx4$
+force ($\kappa_T=2\Delta_T=4$). Because distance and force are carried by operators of
+different dimension, a geometry reconstructed from one two-point correlator cannot reproduce
+the holographic force, which explains in a single clean measurement why the CMI and Crofton
+routes failed for structurally the same reason. The constructive lesson is equally clean: to
+see the force, measure the operator that carries it.
+
+\begin{thebibliography}{9}
+
+\bibitem{Ansel2024}
+Q.~Ansel,
+\emph{Emergent gravity from the correlation of spin-$\tfrac{1}{2}$ systems coupled with a
+scalar field},
+arXiv:2405.02380 [gr-qc] (2024).
+
+\bibitem{Swingle2012}
+B.~Swingle,
+\emph{Entanglement Renormalization and Holography},
+Phys.\ Rev.\ D \textbf{86}, 065007 (2012),
+\href{https://doi.org/10.1103/PhysRevD.86.065007}{doi:10.1103/PhysRevD.86.065007}.
+
+\bibitem{EvenblyVidal2011}
+G.~Evenbly and G.~Vidal,
+\emph{Tensor Network States and Geometry},
+J.\ Stat.\ Phys.\ \textbf{145}, 891 (2011),
+\href{https://doi.org/10.1007/s10955-011-0237-4}{doi:10.1007/s10955-011-0237-4}.
+
+\bibitem{SahayLukinCotler2024}
+R.~Sahay, M.~D.~Lukin, and J.~Cotler,
+\emph{Emergent Holographic Forces from Tensor Networks and Criticality},
+arXiv:2401.13595 [quant-ph] (2024).
+
+\bibitem{WangHe2025}
+Z.~Wang and L.~He,
+\emph{Stable excitations and holographic transportation in tensor networks of critical
+spin chains},
+arXiv:2501.03084 (2025).
+
+\bibitem{CacklerZenodo2026}
+J.~Cackler,
+\emph{Power-Law Holographic Forces and Causal Transport in MERA Quantum Circuits}
+(companion preprint, v3), Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.19661227}{doi:10.5281/zenodo.19661227}.
+
+\end{thebibliography}
+
+\end{document}

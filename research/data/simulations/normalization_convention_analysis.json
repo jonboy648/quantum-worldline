@@ -1,0 +1,43 @@
+{
+  "analysis": "normalization_convention",
+  "date": "2026-03-14",
+  "description": "Comparison of our force measurement convention vs Sahay et al. (arXiv:2209.12903)",
+  "our_convention": {
+    "observable": "V(dr) = C_two(dr) - C_vac(dr)",
+    "C_definition": "C_connected = <Z_i Z_j> - <Z_i><Z_j> (raw Pauli ZZ)",
+    "excitation": "Ry hologron or boundary-primary at anchor site",
+    "measurement_basis": "boundary (16-site chain)",
+    "values": {"V_1": -0.01140, "V_2": -0.00717},
+    "fit": "V(dr) = -0.01813 * exp(-dr/2.157)",
+    "xi": 2.157
+  },
+  "sahay_convention": {
+    "observable": "F(dr) = E_two(dr) - E_0 - 2*E_single",
+    "definition": "Interaction energy between two hologrons",
+    "measurement_basis": "MERA bulk (renormalized density matrices)",
+    "values": {"C1": 0.08, "C2": 13.6, "xi": 1.22},
+    "fit": "F(dr) = 0.08 - 13.6 * exp(-dr/1.22)",
+    "F_1": -5.9118,
+    "F_2": -2.5599
+  },
+  "scale_ratio": {
+    "F1_over_V1": 518.6,
+    "F2_over_V2": 357.0,
+    "explanation": "NOT a unit conversion. Sahay measures interaction energy in MERA bulk with renormalization amplification by isometry tensors. We measure boundary correlator changes. The ~500x factor is physical, not an error."
+  },
+  "xi_comparison": {
+    "xi_sahay": 1.22,
+    "xi_ours": 2.157,
+    "l_AdS": 1.443,
+    "sahay_over_l_AdS": 0.85,
+    "ours_over_l_AdS": 1.49,
+    "note": "Our xi from only 2 data points (dr=1,2) with 3-layer causal cone limit. Not directly comparable until we have 5+ points from 5-layer circuit."
+  },
+  "to_match_sahay": [
+    "Apply MERA unitary U to map boundary -> bulk states",
+    "Compute reduced density matrices at each MERA layer",
+    "Compute energy difference F = E_two - E_0 - 2*E_single",
+    "This requires full MERA circuit application, not just ground state energy"
+  ],
+  "conclusion": "For testing holographic force decay, the SHAPE (xi) matters, not absolute scale. Both conventions should give the same xi. Our priority is getting 5+ data points from a 5-layer circuit to enable proper fitting."
+}

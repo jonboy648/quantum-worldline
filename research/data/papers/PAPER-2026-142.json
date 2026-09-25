@@ -1,0 +1,44 @@
+{
+ "source": "arxiv",
+ "discovered_by": "lead (HYP-033 prior-art gate, RESEARCH-DIRECTOR section 8)",
+ "discovered_date": "2026-09-18",
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "categories": [
+  "hep-th",
+  "quant-ph",
+  "cond-mat.str-el"
+ ],
+ "id": "PAPER-2026-142",
+ "title": "Entanglement renormalization, quantum error correction, and bulk causality",
+ "authors": [
+  "Isaac H. Kim",
+  "Michael J. Kastoryano"
+ ],
+ "date": "2016-12-31",
+ "arxiv_id": "1701.00050",
+ "relevance": 5,
+ "abstract": "MERA read as an encoding circuit for a family of approximate quantum error correcting codes. Logical information is progressively better protected against erasure at larger length scales; an approximate holographic code emerges at low energy for critical systems; operators widely separated in scale obey a Lieb-Robinson type bound. Published JHEP 04 (2017) 040.",
+ "tags": [
+  "MERA",
+  "approximate-QEC",
+  "holographic-code",
+  "erasure",
+  "scaling-superoperator",
+  "prior-art"
+ ],
+ "key_claims": [
+  "All results are UPPER bounds on recovery error, powers of 2^(-nu), nu := -log2(Re lambda_1) of the scaling superoperator on an elementary block (Definition 2, RG-regular)",
+  "Lemma 3 (Eq. 4.1): decoupling of a simply connected region A from the reference, error <= C ||O|| 2^(-nu(s - log2|A|)); Theorem 2: local correctability from a shielding neighbourhood",
+  "Entanglement wedge reconstruction in this framework is left open: 'The approximate nature of our bound makes this analysis challenging'",
+  "Exact statements only in the nu -> infinity limit, which the authors say they do not expect to be physical; minimal logical support is Cantor-set type"
+ ],
+ "relevance_note": "HYP-033 prior-art gate, recorded 2026-09-21: PASSED with constraints. Read in full by one Opus agent (v2); the lead verified the abstract and these quotes against the PDF text: the nu definition, Lemma 3, the wedge sentence, the scaling-dimension-gap disclaimer, the free-fermion remark, 'polynomially small error', the Cantor-set line, and the nu -> infinity caveat. The paper gives no lower bound on error, so it does not predict WHERE recovery fails (HYP-033's statistic). Pre-empted, cite and never claim: depth-monotone protection, critical MERA as an approximate holographic code, the decoupling observable. Small nu for Ising argues for a smooth f(A_m). The agent's numbers (nu for ternary Ising, C = 2 d^2, 'vacuous at three layers') are its own arithmetic, not the paper's.",
+ "related_papers": [
+  "PAPER-2026-143"
+ ],
+ "source_url": "https://arxiv.org/abs/1701.00050"
+}

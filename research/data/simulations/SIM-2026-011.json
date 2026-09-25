@@ -1,0 +1,78 @@
+{
+  "sim_id": "SIM-2026-011",
+  "date": "2026-03-18",
+  "description": "16q analytical MERA circuit for IBM Heron r3 -- ZZ correlator measurement",
+  "hypothesis": "HYP-2026-002",
+  "hardware_target": "ibm_marrakesh (Heron r3) or ibm_fez (Heron r3)",
+  "status": "DESIGNED -- awaiting user approval before submission",
+  "circuit": {
+    "qubits": 16,
+    "n_layers": 3,
+    "gates_before_transpile": 45,
+    "gate_type": "UnitaryGate (u + w from Evenbly-White 2016)",
+    "tensor_source": "Evenbly & White 2016, Eq S3-S4 (ANALYTICAL, not VQE)",
+    "shots": 10000
+  },
+  "transpile": {
+    "backend": "FakeMarrakesh (ibm_marrakesh proxy)",
+    "optimization_level": 3,
+    "gate_counts": {
+      "rz": 368,
+      "sx": 352,
+      "cz": 90,
+      "measure": 16,
+      "x": 3,
+      "barrier": 1
+    },
+    "total_2q_gates": 90,
+    "depth_after_transpile": 63
+  },
+  "error_budget": {
+    "ecr_fidelity_assumed": 0.995,
+    "spam_fidelity_per_qubit": 0.995,
+    "accumulated_2q_error_pct": 36.30911741061219,
+    "accumulated_spam_error_pct": 7.706887602576384,
+    "total_estimated_error_pct": 41.2177021448652,
+    "feasibility_verdict": "CHALLENGING (> 20% error)",
+    "helios_comparison_error_pct": 0.8960067224918933
+  },
+  "runtime_estimate": {
+    "shots": 10000,
+    "shot_time_ms": 1.5,
+    "total_runtime_s": 15.0,
+    "total_runtime_min": 0.25,
+    "free_tier_budget_min": 10.0,
+    "budget_usage_pct": 2.5
+  },
+  "classical_verification": {
+    "zz_correlators": {
+      "1": -0.44304377008444945,
+      "2": -0.4933515091534541,
+      "3": -0.4112390849781506,
+      "4": -0.6453777617132259,
+      "5": -0.3856026391476642,
+      "6": -0.38829745730303694,
+      "7": -0.387631703789638,
+      "8": -0.3907190846365934
+    },
+    "power_law_fit_alpha": null,
+    "cft_prediction_alpha": 0.25
+  },
+  "measurement_strategy": "All-Z measurement: single circuit covers all ZZ correlators (commuting observables)",
+  "notes": [
+    "u and w matrices are REAL -- cheaper decomposition than complex unitaries",
+    "Brick-wall MERA: N_LAYERS repetitions of (w on even pairs) + (u on odd pairs)",
+    "Starting from |0>^16 -- scale-invariant MERA approximates CFT vacuum",
+    "DO NOT SUBMIT without user approval",
+    "Qubit ordering: physics (big-endian) converted to Qiskit (little-endian) via SWAP transform"
+  ],
+  "next_steps": [
+    "1. User reviews this report and approves submission",
+    "2. Load IBM credentials: QiskitRuntimeService(channel='ibm_quantum_platform', instance='Worldline work')",
+    "3. Select backend: ibm_fez or ibm_marrakesh (both Heron r3)",
+    "4. Submit with Sampler primitive, N_SHOTS=10000",
+    "5. Post-process bitstrings to extract ZZ correlators",
+    "6. Plot C(r) vs r and fit power-law alpha",
+    "7. Compare to simulator prediction and CFT prediction (alpha=0.25)"
+  ]
+}

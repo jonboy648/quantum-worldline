@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-001",
+  "title": "Simulating two-dimensional lattice gauge theories on a qudit quantum computer",
+  "authors": ["Michael Meth", "Jan F. Haase", "Jinglei Zhang", "Claire Edmunds", "Lukas Postler", "Alex Steiner", "Andrew J. Jena", "Luca Dellantonio", "Rainer Blatt", "Peter Zoller", "Thomas Monz", "Philipp Schindler", "Christine Muschik", "Martin Ringbauer"],
+  "date": "2025-04-01",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s41567-025-02797-w",
+  "arxiv_id": "2310.12110",
+  "abstract": "First quantum computation of 2D lattice QED using trapped-ion qudits. Demonstrates the basic building block of two-dimensional lattice quantum electrodynamics involving both gauge fields and matter. Uses qudits (multi-level quantum systems) encoded in trapped calcium-40 ions to naturally represent the high-dimensional gauge field Hilbert space, enabling much shallower circuits than qubit-based approaches.",
+  "relevance": 5,
+  "tags": ["lattice-gauge-theory", "QED", "qudit", "trapped-ion", "2D-simulation", "gauge-field"],
+  "key_claims": [
+    "First quantum simulation of 2D lattice gauge theory with both gauge fields and matter on quantum hardware",
+    "Qudit encoding enables seamless observation of different gauge field truncation effects by controlling qudit dimension",
+    "Observed interplay between virtual pair creation and quantized magnetic field effects",
+    "Qudit VQE circuits are much shallower than comparable qubit-based implementations",
+    "Major step towards simulating 3D lattice gauge theories"
+  ],
+  "hardware_used": "Trapped-ion qudit quantum computer (40Ca+ ions)",
+  "qubit_count": 0,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-03-10"
+}

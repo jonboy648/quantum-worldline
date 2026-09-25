@@ -1,0 +1,19 @@
+{
+  "id": "HW-2026-071",
+  "title": "Google Willow logical qubits stabilized by continuous RL control: d=7 surface code at 7.72e-4 err/cycle",
+  "vendor": "Google",
+  "date": "2026-07-10",
+  "source_url": "https://quantumcomputingreport.com/google-research-stabilizes-willow-quantum-processor-using-continuous-reinforcement-learning-control-layers/",
+  "relevance": 4,
+  "summary": "Autonomous RL agent (PPO over ~1,000 control parameters, trained on error-detection signals) holds logical qubits stable during continuous operation: d=7 surface code 7.72(9)e-4 and d=5 color code 8.19(14)e-3 logical errors/cycle; 3.5x stability gain and 20% extra LER suppression beyond expert calibration; scaling sims flat to d=15 (~40k params).",
+  "tags": ["Google", "Willow", "surface-code", "reinforcement-learning", "logical-qubit", "calibration"],
+  "key_specs": {
+    "d7_surface": "7.72(9)e-4 logical err/cycle",
+    "d5_color": "8.19(14)e-3 logical err/cycle",
+    "gain": "3.5x stability, +20% LER suppression vs expert calibration"
+  },
+  "actionable": "Strengthens the always-on logical-qubit assumption in any digital-FT MERA/Ising budget (HYP-2026-029 class): continuous operation without recalibration downtime is exactly what a long force-measurement sequence needs.",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

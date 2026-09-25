@@ -1,0 +1,86 @@
+[2026-09-08T09:56:02Z] creating CPU pod qw-sim077-09080456
+waiting for ssh on pod 28gz450pq4u9kr (timeout 15m0s)
+still waiting for ssh on pod 28gz450pq4u9kr (17s elapsed): ssh port not allocated yet
+ssh on pod 28gz450pq4u9kr ready after 34s: ssh reachable at 213.173.110.22:13111
+[2026-09-08T09:56:49Z] pod 28gz450pq4u9kr at 213.173.110.22:13111, costPerHr=0.24
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+48
+               total        used        free      shared  buff/cache   available
+Mem:             251          42          67           0         144         209
+Python 3.12.3
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2.1.2 1.18.1
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+[2026-09-08T09:57:08Z] running C2 on 28gz450pq4u9kr
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+C2 L=512 R=  50 delta=  0: tracked Im +nan+/-nan no | principal Im -0.0000 | path gate PASS (min|cosh| 3.8e-03)  [121s]
+C2 L=512 R=  50 delta=  2: tracked Im +nan+/-nan no | principal Im -0.0143 | path gate PASS (min|cosh| 1.3e-01)  [3s]
+C2 L=512 R=  50 delta=  5: tracked Im +nan+/-nan no | principal Im +0.0107 | path gate PASS (min|cosh| 3.2e-01)  [3s]
+  logp = np.log(p.astype(complex)); logq = np.log(qq.astype(complex))    # s = 0: real thermal state
+C2 L=512 R= 100 delta=  0: tracked Im +nan+/-nan no | principal Im +0.0000 | path gate PASS (min|cosh| 4.1e-03)  [69s]
+C2 L=512 R= 100 delta=  2: tracked Im +nan+/-nan no | principal Im -0.2235 | path gate PASS (min|cosh| 1.0e-01)  [69s]
+C2 L=512 R= 100 delta=  5: tracked Im +nan+/-nan no | principal Im -0.0311 | path gate PASS (min|cosh| 2.0e-01)  [69s]
+C2 L=1024 R=  50 delta=  0: tracked Im +nan+/-nan no | principal Im +0.0000 | path gate FAIL (min|cosh| 5.1e-04)  [302s]
+C2 L=1024 R=  50 delta=  2: tracked Im +nan+/-nan no | principal Im +0.0013 | path gate PASS (min|cosh| 1.3e-01)  [5s]
+C2 L=1024 R=  50 delta=  5: tracked Im +nan+/-nan no | principal Im +0.0108 | path gate PASS (min|cosh| 3.1e-01)  [5s]
+C2 L=1024 R= 100 delta=  0: tracked Im +nan+/-nan no | principal Im -0.0000 | path gate FAIL (min|cosh| 2.9e-04)  [96s]
+C2 L=1024 R= 100 delta=  2: tracked Im +nan+/-nan no | principal Im -0.1261 | path gate PASS (min|cosh| 7.4e-02)  [94s]
+C2 L=1024 R= 100 delta=  5: tracked Im +nan+/-nan no | principal Im +0.0010 | path gate PASS (min|cosh| 1.7e-01)  [90s]
+wrote /workspace/tlee/sim077_C2.json
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+[2026-09-08T10:12:46Z] running C3 on 28gz450pq4u9kr
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+C3 L=512 R=  50 delta=  2: Im -0.0286+/-0.0166 (pred 0.5236) no | 2x identity 1.5e-13  [648s]
+C3 L=512 R=  50 delta=  5: Im +0.0214+/-0.0180 (pred 0.5236) no | 2x identity 2.3e-13  [693s]
+  return np.where(np.abs(z) < 1e-300, 0.0, z * np.log(z.astype(complex)))
+  return np.where(np.abs(z) < 1e-300, 0.0, z * np.log(z.astype(complex)))
+C3 L=512 R=  50 delta= 10: Im +0.0334+/-0.0273 (pred 0.5236) no | 2x identity 3.5e-13  [661s]
+C3 L=512 R= 100 delta=  2: Im -0.4471+/-0.3209 (pred 0.5236) no | 2x identity 7.9e-13  [767s]
+C3 L=512 R= 100 delta=  5: Im -0.0621+/-0.0587 (pred 0.5236) no | 2x identity 7.0e-13  [768s]
+C3 L=512 R= 100 delta= 10: Im +0.0210+/-0.0156 (pred 0.5236) no | 2x identity 1.3e-12  [278s]
+C3 L=1024 R=  50 delta=  2: Im +0.0027+/-0.0048 (pred 0.5236) no | 2x identity 4.3e-13  [713s]
+C3 L=1024 R=  50 delta=  5: Im +0.0215+/-0.0179 (pred 0.5236) no | 2x identity 3.5e-13  [1039s]
+C3 L=1024 R=  50 delta= 10: Im +0.0334+/-0.0273 (pred 0.5236) no | 2x identity 4.8e-13  [798s]
+C3 L=1024 R= 100 delta=  2: Im -0.2523+/-0.1867 (pred 0.5236) no | 2x identity 6.8e-13  [1003s]
+C3 L=1024 R= 100 delta=  5: Im +0.0021+/-0.0031 (pred 0.5236) no | 2x identity 4.9e-13  [672s]
+C3 L=1024 R= 100 delta= 10: Im +0.0199+/-0.0177 (pred 0.5236) no | 2x identity 8.5e-13  [860s]
+wrote /workspace/tlee/sim077_C3.json
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+[2026-09-08T12:41:19Z] running C4 on 28gz450pq4u9kr
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+C4 ring ED L=10 R=   6 delta=  0: Im mean +0.0000 (pred 0.2618) no  [0s]
+C4 ring ED L=10 R=   6 delta=  2: Im mean -0.0237 (pred 0.2618) no  [1s]
+C4 ring ED L=10 R=   6 delta=  5: Im mean +0.0099 (pred 0.2618) no  [1s]
+C4 ring ED L=12 R=   8 delta=  0: Im mean -0.0000 (pred 0.2618) no  [15s]
+C4 ring ED L=12 R=   8 delta=  2: Im mean -0.0502 (pred 0.2618) no  [13s]
+C4 ring ED L=12 R=   8 delta=  5: Im mean +0.0069 (pred 0.2618) no  [12s]
+C4 ring ED L=14 R=   8 delta=  0: Im mean -0.0000 (pred 0.2618) no  [356s]
+C4 ring ED L=14 R=   8 delta=  2: Im mean -0.0223 (pred 0.2618) no  [395s]
+C4 ring ED L=14 R=   8 delta=  5: Im mean +0.0043 (pred 0.2618) no  [382s]
+C4 ring ED L=14 R=  10 delta=  0: Im mean -0.0000 (pred 0.2618) no  [414s]
+C4 ring ED L=14 R=  10 delta=  2: Im mean -0.0803 (pred 0.2618) no  [400s]
+C4 ring ED L=14 R=  10 delta=  5: Im mean +0.0015 (pred 0.2618) no  [388s]
+wrote /workspace/tlee/sim077_C4.json
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+[2026-09-08T14:51:08Z] running C1 on 28gz450pq4u9kr
+Warning: Permanently added '[213.173.110.22]:13111' (ED25519) to the list of known hosts.
+C1 L=14 hz=0.0    R=   8 delta=  0: Im mean +0.0000 (pred 0.2618) no  [1923s]
+C1 L=14 hz=0.0    R=   8 delta=  2: Im mean +0.0719 (pred 0.2618) no  [353s]
+C1 L=14 hz=0.0    R=   8 delta=  5: Im mean +0.0357 (pred 0.2618) no  [352s]
+C1 L=14 hz=0.0    R=  10 delta=  0: Im mean +0.0000 (pred 0.2618) no  [351s]
+C1 L=14 hz=0.0    R=  10 delta=  2: Im mean -0.0634 (pred 0.2618) no  [353s]
+C1 L=14 hz=0.0    R=  10 delta=  5: Im mean +0.0452 (pred 0.2618) no  [353s]
+C1 L=14 hz=0.05   R=   8 delta=  0: Im mean +0.1356 (pred 0.2618) no  [2950s]
+C1 L=14 hz=0.05   R=   8 delta=  2: Im mean -0.5835 (pred 0.2618) no  [367s]
+C1 L=14 hz=0.05   R=   8 delta=  5: Im mean -0.0217 (pred 0.2618) no  [432s]
+C1 L=14 hz=0.05   R=  10 delta=  0: Im mean -5.2636 (pred 0.2618) no  [395s]
+[2026-09-08T17:57:09Z] deleting pod 28gz450pq4u9kr

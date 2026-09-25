@@ -1,0 +1,44 @@
+{
+ "id": "PAPER-2026-149",
+ "title": "Universal recovery in approximate quantum error correction",
+ "authors": [
+  "Dor Elimelech",
+  "Victor V. Albert",
+  "Alexander Barg"
+ ],
+ "date": "2026-08-29",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2608.28962",
+ "arxiv_id": "2608.28962",
+ "categories": [
+  "quant-ph",
+  "cs.IT"
+ ],
+ "abstract": "Completes a theory of universal recovery for approximate QEC: a single recovery map corrects every channel controlled by a given error set. Approximate correctability is quantified by the environment-leakage distance (worst case) and the Knill-Laflamme Hellinger distance (average case); both control universal decoding. The Petz map associated with an error set is studied as an explicit universal recovery with uniform guarantees. Companion to arXiv:2607.22995.",
+ "relevance": 3,
+ "tags": [
+  "approximate-QEC",
+  "recovery-map",
+  "Petz-map",
+  "decoupling",
+  "HYP-033-adjacent"
+ ],
+ "key_claims": [
+  "A single recovery map universally corrects all channels controlled by an error set in AQEC",
+  "Environment-leakage and Knill-Laflamme Hellinger distances control universal decoding",
+  "Petz map of the error set gives uniform average- and worst-case guarantees"
+ ],
+ "relevance_note": "Abstract only, NOT read. HYP-033-adjacent: HYP-033's recoverability observable descends from the decoupling / recoverability duality of PAPER-2026-143 as imported by PAPER-2026-142 (Kim-Kastoryano MERA). This paper gives general AQEC recovery guarantees in terms of leakage distances, which could turn a measured decoupling number into a recovery-error bound. It does not address networks, causal cones or minimal cuts, so it does not change the HYP-033 outcome count. Companion arXiv:2607.22995 not checked and not catalogued.",
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "related_papers": [
+  "PAPER-2026-142",
+  "PAPER-2026-143",
+  "PAPER-2026-148"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "literature-lead scan #20 (sequential arXiv export API)",
+ "discovered_date": "2026-09-23"
+}

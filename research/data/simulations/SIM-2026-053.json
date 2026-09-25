@@ -1,0 +1,255 @@
+{
+  "id": "SIM-2026-053",
+  "hypothesis_id": "HYP-2026-028",
+  "date": "2026-06-26",
+  "model": "i*gamma TFIM (uniform iZ field, OBC), Yang-Lee non-unitary point",
+  "gamma_c_by_N": {
+    "12": 0.00744,
+    "14": 0.00557,
+    "16": 0.00433
+  },
+  "safety_factor": 0.9,
+  "biorthogonal": true,
+  "runs": {
+    "unitary_N12": {
+      "N": 12,
+      "gamma": 0.0,
+      "anchor": 3,
+      "E0_re": -14.92597110990862,
+      "E0_im": -5.880858544910928e-17,
+      "crit": {
+        "low_real": [
+          -14.925971109908687,
+          -14.674809031791408,
+          -14.176445851565704,
+          -13.92528377344848
+        ],
+        "gap_re": 0.25116207811727875,
+        "max_abs_imag": 9.96301319906739e-17,
+        "pt_unbroken": true
+      },
+      "V_real": {
+        "1": -2.2839221117444275,
+        "2": -0.53134091167035,
+        "3": -0.09521729895208608,
+        "4": -0.04234226325538515,
+        "5": -0.02207628079644408,
+        "6": -0.011607230312909778,
+        "7": -0.004931897571756494
+      },
+      "V_imag_max": 1.0658141036401503e-14,
+      "fit": {
+        "alpha": 4.019811525864784,
+        "dalpha": 0.1690284631704428,
+        "A": -8.60560836723846,
+        "dA": 1.0430998315516662,
+        "n_points": 6
+      }
+    },
+    "unitary_N14": {
+      "N": 14,
+      "gamma": 0.0,
+      "anchor": 3,
+      "E0_re": -17.471004054731807,
+      "E0_im": 4.375699383055819e-17,
+      "crit": {
+        "low_real": [
+          -17.471004054731825,
+          -17.25444842039018,
+          -16.823876068520736,
+          -16.607320434179062
+        ],
+        "gap_re": 0.2165556343416455,
+        "max_abs_imag": 1.0919813667062614e-16,
+        "pt_unbroken": true
+      },
+      "V_real": {
+        "1": -2.293512508962973,
+        "2": -0.5391779302068151,
+        "3": -0.09702075145509781,
+        "4": -0.04421218058688048,
+        "5": -0.024291751024899,
+        "6": -0.014381755384064832,
+        "7": -0.00860748694911706,
+        "8": -0.004823935976624227,
+        "9": -0.0020860174749941507
+      },
+      "V_imag_max": 2.8112928651680136e-13,
+      "fit": {
+        "alpha": 3.9723960289694595,
+        "dalpha": 0.1598740621851587,
+        "A": -8.446866530294447,
+        "dA": 0.9699169285389411,
+        "n_points": 8
+      }
+    },
+    "unitary_N16": {
+      "N": 16,
+      "gamma": 0.0,
+      "anchor": 4,
+      "E0_re": -20.016387900485107,
+      "E0_im": 1.0342649639762608e-16,
+      "crit": {
+        "low_real": [
+          -20.0163879004851,
+          -19.826060237190067,
+          -19.447128547392015,
+          -19.256800884097082
+        ],
+        "gap_re": 0.19032766329503303,
+        "max_abs_imag": 9.198737731742562e-17,
+        "pt_unbroken": true
+      },
+      "V_real": {
+        "1": -2.316213737958755,
+        "2": -0.5521907915037865,
+        "3": -0.09950883097562979,
+        "4": -0.04600913792652861,
+        "5": -0.025767699170263114,
+        "6": -0.015698277379545544,
+        "7": -0.009869484077110968,
+        "8": -0.006115225757060472,
+        "9": -0.0034774167968087966,
+        "10": -0.0015080628580257383
+      },
+      "V_imag_max": 3.140751547725529e-13,
+      "fit": {
+        "alpha": 3.9507632306826044,
+        "dalpha": 0.1580523043872694,
+        "A": -8.520344159025418,
+        "dA": 0.9678954166278052,
+        "n_points": 9
+      }
+    },
+    "nonunitary_N12": {
+      "N": 12,
+      "gamma": 0.0066960000000000006,
+      "anchor": 3,
+      "E0_re": -14.915833299885218,
+      "E0_im": 5.134781488891349e-16,
+      "crit": {
+        "low_real": [
+          -14.91583329988511,
+          -14.683208464668498,
+          -14.17569825637743,
+          -13.924969190437306
+        ],
+        "gap_re": 0.2326248352166118,
+        "max_abs_imag": 2.3703792998599262e-14,
+        "pt_unbroken": true
+      },
+      "V_real": {
+        "1": -2.251181953891784,
+        "2": -0.5091644856937485,
+        "3": -0.08965598562019039,
+        "4": -0.03811120087712716,
+        "5": -0.018755203855523206,
+        "6": -0.009157653346521855,
+        "7": -0.0035143371011248092
+      },
+      "V_imag_max": 0.022580599857342065,
+      "fit": {
+        "alpha": 4.0968839353482,
+        "dalpha": 0.1473516030566984,
+        "A": -8.701846987550299,
+        "dA": 0.9174225772782075,
+        "n_points": 6
+      }
+    },
+    "nonunitary_N14": {
+      "N": 14,
+      "gamma": 0.005013,
+      "anchor": 3,
+      "E0_re": -17.462444344253726,
+      "E0_im": 1.715294573045867e-14,
+      "crit": {
+        "low_real": [
+          -17.462444344253875,
+          -17.261535931166065,
+          -16.823246791992343,
+          -16.607072908475896
+        ],
+        "gap_re": 0.20090841308780938,
+        "max_abs_imag": 3.923409317082656e-14,
+        "pt_unbroken": true
+      },
+      "V_real": {
+        "1": -2.2675433537040135,
+        "2": -0.5213581580538929,
+        "3": -0.09269300414243631,
+        "4": -0.04080590414859664,
+        "5": -0.021429871217211627,
+        "6": -0.011977066489304633,
+        "7": -0.006656504781837214,
+        "8": -0.0033670508669807475,
+        "9": -0.0012450942665545028
+      },
+      "V_imag_max": 0.021111393167083548,
+      "fit": {
+        "alpha": 4.034767403358967,
+        "dalpha": 0.1418735453184052,
+        "A": -8.53154345596312,
+        "dA": 0.8676573414159587,
+        "n_points": 8
+      }
+    },
+    "nonunitary_N16": {
+      "N": 16,
+      "gamma": 0.003897,
+      "anchor": 4,
+      "E0_re": -20.00900041186523,
+      "E0_im": -6.147859998861804e-15,
+      "crit": {
+        "low_real": [
+          -20.009000411865266,
+          -19.832174291973367,
+          -19.446586500811637,
+          -19.25659737111764
+        ],
+        "gap_re": 0.17682611989189922,
+        "max_abs_imag": 6.153717283311613e-14,
+        "pt_unbroken": true
+      },
+      "V_real": {
+        "1": -2.292976665214237,
+        "2": -0.5365811716198685,
+        "3": -0.0958709932408297,
+        "4": -0.04312928963888041,
+        "5": -0.023310165757102652,
+        "6": -0.013576680871139502,
+        "7": -0.008066462537431818,
+        "8": -0.00464402003770914,
+        "9": -0.00237417065642731,
+        "10": -0.0008696192898796085
+      },
+      "V_imag_max": 0.020736419852073196,
+      "fit": {
+        "alpha": 4.0004192143692485,
+        "dalpha": 0.1431274462053995,
+        "A": -8.572127148776021,
+        "dA": 0.8804263349854119,
+        "n_points": 9
+      }
+    }
+  },
+  "verdict": "INCONCLUSIVE",
+  "control_ok": true,
+  "pt_unbroken": true,
+  "nonunitary_alpha": {
+    "12": 4.0968839353482,
+    "14": 4.034767403358967,
+    "16": 4.0004192143692485
+  },
+  "control_alpha_N16": 3.9507632306826044,
+  "runtime_s": 5.838334560394287,
+  "automated_script_verdict": "REFUTED (stronger universality): non-unitary alpha=4.000 INSIDE [3.2,4.8] and stable -> alpha=4 is GENERIC, survives loss of unitarity (extends to dS sector).",
+  "verdict_rationale": "The script's automated logic flagged REFUTED (non-unitary alpha=4.000 inside [3.2,4.8], stable across N=12/14/16, control validated at alpha=3.95, PT-unbroken). OVERRIDDEN to INCONCLUSIVE on honest review: the test never got meaningfully OFF the unitary point. The Yang-Lee critical point of the uniform i*gamma Ising chain COINCIDES with the PT-breaking edge, and the PT-unbroken window shrinks ~1/N (kappa_c = 0.0105/0.0074/0.0056/0.0043 at N=10/12/14/16). To keep a real spectrum we sat at kappa=0.9*kappa_c, i.e. kappa(N=16)=0.0039 -- a ~0.1% non-Hermitian perturbation (Im(E0)~2e-2 vs E0~-20). The resulting force profile is nearly identical to the unitary one (V_dual differ by <2% at every dr), so alpha~4 here reflects proximity to the unitary point, NOT survival of alpha=4 at a genuinely non-unitary fixed point. The pre-registration's G4 gate REQUIRES confirming the Yang-Lee fixed point (c_eff=2/5, Delta_phi=-1/5) before trusting any verdict; the gap_re proxy used here does NOT confirm it (gaps ~0.18 are the unitary gaps, no Yang-Lee signature). Therefore the dichotomy is not resolved: we cannot distinguish 'alpha=4 is generic' from 'we measured the unitary state with a 0.1% tickle'.",
+  "methodological_finding": "KEY RESULT (design feasibility): the uniform-imaginary-field route to a non-unitary holographic-force test is structurally obstructed at exact-diagonalization sizes -- Yang-Lee criticality = PT-breaking edge, and kappa_c(N)->0 as ~1/N, so there is no accessible regime that is simultaneously (a) PT-unbroken (real force) and (b) far enough from the unitary point to revoke the Delta_T=2 protection. A genuine test needs a DIFFERENT realization where the non-unitary fixed point sits at FINITE distance inside the PT-unbroken phase: e.g. a non-Hermitian FREE-FERMION chain tuned to the Yang-Lee edge (Lindbladian/biorthogonal construction of arXiv:2606.17983), or a metric-operator/PT-inner-product formulation, or a single-defect imaginary field with a finite PT window. Until then HYP-028 stays open.",
+  "gates": {
+    "G2_biorthogonal_layer": "PASS (control validated)",
+    "G3_unitary_control": "PASS (alpha N=16 = 3.951, matches SIM-015d 3.975 within 0.6%; corrected estimator = energy-difference V=E_dual-E0-dE_anchor-dE_probe, NOT the superseded connected-ZZ observable that gave a spurious alpha~0.54 in the first run)",
+    "G4_nonunitary_criticality": "NOT SATISFIED (no Yang-Lee fixed-point confirmation; only sat 0.1% off unitary)",
+    "G5_PT_unbroken": "PASS but VACUOUS (only achievable by sitting negligibly far from the unitary point)"
+  },
+  "estimator_correction_note": "First run used the connected-ZZ correlator change (C_two - C_vac) and FAILED the control (alpha~0.54). Root cause: that is the SUPERSEDED HYP-002 observable; the validated pipeline (SIM-015d) uses the boundary-primary INTERACTION ENERGY V=E_dual-E0-dE_anchor-dE_probe. Switching to the energy-difference estimator fixed the control (alpha=3.95). This is the same observable-choice lesson recorded across the project."
+}

@@ -1,0 +1,72 @@
+======================================================================
+QW_SMOKE=1 -- running smoke configuration (NOT publication-grade)
+  SHOTS_GS=200 SHOTS_SINGLE=100 SHOTS_DUAL=200 SHOTS_TEE=100
+  DR_VALUES=[1, 2, 4] N_BOUNDARY=8 (smoke layout 8+4+2+1=15 atoms)
+======================================================================
+======================================================================
+HYP-2026-017/020: QuEra Aquila holographic force + TEE
+Mode: LOCAL SIMULATOR (free)
+T2* headroom: 1.20 us  (protocol: 2.80 us)
+======================================================================
+
+[0] Shot-noise alpha precision estimate...
+D:\quantum-worldline\research\data\builds\HYP-2026-017-runnable.py:684: OptimizeWarning: Covariance of the parameters could not be estimated
+  popt, _ = curve_fit(
+    Expected sigma_alpha ~ 1.445  (target: 0.3-0.5 per HYP-017 spec)
+
+[1] Ground state energy measurement...
+  Submitting ground state (200 shots)...
+  Task ID: rydberg
+  Done. Measurements: 200
+    E0 (connected-ZZ) = 2.086400  (valid shots: 200/200)
+
+[2] TEE measurement (HYP-020, marginal cost)...
+    S_topo = 0.7988 +/- 0.5758 nats
+    Predicted: 0.0000 nats
+    Z_ferromagnetic check: FAIL (ferromagnetic, TEE invalid)
+    <Z>_avg = -0.4450
+
+[3] Single-hologron measurements (anchor site only)...
+  Submitting single hologron (anchor=2) (100 shots)...
+  Task ID: rydberg
+  Done. Measurements: 100
+    E_single(anchor) connected-ZZ = 1.658000
+
+[4] Dual-hologron force profile measurements...
+  Submitting single hologron (site=3) (100 shots)...
+  Task ID: rydberg
+  Done. Measurements: 100
+  Submitting dual hologron dr=1 (200 shots)...
+  Task ID: rydberg
+  Done. Measurements: 200
+    dr= 1: F=+0.399300 +/- 0.024003  (ref: -2.243086)
+  Submitting single hologron (site=4) (100 shots)...
+  Task ID: rydberg
+  Done. Measurements: 100
+  Submitting dual hologron dr=2 (200 shots)...
+  Task ID: rydberg
+  Done. Measurements: 200
+    dr= 2: F=+0.309600 +/- 0.018634  (ref: -0.521763)
+  Submitting single hologron (site=6) (100 shots)...
+  Task ID: rydberg
+  Done. Measurements: 100
+  Submitting dual hologron dr=4 (200 shots)...
+  Task ID: rydberg
+  Done. Measurements: 200
+    dr= 4: F=+0.115100 +/- 0.007062  (ref: -0.044416)
+
+[5] Power-law fit F(dr) = A * dr^{-alpha}...
+    alpha = nan +/- nan
+    A     = nan +/- nan
+    Reference (SIM-2026-015d chi=3 MERA): alpha=4.071 +/- 0.178
+    Fit points: 0
+
+[6] Publication threshold checks...
+    alpha ~ 4: FAIL/INCONCLUSIVE
+    TEE ~ 0 (critical Ising): FAIL/INCONCLUSIVE
+    Non-ferromagnetic: FAIL
+
+Results saved: D:/quantum-worldline/research/data/builds/smoke_results/HYP-2026-017-results.json
+Figure saved: D:/quantum-worldline/research/data/builds/smoke_results/HYP-2026-017-force-profile.png
+
+Total runtime: 1505.4s

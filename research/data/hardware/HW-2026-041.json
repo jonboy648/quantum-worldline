@@ -1,0 +1,21 @@
+{
+  "id": "HW-2026-041",
+  "name": "Cerca Magnetics OPM-MEG System",
+  "organization": "Cerca Magnetics (Canada)",
+  "technology": "SERF OPM (alkali vapor)",
+  "type": "research OPM-MEG helmet",
+  "date": "2024-2025",
+  "status": "RESEARCH / CLINICAL TRIALS",
+  "specs": {
+    "sensitivity": "5-15 fT/sqrt(Hz) in shielded environment",
+    "channels": "128-sensor system (UCL collaboration)",
+    "operating_temp": "room temperature",
+    "form_factor": "wearable helmet"
+  },
+  "cost": {
+    "system": "not publicly stated",
+    "per_channel": "not stated"
+  },
+  "deployment": "128-sensor system tested with UCL. Phase-2 clinical trials for childhood epilepsy and autism research. UK government £14M+ quantum sensing program includes Cerca.",
+  "bci_relevance": "Second leading OPM-MEG platform. 128 channels vs QuSpin's 50 in largest array. Not accessible to independent researcher but validates OPM-MEG for paediatric BCI (movement-tolerant)."
+}

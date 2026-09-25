@@ -1,0 +1,78 @@
+{
+  "id": "HYP-2026-006",
+  "claim": "The holographic transportation phenomenon (Wang & He, arXiv:2501.03084) -- where boundary excitations vanish and traverse the bulk along AdS geodesics -- is the tensor-network manifestation of worldline path integral propagation in AdS. The transport time should match the worldline proper time for a geodesic of the corresponding AdS length. This predicts a quantitative relationship: transport time T = l_AdS * arccosh(1 + d_boundary^2 / (2*l_AdS^2)) where d_boundary is the boundary separation, testable on our MERA circuits by tracking excitation dynamics.",
+  "confidence": "low",
+  "confidence_downgraded_2026_08_17": {
+    "from": "high",
+    "to": "low",
+    "reason": "The first remediation pass corrected this record's NUMBERS (see correction_2026_08_17) and recorded the audit's objection under open_objection_recorded_not_resolved, but left confidence at 'high' -- the same status/confidence split the verifier caught on HYP-2026-008. It does not survive inspection. This record's claim is not 'transport takes 2.24'; it is the FORMULA T = l_AdS * arccosh(1 + d^2/(2 l_AdS^2)), in which the AdS radius appears essentially. Two independent findings strike at that structure, not merely at its precision.",
+    "strike_1_the_radius_cancels": "AUDIT-2026-08-11.md D-1 RESOLUTION: Wang & He's continuum derivation (arXiv:2603.07639 Supplemental S3.A, Eqs. S33-S38) gives t_trans = pi as a PURE NUMBER -- l_AdS cancels identically. A formula whose source says the radius is absent cannot be confirmed by matching a value computed from that radius. The observed agreement is then supplied by the free factor 1/ln 2 = 1.4427, which is unexplained.",
+    "strike_2_the_project_own_chi3_value": "AUDIT D-13: the paper's own chi=3 result gives l_AdS = 0.9102, which moves this formula's prediction to 1.430 against a measurement of 2.239 -- a 57% failure. The 1.2% agreement holds only for one particular choice of l_AdS, and the project's other measurement of that same quantity breaks it.",
+    "strike_3_no_mera_in_the_driver": "AUDIT D-12: research/.../holographic_transport_16q.py:347 prints 'Skipping full MERA bulk computation'. The transport number is not, as the record's prose implies, a MERA bulk result.",
+    "what_is_still_supported": "A narrow, non-geometric fact: excitations on this chain cross at T = 2.239 (dt-converged, N=16), and that is ~70% faster than TFIM ring propagation (3.8). The contrast with the ring is a real, reproducible measurement. Status is left at SUPPORTED for that narrow content only. The GEOMETRIC reading -- that this time is a bulk AdS geodesic proper time -- is NOT_ESTABLISHED and should be treated as such in any write-up.",
+    "what_would_settle_it": "A derivation of why l_AdS should appear in the crossing time at all, given that it cancels in the continuum limit; failing that, the anchor should be dropped rather than re-fit. This is a direct instance of the RESEARCH-DIRECTOR.md section 29 trunk question.",
+    "authority": "docs/governance/AUDIT-2026-08-11.md D-1 (with resolution box), D-12, D-13; research/ERRATA.md E1/E2"
+  },
+  "source_findings": ["PAPER-2026-010", "PAPER-2026-012", "PAPER-2026-009", "PAPER-2026-020"],
+  "testable": true,
+  "test_design": "Implement time evolution of a MERA state with a boundary excitation on 16-24 qubits. Track the boundary spin expectation values over time. Identify the disappearance and reappearance pattern. Measure the transport time T as a function of boundary separation. Compare to the geodesic prediction using l_AdS = 1/log(2) from our MERA. If the functional form matches arccosh, the worldline-geodesic interpretation is supported.",
+  "refutation_criteria": "If transport time shows no systematic dependence on boundary separation, or if the functional form is linear rather than arccosh, the geodesic worldline interpretation is wrong.",
+  "hardware_required": "Qiskit Aer statevector simulator (local GPU sufficient for 16-24 qubits)",
+  "earliest_testable": "2026",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "philosophical_implications": "If holographic transportation follows worldline geodesics, it demonstrates that the MERA bulk is not merely a mathematical convenience but has operational physical content: information literally propagates along paths that minimize proper time in the emergent geometry. This is the tensor-network analog of the equivalence principle.",
+  "status": "SUPPORTED",
+  "experimental_evidence": {
+    "T_measured": 2.23888,
+    "T_predicted": 2.266,
+    "error_percent": -1.205,
+    "superseded_values": {
+      "note": "CORRECTED 2026-08-17 per ERRATA E1 and E2 (audit defect D-18: the retracted numbers were still standing unmarked in this record). The originals are preserved verbatim below; they are NOT to be quoted.",
+      "T_measured_ORIGINAL": 2.250,
+      "error_percent_ORIGINAL": 0.72,
+      "l_AdS_error_percent_ORIGINAL": 0.76,
+      "why_superseded_T_and_error": "ERRATA E2 -- the published 0.72% residual at N=16 is a TIME-GRID artifact of the original dt=0.05 sampling. Refining the grid gives T_refined(N=16) = 2.23888, i.e. residual -1.205% (and -2.777% at N=12). The sign flips: the measured transport time is SHORTER than (pi/2)*l_AdS, not longer.",
+      "why_superseded_l_AdS": "ERRATA E1 -- 'l_AdS deviation 0.76%' is arithmetically wrong. l_AdS_needed_to_match_exact = 1.4323944878 vs theory 1.4426950409 gives (delta/theory) = 0.714% (0.719% if normalized by the fitted value). No rounding path yields 0.76.",
+      "errata_refs": ["research/ERRATA.md E1", "research/ERRATA.md E2"]
+    },
+    "method": "Gaussian perturbation (Omega=5, M=0, sigma_t=sigma_phi=0.4) coupled to Y operator on 16q analytical MERA. Peak at t=0.70, dip at t=2.50 (rho=0.001, near-zero), reappear at t=4.75 (rho=0.022).",
+    "geodesic_resolution": "Factor-of-2 discrepancy resolved by Bohra & Sivaramakrishnan (PAPER-2026-020): correct formula is T = (pi/2)*l_AdS (null composite geodesic), NOT pi*l_AdS (spacelike). T_predicted = (pi/2) * 1.4427 = 2.266.",
+    "best_fit_l_AdS": 1.4323944878,
+    "theoretical_l_AdS": 1.4426950409,
+    "l_AdS_error_percent": 0.714,
+    "mera_specificity_ANNOTATED_2026_08_17": "The T=2.25 quoted below is the dt=0.05 grid artifact superseded by ERRATA E2 (dt-converged: T=2.239, residual -1.21% at N=16). The SPECIFICITY conclusion is unaffected -- 2.24 vs 3.8 is a 70% gap either way -- but the number itself must not be quoted. Separately, per AUDIT D-12, the transport script never applies a MERA (holographic_transport_16q.py:347 prints 'Skipping full MERA bulk computation'), so the phrase 'Wang & He MERA gives' describes their published value, not a MERA computation performed here.",
+    "mera_specificity": "TFIM comparison confirms holographic specificity: Wang & He MERA gives T=2.25, TFIM ring propagation gives T=3.8 (69% longer). Transport is MERA-specific, not 1D ring propagation.",
+    "finite_size_scaling": {
+      "N16_T_times_L": 36.0,
+      "N24_T_times_L": 37.2,
+      "difference_percent": 3.3,
+      "lin_thread_prediction_N24_error_SUPERSEDED_2026_08_17": "DO NOT QUOTE. Both numbers are dt=0.05 artifacts (ERRATA E2). The dt-converged N=16 residual is -1.21%, not 0.72%, so the N=24 figure below -- computed as an improvement ON the artifact -- has no standing until recomputed on the converged grid.",
+      "lin_thread_prediction_N24_error": "0.47% (vs 0.72% at N=16)",
+      "note": "Lin 2026 (PRL): thread discreteness gives 1/N finite-size correction. N=24 result consistent.",
+      "caveat_2026_08_17": "The '0.72% at N=16' baseline quoted in lin_thread_prediction_N24_error is the ERRATA-E2 RETRACTED number; the 1/N-consistency inference above was drawn against it and is therefore NOT established. On the grid-converged values the N=12 -> N=16 residual runs -2.777% -> -1.205%, and the audit's own reading of SIM-2026-025 is that the two-point fit is degenerate, the third point was EXCLUDED, and the record's finite-size verdict is INCONSISTENT (audit CLM-011). Treat this sub-block as open, not as supporting evidence."
+    },
+    "data_files": [
+      "research/data/simulations/holographic_transport.json",
+      "research/data/simulations/composite_geodesic_results.json",
+      "research/data/simulations/boundary_density_Y.npy",
+      "research/data/simulations/boundary_density_Z.npy"
+    ],
+    "scripts": [
+      "research/data/simulations/composite_geodesic_test.py",
+      "research/data/simulations/holographic_transport_16q.py"
+    ],
+    "runtime_seconds": 56.8
+  },
+  "justified_by": ["SIM-2026-025"],
+  "justified_by_note": "SIM-2026-025 is the grid-converged transport record and is the authority for the corrected residual (-1.205% at N=16). The original coarse-grid run lives in research/data/simulations/holographic_transport.json and composite_geodesic_results.json, which are NOT SIM-ID records; they carry the superseded dt=0.05 numbers.",
+  "correction_2026_08_17": {
+    "trigger": "docs/governance/AUDIT-2026-08-11.md defect D-18 -- the ERRATA-E2 retracted 0.72% transport residual and the ERRATA-E1 wrong 0.76% l_AdS deviation were still standing unmarked in this record, the transport anchor's own hypothesis record.",
+    "what_changed": "experimental_evidence.T_measured 2.250 -> 2.23888; .error_percent 0.72 -> -1.205; .l_AdS_error_percent 0.76 -> 0.714; .best_fit_l_AdS and .theoretical_l_AdS given at full recorded precision. Originals preserved verbatim in experimental_evidence.superseded_values (section 32: corrections are additive).",
+    "status_unchanged_and_why": "status stays SUPPORTED: the transport time itself is a real, grid-converged measurement and the agreement with (pi/2)*l_AdS survives at the ~1.2% level. What changed is the number, not the existence of the agreement.",
+    "open_objection_recorded_not_resolved": "The audit's D-1 RESOLUTION box establishes that Wang & He's continuum result is t_trans = pi, a PURE NUMBER in which the AdS radius cancels identically (their Supplemental Material section S3 A, Eqs. S33-S38). Two independent adversaries reached this from opposite directions. If l_AdS is absent from the continuum crossing time, then the entire agreement is supplied by the free factor 1/ln 2 = 1.4427 and the GEOMETRIC reading of this hypothesis is unsupported pending a derivation of why l_AdS should appear at all. Additional unaddressed challenges: (a) the transport driver never applies a MERA (holographic_transport_16q.py:347 prints 'Skipping full MERA bulk computation') -- audit D-12; (b) under the same Eq. (2) the chi=3 state predicts T = 1.430 against a measurement of 2.239, +57% -- audit D-13; (c) the same criticality-scan record swings T from 0.55 to 3.30 under detuning -- audit D-14. NONE of these is settled here. They are recorded so this record no longer reads cleaner than the evidence."
+  },
+  "created_date": "2026-03-11",
+  "last_updated": "2026-08-17",
+  "created_by": "worldline-orchestrator",
+  "supported_by": "theory-lead"
+}

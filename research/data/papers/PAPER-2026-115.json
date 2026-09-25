@@ -1,0 +1,19 @@
+{
+  "id": "PAPER-2026-115",
+  "title": "Topological Tricritical Ising Universality Class in One Dimension",
+  "authors": ["Sheng Yang", "Hai-Qing Lin", "Xue-Jia Yu"],
+  "date": "2026-06-14",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.15588",
+  "arxiv_id": "2606.15588",
+  "abstract": "Studies the tricritical point of the 1D O'Brien-Fendley (cluster) model and shows it realizes a topologically nontrivial tricritical Ising (TCI) universality class. The bulk CFT data is the standard c=7/10 minimal model, but the boundary sector is enriched: open boundary conditions reveal a protected twofold degeneracy that splits exponentially (rather than algebraically) with system size, signalling symmetry-enriched topological structure and RG-induced boundary sectors absent from the ordinary TCI fixed point.",
+  "relevance": 4,
+  "tags": ["tricritical-ising", "c=7/10", "OBrien-Fendley", "boundary-CFT", "SPT", "universality", "HYP-027"],
+  "key_claims": [
+    "The 1D O'Brien-Fendley TCI point carries a topologically nontrivial (symmetry-enriched) tricritical Ising universality class.",
+    "Open-boundary twofold degeneracy splits EXPONENTIALLY (not algebraically) in L, distinguishing it from the ordinary TCI point.",
+    "Bulk CFT data remains standard c=7/10 minimal model; the enrichment is a boundary/topological sector effect."
+  ],
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-06-16"
+}

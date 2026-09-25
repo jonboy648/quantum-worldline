@@ -1,0 +1,33 @@
+{
+  "id": "PAPER-2026-113",
+  "title": "Black Hole States in Quantum Spin Chains",
+  "authors": [
+    "Charlotte Kristjansen",
+    "Konstantin Zarembo"
+  ],
+  "date": "2025-12-29",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2512.23432",
+  "arxiv_id": "2512.23432",
+  "abstract": "We define a black hole state in a spin chain by studying thermal correlators in holography. Focusing on the Heisenberg model we investigate the thermal and complexity properties of the black hole state by evaluating its entanglement entropy, emptiness formation probability and Krylov complexity. We find logarithmic growth of the entanglement entropy with an effective central charge c_eff = 5.2, and evidence for thermalization at infinite temperature.",
+  "relevance": 3,
+  "tags": [
+    "spin-chain",
+    "black-hole-holography",
+    "krylov-complexity",
+    "entanglement-entropy",
+    "finite-temperature",
+    "emptiness-formation-probability",
+    "transport-adjacent"
+  ],
+  "key_claims": [
+    "Defines a 'black hole state' in a Heisenberg spin chain via holographic thermal correlators",
+    "Entanglement entropy shows logarithmic growth with effective central charge c_eff = 5.2; evidence for infinite-temperature thermalization",
+    "Computes Krylov complexity and emptiness formation probability as complexity-theoretic observables",
+    "Shares the finite-T critical-chain + holographic-black-hole framing with PAPER-2026-088 (Wang-He 2603.07639); provides complementary complexity observables that could serve as additional discriminators alongside our transport observable"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-06-11"
+}

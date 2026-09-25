@@ -1,0 +1,71 @@
+{
+  "L": 8,
+  "E_gs": -10.251661790966024,
+  "n_2q_gates": 25,
+  "n_1q_gates": 0,
+  "zzphase_ub": 75,
+  "chi3_zzphase": 451,
+  "F_exact": {
+    "1": -2.465681675805799,
+    "2": -0.6376416978900377,
+    "3": -0.16082876673666746
+  },
+  "F_noiseless_ansatz": {
+    "1": -2.463067997397925,
+    "2": -0.6341568020930177,
+    "3": -0.15430121800189145
+  },
+  "noiseless_overlap": 0.9997682992354662,
+  "noiseless_force_rmse": 0.004530809567864236,
+  "pipeline_check_rmse": 1.1569070846550224e-14,
+  "ideal_force_rms_magnitude": 1.4733226568432116,
+  "sweeps": [
+    {
+      "p_2q": 0.0007899999999999574,
+      "p_1q": 7.899999999999574e-05,
+      "purity": 0.9671570546416397,
+      "E0_noisy": -10.177827425803287,
+      "F_noisy": {
+        "1": -2.4381022118556324,
+        "2": -0.6140922188612858,
+        "3": -0.13668560826069864
+      },
+      "force_rmse_noisy_vs_ideal": 0.02515350800915518,
+      "signal_survival_fraction_dr1": 0.9888146697033982,
+      "noisy_force_rms": 1.453746264452283,
+      "signal_survival_fraction_rms": 0.9867127595574525
+    },
+    {
+      "p_2q": 0.001,
+      "p_1q": 0.0001,
+      "purity": 0.9586129455232204,
+      "E0_noisy": -10.158666096906508,
+      "F_noisy": {
+        "1": -2.431541320215583,
+        "2": -0.6088318746075458,
+        "3": -0.1320722348850314
+      },
+      "force_rmse_noisy_vs_ideal": 0.030673049633888408,
+      "signal_survival_fraction_dr1": 0.9861537862226037,
+      "noisy_force_rms": 1.4491966186685878,
+      "signal_survival_fraction_rms": 0.9836247423043659
+    },
+    {
+      "p_2q": 0.002,
+      "p_1q": 0.0002,
+      "purity": 0.9189697057752645,
+      "E0_noisy": -10.067923592552878,
+      "F_noisy": {
+        "1": -2.400728486378318,
+        "2": -0.5841994814563432,
+        "3": -0.11049784098934978
+      },
+      "force_rmse_noisy_vs_ideal": 0.05659266560468198,
+      "signal_survival_fraction_dr1": 0.973657106647291,
+      "noisy_force_rms": 1.4279351143411592,
+      "signal_survival_fraction_rms": 0.9691937524402826
+    }
+  ],
+  "verdict": "SUPPORTS: at 99.921% 2q fidelity ~99% of the force RMS survives; dr=1 force -2.438 (ideal -2.466). Resolvable above zero.",
+  "wall_seconds": 294.56892251968384
+}

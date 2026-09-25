@@ -1,0 +1,32 @@
+{
+  "id": "PAPER-2026-110",
+  "title": "Emergent gravity from the correlation of spin-1/2 systems coupled with a scalar field",
+  "authors": [
+    "Quentin Ansel"
+  ],
+  "date": "2024-05-03",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2405.02380",
+  "arxiv_id": "2405.02380",
+  "abstract": "This paper introduces several ideas of emergent gravity, which come from a system similar to an ensemble of quantum spin-1/2 particles. To derive a physically relevant theory, the model is constructed by quantizing a scalar field in curved space-time. The quantization is based on a classical discretization of the system, but contrary to famous approaches, like loop quantum gravity or causal triangulation, a Monte-Carlo based approach is used instead of a simplicial approximation of the space-time manifold. This avoids conceptual issues related to the choice of the lattice. Moreover, this allows us to easily encode the geometric structures of space, given by the geodesic length between points, into the mean value of a correlation operator between two spin-like systems. Numerical investigations show the relevance of the approach, and the presence of two regimes: a classical and a quantum regime. The latter is obtained when the density of points reaches a given threshold. Finally, a multi-scale analysis is given, where the classical model is recovered from the full quantum one.",
+  "relevance": 4,
+  "tags": [
+    "emergent-gravity",
+    "spin-1/2",
+    "geodesic-from-correlator",
+    "Synge-world-function",
+    "scalar-field",
+    "monte-carlo",
+    "hyp-012-bridge"
+  ],
+  "key_claims": [
+    "Encodes geodesic length between points into the mean value of a spin-spin correlation operator: C_nk = <Psi| sigma+(x_n) sigma-(x_k) + h.c. |Psi>",
+    "Explicit map p_x(y) = N(R)/(sqrt(2 pi eps))^3 * exp(-sigma(x,y)/eps^2) where sigma = Synge's world function = (1/2)(geodesic length)^2; inverting: geodesic length ~ sqrt(-2 eps^2 ln C_nk)",
+    "math-bridge FLAG (relevance 4): this 'd ~ sqrt(-ln C)' heat-kernel map is the same FAMILY as our CMI/correlator-distance route (HYP-012), and DISTINCT from the Crofton/kinematic-space integral transform (HYP-014/022) - does NOT revive Crofton",
+    "Most likely outcome of testing the map against MERA sigma-correlator data is confirming the HYP-012 boundary (distance != alpha=4 stress-tensor force); recommended_followup: theory note formalizing Synge-distance vs Crofton-force as two distinct correlator->geometry maps"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-06-11"
+}

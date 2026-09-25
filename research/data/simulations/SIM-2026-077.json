@@ -1,0 +1,934 @@
+{
+  "id": "SIM-2026-077",
+  "hypothesis_id": "HYP-2026-032",
+  "date": "2026-09-08",
+  "status": "COMPLETE",
+  "preregistration": "research/tools/timelike-ee/PREREGISTRATION-HYP032-A.md (approved by Jon 2026-09-07, commit cff338a, before any candidate code)",
+  "question": "Is there any consistent lattice construction at c = 1/2 (control c = 1) whose exact evaluation gives Im S = pi c/6 for the timelike entanglement entropy?",
+  "driver": "research/tools/timelike-ee/qw_tlee_candidates.py; runner run_on_runpod.sh; results sim077_C{1,2,3,4}.json (+ sim077_C1_quick.json for L = 10, 12; merged in sim077_C1_merged.json)",
+  "compute": "RunPod, four pods over 2026-09-07/08 (2-vCPU CPU flavor at 0.06 USD/h, hit a 4 GB cap; RTX 2000 Ada at 0.24 USD/h twice, one hit its 12 h guard and one its 8 h guard mid-C1; a 0.49 USD/h host for the final C2 rerun and C1 L=14 fields). Total spend about 6 USD of the 20 USD cap. Orchestration mistakes (results lost to caps twice) are recorded in the commit log; the final runner fetches partials every two minutes.",
+  "pass_rule": "YES for a candidate: |Im S| within 10 percent of pi c/6, one sign across T0 in [3, R/2], window std under 10 percent of the mean, at BOTH sizes for at least one registered setting. All four NO = Level-3 negative.",
+  "VERDICT": "ALL FOUR CANDIDATES NO -> LEVEL-3 NEGATIVE (as pre-registered): among the registered constructions, no exact lattice evaluation reproduces Im S = pi c/6. With one single-size, single-setting exception in C1 that the pre-registered two-size rule does not turn into a YES (see C1 note).",
+  "candidates": {
+    "C1_longitudinal_field": {
+      "verdict": "NO (no (h_z, delta) setting passes at two sizes)",
+      "single_size_YES": {
+        "setting": "L = 14, h_z = 0.02, R = 10, delta = 5",
+        "Im_mean": 0.2795,
+        "pred": 0.2618,
+        "window": "T0 = 3, 4, 5 (three points)",
+        "same_setting_other_sizes": {
+          "L=10 (R=6)": 0.1145,
+          "L=12 (R=8)": 0.1957,
+          "L=14 (R=8)": 0.2279
+        },
+        "h_z_scan_at_L14_R10_delta5": {
+          "0.005": 0.0766,
+          "0.01": 0.1572,
+          "0.02": 0.2795,
+          "0.05": -0.0585,
+          "0.0 (symmetric)": 0.0452
+        },
+        "reading": "A trend with size at fixed (h_z = 0.02, delta = 5), but at three DIFFERENT interval lengths: 0.11 (L=10, R=6) -> 0.20 (L=12, R=8) -> 0.23 (L=14, R=8) -> 0.28 (L=14, R=10). The identical setting was never evaluated at two sizes, which is why the two-size rule returned NO. CORRECTION 2026-09-08 (re-read of sim077_C1_merged.json): at L = 14, delta = 5, R = 10 only h_z = 0.005, 0.01, 0.02 were run (0.0766, 0.1572, 0.2795) -- monotone rising, NO maximum; h_z = 0.05 and the h_z = 0 control were never run at L = 14, the run was cut. The peak-and-fall shape (0.0622, 0.1034, 0.1957, 0.0321 for h_z = 0.005, 0.01, 0.02, 0.05) is at L = 12, R = 8. An earlier summary of this record placed that peak at L = 14; that was wrong. Two further facts found in the same re-read: (a) the passing window is a narrow slice of a monotone rise -- Im S over T0 = 2..8 at the passing setting is 0.2262, 0.2564, 0.2815, 0.3007, 0.3180, 0.3316, 0.3429, drifting 52 percent with no plateau; (b) with the symmetry intact and the regulator on there is a nonzero background, Im S = 0.0427 (L=10) and 0.0466 (L=12) at h_z = 0, delta = 5, because the SIM-076 exact-zero theorem holds only at delta = 0; whether that background grows with L was never measured. All three facts are carried into PREREGISTRATION-HYP032-B.md, which registers the follow-up. By the rule this remains NO."
+      },
+      "gate_hz0": "PASS at every size: Im S = 0 to 1e-9 at h_z = 0 (chiral-symmetry theorem reproduced by the same code path)",
+      "delta0_values": "wild and branch-dominated at h_z > 0, delta = 0: -7.6, +45, +22.5 at L = 14 (eigenvalues wrap the negative real axis); reported, not interpreted",
+      "windows": "2 to 3 points at L = 12, 14 (R = 8, 10): the honest cost of exact diagonalization off the free-fermion line",
+      "runs": {
+        "L10_hz0.0_RH3.0_d0.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 0.0,
+          "hz": 0.0,
+          "Im_mean": 3.930189507173054e-14,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.0_RH3.0_d2.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 2.0,
+          "hz": 0.0,
+          "Im_mean": 0.06532241215034487,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.0_RH3.0_d5.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 5.0,
+          "hz": 0.0,
+          "Im_mean": 0.04272768910209317,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.05_RH3.0_d0.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 0.0,
+          "hz": 0.05,
+          "Im_mean": 0.20721055052125412,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.05_RH3.0_d2.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 2.0,
+          "hz": 0.05,
+          "Im_mean": 0.602990947799619,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.05_RH3.0_d5.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 5.0,
+          "hz": 0.05,
+          "Im_mean": 0.09311881158665608,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.02_RH3.0_d0.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 0.0,
+          "hz": 0.02,
+          "Im_mean": 0.03845539766012229,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.02_RH3.0_d2.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 2.0,
+          "hz": 0.02,
+          "Im_mean": 0.17689843781598139,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.02_RH3.0_d5.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 5.0,
+          "hz": 0.02,
+          "Im_mean": 0.11446212168912065,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.01_RH3.0_d0.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 0.0,
+          "hz": 0.01,
+          "Im_mean": 0.009776167516242718,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.01_RH3.0_d2.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 2.0,
+          "hz": 0.01,
+          "Im_mean": 0.09256350450150644,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.01_RH3.0_d5.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 5.0,
+          "hz": 0.01,
+          "Im_mean": 0.06653846672553161,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.005_RH3.0_d0.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 0.0,
+          "hz": 0.005,
+          "Im_mean": 0.0024539077470669968,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.005_RH3.0_d2.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 2.0,
+          "hz": 0.005,
+          "Im_mean": 0.07207805525821934,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_hz0.005_RH3.0_d5.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 5.0,
+          "hz": 0.005,
+          "Im_mean": 0.0491066697885749,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L12_hz0.0_RH4.0_d0.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.0,
+          "Im_mean": 6.463696244907169e-11,
+          "Im_std": 4.598832425983801e-11,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.0_RH4.0_d2.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.0,
+          "Im_mean": 0.05803784177934175,
+          "Im_std": 0.02283235927491855,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.0_RH4.0_d5.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.0,
+          "Im_mean": 0.046614027242389236,
+          "Im_std": 0.007030569100915061,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.05_RH4.0_d0.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.05,
+          "Im_mean": -0.6863180402914256,
+          "Im_std": 0.8101548478927111,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.05_RH4.0_d2.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.05,
+          "Im_mean": -0.6156170579833582,
+          "Im_std": 0.049279162013160016,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.05_RH4.0_d5.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.05,
+          "Im_mean": 0.03205751166034637,
+          "Im_std": 0.004335815489497935,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.02_RH4.0_d0.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.02,
+          "Im_mean": -2.2697548941622214,
+          "Im_std": 3.848803303812624,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.02_RH4.0_d2.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.02,
+          "Im_mean": 0.31442029533578386,
+          "Im_std": 0.013721307286769041,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.02_RH4.0_d5.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.02,
+          "Im_mean": 0.1956708186463641,
+          "Im_std": 0.011199960500438838,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.01_RH4.0_d0.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.01,
+          "Im_mean": 0.8683587718977415,
+          "Im_std": 3.994254761724322,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.01_RH4.0_d2.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.01,
+          "Im_mean": 0.1198867483871053,
+          "Im_std": 0.024490953458635042,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.01_RH4.0_d5.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.01,
+          "Im_mean": 0.10342546009135575,
+          "Im_std": 0.008658834984881729,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.005_RH4.0_d0.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.005,
+          "Im_mean": 5.323231795291182,
+          "Im_std": 6.23180927670128,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.005_RH4.0_d2.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.005,
+          "Im_mean": 0.0729801118797768,
+          "Im_std": 0.02324992665246186,
+          "YES": false,
+          "note": null
+        },
+        "L12_hz0.005_RH4.0_d5.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.005,
+          "Im_mean": 0.06220498093544549,
+          "Im_std": 0.0074825006311875185,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.02_RH4.0_d0.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.02,
+          "Im_mean": 1.052857643343394,
+          "Im_std": 0.43454068480279184,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.02_RH4.0_d2.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.02,
+          "Im_mean": 0.45990384313166077,
+          "Im_std": 0.037866726164814596,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.02_RH4.0_d5.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.02,
+          "Im_mean": 0.2279400753814792,
+          "Im_std": 0.011691722469395788,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.02_RH5.0_d0.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 0.0,
+          "hz": 0.02,
+          "Im_mean": -7.557194718493812,
+          "Im_std": 12.652809525762473,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.02_RH5.0_d2.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 2.0,
+          "hz": 0.02,
+          "Im_mean": 0.5187536930787148,
+          "Im_std": 0.0500291581814681,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.02_RH5.0_d5.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 5.0,
+          "hz": 0.02,
+          "Im_mean": 0.27952567715610016,
+          "Im_std": 0.01812993987961117,
+          "YES": true,
+          "note": null
+        },
+        "L14_hz0.01_RH4.0_d0.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.01,
+          "Im_mean": 0.9771673803123975,
+          "Im_std": 0.38724442973947193,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.01_RH4.0_d2.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.01,
+          "Im_mean": 0.15250908827763998,
+          "Im_std": 0.028234972663482065,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.01_RH4.0_d5.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.01,
+          "Im_mean": 0.11759826454936496,
+          "Im_std": 0.008277938433672263,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.01_RH5.0_d0.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 0.0,
+          "hz": 0.01,
+          "Im_mean": 44.999338148997005,
+          "Im_std": 56.67099287666838,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.01_RH5.0_d2.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 2.0,
+          "hz": 0.01,
+          "Im_mean": 0.0552304638850862,
+          "Im_std": 0.05006171012995902,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.01_RH5.0_d5.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 5.0,
+          "hz": 0.01,
+          "Im_mean": 0.15715420259857074,
+          "Im_std": 0.013206511213642325,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.005_RH4.0_d0.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 0.0,
+          "hz": 0.005,
+          "Im_mean": 0.4761730753475639,
+          "Im_std": 0.1975668681916618,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.005_RH4.0_d2.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 2.0,
+          "hz": 0.005,
+          "Im_mean": 0.0908303814343165,
+          "Im_std": 0.025852703006956648,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.005_RH4.0_d5.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 5.0,
+          "hz": 0.005,
+          "Im_mean": 0.058607782284556625,
+          "Im_std": 0.006452244428592736,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.005_RH5.0_d0.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 0.0,
+          "hz": 0.005,
+          "Im_mean": 22.51701994185001,
+          "Im_std": 17.001691356345493,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.005_RH5.0_d2.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 2.0,
+          "hz": 0.005,
+          "Im_mean": -0.0363887475556931,
+          "Im_std": 0.04841830517470668,
+          "YES": false,
+          "note": null
+        },
+        "L14_hz0.005_RH5.0_d5.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 5.0,
+          "hz": 0.005,
+          "Im_mean": 0.07660677456545721,
+          "Im_std": 0.010006649587235147,
+          "YES": false,
+          "note": null
+        }
+      }
+    },
+    "C2_tracked_branch": {
+      "verdict": "NO at every configuration (tracked branch)",
+      "implementation_notes": "beta0 changed from the written 20 to 3 before any tracked number was read (at 20 the occupations saturate to exact 0/1 and the tracked log is NaN); saturated modes (|p| or |q| < 1e-14) excluded from the tracking step. Pre-registered +0.5i path deformation applied to the two delta = 0 configurations at L = 1024 that passed within 1e-3 of a zero of the trace; one still fails the path gate after deformation and is void.",
+      "reading": "At delta = 0 the tracked imaginary part is of order minus 350 to minus 550 with std ~180: the modes wrap the negative real axis many times as beta rotates through the near-zeros of the trace; it is a branch count, not a physical phase. At delta = 2 and 5 the tracked and principal values are small (|Im| < 0.25) and drift with delta. The principal-branch auxiliary values are NaN at two delta = 5 configurations (saturated-mode 0*log 0 in the auxiliary formula); the registered tracked values are finite everywhere.",
+      "runs": {
+        "L512_RH25.0_d0.0": {
+          "L": 512,
+          "R": 50.0,
+          "delta": 0.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -349.80951242797653,
+          "Im_std": 175.51553578157885,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH25.0_d2.0": {
+          "L": 512,
+          "R": 50.0,
+          "delta": 2.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -0.052948543043955264,
+          "Im_std": 0.05765930484097332,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH25.0_d5.0": {
+          "L": 512,
+          "R": 50.0,
+          "delta": 5.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": 0.010676459059169072,
+          "Im_std": 0.009003732770702638,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH50.0_d0.0": {
+          "L": 512,
+          "R": 100.0,
+          "delta": 0.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -524.4496236086461,
+          "Im_std": 167.38922155047922,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH50.0_d2.0": {
+          "L": 512,
+          "R": 100.0,
+          "delta": 2.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -2.010638535369354,
+          "Im_std": 1.8218759200358015,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH50.0_d5.0": {
+          "L": 512,
+          "R": 100.0,
+          "delta": 5.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -0.25280424305404847,
+          "Im_std": 0.3374794968885085,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH25.0_d0.0": {
+          "L": 1024,
+          "R": 50.0,
+          "delta": 0.0,
+          "path_shift_applied": 0.5,
+          "path_gate_pass": true,
+          "Im_mean": -349.12655750328304,
+          "Im_std": 177.4961877734483,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH25.0_d2.0": {
+          "L": 1024,
+          "R": 50.0,
+          "delta": 2.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -0.007410085324309953,
+          "Im_std": 0.0029585762342273507,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH25.0_d5.0": {
+          "L": 1024,
+          "R": 50.0,
+          "delta": 5.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": 0.010743662207395876,
+          "Im_std": 0.008963694426002701,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH50.0_d0.0": {
+          "L": 1024,
+          "R": 100.0,
+          "delta": 0.0,
+          "path_shift_applied": 0.5,
+          "path_gate_pass": false,
+          "Im_mean": -551.2840608580588,
+          "Im_std": 177.76273617940475,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH50.0_d2.0": {
+          "L": 1024,
+          "R": 100.0,
+          "delta": 2.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -0.8404552264752735,
+          "Im_std": 1.8639150687617787,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH50.0_d5.0": {
+          "L": 1024,
+          "R": 100.0,
+          "delta": 5.0,
+          "path_shift_applied": 0.0,
+          "path_gate_pass": true,
+          "Im_mean": -0.005683742719432283,
+          "Im_std": 0.022703492856695144,
+          "YES": false,
+          "note": null
+        }
+      }
+    },
+    "C3_dirac_c1": {
+      "verdict": "NO at every configuration",
+      "identity_gate": "PASS: two-chain S equals twice the one-chain S to 1e-12 at every point",
+      "reading": "|Im S| <= 0.45 with std comparable to the mean at delta = 2, R = 100; <= 0.035 elsewhere; prediction pi/6 = 0.524. The c = 1 free Dirac case (the paper's own) behaves like c = 1/2: the imaginary part does not appear.",
+      "runs": {
+        "L512_RH25.0_d2.0": {
+          "L": 512,
+          "R": 50.0,
+          "delta": 2.0,
+          "identity_pass": true,
+          "Im_mean": -0.028611069295832348,
+          "Im_std": 0.016597228972451774,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH25.0_d5.0": {
+          "L": 512,
+          "R": 50.0,
+          "delta": 5.0,
+          "identity_pass": true,
+          "Im_mean": 0.021371558008805327,
+          "Im_std": 0.017999198780630193,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH25.0_d10.0": {
+          "L": 512,
+          "R": 50.0,
+          "delta": 10.0,
+          "identity_pass": true,
+          "Im_mean": 0.033406201734874214,
+          "Im_std": 0.0273251181942103,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH50.0_d2.0": {
+          "L": 512,
+          "R": 100.0,
+          "delta": 2.0,
+          "identity_pass": true,
+          "Im_mean": -0.4470992249912351,
+          "Im_std": 0.32088694517123223,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH50.0_d5.0": {
+          "L": 512,
+          "R": 100.0,
+          "delta": 5.0,
+          "identity_pass": true,
+          "Im_mean": -0.06211918228023797,
+          "Im_std": 0.05869913320469969,
+          "YES": false,
+          "note": null
+        },
+        "L512_RH50.0_d10.0": {
+          "L": 512,
+          "R": 100.0,
+          "delta": 10.0,
+          "identity_pass": true,
+          "Im_mean": 0.020979755185021876,
+          "Im_std": 0.015552240307714913,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH25.0_d2.0": {
+          "L": 1024,
+          "R": 50.0,
+          "delta": 2.0,
+          "identity_pass": true,
+          "Im_mean": 0.0026900597428404062,
+          "Im_std": 0.004760235434589767,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH25.0_d5.0": {
+          "L": 1024,
+          "R": 50.0,
+          "delta": 5.0,
+          "identity_pass": true,
+          "Im_mean": 0.021510614059390087,
+          "Im_std": 0.017926222060879418,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH25.0_d10.0": {
+          "L": 1024,
+          "R": 50.0,
+          "delta": 10.0,
+          "identity_pass": true,
+          "Im_mean": 0.03340502995793665,
+          "Im_std": 0.027325552766004832,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH50.0_d2.0": {
+          "L": 1024,
+          "R": 100.0,
+          "delta": 2.0,
+          "identity_pass": true,
+          "Im_mean": -0.2522723809211887,
+          "Im_std": 0.18670536771717616,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH50.0_d5.0": {
+          "L": 1024,
+          "R": 100.0,
+          "delta": 5.0,
+          "identity_pass": true,
+          "Im_mean": 0.0020820670233354975,
+          "Im_std": 0.0031497443317513333,
+          "YES": false,
+          "note": null
+        },
+        "L1024_RH50.0_d10.0": {
+          "L": 1024,
+          "R": 100.0,
+          "delta": 10.0,
+          "identity_pass": true,
+          "Im_mean": 0.0199455551605813,
+          "Im_std": 0.017732087028592993,
+          "YES": false,
+          "note": null
+        }
+      }
+    },
+    "C4_periodic_ring": {
+      "verdict": "NO at every configuration",
+      "construction_note": "The registered Gaussian NS/R sector sum at L = 256/512 failed its ED gate (0.1-0.2) on first implementation; at h = 1 the Ramond sector has an exact zero mode that makes the parity-inserted Gaussian singular. Rather than debug a construction the gate had voided, C4 was evaluated by the definition itself: exact full-trace diagonalization on the ring at L = 10, 12, 14. Sizes smaller than registered; recorded as the cost.",
+      "reading": "Im S = 0 exactly at delta = 0 on the ring as on the open chain; |Im S| <= 0.08 with the regulator.",
+      "runs": {
+        "L10_RH3.0_d0.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 0.0,
+          "Im_mean": 1.3378187446733136e-14,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_RH3.0_d2.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 2.0,
+          "Im_mean": -0.023695690138547824,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L10_RH3.0_d5.0": {
+          "L": 10,
+          "R": 6.0,
+          "delta": 5.0,
+          "Im_mean": 0.009861011997469592,
+          "Im_std": null,
+          "YES": false,
+          "note": "window < 2 points"
+        },
+        "L12_RH4.0_d0.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 0.0,
+          "Im_mean": -1.1689209600262984e-09,
+          "Im_std": 1.674251848271524e-10,
+          "YES": false,
+          "note": null
+        },
+        "L12_RH4.0_d2.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 2.0,
+          "Im_mean": -0.05021087261500928,
+          "Im_std": 0.02186192026175619,
+          "YES": false,
+          "note": null
+        },
+        "L12_RH4.0_d5.0": {
+          "L": 12,
+          "R": 8.0,
+          "delta": 5.0,
+          "Im_mean": 0.006855741056244861,
+          "Im_std": 0.0003317887538250323,
+          "YES": false,
+          "note": null
+        },
+        "L14_RH4.0_d0.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 0.0,
+          "Im_mean": -1.0769163338864018e-14,
+          "Im_std": 4.385380947269368e-15,
+          "YES": false,
+          "note": null
+        },
+        "L14_RH4.0_d2.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 2.0,
+          "Im_mean": -0.02225347929053437,
+          "Im_std": 0.012702577035374373,
+          "YES": false,
+          "note": null
+        },
+        "L14_RH4.0_d5.0": {
+          "L": 14,
+          "R": 8.0,
+          "delta": 5.0,
+          "Im_mean": 0.004295468675283076,
+          "Im_std": 0.0005783369089249917,
+          "YES": false,
+          "note": null
+        },
+        "L14_RH5.0_d0.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 0.0,
+          "Im_mean": -4.730012677830094e-15,
+          "Im_std": 4.3336427819611155e-15,
+          "YES": false,
+          "note": null
+        },
+        "L14_RH5.0_d2.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 2.0,
+          "Im_mean": -0.08027630534265871,
+          "Im_std": 0.042873750905993144,
+          "YES": false,
+          "note": null
+        },
+        "L14_RH5.0_d5.0": {
+          "L": 14,
+          "R": 10.0,
+          "delta": 5.0,
+          "Im_mean": 0.001545147615309402,
+          "Im_std": 0.0026145160382598223,
+          "YES": false,
+          "note": null
+        }
+      }
+    }
+  },
+  "key_findings": [
+    "1. LEVEL-3 NEGATIVE (registered): none of the four constructions reproduces Im S = i pi c/6 in an exact lattice evaluation. Combined with SIM-2026-076 (the literal object has exactly real pseudo entropy by chiral symmetry; the paper's regulator restores the real part but not the imaginary part), the imaginary part of timelike entanglement entropy is, on the critical TFIM lattice, a property of the continuum analytic continuation and not of any lattice transition matrix examined here.",
+    "2. Breaking the chiral symmetry does produce imaginary parts, but they are not the CFT phase: at zero regulator they are branch counts (tens); with the regulator they are small and non-monotonic in the field, returning to the symmetric residual as h_z -> 0. One size-and-setting point lands within 10 percent of pi/12; the same setting at the other sizes does not.",
+    "3. The c = 1 Dirac control does not rescue the imaginary part: same behaviour as c = 1/2, identity gate exact.",
+    "4. Continuous branch tracking from real temperature does not recover pi c/6 either: at zero regulator the tracked phase is a large multiple of 2 pi (mode wrapping through trace zeros), and with the regulator it is small.",
+    "5. Method: exact pseudo-entropy on the lattice is branch-convention dependent whenever tau_A's eigenvalues wrap; any lattice statement about Im S must specify the convention, and three conventions (per-eigenvalue principal, per-mode principal, tracked) disagree by O(1) or more where wrapping occurs."
+  ],
+  "claim_level": "Level 3 negative within the registered scope (four constructions, sizes as run). Not a theorem about all lattice constructions. No novelty claim without the section-8 gate; finding 1 may be known in the pseudo-entropy literature and a search is owed before any wording stronger than 'we did not find'.",
+  "counterfactual_novelty": "Registered outcome space YES/NO per candidate; all NO occurred. The single-size C1 point and the h_z non-monotonicity were not anticipated.",
+  "what_would_change_this": "A registered construction outside these four that produces a stable pi c/6 (e.g. an MPS pseudo-entropy at h_z = 0.02 over L = 32..128 showing the C1 trend saturating at pi/12 rather than peaking), or a demonstration that the continuum phase is convention-fixed by a physical requirement the lattice evaluations violated.",
+  "downstream_actions_required": [
+    "HYP-2026-032.json: status -> LEVEL-3 NEGATIVE (registered), with the C1 trend flagged as the only candidate for a registered follow-up.",
+    "Story chapter 13.",
+    "PLAN-2026-09-06.md HYP-032 section: DONE with this outcome; next decision is Jon's (follow the C1 thread with an MPS method, or close)."
+  ],
+  "files": [
+    "research/tools/timelike-ee/PREREGISTRATION-HYP032-A.md",
+    "research/tools/timelike-ee/qw_tlee_candidates.py",
+    "research/tools/timelike-ee/run_on_runpod.sh",
+    "research/tools/timelike-ee/sim077_C1.json",
+    "research/tools/timelike-ee/sim077_C1_quick.json",
+    "research/tools/timelike-ee/sim077_C1_merged.json",
+    "research/tools/timelike-ee/sim077_C2.json",
+    "research/tools/timelike-ee/sim077_C3.json",
+    "research/tools/timelike-ee/sim077_C4.json",
+    "research/tools/timelike-ee/sim077_run2_console_partial.log",
+    "research/tools/timelike-ee/sim077_run3_console.log",
+    "research/tools/timelike-ee/sim077_C1.log",
+    "research/tools/timelike-ee/sim077_C2.log",
+    "research/tools/timelike-ee/sim077_C3.log",
+    "research/tools/timelike-ee/sim077_C4.log"
+  ]
+}

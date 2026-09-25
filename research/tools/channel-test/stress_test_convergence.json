@@ -1,0 +1,56 @@
+{
+ "preregistration": "PREREGISTRATION-T.md @ 82b7b4e",
+ "sizes": [
+  16,
+  20,
+  24
+ ],
+ "arms": {
+  "H": {
+   "alpha_by_n": {
+    "16": 8.147707229569718,
+    "20": 7.42576768555253,
+    "24": 7.004227038123189
+   },
+   "step_16_20": -0.7219395440171885,
+   "step_20_24": -0.4215406474293406,
+   "converged": false,
+   "sigma_used": 1.4718842257103477,
+   "distance_from_null": 3.0042270381231893,
+   "null": 4.0,
+   "gates_at_n24": {
+    "G2": true,
+    "G4": false,
+    "G5": true
+   },
+   "barred": true,
+   "plateau_n_at_24": 0,
+   "two_point_exponent_at_24": 7.190736201907731,
+   "outcome": "VOID_ARM"
+  },
+  "E": {
+   "alpha_by_n": {
+    "16": -0.6524272053547021,
+    "20": 0.33641817996977386,
+    "24": -1.0036108749498807
+   },
+   "step_16_20": 0.988845385324476,
+   "step_20_24": -1.3400290549196545,
+   "converged": false,
+   "sigma_used": 1.3400290549196545,
+   "distance_from_null": 3.0036108749498807,
+   "null": 2.0,
+   "gates_at_n24": {
+    "G2": false,
+    "G4": true,
+    "G5": false
+   },
+   "barred": true,
+   "plateau_n_at_24": 0,
+   "two_point_exponent_at_24": 2.049170559132551,
+   "outcome": "VOID_ARM"
+  }
+ },
+ "VERDICT": "VOID",
+ "reading": "The verdict is computed from pre-registered rules only. Outcome N is a Level 1 validation, not a discovery. Only DEV is a finding."
+}

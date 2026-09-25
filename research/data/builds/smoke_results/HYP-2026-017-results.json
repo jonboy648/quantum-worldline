@@ -1,0 +1,67 @@
+{
+  "hypothesis": "HYP-2026-017 + HYP-2026-020",
+  "platform": "Local Braket emulator",
+  "mode": "local_simulator",
+  "timestamp": "2026-05-05T18:35:15Z",
+  "elapsed_s": 1505.4,
+  "n_atoms": 24,
+  "n_boundary": 8,
+  "T_total_us": 2.8000000000000003,
+  "T2_headroom_us": 1.2,
+  "E0": 2.0864,
+  "E_single_anchor": 1.6580000000000001,
+  "dr_values": [
+    1,
+    2,
+    4
+  ],
+  "F_values": [
+    0.3993,
+    0.30959999999999965,
+    0.11509999999999931
+  ],
+  "F_errors": [
+    0.02400338093852614,
+    0.018634492439559475,
+    0.007061824727363277
+  ],
+  "F_ref_SIM015d": [
+    -2.243086,
+    -0.521763,
+    -0.044416
+  ],
+  "fit": {
+    "alpha": NaN,
+    "dalpha": NaN,
+    "A": NaN,
+    "dA": NaN,
+    "n_points": 0
+  },
+  "alpha_reference": 4.071,
+  "sigma_alpha_expected": 1.4445060368441822,
+  "tee": {
+    "S_topo": 0.7988370474793065,
+    "S_topo_err": 0.5757834775006369,
+    "S_topo_predicted": 0.0,
+    "S_B": 2.66845508954843,
+    "S_AB": 3.8965188188921807,
+    "S_BC": 5.027700622221518,
+    "S_ABC": 5.456927304085963,
+    "Z_avg": -0.445,
+    "Z_ferromagnetic_check": "FAIL (ferromagnetic, TEE invalid)"
+  },
+  "publication_checks": {
+    "alpha_within_0p5_of_4_at_3sigma": false,
+    "tee_within_0p2_of_ln2": false,
+    "non_ferromagnetic": false
+  },
+  "cost_estimate": {
+    "shots_gs": 200,
+    "shots_single_per_dr": 100,
+    "shots_dual_per_dr": 200,
+    "n_dr": 3,
+    "shots_tee": 600,
+    "total_shots_approx": 2000,
+    "cost_usd_estimate": 20.0
+  }
+}

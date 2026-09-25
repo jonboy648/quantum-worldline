@@ -1,0 +1,47 @@
+{
+  "id": "SIM-2026-056",
+  "type": "classical",
+  "date": "2026-06-26",
+  "hypothesis_id": "HYP-2026-028",
+  "method": "MERAKit.jl (Hauru 2007.03638) ternary MERA, Riemannian LBFGS, direct-init at bond dim 6, block_size=2, dense ComplexSpace. Julia 1.8.5, SINGLE-THREAD BLAS (deterministic). Critical Ising (J XX + h Z). One-site scaling superoperator A^(1) (center isometry channel) diagonalized for scaling operators phi_alpha and dims Delta=-log_3(lambda). One-site fixed-point density matrix rho1 (descend channel), rho3 = w rho1 w' (3 children of one isometry), rho2 = Tr_3 rho3. Gram-Schmidt orthonormalize {I,sigma,eps} under rho2 (paper Eq. 10). OPE C_abc = 3^Omega tr[(phi_a ox phi_b ox phi_c) rho3], Omega = Da+Db-Dc (Pfeifer-Evenbly-Vidal Eq. 13, binary 2^Omega -> ternary 3^Omega). 6 deterministic seeds, 900 iters.",
+  "chi": 6,
+  "model": "critical Ising (c=1/2) -- VALIDATION CASE for the OPE pipeline (exact CFT C_sigma_sigma_eps = 0.5)",
+  "purpose": "Run B: extract the OPE structure constant C_{sigma sigma eps} from MERA and validate against the known Ising value 0.5 BEFORE trusting any tricritical C_TTT. Pre-registered gate: |C_sse - 0.5| must be small at the reachable chi.",
+  "driver": "research/tools/MERAKit.jl/qw_ope_constants.jl",
+  "env": "research/tools/merakit-setup/RUN-MERAKIT.md (Julia 1.8, clean HOME, --project=.); export OPENBLAS_NUM_THREADS=1 for determinism",
+  "what_works": {
+    "merakit_runs": "ternary MERA optimizes; E(chi=6) ~ -1.273232 vs exact -4/pi=-1.273240 (err ~7e-6 on best basin)",
+    "determinism": "single-thread BLAS makes minimize_expectation reproducible (3 trials seed1 identical E=-1.2732186548); multi-thread BLAS lands DIFFERENT basins per run -- this was the cause of earlier non-reproducibility",
+    "scaling_dimensions": "width-2 scalingdimensions reproduces the Ising CFT tower on clean basins: best seed {0, 0.121 (sigma, CFT 0.125), 0.981 (eps, CFT 1.0), 1.118, 1.135, 1.857, 1.892, 1.969}; Delta_T~2.0 present",
+    "two_point_normalization": "Gram-Schmidt under rho2 gives <sigma|eps>=0 to 1e-15, <ss>=<ee>=1 (paper Eq. 10 satisfied cleanly)"
+  },
+  "results_all_seeds_chi6": {
+    "seed1": {"E": -1.27323241, "w2_Dsig": 0.1309, "w2_Deps": 1.0128, "C_sse": 12.069, "C_sss_parity": 92.271, "C_eee": 17.494},
+    "seed2": {"E": -1.27320437, "w2_Dsig": 0.7866, "w2_Deps": 0.9635, "C_sse": 6.563, "C_sss_parity": 8.046, "C_eee": 11.684},
+    "seed3": {"E": -1.27321395, "w2_Dsig": 0.3871, "w2_Deps": 0.8974, "C_sse": 0.477, "C_sss_parity": 4.985, "C_eee": 16.425},
+    "seed4": {"E": -1.27321052, "w2_Dsig": 0.6759, "w2_Deps": 0.8370, "C_sse": 17.181, "C_sss_parity": 6.556, "C_eee": 22.225},
+    "seed5": {"E": -1.27322725, "w2_Dsig": 0.1213, "w2_Deps": 0.9812, "C_sse": 0.0823, "C_sss_parity": 0.085, "C_eee": 1.792},
+    "seed6": {"E": -1.27322486, "w2_Dsig": 0.1433, "w2_Deps": 1.0597, "C_sse": 0.195, "C_sss_parity": 1.006, "C_eee": 1.879}
+  },
+  "best_spectrum_seed": {
+    "seed": 5,
+    "w2_Delta_sigma": 0.1213,
+    "w2_Delta_eps": 0.9812,
+    "one_site_Delta_sigma": 0.1181,
+    "one_site_Delta_eps": 0.9688,
+    "C_sigma_sigma_eps": 0.0823,
+    "C_sss_parity_residual": 0.085,
+    "raw_tr_term": 0.18520,
+    "Omega": -0.7386,
+    "three_to_Omega": 0.44421,
+    "selection": "width-2 Delta_sigma nearest CFT 1/8 (cleanest fixed point)"
+  },
+  "cft_target": {"C_sigma_sigma_eps": 0.5, "C_sss": 0.0, "C_eee": 0.0, "source": "Pfeifer-Evenbly-Vidal arXiv:0810.0580 Eq.15"},
+  "gate_pass": false,
+  "verdict": "VALIDATION GATE NOT PASSED. The extracted C_{sigma sigma eps} does NOT reproduce 0.5 and is UNSTABLE across basins: across 6 deterministic chi=6 seeds |C_sse| ranged 0.08..17.2 (best-spectrum seed 5 gave 0.082; a poor-spectrum seed accidentally gave 0.477). The parity-forbidden |C_sss| (must vanish by Z2) ranged 0.09..92 and ANTI-correlated with dimension cleanliness, proving the rho^(3) 3-point object is geometrically WRONG, not merely under-converged. The dimensions and 2-point normalization ARE correct (Delta_sigma->0.121, Delta_eps->0.981, <sigma|eps>=0), so the failure is isolated to the 3-point density matrix construction.",
+  "root_cause": "rho^(3) = w rho1 w' (three children of ONE ternary isometry) is NOT a translation-invariant 3-contiguous-site CFT density matrix: within a ternary block sites 1,2,3 are inequivalent (the center site does not touch a disentangler, the edges do). A correct width-3 scale-invariant marginal needs the full causal cone INCLUDING the inter-block disentanglers, or the genuine PEV algorithm of coarse-graining each operator individually until adjacent (their Fig 2iii). Neither is implemented here.",
+  "chi_is_not_the_blocker": "Dimensions are already clean at chi=6 (Delta_sigma=0.121 vs CFT 0.125). Pushing chi will NOT fix C_sse; the rho^(3) CONSTRUCTION must be corrected first. Once correct, chi=10-12 (RunPod A100/H100) would tighten sigma to 1/8 and the structure constant in turn.",
+  "next_step": "Implement the correct width-3 causal-cone density matrix (with disentanglers) in qw_ope_constants.jl, re-validate that C_sse->0.5 stably across basins AND C_sss->0, THEN and only then extract tricritical C_TTT.",
+  "comparison": "classical_wins",
+  "notes": "Honest negative result per the killer-issue discipline: a structure constant is INVALID unless the validation case (Ising 0.5) is reproduced first. It is not. Real numbers reported, not fudged. Determinism fix (single-thread BLAS) and clean dimension/2-point extraction are reusable wins carried forward."
+}

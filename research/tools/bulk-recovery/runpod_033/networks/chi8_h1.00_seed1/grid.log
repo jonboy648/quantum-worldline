@@ -1,0 +1,1 @@
+network /workspace/hyp033/networks/chi8_h1.00_seed1: chi=8 h=1.0000 seed=1 E_inf=-1.273239281470 basin_clean=true | ring E0/3=-1.273419 gap=0.0016 herm=7.3e-17

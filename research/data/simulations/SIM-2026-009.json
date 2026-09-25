@@ -1,0 +1,119 @@
+{
+  "id": "SIM-2026-009",
+  "date": "2026-03-17",
+  "hypothesis": "HYP-2026-002",
+  "description": "Holographic force profile on SIM-2026-008c ground state (24q/5L, Z2 ALM+projection, 3.33% error)",
+  "input_theta": "D:/quantum-worldline/research/data/simulations/theta_opt_SIM2026008c.npy",
+  "ground_state": {
+    "qubits": 24,
+    "layers": 5,
+    "energy": -29.192857,
+    "energy_exact": -30.199712,
+    "energy_error_pct": 3.334,
+    "parity": 1.0,
+    "magnetization": 0.0
+  },
+  "force_profile": {
+    "C_vac": {
+      "1": 0.6261469872,
+      "2": 0.6964110993,
+      "3": 0.6933229673,
+      "4": 0.7002337655,
+      "5": 0.7060526379,
+      "6": 0.7063879587,
+      "7": 0.701847742,
+      "8": 0.7035400648,
+      "9": 0.7108254805,
+      "10": 0.7085572448,
+      "11": 0.6994173724,
+      "12": 0.700678491
+    },
+    "V_Ry_hologron": {
+      "1": 0.2025022002,
+      "2": 0.1764749941,
+      "3": 0.1746929412,
+      "4": 0.1707198933,
+      "5": 0.1699756932,
+      "6": 0.1693585785,
+      "7": 0.1695460091,
+      "8": 0.1694376482,
+      "9": 0.1678675384,
+      "10": 0.16860446,
+      "11": 0.1710774884,
+      "12": 0.1705830265
+    },
+    "V_BP_dual": {
+      "1": -0.6250118482,
+      "2": -0.6962215183,
+      "3": -0.6931552352,
+      "4": -0.7000493341,
+      "5": -0.7058745943,
+      "6": -0.7062075432,
+      "7": -0.7016845893,
+      "8": -0.7033555453,
+      "9": -0.7106451687,
+      "10": -0.7083766447,
+      "11": -0.6992527991,
+      "12": -0.7004962945
+    },
+    "V_BP_single": {
+      "1": -1.0951459439,
+      "2": -0.6964110993,
+      "3": -0.6933229673,
+      "4": -0.7002337655,
+      "5": -0.7060526379,
+      "6": -0.7063879587,
+      "7": -0.701847742,
+      "8": -0.7035400648,
+      "9": -0.7108254805,
+      "10": -0.7085572448,
+      "11": -0.6994173724,
+      "12": -0.700678491
+    }
+  },
+  "fits": {
+    "Ry_all_dr": {
+      "C1": 0.16977815,
+      "C2": -0.12898976,
+      "xi": 0.7259,
+      "xi_err": 0.0908
+    },
+    "Ry_dr_ge2": {
+      "C1": 0.16932967,
+      "C2": -0.02859069,
+      "xi": 1.5111,
+      "xi_err": 0.5378,
+      "l_AdS": 1.4427,
+      "xi_deviation_pct": 4.7,
+      "xi_within_1sigma": true
+    },
+    "BP_dual_dr_ge2": {
+      "C1": -0.7047645,
+      "C2": -0.02985419,
+      "xi": 1.9708,
+      "xi_err": 1.9495,
+      "xi_deviation_pct": 36.6,
+      "xi_within_1sigma": false
+    }
+  },
+  "diagnoses": {
+    "C_vac_structure": "FERROMAGNETIC_GHZ",
+    "C_vac_mean_dr_ge2": 0.70248,
+    "C_vac_std_dr_ge2": 0.004995,
+    "C_vac_expected_critical_r12": 0.376,
+    "ground_state_verdict": "GHZ-like superposition with ferromagnetic long-range order. C_vac is flat at 0.70 instead of decaying as r^{-1/4} expected at criticality.",
+    "Ry_signal_structure": "Large constant offset C1=0.169 + small exponential decay C2=0.029*exp(-dr/1.51). Decay SNR only 17%. xi=1.511 overlaps l_AdS=1.443 at 1-sigma.",
+    "BP_signal_structure": "V_BP = -C_vac + 1.8e-4 flat residual. Boundary-primary operators destroy ZZ correlations entirely (C_two_BP ~ 1.8e-4 << C_vac ~ 0.70). No holographic decay visible.",
+    "root_cause": "Energy-correlation decoupling: 3.33% energy error is achievable with GHZ-like ferromagnetic superposition that has wrong entanglement structure. MERA architecture cannot simultaneously enforce Z2, low energy, AND critical correlations."
+  },
+  "runtime_s": 263.9,
+  "hardware": "local_cpu",
+  "status": "COMPLETE",
+  "verdict": "INCONCLUSIVE_WRONG_GROUND_STATE",
+  "next_steps": [
+    "Need ground state with POWER-LAW C_vac ~ r^{-1/4} -- currently have flat C_vac ~ 0.70",
+    "Ry hologron xi=1.511 is intriguing (4.7% from l_AdS) but signal quality too poor (SNR 17%)",
+    "Architecture change needed: deeper MERA or bond dimension increase beyond chi=2",
+    "Alternative: use classical exact ground state (eigsh) + boundary-primary force measurement without VQE"
+  ]
+}

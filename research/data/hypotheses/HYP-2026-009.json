@@ -1,0 +1,34 @@
+{
+  "id": "HYP-2026-009",
+  "claim": "The Roux (2026) quantization condition for the Chern-Simons level (k must be an integer, where 2 * beta_m * sqrt(1/Lambda) in Z) predicts that improvements in holographic MERA quality are DISCONTINUOUS at integer bond dimensions chi, not smooth. Specifically, the bond dimension chi maps to the CS level k in the MERA/AdS-CS correspondence (Nozaki-Takayanagi-Ugajin 2012, Bao et al. 2015), and only integer k values correspond to well-defined holographic theories. Therefore: moving from chi=2 to chi=3 should produce a qualitatively larger improvement in holographic signal quality (force signal range, fitted xi accuracy relative to l_AdS, energy error convergence rate) than naive parameter-count scaling (chi=3 has ~2.25x more parameters than chi=2) would predict.",
+  "confidence": "low",
+  "confidence_rationale": "The chi <-> CS level identification is established in the MERA/holography literature but the specific QUANTIZATION prediction from Roux is a new extrapolation not previously tested. The CS level k must be integer for large gauge invariance (Roux, end of Section II.3), but it is unclear whether this translates directly to MERA bond dimensions in finite-size simulations. UPDATED 2026-03-26: Qasim-Eisert-Jahn (arXiv:2508.16570, SCAN-003) proves that RTN equilibration behavior changes qualitatively between chi=2 and chi=3 in hyperbolic geometries. This is independent theoretical support for a discrete transition at chi=3. Confidence remains low (not raised to medium) because equilibration class transitions are not the same as holographic quality transitions, but the supporting structure is now stronger. Would rise to medium if chi=3 VQE run confirms superlinear quality improvement.",
+  "source_findings": ["PAPER-2026-023", "PAPER-2026-009", "HYP-2026-005", "SIM-2026-002", "SCAN-003"],
+  "testable": true,
+  "test_design": "1. Run MERA VQE optimization for 16q Ising chain at chi=2 (baseline: SIM-2026-002, energy error 1.87%), chi=3 (new simulation), and chi=4 (if feasible). 2. For each chi: record (a) energy error relative to E0, (b) force signal range (number of dr with |V(dr)| > 5*noise_floor), (c) fitted xi and its deviation from l_AdS=1/log(2), (d) convergence rate (energy decrease per function evaluation). 3. Compute improvement ratios: delta(quality)/delta(chi) for chi=2->3 vs chi=3->4. 4. Compare to parameter-count scaling: chi=3 has (3/2)^2 ~ 2.25x more variational parameters. If quality improves by more than 2.25x from chi=2 to chi=3, the discontinuous improvement prediction is supported.",
+  "refutation_criteria": "If quality improvements scale smoothly with parameter count (improvement proportional to chi^2 within 50%), Roux's quantization prediction does not manifest and the chi <-> CS level identification at this level of precision is unlikely. If chi=3 gives WORSE results than chi=2 (possible if expressibility causes overfitting for small systems), this is a failure mode unrelated to the Roux prediction.",
+  "hardware_required": "Local GPU (RTX 4060, WSL2) for chi=3 at 16q (estimated ~4x SIM-2026-002 compute time). RunPod A6000 for 24q chi=3.",
+  "earliest_testable": "2026-Q1",
+  "feasibility_verdict": "NEEDS_SIM",
+  "feasibility_notes": "Requires new circuit ansatz code for chi=3 MERA. Existing vqe_z2_enforced_24q_runpod.py uses chi=2 (binary MERA). Modifying to chi=3 requires changing disentangler structure. Compute estimate: chi=3 at 16q ~ 4x SIM-2026-002 ~ 400s on local GPU. Chi=3 at 24q ~ 2-4 hours on RunPod. This should be run AFTER SIM-2026-007 completes to save RunPod costs.",
+  "philosophical_implications": "If bond dimension quantization is confirmed, it would mean that not all MERA circuits are created equal from a holographic standpoint. Only those with integer CS level correspond to genuine AdS/CFT-consistent theories. This would provide a principled design criterion for holographic tensor networks: the bond dimension should be chosen as an integer CS level, not optimized continuously. It would also suggest that the 'landscape' of holographic MERA theories is discrete, not continuous -- a discretization of quantum gravity from below.",
+  "status": "PARTIALLY_SUPPORTED",
+  "justified_by": ["SIM-2026-012", "SIM-2026-015", "SIM-2026-015b", "SIM-2026-015c"],
+  "status_writeback_2026_08_17": {
+    "from": "proposed",
+    "to": "PARTIALLY_SUPPORTED",
+    "trigger": "docs/governance/AUDIT-2026-08-11.md defect D-10: nine tested hypotheses were still reading 'proposed' on disk while the out-of-repository memory index carried a verdict. The structured record, not the memory file, is now the authority.",
+    "verified_against": "The linked SIM records' own verdict fields were read before this status was written. SIM-2026-012 (verdict COMPLETE) records the chi-sweep complexity analysis: chi=2 and chi=3 are both CLASSICALLY_EASY on treewidth/chi_eff, but chi=3 crosses the RTN equilibration phase boundary (area-law -> volume-law), a qualitative change at an integer bond dimension. SIM-2026-015 (verdict PASS, 8q chi=3) records power_law_signal = true and phase_transition_signal = FALSE, with best_S_top = 0.291 sitting below the chi=2 bound 0.693 -- no jump in S_top. SIM-2026-015c gives the 16q chi=3 energy error 0.151% against the chi=2 baseline 1.87%, a ~12x improvement where naive parameter-count scaling ((3/2)^2 = 2.25x) would predict ~2.25x.",
+    "why_PARTIALLY_SUPPORTED_and_not_SUPPORTED": "The energy-error side of the prediction is met and exceeds the parameter-count null by ~5x; the entanglement side is not -- S_top shows no discontinuity at 8q, which is the observable most directly tied to the claimed integer-CS-level quantization. Half the registered test design (the improvement-ratio comparison at chi=3->4) was never run at all, so the DISCONTINUITY as such is untested: one improvement ratio does not establish a step. Confidence stays low.",
+    "caveats": [
+      "The 16q chi=3 run is SINGLE SEED (42) with no basin control, so the 0.151% number carries no optimizer-variance estimate.",
+      "SIM-2026-012's own chi=2 record reads verdict CLASSICALLY_EASY while its qcup_framing block calls chi=3 'genuine quantum advantage territory' -- an internal contradiction flagged in the audit's section 6.3. That framing is NOT relied on here.",
+      "chi=4 was never run, so no second point on the improvement curve exists."
+    ]
+  },
+  "created_date": "2026-03-11",
+  "last_updated": "2026-08-17",
+  "created_by": "theory-lead",
+  "source_analysis": "roux-superspace-analysis.md",
+  "speculative_flag": true
+}

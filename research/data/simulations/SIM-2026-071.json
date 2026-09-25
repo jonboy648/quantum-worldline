@@ -1,0 +1,80 @@
+{
+  "id": "SIM-2026-071",
+  "date": "2026-08-11",
+  "title": "HYP-028 Phase 2: biorthogonal Koo-Saleur elements at Yang-Lee measure the TRUE central charge -- c_KS = -4.29 +/- 0.15 vs c = -22/5 = -4.4; c_eff = +2/5 EXCLUDED by sign and magnitude",
+  "hypothesis_links": ["HYP-2026-028"],
+  "method": "Momentum-resolved biorthogonal sparse ED of the PT-symmetric Yang-Lee chain (lambda=4, h = h_c^inf = 1.5587127 from SIM-070) at L=10..18. Translation-composed non-Hermitian Arnoldi (spectrum real in the PT-unbroken phase); left states via eta=parity (left = P*right). PRODUCT-form KS central charge c_KS = 2<vac_L|H_-2|T_R><T_L|H_+2|vac_R>/(<T_L|T_R><vac_L|vac_R>)*(L/(2 pi v_T))^2 -- no square roots, sign is part of the measurement. THE VACUUM IS |1>, THE SECOND k=0 STATE (physical GS is |phi>, Delta_phi = -2/5). v_T from Delta_T = 2 above |1>; T identified by Delta-gate (1.75, 2.25) above vacuum + element dominance in-window. KS-operator momentum orientation determined empirically (both orientations computed; the dead one is a structural zero ~1e-26). Driver: research/tools/yanglee-pt/qw_yanglee_ks.jl.",
+  "unitary_control": {
+    "model": "critical TFIM (same code path, MODE=ising)",
+    "c_KS_by_L": [[12, 0.517483], [14, 0.512776], [16, 0.509748]],
+    "extrapolated": "0.49986 (Richardson in 1/L^2 -- unitary corrections are L^-2) vs exact 0.5 (0.03%)",
+    "checks": "all biorthogonal norms +1.0000 (Hermitian limit), Z2 structural zeros ~1e-24, same orientation convention as YL"
+  },
+  "results": {
+    "c_KS_by_L": [[10, -1.413195], [12, -1.702883], [14, -1.953729], [16, -2.169926], [18, -2.356244]],
+    "extrapolation": "pairwise 1/L intercepts -3.151, -3.459, -3.683, -3.847; diff ratios 0.730, 0.728 (STABLE); geometric tail sum -> -4.285. Free-exponent fits are degenerate (w->0 runaway) and discarded honestly. Quoted: c_KS = -4.29 +/- 0.15 (estimator systematic).",
+    "sign": "NEGATIVE at every L, both chiralities, machine-real (Im ~ 1e-12 relative)",
+    "spectrum_checks": "Delta_vac(T) -> 2.0 (1.945 -> 1.982 monotone); k=+-2 cluster structure matches the M(2,5) phi level-2 null-vector prediction exactly (ONE phi-descendant at Delta_vac -> 1.6 below T); <1|1> biorthogonal norm NEGATIVE at every L (the conformal vacuum is a negative-norm state -- the indefinite metric visible raw); v_ref from the exact Delta = 2/5 (1-phi) split, 4.24 -> 4.28",
+    "discrimination": "c = -22/5 = -4.400: CONSISTENT (2.6% at ED scale). c_eff = +2/5 = +0.400: EXCLUDED (wrong sign, ~11x magnitude)."
+  },
+  "key_findings": [
+    "THE HYP-028 QUESTION IS ANSWERED at ED scale: the Koo-Saleur stress-tensor construction SURVIVES non-unitarity and measures the TRUE central charge c = -22/5, including its indefinite-metric sign -- NOT the effective (Casimir) charge c_eff = 2/5 that governs finite-size energies. [AMENDED 2026-08-17: the sentence that stood here -- 'The biorthogonal element structure sees what the energy spectrum cannot.' -- is WITHDRAWN as false. c = c_eff + 24*h_min recovers the true c from the energy spectrum by arithmetic, and true/complex c has been obtained from spectral routes by Tang et al. (PRL 133, 076504 (2024)) and Zhou & Wang (arXiv:2405.01640). See prior_art.premise_also_false. The measurement itself is unaffected; only the superiority framing is retracted.]",
+    "POSITIONING AGAINST PRIOR ART (literature gate run 2026-08-17, outcome FAILED -- the priority claim previously carried here is WITHDRAWN and preserved verbatim in prior_art): biorthogonal Koo-Saleur extraction of a true NEGATIVE central charge on a non-Hermitian lattice was demonstrated by Io, Huang & Hsieh (arXiv:2602.02649) for free fermions at c = -2, and lattice measurement of true vs effective c on non-unitary chains by Couvreur, Jacobsen & Saleur (PRL 119, 040601 (2017)). The present work applies the construction to an INTERACTING chain at the Yang-Lee point M(2,5), and documents an inversion of the unitary state-identification rule.",
+    "The T-identification discipline INVERTS at YL: the cross-module product to the phi-descendant is ~10x LARGER than T's (in unitary chains cross-tower elements are ~1e-4 suppressions). Delta-gating above the vacuum is mandatory; raw element dominance silently measures the wrong state.",
+    "Implication for the force program: C_TTT = 2 sqrt(2)/sqrt(c) is IMAGINARY at c < 0 -- the graviton self-coupling does not survive as a real amplitude in the non-unitary theory even though alpha = 2 Delta_T = 4 kinematics does. Interpretation (Phase 3, open): the stress-tensor exchange amplitude changes character, not just magnitude, when reflection positivity drops.",
+    "The same two-level Richardson estimator that hit 0.01% on SIM-070's R_inf shows MORE stable ratios here (0.730/0.728); the 2.6% residual vs -22/5 is finite-size, not estimator noise. puMPS-scale L would sharpen the third digit."
+  ],
+  "caveats": "ED-scale only (L<=18); corrections are slow (effective w < 1) so the magnitude carries the +/-0.15 estimator band -- the SIGN and the 11x separation from c_eff are unambiguous. Residual h_c^inf error contributes <=0.01 at L=18 (SIM-070 h-sensitivity scaling). L=20 (1M-dim) skipped: sparse H_n build cost, cannot change the discrimination.",
+  "verdict": "PASSED (discrimination decisive). HYP-028 core question answered: the KS/force construction generalizes to non-unitary CFT carrying the true central charge with its sign. Write-back to HYP-2026-028 (status -> SUPPORTED at ED scale, confidence medium). Phase 3 candidates: interpretation of imaginary C_TTT; puMPS-scale sharpening; the +2.0-Delta phi-descendant cross-module element (anomalously large -- possibly its own observable).",
+  "literature_gate": {
+    "run": "2026-08-17",
+    "by": "qw-scientific-audit workflow",
+    "outcome": "FAILED"
+  },
+  "prior_art": {
+    "summary": "The novelty claim originally carried in key_findings[1] FAILED its literature gate on 2026-08-17. It is WITHDRAWN and replaced by a cited positioning statement. This record is amended ADDITIVELY per RESEARCH-DIRECTOR.md section 32 (the SIM-036 -> SIM-039/040 pattern recorded in ERRATA D5): the original claim, the evidence available at the time, the challenge, the corrected analysis and the changed conclusion are all preserved below.",
+    "original_claim_withdrawn_2026_08_17": "First lattice extraction (to our knowledge) of a NEGATIVE central charge from stress-tensor matrix elements; standard approaches obtain only c_eff from Casimir scaling.",
+    "evidence_at_the_time": "None. No literature gate was run before the claim was written -- grep for 'prior_art', 'novelty' or 'literature' on this record returned 0 hits (AUDIT-2026-08-11 defect D-5). The claim rested only on the absence of a counterexample in the project's own 139-record paper catalogue, which contains no non-Hermitian or biorthogonal entries at all.",
+    "challenge": "docs/governance/AUDIT-2026-08-11.md section 4.1 and defect D-5. Two literature agents working from disjoint sources (one arXiv-export-API only, one WebSearch / Semantic Scholar / INSPIRE / ar5iv / publisher-page only) converged, without contact, on the same nearest prior art.",
+    "references": [
+      {
+        "citation": "Iao-Fai Io, Fu-Hsiang Huang & Chang-Tse Hsieh, 'Non-Hermitian free-fermion critical systems and logarithmic conformal field theory', arXiv:2602.02649 [cond-mat.str-el], v1 2026-02-02, v2 2026-04-06",
+        "citation_verified": "2026-08-17 against the arXiv export API (id_list query): title, all three author names, v1 date and primary category confirmed exactly as written. Not inherited from the audit document.",
+        "what_it_did": "1+1D non-Hermitian critical lattice chain; biorthogonal left/right pairing; Koo-Saleur Fourier modes, named; the central term of the resulting Virasoro algebra; the value obtained is the TRUE negative c (= -2), not c_eff; and an explicit claim that the KS / stress-tensor route survives non-unitarity. Cites Koo-Saleur hep-th/9312156 and Milsted-Vidal arXiv:1706.01436 -- the identical two references this pipeline rests on.",
+        "distance": "Posted six months and nine days before this run (2026-08-11). Aggravating: it is reference [24] of PAPER-133, the paper this phase was designed around and for which a 'FULL v2 READ DONE' was logged on the same day. The pointer was in hand and was not followed.",
+        "also_documents": "That the BARE KS density fails at a non-Hermitian critical point and needs a lattice total-derivative improvement -- a live candidate explanation for the 2.6% residual this record attributes to finite size."
+      },
+      {
+        "citation": "Romain Couvreur, Jesper Lykke Jacobsen & Hubert Saleur, 'Entanglement in non-unitary quantum critical spin chains', PRL 119, 040601 (2017), DOI 10.1103/PhysRevLett.119.040601, arXiv:1611.08506 (v1 2016-11-25)",
+        "citation_verified": "2026-08-17 against the arXiv export API: title, all three author names, v1 date and the PRL journal reference/DOI confirmed. Not inherited from the audit document.",
+        "what_it_did": "Left and right eigenstate entropies on non-Hermitian critical chains that scale with the TRUE c, with a lattice measurement of a negative true c (-3/5) placed side by side with the positive c_eff of the same model. Its introduction names this record's exact headline pair verbatim: 'for the Yang-Lee singularity, c = -22/5 but c_e = 2/5.'",
+        "distance": "Nine years prior, in PRL."
+      }
+    ],
+    "premise_also_false": "The struck claim's premise -- 'standard approaches obtain only c_eff from Casimir scaling' -- is not merely unnovel, it is wrong. Complex/true c has been obtained from biorthogonal Casimir scaling by Tang et al., PRL 133, 076504 (2024); negative c from OBC energy scaling by Zhou & Wang, arXiv:2405.01640; see also Tu, Tzeng & Chang, SciPost Phys. 12, 194 (2022), Chang et al., PRResearch 2, 033069 (2020), and Shimizu & Kawabata, PRB 112, 085112 (2025) -- the last by the same senior author whose paper SIM-070 reproduces. Because c = c_eff + 24*h_min, c is recoverable from c_eff by arithmetic; the companion gloss in key_findings[0], 'the biorthogonal element structure sees what the energy spectrum cannot', is withdrawn on the same grounds.",
+    "what_remains_distinct": [
+      "(i) A finite-L numerical, error-barred KS ladder in an INTERACTING non-Hermitian chain (prior art is quadratic/free-fermion and fixes c analytically).",
+      "(ii) The sharpest available c-vs-c_eff instance: sign flip plus ~11x magnitude separation.",
+      "(iii) The provable invariance of the product-form c_KS estimator under eigenvector rescaling and under the full pseudo-Hermitian metric family (true, and previously unclaimed).",
+      "(iv) The state-identification INVERSION at Yang-Lee (key_findings[2]): the cross-module phi-descendant element is ~10-11x larger than T's, with opposite sign. The smallest and most defensible atom here, and the one for which no prior statement was found.",
+      "Regime difference: the prior free-fermion work sits AT an exceptional point; this run sits inside the PT-unbroken interior.",
+      "All of the above are Level 1-2 on the RESEARCH-DIRECTOR.md section 5 scale. None is Level 3."
+    ],
+    "novelty_verdict": "NOT NOVEL as originally claimed; residue is Level 1-2",
+    "search_plan_remaining": "INSPIRE, Crossref and Semantic Scholar were not swept (rate limits / budget). Forward citations of arXiv:1611.08506 (a highly cited PRL) were not walked. L. Liu's 2023 Saleur-school thesis and arXiv:2604.25999 / 2606.19732 were surfaced but not opened. Highest-value remaining check: whether arXiv:2007.11539 Appendix A already fits c numerically from KS matrix elements in a logarithmic model -- a hit there pushes the prior art back to 2020 and erases residue items (i) and (ii).",
+    "changed_conclusion": "The measured content of this record -- the negative sign at every L, the exclusion of c_eff, the unitary control, and the T-identification inversion -- is UNCHANGED by the gate outcome. What is withdrawn is the priority framing and the false premise attached to it. Separately, the quoted magnitude and its band are challenged by audit defect D-8 and are NOT revised here (that defect is outside this remediation's scope).",
+    "catalogue_action_required": "Neither arXiv:2602.02649 nor arXiv:1611.08506 exists anywhere in research/data/papers/. Both must be catalogued as PAPER records, together with Tang et al. PRL 133, 076504 and the Milsted-Vidal / Zou-Milsted-Vidal methodological parents.",
+    "downstream_records_affected": [
+      "NEXT-SESSION.md -- carried the same claim; struck 2026-08-17.",
+      "HYP-2026-028.json -- status and write-back inherit the framing (not edited here; different owner).",
+      "research/ERRATA.md -- an entry is required (not edited here; different owner).",
+      "Project memory index (MEMORY.md) hyp-028 entries."
+    ]
+  },
+  "files": {
+    "driver": "research/tools/yanglee-pt/qw_yanglee_ks.jl",
+    "results": "research/tools/yanglee-pt/qw_yanglee_ks_results.jsonl",
+    "design": "research/tools/yanglee-pt/HYP028-BIORTHO-KS-DESIGN.md",
+    "phase1_gate": "SIM-2026-070"
+  }
+}

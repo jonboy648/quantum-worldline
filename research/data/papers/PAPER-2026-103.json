@@ -1,0 +1,34 @@
+{
+  "id": "PAPER-2026-103",
+  "title": "Holographic Representation of One-Dimensional Many-Body Quantum States via Isometric Tensor Networks",
+  "authors": [
+    "Kaito Kobayashi",
+    "Benjamin Sappler",
+    "Frank Pollmann"
+  ],
+  "date": "2025-12-12",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2512.11967",
+  "arxiv_id": "2512.11967",
+  "abstract": "Tensor network methods, most prominently matrix product states (MPS), have become fundamental tools in modern quantum many-body physics. While MPS and extensions like the multiscale entanglement renormalization ansatz (MERA) and tree tensor networks (TTN) efficiently capture area-law entanglement and its logarithmic violations, they inherently struggle to represent highly entangled wavefunctions. Specifically, reaching the volume-law regime typically demands exponential resources within these conventional frameworks. Motivated by this challenge, we propose holographic isometric tensor network states (holographic isoTNS) that simulate quantum lattice models in D spatial dimensions via (D+1)-dimensional networks of tensors. The additional dimension substantially enlarges the representational manifold, while isometric constraints on each tensor ensure efficient contractibility. Using one-dimensional systems as testbeds, we analyze the properties of holographic isoTNS. First, we show that randomly initialized holographic isoTNS typically display volume-law entanglement at fixed bond dimension. Second, through analytic constructions and variational optimization, we demonstrate that holographic isoTNS can faithfully describe a broad class of highly entangled yet low-complexity states. In particular, the ansatz can represent arbitrary fermionic Gaussian states, Clifford states, extensions of rainbow states, and certain short-time-evolved states under local evolution. Third, to exploit this expressivity in broader contexts, we implement a time-evolving block decimation (TEBD) algorithm on holographic isoTNS. While the method remains efficient and scalable, error accumulation over TEBD sweeps suggests the need for further algorithmic improvement. Overall, holographic isoTNS broaden the scope of tensor-network methods, opening new avenues to study physics in the volume-law regime.",
+  "relevance": 3,
+  "tags": [
+    "isometric-tensor-network",
+    "holographic-isoTNS",
+    "MERA",
+    "extra-dimension-geometry",
+    "volume-law-entanglement",
+    "TEBD",
+    "hyp-001-watch"
+  ],
+  "key_claims": [
+    "Holographic isoTNS embed D-dim systems in (D+1)-dim isometric networks; extra dimension enlarges representational manifold",
+    "Randomly initialized holographic isoTNS display volume-law entanglement at fixed bond dimension",
+    "Can faithfully represent fermionic Gaussian, Clifford, rainbow-extension, and short-time-evolved states",
+    "WATCH: alternative bulk-from-boundary ansatz; same 'extra dimension = geometry' thesis as HYP-001 (MERA as discrete AdS), but not MERA"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

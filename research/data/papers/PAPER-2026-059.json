@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-059",
+  "title": "Quantum sensing for gravity cartography",
+  "authors": ["University of Birmingham group"],
+  "date": "2022-01-12",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s41586-021-04315-3",
+  "arxiv_id": null,
+  "abstract": "First outdoor demonstration of quantum gravity gradiometry for subsurface mapping. Achieves statistical uncertainty of 20 E (Eotvos, where 1E=10^-9 s^-2), surveys with 0.5m spatial resolution. Detects a 2-metre tunnel with SNR=8. Average sensitivity 466 E/sqrt(Hz). Demonstrates practical utility of cold-atom gravity sensing for engineering and security applications.",
+  "relevance": 3,
+  "tags": ["gravity-gradiometry", "cold-atom", "subsurface-sensing", "tunnel-detection", "atom-interferometry"],
+  "key_claims": [
+    "Sensitivity: 466 +/- 8 E/sqrt(Hz), statistical uncertainty 20 E in 10 min",
+    "0.5m spatial resolution achievable in survey mode",
+    "2-metre tunnel detected with SNR=8",
+    "First outdoor cold-atom gravity gradiometer field demonstration"
+  ],
+  "hardware_used": "Cold-atom gravity gradiometer (Birmingham)",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

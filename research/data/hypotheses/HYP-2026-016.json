@@ -1,0 +1,74 @@
+{
+  "id": "HYP-2026-016",
+  "claim": "Detection of the alpha=4 holographic force law at statistically significant levels (>=5 sigma, at least 6 data points spanning dr=1..6) requires a minimum of 16 physical qubits, two-qubit gate fidelity >= 99.5%, and all-to-all connectivity. Under these conditions, IonQ's 256q Cambridge system (HW-2026-025) is a viable second hardware path alongside Helios, provided IonQ achieves >= 99.5% two-qubit fidelity on their Cambridge deployment. A fault-tolerant neutral atom run (per PAPER-2026-049 architecture: ~11,495 atoms, ~15h runtime) would achieve noise-free force detection and serve as the definitive hardware validation, but is not required for initial detection. The resource hierarchy is: (1) Helios 57-94q at 99.921% [TESTABLE NOW — already proposed], (2) IonQ 256q Cambridge at TBD fidelity [TESTABLE IF fidelity >= 99.5%], (3) FT neutral atoms ~11,495 atoms [2027+ for definitive run].",
+  "confidence": "low",
+  "confidence_rationale": "The fidelity threshold of 99.5% is estimated from our chi=3 8q gate-count analysis (HYP-2026-013): at 99.5% per gate and ~40 two-qubit gates, cumulative fidelity ~ 82%, which keeps force signal above noise for dr=1..6. The IonQ 256q Cambridge system fidelity has not been publicly disclosed as of 2026-04-26. The fault-tolerant neutral atom estimate (11,495 atoms, 15h) from PAPER-2026-049 assumes a specific error model and compilation overhead that has not been mapped to our specific MERA circuit. Confidence low because the IonQ fidelity is unknown and the FT resource estimate is for a generic dynamics simulation, not our specific circuit.",
+  "source_findings": [
+    "HW-2026-025",
+    "CONN-005",
+    "PAPER-2026-049",
+    "SIM-2026-015"
+  ],
+  "testable": true,
+  "test_design": "1. Compile our chi=3 16q MERA force-measurement circuit (from SIM-2026-015 ansatz) using pytket for IonQ native gate set (MS gates). Count two-qubit gate depth. 2. Apply IonQ noise model at candidate fidelities [99.0%, 99.5%, 99.8%, 99.921% (Helios)] using Qiskit Aer or pytket noise model. Simulate force measurement with 10,000 shots. Extract SNR at each dr. 3. Identify minimum fidelity threshold for 5-sigma detection at dr=1..6. 4. For the FT neutral atom estimate: map our 16q chi=3 circuit onto the Khan et al. (PAPER-2026-049) teleportation-based FT scheme. Estimate: (a) number of logical qubits needed, (b) physical atom count from their overhead ratio, (c) runtime from their gate-time estimates. Compare to their published 11,495 atom / 15h benchmark. 5. Contact IonQ Cambridge team (or Cavendish academic liaison) to obtain actual fidelity spec.",
+  "refutation_criteria": "If noise-model simulation shows that 99.5% two-qubit fidelity is still insufficient for 5-sigma force detection at dr >= 4 (i.e., threshold is actually > 99.9%), IonQ Cambridge is not viable without fidelity improvements. If the FT neutral atom circuit mapping reveals our MERA requires > 50,000 physical atoms (>4x the Khan et al. benchmark), the FT path is not near-term.",
+  "hardware_required": "Local CPU for noise-model simulation (Qiskit Aer). IonQ 256q Cambridge for experimental run (access via Cavendish academic program). FT neutral atom platform (Pasqal Vela or QuEra Gemini) for definitive run — 2027+ timeframe.",
+  "earliest_testable": "2026-Q3",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "feasibility_notes": "Resource-estimation simulation component (noise model sweep across fidelities) is local CPU, TESTABLE_NOW. IonQ circuit compilation requires pytket IonQ backend (no hardware access needed for compilation). FT neutral atom mapping is analytic calculation using PAPER-2026-049 overhead ratios. The experimental IonQ run depends on unknown Cambridge system fidelity and access — this is TESTABLE_FUTURE. Verdict TESTABLE_NOW applies to the simulation/analytic portion which answers the key scientific question (what fidelity threshold is required). Experimental validation on IonQ hardware is TESTABLE_FUTURE (2026-Q3 at earliest if fidelity spec is confirmed >= 99.5%).",
+  "philosophical_implications": "The fidelity threshold for holographic force detection defines a new kind of physical constant: the minimum coherence depth required for emergent geometry to be experimentally legible. Below this threshold, the holographic bulk does not cease to exist (in the eternalist sense), but it becomes epistemically inaccessible — the quantum gravity experiment becomes indistinguishable from classical noise. This is a technological form of the holographic bound: just as the Bekenstein-Hawking entropy sets an information-theoretic bound on bulk geometry, the gate-fidelity threshold sets a decoherence-theoretic bound on our ability to probe it. The resource hierarchy (Helios NOW → IonQ NEAR-TERM → FT neutral atoms FUTURE) represents a roadmap for progressively deeper access to holographic geometry. Under relational QM, each hardware tier defines a different 'observer' with different resolution of the bulk geometry. The fault-tolerant neutral atom run (the definitive tier) would be the first experiment in which the holographic bulk geometry is probed with negligible noise — effectively, the first time the geometry is 'seen' without the observer's limitations contaminating the measurement.",
+  "status": "REFUTED",
+  "justified_by": ["SIM-2026-021"],
+  "status_writeback_2026_08_17": {
+    "from": "proposed",
+    "to": "REFUTED",
+    "trigger": "docs/governance/AUDIT-2026-08-11.md defect D-10.",
+    "verified_against": "SIM-2026-021.json field verdict reads REFUTED verbatim (cross-platform fidelity threshold for alpha=4 force detection: IonQ Cambridge + FT neutral-atom resource estimation, status COMPLETE). The status written here is that record's own verdict.",
+    "what_failed": "The 99.5% two-qubit-fidelity threshold asserted in the claim. SIM-2026-021 finds ~99.99% per gate is needed for a dr >= 4 power-law fit, which is the condition this record's own refutation_criteria names ('if the threshold is actually > 99.9%, IonQ Cambridge is not viable without fidelity improvements'). The refutation branch fired as written.",
+    "what_the_2026_06_08_note_does_and_does_not_change": "result_note_2026_06_08 revises the FT neutral-atom cost downward by ~25x (1839 atoms -> 75-1500) on demonstrated qLDPC encodings, and adds the finding that a high-fidelity NISQ machine at 99.98% likely covers the 16q transport circuit bare-metal. That revises the RESOURCE arithmetic, not the fidelity verdict: the note itself records that 99.98% is 'one notch below the 99.99%/gate that SIM-021 found necessary for dr>=4 power-law fit'. REFUTED stands.",
+    "impact_of_the_alpha_withdrawal": "This hypothesis is a detectability-threshold claim about measuring alpha = 4. SIM-2026-072 withdraws alpha = 4 as the target quantity (corrected: alpha = 2.6 +/- 0.2, channel OPEN). The refutation is unaffected in direction -- a shallower exponent does not lower the fidelity requirement -- but any future re-costing must be stated against the corrected exponent, not against 4."
+  },
+  "created_date": "2026-04-26",
+  "last_updated": "2026-08-17",
+  "created_by": "conjecture-generator",
+  "speculative_flag": true,
+  "pipeline_provenance": {
+    "conjecture_stage": "Generated from HW-2026-025 (IonQ 256q Cambridge) + CONN-005 (FT neutral atom resource estimates from PAPER-2026-049). Frames hardware access as a resource-estimation hypothesis with a clear fidelity threshold. Builds on HYP-2026-013 (gate fidelity analysis for force detection).",
+    "feasibility_stage": "TESTABLE_NOW for simulation/analytic portion. TESTABLE_FUTURE for IonQ experimental run (fidelity unknown, access unestablished). FT neutral atom run: 2027+ timeline per PAPER-2026-049 deployment schedule.",
+    "philosophy_stage": "Gate-fidelity threshold as decoherence-theoretic analog of holographic bound — defines minimum coherence depth for bulk geometry to be epistemically accessible. Hardware tier hierarchy = progressive observer resolution of the holographic geometry."
+  },
+  "result_note_2026_06_08": {
+    "date": "2026-06-08",
+    "author": "hardware-tracker (FT-MERA estimate refresh; ACTIONABLE x3 scans)",
+    "summary": "Refreshed the FT neutral-atom cost for the chi=3 16q MERA transport circuit against the 2026 qLDPC frontier. The original SIM-2026-021 estimate (1839 atoms / 8.1 min) used a surface-code-era 115:1 teleportation overhead (PAPER-2026-049). Two 2026 DEMONSTRATED qLDPC encodings (QuEra Nature 649 [[16,6,4]] 448/96 = 4.67:1 [HW-044]; IonQ trapped-ion breakeven 18/4 = 4.5:1 [HW-055]) give a ~25x better encoding rate.",
+    "revised_atom_count": {
+      "low_bare_qLDPC": 75,
+      "high_20x_with_factories_routing_ancilla": 1500,
+      "old_estimate": 1839,
+      "low_leans_on": "HW-2026-044 (QuEra Nature 649, demonstrated 4.67:1)",
+      "high_leans_on": "HW-2026-056 (Atom Computing 90 syndrome rounds + reloading; ancilla/MSD/routing overhead)",
+      "note": "QuEra co-design ~2:1 (HW-045) EXCLUDED as bound (simulation only, never on hardware)."
+    },
+    "revised_wall_time": {
+      "low_min": 15,
+      "high_min": 95,
+      "old_estimate_min": 8.1,
+      "assumptions": "10k shots for 5-sigma alpha fit; 2-5 ms per logical 2Q (transversal CNOT + syndrome cycle + AOD move); 10-20 parallel 2Q pairs (HW-062). Old 8.1 min was bare-linear with no shot budget and no routing."
+    },
+    "logical_2q_scaling": "8q compiled = 451 ZZPhase (measured, pytket_compile_chi3_8q_results.json). Scaled 2.0-2.5x to 16q (one extra MERA boundary-halving layer + wider top tensor) = 902-1128 logical ZZPhase.",
+    "sol_no_ec_answer": {
+      "verdict": "YES — Sol (HW-061) 10k-gate budget covers chi=3 16q transport WITHOUT error correction, comfortably.",
+      "total_ops_16q": "~3950-4940 ops (incl. virtual Rz) vs 10000 budget; ~2x headroom.",
+      "circuit_fidelity_at_99p98": "79.8-83.5% from the 902-1128 ZZPhase layer alone.",
+      "caveat": "Sol is a 2027 ROADMAP TARGET, not a demonstrated spec. 99.98% is one notch below the 99.99%/gate that SIM-021 found necessary for dr>=4 power-law fit, so dr=1..2 force-existence is solidly in range but the full dr=1..6 alpha fit at 99.98% is borderline.",
+      "implication": "A high-fidelity NISQ gate machine (Sol) likely SUBSUMES the 16q transport goal bare-metal, making FT encoding moot for this specific target; FT atom estimate matters only for the definitive noise-free dr=1..6 run or scaling beyond 16q."
+    },
+    "biggest_remaining_unknown": "The chi=3 isometry decomposition (esp. U(2^4) top-tensor non-Clifford content) has NEVER been mapped onto a logical qLDPC patch. The 20x LOW-to-HIGH spread is almost entirely this one unresolved mapping (logical-qubit inflation + magic-state factory size). Same step SIM-021 deferred; still undone.",
+    "caveats_carried_forward": [
+      "No architectural mapping for chi=3 isometry decomposition onto logical layer.",
+      "No magic-state distillation overhead computed for the top-tensor non-Clifford gates.",
+      "No atom-routing / AOD-scheduling time in the geometry."
+    ],
+    "full_analysis": "research/data/hardware/FT-MERA-ESTIMATE-2026-06-08.md"
+  }
+}

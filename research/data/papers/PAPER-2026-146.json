@@ -1,0 +1,45 @@
+{
+ "id": "PAPER-2026-146",
+ "title": "Biorthogonal Conformal Dynamics in Non-Hermitian Quantum Quenches",
+ "authors": [
+  "Yifan Liu"
+ ],
+ "date": "2026-08-20",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2608.20156",
+ "arxiv_id": "2608.20156",
+ "categories": [
+  "cond-mat.stat-mech",
+  "cond-mat.str-el",
+  "hep-th"
+ ],
+ "abstract": "BCFT description of global quenches extended to interacting non-Hermitian critical chains, where the left covector is part of the quench protocol. Independent left and right preparations define the two temporal boundaries of a strip with complex extrapolation parameters. In the interacting Yang-Lee spin chain, statically calibrated boundary data predict biorthogonal return amplitudes, a primary one-point function and a spatial correlator; the imaginary part of the linear-paired extrapolation parameter predicts the temporal center of an antilinear-paired one-point function at the 1e-3 relative level. Also tests a complex five-state Potts fixed point.",
+ "relevance": 4,
+ "tags": [
+  "non-Hermitian",
+  "biorthogonal",
+  "Yang-Lee",
+  "BCFT",
+  "quench",
+  "complex-CFT",
+  "prior-art"
+ ],
+ "key_claims": [
+  "Biorthogonal (left/right) BCFT framework for global quenches in the interacting Yang-Lee spin chain",
+  "Static calibration of boundary data predicts real-time biorthogonal dynamics at 1e-3 relative accuracy",
+  "Extends to a complex five-state Potts fixed point with complex primary dimensions"
+ ],
+ "relevance_note": "Abstract only, NOT read. Same model family and same biorthogonal left/right pairing as HYP-2026-028 / SIM-2026-070/071, and uses statically calibrated boundary data in the way SIM-070 calibrated g1/R_inf. It does not measure a central charge from Koo-Saleur modes, so it does not bear on the already-retracted c_KS novelty claim (ERRATA E7), but it is now required cite-adjacent prior art for ANY biorthogonal Yang-Lee boundary or dynamics claim this project makes. Relevance 4 because it is the closest in-window paper to an open hypothesis; it is tooling and prior art, not a new test.",
+ "related_hypotheses": [
+  "HYP-2026-028"
+ ],
+ "related_papers": [
+  "PAPER-2026-133",
+  "PAPER-2026-144",
+  "PAPER-2026-145"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "literature-lead scan #20 (sequential arXiv export API)",
+ "discovered_date": "2026-09-23"
+}

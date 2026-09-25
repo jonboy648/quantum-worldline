@@ -1,0 +1,24 @@
+{
+  "id": "HW-2026-040",
+  "name": "FieldLine HEDscan / FLv2",
+  "organization": "FieldLine Medical (USA, CU Boulder spinout)",
+  "technology": "SERF OPM (alkali vapor)",
+  "type": "wearable OPM-MEG helmet system",
+  "date": "2024-2025",
+  "status": "CLINICAL TRIALS",
+  "specs": {
+    "sensitivity": "<50 fT/sqrt(Hz) (intrinsic)",
+    "channels": "64-channel wearable helmet (clinical deployments)",
+    "channel_axes": "2.5D dual-axis (HEDscan); 1D single-axis (FLv2)",
+    "bandwidth": "250 Hz (HEDscan); 360 Hz (FLv2 closed-loop)",
+    "latency_28Hz": "1.8-1.9 ms (HEDscan); 1.2 ms (FLv2)",
+    "operating_temp": "room temperature",
+    "form_factor": "wearable helmet, allows natural head movement"
+  },
+  "cost": {
+    "system": "not publicly stated; estimated $300k-600k for full clinical system",
+    "per_channel": "not stated"
+  },
+  "deployment": "Phase-2 clinical trials with epilepsy and Parkinson's patients (2024-2025). Two US academic medical centres (2024). 40+ clinical sites globally (early 2026).",
+  "bci_relevance": "Clinical-grade wearable OPM-MEG. Best timing performance among commercial systems (1.2 ms latency). Not accessible to independent researcher at this price but defines the gold standard for wearable quantum MEG."
+}

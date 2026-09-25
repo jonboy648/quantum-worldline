@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-053",
+  "title": "Rydberg states of alkali atoms in atomic vapour as SI-traceable field probes and communications receivers",
+  "authors": ["Noah Schlossberger", "Samuel Berweger", "Nikunjkumar Prajapati", "Christopher L. Holloway", "et al."],
+  "date": "2024-09-16",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s42254-024-00756-7",
+  "arxiv_id": null,
+  "abstract": "Technical Review covering the current state of Rydberg atom-based electrometry in room-temperature atomic vapours. Covers EIT/Autler-Townes readout, SI-traceable self-calibrated E-field measurements, sensitivity floor ~270 uV/m/sqrt(Hz) over 2-5 GHz, DC-to-THz spectral coverage, waveguide-coupled implementations, and communications receiver demonstrations.",
+  "relevance": 4,
+  "tags": ["Rydberg-electrometry", "EIT", "Autler-Townes", "SI-traceable", "RF-sensing", "NIST-Holloway"],
+  "key_claims": [
+    "Sensitivity of 270 uV/m/sqrt(Hz) maintained across 2-5 GHz",
+    "SI-traceable self-calibrated measurement with >10x improvement over classical antenna standards at 0.1% precision",
+    "EIT-based readout converts RF to optical domain without traditional antennas",
+    "Coverage from DC to THz with a single vapor cell",
+    "Waveguide-coupled variant demonstrated for near-field antenna measurement (0-20 GHz)"
+  ],
+  "hardware_used": "Room-temperature Cs/Rb vapor cells",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

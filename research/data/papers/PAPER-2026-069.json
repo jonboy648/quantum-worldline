@@ -1,0 +1,17 @@
+{
+  "id": "PAPER-2026-069",
+  "title": "Quantum noise scaling in continuously operating multiparameter sensors",
+  "authors": ["multiple"],
+  "date": "2026-02",
+  "source": "arxiv:2602.05991",
+  "domain": "OPM / quantum noise / fundamental limits",
+  "status": "CONFIRMED",
+  "relevance": 3,
+  "summary": "Maps the three quantum noise sources in OPMs (photon shot noise, spin projection noise, measurement back-action) across pump/probe power parameter space. Key finding: fundamental trade-off between high-frequency sensitivity (photon shot noise limited) and low-frequency sensitivity (back-action limited). This defines the hard floor for OPM-based neural sensing.",
+  "key_numbers": {
+    "noise_sources": "photon shot noise, spin projection noise, measurement back-action",
+    "frequency_trade_off": "high-freq limited by photon shot noise; low-freq limited by back-action"
+  },
+  "bci_relevance": "Shot noise is the limiting floor for OPMs at neural signal frequencies (1-100 Hz). Brain MEG signals are well below shot noise limit without shielding. Entanglement-enhanced OPMs (squeezed light) can push below shot noise but add complexity and cost (~$50k+ laser systems). For independent researcher: shielding is cheaper than squeezed light.",
+  "independent_researcher_budget": "Squeezed light injection adds ~$30-50k for OPO system. Mu-metal shielding box ~$2-5k. Shielding is the practical path."
+}

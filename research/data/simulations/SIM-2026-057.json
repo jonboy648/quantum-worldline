@@ -1,0 +1,38 @@
+{
+  "id": "SIM-2026-057",
+  "hypothesis_id": "HYP-2026-025",
+  "date": "2026-06-27",
+  "type": "classical",
+  "hardware": "local CPU (single-thread BLAS for deterministic basins)",
+  "method": "MERAKit.jl scale-invariant ternary MERA, Riemannian LBFGS, block_size=2 (dim-9 super-sites), direct-init at chi=6, 8 seeds, select by spectrum quality (Delta_sigma nearest CFT). Driver: research/tools/MERAKit.jl/qw_potts_measure.jl.",
+  "model": "3-state quantum Potts critical point (Z3 clock/shift), c=4/5. H = -f*sum(X+X^dag) - sum(ZZ^dag + h.c.), critical f=1, qutrit d=3 substrate.",
+  "purpose": "Extend the alpha=4 universality ladder to a THIRD, distinct CFT class beyond Ising (c=1/2, HYP-008) and tricritical Ising (c=7/10, HYP-027). Sharp a-priori test: Delta_T=2 in EVERY unitary 2D CFT => alpha=2*Delta_T=4 MUST hold at c=4/5 too. Confirm-or-find-a-bug.",
+  "cft_targets": {"c": 0.8, "Delta_sigma": 0.1333, "Delta_eps": 0.8, "Delta_T": 2.0, "alpha": 4.0},
+  "results_all_seeds": {
+    "seed1": {"E": -2.435617, "Delta_sigma": 0.0702, "Delta_eps": 0.8608, "Delta_T": 1.9972, "alpha": 3.9943},
+    "seed2": {"E": -2.435761, "Delta_sigma": 0.7923, "Delta_eps": 0.7923, "Delta_T": 2.0031, "alpha": 4.0061},
+    "seed3": {"E": -2.435760, "Delta_sigma": 0.5629, "Delta_eps": 0.9621, "Delta_T": 1.9834, "alpha": 3.9667},
+    "seed4": {"E": -2.435759, "Delta_sigma": 0.5835, "Delta_eps": 0.9386, "Delta_T": 2.1784, "alpha": 4.3568},
+    "seed5": {"E": -2.435761, "Delta_sigma": 0.6042, "Delta_eps": 0.9418, "Delta_T": 2.0167, "alpha": 4.0333},
+    "seed6": {"E": -2.435761, "Delta_sigma": 0.6171, "Delta_eps": 0.9348, "Delta_T": 2.0459, "alpha": 4.0918},
+    "seed7": {"E": -2.435759, "Delta_sigma": 0.8924, "Delta_eps": 0.8924, "Delta_T": 2.0639, "alpha": 4.1277},
+    "seed8": {"E": -2.435760, "Delta_sigma": 0.8741, "Delta_eps": 0.8741, "Delta_T": 2.3922, "alpha": 4.7843}
+  },
+  "best_spectrum_seed": {
+    "seed": 1, "Delta_sigma": 0.0702, "Delta_eps": 0.8608, "Delta_T": 1.9972, "alpha": 3.9943,
+    "full_low_tower": [0.0, 0.0702, 0.8608, 1.0692, 1.2154, 1.7129, 1.7321, 1.838, 1.9972, 2.0124, 2.017]
+  },
+  "delta_T_statistics": {
+    "all_8_mean": 2.0849, "all_8_excluding_seed8_outlier": 2.0341,
+    "all_8_range": [1.9834, 2.3922], "best_basin": 1.9972,
+    "note": "Delta_T clusters near 2.0 across ALL basins (best 1.997, 6 of 8 within [1.98,2.18]) regardless of how well the rest of the tower resolves -- the universal-dimension fingerprint, same as Ising and tricritical Ising."
+  },
+  "gate_status": {
+    "Delta_eps": "ROUGHLY RESOLVED: best basin 0.861 vs CFT 0.8 (and 0.87-0.89 in seeds 7/8). 0.86 unambiguously identifies c=4/5 (Ising eps=1.0, tricritical eps=0.2 would be unmistakably different).",
+    "Delta_sigma": "NOT cleanly resolved at chi=6: best basin 0.070 (undershoots CFT 0.133 by half); other basins 0.56-0.89 (wrong/degenerate). NO seed hits 0.133. Same finite-chi ceiling as the tricritical chi=6 run (Delta_sigma scattered there too, fixed only at chi=8); WORSE here because the c=4/5 tower is denser.",
+    "Delta_T": "RESOLVED: best 1.997, robust ~2.0 across basins -- the alpha-relevant universal dimension."
+  },
+  "verdict": "SUPPORTED (with caveat; confidence MEDIUM). alpha=4 is confirmed at a THIRD CFT class: best basin Delta_T=1.997 -> alpha=3.994, robust across all 8 seeds (mean ~2.03 ex-outlier). Delta_eps=0.86 identifies the c=4/5 Potts class unambiguously. This extends the universality ladder Ising(c=1/2) -> tricritical Ising(c=7/10) -> 3-state Potts(c=4/5), strongly supporting that alpha=2*Delta_T=4 is universal across unitary 2D CFTs as the CFT theorem predicts. CAVEAT (why MEDIUM not high): Delta_sigma is NOT cleanly resolved at chi=6 (best 0.070 vs CFT 0.133), the same finite-chi ceiling the tricritical run hit and resolved only at chi=8. The alpha verdict rests on Delta_T (well-resolved) + Delta_eps (class-identifying); the full c=4/5 primary spectrum is only partially resolved. A chi=8 run (local, ~45min/seed) or chi=10-12 (RunPod A100, ~$10-20) would sharpen Delta_sigma toward 0.133 for a clean full-spectrum confirmation -- analogous to how SIM-052 sharpened the tricritical case.",
+  "next_step": "Optional chi=8 Potts run to resolve Delta_sigma->0.133 (mirrors SIM-052's chi=8 tricritical sharpening). Not required for the alpha verdict; required for a clean full-spectrum claim.",
+  "status": "COMPLETE"
+}

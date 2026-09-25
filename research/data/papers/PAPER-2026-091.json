@@ -1,0 +1,39 @@
+{
+  "id": "PAPER-2026-091",
+  "title": "Towards 2+1D quantum electrodynamics on a cold-atom quantum simulator",
+  "authors": [
+    "Peter Majcen",
+    "Jesse J. Osborne",
+    "Philipp Hauke",
+    "Bing Yang",
+    "Simone Montangero",
+    "Jad C. Halimeh"
+  ],
+  "date": "2026-02-04",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2602.04948",
+  "arxiv_id": "2602.04948",
+  "abstract": "We present a feasible cold-atom quantum simulator of a (2+1)-dimensional U(1) lattice gauge theory with expanded gauge-field parameters that exceed previous experimental limitations. The approach leverages quantum Zeno dynamics to preserve gauge constraints while mapping the theory onto a single-species Bose-Hubbard model in a tilted optical superlattice, achievable with existing laboratory equipment. We validate our design using simulations demonstrating faithful evolution of the target gauge theory and robust preservation of the gauge constraints, marking meaningful progress toward exploring quantum electrodynamics phenomena in controlled experimental settings.",
+  "relevance": 3,
+  "tags": [
+    "lattice-gauge-theory",
+    "quantum-electrodynamics",
+    "cold-atom",
+    "2+1D",
+    "Bose-Hubbard",
+    "quantum-simulation",
+    "gauge-constraint",
+    "QFT-hardware"
+  ],
+  "key_claims": [
+    "Proposes cold-atom implementation of (2+1)D U(1) lattice gauge theory",
+    "Quantum Zeno dynamics preserves gauge constraints without active correction",
+    "Maps to Bose-Hubbard model in tilted optical superlattice -- existing hardware compatible",
+    "Extends prior 1+1D Schwinger-model results to higher dimensions",
+    "Relevant to worldline simulation in 2+1D spacetime"
+  ],
+  "hardware_used": "Cold-atom optical superlattice (proposed)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-047",
+  "arxiv_id": "2604.17874",
+  "title": "Ground state preparation in two-dimensional pure Z2 lattice gauge theory via deterministic quantum imaginary time evolution",
+  "authors": ["Minoru Sekiyama", "Lento Nagano"],
+  "year": 2026,
+  "venue": "arxiv (quant-ph, hep-lat), submitted Apr 2026",
+  "submission_date": "2026-04-20",
+  "abstract_summary": "Applies deterministic quantum imaginary time evolution (QITE) to prepare ground states of 2D pure Z2 lattice gauge theory. Constructs gauge-invariant Pauli operators respecting Gauss's law, reducing computational cost. Classical tensor network simulation achieves <0.1% relative error for 12-plaquette systems.",
+  "relevance": 3,
+  "relevance_reason": "Z2 gauge-invariant ground state prep with tensor networks — directly adjacent to our ALM+projection method. The <0.1% error benchmark is directly comparable to our 3.33% floor issue.",
+  "connection_to_project": "Provides a quantum circuit approach (QITE) for Z2 gauge-invariant ground states that could resolve our 3.33% energy floor. The Gauss's law constraint enforcement is the same physics as our Z2 projection.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

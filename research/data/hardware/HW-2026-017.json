@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-017",
+  "organization": "PsiQuantum",
+  "processor": "Omega (silicon photonic chipset)",
+  "date": "2026-02-10",
+  "source_url": "https://www.psiquantum.com/",
+  "physical_qubits": 0,
+  "logical_qubits": 0,
+  "error_correction_ratio": "TBD",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": false,
+  "frontier_category": "physical_qubits",
+  "notes": "PsiQuantum leadership transition Feb 10, 2026: Victor Peng (interim CEO), Jeremy O'Brien (executive chairman). Shifting from R&D to deployment. Omega chipset manufactured at GlobalFoundries. $1B fundraise. Targets utility-scale photonic quantum computer. Partnership with National Cancer Center Japan for oncology applications (March 2026). Photons inherently immune to thermal/EM noise, enabling colocation of control electronics."
+}

@@ -1,0 +1,154 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.tmp
+
+# Pre-publication drafts (include after arXiv posting)
+research/paper-draft.md
+research/paper-draft.tex
+research/qcup-proposal-draft.md
+
+# Personal / sensitive
+the beginning.txt
+.playwright-mcp/
+research/data/simulations/set_runpod_key.py
+research/data/simulations/runpod_*.sh
+
+# Environment / build artifacts
+.mcp-servers/paper-search/.venv/
+*.npy
+research/data/simulations/*.log
+.env
+.env.local
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AUDIT-2026-08-11 D-21 / D-9 — numerical inputs to the headline results.
+#
+# The blanket `*.npy` above excluded EVERY numerical input to the force and
+# transport results while the submitted manuscript's Data-and-Code-Availability
+# statement asserted that "all simulation data and scripts are available".
+# Measured 2026-08-17: 34 .npy under research/, 0 of them tracked.
+# The un-ignores below put 31 of the 34 in the repo (see the three exclusions
+# noted at the bottom of this block).
+#
+# MEASURED ON DISK 2026-08-17 (`find research -name '*.npy' -printf '%s\t%p\n'`),
+# not estimated:
+#   theta_*.npy             14 files    118,240 B
+#   transport_*.npy          8 files    196,928 B
+#   boundary_density_*.npy   4 files     77,952 B
+#   *_dims.npy               4 files      1,152 B
+#   builds/target_Cr_8site    1 file         160 B
+#   ------------------------------------------------
+#   TOTAL                   31 files    394,432 B  (385 KB) — no Git-LFS needed.
+#
+# (The audit stated "24 files, 432 KB" for theta_*/transport_*/boundary_density_*.
+#  The measurement above supersedes it: theta_* is 14 files, not 12, and those
+#  three globs total 393,120 B — so the audit's count was 2 low and its byte
+#  total was high. The remaining 5 files (*_dims, target_Cr_8site, 1,312 B) are
+#  additions of ours; the audit did not list them. Same conclusion either way:
+#  this is a few hundred KB and belongs in git.)
+#
+# NOT covered by these globs: gs_24q_exact.npy (below) and the 2 hb_lam3_*.npy
+# inside the vendored MERAKit tree (handled at the bottom of this file).
+!research/data/simulations/theta_*.npy
+!research/data/simulations/transport_*.npy
+!research/data/simulations/boundary_density_*.npy
+!research/data/simulations/*_dims.npy
+!research/data/builds/target_Cr_8site.npy
+
+# STAYS IGNORED — the one large array. gs_24q_exact.npy = 134,217,856 B
+# (128 MB, 2^24 x float64), the cached 24-qubit exact ground state feeding the
+# alpha measurement. Git is the wrong home for it. It belongs on ZENODO, as a
+# file in the reproducibility deposit described in
+# research/data/audit/MANIFEST-plan.md; it is regenerable in ~1,228 s of eigsh
+# by the tracked driver interaction_energy_24q.py, so the deposit is a
+# convenience, not the sole copy. Re-asserted explicitly so that a future
+# broadening of the theta_*/transport_* globs above cannot pull it in.
+research/data/simulations/gs_*.npy
+
+# Generated PDFs (rebuild from source)
+research/learning/learning-guide.html
+research/learning/learning-guide.pdf
+
+# Audit 2026-06-08: environments, foreign artifacts, dead-pod metadata, deploy tarballs
+.venv311/
+.claude/
+research/data/builds/esmfold_runpod_package/
+research/data/builds/*.tar.gz
+research/data/builds/runpod_package/
+research/data/builds/runpod_r5_package/
+research/data/builds/runpod_session.json
+research/data/builds/runpod_r5_session.json
+
+# LaTeX build intermediates (keep .tex source and .pdf output)
+*.aux
+*.out
+*.toc
+*.blg
+*.bbl
+research/*.log
+
+# Secrets — keep .mcp.json's local token-bearing modification uncommitted.
+# (set_runpod_key.py already ignored above. scripts/runpod_*.py were refactored
+#  2026-06-16 to read RUNPOD_API_KEY from env; now safe to track — no longer ignored.)
+
+# external MERAKit.jl clone (keep RUN-MERAKIT.md + our pinned Project.toml/setup tracked separately)
+# Provenance (upstream URL, pinned revision, license, patches): research/tools/merakit-setup/RUN-MERAKIT.md
+#
+# AUDIT-2026-08-11 D-21 asks that our own artifacts inside this tree be tracked:
+# Manifest.toml (14,148 B — the ONLY resolved Julia dependency manifest anywhere
+# in the project; D-21 measured "dependency versions 0/73"), 7 run logs
+# (26,601 B) and 2 hb_lam3_*.npy operator arrays (131,328 B) = 172,077 B.
+#
+# THAT CANNOT BE DONE WITH `!` EXCEPTIONS HERE. Tried and measured 2026-08-17:
+# rewriting this rule as `research/tools/MERAKit.jl/*` plus three negations makes
+# `git check-ignore` report the paths as trackable, but they STILL cannot be
+# staged — the tree holds its own `.git` (a plain clone of mhauru/MERAKit.jl at
+# ace2f92, no .gitmodules), and git refuses to descend into an embedded
+# repository: `git add -n` and `git add -nf` on those paths staged nothing and
+# `git status -uall` collapsed the whole tree to one entry. Worse, the `/*` form
+# made `git add -A` want to add MERAKit.jl as an embedded-repo GITLINK — a real
+# hazard while staging the D-9/D-25 freeze commit. So the bare-directory rule
+# below is kept deliberately; it is the safe form, not an oversight.
+#
+# The two ways to actually get those 10 artifacts into the repo — neither of
+# which needs an edit to this file — are recorded in
+# research/tools/merakit-setup/RUN-MERAKIT.md and
+# research/data/audit/MANIFEST-plan.md §7.1:
+#   (A) preferred — copy them into the already-tracked mirror
+#       research/tools/merakit-setup/ (the convention CLAUDE.md already mandates
+#       for the qw_*.jl drivers); or
+#   (B) move research/tools/MERAKit.jl/.git out of the tree, which is now safe
+#       because the upstream URL and pinned revision are recorded in
+#       RUN-MERAKIT.md rather than only in the clone's own history.
+research/tools/MERAKit.jl/
+
+research/tools/juliahome/
+# vendored yijian-physics/puMPS (NO upstream license -> never commit/redistribute; see pumps-setup/VENDOR.md)
+research/tools/puMPS/
+
+# Local credential files (APS portal, etc.) — NEVER commit
+CREDENTIALS-*.local.md
+*.credentials.local
+
+# skills.sh installs (RunPod agent skills, 2026-09-07): project-local, never committed
+.agents/
+skills-lock.json
+skills/companion-clis/
+skills/flash/
+skills/runpod/
+skills/runpod-mcp/
+skills/runpod-migrate/
+skills/runpod-templates/
+skills/runpod-usage/
+skills/runpodctl/
+
+# Not for publication (2026-09-24): third-party papers and private correspondence stay local
+research/downloads/
+research/data/papers/*.pdf
+research/cover-letter.md
+research/outreach-*.md
+research/qcup-resubmission-*.md
+research/submission-package/prd/cover-letter-prd.md
+docs/governance/LETTER-*.txt
+docs/story/audio/

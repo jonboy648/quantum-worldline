@@ -1,0 +1,45 @@
+{
+ "id": "PAPER-2026-148",
+ "title": "Entanglement Wedge Reconstruction Beyond the Large N Limit via the Twirled Petz Map",
+ "authors": [
+  "Arash Alipour Shahmiri",
+  "Maryam Sharifian",
+  "Niloofar Vardian"
+ ],
+ "date": "2026-09-07",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2609.07866",
+ "arxiv_id": "2609.07866",
+ "categories": [
+  "hep-th",
+  "gr-qc",
+  "quant-ph"
+ ],
+ "abstract": "Uses the twirled Petz map to reproduce leading-order entanglement wedge reconstruction formulas and to add subleading 1/N corrections systematically, including an explicit bi-local correction controlled by a subleading Petz kernel.",
+ "relevance": 3,
+ "tags": [
+  "bulk-reconstruction",
+  "entanglement-wedge",
+  "Petz-map",
+  "QEC",
+  "holography",
+  "HYP-033-adjacent"
+ ],
+ "key_claims": [
+  "Twirled Petz recovery gives explicit 1/N corrections to entanglement wedge reconstruction",
+  "Subleading bi-local correction controlled by a Petz kernel"
+ ],
+ "relevance_note": "Abstract only, NOT read. Flagged HYP-033-adjacent (operator recovery) under the scan #20 priority rule, but it is continuum AdS/CFT at large N, not a finite MERA, and says nothing about WHERE recovery fails on a network (the HYP-033 registered statistic). No bearing on the blinded HYP-033 outcome count. Possible use: if HYP-033 ever moves from a decoupling / mutual-information recoverability measure to an explicit recovery map, the twirled Petz map is the default construction and this is a recent reference for it.",
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "related_papers": [
+  "PAPER-2026-142",
+  "PAPER-2026-143",
+  "PAPER-2026-149"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "literature-lead scan #20 (sequential arXiv export API)",
+ "discovered_date": "2026-09-23"
+}

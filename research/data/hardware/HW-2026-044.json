@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-044",
+  "organization": "QuEra Computing / Harvard / MIT / U. Maryland / Caltech / Army Research Lab",
+  "processor": "Reconfigurable neutral-atom array (448-atom, Rb)",
+  "date": "2026-01-19",
+  "source_url": "https://www.nature.com/articles/s41586-025-09848-5",
+  "physical_qubits": 448,
+  "logical_qubits": 96,
+  "error_correction_ratio": "4.67:1",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "logical_qubits",
+  "notes": "Published Nature vol 649 pp39-46 (2026-01-19). Used high-rate [[16,6,4]] qLDPC code to encode 96 logical qubits from 448 physical atoms. Demonstrated 2.14(13)x below-threshold QEC via surface codes in 4-round characterization circuit. Implemented full universal FT stack: physical entanglement, logical entanglement, logical magic state (for T-gate universality), and entropy removal. Below-threshold means error rate decreases as system scales. First demonstration of >48 verified logical qubits anywhere — doubled previous record within 13 months. Atom loss detection plus ML decoding used. CATCH-UP: this milestone predates our scan window (2026-04-26 to 2026-05-12) but was not captured in HW-023 through 031. RELEVANCE TO OUR WORK: At 96 logical qubits this platform could in principle run our chi=3 MERA circuits (16q transport, alpha-fit) in fault-tolerant mode. 4.67:1 physical-to-logical ratio still high but moving toward practicality."
+}

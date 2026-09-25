@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-045",
+  "organization": "QuEra Computing / Harvard / MIT",
+  "processor": "Reconfigurable neutral-atom array (simulated; qLDPC co-design)",
+  "date": "2026-04-20",
+  "source_url": "https://arxiv.org/abs/2604.16209",
+  "physical_qubits": 2304,
+  "logical_qubits": 1156,
+  "error_correction_ratio": "1.99:1",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "arXiv 2604.16209, posted 2026-04-20. 'Towards Ultra-High-Rate Quantum Error Correction with Reconfigurable Atom Arrays.' Uses non-commuting affine permutation qLDPC codes co-designed for neutral-atom AOD (Acousto-Optic Deflector) row-column movement. Encoding rate > 50% (physical-to-logical ratio ~2:1 — best demonstrated in any architecture). Code 1: 1,152 phys -> 580 logical, error rate ~2.9e-11 per logical per round. Code 2: 2,304 phys -> 1,156 logical, error rate ~1.3e-13 per logical per round (at circuit-level noise p=0.1%). Syndrome extraction in constant time. Reaches 'Teraquop' regime. IMPORTANT: these are simulation results, not hardware demonstration — the physical qubit count is the simulated code size, not a deployed machine. RELEVANCE TO OUR WORK: 2:1 ratio means ~32 physical qubits could encode our 16 logical qubits for chi=3 transport circuit — within Aquila's 256-atom budget. This directly changes the economics of fault-tolerant holographic force measurement."
+}

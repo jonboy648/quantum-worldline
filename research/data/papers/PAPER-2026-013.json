@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-013",
+  "title": "Canonical Quantisation of Bound and Unbound WQFT",
+  "authors": ["Riccardo Gonzo", "Gustav Mogull"],
+  "date": "2026-03-05",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.05237",
+  "arxiv_id": "2603.05237",
+  "abstract": "Derives a version of the Worldline Quantum Field Theory (WQFT) formalism suitable for both scattering and bound configurations of the classical two-body problem using canonical quantisation. Focuses on charged particles interacting via scalar field, quantising Hamilton's equations in flat space and around backgrounds via post-Lorentzian and self-force expansions. Provides gauge-invariant matrix elements for 1SF scattering dynamics up to 3PL order.",
+  "relevance": 3,
+  "tags": ["WQFT", "worldline", "canonical-quantisation", "two-body", "gravitational-waves", "post-Minkowskian"],
+  "key_claims": [
+    "Canonical quantization bypasses worldline path integrals",
+    "Unified framework for conservative and radiative binary dynamics",
+    "Applicable to both scattering (infinite time) and bound orbits (finite time)",
+    "Complete 1SF scattering matrix elements to 3PL order"
+  ],
+  "hardware_used": "analytical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

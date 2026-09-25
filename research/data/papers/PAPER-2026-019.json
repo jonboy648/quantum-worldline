@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-019",
+  "title": "Tensor networks for quantum computing",
+  "authors": ["Aleksandr Berezutskii", "Minzhao Liu", "Atithi Acharya", "Roman Ellerbrock", "Johnnie Gray", "Reza Haghshenas", "Zichang He", "Abid Khan", "Viacheslav Kuzmin", "Dmitry Lyakh", "Danylo Lykov", "Salvatore Mandra", "Christopher Mansell", "Alexey Melnikov", "Artem Melnikov", "Vladimir Mironov", "Dmitry Morozov", "Florian Neukart", "Alberto Nocera", "Michael A. Perlin", "Michael Perelshtein", "Matthew Steinberg", "Ruslan Shaydulin", "Benjamin Villalonga", "Markus Pflitsch", "Marco Pistoia", "Valerii Vinokur", "Yuri Alexeev"],
+  "date": "2025-03-11",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s42254-025-00853-1",
+  "arxiv_id": "2503.08626",
+  "abstract": "Comprehensive review of tensor network applications in quantum computing: simulation of quantum computation, circuit synthesis, error correction and mitigation, and machine learning. Covers MERA for critical states, holographic simulation, and quantum computational advantage. Collaboration of 30+ researchers from JPMorganChase, NVIDIA, Terra Quantum, Google, NASA, Quantinuum, and top academic institutions. Notes criticisms of MERA as direct AdS/CFT realization due to preferred directions from unitary/isometric tensors, but acknowledges MERA captures key aspects of holography.",
+  "relevance": 3,
+  "tags": ["tensor-network", "MERA", "review", "quantum-computing", "holography", "error-correction", "circuit-synthesis"],
+  "key_claims": [
+    "Comprehensive review of tensor network methods across quantum computing domains",
+    "MERA suited for describing critical ground states and viewed as spatial slice of holographic AdS spacetime",
+    "Criticisms exist against MERA as direct AdS/CFT realization due to preferred directions",
+    "Tensor networks crucial for understanding and achieving quantum computational advantage",
+    "Published in Nature Reviews Physics -- establishes tensor networks as mainstream QC tool"
+  ],
+  "hardware_used": "review (multiple platforms)",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

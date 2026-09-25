@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-004",
+  "organization": "Quantinuum",
+  "processor": "H2 (56-qubit)",
+  "date": "2025-09-10",
+  "source_url": "https://www.quantinuum.com/press-releases/quantinuum-launches-industry-first-trapped-ion-56-qubit-quantum-computer-that-challenges-the-worlds-best-supercomputers",
+  "physical_qubits": 56,
+  "logical_qubits": 12,
+  "error_correction_ratio": "800:1 (logical error rates 800x lower than physical)",
+  "two_qubit_gate_fidelity": 0.998,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "Quantum volume 2^25 (33.5 million). First quantum computer to reach Microsoft Level 2 Resilient phase. 12 logical qubits from 56 physical qubits (3x improvement over previous 4 logical qubits in April 2024). 30,000x power reduction vs classical supercomputers for RCS at 56 qubits. All-to-all connectivity."
+}

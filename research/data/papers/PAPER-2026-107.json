@@ -1,0 +1,33 @@
+{
+  "id": "PAPER-2026-107",
+  "title": "Causality, the Kovtun-Son-Starinets bound, and a novel sum rule for spectral densities",
+  "authors": [
+    "G. Yu. Prokhorov",
+    "O. V. Teryaev"
+  ],
+  "date": "2026-04-05",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2604.04222",
+  "arxiv_id": "2604.04222",
+  "abstract": "We directly show that the local ratio of the shear viscosity to the entropy density for Unruh radiation at a finite distance from the horizon is universal and satisfies the relation eta/s = 1/(4 pi c_s^2), which involves the speed of sound c_s. Since c_s^2 <= 1 by causality, this establishes the close connection between the famous Kovtun-Son-Starinets bound and causality. Moreover, we show that the ratio of bulk to shear viscosity saturates another well-known bound for the bulk viscosity, predicted within holographic approach. We also show that the condition of isotropy of thermal radiation in the Rindler space leads to a novel sum rule relating the c^(0)(mu) and c^(2)(mu) spectral densities, and we explicitly demonstrate its validity for conformal field theory and free massive Dirac fields in any number of dimensions. The sum rule provides the validity of Pascal law and bears some similarity with Burkhardt-Cottingham sum rule for spin-dependent parton distributions. Our result suggests a new perspective on dissipative transport phenomena in media undergoing extreme acceleration, such as quark-gluon plasma created in relativistic heavy-ion collisions.",
+  "relevance": 2,
+  "tags": [
+    "KSS-bound",
+    "shear-viscosity",
+    "holographic-transport",
+    "causality",
+    "sum-rule",
+    "spectral-density",
+    "tangential"
+  ],
+  "key_claims": [
+    "Local shear-viscosity/entropy ratio for Unruh radiation is universal: eta/s = 1/(4 pi c_s^2)",
+    "Links the Kovtun-Son-Starinets bound to causality (c_s^2 <= 1)",
+    "Novel sum rule relating c^(0) and c^(2) spectral densities, validated for CFT and free massive Dirac fields",
+    "Tangential: universal transport ratios from holography; background support for 'transport is holographically constrained,' not a direct test of our anchors"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-075",
+  "title": "Building Holographic Entanglement by Measurement",
+  "authors": ["Jonathan Jeffrey", "Lucien Gandarias", "Monika Schleier-Smith", "Brian Swingle"],
+  "date": "2026-01-28",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.21065",
+  "arxiv_id": "2601.21065",
+  "abstract": "Proposes a framework for preparing quantum states with holographic entanglement structure, where entanglement entropies are governed by minimal surfaces in a chosen bulk geometry (Ryu-Takayanagi formula). Approach: choose a bulk geometry, discretize it into a coupling graph of bulk and boundary nodes, evolve under this graph of interactions, then measure bulk nodes to leave the desired pure state on the boundary. Numerically demonstrates that resulting entanglement properties approximately reproduce RT formula predictions for hyperbolic disk and wormhole geometries. Requires only Gaussian operations and measurements, implementable in photonic and cold-atom platforms.",
+  "relevance": 4,
+  "tags": ["holographic-entanglement", "Ryu-Takayanagi", "tensor-network", "measurement-based", "cold-atoms", "photonics", "AdS-CFT", "wormhole-geometry", "hyperbolic-geometry"],
+  "key_claims": [
+    "State preparation via measurement on bulk nodes of a discretized geometry coupling graph",
+    "Entanglement entropies approximately satisfy Ryu-Takayanagi formula for the chosen geometry",
+    "Works for hyperbolic disk (AdS-like) and wormhole geometries",
+    "Requires only Gaussian operations and measurements — photonic and cold-atom realizable TODAY",
+    "Provides a practical route to engineering holographic states without solving Einstein equations"
+  ],
+  "hardware_used": "Photonic systems and cold-atom platforms (proposed)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — directly relevant to our MERA holographic force program: provides a complementary hardware route (measurement-based) to prepare states with RT-type entanglement structure, including hyperbolic geometries matching our AdS discretization."
+}

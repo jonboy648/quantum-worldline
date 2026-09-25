@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-014",
+  "title": "Unitarity and the On-Shell Action of Worldline Quantum Field Theory",
+  "authors": ["Kays Haddad", "Gustav Uhre Jakobsen", "Gustav Mogull", "Jan Plefka"],
+  "date": "2026-02-01",
+  "source": "other",
+  "source_url": "https://arxiv.org/abs/2510.00988",
+  "arxiv_id": "2510.00988",
+  "abstract": "Develops the on-shell action formalism within WQFT for scattering of spinning compact bodies in GR in the post-Minkowskian expansion. Constructs real on-shell action from vacuum diagrams with causal (retarded) propagators. Demonstrates generalised unitarity techniques adapted to WQFT for multi-loop contributions. Establishes concrete link between WQFT and amplitude-based methods via unitarity cuts.",
+  "relevance": 3,
+  "tags": ["WQFT", "worldline", "unitarity", "gravitational-waves", "scattering-amplitudes", "post-Minkowskian"],
+  "key_claims": [
+    "Generalised unitarity techniques work in WQFT for multi-loop calculations",
+    "Unitarity cuts establish equivalence between on-shell action and amplitude methods",
+    "Extended to 3PM order with quartic spin interactions",
+    "Includes dissipative terms in the full on-shell action"
+  ],
+  "hardware_used": "analytical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "PAPER-2026-088",
+  "title": "Black-Hole Signatures in the Finite-Temperature Critical Ising Chain",
+  "authors": [
+    "Zuo Wang",
+    "Liang He"
+  ],
+  "date": "2026-03-08",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.07639",
+  "arxiv_id": "2603.07639",
+  "abstract": "We demonstrate that the finite-temperature critical transverse-field Ising chain exhibits quantitative signatures of black-hole physics in its dual gravitational description within the AdS/CFT correspondence. Its finite-temperature dynamics and thermodynamics are consistently captured by a mixed thermal-AdS/BTZ black hole saddle, leading to three mutually compatible observations. First, antipodal excitation transport collapses onto a universal temperature-dependent curve determined by the relative AdS and BTZ contributions to the gravitational partition function, reflecting horizon absorption. Second, in the high-temperature regime, the retarded response exhibits exponential relaxation governed by the lowest quasi-normal mode of the dual black hole. Third, the temperature derivative of the von Neumann entropy develops a pronounced minimum at a temperature consistent with the Hawking-Page transition.",
+  "relevance": 5,
+  "tags": [
+    "holographic-transport",
+    "ising-cft",
+    "AdS-CFT",
+    "black-hole-physics",
+    "Wang-He",
+    "hologron",
+    "BTZ-black-hole",
+    "hawking-page",
+    "quantum-simulation"
+  ],
+  "key_claims": [
+    "Critical Ising chain at finite temperature maps quantitatively to mixed thermal-AdS/BTZ saddle",
+    "Antipodal excitation transport shows universal temperature-dependent curve (horizon absorption)",
+    "High-temperature relaxation matches BTZ quasi-normal mode spectrum",
+    "Von Neumann entropy derivative shows Hawking-Page transition signature",
+    "Wang & He follow-up to 2501.03084 (hologron instability paper); same authors, deeper AdS/CFT connection",
+    "Transport time T = (pi/2)*l_AdS relation is consistent with BTZ picture in finite-T regime",
+    "Supplemental Material S3.A solves the AdS3 null geodesic equations in closed form and proves t_trans = pi for antipodal boundary-to-boundary transport, INDEPENDENTLY of angular momentum M, energy Omega, AND the AdS radius ell (their words: 'independently of the values of M, Omega, and ell'). Added 2026-08-17 from a full read of the PDF: the original record indexed only the abstract/main text and MISSED this, which is the single result our own manuscript cites this paper for. NOTE THE CONSEQUENCE: their transport time carries NO AdS radius, so citing it in support of T = (pi/2)*l_AdS stacks two discrepancies -- a factor of 2, and an l_AdS that their derivation says should cancel. See docs/governance/AUDIT-2026-08-11.md D-1 RESOLUTION."
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "last_updated": "2026-08-17"
+}

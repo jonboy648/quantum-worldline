@@ -1,0 +1,38 @@
+{
+  "id": "PAPER-2026-093",
+  "title": "Resolving spurious topological entanglement entropy in stabilizer codes",
+  "authors": [
+    "Peilun Han",
+    "Zijian Liang",
+    "Yifei Wang",
+    "Bowen Yang",
+    "Yingfei Gu",
+    "Yu-An Chen"
+  ],
+  "date": "2026-04-29",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2604.27053",
+  "arxiv_id": "2604.27053",
+  "abstract": "We address a systematic problem where topological entanglement entropy (TEE) estimators produce inflated measurements of quantum dimension in translation-invariant stabilizer codes. We propose a concave partition method for computing Levin-Wen TEE that eliminates these spurious contributions. We provide a rigorous proof that our approach resolves the inflation, and present supplementary analysis of entanglement patterns in bivariate bicycle codes.",
+  "relevance": 3,
+  "tags": [
+    "topological-entanglement-entropy",
+    "TEE",
+    "stabilizer-codes",
+    "Levin-Wen",
+    "quantum-error-correction",
+    "spurious-contributions",
+    "measurement-bias"
+  ],
+  "key_claims": [
+    "Standard Levin-Wen TEE estimator produces spurious contributions in translation-invariant stabilizer codes",
+    "Concave partition method eliminates spurious TEE inflation with rigorous proof",
+    "Directly relevant to HYP-020 TEE measurement strategy (our estimator used single-basis collision probability -- biased)",
+    "Confirms that careful partition choice is critical for correct TEE extraction",
+    "Bivariate bicycle code analysis included"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

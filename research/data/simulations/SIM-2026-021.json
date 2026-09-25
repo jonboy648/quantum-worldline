@@ -1,0 +1,66 @@
+{
+  "id": "SIM-2026-021",
+  "hypothesis": "HYP-2026-016",
+  "description": "Cross-platform fidelity threshold for alpha=4 force detection: IonQ Cambridge + FT neutral atom resource estimation",
+  "type": "resource_estimation_analytic",
+  "hardware_target": "simulator_cpu",
+  "n_qubits": 16,
+  "chi": 3,
+  "N_2Q": 56,
+  "status": "COMPLETE",
+  "verdict": "REFUTED",
+  "confidence": "medium",
+  "circuit": {
+    "qubits": 16,
+    "two_qubit_gates": 56,
+    "note": "from Helios design doc (SIM-2026-011)"
+  },
+  "fidelity_threshold_for_alpha_detection": {
+    "dr_max_4_requires": 0.9999,
+    "note": "99.99% per gate for 56 CX gates gives noise_floor=0.56%, allowing dr=4 at 3-sigma"
+  },
+  "fidelity_sweep": {
+    "99.0%": {"noise_floor_pct": 43.0, "dr_max": 1},
+    "99.5%": {"noise_floor_pct": 24.5, "dr_max": 1},
+    "99.8%": {"noise_floor_pct": 10.6, "dr_max": 2},
+    "99.9%": {"noise_floor_pct": 5.45, "dr_max": 2},
+    "99.92%": {"noise_floor_pct": 4.33, "dr_max": 2},
+    "99.99%": {"noise_floor_pct": 0.56, "dr_max": 4}
+  },
+  "ionq_cambridge": {
+    "n_qubits": 256,
+    "connectivity": "all_to_all",
+    "native_gate": "MS (Molmer-Sorensen XX)",
+    "estimated_fidelity": "~99.3-99.5% (based on IonQ Forte, Cambridge not publicly disclosed)",
+    "dr_max_at_99p4": 1,
+    "verdict": "NOT_VIABLE for power-law detection. Would need >99.99% fidelity.",
+    "swap_overhead": 0,
+    "action_required": "Contact IonQ Cambridge team for actual fidelity spec"
+  },
+  "ft_neutral_atom": {
+    "reference_paper": "PAPER-2026-049 (Khan et al.)",
+    "paper_benchmark": {"logical_qubits": 100, "physical_atoms": 11495, "runtime_h": 15},
+    "atoms_per_logical": 115,
+    "our_circuit": {
+      "logical_qubits": 16,
+      "physical_atoms_estimated": 1839,
+      "runtime_min_estimated": 8.1,
+      "feasibility": "YES, well within paper benchmark"
+    },
+    "dr_max": 6,
+    "verdict": "VIABLE and definitive. FT run achieves full 6-point force profile for robust alpha fit.",
+    "timeline": "2027+ per PAPER-2026-049 deployment schedule"
+  },
+  "hypothesis_claim_vs_result": {
+    "claim": "Force detection at dr=1..6 requires fidelity >= 99.5%",
+    "result": "dr=1..4 requires 99.99%; dr=1..2 requires 99.92% (Helios). Threshold is 50x tighter than claimed.",
+    "reason": "Hypothesis used 8q N_2Q=40 estimate; actual 16q MERA has 56 CX gates, accumulating more error"
+  },
+  "resource_hierarchy_revised": {
+    "1_helios_now": "dr=1..2 force existence proof (NOT full power law). 99.921% fidelity, 0.57% error, QCUP PHY204 pending.",
+    "2_ionq_cambridge": "dr=1 only (NOT viable for power law). Only useful if fidelity confirmed >= 99.99%.",
+    "3_ft_neutral_atom_2027": "Full dr=1..6, alpha=4 fit to high precision. Definitive measurement."
+  },
+  "visualization_path": "research/data/simulations/SIM-2026-021_fidelity_threshold.png",
+  "runtime_s": 4.8
+}

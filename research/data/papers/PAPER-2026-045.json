@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-045",
+  "arxiv_id": "2601.21065",
+  "title": "Building Holographic Entanglement by Measurement",
+  "authors": ["Jonathan Jeffrey", "Lucien Gandarias", "Monika Schleier-Smith", "Brian Swingle"],
+  "year": 2026,
+  "venue": "arxiv (quant-ph), submitted Jan 2026",
+  "submission_date": "2026-01-28",
+  "abstract_summary": "Proposes a measurement-based method to prepare quantum states with entanglement governed by minimal surfaces in chosen bulk geometries. Discretizes bulk geometry into coupling graph, applies interactions and measurements to bulk nodes, leaving desired holographic state on boundary. Demonstrates RT formula for hyperbolic disk and wormhole geometries using Gaussian operations.",
+  "relevance": 3,
+  "relevance_reason": "Measurement-based holographic state preparation is an alternative to MERA unitary circuits. Swingle connection (founding work on MERA/holography). Could offer simpler hardware implementation path.",
+  "connection_to_project": "Complementary approach to our MERA circuit — measurement instead of unitaries. The Gaussian operation constraint may allow larger system sizes. RT formula verification is same target as our chi=3 MERA work.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

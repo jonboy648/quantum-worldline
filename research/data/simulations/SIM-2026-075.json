@@ -1,0 +1,521 @@
+{
+  "id": "SIM-2026-075",
+  "hypothesis_id": "HYP-2026-008",
+  "date": "2026-09-07",
+  "status": "COMPLETE",
+  "type": "Pre-registered stress-tensor test of HYP-2026-008 with two Z2-even local probes on the critical TFIM ring (chord distance), n = 16/20/24, plus the one pre-registered retry (Gaussian-smeared probes)",
+  "preregistration": "research/tools/channel-test/PREREGISTRATION-T.md, commit 82b7b4e (2026-09-06 22:57 -0500), committed before qw_stress_test.py existed",
+  "driver": "research/tools/channel-test/qw_stress_test.py (+ qw_stress_converge.py); shared module qw_channel_common.py; ring builder from qw_ring_test.py",
+  "hardware": "local CPU, scipy eigsh on 2^n state vectors (n=24: 16.8M amplitudes); G5 uses sector-projected Lanczos (P H P + shift)",
+  "probes": {
+    "H": "O_H(j) = -(Z_jZ_{j+1} - <ZZ>) - (X_j - <X>): the local Hamiltonian density, KW-even, leading T+Tbar (Delta 2) by self-duality",
+    "E": "O_E(j) = -(Z_jZ_{j+1} - <ZZ>) + (X_j - <X>): the KW-odd partner, leading eps (Delta 1)"
+  },
+  "null_hypothesis_registered": "the force equals the probe's connected two-point function: alpha_H = 4, alpha_E = 2 (Level 1 if observed; only a DEVIATION would be a finding)",
+  "VERDICT": "VOID -- both arms fail a per-arm validation gate at every size, in the primary run and in the pre-registered retry. No exponent may be quoted. Per PREREGISTRATION-T.md ('If Arm H fails G4 ... one retry ... If it also fails, HYP-2026-008 is closed as untestable at n <= 24 in this framework and that closure is the result'), HYP-2026-008 is CLOSED: UNTESTABLE AT n <= 24 IN THIS FRAMEWORK.",
+  "primary_run": {
+    "16": {
+      "G1_abs_diff": 6.661338147750939e-16,
+      "control": "CONTROL_CLEAN",
+      "window": [
+        3,
+        7
+      ],
+      "H": {
+        "force_alpha_chord": 8.148,
+        "force_bootstrap_sigma": 2.261,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 8.455,
+        "two_point_local_slopes": [
+          5.44,
+          7.04,
+          11.13,
+          26.59
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": true,
+        "F_window": {
+          "3": 0.2527295028057672,
+          "4": 0.07574247398447653,
+          "5": 0.025180207985030734,
+          "6": 0.00794425178815672,
+          "7": 0.0016359150541962464
+        }
+      },
+      "E": {
+        "force_alpha_chord": -0.652,
+        "force_bootstrap_sigma": 0.188,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 2.076,
+        "two_point_local_slopes": [
+          2.1,
+          2.07,
+          2.05,
+          2.04
+        ],
+        "G2_pass": false,
+        "G4_pass": true,
+        "G5_pass": false,
+        "F_window": {
+          "3": -1.0658141036401503e-14,
+          "4": -1.5987211554602254e-14,
+          "5": -1.4210854715202004e-14,
+          "6": -1.4210854715202004e-14,
+          "7": -1.7763568394002505e-14
+        }
+      },
+      "G5": {
+        "states": {
+          "eps_E-E0": 0.7841371226364977,
+          "T_E-E0": 1.5532072703359923,
+          "T_pair_split": 1.2079226507921703e-13,
+          "Delta_T_over_Delta_eps": 1.9807852804030708,
+          "max_sector_leak": 5.213974995713698e-16
+        },
+        "H": {
+          "zero_element_|<eps|O_H(0)|GS>|": 2.7308358620131422e-15,
+          "ref_element_|<T|O_H(2)|GS>|": 0.2719073583233963,
+          "ratio": 1.004325840555293e-14
+        },
+        "E": {
+          "zero_element_|<T|O_E(2)|GS>|": 0.05408573635213486,
+          "ref_element_|<eps|O_E(0)|GS>|": 3.9807389066888175,
+          "ratio": 0.013586858525500088
+        },
+        "pass": {
+          "H": true,
+          "E": false
+        }
+      }
+    },
+    "20": {
+      "G1_abs_diff": 6.661338147750939e-16,
+      "control": "CONTROL_CLEAN",
+      "window": [
+        3,
+        9
+      ],
+      "H": {
+        "force_alpha_chord": 7.426,
+        "force_bootstrap_sigma": 1.778,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 7.657,
+        "two_point_local_slopes": [
+          4.84,
+          5.52,
+          6.79,
+          9.39,
+          15.83,
+          40.05
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": true,
+        "F_window": {
+          "3": 0.26411048365481093,
+          "4": 0.08419727694894519,
+          "5": 0.03162769753887318,
+          "6": 0.01293978180125066,
+          "7": 0.005288897702889983,
+          "8": 0.0018962977134542314,
+          "9": 0.00041877122605527006
+        }
+      },
+      "E": {
+        "force_alpha_chord": 0.336,
+        "force_bootstrap_sigma": 0.843,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 2.059,
+        "two_point_local_slopes": [
+          2.1,
+          2.06,
+          2.04,
+          2.03,
+          2.03,
+          2.03
+        ],
+        "G2_pass": false,
+        "G4_pass": true,
+        "G5_pass": false,
+        "F_window": {
+          "3": -2.4868995751603507e-14,
+          "4": -1.0658141036401503e-14,
+          "5": -1.4210854715202004e-14,
+          "6": -2.1316282072803006e-14,
+          "7": -2.1316282072803006e-14,
+          "8": -2.4868995751603507e-14,
+          "9": -7.105427357601002e-15
+        }
+      },
+      "G5": {
+        "states": {
+          "eps_E-E0": 0.6276727658227621,
+          "T_E-E0": 1.2476178383348966,
+          "T_pair_split": 1.4210854715202004e-13,
+          "Delta_T_over_Delta_eps": 1.9876883405949626,
+          "max_sector_leak": 4.1365235342067986e-15
+        },
+        "H": {
+          "zero_element_|<eps|O_H(0)|GS>|": 2.0980662861418157e-14,
+          "ref_element_|<T|O_H(2)|GS>|": 0.2191836823691235,
+          "ratio": 9.572182853505025e-14
+        },
+        "E": {
+          "zero_element_|<T|O_E(2)|GS>|": 0.034715284855121716,
+          "ref_element_|<eps|O_E(0)|GS>|": 3.987669334933193,
+          "ratio": 0.008705657851568908
+        },
+        "pass": {
+          "H": true,
+          "E": false
+        }
+      }
+    },
+    "24": {
+      "G1_abs_diff": 2.220446049250313e-16,
+      "control": "CONTROL_CLEAN",
+      "window": [
+        3,
+        11
+      ],
+      "H": {
+        "force_alpha_chord": 7.004,
+        "force_bootstrap_sigma": 1.472,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 7.191,
+        "two_point_local_slopes": [
+          4.58,
+          4.95,
+          5.58,
+          6.63,
+          8.52,
+          12.29,
+          21.59,
+          56.52
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": true,
+        "F_window": {
+          "3": 0.26977661173090794,
+          "4": 0.08833541805934075,
+          "5": 0.034742578948147695,
+          "6": 0.015385741874869296,
+          "7": 0.007257137169311534,
+          "8": 0.0034657219704570252,
+          "9": 0.001572542810681199,
+          "10": 0.0006032085374663154,
+          "11": 0.0001383702750885618
+        }
+      },
+      "E": {
+        "force_alpha_chord": -1.004,
+        "force_bootstrap_sigma": 1.088,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 2.049,
+        "two_point_local_slopes": [
+          2.09,
+          2.06,
+          2.04,
+          2.03,
+          2.03,
+          2.02,
+          2.02,
+          2.02
+        ],
+        "G2_pass": false,
+        "G4_pass": true,
+        "G5_pass": false,
+        "F_window": {
+          "3": -7.105427357601002e-15,
+          "4": -1.4566126083082054e-13,
+          "5": 5.684341886080802e-14,
+          "6": 4.973799150320701e-14,
+          "7": 4.618527782440651e-14,
+          "8": -3.552713678800501e-15,
+          "9": 1.5987211554602254e-13,
+          "10": 1.1723955140041653e-13,
+          "11": -4.973799150320701e-14
+        }
+      },
+      "G5": {
+        "states": {
+          "eps_E-E0": 0.5232250338409443,
+          "T_E-E0": 1.0419738049853606,
+          "T_pair_split": 3.090860900556436e-13,
+          "Delta_T_over_Delta_eps": 1.9914448613750986,
+          "max_sector_leak": 7.054008919702995e-15
+        },
+        "H": {
+          "zero_element_|<eps|O_H(0)|GS>|": 3.8227523201902527e-14,
+          "ref_element_|<T|O_H(2)|GS>|": 0.18340538690435304,
+          "ratio": 2.0843184514443078e-13
+        },
+        "E": {
+          "zero_element_|<T|O_E(2)|GS>|": 0.024145777256254573,
+          "ref_element_|<eps|O_E(0)|GS>|": 3.991435692953911,
+          "ratio": 0.006049396536408982
+        },
+        "pass": {
+          "H": true,
+          "E": false
+        }
+      }
+    }
+  },
+  "retry_smeared_sigma1.5": {
+    "16": {
+      "control": "CONTROL_CLEAN",
+      "H": {
+        "force_alpha_chord": 4.504,
+        "force_bootstrap_sigma": 3.459,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 2.565,
+        "two_point_local_slopes": [
+          -1.1,
+          2.03,
+          6.54,
+          16.01
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": null,
+        "F_window": {
+          "3": -2.5473008725525474,
+          "4": -2.501011503347833,
+          "5": -2.142460412365576,
+          "6": -0.9361337305209894,
+          "7": -0.081151350691826
+        }
+      },
+      "E": {
+        "force_alpha_chord": 8.583,
+        "force_bootstrap_sigma": 1.572,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 4.255,
+        "two_point_local_slopes": [
+          2.5,
+          4.33,
+          6.46,
+          7.97
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": null,
+        "F_window": {
+          "3": -1.1247374381605013,
+          "4": -0.3312594150311323,
+          "5": -0.07352950415630133,
+          "6": -0.018931891290966618,
+          "7": -0.008482866218251672
+        }
+      }
+    },
+    "20": {
+      "control": "CONTROL_CLEAN",
+      "H": {
+        "force_alpha_chord": 6.674,
+        "force_bootstrap_sigma": 2.988,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 4.969,
+        "two_point_local_slopes": [
+          -1.04,
+          1.76,
+          5.09,
+          10.27,
+          19.4,
+          36.61
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": null,
+        "F_window": {
+          "3": -2.473602775507814,
+          "4": -2.428705417491905,
+          "5": -2.0746902280616375,
+          "6": -0.891656628499252,
+          "7": -0.06857104086341437,
+          "8": 0.026474341796657086,
+          "9": 0.01700801611599445
+        }
+      },
+      "E": {
+        "force_alpha_chord": 8.592,
+        "force_bootstrap_sigma": 0.959,
+        "force_plateau_n": 3,
+        "two_point_exponent_chord": 4.275,
+        "two_point_local_slopes": [
+          2.37,
+          3.92,
+          5.48,
+          6.14,
+          5.39,
+          4.24
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": null,
+        "F_window": {
+          "3": -1.1227439783991748,
+          "4": -0.32503278656401235,
+          "5": -0.06771280698963267,
+          "6": -0.014684570067633018,
+          "7": -0.005112370227884355,
+          "8": -0.002689620208872867,
+          "9": -0.00190509508464487
+        }
+      }
+    },
+    "24": {
+      "control": "CONTROL_CLEAN",
+      "H": {
+        "force_alpha_chord": 7.009,
+        "force_bootstrap_sigma": 2.072,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 6.572,
+        "two_point_local_slopes": [
+          -1.02,
+          1.65,
+          4.55,
+          8.54,
+          14.17,
+          21.11,
+          27.87,
+          29.6
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": null,
+        "F_window": {
+          "3": -2.433063026329318,
+          "4": -2.3889227918813773,
+          "5": -2.037551761233285,
+          "6": -0.8672499589986558,
+          "7": -0.058886714804000206,
+          "8": 0.03207092832404612,
+          "9": 0.019480509959535652,
+          "10": 0.00986431312210101,
+          "11": 0.00534674593329143
+        }
+      },
+      "E": {
+        "force_alpha_chord": 8.224,
+        "force_bootstrap_sigma": 0.555,
+        "force_plateau_n": 0,
+        "two_point_exponent_chord": 4.087,
+        "two_point_local_slopes": [
+          2.3,
+          3.73,
+          5.09,
+          5.57,
+          4.76,
+          3.64,
+          3.0,
+          2.78
+        ],
+        "G2_pass": true,
+        "G4_pass": false,
+        "G5_pass": null,
+        "F_window": {
+          "3": -1.1220884310282244,
+          "4": -0.3223975394587484,
+          "5": -0.06535817255097598,
+          "6": -0.013141375569258429,
+          "7": -0.004119490302738171,
+          "8": -0.0019318440273785598,
+          "9": -0.0011774440412253284,
+          "10": -0.0008790269282776819,
+          "11": -0.0007524674642311879
+        }
+      }
+    }
+  },
+  "convergence_rule_output": {
+    "preregistration": "PREREGISTRATION-T.md @ 82b7b4e",
+    "sizes": [
+      16,
+      20,
+      24
+    ],
+    "arms": {
+      "H": {
+        "alpha_by_n": {
+          "16": 8.147707229569718,
+          "20": 7.42576768555253,
+          "24": 7.004227038123189
+        },
+        "step_16_20": -0.7219395440171885,
+        "step_20_24": -0.4215406474293406,
+        "converged": false,
+        "sigma_used": 1.4718842257103477,
+        "distance_from_null": 3.0042270381231893,
+        "null": 4.0,
+        "gates_at_n24": {
+          "G2": true,
+          "G4": false,
+          "G5": true
+        },
+        "barred": true,
+        "plateau_n_at_24": 0,
+        "two_point_exponent_at_24": 7.190736201907731,
+        "outcome": "VOID_ARM"
+      },
+      "E": {
+        "alpha_by_n": {
+          "16": -0.6524272053547021,
+          "20": 0.33641817996977386,
+          "24": -1.0036108749498807
+        },
+        "step_16_20": 0.988845385324476,
+        "step_20_24": -1.3400290549196545,
+        "converged": false,
+        "sigma_used": 1.3400290549196545,
+        "distance_from_null": 3.0036108749498807,
+        "null": 2.0,
+        "gates_at_n24": {
+          "G2": false,
+          "G4": true,
+          "G5": false
+        },
+        "barred": true,
+        "plateau_n_at_24": 0,
+        "two_point_exponent_at_24": 2.049170559132551,
+        "outcome": "VOID_ARM"
+      }
+    },
+    "VERDICT": "VOID",
+    "reading": "The verdict is computed from pre-registered rules only. Outcome N is a Level 1 validation, not a discovery. Only DEV is a finding."
+  },
+  "key_findings": [
+    "ARM H FAILS G4 AT EVERY SIZE. The local Hamiltonian density's connected two-point function scales as chord^-8.5, -7.7, -7.2 at n = 16, 20, 24 (gate: 4 within 0.3). Its excitation is dominated by lattice-scale modes (at n = 10, 27% of its weight lies above the 40 lowest eigenstates; the largest weights sit at |s| = 3..5). The asymptotic Delta = 2 regime is not reached on rings this size.",
+    "ARM H IS NEVERTHELESS THE RIGHT OPERATOR IN THE IR: G5 passes at n = 16, 20, 24. <eps|O_H(k=0)|GS> vanishes to 1e-13 relative to <T|O_H(k=2)|GS> (the Kramers-Wannier structural zero), and the |T> state is found by sector-projected Lanczos at Delta_T/Delta_eps = 1.981, 1.988, 1.991.",
+    "THE FORCE IS IDENTICALLY ZERO FOR ARM E AT h = 1: F(dr) = 0 to 1e-14 for every separation at n = 12, 16, 20, 24. At h = 0.9 and h = 2 it is nonzero. Scanning O = op_T + c op_X at n = 12, F scales as (1 - c)^2 approaching c = 1: the energy-difference observable responds ONLY to the KW-even admixture of the probe. The single-site KW-odd energy density is invisible to it.",
+    "CONSEQUENCE FOR SIM-2026-074: the ring 'energy-density exponent' 1.83 measured with Z_jZ_{j+1} alone is a cross term between that operator's KW-even and KW-odd parts, not the eps two-point exponent. The v5 Zenodo notice was reworded on 2026-09-06 to remove the channel attribution.",
+    "THE RETRY (Gaussian-smeared probes, sigma = 1.5 sites, |m| <= 4, width fixed 2026-09-07 before any smeared result existed) ALSO FAILS G4: smeared H two-point exponent 2.57 / 4.97 / 6.57 at n = 16/20/24 with local slopes running from -1 to +30 across the window (no power law). Smearing makes Arm E's force NONZERO (exponent ~8.2-8.6, exponential-like) and moves its two-point exponent to ~4.1-4.3; both effects are recorded, not interpreted.",
+    "E-ARM G5 FAILS BY DESIGN, NOT PHYSICS: <T|O_E(k=2)|GS> / <eps|O_E(k=0)|GS> = 1.4e-2, 8.7e-3, 6.1e-3 at n = 16/20/24, shrinking ~1/n. The lattice KW map carries a half-site shift, so only k = 0 modes have exact KW parity; the k = 2 structural zero registered for Arm E was mis-specified. Arm E is void anyway (F = 0, no plateau).",
+    "CONTROLS: G1 to 1e-15 at every size; h = 2 control CONTROL_CLEAN at every size and in the retry."
+  ],
+  "counterfactual_novelty_note": "Outcome space registered: N / DEV / C / D / VOID. VOID via G4 was a live possibility named in advance. The structural zero F[O_E] = 0 was NOT anticipated and is the one genuinely new fact; it is a property of the observable, not of the CFT, and is recorded at Level 2 (method).",
+  "what_would_change_this": "A probe whose own two-point function reaches the Delta = 2 regime inside the fit window: either much larger n (free-fermion machinery could reach hundreds of sites for the two-point function but the energy-difference force needs the interacting-state machinery) or a different observable. Neither is inside the pre-registered scope.",
+  "downstream_actions_required": [
+    "HYP-2026-008.json: status -> CLOSED_UNTESTABLE_N_LE_24; refutation_criteria rewritten to the two-probe design with this record as its outcome (ERRATA E8 required action).",
+    "ERRATA: E8 'Open' action closed by this record.",
+    "docs/governance/PLAN-2026-09-06.md section T: DONE, VOID, closed.",
+    "Story (S): this is the ending of the HYP-008 thread: the honest test could not be run at reachable sizes, and it found a blind spot in the observable that the whole alpha programme had used."
+  ],
+  "files": [
+    "research/tools/channel-test/qw_stress_test.py",
+    "research/tools/channel-test/qw_stress_converge.py",
+    "research/tools/channel-test/stress_test_n16_results.json",
+    "research/tools/channel-test/stress_test_n20_results.json",
+    "research/tools/channel-test/stress_test_n24_results.json",
+    "research/tools/channel-test/stress_test_n16_smear1.5_results.json",
+    "research/tools/channel-test/stress_test_n20_smear1.5_results.json",
+    "research/tools/channel-test/stress_test_n24_smear1.5_results.json",
+    "research/tools/channel-test/stress_test_convergence.json",
+    "research/tools/channel-test/run_stress_n20.log",
+    "research/tools/channel-test/run_stress_n24.log",
+    "research/tools/channel-test/run_stress_n24_smear.log"
+  ]
+}

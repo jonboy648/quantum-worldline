@@ -1,0 +1,14 @@
+{
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "matcher": "Write",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "If the file just written is inside research/data/ (papers, hardware, simulations, or hypotheses), check that the JSON structure includes the required 'id' field matching the pattern for its type (PAPER-YYYY-NNN, HW-YYYY-NNN, HYP-YYYY-NNN, or SIM-YYYY-NNN). If the id field is missing or malformed, warn the agent but do not block the write."
+        }
+      ]
+    }
+  ]
+}

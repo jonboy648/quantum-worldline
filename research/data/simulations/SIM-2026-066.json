@@ -1,0 +1,15 @@
+{
+  "id": "SIM-2026-066",
+  "hypothesis_id": "HYP-2026-027",
+  "related": ["SIM-2026-065", "SIM-2026-061"],
+  "date": "2026-07-16",
+  "type": "chi-escalation (C_TTT Route A v3.1, RunPod) -- DECISIVE NEGATIVE",
+  "hardware": "RunPod CPU pod v9bpzaqj8wfacu (cpu3c, 32 vCPU, 64GB, $0.96/hr, ~4h, ~$4; killed + verified []). 16 parallel single-thread runs: chi=10 Z2(5,5) x 8 seeds + chi=12 Z2(6,6) x 8 seeds, maxiter 4000.",
+  "goal": "Test the finite-chi hypothesis from SIM-065: do the Delta~2 blocks clean up with chi so the ~4.0 hits (4.20/3.71 at chi=6) become basin-stable?",
+  "verdict": "FALSIFIED. Escalation made the scatter WORSE, not better. chi=10 gate-clean values: 8.29, 146.1 (none near 4). chi=12 gate-clean: 2.22, 2.15, 25.7, 0.057 (450x spread among 'perfect-gate' seeds; none near 4). One chi=10 seed produced 6e8 (numerical breakdown). The finite-chi-convergence story for Route A is dead.",
+  "killer_datum": "chi=12 seed 6: G4 = |C_TTbarI| = 0.0000 EXACTLY and all other gates clean, yet C_TTT = 25.7; seed 8: G4 = 0.0005 with C_TTT = 0.057. The full gate stack (G3, G4, fracs, pin) can be satisfied exactly while the number is arbitrary => the gates certify the chiral SPLIT but cannot certify that O+/O- lie in the physical {T,Tbar} span. The one-site Delta~2 eigenbasis at chi<=12 does not contain a stable extractable {T,Tbar} pair via physical-operator pairing.",
+  "interpretation": "R5 (the design doc's honest-null) is now the LEADING conclusion for Route A: one-site PEV machinery extracts scalar OPE cleanly (C_sse = 0.50 +/- 0.03, SIM-061/064) but NOT the spin-2 self-coupling. Theoretical hindsight consistent with the data: the one-site scaling superoperator is isometry-only (no disentangler), which breaks the translation covariance that spin-2 phases require -- its Delta~2 'eigenoperators' need not resolve T/Tbar at any accessible chi. The chi=6 hits 4.20/3.71 are UNCLAIMABLE as measurements given the now-visible full distribution (0.06 - 6e8). The spin-2 extraction needs genuinely spin-resolving machinery: Route B (width-2 translation-phase eigenbasis), where lattice momentum is an actual quantum number.",
+  "next": "(1) Route B design + implementation (width-2 scaling operators DO carry translation phase; requires the one-site-shift generator across ternary registrations -- a real design task, see CTTT-SPIN-RESOLUTION-DESIGN.md Route B). (2) If Route B also fails, the methods finding 'one-site PEV extracts scalar but not spin-2 OPE' is publishable on its own. (3) C_TTT is NOT paper-blocking: v4/v5 claims (alpha=4 universality, transport, C_sse) are unaffected.",
+  "files": ["scratchpad cttt_chi10_s1..8.log / cttt_chi12_s1..8.log", "research/tools/merakit-setup/qw_ope_cttt.jl (v3.1 + seed-offset arg)"],
+  "status": "COMPLETE (Route A closed for C_TTT; Route B is the successor)"
+}

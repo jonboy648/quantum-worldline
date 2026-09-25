@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-066",
+  "title": "Emerging roles of NV-diamond magnetometry in brain mapping and bioimaging",
+  "authors": ["multiple"],
+  "date": "2026",
+  "source": "https://link.springer.com/article/10.1007/s10867-026-09703-2",
+  "doi": "10.1007/s10867-026-09703-2",
+  "journal": "Journal of Biological Physics",
+  "domain": "NV-diamond / brain imaging / neural sensing",
+  "status": "WATCH",
+  "relevance": 3,
+  "summary": "Review of NV-diamond magnetometry for brain mapping. Records best sensitivity of 9.4 ± 0.1 pT/sqrt(Hz) at 5-100 Hz without flux concentrator (Tokyo Tech 2024). Notes superiority for nanoscale spatial resolution vs SQUID/OPM for single-neuron imaging. Addresses ambient-condition MEG candidacy: current state still pT-class, not fT-class for whole-brain MEG.",
+  "key_numbers": {
+    "best_sensitivity_ambient": "9.4 pT/sqrt(Hz) (Tokyo Tech 2024)",
+    "spatial_resolution": "<100 nm in scanning probe mode",
+    "target_for_MEG": "1-10 fT/sqrt(Hz) (not yet achieved at room temperature)"
+  },
+  "bci_relevance": "NV-diamond is a WATCH for BCI sensing: excellent for single-neuron/peripheral nerve, not yet viable for whole-brain MEG. Gap to fT is 4 orders of magnitude in noise power.",
+  "independent_researcher_budget": "Single-channel demos possible ~$15k-20k but at pT level only. Suitable for magnetomyography / magnetoneurography, not MEG."
+}

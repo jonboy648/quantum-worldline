@@ -1,0 +1,125 @@
+{
+  "id": "SIM-2026-073",
+  "date": "2026-08-23",
+  "title": "V_T vs V_X channel discrimination on exact 24q critical TFIM -- HYP-008's own killer test, executed at last. PRE-REGISTERED VERDICT: INDETERMINATE (underpowered). Corrected alpha = 2.592 independently reproduced.",
+  "hypothesis_id": "HYP-2026-008",
+  "hypothesis_links": [
+    "HYP-2026-008 (the registered test)",
+    "SIM-2026-072 (the retraction this follows up)",
+    "SIM-2026-011-interaction (the reproduction target)"
+  ],
+  "preregistration": {
+    "file": "research/tools/channel-test/PREREGISTRATION.md",
+    "commits": [
+      "aed9051 (written)",
+      "ba1b4ae (date corrected 08-17 -> 08-23)"
+    ],
+    "committed_before_driver_existed": true,
+    "note": "Outcomes A/B/C/D, the dr>=3 primary window, the banned estimator and the validation gate were fixed in advance and committed BEFORE qw_channel_test.py was written. Check git log timestamps against this record."
+  },
+  "why_now": "This test was written into HYP-2026-008's refutation_criteria on 2026-03-11 and never run; the hypothesis was set SUPPORTED anyway off a single curve. Under the old alpha=4 expectation the test was near-worthless -- Delta_T=2 is a Virasoro theorem, so a working implementation had to return 4 and the test could only confirm (RESEARCH-DIRECTOR.md section 6, near-zero counterfactual novelty). SIM-2026-072 withdrew alpha=3.92 and measured 2.6 +/- 0.2, which matches NEITHER candidate channel. That is what made the outcome genuinely open and the test worth running.",
+  "method": "One cached exact 24q critical-TFIM ground state (E0 = -30.199712331), one energy-difference protocol, three excitation operators. F(dr) = [E_dual(dr) - E0] - [dE_single(anchor) + dE_single(anchor+dr)], each excited state O_j|GS> renormalized. anchor = 6, dr = 1..16. Arms: eps = Zou-Milsted-Vidal boundary primary (reproduction control); T = -(Z_j Z_{j+1} - <Z_j Z_{j+1}>) energy density; X = X_j - <X_j> spin primary. Vacuum subtraction on T and X is mandatory, not a tuning choice: without it O|GS> retains a large component along |GS> and the excitation is mostly no excitation. Driver: research/tools/channel-test/qw_channel_test.py (seed 20260817).",
+  "validation_gate": {
+    "requirement": "eps arm must reproduce SIM-2026-011-interaction .F_interaction_avg to <1% at every dr, else the arm comparison is meaningless",
+    "result": "PASS -- max relative error 0.000%",
+    "significance": "The implementation is faithful to the published one despite a complete rewrite (reshape/flip operators and Hamiltonian replacing fancy indexing). Differences between arms are therefore operator differences, not implementation differences."
+  },
+  "results": {
+    "eps_control": {
+      "alpha_log_ols_dr_ge3": 3.456,
+      "bootstrap_sigma": 0.419,
+      "plateau_n_slopes": 6,
+      "plateau_value": 2.5920966,
+      "valid_to_dr": 16
+    },
+    "T_stress_tensor_like": {
+      "alpha_log_ols_dr_ge3": 2.677,
+      "bootstrap_sigma": 0.329,
+      "plateau_n_slopes": 0,
+      "plateau_value": null,
+      "valid_to_dr": 15,
+      "amplitude_at_dr3": -0.03832588
+    },
+    "X_spin_primary": {
+      "alpha_log_ols_dr_ge3": 2.34,
+      "bootstrap_sigma": 0.1,
+      "plateau_n_slopes": 5,
+      "plateau_value": 2.1550524,
+      "valid_to_dr": 16,
+      "amplitude_at_dr3": -0.173239
+    },
+    "discrimination": {
+      "separation_sigma": 0.983,
+      "abs_gap": 0.337,
+      "amplitude_ratio": 4.52
+    },
+    "local_slopes_T": [
+      1.45,
+      1.8,
+      1.99,
+      2.14,
+      2.31,
+      2.51,
+      2.78,
+      3.16,
+      3.76,
+      4.78,
+      6.78,
+      11.97
+    ],
+    "local_slopes_X": [
+      1.87,
+      2.0,
+      2.09,
+      2.16,
+      2.23,
+      2.3,
+      2.4,
+      2.52,
+      2.68,
+      2.9,
+      3.21,
+      3.63,
+      4.06
+    ]
+  },
+  "verdict": "D_INDETERMINATE, by the pre-registered rule. Separation D = 0.98 sigma fails Outcome A (needs D > 3 AND gap > 0.5). It also fails Outcome B (channel-blind: D < 1 AND gap < 0.3 AND amplitude ratio < 2) on two of three counts -- the gap is 0.337 against a 0.3 threshold and the amplitudes differ by 4.5x. The pre-registration forbids rounding toward A, and this record does not.",
+  "honest_reading": "The exponents LEAN channel-blind: T and X sit within one sigma of each other, and all three operators land in a 2.2-2.7 band with nothing anywhere near 2*Delta_T = 4. But the test as run cannot deliver a clean verdict, and the reason is identifiable rather than mysterious (see the open-boundary finding). What can be said without qualification: no probe tested here produces an exponent consistent with stress-tensor exchange.",
+  "key_findings": [
+    "INDEPENDENT REPRODUCTION OF THE CORRECTED EXPONENT. The eps arm's local-slope plateau is 2.5920966 against SIM-2026-072's published 2.592 -- an exact match through a fully rewritten operator and Hamiltonian code path, with the validation gate at 0.000%. The corrected alpha = 2.6 +/- 0.2 is now confirmed by two independent implementations. The withdrawal of alpha = 3.92 does not rest on a single script.",
+    "NO ARM SUPPORTS STRESS-TENSOR EXCHANGE. Whole-window log-OLS gives 3.46 (eps), 2.68 (T), 2.34 (X); plateaus give 2.59 (eps) and 2.16 (X). 2*Delta_T = 4 is not reached by any operator under any estimator in the pre-registered window. The probe that was supposed to demonstrate the channel identification does not support it.",
+    "THE T PROBE IS NOT A CLEAN POWER LAW AT ALL. Its local slope rises monotonically (1.45, 1.80, 1.99, 2.14, 2.31, 2.51, 2.78, 3.16, 3.76, 4.78, 6.78, 11.97) and never flattens -- zero plateau at 15% tolerance. Its fitted 2.677 is a number extracted from a curve that is not straight in log-log. Quoting it as 'the stress-tensor exponent' would repeat exactly the error SIM-2026-072 corrected.",
+    "LIMITING SYSTEMATIC IDENTIFIED: THE OPEN BOUNDARY. All three arms curve upward at large dr (eps reaches slope 19.51, T 11.97, X 4.06). With anchor = 6 on a 24-site OBC chain, dr = 16 places the far operator at site 22 of 23. This is an edge effect, not physics, and it inflates every whole-window fit -- including the eps arm's 3.456, which is why the plateau (2.59) and the window fit (3.46) disagree so sharply. The plateau is the trustworthy statistic here; the window fit is contaminated at both ends.",
+    "T's SIGNAL IS 4.5x WEAKER THAN X's and reaches the numerical noise floor by dr = 16 (sign flip). Its bootstrap sigma of 0.329 is 3.3x X's 0.100. T's imprecision, not a genuine similarity of exponents, is what makes D = 0.98 rather than a decisive number in either direction."
+  ],
+  "counterfactual_novelty": "MEDIUM-HIGH for the test as designed: before running, both a clean split and a clean coincidence were live, and the pre-registration named thresholds for each. The realised outcome (indeterminate, limited by an identifiable systematic) was itself a pre-registered possibility (Outcome D) rather than an unanticipated escape hatch.",
+  "independence": "The eps control shares its input state with SIM-2026-011 by design -- that IS the gate. T and X are genuinely new measurements on the same state: new operators, never previously applied in this project. The analysis path is independent of SIM-2026-072's driver (separate file, separate estimator implementations), which is what makes the 2.592 agreement meaningful rather than circular.",
+  "killer_test_status": "FIRED BUT DID NOT RESOLVE. HYP-2026-008's registered criterion -- 'if V_T is indistinguishable from V_X in both functional form and amplitude, the distinction does not manifest' -- is not met, because the amplitudes are NOT indistinguishable (4.5x) even though the exponents nearly are. The hypothesis is therefore neither refuted nor supported by this run. Status stays NOT_ESTABLISHED. The test is no longer 'never run'; it is 'run once, underpowered'.",
+  "what_would_settle_it": [
+    "PRIMARY: re-run with an edge-distance criterion fixed in advance on GEOMETRIC grounds -- require the far operator's support to sit at least 4 sites from the chain end (at n=24, anchor=6 that is dr <= 12) -- so the upward curvature is excluded by construction rather than by inspection. This must be PRE-REGISTERED before running; adopting it now, after seeing these slopes, would be the window-shopping the pre-registration bans.",
+    "Periodic boundary conditions would remove the edge systematic outright and are cleaner than any windowing.",
+    "T's precision is the binding constraint. A larger chain, or the Koo-Saleur lattice stress tensor already validated in SIM-067/068/069 instead of the bare energy density used here, would shrink sigma_T.",
+    "MATCHED CONTROL (section 19), arguably the highest-value follow-up: apply the same three arms to a NON-critical chain, where no CFT exponent should appear. If the 2.2-2.7 band appears there too, it is generic to the protocol and would explain everything seen here."
+  ],
+  "reproducibility": {
+    "driver": "research/tools/channel-test/qw_channel_test.py",
+    "preregistration": "research/tools/channel-test/PREREGISTRATION.md",
+    "outputs": "channel_test_n24_results.json, channel_test_n16_results.json, run_n24.log",
+    "rng_seed": 20260817,
+    "runtime": "214 s on the local machine; 24q GS read from cache gs_24q_exact.npy",
+    "n16_smoke": "Also run at n=16: eps 3.258 / plateau 2.752, T 2.881, X 2.266, D = 0.90 -- likewise INDETERMINATE, consistent with n=24."
+  },
+  "downstream_actions_required": [
+    "HYP-2026-008: outstanding_killer_test.status changes from 'NOT RUN' to 'RUN ONCE, UNDERPOWERED (SIM-2026-073)'. Status stays NOT_ESTABLISHED; confidence stays low.",
+    "SIM-2026-072: add a cross-reference recording that its plateau value 2.592 was independently reproduced here at 2.5920966.",
+    "No public-facing claim may be made from this run. It is an indeterminate result and is recorded as one."
+  ],
+  "status": "COMPLETE",
+  "operator_contrast_VOIDED_2026_08_24": {
+    "by": "SIM-2026-074",
+    "what": "The T-versus-X contrast reported here (gap 0.337, amplitude ratio 4.5x) is WITHDRAWN as physics. At the critical point Z_jZ_{j+1} and X_j are the SAME operator by Kramers-Wannier self-duality -- identical vevs to 1e-15 and identical force profiles to 1e-13 on a periodic ring.",
+    "why_this_record_saw_a_difference": "Open boundaries break the duality (the dual of an open chain has different boundary conditions), so the entire apparent operator difference measured here was a BOUNDARY ARTIFACT between two exactly equivalent bulk operators.",
+    "what_is_unaffected": "The D_INDETERMINATE verdict stands and was the correct call. The eps-arm reproduction of alpha=2.5920966 against SIM-2026-072's 2.592, and the 0.000% validation gate, are unaffected -- they involve a single operator and no contrast.",
+    "what_is_worse_than_recorded": "This record treated the contrast as real but underpowered. It was not underpowered; it carried no signal, because there was no operator difference to detect."
+  }
+}

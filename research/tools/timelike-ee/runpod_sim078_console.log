@@ -1,0 +1,29 @@
+[2026-09-09T20:32:54Z] creating CPU pod qw-sim078-09091532 (32 vCPU, cpu5c)
+  cpu 'cpu5c' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu3c' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5g' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5c' x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu3c' x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5c' x 8 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  gpu 'NVIDIA RTX A4500' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+[2026-09-09T20:33:02Z] got gpu 'NVIDIA RTX 4000 Ada Generation' x 16 vCPU -> pod fiip7fruevt6e3
+  waiting for pod (1): cost=0.28 gpu=1 vcpu=16 ram=62
+  waiting for pod (2): cost=0.28 gpu=1 vcpu=16 ram=62
+[2026-09-09T20:33:35Z] pod fiip7fruevt6e3  costPerHr=0.28 gpuCount=1 vcpu=16 ramGB=62  ssh 157.157.221.29:22911
+  NOTE: running on a GPU-class host for its 16 vCPUs; the GPU is unused. costPerHr=0.28
+  ssh not ready (1)
+  ssh not ready (2)
+Warning: Permanently added '[157.157.221.29]:22911' (ED25519) to the list of known hosts.
+128
+               total        used        free      shared  buff/cache   available
+Mem:             503          69         163           0         270         429
+Python 3.10.12
+Warning: Permanently added '[157.157.221.29]:22911' (ED25519) to the list of known hosts.
+Warning: Permanently added '[157.157.221.29]:22911' (ED25519) to the list of known hosts.
+
+no such option: --break-system-packages
+numpy 1.21.5 scipy 1.8.0
+[2026-09-09T20:34:23Z] G1 + G2 (the grid does not start unless both pass)
+Warning: Permanently added '[157.157.221.29]:22911' (ED25519) to the list of known hosts.
+  CAP reached during sim078_gates; partials fetched
+[2026-09-10T04:34:58Z] deleting pod fiip7fruevt6e3

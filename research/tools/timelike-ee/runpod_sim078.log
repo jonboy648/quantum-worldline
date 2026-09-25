@@ -1,0 +1,36 @@
+[2026-09-09T20:28:57Z] creating CPU pod qw-sim078-09091528 (32 vCPU, cpu5c)
+pod create FAILED: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+[2026-09-09T20:29:51Z] creating CPU pod qw-sim078-09091529 (32 vCPU, cpu5c)
+  cpu5c x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu3c x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu5g x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu3g x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu5m x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu5c x 24 unavailable: {"error":"create pod: vcpuCount must be power of 2","status":500}
+  cpu3c x 24 unavailable: {"error":"create pod: vcpuCount must be power of 2","status":500}
+  cpu5c x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu3c x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu5g x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu3g x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu5c x 8 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+  cpu3c x 8 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and try again.","status":500}
+pod create FAILED on every rung of the ladder
+[2026-09-09T20:32:54Z] creating CPU pod qw-sim078-09091532 (32 vCPU, cpu5c)
+  cpu 'cpu5c' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu3c' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5g' x 32 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5c' x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu3c' x 16 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  cpu 'cpu5c' x 8 unavailable: {"error":"create pod: There are no longer any instances available with the requested specifications. Please refresh and 
+  gpu 'NVIDIA RTX A4500' x 16 unavailable: {"error":"create pod: There are no instances currently available","status":500}
+[2026-09-09T20:33:02Z] got gpu 'NVIDIA RTX 4000 Ada Generation' x 16 vCPU -> pod fiip7fruevt6e3
+[2026-09-09T20:33:35Z] pod fiip7fruevt6e3  costPerHr=0.28 gpuCount=1 vcpu=16 ramGB=62  ssh 157.157.221.29:22911
+  NOTE: running on a GPU-class host for its 16 vCPUs; the GPU is unused. costPerHr=0.28
+[2026-09-09T20:34:23Z] G1 + G2 (the grid does not start unless both pass)
+[2026-09-09T22:37:31Z] attached to fiip7fruevt6e3; waiting for the gate stage
+[2026-09-09T22:49:05Z] gate stage finished
+[2026-09-09T22:49:05Z] G2 bond-dimension scan (gate unchanged, chi raised)
+[2026-09-09T22:49:23Z] G2 scan finished
+[2026-09-09T22:49:23Z] deleting pod fiip7fruevt6e3
+  CAP reached during sim078_gates; partials fetched
+[2026-09-10T04:34:58Z] deleting pod fiip7fruevt6e3

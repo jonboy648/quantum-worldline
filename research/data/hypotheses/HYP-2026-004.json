@@ -1,0 +1,17 @@
+{
+  "id": "HYP-2026-004",
+  "claim": "The QuPepFold VQE approach for disordered proteins (PAPER-2026-007) could be extended to simulate quantum coherence effects in photosynthetic light-harvesting complexes by mapping the Frenkel exciton Hamiltonian onto the same tetrahedral lattice framework, testing whether biological systems exploit quantum effects at physiological temperatures.",
+  "confidence": "low",
+  "source_findings": ["PAPER-2026-007", "HW-2026-005"],
+  "testable": true,
+  "test_design": "Adapt the QuPepFold tetrahedral lattice encoding to represent the chromophore arrangement in the FMO complex (7 sites). Run VQE on IonQ Tempo (64 AQ) to find the ground state and low-lying excited states. Compare energy transfer pathways to known experimental results from 2D electronic spectroscopy. Test whether quantum coherent transport pathways emerge from the optimization.",
+  "refutation_criteria": "If VQE-optimized states do not reproduce known FMO energy transfer rates within 15% accuracy, or if no coherent transport pathways emerge that are not already captured by classical Forster theory, the hypothesis is refuted.",
+  "hardware_required": "IonQ Tempo (#AQ 64) or equivalent trapped-ion system",
+  "earliest_testable": "2026-2027",
+  "feasibility_verdict": "TESTABLE_NEAR_TERM",
+  "philosophical_implications": "If quantum coherence in photosynthesis can be captured by the same computational framework used for protein folding, this supports the view that quantum biology is not a separate phenomenon but an extension of quantum chemistry, and that the bridge from molecular to cellular quantum modeling may be shorter than previously assumed.",
+  "status": "proposed",
+  "created_date": "2026-03-10",
+  "last_updated": "2026-03-10",
+  "created_by": "theory-lead"
+}

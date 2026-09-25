@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-056",
+  "organization": "Atom Computing",
+  "processor": "Neutral-atom toric-code processor",
+  "date": "2026-06-02",
+  "source_url": "https://arxiv.org/abs/2606.04079",
+  "arxiv_id": "2606.04079",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "toric code",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "logical_qubits",
+  "notes": "Quantum error correction with the toric code on a neutral-atom platform. Demonstrates many cycles of syndrome extraction (up to 90 syndrome rounds) using mid-circuit measurement and replacement (reloading) of lost qubits, with logical information preserved through multiple reloading rounds. RELEVANCE 3/5: extends repeated-QEC-cycle capability on neutral atoms (the substrate family for our HYP-017 MERA approach). Continues the FT-neutral-atom trend; lowers FT cost trajectory but does not change physics anchors."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "SIM-2026-058",
+  "hypothesis_id": "HYP-2026-027",
+  "related": ["SIM-2026-056"],
+  "date": "2026-06-28",
+  "type": "method-development (OPE structure constant, attempt v2)",
+  "hardware": "local CPU (single-thread BLAS, deterministic basins)",
+  "goal": "Fix the OPE 3-point geometry from SIM-056 and validate C_sigma-sigma-eps against the exact Ising value 0.5 (Pfeifer-Evenbly-Vidal arXiv:0810.0580), gated by the Z2-forbidden C_sigma-sigma-sigma -> 0. Prerequisite for the novel target C_TTT (emergent graviton self-coupling).",
+  "what_was_built": "qw_ope_constants_v2.jl + ope_cone_v2.jl: a corrected width-3 marginal built from MERAKit's VERIFIED descend_mid causal cone (includes the disentanglers, unlike v1's bare w*rho1*w'), plus the correct CFT kinematic prefactor for the straddling triple (separations r12=r23=1, r13=2 -> factor 2^Delta_eps, not the bare 3^Omega). Structural test (test_cone_v2.jl) PASSED: rho3 is a valid RDM (tr=1, Hermitian 3e-16, partial traces normalize).",
+  "verdict": "STILL_BROKEN (honest negative). The v1->v2 fixes (disentangler inclusion + kinematic prefactor) are NECESSARY BUT INSUFFICIENT.",
+  "decisive_evidence": "Adversarial multi-clean-basin re-run (chi=6, gate |Dsig-0.125|<0.10 AND |Deps-1|<0.20) -- the build agent had stopped at ONE lucky basin (seed1) and called it MARGINAL; the verifier collected 3 clean basins and it failed:",
+  "results_clean_basins": {
+    "seed1": {"Delta_sigma": 0.1289, "C_sss": 0.0077, "C_sse": 0.485, "C_eee": 0.064},
+    "seed3": {"Delta_sigma": 0.1251, "C_sss": 0.0843, "C_sse": 0.897, "C_eee": 2.010, "note": "BEST spectrum (Dsig exactly 1/8) yet WORST OPE"},
+    "seed4": {"Delta_sigma": 0.1840, "C_sss": 1.9185, "C_sse": 0.812, "C_eee": 1.618}
+  },
+  "rejected_basin": {"seed2": {"Delta_sigma": 0.7406, "overlap_se": 1.0, "note": "bad basin, sigma misidentified, correctly excluded by the gate"}},
+  "why_failed": "C_sss does NOT vanish across clean basins: 0.008 -> 0.084 -> 1.92 (250x spread). C_sse NOT stable: 0.485/0.897/0.812 (mean ~0.73 != 0.5, spread 0.41 >> 0.10 gate). C_eee blows up to ~2. DECISIVE: seed3 has a BETTER spectrum than seed1 yet a worse C -- so clean spectrum does NOT predict correct OPE, proving seed1's good numbers were basin luck (the SIM-056 false-positive trap). A valid RDM with the correct cone and the correct kinematic factor STILL does not give basin-stable OPE data => the remaining defect is the EXTRACTION ROUTE, not the prefactor or disentangler inclusion.",
+  "root_cause_remaining": "Building ANY explicit rho3 from the width-2 rho2 does not yield a faithful translation-invariant 3-point object at chi=6. The ternary causal cone is width-2; the single straddling-triple marginal extracted from rho2 is geometrically valid as an RDM but is not the correct PEV 3-point construction. The genuine PEV route (NOT implemented) is route (b): ascend EACH of the three operators individually up the network until their supports become adjacent (fit the width-2 cone), then contract the ascended composite against rho2 -- do NOT build any rho3 from rho2.",
+  "runpod_decision": "NOT WARRANTED. chi is NOT the blocker (chi=6 dimensions are already clean, SIM-050); the 3-point EXTRACTION is wrong. A GPU run would reproduce the same basin scatter at higher chi -- the exact 'GPU on a broken contraction is wasted money' case. RunPod only AFTER C_sss<0.02 AND C_sse in [0.45,0.55] across >=3 clean seeds at chi=6, locally.",
+  "what_we_learned": "(1) The C_sss Z2-parity probe worked exactly as designed -- cheap, prefactor-independent, and correctly caught the false positive. (2) ALWAYS collect >=3 CLEAN basins before declaring an OPE pass; one clean basin is the trap (twice now: SIM-056 seed3, SIM-058 seed1). (3) The disentangler-inclusion + kinematic-prefactor fixes were real and correct but insufficient; the next attempt must implement the genuine ascend-operators-to-adjacency PEV route, not an explicit rho3.",
+  "files": ["research/tools/MERAKit.jl/qw_ope_constants_v2.jl", "research/tools/MERAKit.jl/ope_cone_v2.jl", "research/tools/MERAKit.jl/test_cone_v2.jl"],
+  "status": "COMPLETE (negative result; method development continues)"
+}

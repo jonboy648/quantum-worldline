@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-033",
+  "title": "Stable Topology in Exactly Flat Bands",
+  "authors": ["Yan-Qi Li", "Yi-Jie Wang", "Pei-Han Lin", "Bin Wang", "Zhi-Da Song"],
+  "date": "2026-03-12",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.12258",
+  "arxiv_id": "2603.12258",
+  "abstract": "Overcomes fundamental no-go theorems by demonstrating existence of critical topological flat bands (CTFBs) in finite-range hopping models. Wavefunctions are continuous but non-analytic at isolated band touching points. Establishes general construction principle for CTFBs carrying desired topological invariants. Key result for tensor networks: all filled CTFB states admit exact tensor-network representations with finite bond dimensions, providing tractable starting point for strongly correlated topological matter.",
+  "relevance": 2,
+  "tags": ["topological-flat-bands", "tensor-networks", "bond-dimension", "no-go-theorem", "cond-mat"],
+  "key_claims": [
+    "Critical topological flat bands overcome no-go theorems for flat bands with stable topology",
+    "All filled CTFB states admit exact tensor-network representations with finite bond dimension",
+    "Automated algorithm identifies over 50,000 CTFBs",
+    "Power-law correlations in filled CTFB states"
+  ],
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

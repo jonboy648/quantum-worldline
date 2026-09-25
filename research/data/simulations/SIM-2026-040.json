@@ -1,0 +1,52 @@
+{
+  "id": "SIM-2026-040",
+  "type": "classical",
+  "date": "2026-06-17",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage-2e: chi=4 autograd MERA at the O'Brien-Fendley point. CHI-generalized SIM-039 machinery (Cayley unitaries, sparse-H + parity primitives, Z2-projected energy, restart loop). Tests whether chi=4 captures the c=7/10 entanglement that chi=3 missed (SIM-039 S_ratio 0.745). Ising control validates; TCI is the test.",
+  "circuit": {
+    "qubits": 16,
+    "chi": 4,
+    "n_params": 3360,
+    "script_path": "research/data/simulations/sim040_chi4_tci_mera.py"
+  },
+  "hardware_target": "local CPU",
+  "results": {
+    "ising_control": {
+      "label": "ISING_CONTROL",
+      "lam3": 0.0,
+      "E_exact": -40.03277580097031,
+      "S_half_exact": 0.42340931735298254,
+      "E_mera": -40.032117658514565,
+      "rel_err_pct": 0.0016440090465377672,
+      "overlap": 0.9999374751735088,
+      "S_half": 0.4227663823712892,
+      "S_ratio": 0.9984815284989175,
+      "gate_pass": true,
+      "niter": 1000,
+      "wall_s": 358.23441219329834,
+      "checkpoint": "D:/quantum-worldline/research/data/simulations/theta_chi4_SIM2026040_ISING_CONTROL.npy"
+    },
+    "tci": {
+      "label": "TCI",
+      "lam3": 0.856,
+      "E_exact": -32.70280774083227,
+      "S_half_exact": 0.17948328498527868,
+      "E_mera": -32.70080867783847,
+      "rel_err_pct": 0.006112817619961079,
+      "overlap": 0.9997819489394023,
+      "S_half": 0.17598047715482623,
+      "S_ratio": 0.9804839329147572,
+      "gate_pass": true,
+      "niter": 1000,
+      "wall_s": 372.28447008132935,
+      "checkpoint": "D:/quantum-worldline/research/data/simulations/theta_chi4_SIM2026040_TCI.npy"
+    },
+    "control_validated": true,
+    "status": "CHI4_SUFFICIENT_PROCEED_TO_FORCE",
+    "verdict": "chi=4 SUFFICIENT at the TCI point: rel 0.006%, overlap 0.9998, S_half 0.1760/0.1795 (ratio 0.980). chi=3 missed ~26% of the entanglement (SIM-039 S_ratio 0.745); chi=4 captures it. Control validated (S_ratio 0.998). NEXT: stress-tensor force read-out on the chi=4 TCI state -> the alpha-universality answer."
+  },
+  "comparison": "classical_wins",
+  "notes": "Follows SIM-039 (chi=3: energy-faithful, S_ratio 0.745). chi=4 is the earned escalation on a control-validated, optimizer-ruled-out footing. Same exact-gradient autograd machinery, bond 3->4 (1246->~3360 params).",
+  "wall_seconds": 733.9139957427979
+}

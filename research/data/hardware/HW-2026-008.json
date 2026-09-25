@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-008",
+  "organization": "Google",
+  "processor": "Willow (AlphaQubit-enhanced)",
+  "date": "2025-10-01",
+  "source_url": "https://blog.google/innovation-and-ai/technology/research/quantum-echoes-willow-verifiable-quantum-advantage/",
+  "physical_qubits": 105,
+  "logical_qubits": 0,
+  "error_correction_ratio": "Below threshold (first demonstration)",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "First verifiable quantum advantage: Quantum Echoes algorithm 13,000x faster than classical supercomputers. AlphaQubit neural-network decoder reduces errors 6% vs tensor network methods, 30% vs correlated matching. First demonstration that quantum system becomes more stable as it scales. Published in Nature. Two-stage training: synthetic pretraining then hardware-specific fine-tuning."
+}

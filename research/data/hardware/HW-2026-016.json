@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-016",
+  "organization": "IBM",
+  "processor": "Nighthawk (ibm_miami, 120-qubit thermalization demo)",
+  "date": "2026-03-12",
+  "source_url": "https://arxiv.org/abs/2603.12236",
+  "physical_qubits": 120,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A (NISQ)",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 350,
+  "max_circuit_depth": 5000,
+  "is_frontier": false,
+  "frontier_category": "circuit_depth",
+  "notes": "100-qubit (10x10 grid) thermalization study on IBM Nighthawk (ibm_miami) demonstrates quantum simulation beyond classical tensor-network reach. Error-mitigated quantum simulation validated against tensor-network benchmarks. Demonstrates practical utility of 120-qubit superconducting processor for condensed matter research. Paper by Alam et al. (2603.12236)."
+}

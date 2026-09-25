@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-004",
+  "title": "Machine-Learned Renormalization-Group-Improved Gauge Actions and Classically Perfect Gradient Flows",
+  "authors": ["David Mueller", "Urs Wenger", "Kieran Holland", "Andreas Ipp"],
+  "date": "2026-01-26",
+  "source": "prl",
+  "source_url": "https://doi.org/10.1103/k41k-2pnc",
+  "arxiv_id": "",
+  "abstract": "Develops specialized neural networks to parameterize lattice QFT actions that satisfy fixed-point equations, enabling even coarse lattices to yield remarkably small errors. Solves a 30-year-old challenge in particle physics computational methods. The AI is designed from the outset to guarantee compliance with physical symmetries. Opens a completely new way to simulate complex quantum field theories with manageable computational effort.",
+  "relevance": 4,
+  "tags": ["AI-QFT", "lattice-QFT", "neural-network", "renormalization-group", "fixed-point", "machine-learning"],
+  "key_claims": [
+    "Neural network parameterization of lattice actions satisfying fixed-point equations",
+    "Coarse lattices achieve remarkably small errors with AI-optimized actions",
+    "Custom neural network designed to guarantee physical law compliance from the outset",
+    "Solves 30-year-old challenge in lattice QFT formulation optimization",
+    "Enables simulation of complex QFTs with manageable computational effort"
+  ],
+  "hardware_used": "Classical (neural network optimization)",
+  "qubit_count": 0,
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-03-10"
+}

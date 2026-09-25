@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-074",
+  "title": "Quantinuum + Rolls-Royce + Riverlane + EPCC: industrial algorithm blocks on Helios, scaling to Sol/Apollo",
+  "vendor": "Quantinuum",
+  "date": "2026-07-14",
+  "source_url": "https://quantumcomputingreport.com/quantinuum-rolls-royce-riverlane-and-epcc-partner-to-accelerate-fluid-dynamics-simulations/",
+  "relevance": 3,
+  "summary": "Multi-year hybrid quantum-HPC collaboration runs computational building blocks on Helios with Riverlane QEC expertise and explicit scaling assessment toward Sol and Apollo.",
+  "tags": ["Quantinuum", "Helios", "Sol", "Apollo", "QEC", "partnership"],
+  "key_specs": {"platform": "Helios (94 logical, our 0.57%-error anchor)", "scaling": "Sol/Apollo roadmap continuity"},
+  "actionable": "Confirms Helios roadmap continuity and real algorithm workloads on the trapped-ion anchor machine (HYP-013 platform); partnership news rather than a new record.",
+  "source": "press-release",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

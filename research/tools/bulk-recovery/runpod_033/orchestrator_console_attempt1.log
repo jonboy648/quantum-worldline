@@ -1,0 +1,100 @@
+[2026-09-22T17:07:43Z] got gpu 'NVIDIA RTX 4000 Ada Generation' x 16 vCPU -> pod go7c29wyxtcxox
+  waiting for pod (1): cost=0.28 gpu=1 vcpu=16 ram=62
+  waiting for pod (2): cost=0.28 gpu=1 vcpu=16 ram=62
+[2026-09-22T17:08:15Z] pod go7c29wyxtcxox costPerHr=0.28 gpuCount=1 vcpu=16 ramGB=62 ssh 157.157.221.29:22743
+[2026-09-22T17:08:15Z] cap 25 USD at 0.28 USD/h = 89.29 h; deadline 2026-09-26T10:25:39Z
+  ssh not ready (1)
+  ssh not ready (2)
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+128
+               total        used        free      shared  buff/cache   available
+Mem:             503          59          70           1         373         438
+Python 3.10.12
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+tar: MERAKit.jl/.github/workflows/ci.yml: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.github/workflows: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.github: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.ruff_cache/.gitignore: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.ruff_cache/0.14.1/12772168073487228359: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.ruff_cache/0.14.1/14547843626959406397: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.ruff_cache/0.14.1: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.ruff_cache/CACHEDIR.TAG: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/.ruff_cache: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/demo/demo.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/demo/demo_tools.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/demo: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/diag_prefactor.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/docs/make.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/docs/Project.toml: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/docs/src/index.md: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/docs/src: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/docs: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/dump_ising.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/instantiate.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/LICENSE: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/Manifest.toml: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/of_build_v2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/ope_cone_v2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/Project.toml: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/Project.toml.orig: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_block_test.py: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_diag_blocking.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_diag_blocking2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_diag_fusion.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_hyp033_export.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ising_chi6.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_of_build.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_of_control2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_of_control_correct.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_of_pregate.py: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_of_pregate_compare.py: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ope_constants.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ope_constants_v2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ope_cttt.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ope_pev.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ope_pev_z2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_ope_z2smoke.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_potts_chi8.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_potts_measure.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_potts_smoke.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_potts_z3.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_tci.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_tci_chi8.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/qw_tci_measure.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/README.md: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/setup.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/binarylayer.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/genericmera.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/layer.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/meracache.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/MERAKit.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/modifiedbinarylayer.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/modifiedbinaryop.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/simplelayer.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/tensortools.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src/ternarylayer.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/src: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/test/Project.toml: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/test/runtests.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/test: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl/test_cone_v2.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: MERAKit.jl: Cannot change ownership to uid 197609, gid 197609: Invalid argument
+tar: Exiting with failure status due to previous errors
+[2026-09-22T17:09:09Z] selftests on the pod
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+Traceback (most recent call last):
+  File "/workspace/hyp033/hyp033_grid.py", line 30, in <module>
+    import opt_einsum as oe
+ModuleNotFoundError: No module named 'opt_einsum'
+[2026-09-22T17:09:12Z] launching hyp033_pod.sh detached (NJOBS=3 SEEDS6=8 SEEDS8=4 SEEDS_GAP=8)
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+    [2026-09-22T17:09:17Z] INSTANTIATE FAILED
+    ./hyp033_pod.sh: line 24: julia: command not found
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+Warning: Permanently added '[157.157.221.29]:22743' (ED25519) to the list of known hosts.
+[2026-09-22T17:12:29Z] finished; results in D:/quantum-worldline/research/tools/bulk-recovery/runpod_033/networks
+[2026-09-22T17:12:29Z] deleting pod go7c29wyxtcxox
+  pod GET after delete: HTTP 404

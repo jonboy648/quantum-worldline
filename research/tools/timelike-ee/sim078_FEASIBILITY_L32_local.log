@@ -1,0 +1,5 @@
+setting A (R_H=5.0, delta=5.0): 2 points on 2 workers
+  [1/2] L32_hz0.0: Im +0.0215 (pred 0.2618)  chi 128  G3 0.001 G4 0.007  [844s]
+  [2/2] L32_hz0.02: Im -0.1082 (pred 0.2618)  chi 128  G3 0.000 G4 0.007  [865s]
+wrote sim078_FEASIBILITY_L32_local.json
+exit=0

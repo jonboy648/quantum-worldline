@@ -1,0 +1,120 @@
+{
+  "schema": "qw.validator-exact-diag-20.v1",
+  "hypothesis_id": "HYP-2026-017",
+  "validator": "20-atom exact time-evolution (LinearOperator + expm_multiply)",
+  "fail_reason": "task 'E0' raised MemoryError: Unable to allocate 8.00 TiB for an array with shape (1048576, 1048576) and data type float64",
+  "config": {
+    "anchor": 1,
+    "dr_list": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_atoms": 20,
+    "n_boundary": 8,
+    "t_total_us": 2.8000000000000003,
+    "n_substeps_per_segment": 8,
+    "C6_rad_s_um6": 5420441132650.757
+  },
+  "layout": {
+    "positions_um": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        5.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0
+      ],
+      [
+        15.0,
+        0.0
+      ],
+      [
+        20.0,
+        0.0
+      ],
+      [
+        25.0,
+        0.0
+      ],
+      [
+        30.0,
+        0.0
+      ],
+      [
+        35.0,
+        0.0
+      ],
+      [
+        2.5,
+        10.0
+      ],
+      [
+        12.5,
+        10.0
+      ],
+      [
+        22.5,
+        10.0
+      ],
+      [
+        32.5,
+        10.0
+      ],
+      [
+        2.5,
+        15.0
+      ],
+      [
+        12.5,
+        15.0
+      ],
+      [
+        22.5,
+        15.0
+      ],
+      [
+        32.5,
+        15.0
+      ],
+      [
+        7.5,
+        20.0
+      ],
+      [
+        27.5,
+        20.0
+      ],
+      [
+        7.5,
+        30.0
+      ],
+      [
+        27.5,
+        30.0
+      ]
+    ]
+  },
+  "energies": {},
+  "forces": {},
+  "alpha_fit": {
+    "alpha": NaN,
+    "dr_used": []
+  },
+  "wall_time_s": 0.57,
+  "tasks": [
+    {
+      "label": "E0",
+      "excited_sites": [],
+      "status": "ERROR",
+      "error": "MemoryError: Unable to allocate 8.00 TiB for an array with shape (1048576, 1048576) and data type float64",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/qw-validator/validator_exact_diag_20.py\", line 214, in main\n    density = _evolve(excited, n_sites, n_diag_per_site, pair_diag)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/qw-validator/validator_exact_diag_20.py\", line 171, in _evolve\n    psi = expm_multiply(\n          ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_expm_multiply.py\", line 207, in expm_multiply\n    X = _expm_multiply_simple(A, B, traceA=traceA)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_expm_multiply.py\", line 270, in _expm_multiply_simple\n    A_1_norm = onenormest(A) if is_linear_operator else _exact_1_norm(A)\n               ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_onenormest.py\", line 107, in onenormest\n    est, v, w, nmults, nresamples = _onenormest_core(A, A.H, t, itmax)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_onenormest.py\", line 405, in _onenormest_core\n    Y = np.asarray(A_linear_operator.matmat(X))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 370, in matmat\n    Y = self._matmat(X)\n        ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 716, in _matmat\n    return self.args[0].matmat(x) + self.args[1].matmat(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 370, in matmat\n    Y = self._matmat(X)\n        ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 778, in _matmat\n    return self.args[1] * self.args[0].matmat(x)\n                          ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 370, in matmat\n    Y = self._matmat(X)\n        ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 617, in _matmat\n    return super()._matmat(X)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 217, in _matmat\n    return np.hstack([self.matvec(col.reshape(-1,1)) for col in X.T])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 217, in <listcomp>\n    return np.hstack([self.matvec(col.reshape(-1,1)) for col in X.T])\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 262, in matvec\n    y = self._matvec(x)\n        ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/scipy/sparse/linalg/_interface.py\", line 620, in _matvec\n    return self.__matvec_impl(x)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/qw-validator/validator_exact_diag_20.py\", line 103, in matvec\n    out = diag_total * v\n          ~~~~~~~~~~~^~~\nnumpy._core._exceptions._ArrayMemoryError: Unable to allocate 8.00 TiB for an array with shape (1048576, 1048576) and data type float64\n"
+    }
+  ]
+}

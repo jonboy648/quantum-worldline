@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-026",
+  "title": "Onset of Ergodicity Across Scales on a Digital Quantum Processor",
+  "authors": ["Faisal Alam", "Marcos Crichigno", "Elizabeth Crosson", "Steven T. Flammia", "Filippo Maria Gambetta", "Max Hunter Gordon", "Michael Kreshchuk", "Ashley Montanaro", "Alberto Nocera", "Raul A. Santos"],
+  "date": "2026-03-12",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.12236",
+  "arxiv_id": "2603.12236",
+  "abstract": "Studies onset of ergodicity in a 2D disordered Heisenberg Floquet model using digital quantum simulation on IBM's Nighthawk 120-qubit superconducting processor (ibm_miami), reaching system sizes up to 10x10=100 qubits. Probes ergodicity across length scales via coarse-grained collision entropy patches up to 3x3. Finds smooth crossover from subergodic to ergodic behavior as coupling J increases, with smaller patches thermalizing first. In regimes where tensor-network simulations are reliable, excellent agreement with error-mitigated quantum simulation. Beyond this regime, volume-law entanglement causes classical cost to rise sharply.",
+  "relevance": 3,
+  "tags": ["quantum-simulation", "thermalization", "IBM-Nighthawk", "100-qubits", "tensor-network-comparison", "many-body", "ergodicity"],
+  "key_claims": [
+    "100-qubit (10x10) quantum simulation of 2D Heisenberg Floquet model on IBM Nighthawk",
+    "Hierarchy of ergodicity across scales: smaller patches thermalize first",
+    "Classical tensor-network simulations agree with quantum results in tractable regime",
+    "Quantum simulation accesses volume-law entanglement regime beyond classical reach",
+    "Error-mitigated results validated against tensor-network benchmarks"
+  ],
+  "hardware_used": "IBM Nighthawk (ibm_miami, 120-qubit superconducting)",
+  "qubit_count": 100,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

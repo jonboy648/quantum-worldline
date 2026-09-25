@@ -1,0 +1,28 @@
+{
+  "id": "PAPER-2026-123",
+  "title": "Making complex CFTs real: The two-dimensional Potts model for Q>4 and complex Q",
+  "authors": [
+    "Jesper Lykke Jacobsen",
+    "Kay Joerg Wiese"
+  ],
+  "date": "2026-06-16",
+  "arxiv_id": "2606.18125",
+  "relevance": 3,
+  "abstract": "Transfer-matrix plus analytic-continuation recipe to extract conformal data (central charge, exponents, OPE coefficients) from a lattice spectrum, for the 2D Potts model at Q>4 and complex Q.",
+  "tags": [
+    "Potts",
+    "CFT",
+    "transfer-matrix",
+    "conformal-data",
+    "analytic-continuation"
+  ],
+  "key_claims": [
+    "Reads conformal data off the lattice/transfer-matrix spectrum (not energy) -- the same lesson that fixed the chi=6 wrong-basin problem.",
+    "Candidate tooling to sharpen Delta_sigma at chi=6 (0.154 vs CFT 0.075) IF adapted to the minimal-model/TCI tower.",
+    "Potts, not TCI -- methods-adjacent only."
+  ],
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.18125",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

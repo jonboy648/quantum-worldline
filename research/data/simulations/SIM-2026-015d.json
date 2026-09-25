@@ -1,0 +1,87 @@
+{
+  "id": "SIM-2026-015d",
+  "description": "Force profile from exact and chi=3 MERA ground states (16q)",
+  "verdict_SUPERSEDED_2026_08_17": {
+    "summary": "THE POWER-LAW FITS IN THIS RECORD ARE SUPERSEDED by SIM-2026-072. Both exponents recorded below -- .exact.alpha = 3.9748194669315473 +/- 0.14509942494700312 and .mera.alpha = 4.071157011661138 +/- 0.17775000857927842 -- are WITHDRAWN as stated. THE RAW DATA IN THIS RECORD ARE NOT IN QUESTION; only the fits are superseded.",
+    "superseded_fits": {
+      "exact.alpha": "3.9748194669315473 +/- 0.14509942494700312 (N=16 exact). WITHDRAWN as stated. Dropping dr=2 alone moves it to 2.75; the defensible estimator x window matrix spans 2.753-3.975 and the PUBLISHED value is the MAXIMUM of that range.",
+      "mera.alpha": "4.071157011661138 +/- 0.17775000857927842 (N=16, chi=3 MERA). WITHDRAWN OUTRIGHT and MUST NOT BE QUOTED AT ALL -- see sign_flip_defect below; this one is not merely mis-weighted, it is invalid."
+    },
+    "cause": "The published fits are unweighted nonlinear least squares on V in LINEAR space. Because |V| falls by three orders of magnitude across the window, the single point dr=2 carries 96.0% (.exact.V_data) and 96.3% (.mera.V_data) of the least-squares objective -- 95.8% in the companion N=24 dataset SIM-2026-011-interaction. The reported exponents are therefore essentially the dr=2->3 local log-slope, not a property of the profiles. Changing only the error model, and discarding no data, collapses them toward ~2.7-2.8.",
+    "sign_flip_defect_mera_chi3": "SEPARATE AND FATAL to .mera.alpha, and NOT found by the audit: .mera.V_data is POSITIVE at dr=9 (+0.0012014968002738158) and dr=10 (+0.00036517275546543715), against a negative branch everywhere else (dr=11 returns to -0.0007422103086014431). The published chi=3 fit is recorded as fit_dr_min=2, fit_n_pts=10, i.e. dr=2..11 with sign fixed at -1, so it fits a fixed-sign power law A*dr^(-alpha) THROUGH TWO POINTS OF THE WRONG SIGN. A power law cannot change sign. The chi=3 evaluation is invalid beyond dr=8, and .mera.alpha = 4.071157011661138 should not be quoted at all -- not as a headline, not as a corroboration, and not as one of the 'three independent evaluations'.",
+    "corrected_result": "CORRECTED MEASUREMENT (from SIM-2026-072, across all three force datasets): alpha = 2.6 +/- 0.2, with the EXCHANGE CHANNEL OPEN -- 2*Delta_T = 4 (stress tensor) is excluded by the intermediate-separation plateau and 2*Delta_epsilon = 2 (scalar) lies outside the plateau band. Plateau diagnostics for this record: .exact.V_data shows 4 consecutive flat local slopes at 2.745; .mera.V_data shows 2 at 2.471 (its usable window ends at dr=8). Neither shows any flat region at 4.",
+    "not_an_independent_confirmation": "This record was cited as the independent N=16 confirmation of the N=24 result. It is not. It shares one observable, one operator, one fit window and one fitting routine with SIM-2026-011-interaction, and all three evaluations move together under the dominant systematic (3.92 -> 2.56, 3.97 -> 2.75, 4.07 -> 2.63 on dropping dr=2). Three numbers that fail together are one number.",
+    "raw_data_NOT_in_question": "ONLY THE FITS ARE SUPERSEDED. The raw arrays -- .exact.V_data, .mera.V_data, .E0_exact, .E_mera and .exact.E_gs / .mera.E_gs -- are NOT in question, have NOT been altered, and remain the valid record of the measurement. (The sign flips at dr=9 and dr=10 in .mera.V_data are a property of the chi=3 state at small |V|, not a transcription error; they invalidate the FIT that spans them, not the data.) SIM-2026-072 re-analysed exactly these arrays.",
+    "see_also": [
+      "research/data/simulations/SIM-2026-072.json (the authority for the corrected number; .results.NEW_DEFECT_sign_flips for the sign audit)",
+      "docs/governance/AUDIT-2026-08-11.md defects D-2 and D-3",
+      "research/tools/force-reanalysis/qw_alpha_reanalysis.py (re-analysis driver, seed 20260817)"
+    ],
+    "correction_policy": "Additive, per RESEARCH-DIRECTOR.md section 32 and the ERRATA D5 exemplar (SIM-2026-036 -> SIM-2026-039/040). The original data, the original fits and the original status field are preserved unchanged below; this field records the challenge, the corrected analysis and the changed conclusion."
+  },
+  "n_qubits": 16,
+  "chi": 3,
+  "anchor": 2,
+  "dr_values": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "E0_exact": -20.01638790048509,
+  "E_mera": -19.986111293142905,
+  "exact": {
+    "E_gs": -20.01638790048515,
+    "V_data": {
+      "1": -2.2695751497033037,
+      "2": -0.528688304339024,
+      "3": -0.09472937967879957,
+      "4": -0.043019018795355635,
+      "5": -0.023844173775632527,
+      "6": -0.014543091814037012,
+      "7": -0.009330752346681237,
+      "8": -0.006115225757060472,
+      "9": -0.003980642668892642,
+      "10": -0.0024732760029628764,
+      "11": -0.0013523573381171161
+    },
+    "alpha": 3.9748194669315473,
+    "dalpha": 0.14509942494700312,
+    "A": 8.295706565029553,
+    "dA": 0.8644789440159322,
+    "sign": -1,
+    "fit_dr_min": 2,
+    "fit_n_pts": 10
+  },
+  "mera": {
+    "E_gs": -19.986111293142905,
+    "V_data": {
+      "1": -2.2430861866566474,
+      "2": -0.521763129229857,
+      "3": -0.08776850712683881,
+      "4": -0.04441621590522615,
+      "5": -0.025002421093859084,
+      "6": -0.012942010281033589,
+      "7": -0.007251419939670711,
+      "8": -0.003244847883809854,
+      "9": 0.0012014968002738158,
+      "10": 0.00036517275546543715,
+      "11": -0.0007422103086014431
+    },
+    "alpha": 4.071157011661138,
+    "dalpha": 0.17775000857927842,
+    "A": 8.751321149698686,
+    "dA": 1.1138838817099952,
+    "sign": -1,
+    "fit_dr_min": 2,
+    "fit_n_pts": 10
+  },
+  "status": "COMPLETE"
+}

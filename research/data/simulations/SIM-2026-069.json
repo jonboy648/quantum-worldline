@@ -1,0 +1,52 @@
+{
+  "id": "SIM-2026-069",
+  "date": "2026-08-11",
+  "title": "C_TTT at the 3-state Potts point via puMPS Koo-Saleur matrix elements: 3.163 +/- 0.003 vs exact 3.16228 -- PASSED. THE SELF-COUPLING LADDER IS COMPLETE (Ising + TCI + Potts).",
+  "hypothesis_links": ["HYP-2026-025 (Potts alpha=4 tower)", "SIM-2026-067 (Ising rung)", "SIM-2026-068 (TCI rung)"],
+  "method": "Identical pipeline to SIM-068 on the critical 3-state Potts chain in the puMPS convention H = sum_j [-1/2(U'_j U_{j+1} + U_j U'_{j+1}) - h/2(V_j + V'_j)], h=1 self-dual, weylops d=3. GS via minimize_energy_local_CG! with PLATEAU-ACCEPT (d=3 CG floor ~2.5e-4, vs 9e-5 on OF d=2; not fixable by step/pinv_tol tuning), certified harmless by a momentum-resolved ED gate at N=10 (base-3 generalization of the vendored UnitTestED trick). Bloch excitations at k=0,+2,-2; v_T calibrated from Delta_T=2; T identified by element dominance with Delta-plausibility gate (1.5, 2.5). c = 2|<T|H_{+-2}|0> N/(2 pi v_T)|^2; C_TTT = 2 sqrt(2)/sqrt(c). Driver: research/tools/pumps-setup/qw_cttt_potts3.jl; ED gate: qw_potts_ed_gate.jl.",
+  "ed_gate": {
+    "N": 10,
+    "agreement": "E0/site 1.4e-6 (variational), T gap 1.8e-4 rel, v's <1e-4, gap ratio 6.1929 vs 6.1924",
+    "extra_findings": "ED spectrum shows EXACT charged doublets with elem=0 (Z3 structural zeros, H neutral) and reconfirms the SIM-067 band-edge trap in raw ED: max-element state is a UV state at Delta~2.53 with 4.5x T's element -- naive ED element-dominance would give c=5.9. puMPS Bloch elements suppress every non-T element to <=6e-4 (up to ~4000x dominance at large N): the SIM-068 suppression mechanism, cleaner at d=3."
+  },
+  "ladder": {
+    "columns": ["N", "D_best", "c_nplus2", "c_nminus2", "C_TTT_mean"],
+    "rows": [
+      [10, 12, 0.843509, 0.843502, 3.0796],
+      [14, 20, 0.822010, 0.822015, 3.1196],
+      [20, 24, 0.810536, 0.810534, 3.1417],
+      [28, 24, 0.805001, 0.805007, 3.1524],
+      [40, 28, 0.801976, 0.801969, 3.1584]
+    ],
+    "note": "Chirality symmetry <=1e-4 at every rung (1e-5-class at converged D). sigma-pair split down to 1.2e-6; gap ratio eps/sigma -> 6.074 at N=40 vs exact 6.0. v spread (v_T/v_sigma/v_eps) narrows to 0.5% at N=40."
+  },
+  "D_systematics": "Truncation LOWERS c (same sign as TCI) but Potts d=3 needs one D-notch more per rung: N=14 D12->16 +0.0050 (D16=D20, converged); N=20 D14->20 +0.0076, D20->24 +0.0010 (geometric, residual ~+0.0002); N=28 D20->24 +0.0007 (residual ~+0.0004); N=40 D24->28 +0.0011 (residual ~+0.0003). TWO-ERROR CANCELLATION CAUGHT TWICE: N=20 D=14 gave c=0.8019 (spuriously nearer 0.8 than converged 0.8105) and N=40 D=24 gave 0.80088 sitting BELOW the p~2.2 trend; the D=28 re-run was PREDICTED to land at 0.8022+-0.0005 before it ran, and landed at 0.80197.",
+  "fit": {
+    "model": "c(N) = c_inf + a*N^-p, best-D chirality means",
+    "variants": {
+      "all4": {"c_inf": 0.79892, "p": 1.93, "C_TTT": 3.1644},
+      "D_residual_shifted": {"c_inf": 0.79920, "p": 1.90, "C_TTT": 3.1639},
+      "drop_N14": {"c_inf": 0.79887, "p": 1.91, "C_TTT": 3.1645},
+      "with_N10": {"c_inf": 0.79906, "p": 1.96, "C_TTT": 3.1641},
+      "fixed_p_2.0": {"c_inf": 0.79927, "C_TTT": 3.1637},
+      "fixed_p_2.2": {"c_inf": 0.80009, "C_TTT": 3.1621},
+      "fixed_p_2.4": {"c_inf": 0.80077, "C_TTT": 3.1607}
+    },
+    "quoted": "c_inf = 0.7995 +/- 0.0012 (variant span + D-residual systematic) vs exact 4/5; C_TTT = 3.163 +/- 0.003 vs exact 2*sqrt(2)/sqrt(4/5) = 3.16228. The (p, c_inf) fit degeneracy dominates the band, as in SIM-068; the Potts band (0.24% span) is TIGHTER than TCI's (0.5%).",
+    "stopping_rule": "N=56 omitted deliberately: 4 clean D-checked rungs already beat the SIM-068 precision, and a 5th rung cannot change the verdict; hours of D=28+ compute would purchase no conclusion."
+  },
+  "key_findings": [
+    "THE LADDER IS COMPLETE: C_TTT measured at all three unitary universality classes -- Ising 3.9936/4.000 (SIM-067), TCI 3.381/3.3806 (SIM-068), Potts 3.163/3.16228 (this) -- each at <=0.15% agreement with 2*sqrt(2)/sqrt(c). The Koo-Saleur circle route is validated method, three-for-three.",
+    "Z3 charge does free work: charged sigma-descendants (the states NEAREST T in energy) have structurally zero KS elements, confirmed exactly in ED -- Potts element space is CLEANER than TCI despite the denser spectrum.",
+    "d=3 optimizer floor (~2.5e-4) is a conditioning property, not a convergence failure: energies keep creeping ~1e-9/iter. Plateau-accept + independent ED certification is the honest pattern; chasing |grad|<1e-6 wastes compute.",
+    "Two-error cancellation is now a PREDICTIVE tool, not just a trap: the N=40 D=28 value was called at 0.8022+-0.0005 from the D-shift systematics before the run; it landed at 0.80197."
+  ],
+  "operational_notes": "Vendored puMPS needed weylops diagm patch (pre-1.0 syntax; only potts3 path hits it) + pinv_tol passthrough in minimize_energy_local_CG! (tested, did not move the floor; kept) -- see pumps-setup/VENDOR.md. One mid-ladder Windows reboot: per-round JLD2 checkpointing + chained invocations resumed with zero loss. Chained background invocations post-reboot were stable (the pre-reboot external-kill pattern did not recur).",
+  "verdict": "PASSED. C_TTT(Potts) = 3.163 +/- 0.003 vs exact 3.16228. Stress-tensor self-coupling confirmed at c=1/2, 7/10, 4/5. Next frontier: HYP-028 Phase 2 -- biorthogonal KS elements at Yang-Lee (c=-22/5 vs c_eff=2/5 discrimination), design in research/tools/yanglee-pt/.",
+  "files": {
+    "driver": "research/tools/pumps-setup/qw_cttt_potts3.jl",
+    "ed_gate": "research/tools/pumps-setup/qw_potts_ed_gate.jl",
+    "results": "research/tools/pumps-setup/qw_cttt_potts3_results_2026-08-11.jsonl (11 stages)",
+    "vendor_plan": "research/tools/pumps-setup/VENDOR.md"
+  }
+}

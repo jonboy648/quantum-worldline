@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-077",
+  "title": "Advances in the Worldline Approach to Quantum Field Theory: Strong Fields, Amplitudes and Gravity",
+  "authors": ["(doctoral thesis, author from arXiv:2603.19726)"],
+  "date": "2026-03",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2603.19726",
+  "arxiv_id": "2603.19726",
+  "abstract": "Doctoral thesis devoted to the first-quantized approach to quantum field theory — the Worldline Formalism. Illustrates the versatility and efficiency of this formalism across a broad range of physical contexts including perturbative and non-perturbative analyses. Investigates how quantum particles interact with strong background fields, how scattering amplitudes can be efficiently computed, and how perturbative expansions of the heat kernel can be systematically performed. Covers strong field physics, amplitude calculations, and gravitational applications.",
+  "relevance": 3,
+  "tags": ["worldline-formalism", "first-quantized", "scattering-amplitudes", "heat-kernel", "strong-fields", "gravity", "perturbative-QFT"],
+  "key_claims": [
+    "Comprehensive review and extension of worldline formalism across strong fields, amplitudes, and gravity",
+    "Non-perturbative analyses included via worldline path integrals",
+    "Heat kernel perturbative expansions systematically developed",
+    "Establishes worldline approach as competitive with Feynman diagram methods for amplitude computation"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "NEUTRAL — comprehensive worldline formalism reference. Relevant to our worldline Monte Carlo simulation program and HYP-003/007; provides theoretical background but no direct bearing on alpha=4 result."
+}

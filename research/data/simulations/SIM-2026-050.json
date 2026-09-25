@@ -1,0 +1,17 @@
+{
+  "id": "SIM-2026-050",
+  "type": "classical",
+  "date": "2026-06-19",
+  "hypothesis_id": "HYP-2026-027",
+  "method": "MERAKit.jl (Hauru 2007.03638) ternary MERA, Riemannian LBFGS, direct-init at bond dim 6 (Z2 sector-3), block_size=2. Julia 1.8.5.",
+  "chi": 6,
+  "model": "critical Ising (HYP-027 control)",
+  "results": {
+    "seed1": {"E_err": 2.29e-6, "Delta_sigma": 0.12515, "Delta_eps": 1.0175, "Delta_T": 1.9980},
+    "seed2": {"E_err": 2.44e-6, "Delta_sigma": 0.12534, "Delta_eps": 1.0176, "Delta_T": 1.9925}
+  },
+  "cft_targets": {"Delta_sigma": 0.125, "Delta_eps": 1.0, "Delta_T": 2.0},
+  "gate_pass": true,
+  "verdict": "chi=6 Ising CONTROL PASSES: Delta_sigma=0.1251 (0.1% from CFT 0.125), Delta_T=1.998 (0.1% from 2.0), reproducible across seeds. The from-scratch optimizers (EV + Riemannian, SIM-045-049) stalled at sigma=0.057; MERAKit's rho-preconditioned Riemannian LBFGS reaches true criticality. This VALIDATES the chi=6 machinery and the superoperator-gate physics. Next: O'Brien-Fendley TCI Hamiltonian -> read Delta_T at c=7/10 -> alpha-universality answer.",
+  "notes": "Demo's expand_bonddim hits LAPACKException(15) at dim 4->6; direct-init at dim 6 avoids it. block_size=2 blocks 2 phys sites. Delta_eps slightly high (1.018) is the known small-chi residual; sigma and Delta_T are the decisive conformal data and both nail CFT."
+}

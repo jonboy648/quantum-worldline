@@ -1,0 +1,104 @@
+{
+  "id": "SIM-2026-035",
+  "type": "classical",
+  "date": "2026-06-16",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Momentum-resolved stress-tensor identification (proper Koo-Saleur): block-diagonalize H+translation, identify the |spin|=2 Delta=2 T state, measure force between momentum-2 energy-density wavepackets at Ising vs tricritical points. Fixes SIM-034's degenerate-basis and epsilon-contamination flaws.",
+  "circuit": {
+    "qubits": 14,
+    "script_path": "research/data/simulations/sim035_momentum_resolved_T.py"
+  },
+  "hardware_target": "local CPU (exact statevector + momentum-sector diagonalization)",
+  "results": {
+    "ising": {
+      "lam3": 0.0,
+      "E0": -35.72561708152185,
+      "low_dE": [
+        0.5941195671767403,
+        0.7344148027664659,
+        1.2596038212502236,
+        2.004802653293659,
+        2.004802653293879,
+        3.479221848150594,
+        3.5379483044677045,
+        3.537948304467726,
+        3.537948304467804,
+        3.537948304467953
+      ],
+      "low_spins": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        1,
+        2,
+        -1,
+        -2
+      ],
+      "T_found": true,
+      "Delta_T_check": 1.9999999999999998,
+      "alpha": 1.7175942189014193,
+      "alpha_err": 0.632504012626533,
+      "n_fit": 5,
+      "F": {
+        "1": -6.884911267498563,
+        "2": -6.562328472221854,
+        "3": -5.469280651968134,
+        "4": -2.3427534952630467,
+        "5": -0.1640593788870781,
+        "6": 0.04272203538580044
+      }
+    },
+    "tci": {
+      "lam3": 0.856,
+      "E0": -28.416021733518257,
+      "low_dE": [
+        0.05676186841865061,
+        0.1382376247926338,
+        0.7676697719523453,
+        0.7751369845155978,
+        1.5847953923571971,
+        1.5847953923578224,
+        1.8839581220032464,
+        1.8839581220034205,
+        1.914676955939175,
+        2.6190777244706
+      ],
+      "low_spins": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1,
+        -1,
+        1,
+        0,
+        7
+      ],
+      "T_found": true,
+      "Delta_T_check": 2.0,
+      "alpha": 1.25483392023137,
+      "alpha_err": 0.37847754372293235,
+      "n_fit": 5,
+      "F": {
+        "1": -6.143705840005982,
+        "2": -5.779396080050223,
+        "3": -4.9779478201507565,
+        "4": -3.1979410090792033,
+        "5": -1.2405153484114368,
+        "6": -0.7179242986324201
+      }
+    },
+    "gate_pass": false,
+    "dichotomy": {
+      "universal": 4.0
+    },
+    "verdict": "VALIDATION_FAILED: even the momentum-2 (stress-tensor) packet gives Ising alpha=1.7175942189014193 outside (3.4, 4.6) at N=14. Finite-N exact diag cannot isolate the Delta_T=2 channel here; the MERA scaling superoperator (stage 2) is genuinely required. Honest hand-off after the full momentum-resolved construction."
+  },
+  "comparison": "classical_wins",
+  "notes": "Definitive exact-diag attempt; if Ising control fails here, stage-2 MERA is the honest requirement.",
+  "wall_seconds": 6.32422947883606
+}

@@ -1,0 +1,15 @@
+{
+  "hw_id": "HW-2026-028",
+  "vendor": "Pasqal",
+  "system_name": "Vela QPU (256q) + Canada PINQ2 Orion Alpha deployment + SPAC $2B",
+  "qubit_count": 256,
+  "fidelity_2q": null,
+  "announcement_date": "2026-04-20",
+  "headline": "Pasqal Thoughts 2026: Vela (256q) launching 2026 for quantum advantage; Canada PINQ2 access; $2B SPAC",
+  "details": "Announced at Pasqal Thoughts 2026 (Apr 20-21, World Quantum Day). Vela QPU: 256 high-quality qubits, first QPU engineered for quantum advantage specs, launching 2026. Canada (PINQ2/DistriQ): exclusive distributor, Orion Alpha 100q access since Apr 2026. SPAC merger with Bleichroeder Acquisition Corp II at $2B valuation. Research: optimization, materials, protein design.",
+  "source_url": "https://www.pasqal.com/newsroom/pasqal-hosts-annual-pasqal-thoughts-event-highlighting-quantum-computings-transition-from-research-to-real-world-deployment/",
+  "relevance": 3,
+  "relevance_reason": "Vela 256q neutral atom QPU in 2026 is a direct path for large-system MERA experiments. Canada (PINQ2) provides a North American academic access route. 256q exceeds our current 16q experiments significantly.",
+  "access_path": "PINQ2 (Canada) for Orion Alpha. Vela access TBD. pasqal.com research program.",
+  "scan_date": "2026-04-26"
+}

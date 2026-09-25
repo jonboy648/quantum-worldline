@@ -1,0 +1,16 @@
+{
+  "hw_id": "HW-2026-027",
+  "vendor": "QuEra",
+  "system_name": "Gemini-class system at AIST Japan; 3rd-gen roadmap 2026-2027",
+  "qubit_count": 260,
+  "qubit_count_logical": 37,
+  "fidelity_2q": null,
+  "announcement_date": "2026-01 (AIST delivery)",
+  "headline": "QuEra Gemini delivered to AIST Japan; $230M raised; 3rd-gen system 2026-2027; fault-tolerance milestones",
+  "details": "QuEra completed first on-premises installation at AIST (Japan), 260 physical / ~37 logical qubits, operating alongside NVIDIA ABCI-Q supercomputer. $230M+ raised. 2025: demonstrated continuous operation, scalable QEC, magic state distillation, reduced runtime overhead (with Harvard/MIT/Yale). 3rd-gen planned 2026-2027. Massachusetts $16M complex at MGHPCC.",
+  "source_url": "https://www.prnewswire.com/news-releases/quera-computing-marks-record-2025-as-the-year-of-fault-tolerance-and-over-230m-of-new-capital-to-accelerate-industrial-deployment-302635960.html",
+  "relevance": 3,
+  "relevance_reason": "37 logical qubits is insufficient for our full MERA, but the fault-tolerance architecture (continuous QEC, magic state distillation) is the platform roadmap we need. 3rd-gen 2026-2027 timeline.",
+  "access_path": "QuEra research access program; AIST collaboration (Japan); AWS Braket.",
+  "scan_date": "2026-04-26"
+}

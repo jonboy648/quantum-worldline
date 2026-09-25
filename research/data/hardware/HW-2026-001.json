@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-001",
+  "organization": "IBM",
+  "processor": "Nighthawk",
+  "date": "2025-11-12",
+  "source_url": "https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance",
+  "physical_qubits": 120,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A (physical processor)",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 350,
+  "max_circuit_depth": 5000,
+  "is_frontier": true,
+  "frontier_category": "coherence",
+  "notes": "120 qubits with 218 next-gen tunable couplers in square lattice. 30% more circuit complexity than Heron. Roadmap: 7,500 gates by end 2026, 10,000 gates by 2027, 15,000 gates with 1,000+ qubits by 2028. IBM expects verified quantum advantage by end 2026."
+}

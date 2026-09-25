@@ -1,0 +1,3 @@
+bench chi=6 m=1 D=13824: chol 325s route=chol contract=7.3s eig=308.9s
+   dense 656s   |S_chol - S_dense| = 1.78e-15
+Z2 heavy: D=13824 route=z2-chol+chol 114s contract=7.8 eig=96.2 offblock=1.1e-14 peakGB=11.7

@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-048",
+  "arxiv_id": "2602.07895",
+  "title": "Probing holographic conformal field theories",
+  "authors": ["Ming Zhang", "Jiayue Yang", "Dyuman Bhattacharya", "Robert B. Mann"],
+  "year": 2026,
+  "venue": "arxiv (hep-th, quant-ph), submitted Feb 2026",
+  "submission_date": "2026-02-08",
+  "abstract_summary": "Embeds relativistic quantum-information protocols into AdS/CFT by coupling Unruh-DeWitt detectors to local scalar primary operators of holographic CFTs. Computes detector response using CFT Wightman functions. Demonstrates magic resource (mana) harvesting with qutrit probe distinguishes between scalar quantizations in the Breitenlohner-Freedman window.",
+  "relevance": 2,
+  "relevance_reason": "Uses CFT Wightman functions and AdS/CFT, adjacent to our primary operator formalism (boundary-primary excitations). Quantum information resource approach to probing holography is novel but does not directly address force or transport.",
+  "connection_to_project": "The Wightman function approach is related to our holographic transport protocol. Scalar primary vs stress-tensor primary distinction is relevant to our alpha=4 force result (T-channel = stress tensor exchange).",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

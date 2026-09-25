@@ -1,0 +1,40 @@
+{
+  "source": "arxiv",
+  "discovered_by": "worldline-orchestrator (HYP-032 prior-art gate, section 8)",
+  "discovered_date": "2026-09-06",
+  "anchor_contradiction": null,
+  "seeds_hypothesis": "HYP-2026-032",
+  "related_hypotheses": [
+    "HYP-2026-032",
+    "HYP-2026-028"
+  ],
+  "categories": [
+    "hep-th"
+  ],
+  "id": "PAPER-2026-141",
+  "title": "Entanglement Entropy of Free Fermions in Timelike Slices",
+  "authors": [
+    "Bowei Liu",
+    "Hao Chen",
+    "Biao Lian"
+  ],
+  "date": "2022-10-06",
+  "arxiv_id": "2210.03134",
+  "relevance": 3,
+  "abstract": "Defines the entanglement entropy of free-fermion states in an arbitrary spacetime slice of a discrete set of points, in particular timelike slices: a set of times t_n = n tau on one site. Zero-temperature ground states show volume law for tau >> 2 pi / E_0, (1/3) ln t at tau = tau_0 and (1/6) ln t below it, resembling Calabrese-Cardy for nonchiral and chiral fermions. Finite temperature, non-eigenstates and generic spacetime slices also treated; area-to-volume transition as the slice turns timelike.",
+  "tags": [
+    "timelike-slice",
+    "free-fermion",
+    "lattice",
+    "real-valued"
+  ],
+  "key_claims": [
+    "A REAL-valued entropy of Heisenberg-picture operators sampled at discrete times on one site; not the complex pseudo-entropy of PAPER-139",
+    "Log scaling with coefficient 1/6 or 1/3 depending on the sampling interval"
+  ],
+  "relevance_note": "Prior-art check for HYP-2026-032's definition-agreement leg: this is a DIFFERENT object (real, discrete time sampling, no imaginary part), so it does not pre-empt the comparison of the two Doi et al. lattice definitions at finite n. Cited as the nearest lattice precedent.",
+  "related_papers": [
+    "PAPER-2026-139"
+  ],
+  "source_url": "https://arxiv.org/abs/2210.03134"
+}

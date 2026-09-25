@@ -1,0 +1,25 @@
+{
+  "id": "PAPER-2026-025",
+  "title": "Computing with many encoded logical qubits beyond break-even",
+  "authors": ["Quantinuum collaboration"],
+  "date": "2026-02-28",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2602.22211",
+  "arxiv_id": "2602.22211",
+  "abstract": "Demonstrates quantum computations using up to 94 protected logical qubits with error-detection codes and up to 48 logical qubits with concatenated error-correction codes on the 98-qubit Quantinuum Helios trapped-ion processor. Logical gate error rates of approximately 1 error per 10,000 operations, significantly lower than raw hardware gate errors. Encoded computations achieve beyond break-even performance. Uses iceberg codes with only 2 ancilla qubits per code block (approximately 1:1 physical-to-logical ratio). GHZ states at ~95% fidelity across up to 94 logical qubits. Quantum magnetism simulation using 64 logical qubits showed ~30% reduction in effective error rates vs unencoded.",
+  "relevance": 4,
+  "tags": ["error-correction", "logical-qubits", "trapped-ion", "Quantinuum", "Helios", "iceberg-code", "beyond-break-even"],
+  "key_claims": [
+    "94 protected logical qubits using error-detection codes on 98-qubit Helios",
+    "48 logical qubits using concatenated error-correction codes",
+    "Logical gate error rate ~1e-4 (one error per 10,000 operations)",
+    "Beyond break-even: encoded computations outperform unencoded",
+    "Iceberg codes achieve ~1:1 physical-to-logical qubit ratio",
+    "GHZ states ~95% fidelity across 94 logical qubits",
+    "No logical errors observed in thousands of runs with concatenated codes"
+  ],
+  "hardware_used": "Quantinuum Helios (98-qubit trapped-ion)",
+  "qubit_count": 98,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

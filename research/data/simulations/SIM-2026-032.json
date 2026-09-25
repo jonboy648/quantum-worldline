@@ -1,0 +1,87 @@
+{
+  "id": "SIM-2026-032",
+  "type": "classical",
+  "date": "2026-06-08",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage-1 exact-diag test of alpha universality at the tricritical Ising point using the O'Brien-Fendley chain (design amendment from ANNNI \u2014 documented TCI coordinates lam3/lamI=0.856, arXiv:1712.06662). Gates: central-charge fit (0.5 / 0.7) + Ising-end pipeline control.",
+  "circuit": {
+    "qubits": 16,
+    "script_path": "research/data/simulations/sim032_tci_force_stage1.py"
+  },
+  "hardware_target": "local CPU (exact statevector)",
+  "results": {
+    "ising_control": {
+      "lam3_over_lamI": 0.0,
+      "E_gs": -40.03277580097023,
+      "c_fit": 0.5017558388529464,
+      "block_entropies": {
+        "2": 0.5893610962431364,
+        "3": 0.6519004390798662,
+        "4": 0.6922096068068896,
+        "5": 0.7192585810926555,
+        "6": 0.73684578476684,
+        "7": 0.7468185561615894,
+        "8": 0.750055397273195
+      },
+      "F": {
+        "1": -4.53915029940665,
+        "2": -1.0573766086780552,
+        "3": -0.18945875935761336,
+        "4": -0.08603803759073259,
+        "5": -0.04768834755125084,
+        "6": -0.029086183628102447,
+        "7": -0.018661504693362474,
+        "8": -0.01223045151415647,
+        "9": -0.00796128533779239,
+        "10": -0.004946552005939964,
+        "11": -0.002704714676262654
+      },
+      "alpha": 3.974818951265831,
+      "alpha_err": 0.14509853680242257,
+      "wall_s": 2.380380630493164
+    },
+    "tci_point": {
+      "lam3_over_lamI": 0.856,
+      "E_gs": -32.702807740832256,
+      "c_fit": 0.7263016175757807,
+      "block_entropies": {
+        "2": 0.7095921925126296,
+        "3": 0.8020002054493501,
+        "4": 0.8602461361360092,
+        "5": 0.8988759218913219,
+        "6": 0.923849799386953,
+        "7": 0.9379769510651268,
+        "8": 0.9425572378146626
+      },
+      "F": {
+        "1": -0.6339609174095386,
+        "2": -0.2705867128970496,
+        "3": -0.19277970489486407,
+        "4": -0.12419095024194249,
+        "5": -0.08938121617260819,
+        "6": -0.06535370345828184,
+        "7": -0.04886720386745935,
+        "8": -0.036675601670580704,
+        "9": -0.0272832998377055,
+        "10": -0.019726629750923763,
+        "11": -0.014058728876658932
+      },
+      "alpha": 1.3310498780276376,
+      "alpha_err": 0.09092591095222206,
+      "wall_s": 5.350250482559204
+    },
+    "gates": {
+      "cA_ising": true,
+      "cA_tci": true,
+      "B_control": true
+    },
+    "dichotomy": {
+      "universal": 4.0,
+      "primary_tracking": 0.4
+    },
+    "verdict": "INCONCLUSIVE: TCI alpha=1.33 matches neither 4.0 nor 0.4 cleanly \u2014 needs N=20+ / MERA stage 2 / operator variants"
+  },
+  "comparison": "classical_wins",
+  "notes": "Stage 2 (chi>=3 MERA at the TCI point, hardware story) pending stage-1 outcome.",
+  "wall_seconds": 7.7341039180755615
+}

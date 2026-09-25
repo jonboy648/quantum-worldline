@@ -1,0 +1,43 @@
+{
+  "id": "SIM-2026-068",
+  "date": "2026-08-10",
+  "title": "C_TTT at the tricritical Ising point via puMPS Koo-Saleur matrix elements: 3.381 +/- 0.005 vs exact 3.3806 -- PASSED",
+  "hypothesis_links": ["HYP-2026-027 (alpha=4 universality, TCI class)", "SIM-2026-067 (Route B circle, Ising rung)"],
+  "method": "Periodic uniform MPS (vendored yijian-physics/puMPS = the Zou-Milsted-Vidal PRL 121 230402 codebase, commit 0557b12) on the O'Brien-Fendley chain at lambda1=1, lambda2=0.428 (= our SIM-051/067 lambda3=0.856 TCI point at half energy normalization). GS via minimize_energy_local_CG! (CG; plain-gradient linesearch thrashes), Bloch excitations at k=0,+2,-2, Koo-Saleur Fourier-mode matrix elements via Hn_in_basis. T identified by ELEMENT DOMINANCE with a Delta-plausibility gate (SIM-067 band-edge discipline); v_T calibrated from Delta_T=2 (exact in any CFT), cross-checked by v_sigma (Delta=3/40) and v_epsilon (Delta=1/5). c = 2|<T|H_{+-2}|0> * N/(2 pi v_T)|^2; C_TTT = 2*sqrt(2)/sqrt(c). Driver: research/tools/pumps-setup/qw_cttt_of.jl (per-round JLD2 checkpointing; results in qw_cttt_of_results.jsonl).",
+  "ladder": {
+    "columns": ["N", "D", "c_nplus2", "c_nminus2", "C_TTT_mean"],
+    "rows": [
+      [14, 10, 0.833318, 0.825720, 3.1055],
+      [20, 20, 0.756406, 0.756255, 3.2523],
+      [28, 20, 0.724179, 0.724245, 3.3236],
+      [40, 20, 0.710765, 0.710536, 3.3552],
+      [56, 24, 0.703726, 0.703780, 3.3716]
+    ],
+    "note": "Chirality symmetry holds to <=1e-4 at every N>=20 (largest asymmetry at N=14 where T/L2sigma are near-degenerate). Gap ratio eps/sigma: 2.749 (N=14) -> 2.686 (N=40) -> 2.680 (N=56) vs M(4,5) exact 2.667. v spread at N=56 D=24: v_T=1.6325, v_sigma=1.6200, v_eps=1.6280 (0.8%)."
+  },
+  "D_systematics": "Truncation LOWERS c; the bias grows with N: nil at N=20 (D12==D20 to 1e-4), +0.005 at N=28 (D12->D20), +0.0034 at N=40 (D16->D20), +0.0030 at N=56 (D20->D24). The N=56 D=20 value 0.7008 sat anomalously below the power-law trend (two errors cancelling: finite-N pushes c up, finite-D pushes it down); at D=24 the point lands exactly on the trend. Residual D->inf correction at N=56 estimated <= +0.001-0.002 (geometric decay of the D-shifts) and is included in the systematic band.",
+  "fit": {
+    "model": "c(N) = c_inf + a*N^-p, best-D chirality means",
+    "variants": {
+      "all5": {"c_inf": 0.69858, "err": 0.00085, "p": 2.31, "C_TTT": 3.3841},
+      "drop_N14": {"c_inf": 0.69942, "err": 0.00157, "p": 2.42, "C_TTT": 3.3820},
+      "drop_N56": {"c_inf": 0.69891, "err": 0.00189, "p": 2.33, "C_TTT": 3.3832},
+      "mid3_exact": {"c_inf": 0.70212, "p": 2.67, "C_TTT": 3.3755},
+      "D_residual_shifted": {"c_inf": 0.69952, "C_TTT": 3.3818}
+    },
+    "quoted": "c_inf = 0.699 +/- 0.002 (variant spread + fit error) vs exact 7/10; C_TTT = 3.381 +/- 0.005 vs exact 2*sqrt(2)/sqrt(7/10) = 3.3806"
+  },
+  "key_findings": [
+    "The tricritical C_TTT is MEASURED: 3.381 +/- 0.005 vs exact 3.3806 (0.15%-level agreement). Second rung of the stress-tensor self-coupling ladder complete (Ising 3.9936/4.000 in SIM-067; Potts 3.162 remains).",
+    "The feared L2eps contamination (~N^-0.2 element mixing, the reason ED could not close TCI at N<=16) is STRONGLY SUPPRESSED in puMPS Bloch-state elements: at N=56 the largest non-T raw element is <=0.0003 vs T's 0.109 (~400x), and the observed finite-size correction exponent is p ~ 2.4, not 0.2. The variational Bloch tower resolves the near-degenerate states that raw ED mixed.",
+    "T/L2sigma level ordering flips between N=14 (T = 2nd lowest at k=2) and N>=28 (T = lowest); element-dominance identification handles this automatically -- position-based ID would have silently measured the wrong state.",
+    "Two-error cancellation observed and resolved: N=56 D=20 gave a spuriously perfect c=0.7008 (finite-N high bias vs truncation low bias); only the D=24 re-run exposed it. Constant-D ladders or per-N D-convergence checks are mandatory."
+  ],
+  "operational_notes": "Multithreaded BLAS ~3x per CG iteration vs the OPENBLAS_NUM_THREADS=1 MERAKit discipline (not needed here: CG to unique GS, no basin selection). Warm-starting D by tensor padding throws LAPACKException(30) in the transfer-matrix eigensolve -- the SAME failure as MERAKit's chi-ramp; direct-init at target D confirmed as the rule. Background jobs were externally killed 7 times this run (pairs, ~10-30 min); the working pattern is short CG rounds (15 iters) + per-round checkpoints + wall-clock budget exit(42) + repeated FOREGROUND invocations. CG gradient plateaus at ~9e-5 (linesearch floor); energies are measurement-quality there (quadratic convergence).",
+  "verdict": "PASSED. C_TTT(TCI) = 3.381 +/- 0.005 vs exact 3.3806. Combined with SIM-067 (Ising 3.9936 vs 4.000), the Koo-Saleur circle route now confirms the stress-tensor self-coupling at TWO universality classes. Next: 3-state Potts (potts3_* builders already in the vendored module), target C_TTT = 2*sqrt(2)/sqrt(4/5) = 3.1623.",
+  "files": {
+    "driver": "research/tools/pumps-setup/qw_cttt_of.jl",
+    "results": "research/tools/puMPS/qw_cttt_of_results.jsonl (gitignored dir; jsonl copied to pumps-setup on close-out)",
+    "vendor_plan": "research/tools/pumps-setup/VENDOR.md"
+  }
+}

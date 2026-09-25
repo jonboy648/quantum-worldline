@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-036",
+  "arxiv_id": "2501.10691",
+  "title": "The thread embodiment of holographic quantum entanglement",
+  "authors": ["Yi-Yu Lin"],
+  "published": "2025-01-18",
+  "published_journal": "2026",
+  "journal": "Physical Review (APS, DOI: 10.1103/qpjk-nmtr)",
+  "url": "https://arxiv.org/abs/2501.10691",
+  "status": "NOVEL",
+  "relevance": 4,
+  "topic": "Worldline formalism / holographic transport / MERA-AdS connections",
+  "summary": "Develops the 'entanglement thread' formalism for holographic duality — thread-like objects that visualize holographic quantum entanglement. Tensor network models are deformed into quantum circuit form with flow-conserving features. The threads form a preset ensemble of wires in a holographic quantum circuit that characterize the partially ordered structure of holographic quantum entanglement.",
+  "key_findings": [
+    "Entanglement threads provide a geometric visualization of holographic entanglement structure in MERA",
+    "Threads encode the causal flow that distinguishes MERA from other tensor network ansatze",
+    "Framework connects to quantum circuit flow conservation — relevant to MERA unitary structure",
+    "Partially ordered structure of holographic entanglement given concrete thread-network representation"
+  ],
+  "project_relevance": "The 'thread' picture of holographic entanglement is a new geometric framework for understanding what our MERA is doing when it transports holographic excitations. The flow-conserving quantum circuit interpretation directly supports our holographic transport result (HYP-2026-006): the threads are the causal channels through which our transport signal propagates. This could help explain the 0.72% residual in our transport time measurement — threads have discrete structure at finite system size.",
+  "recommended_followup": "theory",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

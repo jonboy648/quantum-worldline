@@ -1,0 +1,178 @@
+{
+  "schema": "qw.validator.v1",
+  "hypothesis_id": "HYP-2026-017",
+  "validator": "15-atom local AHS",
+  "device": "braket_ahs",
+  "verdict": "FAIL",
+  "reason": "alpha=0.078 outside validator window [2.0, 6.0]",
+  "config": {
+    "anchor": 1,
+    "dr_list": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_shots_per_task": 50,
+    "tee_region": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "n_atoms": 15,
+    "n_boundary": 8,
+    "t_total_us": 2.8000000000000003,
+    "acceptance_alpha": [
+      2.0,
+      6.0
+    ],
+    "ram_gate_gb": 4.0
+  },
+  "energies": {
+    "E0": -8.374656811751077,
+    "E_j(anchor=1)": -8.537670678927519,
+    "E_k(dr=1)": -8.439010784270778,
+    "E_k(dr=2)": -8.41258493112533,
+    "E_k(dr=3)": -8.372841222424565,
+    "E_k(dr=4)": -8.470321827452182,
+    "E_dual(dr=1)": -8.450483980137427,
+    "E_dual(dr=2)": -8.431515278545026,
+    "E_dual(dr=3)": -8.734532938893599,
+    "E_dual(dr=4)": -8.497242111895947
+  },
+  "forces": {
+    "1": 0.15154067130979243,
+    "2": 0.14408351975674627,
+    "3": -0.1986778492925918,
+    "4": 0.13609358273267702
+  },
+  "alpha_fit": {
+    "alpha": 0.07755300172909525,
+    "dr_used": [
+      1,
+      2,
+      4
+    ]
+  },
+  "tee_renyi2_nats": 3.234300295193832,
+  "ram": {
+    "rss_start_gb": 0.15418624877929688,
+    "rss_peak_gb": 0.19733428955078125
+  },
+  "wall_time_s": 2422.68,
+  "tasks": [
+    {
+      "label": "E0",
+      "excited_sites": [],
+      "status": "OK",
+      "energy_proxy": -8.374656811751077,
+      "valid_shots": 50,
+      "elapsed_s": 240.721,
+      "rss_gb_after": 0.18271255493164062
+    },
+    {
+      "label": "E_j(anchor=1)",
+      "excited_sites": [
+        1
+      ],
+      "status": "OK",
+      "energy_proxy": -8.537670678927519,
+      "valid_shots": 50,
+      "elapsed_s": 235.4099,
+      "rss_gb_after": 0.186492919921875
+    },
+    {
+      "label": "E_k(dr=1)",
+      "excited_sites": [
+        2
+      ],
+      "status": "OK",
+      "energy_proxy": -8.439010784270778,
+      "valid_shots": 50,
+      "elapsed_s": 251.543,
+      "rss_gb_after": 0.18907546997070312
+    },
+    {
+      "label": "E_k(dr=2)",
+      "excited_sites": [
+        3
+      ],
+      "status": "OK",
+      "energy_proxy": -8.41258493112533,
+      "valid_shots": 50,
+      "elapsed_s": 251.7809,
+      "rss_gb_after": 0.19147491455078125
+    },
+    {
+      "label": "E_k(dr=3)",
+      "excited_sites": [
+        4
+      ],
+      "status": "OK",
+      "energy_proxy": -8.372841222424565,
+      "valid_shots": 50,
+      "elapsed_s": 251.0645,
+      "rss_gb_after": 0.1954345703125
+    },
+    {
+      "label": "E_k(dr=4)",
+      "excited_sites": [
+        5
+      ],
+      "status": "OK",
+      "energy_proxy": -8.470321827452182,
+      "valid_shots": 50,
+      "elapsed_s": 244.0019,
+      "rss_gb_after": 0.19733428955078125
+    },
+    {
+      "label": "E_dual(dr=1)",
+      "excited_sites": [
+        1,
+        2
+      ],
+      "status": "OK",
+      "energy_proxy": -8.450483980137427,
+      "valid_shots": 50,
+      "elapsed_s": 246.8347,
+      "rss_gb_after": 0.10129165649414062
+    },
+    {
+      "label": "E_dual(dr=2)",
+      "excited_sites": [
+        1,
+        3
+      ],
+      "status": "OK",
+      "energy_proxy": -8.431515278545026,
+      "valid_shots": 50,
+      "elapsed_s": 260.1797,
+      "rss_gb_after": 0.08951950073242188
+    },
+    {
+      "label": "E_dual(dr=3)",
+      "excited_sites": [
+        1,
+        4
+      ],
+      "status": "OK",
+      "energy_proxy": -8.734532938893599,
+      "valid_shots": 50,
+      "elapsed_s": 252.778,
+      "rss_gb_after": 0.09164047241210938
+    },
+    {
+      "label": "E_dual(dr=4)",
+      "excited_sites": [
+        1,
+        5
+      ],
+      "status": "OK",
+      "energy_proxy": -8.497242111895947,
+      "valid_shots": 50,
+      "elapsed_s": 188.1185,
+      "rss_gb_after": 0.09362411499023438
+    }
+  ]
+}

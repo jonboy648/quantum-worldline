@@ -1,0 +1,15 @@
+EXACT L=10 R_H=3.0: spectrum diff 1.3e-14 | max|Im S_X| 1.0e-13 | S diff eig-branch 1.5e-13, mode-branch 2.0e+00
+EXACT L=10 R_H=4.0: spectrum diff 6.4e-12 | max|Im S_X| 1.4e-10 | S diff eig-branch 2.0e-10, mode-branch 9.1e+01
+EXACT L=12 R_H=3.0: spectrum diff 4.3e-14 | max|Im S_X| 2.2e-14 | S diff eig-branch 1.0e-12, mode-branch 7.8e+00
+EXACT L=12 R_H=4.0: spectrum diff 1.3e-11 | max|Im S_X| 8.4e-10 | S diff eig-branch 8.4e-10, mode-branch 4.4e+02
+L1 delta=0 R_H= 6.0 L=512: slope mode/eig = 16.5005/nan (pred 0.1667) FAIL | max|Im S| 8.3e-17 (pred 0.2618) FAIL | END 9.6e+01 SYM 1.5e+01
+L1 delta=0 R_H= 8.0 L=512: slope mode/eig = 145.4623/nan (pred 0.1667) FAIL | max|Im S| 1.6e-14 (pred 0.2618) FAIL | END 2.3e+02 SYM 2.1e+02
+L1 delta=0 R_H=12.0 L=512: slope mode/eig = 77.0788/nan (pred 0.1667) FAIL | max|Im S| 2.1e-15 (pred 0.2618) FAIL | END 1.3e+02 SYM 1.9e+02
+REGISTERED LEVEL-1 VERDICT: VOID (registered Level-1 criterion not met at delta = 0)
+EXPLORATORY delta=0.25: slope 0.9902  Im S window mean -0.2430 +/- 0.0960  (pi/12 = 0.2618)
+EXPLORATORY delta=0.50: slope 0.6253  Im S window mean -0.1061 +/- 0.0438  (pi/12 = 0.2618)
+EXPLORATORY delta=1.00: slope 0.2758  Im S window mean -0.0115 +/- 0.0029  (pi/12 = 0.2618)
+EXPLORATORY delta=2.00: slope 0.1903  Im S window mean +0.0165 +/- 0.0103  (pi/12 = 0.2618)
+EXPLORATORY delta=4.00: slope 0.2227  Im S window mean +0.0237 +/- 0.0141  (pi/12 = 0.2618)
+EXPLORATORY delta=8.00: slope 0.2646  Im S window mean +0.0176 +/- 0.0101  (pi/12 = 0.2618)
+done (42s)

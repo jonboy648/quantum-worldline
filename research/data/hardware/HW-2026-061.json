@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-061",
+  "organization": "Quantinuum",
+  "processor": "Sol (roadmap target, 2027)",
+  "date": "2026-03-01",
+  "source_url": "https://www.quantinuum.com/press-releases/quantinuum-unveils-accelerated-roadmap-to-achieve-universal-fault-tolerant-quantum-computing-by-2030",
+  "physical_qubits": 192,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A (roadmap)",
+  "two_qubit_gate_fidelity": 0.9998,
+  "coherence_time_us": null,
+  "max_circuit_depth": 10000,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "ROADMAP TARGET (not demonstrated). Quantinuum Sol: 192 physical qubits, 2Q gate error <2e-4 (=99.98% fidelity), 2x faster than Helios, up to 10,000 gate operations per circuit, planned 2027 delivery. Part of accelerated roadmap to universal fault tolerance by 2030 (Apollo 2029: thousands of physical, hundreds of logical, error <1e-4). RELEVANCE 4/5: Sol's 10,000-gate budget + 192q + 99.98% fidelity would be directly suitable for 16-24q MERA transport circuits with error correction when delivered. Roadmap item, no spec demonstrated yet; does not change physics anchors. discovered_by hardware-tracker 2026-06-11."
+}

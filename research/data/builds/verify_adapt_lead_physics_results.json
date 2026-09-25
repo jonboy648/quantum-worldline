@@ -1,0 +1,58 @@
+{
+  "reproduced": {
+    "n_ops": 25,
+    "n_2q": 25,
+    "gs_overlap": 0.9997682992354651,
+    "energy_rel_pct": 0.01386494744276445,
+    "force_rmse_dr123": 0.004530809567865403,
+    "force_rmse_dr1234": 0.0047365848768053526,
+    "out_of_sample_dr4": {
+      "F_adapt": -0.12122837212001691,
+      "F_exact": -0.1265346174177715,
+      "rel_pct": 4.1935127367045215
+    }
+  },
+  "robustness": {
+    "rel_0.1%": {
+      "kind": "mult",
+      "sigma": 0.001,
+      "n": 30,
+      "rmse_mean": 0.0058292311404636345,
+      "rmse_median": 0.005424304549918665,
+      "rmse_max": 0.011504460233866774,
+      "gate_fail_rate_pct": 0.0,
+      "dr1_stays_negative_pct": 100.0
+    },
+    "rel_0.3%": {
+      "kind": "mult",
+      "sigma": 0.003,
+      "n": 30,
+      "rmse_mean": 0.01566947841166543,
+      "rmse_median": 0.013411754716588996,
+      "rmse_max": 0.033215854282463486,
+      "gate_fail_rate_pct": 40.0,
+      "dr1_stays_negative_pct": 100.0
+    },
+    "rel_1.0%": {
+      "kind": "mult",
+      "sigma": 0.01,
+      "n": 30,
+      "rmse_mean": 0.04984659268771184,
+      "rmse_median": 0.04013192586475808,
+      "rmse_max": 0.13841209010107905,
+      "gate_fail_rate_pct": 86.66666666666667,
+      "dr1_stays_negative_pct": 100.0
+    },
+    "abs_0.01": {
+      "kind": "add",
+      "sigma": 0.01,
+      "n": 30,
+      "rmse_mean": 0.07278270866136415,
+      "rmse_median": 0.05865928827973557,
+      "rmse_max": 0.16617399512385456,
+      "gate_fail_rate_pct": 100.0,
+      "dr1_stays_negative_pct": 100.0
+    }
+  },
+  "note": "Multiplicative jitter is the physically faithful model for device angle error; additive 0.01 reproduces the probe. Both quantify basin width."
+}

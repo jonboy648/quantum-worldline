@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-002",
+  "title": "A universal framework for the quantum simulation of Yang-Mills theory",
+  "authors": ["Jad C. Halimeh", "Masanori Hanada", "Shunji Matsuura", "Franco Nori", "Enrico Rinaldi", "Andreas Schafer"],
+  "date": "2025-11-20",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s42005-025-02421-6",
+  "arxiv_id": "2411.13161",
+  "abstract": "Presents a universal framework for simulating SU(N) Yang-Mills theories on fault-tolerant quantum computers using orbifold lattice formulation. The truncated Hamiltonian takes the same simple form for any N, any dimension, and any lattice size. Provides explicit quantum circuits using only CNOT and single-qubit gates, independent of theory details. Only approach providing explicit circuits for Yang-Mills theory scalable towards the continuum limit for any gauge group and dimension without exponential classical compilation costs.",
+  "relevance": 5,
+  "tags": ["Yang-Mills", "orbifold-lattice", "universal-framework", "SU(N)", "fault-tolerant", "QCD"],
+  "key_claims": [
+    "Universal Hamiltonian form for any SU(N) gauge group, any dimension, any lattice size",
+    "Simple circuit structure using only CNOT and single-qubit gates",
+    "No exponential classical compilation costs unlike Kogut-Susskind approach",
+    "Applicable to Yang-Mills, scalar field theory, and Yang-Mills matrix model",
+    "First explicit circuit construction scalable to continuum limit for arbitrary gauge groups"
+  ],
+  "hardware_used": "Fault-tolerant quantum computer (theoretical)",
+  "qubit_count": 0,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-03-10"
+}

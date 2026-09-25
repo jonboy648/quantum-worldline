@@ -1,0 +1,17 @@
+{
+  "id": "HYP-2026-007",
+  "claim": "The Worldline Monte Carlo multi-particle formalism (Edwards et al., arXiv:2512.24942) can be adapted to compute hologron interaction potentials in the MERA bulk more efficiently than direct tensor network contraction. By treating hologrons as particles propagating on the emergent AdS geometry and sampling worldline ensembles with the WMC method, one could extract V(dr) without full MERA optimization. This would bypass the Z2 symmetry trap we encountered in VQE optimization.",
+  "confidence": "low",
+  "source_findings": ["PAPER-2026-011", "PAPER-2026-009", "HYP-2026-002"],
+  "testable": true,
+  "test_design": "Implement a worldline Monte Carlo simulation on a discrete hyperbolic lattice matching the MERA geometry. Define the hologron action as S = integral(m*ds + V_background) where the metric is the discrete AdS metric from MERA. Sample worldline pairs and extract the two-body potential. Compare to Sahay et al. C1=0.080, C2=13.6 and to our MERA circuit results.",
+  "refutation_criteria": "If the WMC-extracted potential does not reproduce the MERA tensor-network results within 30%, the two formalisms are not equivalent at this level of approximation, suggesting that MERA captures non-semiclassical effects that worldline methods miss.",
+  "hardware_required": "Classical CPU (Monte Carlo simulation, no quantum hardware needed)",
+  "earliest_testable": "2026",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "philosophical_implications": "If worldline Monte Carlo on the emergent AdS geometry reproduces MERA tensor-network forces, it would demonstrate a duality between first-quantized (worldline) and second-quantized (tensor network) descriptions of emergent gravity. This connects to the broader program of understanding when worldline methods and lattice methods give equivalent results in quantum gravity.",
+  "status": "proposed",
+  "created_date": "2026-03-11",
+  "last_updated": "2026-03-11",
+  "created_by": "worldline-orchestrator"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "PAPER-2026-112",
+  "title": "A new Ising/tricritical-Ising interface: From W3 symmetry to Rydberg atoms",
+  "authors": [
+    "Antonio Antunes",
+    "Junchen Rong"
+  ],
+  "date": "2026-05-22",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.23848",
+  "arxiv_id": "2605.23848",
+  "abstract": "We consider interfaces between critical spin-chains in different universality classes, described in the continuum limit by defect/interface conformal field theory (DCFT/ICFT). We find a new conformal interface between the Tricritical Ising (TIM) and the Ising CFT, characterized by an emergent W3 symmetry, and propose its realization in Rydberg atom arrays.",
+  "relevance": 3,
+  "tags": [
+    "rydberg",
+    "ising-cft",
+    "tricritical-ising",
+    "interface-cft",
+    "W3-symmetry",
+    "hyp-025-relevant"
+  ],
+  "key_claims": [
+    "New conformal interface between Tricritical Ising and Ising CFT with emergent W3 chiral symmetry",
+    "Proposes Rydberg-atom-array experimental realization",
+    "Extends the Rydberg-CFT correspondence landscape; relevant if HYP-025 (universality of alpha: Ising vs Z3 chiral clock) is pursued; peripheral to alpha~4 force measurement itself"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-06-11"
+}

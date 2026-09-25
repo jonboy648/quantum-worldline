@@ -1,0 +1,36 @@
+{
+  "id": "PAPER-2026-101",
+  "title": "Combining non-parametric quantum states and MERA tensor networks for ground-state optimization",
+  "authors": [
+    "Julian Schuhmacher",
+    "Alberto Baiardi",
+    "Francesco Tacchino",
+    "Ivano Tavernelli"
+  ],
+  "date": "2026-05-20",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.21447",
+  "arxiv_id": "2605.21447",
+  "abstract": "Hybrid tensor networks offer a promising route to enhance the expressivity of classical tensor network methods by incorporating quantum states prepared on a quantum computer. Existing approaches are limited by the variational optimization of the quantum component of the tensor network. In this work, we introduce an alternative strategy that combines a non-parametric quantum state prepared through quantum annealing and a classical isometric tensor network. The latter is variationally optimized while the former is used as a fixed, boundary tensor resource in the form of classical shadows. We demonstrate the feasibility of this approach through extensive numerical simulations on the transverse-field Ising model, showing that the optimization procedure remains robust under statistical and hardware noise. Moreover, our results indicate that our newly proposed setup improves the accuracy of the obtained ground state approximation compared to the original quantum simulation, without increasing the depth of the applied quantum circuits. Therefore, this setup offers a practical route to scale variational quantum algorithms towards the quantum utility scale.",
+  "relevance": 4,
+  "tags": [
+    "MERA",
+    "hybrid-tensor-network",
+    "ground-state-prep",
+    "transverse-field-ising",
+    "classical-shadows",
+    "quantum-annealing",
+    "isometric-tensor-network",
+    "task-95"
+  ],
+  "key_claims": [
+    "Fixed quantum-annealed non-parametric state used as a boundary tensor resource via classical shadows; classical isometric MERA variationally optimized on top",
+    "Improves TFIM ground-state energy accuracy >5x at N=12 and >2x at N=24 without increasing quantum circuit depth",
+    "Robust to statistical and hardware noise (eta = 0.1 to 10); needs S~10^5 (N=12) to ~10^6 (N=24) shadow snapshots",
+    "Orthogonal to task #95: their quantum circuit is fixed and shallow (~200 2q gates), heavy lifting is classical post-processing; does NOT challenge #95's no-go on cheap quantum-circuit critical-GS+force prep"
+  ],
+  "hardware_used": null,
+  "qubit_count": 24,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

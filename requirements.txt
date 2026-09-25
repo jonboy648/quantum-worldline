@@ -1,0 +1,19 @@
+# Quantum Worldline - Python Dependencies
+# Core scientific computing
+numpy==2.2.6
+scipy==1.16.0
+matplotlib==3.10.3
+
+# Quantum computing
+qiskit==2.3.0
+qiskit-aer==0.17.2
+qiskit-ibm-runtime==0.45.1
+
+# Hardware backends
+pytket==2.15.0
+pytket-quantinuum==0.58.0
+azure-quantum==3.8.0
+amazon-braket-sdk>=1.90,<2  # AHS / LocalSimulator("braket_ahs") for HYP-2026-017 validator
+
+# GPU acceleration (optional, for RunPod)
+# cupy  # install via: pip install cupy-cuda12x

@@ -1,0 +1,47 @@
+{
+  "containerDiskInGb": 20,
+  "costPerHr": 0.49,
+  "createdAt": "2026-09-08 17:59:12.615 +0000 UTC",
+  "desiredStatus": "RUNNING",
+  "env": {
+    "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJodPviJ+hVOJRKwTmLRkIyHNLrcmhEs+y1jajAey/1e runpod-qw"
+  },
+  "gpuCount": 1,
+  "id": "0aqg8qj69rk4vc",
+  "imageName": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "lastStatusChange": "Rented by User: Tue Sep 08 2026 17:59:12 GMT+0000 (Coordinated Universal Time)",
+  "machine": {
+    "dataCenterId": "CA-MTL-1",
+    "diskThroughputMBps": 11401,
+    "gpuId": "NVIDIA A40",
+    "location": "CA",
+    "maxDownloadSpeedMbps": 22165,
+    "maxUploadSpeedMbps": 6943,
+    "reservedCountVersion": 86858,
+    "secureCloud": true,
+    "supportPublicIp": true
+  },
+  "memoryInGb": 50,
+  "name": "qw-sim077-09081259",
+  "ports": [
+    "22/tcp"
+  ],
+  "runtimeStatus": "running",
+  "ssh": {
+    "id": "0aqg8qj69rk4vc",
+    "ip": "69.30.85.9",
+    "name": "qw-sim077-09081259",
+    "port": 22108,
+    "setup": "runpodctl doctor",
+    "ssh_command": "ssh root@69.30.85.9 -p 22108",
+    "ssh_key": {
+      "exists": false,
+      "path": "C:\\Users\\jonca\\.runpod\\ssh\\runpodctl-ssh-key",
+      "source": "runpodctl doctor"
+    }
+  },
+  "uptimeSeconds": 19,
+  "vcpuCount": 9,
+  "volumeInGb": 0,
+  "volumeMountPath": "/workspace"
+}

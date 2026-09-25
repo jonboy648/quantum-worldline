@@ -1,0 +1,34 @@
+{
+  "id": "HYP-2026-012",
+  "claim": "The holographic force profile V(dr) measured in our 12-point MERA dataset is equal to the integral of PEE (Partial Entanglement Entropy) thread density rho(gamma) over all bulk geodesics gamma whose boundary endpoints are separated by dr, via the Crofton formula on kinematic space. Formally: V(dr) = C * integral_{gamma: d(gamma)=dr} rho(gamma) dmu(gamma), where dmu is the kinematic measure on dS2 (the space of spacelike geodesics in AdS2), C is a normalization constant, and rho(gamma) is the thread density from Wen-Xu-Zhong (2512.19452). For pure AdS2 geometry, rho(gamma) is uniform and the integral gives V(dr) ~ dr^{-2} (too shallow). For our MERA with correction terms from boundary entanglement, the thread density is non-uniform and the integral should give V(dr) ~ dr^{-alpha} with alpha constrained by the entanglement spectrum. The measured alpha=3.92 constrains rho(gamma) to have a specific radial profile in kinematic space.",
+  "confidence": "low",
+  "confidence_rationale": "The PEE thread framework (Wen-Xu-Zhong 2025) is established for RT formula computation but has not been extended to force profiles between excitations. The Crofton formula connection is motivated by the thread-density interpretation (F_ij = (1/2)*CMI(A_i,A_j|L) from SCAN-002) but requires a non-trivial identification of V(dr) with a CMI-weighted thread count. The specific power-law prediction from the integral is not yet computed -- this is the key analytic task. Confidence would rise to medium if the Crofton integral is explicitly computed and gives alpha in [3.5, 4.5].",
+  "source_findings": ["SCAN-002", "SIM-2026-011", "PAPER-2026-009", "PAPER-2026-020"],
+  "testable": true,
+  "test_design": "1. Compute the CMI (Conditional Mutual Information) tensor I(A_i; A_j | L) from our existing MERA simulation data (ground state entanglement spectrum is already available from SIM-2026-002 and SIM-2026-007). 2. For each boundary separation dr, sum up CMI contributions: V_thread(dr) = (1/2) * sum_{|i-j|=dr} CMI(A_i, A_j | L_complement). 3. Compare V_thread(dr) to our measured V(dr) from SIM-2026-011. If the two profiles agree within 20%, the thread-density formula for V(dr) is supported. 4. Analytic step: compute the Crofton integral for pure AdS2 geometry (uniform rho) and verify it gives the wrong power law (alpha=2), then add the MERA-specific correction (from entanglement eigenvalues) and verify the power law shifts toward alpha=4.",
+  "refutation_criteria": "If V_thread(dr) computed from the CMI tensor is systematically off from V(dr) by more than a factor of 2, the thread-density formula does not apply to force profiles. If the Crofton integral for our MERA geometry gives alpha outside [3.0, 5.0], the kinematic-space connection is quantitatively wrong. If the CMI tensor has no clean scaling with dr (flat or oscillatory), the thread picture is not the right language for inter-hologron forces.",
+  "hardware_required": "Local CPU only. CMI computation from existing MERA ground state data (already computed in SIM-2026-002 / SIM-2026-007). Analytic integral: Mathematica or SymPy.",
+  "earliest_testable": "2026-Q2",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "philosophical_implications": "If V(dr) = (Crofton integral of thread density), it means holographic gravity is literally geometric in an information-theoretic sense: the force between two boundary excitations equals the number of entanglement threads that connect the regions between them, weighted by the kinematic measure. This is the strongest possible form of the ER=EPR conjecture applied at the force level -- not just that entanglement creates geometry, but that the strength of the emergent gravitational force is proportional to the entanglement thread count between the two sources. The 12 clean data points from SIM-2026-011 would then be a direct measurement of entanglement thread density in the MERA bulk.",
+  "status": "NOT_SUPPORTED",
+  "justified_by": ["SIM-2026-013", "SIM-2026-016"],
+  "status_writeback_2026_08_17": {
+    "from": "proposed",
+    "to": "NOT_SUPPORTED",
+    "trigger": "docs/governance/AUDIT-2026-08-11.md defect D-10.",
+    "verified_against": "SIM-2026-013.json field crofton_verdict reads NOT_SUPPORTED; SIM-2026-016.json field verdict reads NOT_SUPPORTED. Both statuses are COMPLETE. The status written here is those records' own verdicts.",
+    "the_numbers": "SIM-2026-013 computed the CMI tensor on the 24q exact ground state and formed V_thread(dr) = (1/2)*sum CMI. The thread profile decays as alpha_thread = 0.9097 +/- 0.0317 against a force profile the record lists at alpha_F = 3.9218 -- off by a factor of ~4.3 in the exponent, far outside this record's own 'factor of 2' refutation threshold. The log-log correlation is high (0.989) but the regression slope is 0.327, i.e. the two profiles are monotonically related and quantitatively unrelated. SIM-2026-016 attacked the same question through the kinematic-space Crofton integral and returned alpha_predicted = -0.385 against alpha_measured = 3.92 -- a SIGN FLIP, not a magnitude miss.",
+    "robustness_to_the_alpha_withdrawal": "Both comparisons were made against the now-withdrawn alpha = 3.92 (see SIM-2026-072). The refutation is UNAFFECTED: against the corrected alpha = 2.6 +/- 0.2 the thread exponent 0.91 is still off by ~2.9x and the kinematic-space prediction -0.385 still has the wrong sign. NOT_SUPPORTED stands on either anchor.",
+    "what_this_closes": "The identification V(dr) = Crofton integral of PEE thread density is not supported at N=24. The follow-on salvage attempt using the Kirillov-Kostant measure instead of the uniform-chord measure was registered as HYP-2026-022 and was itself refuted (SIM-2026-024, alpha = 0.883)."
+  },
+  "created_date": "2026-03-26",
+  "last_updated": "2026-08-17",
+  "created_by": "theory-lead",
+  "speculative_flag": true,
+  "pipeline_provenance": {
+    "conjecture_stage": "Generated from SCAN-002 (Wen-Xu-Zhong PEE threads + Crofton formula) and math bridge finding #2",
+    "feasibility_stage": "TESTABLE_NOW: CMI computation reuses existing simulation data; Crofton integral is analytically tractable",
+    "philosophy_stage": "Force = entanglement thread count — ER=EPR at the force-law level"
+  }
+}

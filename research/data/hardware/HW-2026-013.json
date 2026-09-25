@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-013",
+  "organization": "IonQ",
+  "processor": "6th-generation 256-qubit system (Cambridge deployment)",
+  "date": "2026-03-11",
+  "source_url": "https://www.ionq.com/news/ionq-and-the-university-of-cambridge-announce-landmark-agreement-to-establish-innovation-centre-for-quantum-technology-commercialization",
+  "physical_qubits": 256,
+  "logical_qubits": 0,
+  "error_correction_ratio": "TBD",
+  "two_qubit_gate_fidelity": 0.9999,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "physical_qubits",
+  "notes": "IonQ announced March 11, 2026 landmark agreement with University of Cambridge to deploy 6th-generation chip-based 256-qubit trapped-ion system at Cavendish Laboratory. Will be UK's most powerful quantum computer. Part of IonQ Quantum Innovation Centre. Builds on IonQ Tempo's 99.99% two-qubit gate fidelity world record. Deployment timeline not specified. Focus areas: quantum hardware, networking, sensing, security."
+}

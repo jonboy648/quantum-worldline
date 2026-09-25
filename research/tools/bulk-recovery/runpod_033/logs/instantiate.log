@@ -1,0 +1,114 @@
+  Installing known registries into `/workspace/hyp033/depot`
+   Installed LRUCache ───────────── v1.6.2
+   Installed Preferences ────────── v1.5.2
+   Installed IrrationalConstants ── v0.2.4
+   Installed GPUArraysCore ──────── v0.1.5
+   Installed JLD2 ───────────────── v0.1.14
+   Installed Adapt ──────────────── v3.7.2
+   Installed GPUCompiler ────────── v0.17.3
+   Installed TensorKit ──────────── v0.9.1
+   Installed HashArrayMappedTries ─ v0.2.0
+   Installed OptimKit ───────────── v0.4.2
+   Installed AbstractFFTs ───────── v1.5.0
+   Installed SpecialFunctions ───── v2.5.1
+   Installed TimerOutputs ───────── v0.5.25
+   Installed WignerSymbols ──────── v1.1.0
+   Installed OrderedCollections ─── v1.8.2
+   Installed Primes ─────────────── v0.4.0
+   Installed JLLWrappers ────────── v1.8.0
+   Installed TranscodingStreams ─── v0.11.3
+   Installed LLVMExtra_jll ──────── v0.0.18+0
+   Installed RationalRoots ──────── v0.1.0
+   Installed NamedTupleTools ────── v0.13.7
+   Installed ScopedValues ───────── v1.6.2
+   Installed ChainRulesCore ─────── v1.25.2
+   Installed CEnum ──────────────── v0.4.2
+   Installed FileIO ─────────────── v1.19.0
+   Installed Reexport ───────────── v1.2.2
+   Installed VectorInterface ────── v0.5.0
+   Installed BFloat16s ──────────── v0.2.0
+   Installed RandomNumbers ──────── v1.6.0
+   Installed GPUArrays ──────────── v8.8.1
+   Installed Requires ───────────── v1.3.1
+   Installed Random123 ──────────── v1.7.1
+   Installed LogExpFunctions ────── v0.3.28
+   Installed DataStructures ─────── v0.17.20
+   Installed HalfIntegers ───────── v1.6.0
+   Installed ExprTools ──────────── v0.1.10
+   Installed Strided ────────────── v1.2.3
+   Installed OpenSpecFun_jll ────── v0.5.6+0
+   Installed InverseFunctions ───── v0.1.17
+   Installed ArgParse ───────────── v1.2.0
+   Installed Compat ─────────────── v4.18.1
+   Installed CodecZlib ──────────── v0.7.8
+   Installed TensorKitManifolds ─── v0.6.0
+   Installed TextWrap ───────────── v1.0.2
+   Installed TupleTools ─────────── v1.6.0
+   Installed LLVM ───────────────── v4.17.1
+   Installed TensorOperations ───── v3.2.5
+   Installed CUDA ───────────────── v3.13.1
+   Installed KrylovKit ──────────── v0.5.4
+   Installed DocStringExtensions ── v0.9.5
+   Installed ChangesOfVariables ─── v0.1.10
+Precompiling project...
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mZlib_jll[39m
+[32m  ✓ [39m[90mOpenLibm_jll[39m
+[32m  ✓ [39m[90mMbedTLS_jll[39m
+[32m  ✓ [39m[90mTextWrap[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39mNamedTupleTools
+[32m  ✓ [39m[90mLRUCache[39m
+[32m  ✓ [39m[90mHalfIntegers[39m
+[32m  ✓ [39m[90mInverseFunctions[39m
+[32m  ✓ [39m[90mVectorInterface[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mOrderedCollections[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39mTupleTools
+[32m  ✓ [39m[90mRationalRoots[39m
+[32m  ✓ [39m[90mLibSSH2_jll[39m
+[32m  ✓ [39m[90mPrimes[39m
+[32m  ✓ [39m[90mHashArrayMappedTries[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mOpenBLAS_jll[39m
+[32m  ✓ [39m[90mChangesOfVariables[39m
+[32m  ✓ [39m[90mScopedValues[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39mArgParse
+[32m  ✓ [39m[90mGPUArraysCore[39m
+[32m  ✓ [39m[90mWignerSymbols[39m
+[32m  ✓ [39m[90mlibblastrampoline_jll[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mStrided[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39mKrylovKit
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39mOptimKit
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mFileIO[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39mJLD2
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39mTensorOperations
+[32m  ✓ [39mTensorKit
+[32m  ✓ [39mTensorKitManifolds
+[32m  ✓ [39mMERAKit
+  59 dependencies successfully precompiled in 51 seconds
+INSTANTIATE OK

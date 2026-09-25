@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-054",
+  "title": "Multichannel, ultra-wideband Rydberg electrometry with an optical frequency comb",
+  "authors": ["NIST group (Holloway et al.)"],
+  "date": "2024-09-09",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s41467-025-64439-2",
+  "arxiv_id": "2409.06019",
+  "abstract": "Uses a mid-infrared frequency-agile optical frequency comb as the coupling laser for three-photon Rydberg atom electrometry. Enables rapid switching between up to seven individual Rydberg states, providing multichannel detection from 1 GHz to 40 GHz simultaneously. Published in Nature Communications 2025.",
+  "relevance": 4,
+  "tags": ["Rydberg-electrometry", "optical-frequency-comb", "multichannel", "wideband", "NIST"],
+  "key_claims": [
+    "Seven simultaneous Rydberg channels from 1-40 GHz",
+    "Mid-infrared frequency comb enables rapid Rydberg state switching",
+    "Addresses bandwidth limitation of single-state EIT approaches",
+    "Simultaneous multi-frequency reception with single vapor cell"
+  ],
+  "hardware_used": "Rb vapor cell with mid-IR frequency comb coupling laser",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

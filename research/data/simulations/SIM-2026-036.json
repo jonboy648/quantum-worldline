@@ -1,0 +1,32 @@
+{
+  "id": "SIM-2026-036",
+  "type": "classical",
+  "date": "2026-06-16",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage 2a complete: chi=3 multicritical MERA at the O'Brien-Fendley TCI point (lam3/lamI=0.856). Optimization plateaued at rel_err ~0.42%; this record evaluates the c=7/10 sufficiency gate on the converged checkpoint.",
+  "circuit": {
+    "qubits": 16,
+    "chi": 3,
+    "n_params": 1246,
+    "script_path": "research/data/simulations/sim036_tci_mera_stage2.py",
+    "gate_script": "research/data/simulations/sim036b_cgate_eval.py",
+    "theta_checkpoint": "D:/quantum-worldline/research/data/simulations/theta_tci_SIM2026036.npy"
+  },
+  "hardware_target": "local CPU (sparse H, statevector MERA)",
+  "results": {
+    "E_exact": -32.702807740832405,
+    "E_mera": -32.59135540140362,
+    "rel_err_pct": 0.34080357965603325,
+    "gs_overlap": 0.9256343987290854,
+    "S_half_mera": 0.0002186700750033678,
+    "S_half_exact": 0.17948328498528032,
+    "S_ratio": 0.0012183311388651106,
+    "converged_to_fixed_point": false,
+    "status": "OPTIMIZER_COLLAPSE_RESEED_NEEDED",
+    "verdict": "CORRECTED 2026-06-16 (ERRATA D5): the original 'chi=3 INSUFFICIENT, escalate chi>=4' verdict MISDIAGNOSED an optimizer collapse as a capacity ceiling. chi=3 captures 99.99% of the exact TCI GS middle-cut weight; the converged state is a near-product local minimum (top Schmidt^2 0.99998, S_half 0.0002, rank 4) that never used available entanglement. FIX = DMRG/MPS-seed the chi=3 optimizer, then Koo-Saleur force read-out; chi=4 only if a seeded chi=3 saturates below S~0.18. HYP-027 still OPEN.",
+    "verdict_SUPERSEDED_2026_06_16": "chi=3 INSUFFICIENT for the multicritical TCI point: energy plateaued at rel_err 0.341% (floor), GS-overlap 0.9256, half-chain entanglement S_mera=0.000 vs S_exact=0.179 (ratio 0.001 -- chi=3 UNDERSHOOTS the entanglement the c=7/10 state carries). This QUANTITATIVELY confirms the scan-10 prediction (PAPER-115 boundary enrichment + PAPER-112 W3 channel-mixing): a chi=3 open-boundary MERA cannot isolate the bulk c=7/10 sector. ESCALATE to chi>=4. The HYP-027 universality question requires the higher-chi run; chi=3 stage-2 is a clean NEGATIVE on sufficiency, not on the physics."
+  },
+  "comparison": "classical_wins",
+  "notes": "Optimization rounds plateaued 0.417->0.416->0.416% (chi=3 floor). Gate read off the converged checkpoint rather than grinding more rounds. Scan-10 papers 115/112 predicted this boundary/symmetry-sector ceiling.",
+  "wall_seconds": 1.5702204704284668
+}

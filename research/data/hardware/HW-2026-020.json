@@ -1,0 +1,27 @@
+{
+  "id": "HW-2026-020",
+  "system": "IBM Quantum Nighthawk + Quantum-Centric Supercomputing Blueprint",
+  "vendor": "IBM",
+  "announced_processor": "2025-11-12",
+  "announced_blueprint": "2026-03-12",
+  "status": "PROCESSOR AVAILABLE — Blueprint published",
+  "qubits": 120,
+  "qubit_type": "superconducting (fixed-frequency transmon)",
+  "connectivity": "square lattice, 218 tunable couplers",
+  "coupler_type": "next-generation tunable",
+  "access": "cloud (ibm.quantum.cloud)",
+  "key_facts": [
+    "Nighthawk: 120-qubit processor, 20%+ greater connectivity than Heron via 218 tunable couplers",
+    "Handles up to 5,000 two-qubit gates now; target 7,500 gates by end of 2026, 10,000 in 2027",
+    "Quantum-Centric Supercomputing reference architecture published 2026-03-12: first blueprint for QPU+GPU+CPU integration",
+    "RIKEN+IBM demo: largest quantum simulation of iron-sulfur clusters via closed-loop Heron+Fugaku (152,064 nodes)",
+    "303-atom protein simulation demonstrated with the new architecture",
+    "Quantum advantage tracker launched (community-led, open): monitors advantage across observable estimation, variational problems, and classically-verifiable problems",
+    "Fault-tolerance target: 2029"
+  ],
+  "mera_relevance": "The quantum-centric supercomputing blueprint is directly relevant to how we might eventually run production MERA experiments: QPU handles the quantum circuit, classical HPC handles the Hamiltonian mat-vec (our current bottleneck). The blueprint formalizes the hybrid loop we already use. Nighthawk's 5,000-gate budget is below what we need for 5-layer 24q MERA with error mitigation, but the 7,500/10,000 gate targets in 2026-2027 are entering our range. Primary hardware target remains Helios due to fidelity advantages.",
+  "source_processor": "https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance",
+  "source_blueprint": "https://thequantuminsider.com/2026/03/12/ibm-releases-a-new-blueprint-for-quantum-centric-supercomputing/",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

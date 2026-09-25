@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-014",
+  "organization": "Quantinuum",
+  "processor": "Helios (Singapore deployment)",
+  "date": "2026-03-12",
+  "source_url": "https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre",
+  "physical_qubits": 98,
+  "logical_qubits": 94,
+  "error_correction_ratio": "~1:1 (iceberg codes)",
+  "two_qubit_gate_fidelity": 0.99921,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": false,
+  "frontier_category": "logical_qubits",
+  "notes": "Quantinuum expanding to Singapore with new R&D Centre, partnering with Singapore National Quantum Office. Helios system to be installed in Singapore in 2026 -- first international deployment outside the US. Will support research in pharmaceuticals, materials science, and finance. Quantinuum also planning IPO (confidential filing January 2026). Helios specs unchanged from Nov 2025 launch: 98 qubits, 99.9975% 1Q fidelity, 99.921% 2Q fidelity, 94 error-detected logical qubits."
+}

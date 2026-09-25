@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-049",
+  "arxiv_id": "2604.19735",
+  "title": "Architecting Early Fault Tolerant Neutral Atoms Systems with Quantum Advantage",
+  "authors": ["Sahil Khan", "Sayam Sethi", "Kaavya Sahay", "Yingjia Lin", "Jude Alnas", "Suhas Kurapati", "Abhinav Anand", "Jonathan M. Baker", "Kenneth R. Brown"],
+  "year": 2026,
+  "venue": "arxiv (quant-ph), submitted Apr 2026",
+  "submission_date": "2026-04-21",
+  "abstract_summary": "Proposes teleportation-based schemes for early fault-tolerant neutral atom systems targeting quantum dynamics simulations. Achieves ~3x speedup via reconfigurable connectivity parallelization. Demonstrates feasibility with ~11,495 atoms and ~15 hour runtime.",
+  "relevance": 3,
+  "relevance_reason": "Neutral atom fault-tolerant architecture for quantum dynamics — our holographic transport protocol is a quantum dynamics simulation. The 11k atom estimate for fault-tolerant dynamics sets the scale for our eventual full-fault-tolerant run.",
+  "connection_to_project": "Provides hardware resource estimates for fault-tolerant quantum dynamics on neutral atoms (QuEra/Pasqal-class). Our transport protocol is a quantum dynamics simulation — this paper's estimates bracket what future fault-tolerant MERA transport would cost.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

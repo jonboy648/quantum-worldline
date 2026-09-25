@@ -1,0 +1,18 @@
+{
+  "id": "HW-2026-022",
+  "system": "Google Willow successor (unnamed, Milestone 3 target)",
+  "vendor": "Google Quantum AI",
+  "status": "IN DEVELOPMENT — targeted late 2026/early 2027",
+  "qubits_target": "500-1000",
+  "key_facts": [
+    "Willow (105 qubits) announced December 2024: below-threshold error correction, RCS benchmark in 5 min vs 10^25 years classically",
+    "Successor target: 500-1000 physical qubits by late 2026/early 2027",
+    "Milestone 3: long-lived logical qubit — stable state for days vs microseconds",
+    "Ultimate 2029 target: 1 million qubit machine for chemistry and materials science",
+    "No new processor announcement in March 2026 — roadmap unchanged from Dec 2024 disclosure"
+  ],
+  "mera_relevance": "Google's successor system at 500-1000 qubits would be capable of running large MERA circuits if gate fidelity reaches the Willow threshold level. However, superconducting systems still require SWAP routing for non-adjacent qubits, making them less efficient for MERA than trapped ion systems. This is a long-horizon watch item.",
+  "source": "https://blog.google/technology/research/google-willow-quantum-chip/",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

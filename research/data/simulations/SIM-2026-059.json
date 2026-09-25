@@ -1,0 +1,32 @@
+{
+  "id": "SIM-2026-059",
+  "hypothesis_id": "HYP-2026-025",
+  "related": ["SIM-2026-057"],
+  "date": "2026-06-28",
+  "type": "classical",
+  "hardware": "local CPU (single-thread BLAS, deterministic basins; ~30-40 min/seed at chi=8)",
+  "method": "MERAKit.jl scale-invariant ternary MERA, Riemannian LBFGS, block_size=2 (dim-9 super-sites), direct-init at chi=8, 8 seeds, 3000 iters, select by spectrum (Delta_sigma nearest CFT). Driver: research/tools/MERAKit.jl/qw_potts_chi8.jl.",
+  "model": "3-state quantum Potts critical point (Z3 clock/shift), c=4/5, qutrit d=3.",
+  "purpose": "chi=8 sharpening of SIM-057 (chi=6) -- attempt to resolve Delta_sigma toward CFT 0.1333, mirroring how SIM-052's chi=8 run sharpened the tricritical case, to turn HYP-025 from SUPPORTED-caveat into clean.",
+  "cft_targets": {"c": 0.8, "Delta_sigma": 0.1333, "Delta_eps": 0.8, "Delta_T": 2.0, "alpha": 4.0},
+  "results_all_seeds": {
+    "seed1": {"Delta_sigma": 0.6685, "Delta_eps": 0.9276, "Delta_T": 1.9707, "alpha": 3.9413},
+    "seed2": {"Delta_sigma": 0.5955, "Delta_eps": 0.9054, "Delta_T": 2.0129, "alpha": 4.0257},
+    "seed3": {"Delta_sigma": 0.0945, "Delta_eps": 0.9526, "Delta_T": 2.0142, "alpha": 4.0283},
+    "seed4": {"Delta_sigma": 0.6674, "Delta_eps": 0.6674, "Delta_T": 2.0412, "alpha": 4.0823},
+    "seed5": {"Delta_sigma": 0.6357, "Delta_eps": 0.8987, "Delta_T": 2.0200, "alpha": 4.0399},
+    "seed6": {"Delta_sigma": 0.0938, "Delta_eps": 0.8114, "Delta_T": 1.9955, "alpha": 3.9910},
+    "seed7": {"Delta_sigma": 0.6490, "Delta_eps": 0.6490, "Delta_T": 2.0565, "alpha": 4.1130},
+    "seed8": {"Delta_sigma": 0.7799, "Delta_eps": 0.7799, "Delta_T": 2.0094, "alpha": 4.0187}
+  },
+  "best_spectrum_seed": {"seed": 3, "Delta_sigma": 0.0945, "Delta_eps": 0.9526, "Delta_T": 2.0142, "alpha": 4.0283},
+  "second_clean_basin": {"seed": 6, "Delta_sigma": 0.0938, "Delta_eps": 0.8114, "Delta_T": 1.9955, "alpha": 3.9910, "note": "TWO clean basins (seeds 3,6) independently agree on Delta_sigma~0.094 and Delta_eps~0.81-0.95"},
+  "delta_T_statistics": {
+    "all_8_mean": 2.0150, "all_8_range": [1.9707, 2.0565], "alpha_range": [3.9413, 4.1130],
+    "note": "Delta_T rock-solid across ALL 8 seeds (every alpha within 2.8% of 4.0). Fourth confirmation of the universal-dimension fingerprint across CFT classes."
+  },
+  "delta_sigma_comparison": {"chi6_best": 0.070, "chi8_best": 0.0945, "CFT": 0.1333, "note": "chi=8 improved Delta_sigma (0.070 -> 0.094), genuinely closer to CFT 0.133, but STILL ~30% short and only 2/8 seeds found the clean basin."},
+  "verdict": "PARTIAL SHARPENING. chi=8 CONFIRMS alpha=4 even more robustly (best basin Delta_T=2.014 -> alpha=4.028; all 8 seeds alpha in [3.94,4.11]) and IMPROVES Delta_sigma (0.070 -> 0.094, two clean basins agree). BUT it does NOT deliver the clean full-spectrum resolution that SIM-052 achieved for tricritical: Delta_sigma is still ~30% short of CFT 0.133, and only 2/8 seeds reached the clean basin (the c=4/5 tower is denser/harder than tricritical). HYP-025 stays SUPPORTED-WITH-CAVEAT -- the caveat is REDUCED (Delta_sigma moving the right way, alpha robust) but NOT eliminated. A chi=10-12 run (RunPod A100, ~$10-20, APPROVED) is what would resolve Delta_sigma->0.133 for a clean high-confidence claim. The alpha=4 universality verdict itself is solid (rests on the well-resolved Delta_T); only the full c=4/5 primary spectrum remains partially resolved.",
+  "next_step": "Optional chi=10-12 Potts run on RunPod A100 to resolve Delta_sigma->0.133. The alpha verdict does not require it; a clean full-spectrum claim does.",
+  "status": "COMPLETE"
+}

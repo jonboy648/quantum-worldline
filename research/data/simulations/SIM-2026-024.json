@@ -1,0 +1,246 @@
+{
+  "id": "SIM-2026-024",
+  "description": "PEE-thread Crofton salvage of refuted HYP-2026-014 (HYP-2026-022 test)",
+  "type": "classical",
+  "date": "2026-05-15",
+  "hypothesis_id": "HYP-2026-022",
+  "circuit": {
+    "qubits": 24,
+    "depth": 0,
+    "gates": 0,
+    "script_path": "research/data/simulations/sim2026024_pee_crofton.py"
+  },
+  "hardware_target": "local_cpu",
+  "results": {
+    "verdict": "REFUTED",
+    "verdict_reason": "alpha=0.883 outside acceptance window [3.2, 4.8]. PEE-thread re-weighting does not recover the known alpha~4. HYP-014 stays refuted.",
+    "alpha_fit": 0.8830410748467233,
+    "alpha_fit_pv": 0.8830410748467233,
+    "alpha_acceptance_window": [
+      3.2,
+      4.8
+    ],
+    "alpha_in_window": false,
+    "max_residual_powerlaw_pct": 39.170881899975676,
+    "max_residual_sinusoid_pct": 1158.9826847920222,
+    "refuted_baseline_sinusoid_residual_pct": 5863.0,
+    "F_pee_hard": {
+      "1": 2.351692,
+      "2": 1.5188046955018206,
+      "3": 0.6896044538830756,
+      "4": 0.49268225559593265,
+      "5": 0.4102469692408081,
+      "6": 0.365087862313835,
+      "7": 0.33587173994084,
+      "8": 0.314609435006877,
+      "9": 0.29764759100884636,
+      "10": 0.28302289658222,
+      "11": 0.2694860550552145,
+      "12": 0.25604612908870983
+    },
+    "F_pee_pv": {
+      "1": 2.351692,
+      "2": 1.5188046955018206,
+      "3": 0.6896044538830756,
+      "4": 0.49268225559593265,
+      "5": 0.4102469692408081,
+      "6": 0.365087862313835,
+      "7": 0.33587173994084,
+      "8": 0.314609435006877,
+      "9": 0.29764759100884636,
+      "10": 0.28302289658222,
+      "11": 0.2694860550552145,
+      "12": 0.25604612908870983
+    },
+    "F_measured": {
+      "1": -2.351692,
+      "2": -0.573691,
+      "3": -0.103168,
+      "4": -0.048784,
+      "5": -0.028201,
+      "6": -0.018006,
+      "7": -0.012185,
+      "8": -0.008544,
+      "9": -0.006114,
+      "10": -0.00441,
+      "11": -0.003164,
+      "12": -0.002222
+    },
+    "sigma_raw_main": {
+      "1": 2.926632552665658,
+      "2": 1.890121352199642,
+      "3": 0.8581986260094572,
+      "4": 0.6131329814226516,
+      "5": 0.5105439550810973,
+      "6": 0.454344370959627,
+      "7": 0.4179855047477801,
+      "8": 0.39152500151672787,
+      "9": 0.37041633388598666,
+      "10": 0.3522162010532209,
+      "11": 0.335369878884667,
+      "12": 0.31864416614720437
+    },
+    "n_qubits": 24,
+    "theta_min_canonical": 0.1308996938995747,
+    "guards": {
+      "G1_regulator_stable": true,
+      "G1_alpha_range": 0.0,
+      "G1_alpha_sweep_min": 0.8830410748467233,
+      "G1_alpha_sweep_max": 0.8830410748467233,
+      "G2_null_control": true,
+      "G3_pv_hard_agree": true,
+      "all_pass": true
+    },
+    "alpha_vs_cutoff_table": [
+      {
+        "theta_min": 0.03272492347489368,
+        "theta_min_over_pi": 0.010416666666666668,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.03786634396709307,
+        "theta_min_over_pi": 0.012053231638361663,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.043815534252792165,
+        "theta_min_over_pi": 0.013946917721088256,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.05069940323591747,
+        "theta_min_over_pi": 0.016138121273611,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.05866479850840475,
+        "theta_min_over_pi": 0.01867358533620533,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.06788163892220316,
+        "theta_min_over_pi": 0.021607396759295662,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.07854653932041039,
+        "theta_min_over_pi": 0.02500213999121047,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.09088700475077659,
+        "theta_min_over_pi": 0.02893023213780534,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.10516628363308676,
+        "theta_min_over_pi": 0.03347546777362009,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.12168898340882282,
+        "theta_min_over_pi": 0.03873480645868359,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.14080756846687595,
+        "theta_min_over_pi": 0.044820441092507594,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.16292987895990965,
+        "theta_min_over_pi": 0.05186219122766764,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.18852783090374584,
+        "theta_min_over_pi": 0.06001027239744827,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.21814748315142982,
+        "theta_min_over_pi": 0.06943850053321202,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.2524206859919791,
+        "theta_min_over_pi": 0.08034799982854123,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.2920785598632459,
+        "theta_min_over_pi": 0.09297149314679529,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.33796709170855543,
+        "theta_min_over_pi": 0.10757826649561703,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.39106518168063725,
+        "theta_min_over_pi": 0.12447991347120707,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.45250552516749204,
+        "theta_min_over_pi": 0.1440369822136008,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      },
+      {
+        "theta_min": 0.5235987755982988,
+        "theta_min_over_pi": 0.16666666666666666,
+        "alpha": 0.8830410748467233,
+        "max_residual_pct": 39.170881899975676
+      }
+    ],
+    "null_control_result": {
+      "state": "Neel |0101...> (gapped, area-law, non-critical)",
+      "alpha_fit": -6.214464620901609e-15,
+      "max_residual_pct": 100.0,
+      "alpha_in_window_3p2_4p8": false,
+      "pass": true
+    },
+    "pv_vs_hardcutoff": {
+      "alpha_hard_cutoff": 0.8830410748467233,
+      "alpha_pv": 0.8830410748467233,
+      "delta_alpha": 0.0,
+      "limit": 0.3,
+      "pass": true
+    },
+    "residual_comparison_vs_refuted_baseline": {
+      "SIM_2026_016_uniform_chord_sinusoid_max_residual_pct": 5863.0,
+      "SIM_2026_024_PEE_powerlaw_max_residual_pct": 39.170881899975676,
+      "SIM_2026_024_PEE_sinusoid_max_residual_pct": 1158.9826847920222,
+      "improvement_factor": 149.67750828208034
+    },
+    "conclusion_paragraph": "HYP-2026-022 tests whether re-weighting the kinematic-space K[u,v] by the PEE-thread / Kirillov-Kostant Crofton kernel 1/sin^2(theta/2) converts the refuted uniform-chord sinusoid (SIM-2026-016: 5863% max residual) into a power-law consistent with the established alpha~4 stress-tensor result. The canonical hard-cutoff result (theta_min=pi/N) yields alpha=0.883 with power-law max residual 39.2% vs sinusoid max residual 1159.0%, so the power law beats the sinusoid. Guard G1 (regulator stability): alpha ranges [0.883, 0.883] over two decades of theta_min, variation 0.000 (within the 0.5 limit) => PASS. Guard G2 (null control, Neel gapped state): alpha_null=-0.000, outside the [3.2, 4.8] window => PASS. Guard G3 (PV vs hard-cutoff): delta_alpha=0.0000 (within 0.3 limit) => PASS. Overall verdict: REFUTED. alpha=0.883 outside acceptance window [3.2, 4.8]. PEE-thread re-weighting does not recover the known alpha~4. HYP-014 stays refuted."
+  },
+  "classical_baseline": {
+    "method": "Exact diagonalization (24q, 2^24 Hilbert space)",
+    "ground_state_file": "D:/quantum-worldline/research/data/simulations/gs_24q_exact.npy",
+    "S_interval_computation": "Full exact RDM trace for all contiguous intervals",
+    "runtime_s": 139.82615113258362
+  },
+  "comparison": "classical_wins",
+  "notes": "SIM-2026-024 is a zero-cost classical re-analysis of existing SIM-2026-016 data. No quantum circuit was needed. The PEE-thread Crofton kernel 1/sin^2(theta/2) is the Kirillov-Kostant symplectic density on kinematic space (Czech et al., Wen-Xu-Zhong 2512.19452, Penna-Zukowski 1812.02176). Three mandatory guards (regulator stability, null control, PV/hard agreement) are required before any SUPPORTED verdict for this salvage of REFUTED HYP-014."
+}

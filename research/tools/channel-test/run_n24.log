@@ -1,0 +1,30 @@
+==============================================================================
+V_T vs V_X CHANNEL TEST -- n=24, anchor=6, dr=1..16
+Pre-registered: research/tools/channel-test/PREREGISTRATION.md (aed9051/ba1b4ae)
+==============================================================================
+
+[1/4] ground state
+  cached GS loaded: D:\quantum-worldline\research\data\simulations\gs_24q_exact.npy  E0=-30.199712331
+
+[2/4] force profiles (3 arms)
+  eps  16 points in 82.2s   F(3)=-1.031681e-01  F(6)=-1.800578e-02
+   T    16 points in 165.4s   F(3)=-3.832588e-02  F(6)=-1.177182e-02
+  X    16 points in 124.3s   F(3)=-1.732390e-01  F(6)=-4.427978e-02
+
+[3/4] VALIDATION GATE -- eps arm vs SIM-2026-011-interaction.json
+  max relative error 0.000%  ->  PASS
+
+[4/4] analysis  (PRIMARY WINDOW dr >= 3, fixed in advance)
+  eps  alpha(log-OLS,dr>=3) =  3.456 +/- 0.419 (bootstrap)   plateau 6 slopes @ 2.592   valid dr<=16
+  T    alpha(log-OLS,dr>=3) =  2.677 +/- 0.329 (bootstrap)   plateau 0 slopes @ nan   valid dr<=15  [flip in window at [16]]
+  X    alpha(log-OLS,dr>=3) =  2.340 +/- 0.100 (bootstrap)   plateau 5 slopes @ 2.155   valid dr<=16
+
+==============================================================================
+  alpha_T = 2.677 +/- 0.329
+  alpha_X = 2.340 +/- 0.100
+  separation D = 0.98 sigma | gap = 0.337 | amp ratio = 4.52
+  PRE-REGISTERED VERDICT: D_INDETERMINATE
+  Separation falls between the pre-registered thresholds, or form and amplitude disagree. Underpowered. Do NOT round toward A.
+==============================================================================
+
+wrote D:\quantum-worldline\research\tools\channel-test\channel_test_n24_results.json   (473s total)

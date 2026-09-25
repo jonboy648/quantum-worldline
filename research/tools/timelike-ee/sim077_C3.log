@@ -1,0 +1,15 @@
+C3 L=512 R=  50 delta=  2: Im -0.0286+/-0.0166 (pred 0.5236) no | 2x identity 1.5e-13  [648s]
+C3 L=512 R=  50 delta=  5: Im +0.0214+/-0.0180 (pred 0.5236) no | 2x identity 2.3e-13  [693s]
+  return np.where(np.abs(z) < 1e-300, 0.0, z * np.log(z.astype(complex)))
+  return np.where(np.abs(z) < 1e-300, 0.0, z * np.log(z.astype(complex)))
+C3 L=512 R=  50 delta= 10: Im +0.0334+/-0.0273 (pred 0.5236) no | 2x identity 3.5e-13  [661s]
+C3 L=512 R= 100 delta=  2: Im -0.4471+/-0.3209 (pred 0.5236) no | 2x identity 7.9e-13  [767s]
+C3 L=512 R= 100 delta=  5: Im -0.0621+/-0.0587 (pred 0.5236) no | 2x identity 7.0e-13  [768s]
+C3 L=512 R= 100 delta= 10: Im +0.0210+/-0.0156 (pred 0.5236) no | 2x identity 1.3e-12  [278s]
+C3 L=1024 R=  50 delta=  2: Im +0.0027+/-0.0048 (pred 0.5236) no | 2x identity 4.3e-13  [713s]
+C3 L=1024 R=  50 delta=  5: Im +0.0215+/-0.0179 (pred 0.5236) no | 2x identity 3.5e-13  [1039s]
+C3 L=1024 R=  50 delta= 10: Im +0.0334+/-0.0273 (pred 0.5236) no | 2x identity 4.8e-13  [798s]
+C3 L=1024 R= 100 delta=  2: Im -0.2523+/-0.1867 (pred 0.5236) no | 2x identity 6.8e-13  [1003s]
+C3 L=1024 R= 100 delta=  5: Im +0.0021+/-0.0031 (pred 0.5236) no | 2x identity 4.9e-13  [672s]
+C3 L=1024 R= 100 delta= 10: Im +0.0199+/-0.0177 (pred 0.5236) no | 2x identity 8.5e-13  [860s]
+wrote /workspace/tlee/sim077_C3.json

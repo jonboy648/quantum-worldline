@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-057",
+  "title": "Electrically-Small Rydberg Sensor for Three-Dimensional Determination of RF k-Vectors",
+  "authors": ["Elgee", "Cox", "Hill", "Kunz", "Meyer", "et al. (ARL group)"],
+  "date": "2025-03-06",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/html/2503.04670",
+  "arxiv_id": "2503.04670",
+  "abstract": "Army Research Lab demonstration of complete three-dimensional vector polarimetry with a Rydberg-atom RF electrometer. Shows k-vector direction determination using a single electrically-small vapor cell sensor. Extends ARL Rydberg sensor program (Meyer, Cox, Kunz) to full 3D spatial field characterization.",
+  "relevance": 3,
+  "tags": ["Rydberg-electrometry", "ARL", "vector-polarimetry", "defense", "RF-sensing", "k-vector"],
+  "key_claims": [
+    "Single vapor cell determines 3D direction of incoming RF wavevector",
+    "Electrically small sensor (sub-wavelength) achieves full angle-of-arrival recovery",
+    "Extends previous ARL broadband Rydberg sensor work to spatial sensing",
+    "Relevant to direction-finding and spectrum awareness applications"
+  ],
+  "hardware_used": "Cs vapor cell (ARL)",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

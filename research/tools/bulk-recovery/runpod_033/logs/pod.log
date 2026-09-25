@@ -1,0 +1,31 @@
+[2026-09-22T23:29:33Z] pod 67iskx7js1nimw nproc=16 njobs=1 julia_par=8 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+[2026-09-22T23:29:33Z] stage 3: 28 grid jobs, 1 parallel x 16 threads
+[2026-09-23T00:36:09Z] finished /workspace/hyp033/networks/chi6_h1.00_seed1 rc=0
+[2026-09-23T01:03:39Z] finished /workspace/hyp033/networks/chi6_h1.00_seed2 rc=0
+[2026-09-23T01:43:36Z] finished /workspace/hyp033/networks/chi6_h1.00_seed3 rc=0
+[2026-09-23T03:34:05Z] finished /workspace/hyp033/networks/chi6_h1.00_seed4 rc=0
+[2026-09-23T04:39:36Z] finished /workspace/hyp033/networks/chi6_h1.00_seed5 rc=0
+[2026-09-23T05:56:37Z] finished /workspace/hyp033/networks/chi6_h1.00_seed6 rc=0
+[2026-09-23T07:29:24Z] finished /workspace/hyp033/networks/chi6_h1.00_seed7 rc=0
+[2026-09-23T08:39:30Z] finished /workspace/hyp033/networks/chi6_h1.00_seed8 rc=0
+[2026-09-23T09:23:54Z] finished /workspace/hyp033/networks/haar_chi6_seed1 rc=0
+[2026-09-23T10:08:08Z] finished /workspace/hyp033/networks/haar_chi6_seed2 rc=0
+[2026-09-23T10:51:38Z] finished /workspace/hyp033/networks/haar_chi6_seed3 rc=0
+[2026-09-23T11:35:31Z] finished /workspace/hyp033/networks/haar_chi6_seed4 rc=0
+[2026-09-23T12:21:01Z] finished /workspace/hyp033/networks/haar_chi6_seed5 rc=0
+[2026-09-23T13:04:47Z] finished /workspace/hyp033/networks/haar_chi6_seed6 rc=0
+[2026-09-23T13:50:09Z] finished /workspace/hyp033/networks/haar_chi6_seed7 rc=0
+[2026-09-23T14:34:51Z] finished /workspace/hyp033/networks/haar_chi6_seed8 rc=0
+[2026-09-23T15:52:42Z] finished /workspace/hyp033/networks/chi6_h1.50_seed1 rc=0
+[2026-09-23T16:51:05Z] finished /workspace/hyp033/networks/chi6_h1.50_seed2 rc=0
+[2026-09-23T18:42:49Z] finished /workspace/hyp033/networks/chi6_h1.50_seed3 rc=0
+[2026-09-23T20:13:35Z] finished /workspace/hyp033/networks/chi6_h1.50_seed4 rc=0
+[2026-09-23T20:56:35Z] finished /workspace/hyp033/networks/chi6_h1.50_seed5 rc=0
+[2026-09-23T21:29:53Z] finished /workspace/hyp033/networks/chi6_h1.50_seed6 rc=0
+[2026-09-23T22:01:12Z] finished /workspace/hyp033/networks/chi6_h1.50_seed7 rc=0
+[2026-09-23T22:06:19Z] finished /workspace/hyp033/networks/chi6_h1.50_seed8 rc=0
+[2026-09-23T22:09:40Z] finished /workspace/hyp033/networks/chi8_h1.00_seed1 rc=137
+[2026-09-23T22:12:37Z] finished /workspace/hyp033/networks/chi8_h1.00_seed2 rc=137
+[2026-09-23T22:15:26Z] finished /workspace/hyp033/networks/chi8_h1.00_seed3 rc=137
+[2026-09-23T22:18:17Z] finished /workspace/hyp033/networks/chi8_h1.00_seed4 rc=137
+[2026-09-23T22:18:17Z] ALL DONE

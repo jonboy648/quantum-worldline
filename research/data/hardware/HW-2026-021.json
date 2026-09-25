@@ -1,0 +1,21 @@
+{
+  "id": "HW-2026-021",
+  "system": "Pasqal neutral atom QPU (multiple deployments)",
+  "vendor": "Pasqal",
+  "status": "DEPLOYED — multiple systems",
+  "qubits": 140,
+  "qubit_type": "neutral atom (Rydberg)",
+  "key_facts": [
+    "Delivered 140-qubit neutral atom QPU to CINECA (Italy) — February 17, 2026, under EuroHPC JU",
+    "Seven quantum systems currently operational across customers",
+    "25+ commercial customers and partners",
+    "Welinq partnership (Feb 2026): networked quantum computing via optical entanglement between QPUs — InterQo project, €4M",
+    "SPAC merger announced March 4, 2026: listing on Nasdaq via Bleichroeder Acquisition Corp. II at $2B pre-money valuation",
+    "250-qubit QPU targeted for quantum advantage demo H1 2026 (roadmap)",
+    "Networked QPU architecture targets data-center-ready systems by linking multiple units"
+  ],
+  "mera_relevance": "Neutral atom platforms can implement MERA-like circuits via Rydberg blockade interactions. The all-to-all programmable connectivity of neutral atoms is favorable for tensor network circuits. Pasqal is a secondary hardware target — their systems have lower gate fidelity than Quantinuum Helios but are more widely deployed in Europe. The CINECA deployment creates a potential European academic access path. The networked QPU direction could eventually enable distributed MERA across multiple QPUs.",
+  "source": "https://www.pasqal.com/newsroom/pasqal-delivers-italys-first-neutral-atom-quantum-computer/",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

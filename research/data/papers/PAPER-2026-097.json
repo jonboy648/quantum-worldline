@@ -1,0 +1,35 @@
+{
+  "id": "PAPER-2026-097",
+  "title": "Causal Dynamical Triangulations: New Lattice Theory of Quantum Gravity",
+  "authors": [
+    "J. Ambjorn",
+    "R. Loll"
+  ],
+  "date": "2026-04-07",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2604.05641",
+  "arxiv_id": "2604.05641",
+  "abstract": "We present Causal Dynamical Triangulations (CDT) as a methodology for computing the gravitational path integral through a nonperturbative quantum field theory approach. The framework employs lattice formulations where the dynamical, curved and causal nature of spacetime is built into the structure of the lattices from the outset, assembling triangulated spacetimes from flat Minkowskian building blocks. General relativity's degrees of freedom are encoded via spatial relationships and edge lengths, which simultaneously function as a short-distance cutoff. Monte Carlo simulations reveal that a quantum universe emerges dynamically near the Planck scale with properties resembling de Sitter space, with an ultraviolet fixed point and a spectral dimension of approximately 2 rather than the classical value of 4 at short scales.",
+  "relevance": 2,
+  "tags": [
+    "quantum-gravity",
+    "causal-dynamical-triangulations",
+    "gravitational-path-integral",
+    "Monte-Carlo",
+    "nonperturbative",
+    "de-Sitter",
+    "spectral-dimension",
+    "lattice-quantum-gravity"
+  ],
+  "key_claims": [
+    "CDT gravitational path integral via Monte Carlo on Minkowskian triangulated spacetimes",
+    "Quantum universe emerges with de Sitter geometry near Planck scale",
+    "Spectral dimension ~2 at short scales vs classical value 4 (dimensional reduction)",
+    "Evidence for UV fixed point enabling nontrivial continuum limit",
+    "Review/perspective paper by founders; relevant to worldline path-integral simulation of curved space"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

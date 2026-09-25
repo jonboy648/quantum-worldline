@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-066",
+  "organization": "Atom Computing",
+  "processor": "Neutral-atom system (>1,200 physical qubits)",
+  "date": "2026-06-16",
+  "source_url": "https://www.prnewswire.com/news-releases/atom-computing-raises-more-than-300-million-to-accelerate-deployment-of-fault-tolerant-neutral-atom-quantum-computers-302800832.html",
+  "physical_qubits": 1200,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": "physical_qubits",
+  "notes": "FUNDING / PARTNERSHIP milestone, not a new technical result. Atom Computing raised >$300M (Series C, 2026-06-16) to accelerate FT neutral-atom deployment; signed a Phasecraft MOU (2026-06-15) for next-gen materials; partnered with Microsoft to install the 'world's first commercial quantum computer with logical qubits.' Stated current capability >1,200 physical qubits with full QEC demonstrated. No new gate-fidelity or error-rate numbers in this window; no access route established for us. RELEVANCE 2/5: large neutral-atom array relevant to Rydberg-MERA physics, but a business/partnership announcement. Complements the demonstrated Atom Computing toric-code QEC on record (HW-2026-056, 2026-06-02). Discovered_by hardware-tracker 2026-06-16."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-057",
+  "organization": "Kyoto University (Takahashi group; Yokoyama, Kashimoto, Takahashi et al.)",
+  "processor": "Yb optical-tweezer array (minimally destructive coherent-excitation imaging)",
+  "date": "2026-05-22",
+  "source_url": "https://arxiv.org/abs/2605.24175",
+  "arxiv_id": "2605.24175",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "Minimally destructive fast imaging of single atoms in an optical tweezer array via deterministic coherent excitation. Achieves 99.89% discrimination (readout) fidelity with 98.80% survival in 17.6 microseconds, with reduced heating rates vs incoherent approaches. RELEVANCE 2/5: readout-fidelity advance for neutral-atom (Yb) tweezer arrays; relevant to mid-circuit measurement quality for the neutral-atom MERA path. Frontier for readout/discrimination fidelity in this window. Does not change physics anchors."
+}

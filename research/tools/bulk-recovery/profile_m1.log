@@ -1,0 +1,5 @@
+D 13824 cut bonds 6 inside 30 outside 25
+inside   auto-hq  ntensors=120 path    0.2s flops 2.27e+10 largest 1.91e+08
+   contract    1.2s  -> (6, 4, 4, 4, 6, 6, 6, 4, 4, 4, 6, 6)
+   eigh  415.6s rank 13824
+inside   greedy   ntensors=120 path    0.0s flops 5.06e+13 largest 6.88e+09

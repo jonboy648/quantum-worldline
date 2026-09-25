@@ -1,0 +1,56 @@
+
+============================================================================
+EXPERIMENT 1 -- CRITICAL  --  n=24, h=1.0, PBC ring, anchor=0
+============================================================================
+  GS in 325s   E0/n = -1.274149025   exact = -1.274149025   |diff| = 1.11e-15  -> G1 PASS
+  eps  133.0s  alpha_chord= 2.368+/-0.032  (raw-dr  1.755)  plateau 8@2.353  G2 PASS (2.0e-10)  R2 pow=0.9996 exp=0.8979 -> power
+  T    107.6s  alpha_chord= 1.834+/-0.033  (raw-dr  1.366)  plateau 8@1.873  G2 PASS (5.6e-10)  R2 pow=0.9993 exp=0.9190 -> power
+  X    108.2s  alpha_chord= 1.834+/-0.033  (raw-dr  1.366)  plateau 8@1.873  G2 PASS (1.1e-09)  R2 pow=0.9993 exp=0.9190 -> power
+  Z    102.9s  alpha_chord=-0.367+/-1.085  (raw-dr -0.142)  plateau 0@nan  G2 FAIL (9.3e-01)  R2 pow=0.0421 exp=0.0007 -> power
+
+============================================================================
+EXPERIMENT 2 -- MATCHED CONTROL (paramagnetic)  --  n=24, h=2.0, PBC ring, anchor=0
+============================================================================
+  GS in 222s   E0/n = -2.127088820   exact = -2.127088820   |diff| = 4.44e-16  -> G1 PASS
+  eps  131.2s  alpha_chord=12.031+/-1.128  (raw-dr  9.091)  plateau 0@nan  G2 PASS (6.7e-08)  R2 pow=0.9802 exp=0.9696 -> power
+  T    105.0s  alpha_chord=14.570+/-2.033  (raw-dr 11.288)  plateau 0@nan  G2 PASS (5.8e-08)  R2 pow=0.8979 exp=0.9966 -> exponential
+  X    106.5s  alpha_chord=13.002+/-1.776  (raw-dr  9.936)  plateau 0@nan  G2 PASS (5.8e-08)  R2 pow=0.9481 exp=0.9908 -> exponential
+D:\quantum-worldline\research\tools\channel-test\qw_channel_common.py:137: RuntimeWarning: divide by zero encountered in log
+  lx, ly = np.log(x), np.log(np.abs(y))
+D:\quantum-worldline\research\tools\channel-test\qw_channel_common.py:174: RuntimeWarning: divide by zero encountered in log
+  lx, ly = np.log(x), np.log(np.abs(y))
+D:\quantum-worldline\research\tools\channel-test\qw_channel_common.py:185: RuntimeWarning: invalid value encountered in scalar divide
+  if abs(seg.mean()) > 1e-12 and (seg.max() - seg.min()) / abs(seg.mean()) <= tol:
+C:\Users\jonca\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\_core\_methods.py:135: RuntimeWarning: invalid value encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+D:\quantum-worldline\research\tools\channel-test\qw_ring_test.py:106: RuntimeWarning: divide by zero encountered in log
+  ly = np.log(np.abs(y)); x = np.asarray(dr, float)
+D:\quantum-worldline\research\tools\channel-test\qw_ring_test.py:109: RuntimeWarning: invalid value encountered in subtract
+  ss = 1.0 - ((ly - pred) ** 2).sum() / max(((ly - ly.mean()) ** 2).sum(), 1e-30)
+D:\quantum-worldline\research\tools\channel-test\qw_ring_test.py:114: RuntimeWarning: divide by zero encountered in log
+  lx, ly = np.log(x), np.log(np.abs(y))
+D:\quantum-worldline\research\tools\channel-test\qw_ring_test.py:116: RuntimeWarning: invalid value encountered in subtract
+  return 1.0 - ((ly - pred) ** 2).sum() / max(((ly - ly.mean()) ** 2).sum(), 1e-30)
+C:\Users\jonca\AppData\Local\Programs\Python\Python312\Lib\site-packages\scipy\optimize\_minpack_py.py:989: RuntimeWarning: divide by zero encountered in divide
+  transform = 1.0 / sigma
+D:\quantum-worldline\research\tools\channel-test\qw_channel_common.py:151: OptimizeWarning: Covariance of the parameters could not be estimated
+  p, _ = curve_fit(lambda t, A, al: A * t ** (-al), x, y,
+  Z    102.4s  alpha_chord=   nan+/-0.370  (raw-dr    nan)  plateau 0@nan  G2 FAIL (6.4e+16)  R2 pow=nan exp=nan -> exponential
+
+############################################################################
+  CONTROL (h=2, no CFT should exist): CONTROL_CLEAN
+    eps  plateau 0 slopes @ nan   xi=0.700  better fit: power
+    T    plateau 0 slopes @ nan   xi=0.546  better fit: exponential
+    X    plateau 0 slopes @ nan   xi=0.630  better fit: exponential
+    Z    plateau 0 slopes @ nan   xi=inf  better fit: exponential
+
+  EXPERIMENT 1 (h=1, critical)   [T=energy vs Z=spin]:
+    eps  alpha_chord=  2.368 +/- 0.032  plateau 8@2.353
+    T    alpha_chord=  1.834 +/- 0.033  plateau 8@1.873
+    X    alpha_chord=  1.834 +/- 0.033  plateau 8@1.873
+    Z    alpha_chord= -0.367 +/- 1.085  plateau 0@nan   <<< VOID ARM (failed G2), barred from verdict
+
+    NO VERDICT EMITTED -- No verdict emitted. Arm(s) ['Z'] failed a per-arm validation gate and are barred from the discriminant. The pre-registered A/B/C/D rule is not evaluated on invalid inputs.
+############################################################################
+
+wrote D:\quantum-worldline\research\tools\channel-test\ring_test_n24_results.json  (1445s)

@@ -1,0 +1,33 @@
+{
+  "id": "PAPER-2026-105",
+  "title": "Energy transport in holographic non-conformal interfaces",
+  "authors": [
+    "Yan Liu",
+    "Chuan-Yi Wang",
+    "You-Jie Zeng"
+  ],
+  "date": "2025-03-26",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2503.20399",
+  "arxiv_id": "2503.20399",
+  "abstract": "We study energy transport in a system of two dimensional conformal field theories exchanging energy across a non-conformal interface involving a localised scalar operator, using holographic duality. By imposing the sourceless boundary condition, or equivalently, enforcing energy conservation at the interface, we show that the sum of the transmission and reflection coefficients is equal to one. Unlike conformal interfaces, we find that both the energy transmission and reflection coefficients are generally complex and frequency dependent. When the interface brane connects two distinct AdS2 geometries, the transmission coefficient approaches the value expected for a conformal interface in the UV regime at high frequencies and in the IR regime at low frequencies. In the intermediate frequency range, the transmission coefficient may exhibit oscillatory behavior. Moreover, we present a nontrivial example of a fully transmissive interface, which exhibits similarities to a topological interface.",
+  "relevance": 3,
+  "tags": [
+    "holographic-transport",
+    "AdS2-CFT",
+    "non-conformal-interface",
+    "scalar-operator",
+    "frequency-dependent-transmission",
+    "hyp-023-crosscheck"
+  ],
+  "key_claims": [
+    "Transmission + reflection = 1 across a non-conformal interface (energy conservation / sourceless BC)",
+    "Transmission and reflection coefficients are complex and frequency-dependent (unlike conformal interfaces)",
+    "Transmission coefficient matches conformal-interface value in UV (high-freq) and IR (low-freq) limits; oscillatory in between",
+    "Companion to 2506.19553; same holographic-transport family as our boundary transport; cross-check for HYP-023 framing"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "literature-lead",
+  "discovered_date": "2026-06-11"
+}

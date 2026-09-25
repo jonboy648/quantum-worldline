@@ -1,0 +1,4 @@
+  File "<stdin>", line 9
+    print(f"G2 L={L} chi={chi}: max|Im S| = {mx:.3e} {\"ok\" if mx<1e-8 else \"FAIL\"} disc={st[\"max_disc\"]:.1e} {st[\"secs_evolve\"]:.0f}s",flush=True)
+                                                                                                                                              ^
+SyntaxError: f-string expression part cannot include a backslash

@@ -1,0 +1,170 @@
+{
+ "draft": 22080720,
+ "checks": [
+  [
+   "state unsubmitted (nothing published)",
+   true,
+   ""
+  ],
+  [
+   "version v5",
+   true,
+   ""
+  ],
+  [
+   "publication_date 2026-09-06",
+   true,
+   ""
+  ],
+  [
+   "title unchanged",
+   true,
+   ""
+  ],
+  [
+   "creator + orcid survived PUT",
+   true,
+   ""
+  ],
+  [
+   "license survived PUT",
+   true,
+   ""
+  ],
+  [
+   "related_identifiers survived PUT",
+   true,
+   ""
+  ],
+  [
+   "description leads with correction",
+   true,
+   ""
+  ],
+  [
+   "description says not peer reviewed",
+   true,
+   ""
+  ],
+  [
+   "description does NOT name the journal",
+   true,
+   ""
+  ],
+  [
+   "description flags replacement as provisional",
+   true,
+   ""
+  ],
+  [
+   "description carries SIM-074 / Kramers-Wannier",
+   true,
+   ""
+  ],
+  [
+   "description keeps original abstract",
+   true,
+   ""
+  ],
+  [
+   "no em dash in description",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: paper-draft-scipost.pdf",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: SIM-2026-072-alpha-retraction.json",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: SIM-2026-073-channel-test.json",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: SIM-2026-074-kramers-wannier-ring.json",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: channel-test-PREREGISTRATION.md",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: ring-test-PREREGISTRATION-RING.md",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: qw_channel_test.py",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: qw_ring_test.py",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: qw_channel_common.py",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: test_gates.py",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: qw_alpha_reanalysis.py",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: qw_alpha_figure.py",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: alpha_reanalysis_figure.pdf",
+   true,
+   ""
+  ],
+  [
+   "file present + size matches: ERRATA.md",
+   true,
+   ""
+  ],
+  [
+   "no stale files on draft",
+   true,
+   "set()"
+  ],
+  [
+   "remote PDF page count = notice + 24",
+   true,
+   "26"
+  ],
+  [
+   "remote PDF page 1 is the notice",
+   true,
+   ""
+  ],
+  [
+   "remote PDF notice has no journal name",
+   true,
+   ""
+  ],
+  [
+   "manuscript body unaltered (page after notice = original page 1)",
+   true,
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "SIM-2026-031",
+  "description": "HYP-2026-026 pre-registered test: Synge map d=sqrt(-2 eps^2 ln|C|) on (1) synthetic CFT C=r^-1/4, (2) exact 16q critical-TFIM connected ZZ, (3) SIM-011 pathological control. Gates: monotonicity (geometric half), kappa=-dln|C|/dlnr vs {0.25, 4} (force-blindness half).",
+  "type": "classical",
+  "date": "2026-06-08",
+  "hypothesis_id": "HYP-2026-026",
+  "circuit": {
+    "qubits": 16,
+    "script_path": "research/data/simulations/sim031_synge_force_blindness.py"
+  },
+  "hardware_target": "local CPU (exact statevector, scipy eigsh)",
+  "results": {
+    "tiers": {
+      "synthetic_cft": {
+        "C": [
+          1.0,
+          0.8408964152537145,
+          0.7598356856515925,
+          0.7071067811865476,
+          0.668740304976422,
+          0.6389431042462724,
+          0.6147881529512643,
+          0.5946035575013605
+        ],
+        "d_synge": [
+          -0.0,
+          0.5887050112577374,
+          0.7411519036837556,
+          0.8325546111576977,
+          0.8970612889970507,
+          0.9465092364124228,
+          0.9863848511243757,
+          1.0196669901688091
+        ],
+        "monotone_increasing": true,
+        "fits_d_vs_r": {
+          "linear": {
+            "slope": 0.11674579531595487,
+            "intercept": 0.22614815767843446,
+            "r2": 0.7299396325105026
+          },
+          "power": {
+            "exponent": NaN,
+            "prefactor": NaN,
+            "r2": NaN
+          }
+        },
+        "kappa_loglog_r": 0.25
+      },
+      "exact_16q": {
+        "E_gs": -20.404594474756724,
+        "mean_abs_Zexp": 1.4148751614762034e-13,
+        "C_connected": [
+          0.6376435773361444,
+          0.5438777479046533,
+          0.49647024922226124,
+          0.4677544795476002,
+          0.4493334420634171,
+          0.43772072731105033,
+          0.43126230387288433,
+          0.4291856580037582
+        ],
+        "d_synge": [
+          0.9486577970551991,
+          1.10365826730722,
+          1.1834117781184534,
+          1.2327300897399054,
+          1.2649031853838657,
+          1.2854370313971506,
+          1.2969493284811315,
+          1.3006657406360704
+        ],
+        "monotone_increasing": true,
+        "fits_d_vs_r": {
+          "linear": {
+            "slope": 0.044866187695425136,
+            "intercept": 1.000153807635462,
+            "r2": 0.8066337203955294
+          },
+          "power": {
+            "exponent": 0.15164755579346167,
+            "prefactor": 0.9782866335977389,
+            "r2": 0.9544648603583142
+          }
+        },
+        "kappa_loglog_r": 0.19553175629324848,
+        "kappa_loglog_chord": 0.24289465113002773
+      },
+      "pathological_control_sim011": {
+        "C": [
+          0.44304377008444945,
+          0.4933515091534541,
+          0.4112390849781506,
+          0.6453777617132259,
+          0.3856026391476642,
+          0.38829745730303694,
+          0.387631703789638,
+          0.3907190846365934
+        ],
+        "d_synge": [
+          1.2759989890398868,
+          1.1887248282862986,
+          1.3331020353606398,
+          0.935862657181573,
+          1.380541829867211,
+          1.3754879792608448,
+          1.3767349833484,
+          1.3709605616669671
+        ],
+        "monotone_increasing": false,
+        "kappa_loglog_r": 0.08858709135033785
+      }
+    },
+    "best_fit_r2": 0.9544648603583142,
+    "analytic_note": "d(r) = eps*sqrt(0.5*ln r) for C=r^-1/4 \u2014 sqrt-log, monotone but NOT linear",
+    "linear_subclaim_r2_synthetic": 0.7299396325105026,
+    "verdict": "SUPPORTED (monotone distance; kappa~0.25 not ~4: distance is force-blind)"
+  },
+  "comparison": "classical_wins",
+  "notes": "24q regen judged unnecessary for the shape question (8h eigsh); 16q exact + chord-corrected kappa is the faithful same-day execution of registered option (a), with option (b) synthetic as primary and SIM-011 as control, per the gate.",
+  "wall_seconds": 1.1437671184539795
+}

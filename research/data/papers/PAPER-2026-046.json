@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-046",
+  "arxiv_id": "2503.20566",
+  "title": "Accurate Gauge-Invariant Tensor Network Simulations for Abelian Lattice Gauge Theory in (2+1)D: ground state and real-time dynamics",
+  "authors": ["Yantao Wu", "Wen-Yuan Liu"],
+  "year": 2025,
+  "venue": "arxiv (cond-mat, hep-lat), submitted Mar 2025, revised Aug 2025",
+  "submission_date": "2025-03-26",
+  "abstract_summary": "Introduces gauge-canonical tensor network states for accurate simulation of Z2, Z3, Z4 gauge theories in (2+1)D on lattices up to 32x32. First VMC-based real-time dynamics of PEPS. Accurate ground state and dynamics for Z2 theory with hard-core bosons.",
+  "relevance": 3,
+  "relevance_reason": "Z2 gauge theory tensor network methods are directly relevant to our ALM+projection Z2 symmetry work. The gauge-canonical form provides a more principled approach than our current projection method.",
+  "connection_to_project": "Our ALM+projection method enforces Z2 symmetry via an augmented Lagrangian; this paper's gauge-canonical form may offer superior convergence. Relevant to SIM-2026-013 and our 3.33% energy floor mystery.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

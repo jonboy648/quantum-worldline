@@ -1,0 +1,30 @@
+[2026-09-22T21:52:36Z] pod k03odd9xsv9sao nproc=16 njobs=3 julia_par=8 seeds6=8 seeds8=4 seeds_gap=8 maxiter=2500
+[2026-09-22T21:52:36Z] stage 3: 28 grid jobs, 3 parallel x 5 threads
+/workspace/hyp033/networks/chi6_h1.00_seed2: line 1:  5678 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed1: line 1:  5677 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed4: line 1:  5710 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed5: line 1:  5717 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed3: line 1:  5679 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed7: line 1:  5770 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed8: line 1:  5777 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.00_seed6: line 1:  5753 Segmentation fault      (core dumped) python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed2: line 1:  5791 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed1: line 1:  5784 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed5: line 1:  5851 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed3: line 1:  5813 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed4: line 1:  5844 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed6: line 1:  5858 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed7: line 1:  5865 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed1: line 1:  5918 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/haar_chi6_seed8: line 1:  5872 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed3: line 1:  5932 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed4: line 1:  5939 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed5: line 1:  5946 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed2: line 1:  5925 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed7: line 1:  5999 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi6_h1.50_seed6: line 1:  5953 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi8_h1.00_seed1: line 1:  6013 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi8_h1.00_seed2: line 1:  6059 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi8_h1.00_seed3: line 1:  6066 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+/workspace/hyp033/networks/chi8_h1.00_seed4: line 1:  6112 Killed                  python3 hyp033_grid.py --network "$d" "$@" > "$d/grid.log" 2>&1
+[2026-09-22T23:20:31Z] ALL DONE

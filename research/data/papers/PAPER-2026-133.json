@@ -1,0 +1,42 @@
+{
+  "id": "PAPER-2026-133",
+  "title": "Extracting Boundary Conformal Data from Periodic Non-Hermitian Critical Chains",
+  "authors": [
+    "Yifan Liu",
+    "Haruki Shimizu",
+    "Dongchang Liu",
+    "Kohei Kawabata"
+  ],
+  "date": "2026-06-15",
+  "arxiv_id": "2606.16785",
+  "relevance": 5,
+  "abstract": "Extracts nonunitary boundary conformal data (Affleck-Ludwig boundary entropy, negative g-ratios, complex boundary coefficients, Kramers-Wannier duality checks) from PERIODIC non-Hermitian critical chains using a short-range-entangled boundary-state preparation and its infrared-compatible left dual. Flagship demonstration: a PT-symmetric Ising model realizing the Yang-Lee CFT; also demonstrates a five-state Potts complex fixed point.",
+  "tags": [
+    "non-Hermitian",
+    "Yang-Lee",
+    "M(2,5)",
+    "boundary-conformal-data",
+    "biorthogonal",
+    "periodic-chains",
+    "PT-symmetry",
+    "Kramers-Wannier",
+    "five-state-Potts"
+  ],
+  "key_claims": [
+    "Nonunitary boundary conformal data (Affleck-Ludwig entropy, negative g-ratios, complex boundary coefficients) extracted from PERIODIC non-Hermitian critical chains via prepared boundary states and their infrared-compatible left duals.",
+    "Flagship demo is a PT-symmetric Ising chain realizing the Yang-Lee CFT -- the exact M(2,5) fixed point the project's ED route could not reach at N<=16 (SIM-055, realizations at/beyond the PT-breaking edge).",
+    "Working on periodic chains with prepared boundary states sidesteps open-boundary PT-breaking pathologies -- plausibly the same obstruction that closed the project's ED route.",
+    "Five-state Potts complex-fixed-point demo connects loosely to the HYP-025 Potts lineage and to the complex-CFT sector mapped by PAPER-2026-130."
+  ],
+  "relevance_note": "ACTIONABLE (deferred from scan #13, catalogued scan #14; the most actionable item for HYP-028). Demonstrates a working ALTERNATIVE route to Yang-Lee conformal data that does not require open boundaries or a non-Hermitian MERA: periodic PT-symmetric chains + left-dual boundary-state preparation. Concrete next steps this enables: (a) adapt the left-dual boundary-preparation construction as a pre-gate diagnostic or initialization for the planned non-Hermitian MERA; (b) evaluate it as a cheaper standalone route to Yang-Lee conformal data, potentially rescuing small-N numerics previously written off. SHARPENS (does not contradict) anchor 5 -- see anchor_contradiction.",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-028",
+    "HYP-2026-025"
+  ],
+  "anchor_contradiction": "Anchor SHARPENING, not contradiction. Anchor 5 (HYP-028/SIM-055) states Yang-Lee M(2,5) is PT-inaccessible at exact-diag N<=16 and names non-Hermitian MERA as THE open route. The ED-inaccessibility finding stands (different method, different observables), but the framing should be updated to 'non-Hermitian MERA is ONE OF AT LEAST TWO routes': this paper's periodic-chain boundary-state technique extracts Yang-Lee conformal data without open boundaries and may rescue small-N numerics. Update the HYP-028 record's next-step framing accordingly.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.16785",
+  "discovered_by": "weekly-scan-14",
+  "discovered_date": "2026-07-02"
+}

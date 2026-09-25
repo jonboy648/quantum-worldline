@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-085",
+  "title": "A Runway to Dissipation of Angular Momentum via Worldline Quantum Field Theory",
+  "authors": ["(authors from arXiv:2605.12214)"],
+  "date": "2026-05-15",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.12214",
+  "arxiv_id": "2605.12214",
+  "abstract": "Extends the worldline quantum field theory (WQFT) formalism to include a direct diagrammatic method of computing the total flux of angular momentum radiated from a black hole scattering event in the post-Minkowskian regime. Provides new WQFT diagrammatic rules for angular momentum dissipation applicable to spinning binary black hole scattering.",
+  "relevance": 2,
+  "tags": ["worldline-QFT", "angular-momentum", "black-hole-scattering", "post-Minkowskian", "gravitational-waves", "WQFT"],
+  "key_claims": [
+    "First direct WQFT diagrammatic method for total angular momentum flux in black hole scattering",
+    "Extends WQFT formalism to spinning bodies in post-Minkowskian regime",
+    "Provides new Feynman rules within the worldline QFT framework"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "NEUTRAL — tangentially relevant to worldline formalism literature (HYP-003/007); gravitational wave physics context only, no direct bearing on holographic force or MERA results."
+}

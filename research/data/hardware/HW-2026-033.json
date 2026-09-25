@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-033",
+  "organization": "Infleqtion",
+  "processor": "Tiqker Prime Optical Atomic Clock",
+  "date": "2024-01-01",
+  "source_url": "https://infleqtion.com/tiqker/",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "coherence",
+  "notes": "Optical atomic clock (not Rydberg RF sensor). Strontium or Ytterbium lattice clock technology. Package: 30L volume, 30kg weight, 3U rack mount chassis. Hydrogen maser frequency stability at 1 second, outperforms Cs beam clocks at 1 day holdover. 10,000x higher atomic transition frequency than microwave clocks. Ruggedization proven in PNTAX23 field trials, flight trials, shock/vibration testing. Pilot line production underway 2024. First commercial delivery: UK (2024). DARPA success story filed Feb 2026. SWaP: 30L/30kg is NOT a chip-scale clock - this is a precision timing system for fixed/semi-fixed infrastructure. Distinct from Infleqtion's Rydberg RF sensor work."
+}

@@ -1,0 +1,13 @@
+C4 ring ED L=10 R=   6 delta=  0: Im mean +0.0000 (pred 0.2618) no  [0s]
+C4 ring ED L=10 R=   6 delta=  2: Im mean -0.0237 (pred 0.2618) no  [1s]
+C4 ring ED L=10 R=   6 delta=  5: Im mean +0.0099 (pred 0.2618) no  [1s]
+C4 ring ED L=12 R=   8 delta=  0: Im mean -0.0000 (pred 0.2618) no  [15s]
+C4 ring ED L=12 R=   8 delta=  2: Im mean -0.0502 (pred 0.2618) no  [13s]
+C4 ring ED L=12 R=   8 delta=  5: Im mean +0.0069 (pred 0.2618) no  [12s]
+C4 ring ED L=14 R=   8 delta=  0: Im mean -0.0000 (pred 0.2618) no  [356s]
+C4 ring ED L=14 R=   8 delta=  2: Im mean -0.0223 (pred 0.2618) no  [395s]
+C4 ring ED L=14 R=   8 delta=  5: Im mean +0.0043 (pred 0.2618) no  [382s]
+C4 ring ED L=14 R=  10 delta=  0: Im mean -0.0000 (pred 0.2618) no  [414s]
+C4 ring ED L=14 R=  10 delta=  2: Im mean -0.0803 (pred 0.2618) no  [400s]
+C4 ring ED L=14 R=  10 delta=  5: Im mean +0.0015 (pred 0.2618) no  [388s]
+wrote /workspace/tlee/sim077_C4.json

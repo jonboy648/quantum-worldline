@@ -1,0 +1,238 @@
+{
+  "id": "SIM-2026-011",
+  "date": "2026-03-18",
+  "verdict_SUPERSEDED_2026_08_17": {
+    "summary": "THE POWER-LAW FITS IN THIS RECORD ARE SUPERSEDED by SIM-2026-072. The headline alpha = 3.9217597263395487 +/- 0.15898215734097274 recorded below is an ESTIMATOR ARTIFACT and is WITHDRAWN as stated. THE RAW DATA IN THIS RECORD ARE NOT IN QUESTION; only the fits are superseded.",
+    "superseded_fits": {
+      "fits.F_avg_dr_ge2.power_law": "alpha = 3.9217597263395487 +/- 0.15898215734097274 (the manuscript's headline 3.92 +/- 0.16). WITHDRAWN as stated.",
+      "fits.F_probe_only_dr_ge2.power_law": "alpha = 3.9217597263395487 +/- 0.15898215734097274, numerically identical to the line above (same data, same estimator, same window). WITHDRAWN as stated; it is not an independent evaluation.",
+      "fits.F_avg_all_dr.power_law": "alpha = 2.295607005284174 +/- 0.10522555968445593. Same unweighted linear-space estimator with dr=1 included, where the leverage defect is more extreme still. Not usable as an independent number.",
+      "decay_analysis.m_eff": "3.9217597263395487 -- the same fitted exponent under a different (mislabelled) field name. Carries the same defect."
+    },
+    "cause": "The published fit is unweighted nonlinear least squares on F in LINEAR space. Because |F| falls by three orders of magnitude across the window, the single point dr=2 carries 95.8% of the least-squares objective in this dataset (96.0% and 96.3% in the two companion datasets of SIM-2026-015d). The reported exponent is therefore, to within 8%, the dr=2->3 local log-slope (4.2315), not a property of the profile. Changing NOTHING but the error model, and DISCARDING NO DATA, gives alpha = 2.822 (relative-error weighting) or 2.890 (log-space OLS) on the identical dr>=2 window. Independently: dr=2 is the unique separation at which a Hamiltonian bond bridges the two operator supports, i.e. a contact term of exactly the family for which the dr=1 point was already excluded.",
+    "corrected_result": "The local log-slopes of .F_interaction_avg run 2.035, 4.232, 2.603, 2.456, 2.461, 2.533, 2.658, 2.841, 3.102, 3.482, 4.064: a spike at dr=2 and a rise at the far end bracket a genuine intermediate plateau (6 consecutive slopes flat to +/-7.5%) centred on 2.592. CORRECTED MEASUREMENT: alpha = 2.6 +/- 0.2, with the EXCHANGE CHANNEL OPEN -- 2*Delta_T = 4 (stress tensor) is excluded by the plateau, and 2*Delta_epsilon = 2 (scalar) also lies outside the plateau band. See SIM-2026-072 for the full 3 x 5 estimator x window matrix and the bootstrap.",
+    "raw_data_NOT_in_question": "ONLY THE FITS ARE SUPERSEDED. The raw arrays -- .ground_state, .E_singles, .E_duals, .F_interaction_avg, .F_interaction_probe_only, .norms_single, .norms_dual and .force_profile -- are NOT in question, have NOT been altered, and remain the valid record of the measurement. SIM-2026-072 re-analysed exactly these arrays and reproduced the original fit (3.9218 vs 3.9218 recorded) before diverging, which rules out an implementation difference as the cause: the data are sound, the estimator was not.",
+    "see_also": [
+      "research/data/simulations/SIM-2026-072.json (the authority for the corrected number)",
+      "docs/governance/AUDIT-2026-08-11.md defects D-2 and D-3",
+      "research/tools/force-reanalysis/qw_alpha_reanalysis.py (re-analysis driver, seed 20260817)"
+    ],
+    "correction_policy": "Additive, per RESEARCH-DIRECTOR.md section 32 and the ERRATA D5 exemplar (SIM-2026-036 -> SIM-2026-039/040). The original data, the original fits and the original status field are preserved unchanged below; this field records the challenge, the corrected analysis and the changed conclusion."
+  },
+  "description": "Holographic interaction energy F(dr) on exact 24q OBC critical TFIM GS. F(dr) = E_dual - E_0 - 2*(E_single_avg - E_0). Energy-based observable replacing wrong ZZ correlator observable from SIM-2026-010.",
+  "hypothesis": "HYP-2026-002",
+  "predecessor_sim": "SIM-2026-010",
+  "ground_state": {
+    "method": "eigsh(H, k=1, which='SA')",
+    "qubits": 24,
+    "E0": -30.199712331300333,
+    "E0_expected": -30.199712,
+    "E0_error_pct": 1.0970314258920894e-06,
+    "eigsh_time_s": 1228.207037448883
+  },
+  "observable": {
+    "formula": "F(dr) = E_dual - E_0 - 2*dE_single_avg",
+    "E_single_anchor": -28.355065551011702,
+    "dE_single_anchor": 1.844646780288631
+  },
+  "anchor": 6,
+  "dr_values": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "boundary_primary_coeffs": {
+    "alpha": 0.635,
+    "beta": -0.026
+  },
+  "E_singles": {
+    "1": -28.34821433421388,
+    "2": -28.343509057471778,
+    "3": -28.340432845570927,
+    "4": -28.33868927023579,
+    "5": -28.33812406038946,
+    "6": -28.338689270235776,
+    "7": -28.34043284557098,
+    "8": -28.343509057471827,
+    "9": -28.34821433421399,
+    "10": -28.35506555101174,
+    "11": -28.36496515896686,
+    "12": -28.37957315478137
+  },
+  "E_duals": {
+    "1": -28.855259759696082,
+    "2": -27.072552867611755,
+    "3": -26.598954164461656,
+    "4": -26.542826078698216,
+    "5": -26.521677930693105,
+    "6": -26.512048267869545,
+    "7": -26.50797067019991,
+    "8": -26.507406205936906,
+    "9": -26.509681835826854,
+    "10": -26.514828621380076,
+    "11": -26.523482763893064,
+    "12": -26.537148245973555
+  },
+  "F_interaction_avg": {
+    "1": -2.351692205770835,
+    "2": -0.5736905904286083,
+    "3": -0.10316809917935998,
+    "4": -0.04878358875105704,
+    "5": -0.028200650592275167,
+    "6": -0.018005777922400767,
+    "7": -0.012184604917560904,
+    "8": -0.008543928753709906,
+    "9": -0.006114281901496099,
+    "10": -0.004409850656966086,
+    "11": -0.0031643852148341978,
+    "12": -0.0022218714808168727
+  },
+  "F_interaction_probe_only": {
+    "1": -2.351692205770835,
+    "2": -0.5736905904286083,
+    "3": -0.10316809917935998,
+    "4": -0.04878358875105704,
+    "5": -0.028200650592275167,
+    "6": -0.018005777922400767,
+    "7": -0.012184604917560904,
+    "8": -0.008543928753709906,
+    "9": -0.006114281901496099,
+    "10": -0.004409850656966086,
+    "11": -0.0031643852148341978,
+    "12": -0.0022218714808168727
+  },
+  "norms_single": {
+    "1": 1.129478218433439,
+    "2": 1.1286185361278709,
+    "3": 1.1280564544749228,
+    "4": 1.1277378746888655,
+    "5": 1.1276346037982055,
+    "6": 1.1277378746888689,
+    "7": 1.1280564544749292,
+    "8": 1.1286185361278787,
+    "9": 1.1294782184334484,
+    "10": 1.130729584847659,
+    "11": 1.1325360996302525,
+    "12": 1.1351956675638586
+  },
+  "norms_dual": {
+    "1": 1.3098151372082947,
+    "2": 1.3237384306047304,
+    "3": 1.2884005575610746,
+    "4": 1.2816937003958444,
+    "5": 1.2791191418261862,
+    "6": 1.2779950868634862,
+    "7": 1.2776302099870511,
+    "8": 1.2777989416360072,
+    "9": 1.2784480641283962,
+    "10": 1.2796262168371315,
+    "11": 1.2814861628809704,
+    "12": 1.284345435759039
+  },
+  "fits": {
+    "F_avg_all_dr": {
+      "exponential": {
+        "B": -9.833778535243738,
+        "dB": 0.2671444183289203,
+        "xi": 0.6991896271432945,
+        "dxi": 0.012176659514214294,
+        "l_AdS": 1.4426950408889634,
+        "xi_deviation_pct": 51.5358681268866,
+        "xi_within_1sigma": false
+      },
+      "power_law": {
+        "A": -2.3601524579411675,
+        "dA": 0.04518770848659463,
+        "alpha": 2.295607005284174,
+        "dalpha": 0.10522555968445593,
+        "expected_alpha_stress_tensor": 4.0,
+        "expected_alpha_scalar": 2.0
+      }
+    },
+    "F_avg_dr_ge2": {
+      "exponential": {
+        "B": -13.68914300701898,
+        "dB": 3.304290676006905,
+        "xi": 0.6299272224246922,
+        "dxi": 0.046615345513758295,
+        "l_AdS": 1.4426950408889634,
+        "xi_deviation_pct": 56.3367721818367,
+        "xi_within_1sigma": false
+      },
+      "power_law": {
+        "A": -8.672711550269502,
+        "dA": 0.9919656554694627,
+        "alpha": 3.9217597263395487,
+        "dalpha": 0.15898215734097274,
+        "expected_alpha_stress_tensor": 4.0,
+        "expected_alpha_scalar": 2.0
+      }
+    },
+    "F_probe_only_dr_ge2": {
+      "exponential": {
+        "B": -13.68914300701898,
+        "dB": 3.304290676006905,
+        "xi": 0.6299272224246922,
+        "dxi": 0.046615345513758295,
+        "l_AdS": 1.4426950408889634,
+        "xi_deviation_pct": 56.3367721818367,
+        "xi_within_1sigma": false
+      },
+      "power_law": {
+        "A": -8.672711550269502,
+        "dA": 0.9919656554694627,
+        "alpha": 3.9217597263395487,
+        "dalpha": 0.15898215734097274,
+        "expected_alpha_stress_tensor": 4.0,
+        "expected_alpha_scalar": 2.0
+      }
+    }
+  },
+  "force_profile": {
+    "dr_vals": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "F_interaction": [
+      -2.351692205770835,
+      -0.5736905904286083,
+      -0.10316809917935998,
+      -0.04878358875105704,
+      -0.028200650592275167,
+      -0.018005777922400767,
+      -0.012184604917560904,
+      -0.008543928753709906,
+      -0.006114281901496099,
+      -0.004409850656966086,
+      -0.0031643852148341978,
+      -0.0022218714808168727
+    ]
+  },
+  "decay_analysis": {
+    "xi_fit": 0.6299272224246922,
+    "m_eff": 3.9217597263395487,
+    "l_AdS": 1.4426950408889634
+  },
+  "runtime_s": 1395.663286447525,
+  "hardware": "local_cpu",
+  "status": "COMPLETE"
+}

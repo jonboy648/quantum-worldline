@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-031",
+  "title": "Building Holographic Entanglement by Measurement",
+  "authors": ["Jonathan Jeffrey", "Lucien Gandarias", "Monika Schleier-Smith", "Brian Swingle"],
+  "date": "2026-01-28",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.21065",
+  "arxiv_id": "2601.21065",
+  "abstract": "Proposes a framework for preparing quantum states whose entanglement entropies are governed by minimal surfaces in a chosen bulk geometry, obeying the Ryu-Takayanagi formula. Method: select bulk geometry, discretize into coupling graph (bulk + boundary nodes), evolve under graph interactions, measure bulk nodes to prepare boundary state. Uses only Gaussian operations and measurements, making it implementable on photonic and cold-atom platforms. Numerical demonstrations show approximate reproduction of Ryu-Takayanagi predictions in hyperbolic disk and wormhole geometries.",
+  "relevance": 4,
+  "tags": ["holographic-entanglement", "Ryu-Takayanagi", "measurement-based", "quantum-simulation", "AdS-CFT", "tensor-network", "Gaussian-operations"],
+  "key_claims": [
+    "Measurement-based preparation of holographic entanglement states",
+    "Entanglement entropies governed by Ryu-Takayanagi minimal surfaces",
+    "Implementable with Gaussian operations on photonic and cold-atom platforms",
+    "Numerically demonstrated on hyperbolic disk and wormhole geometries",
+    "Bypasses need for full tensor network construction"
+  ],
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

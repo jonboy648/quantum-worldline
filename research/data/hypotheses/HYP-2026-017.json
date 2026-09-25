@@ -1,0 +1,35 @@
+{
+  "id": "HYP-2026-017",
+  "claim": "The alpha~4 holographic force law (stress-tensor exchange) measured via chi=3 MERA on Quantinuum Helios can be reproduced on a Rydberg tweezer array (QuEra Aquila or Pasqal Vela) using a blockade-constrained MERA, yielding a force exponent within 10% of alpha=4.0 despite the modified PXP Hamiltonian geometry.",
+  "confidence": "medium",
+  "confidence_rationale": "PAPER-2026-061 (Sahay/Lin/Cotler PRX 2025) explicitly demonstrates that the Rydberg PXP Hamiltonian realizes an Ising CFT and that holographic circuits are implementable on current tweezer arrays. Our existing alpha~4 result has three independent measurements converging (SIM-2026-015, SIM-2026-015d, SIM-2026-016). Medium confidence (not high) because the blockade-modified MERA introduces new parameters not present in our existing chi=3 MERA, and the mapping from our transverse-field Ising chain MERA to the PXP Hamiltonian requires non-trivial circuit adaptation. Multiple independent source chains (Sahay PRX + our SIM results) converge, making this stronger than low.",
+  "source_findings": [
+    "PAPER-2026-061",
+    "PAPER-2026-062",
+    "SIM-2026-015",
+    "HW-2026-032"
+  ],
+  "testable": true,
+  "test_design": "1. Map our existing chi=3 16-qubit MERA circuit (from SIM-2026-015 ansatz) to a blockade-constrained PXP MERA following Sahay/Lin/Cotler (PAPER-2026-061) prescription. Identify which two-qubit gates require blockade-compatible decompositions. 2. Compile target circuit for QuEra Aquila native gate set (CZ gates via Rydberg blockade). Estimate two-qubit gate depth and required coherence time. 3. Request cloud access via AWS Braket (QuEra Aquila, 256 atoms). Run chi=3 blockade-MERA at N=8 and N=16 qubit chains embedded in tweezer array. Collect ~5000 shots per measurement setting. 4. Compute conditional mutual information C(r) across chain separations dr=1..6. Fit power-law alpha via scipy curve_fit with error propagation. 5. Compare measured alpha to our prior alpha=3.92+/-0.16 (24q exact, SIM-2026-011) and alpha=4.07+/-0.18 (16q chi=3 MERA, SIM-2026-015d). Test H0: alpha_Rydberg = alpha_Helios within combined 1-sigma error bars.",
+  "refutation_criteria": "If the measured power-law exponent alpha_Rydberg differs from 4.0 by more than 15% (i.e., alpha < 3.4 or alpha > 4.6) at 3-sigma significance with N=16 Rydberg circuit, the blockade-MERA does not replicate our holographic force law and the PXP Hamiltonian geometry introduces a qualitatively different bulk geometry. Alternatively, if the CMI signal is indistinguishable from random noise (SNR < 2 at all dr values), the blockade-modified MERA fails to maintain sufficient entanglement structure for holographic force detection.",
+  "hardware_required": "QuEra Aquila (256 neutral-atom tweezer, cloud via AWS Braket) or Pasqal Vela (European cloud). Local CPU for circuit compilation and classical simulation baseline. No cryogenics required. Estimated cloud cost: ~$500-2000 for 50,000 total shots across N=8 and N=16 runs.",
+  "earliest_testable": "2026-Q2",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "feasibility_notes": {
+    "hardware": "QuEra Aquila (256 neutral atoms, cloud via AWS Braket) is operational now. CZ gate fidelity ~99.5%, coherence time sufficient for 16-qubit PXP-MERA depth. Pasqal Vela is an alternative. Both available without institutional access.",
+    "circuit": "16-qubit chi=3 blockade-MERA requires ~40-80 two-qubit CZ gates. At 99.5% per gate, cumulative fidelity ~67-82%. Our SIM-2026-015c showed chi=3 MERA force signal survives at 0.15% error rate at 16q, suggesting this fidelity regime is sufficient for force detection at dr=1..4. Gate depth is within QuEra Aquila's demonstrated coherent operation window.",
+    "math": "PAPER-2026-061 analytically proves the PXP Hamiltonian gives Ising CFT and the holographic circuit is implementable on tweezer arrays. No no-go theorems apply. Blockade constraint introduces corrections to standard MERA unitaries but does not prevent implementation.",
+    "resource": "AWS Braket QuEra Aquila pricing: ~$0.01/task + $0.0009/shot. 50,000 shots ~ $500 total. Well within $10k-$50k budget. Classical post-processing: NumPy CMI computation, local CPU."
+  },
+  "status": "SHELVED",
+  "justified_by": ["SIM-2026-022"],
+  "justified_by_note": "Added 2026-08-17 per audit D-10. SIM-2026-022 (verdict FEASIBLE_MARGINAL) is the feasibility record; the SHELVED decision rests additionally on the 2026-05-05 devils-advocate NO_GO (five killer issues R1-R5), on the 2026-05-09 local smoke run that produced F > 0 against a literature F < 0, and on the 15-atom exact-diagonalisation validator at runpod_results/HYP-2026-017-validator-exact-diag.json. Those three are documented in result_note_2026_06_08 but are not SIM-ID records.",
+  "created_date": "2026-04-26",
+  "last_updated": "2026-06-08",
+  "created_by": "conjecture-generator",
+  "speculative_flag": true,
+  "pipeline_provenance": {
+    "conjecture_stage": "Generated from PAPER-2026-061 (Rydberg PXP = Ising CFT, blockade MERA realizable on current tweezer arrays) cross-referenced with our confirmed alpha~4 result (SIM-2026-015, SIM-2026-016). This is the most strategic hypothesis because it extends our holographic force result to a fundamentally different physical platform (neutral atom tweezers vs trapped-ion Helios), testing whether the alpha~4 exponent is platform-independent as expected for a CFT universal quantity. The key scientific question is whether the blockade constraint introduces corrections to the MERA entanglement structure that shift the effective force exponent. PAPER-2026-062 provides additional motivation: hyperbolic lattice Rydberg arrays naturally encode AdS/CFT boundary correspondence."
+  },
+  "result_note_2026_06_08": "Status write-back (found stale by 2026-06-08 audit; JSON was frozen at proposed/TESTABLE_NOW from 2026-04-26). Actual history: 2026-05-05 devils-advocate review returned NO_GO with five killer issues (R1 hologron decay timescale vs measurement window; R2 product-density energy estimator drops connected correlators; R3 wrong S_topo prediction; R4 biased single-basis TEE estimator; R5 production script never run end-to-end locally). 2026-05-09 SHELVED after local smoke run produced F>0 vs literature F<0 \u2014 root cause structural (wrong observable, wrong operator, z-basis blind to OmegaX), not a sign bug. $115 AWS run cancelled; paper v4 alpha~4 results unaffected (three independent measurements at proper scale). Full closeout: memory hyp017_closeout.md. 15-atom validator exact-diag verdict: geometry cannot produce holographic force (runpod_results/HYP-2026-017-validator-exact-diag.json)."
+}

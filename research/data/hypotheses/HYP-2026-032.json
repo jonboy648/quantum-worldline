@@ -1,0 +1,53 @@
+{
+  "id": "HYP-2026-032",
+  "title": "Timelike entanglement and emergent time in the critical TFIM ring: does an emergent geometry carry timelike correlations?",
+  "date_proposed": "2026-09-07",
+  "status": "LEVEL-3 NEGATIVE (registered, SIM-2026-077): no lattice construction among the four registered gives Im S = pi c/6; awaiting Jon decision on the one C1 thread",
+  "confidence": "low",
+  "origin": "The project's origin video (Instagram reel DVe5jiJj1rv: a person as one 4D object, memory as touching another point on it). Scientific translation decided in the 2026-09-06 grilling: correlations between time-separated slices of one system = timelike entanglement entropy (Doi, Harper, Mollabashi, Takayanagi, Taki; PAPER-2026-139/140). The personal layer stays in the story.",
+  "claim": "An emergent geometry built from the critical TFIM ground state reproduces the bulk-only piece of the timelike entanglement entropy (its imaginary part, i pi c/6) only if the construction carries a time direction; a plain scale-direction MERA cannot, and the glued transition-matrix network (GS MERA + Trotter brickwork evolution + conjugate) is the minimal object in which the question is open.",
+  "preregistration": "research/tools/timelike-ee/PREREGISTRATION-HYP032.md (approved 2026-09-07, committed before code)",
+  "claim_levels": {
+    "1": "Reproduce Re S slope 1/6 in log((R/pi) sin(pi T/R)) and Im S = pi/12 on the lattice (both definitions).",
+    "2a": "Agreement of the two lattice definitions (Gaussian Wick-rotated prescription vs exact transition-matrix pseudo-entropy) at finite n.",
+    "2b": "Written negative: a plain MERA has no time direction and integer cuts, so no imaginary part (one possible outcome).",
+    "3": "Glued transition-matrix network: does a minimal cut (log chi weighted; Synge cross-check) reproduce Re S; stretch: Im S."
+  },
+  "killer_test": "Level 1 passes, Trotter gate passes, and no chi produces the Re S slope from the network cut -> Level 3 negative. Level 1 failure is VOID, not a verdict.",
+  "budget": "Level 1 plus one network attempt, ~2 weeks, RunPod < 20 USD; then a new decision from Jon.",
+  "prior_art_gate": {
+    "PAPER-2026-139": "record of authority for the prediction and the Gaussian lattice method (prescription adopted by fiat there)",
+    "PAPER-2026-140": "dS/CFT framing, emergent time",
+    "PAPER-2026-141": "Liu-Chen-Lian real-valued time-slice entropy: a different object; does not pre-empt 2a",
+    "open": "a search for any published finite-n comparison of the two Doi et al. definitions is part of the gate and must be recorded before running"
+  },
+  "related": [
+    "HYP-2026-028",
+    "HYP-2026-026",
+    "HYP-2026-006",
+    "PAPER-2026-020"
+  ],
+  "next_artifact": "research/tools/timelike-ee/ROUTE-X-DERIVATION.md (transcription of PAPER-139 sections 2.2-2.4 into the exact lattice transition-matrix construction), then the Level-1 driver.",
+  "result_2026_09_07": {
+    "registered": "L1 VOID at delta=0; L2a DISAGREE with proof (Im S == 0 exactly by chiral symmetry); L3 not run per pre-registration",
+    "exploratory": "with the PAPER-139 regulator the real part follows (c/3) log((R/pi) sin(pi T0/R)) to 2-3 percent at c=1/2; the imaginary part stays <= 0.017 and never approaches pi/12",
+    "record": "research/data/simulations/SIM-2026-076.json"
+  },
+  "amendment_A": {
+    "question": "Is there any consistent lattice construction at c=1/2 (control c=1) whose exact evaluation gives Im S = pi c/6?",
+    "candidates": [
+      "C1 longitudinal field",
+      "C2 tracked branch from real temperature",
+      "C3 Dirac c=1",
+      "C4 periodic ring both parity sectors"
+    ],
+    "pass": "|Im S| within 10% of pi c/6, stable, two sizes",
+    "kill": "all four NO = Level-3 negative",
+    "compute": "RunPod CPU pod, cap 20 USD"
+  },
+  "result_2026_09_08": {
+    "verdict": "all four candidates NO under the pre-registered rule",
+    "record": "research/data/simulations/SIM-2026-077.json",
+    "open_thread": "C1 (h_z = 0.02, delta = 5) rises with size to 0.28 at L=14/R=10 but peaks in h_z and returns to the symmetric residual; a registered MPS follow-up at L = 32..128 could settle it"
+  }
+}

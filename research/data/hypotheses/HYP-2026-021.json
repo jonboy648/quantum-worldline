@@ -1,0 +1,63 @@
+{
+  "id": "HYP-2026-021",
+  "category": "NV-hybrid",
+  "name": "NV gradiometer MCG mapper",
+  "claim": "A dual-channel NV-diamond gradiometer using two NV ensemble chips in differential geometry, driven by MW modulation and lock-in detection, can achieve ~1 pT/sqrt(Hz) sensitivity sufficient to detect cardiac MCG (~50 pT) without magnetic shielding, at a BoM under $3k.",
+  "physics": "NV centers in diamond fluoresce at a rate modulated by ambient magnetic field via Zeeman splitting of the ms=±1 spin states. Lock-in detection at the MW drive frequency converts fluorescence to a field-proportional voltage. Gradiometer geometry (two chips, ~5 cm separation, differential output) suppresses common-mode environmental noise by ~20 dB. Published single-NV-ensemble sensitivity with LED pump + lock-in: ~1 µT/sqrt(Hz). Gradiometer common-mode rejection and signal-averaging push this toward ~100 nT/sqrt(Hz) in practice; reaching ~1 pT/sqrt(Hz) requires laser pump + temperature stabilization. MCG target is 50 pT peak, so ~1 pT/sqrt(Hz) is the minimum floor needed.",
+  "novelty": "Existing DIY NV sensors (UncutGem, $100) achieve µT/sqrt(Hz). Commercial NV-based systems (Qnami, QZabre) are $50k+. This candidate attempts the middle path: LED+lock-in+gradiometer geometry to close the 3-order-of-magnitude gap between DIY and MCG-capable without a laser. No commercial product occupies this price point with gradiometer geometry.",
+  "bom_estimate": {
+    "nv_chips": "2x NV ensemble chips (Element Six or Adamas, ~$200-500 each)",
+    "led_pump": "520 nm LED array (Thorlabs, ~$100)",
+    "mw_source": "MW signal generator 2.87 GHz (Mini-Circuits or Windfreak SynthNV, ~$500)",
+    "lock_in": "Zurich Instruments MFLI or Stanford SR830 (~$3k-8k new; ~$1k used)",
+    "photodetector": "Low-noise Si photodiode + transimpedance amp (Thorlabs PDA36A2, ~$400)",
+    "enclosure_mechanics": "3D-printed mount, Helmholtz coils for bias field (~$200)",
+    "total_low": "$2,500 (used lock-in, eBay NV chips)",
+    "total_high": "$10,000 (new lock-in, fresh chips)"
+  },
+  "prior_art": [
+    "Balasubramanian et al. (2008) Nature 'Nanoscale imaging magnetometry with diamond spins under ambient conditions' — establishes NV ensemble sensitivity floor",
+    "Chatzidrosos et al. (2019) PRApplied 'Miniaturized Optical Magnetometer based on Nitrogen-Vacancy Centers' — LED-pumped NV at 15 nT/sqrt(Hz)",
+    "Webb et al. (2021) PRApplied 'Optimization of a Diamond Nitrogen Vacancy Centre Magnetometer for Condensed Matter Physics' — 1 pT/sqrt(Hz) with laser"
+  ],
+  "sensitivity_gap_analysis": "MCG requires ~1 pT/sqrt(Hz). LED-pumped NV with lock-in achieves ~15-100 nT/sqrt(Hz) per published results (Chatzidrosos 2019: 15 nT/sqrt(Hz) at best). Gap is 4-5 orders of magnitude even with gradiometer. Only laser-pumped NV + shielded room closes this gap per Webb 2021. CRITICAL: this candidate likely fails the sensitivity gate unless laser is added, pushing cost to $5-10k and complexity beyond solo builder.",
+  "status": "RETIRED",
+  "justified_by": [],
+  "justified_by_note": "Added 2026-08-17 per audit D-10. DELIBERATELY EMPTY and correct: no simulation or build was ever run against this hypothesis. The RETIRED status rests on the arithmetic in closeout_2026_08_17 and on two published sensitivity figures (Chatzidrosos et al. 2019; Webb et al. 2021), both already listed in prior_art. Nothing was measured here.",
+  "confidence": "low",
+  "source_findings": ["HYP-2026-018", "HYP-2026-019"],
+  "testable": false,
+  "refutation_criteria": "SUPPLIED 2026-08-17 (this record had none -- see closeout_2026_08_17). As registered the claim is a conjunction of three constraints -- (i) LED pumping only, (ii) bill of materials under $3,000, (iii) noise floor <= 1 pT/sqrt(Hz) sufficient for a ~50 pT cardiac MCG signal without magnetic shielding. It is REFUTED if any build satisfying (i) and (ii) fails (iii) by more than one order of magnitude, or equivalently if the LED-pumped gradiometer floor cannot be brought within 10x of 1 pT/sqrt(Hz) by common-mode rejection plus cardiac-cycle ensemble averaging alone. It is SUPPORTED only by a measured floor at or below 1 pT/sqrt(Hz) on hardware meeting (i) and (ii). REFUTED ON ITS OWN NUMBERS, analytically, without a build: see closeout_2026_08_17.arithmetic.",
+  "last_updated": "2026-08-17",
+  "created_date": "2026-05-02",
+  "created_by": "conjecture-generator",
+  "speculative_flag": true,
+  "feasibility_verdict": "NEEDS_REFINEMENT",
+  "feasibility_notes": "The claim is internally self-contradictory across its two binding constraints. Sensitivity: the best published LED-pumped NV magnetometer (Chatzidrosos 2019) is ~15 nT/sqrt(Hz); the MCG floor is ~1 pT/sqrt(Hz) — a ~4.2-order-of-magnitude (1.5e4x) gap. Gradiometer common-mode rejection (~20 dB = 1 order) suppresses only correlated environmental field, not the intrinsic per-channel LED-shot-noise floor (and a differential pair adds a sqrt(2) penalty to that floor), while cardiac-cycle ensemble averaging on a ~1 Hz biological waveform buys only ~1.5-2 orders, not the ~2.25e8 integration factor needed to close 4 orders by averaging alone. Laser pumping is therefore effectively a hard requirement (Webb 2021 reaches 1 pT/sqrt(Hz) only WITH laser). Cost: the sub-$3k figure holds only for the LED-only configuration that cannot reach the sensitivity target; the JSON itself concedes adding the required laser + temperature stabilization pushes cost to $5-10k. The cheap build can't hit MCG and the MCG-capable build isn't cheap — the candidate must drop either the LED-only or the under-$3k constraint before it is a testable design. Not INFEASIBLE: no no-go theorem applies, and the laser-pumped gradiometer is a known-feasible (if out-of-budget) instrument.",
+  "feasibility_metrics": {
+    "sensitivity_gap_orders_of_magnitude": 4.2,
+    "laser_required": true,
+    "bom_under_3k_realistic": false
+  },
+  "result_note_2026_06_08": "ORPHAN GATED 2026-06-11 (qw-scan #9 theory-tier audit). This record was created 2026-05-02 but never feasibility-gated and is absent from all weekly digests and the MEMORY status table. Feasibility-checker verdict: NEEDS_REFINEMENT — the LED-only sub-$3k configuration is ~4.2 orders below the MCG sensitivity floor; the two headline constraints (LED-only AND under-$3k) are mutually exclusive with the ~1 pT/sqrt(Hz) target. Kept on disk under status=under_review (not archived; no no-go applies). To revive: drop the LED-only constraint (add laser per Webb 2021) and accept $5-10k BoM, OR retarget a weaker biomagnetic signal compatible with nT-floor sensing. Related to HYP-2026-018/019 (NV/OPM biomagnetic sensing line).",
+  "closeout_2026_08_17": {
+    "action": "RETIRED under RESEARCH-DIRECTOR.md section 31 (formal stop conditions). Structured on the HYP-2026-017 closeout pattern: what was attempted, what was learned, why it was stopped, and whether any reusable method emerged.",
+    "trigger": "docs/governance/AUDIT-2026-08-11.md defect D-10 record sweep. This record was the only hypothesis on disk with NO refutation_criteria at all, and it was additionally missing confidence, source_findings, testable and last_updated -- five of the seven fields templates/hypothesis-record.json marks required. It had sat at status 'under_review' since 2026-05-02 with no owner and no next action.",
+    "what_was_attempted": "A dual-channel NV-diamond gradiometer (two NV ensemble chips, ~5 cm separation, differential output), LED-pumped at 520 nm with microwave modulation and lock-in detection, targeting an unshielded magnetocardiography measurement of the ~50 pT cardiac field on a bill of materials under $3,000.",
+    "what_was_learned": "The claim is internally inconsistent across its two binding constraints, and the inconsistency is arithmetic rather than a matter of engineering effort. The best published LED-pumped NV magnetometer (Chatzidrosos et al., PRApplied 2019) reaches ~15 nT/sqrt(Hz); the MCG floor is ~1 pT/sqrt(Hz). That is a factor of ~1.5e4, about 4.2 orders of magnitude.",
+    "arithmetic": "Gradiometer common-mode rejection at ~20 dB buys ONE order, and it suppresses only correlated environmental field -- it does nothing to the intrinsic per-channel LED shot-noise floor, to which a differential pair in fact adds a sqrt(2) penalty. Ensemble averaging over a ~1 Hz biological waveform buys roughly 1.5 to 2 orders in a realistic session. Closing 4.2 orders by averaging alone would require an integration factor of ~2.25e8. The remaining gap is therefore structural: laser pumping is effectively a hard requirement (Webb et al., PRApplied 2021 reach 1 pT/sqrt(Hz) only WITH a laser), and the record's own bom_estimate concedes that adding the laser plus temperature stabilisation pushes cost to $5,000-$10,000. The cheap build cannot reach MCG; the MCG-capable build is not cheap.",
+    "why_it_was_stopped": "Section 31 stop condition met: 'required scaling is infeasible' within the stated constraints, and the branch has produced no discriminating power in three and a half months. No no-go theorem applies -- a laser-pumped NV gradiometer is a known-feasible instrument -- so this is a retirement of a SPECIFICATION, not of the physics. The record is retained on disk rather than deleted, per the project's no-silent-deletion rule.",
+    "reusable_method_that_emerged": "The sensitivity-gap arithmetic itself: state the published floor for the exact pump modality proposed, then account separately for what common-mode rejection can and cannot suppress, and require the averaging factor to be written out as a number before a build is costed. Applied here it killed the design in one paragraph without spending anything. The same check applies to the sibling NV/OPM biomagnetic records HYP-2026-018 and HYP-2026-019.",
+    "conditions_for_revival": [
+      "Drop the LED-only constraint, adopt laser pumping per Webb 2021, and accept a $5,000-$10,000 bill of materials. The hypothesis would then need re-registering with a cost claim that matches its sensitivity claim.",
+      "OR retarget a biomagnetic signal compatible with an achievable nT-class floor, in which case MCG is no longer the target and the claim must be rewritten.",
+      "Either revival requires a NEW hypothesis ID. This record is closed."
+    ],
+    "fields_supplied_by_this_closeout": "status (under_review -> RETIRED), confidence, source_findings, testable, refutation_criteria, last_updated. The record now satisfies the required-field list in templates/hypothesis-record.json. refutation_criteria was reconstructed from the claim's own three constraints and is marked as supplied after the fact, not back-dated.",
+    "scope_note": "This closeout is a records action. It makes no assertion about NV magnetometry beyond what the two cited publications already report, and it does not touch the sibling records HYP-2026-018/019/020, which are outside this pass's remit."
+  },
+  "pipeline_provenance": {
+    "conjecture_stage": "NV gradiometer for MCG — the most straightforward NV BCI application. Graded against the known LED vs laser sensitivity wall. Passes initial conception; sensitivity gap is the kill criterion to evaluate.",
+    "feasibility_stage": "Gated 2026-06-11 by feasibility-checker subagent. The conjecture-generator's pre-flagged kill criterion (the LED vs laser sensitivity wall) was confirmed quantitatively: 4.2-order gap, laser hard-required, cost claim self-contradictory. Verdict NEEDS_REFINEMENT."
+  }
+}

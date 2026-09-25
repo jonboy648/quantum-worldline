@@ -1,0 +1,31 @@
+{
+  "id": "PAPER-2026-119",
+  "title": "Emergent de Sitter Space and Non-Unitary Tensor Networks from Non-Hermitian Quantum Criticality",
+  "authors": [
+    "Kuang-Hung Chou",
+    "Po-Yao Chang"
+  ],
+  "date": "2026-06-16",
+  "arxiv_id": "2606.17983",
+  "relevance": 5,
+  "abstract": "Non-unitary cMERA on a non-Hermitian critical chain; an emergent de Sitter bulk arises from boundary entanglement, with geodesics identified as RT surfaces and a timelike-to-null geodesic transition. An AdS->dS, non-unitary analog of the unitary MERA-holography construction.",
+  "tags": [
+    "cMERA",
+    "non-Hermitian",
+    "de-Sitter",
+    "tensor-network-holography",
+    "RT-surface",
+    "geodesic",
+    "non-unitary-CFT"
+  ],
+  "key_claims": [
+    "de Sitter bulk geometry emerges from a non-unitary cMERA on a non-Hermitian critical chain.",
+    "Bulk geodesics = RT surfaces; timelike-to-null geodesic transition present.",
+    "Provides an ER->geometry / RT extraction recipe adaptable to test whether the c=7/10 TCI network reproduces bulk geodesic structure."
+  ],
+  "seeds_hypothesis": "HYP-2026-028",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.17983",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

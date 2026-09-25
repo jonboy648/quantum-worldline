@@ -1,0 +1,16 @@
+{
+  "hw_id": "HW-2026-030",
+  "vendor": "Rigetti",
+  "system_name": "Cepheus-1-108Q (general availability Apr 2026)",
+  "qubit_count": 108,
+  "fidelity_2q": 0.991,
+  "fidelity_1q": 0.999,
+  "announcement_date": "2026-04-07",
+  "headline": "Rigetti Cepheus-1-108Q generally available; Novera QPU sold to University of Saskatchewan",
+  "details": "Cepheus-1-108Q: 108 qubits (12 x 9-qubit chiplets interconnected), 99.1% median 2Q gate fidelity, ~60ns gate speed. Available on Rigetti QCS and Amazon Braket. Also: Rigetti sold 9-qubit Novera QPU to University of Saskatchewan (Canada's first university-owned open-architecture quantum computer).",
+  "source_url": "https://www.globenewswire.com/news-releases/2026/04/07/3269628/0/en/Rigetti-Announces-General-Availability-of-108-Qubit-System.html",
+  "relevance": 2,
+  "relevance_reason": "108q superconducting with 99.1% 2Q fidelity is below Quantinuum Helios (99.921%) for our precision experiments. Chiplet architecture limits connectivity vs. trapped-ion. Useful for circuit depth testing.",
+  "access_path": "Rigetti QCS direct access. Amazon Braket. 99.1% 2Q fidelity is usable for shallow MERA circuits.",
+  "scan_date": "2026-04-26"
+}

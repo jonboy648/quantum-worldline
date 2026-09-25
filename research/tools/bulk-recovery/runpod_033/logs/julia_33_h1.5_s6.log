@@ -1,0 +1,2 @@
+HYP-033 export: Z2(3,3) chi=6 seeds 6..6 maxiter=2500 h=1.5 -> /workspace/hyp033/networks
+seed 6  chi 6  h 1.50  E=-1.67192618  Dsig=0.6693 Deps=0.9968  clean=false  [305s] -> /workspace/hyp033/networks/chi6_h1.50_seed6

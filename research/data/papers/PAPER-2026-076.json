@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-076",
+  "title": "Simulating Quantum Field Theories with Boundaries in Curved Spacetimes Using Open Spin Systems",
+  "authors": ["(authors from arXiv:2602.17935)"],
+  "date": "2026-02-20",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2602.17935",
+  "arxiv_id": "2602.17935",
+  "abstract": "Develops a framework to simulate quantum field theories with boundaries in (1+1)-dimensional curved spacetimes using open spin systems. Extends a prior mapping from spin systems to QFTs in periodic geometries to systems with boundaries, where boundary conditions shape dynamics. Focuses on Majorana fermions, deriving allowed boundary conditions from inner product conservation and their realization in spin systems. Demonstrates a flat spacetime example comparing spectra, mode functions, and linear responses between continuum and lattice descriptions.",
+  "relevance": 3,
+  "tags": ["curved-spacetime", "quantum-field-theory", "spin-systems", "boundaries", "Majorana-fermions", "lattice-field-theory", "1+1D"],
+  "key_claims": [
+    "Extends spin-to-QFT mapping to systems with boundaries in curved 1+1D spacetimes",
+    "Boundary conditions derived from inner product conservation",
+    "Agreement between continuum and lattice spectra, mode functions, and linear responses demonstrated",
+    "Provides tool for simulating QFT with boundaries on near-term quantum hardware"
+  ],
+  "hardware_used": "Not specified (framework paper)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — relevant to worldline simulation in curved spacetime; 1+1D curved spacetime is the regime of our MERA models. Boundary conditions affect CFT spectra used to extract our holographic observables."
+}

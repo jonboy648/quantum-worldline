@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-042",
+  "arxiv_id": "2604.04596",
+  "title": "Breaking the Entanglement-Structure Trade-off: Many-Body Localization Protects Emergent Holographic Geometry in Random Tensor Networks",
+  "authors": ["Zhihua Liang"],
+  "year": 2026,
+  "venue": "arxiv (quant-ph, hep-th)",
+  "submission_date": "2026-04-06",
+  "abstract_summary": "Demonstrates that many-body localization (MBL) resolves the fundamental tension between spatial entanglement structure and mutual information in random tensor networks, sustaining emergent holographic geometry indefinitely against thermalization. Near-Ising anisotropy with specific disorder strength gives optimal conditions. Verifies the 'entanglement → geometry → gravity' chain from ER=EPR in a disordered XXZ model.",
+  "relevance": 4,
+  "relevance_reason": "Directly confirms holographic geometry emergence from entanglement in tensor networks, supporting our MERA holographic force results. MBL protection mechanism is novel and could apply to our chi=3 MERA stability.",
+  "connection_to_project": "Confirms ER=EPR chain in random tensor networks; MBL-protected geometry is a new stabilization route complementary to our ALM+projection method. Relevant to HYP-2026-009 (chi=3 phase transitions).",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

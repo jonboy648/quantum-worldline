@@ -1,0 +1,17 @@
+{
+  "id": "HYP-2026-001",
+  "claim": "Combining the universal orbifold lattice Yang-Mills framework (PAPER-2026-002) with qudit encoding (PAPER-2026-001) could enable 2+1D QCD simulation on near-term trapped-ion hardware, bypassing the exponential compilation costs of Kogut-Susskind formulations while exploiting the natural high-dimensional Hilbert space of qudits for gauge field truncation.",
+  "confidence": "medium",
+  "source_findings": ["PAPER-2026-001", "PAPER-2026-002"],
+  "testable": true,
+  "test_design": "Implement the orbifold lattice Hamiltonian for SU(2) on a 2x2 plaquette using qudit encoding on a trapped-ion simulator. Compare circuit depth and gate count against equivalent qubit-based Kogut-Susskind circuits. Measure plaquette expectation value and compare to known analytical results.",
+  "refutation_criteria": "If qudit-encoded orbifold circuits require MORE gates than qubit Kogut-Susskind circuits for the same plaquette, or if the orbifold truncation introduces artifacts not present in the Kogut-Susskind approach at the same truncation level, the hypothesis is refuted.",
+  "hardware_required": "Trapped-ion qudit quantum computer (e.g., Innsbruck system or IonQ with qudit support)",
+  "earliest_testable": "2026 (simulator), 2027 (hardware)",
+  "feasibility_verdict": "TESTABLE_NEAR_TERM",
+  "philosophical_implications": "If successful, this would mean the mathematical structure of Yang-Mills theories has a natural quantum computational representation that is more efficient than the historically dominant lattice formulation, suggesting the universe's gauge structure may be more naturally expressed in quantum information terms than in classical lattice discretizations.",
+  "status": "proposed",
+  "created_date": "2026-03-10",
+  "last_updated": "2026-03-10",
+  "created_by": "theory-lead"
+}

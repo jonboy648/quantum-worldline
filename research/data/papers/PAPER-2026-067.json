@@ -1,0 +1,18 @@
+{
+  "id": "PAPER-2026-067",
+  "title": "Low frequency electric field sensing with a Rydberg beam",
+  "authors": ["multiple"],
+  "date": "2026-04",
+  "source": "arxiv:2604.01513",
+  "domain": "Rydberg atoms / electric field sensing",
+  "status": "WATCH",
+  "relevance": 2,
+  "summary": "Rydberg atom collimated beam for low-frequency electric field sensing. Achieves <1 mV/m/sqrt(Hz) above 20 Hz, best 0.14 mV/m/sqrt(Hz) above 500 Hz. Linear dynamic range >50 dB. Reduced screening vs vapor cells. No biological application mentioned.",
+  "key_numbers": {
+    "sensitivity": "<1 mV/m/sqrt(Hz) above 20 Hz; 0.14 mV/m/sqrt(Hz) above 500 Hz",
+    "frequency_range": "1 Hz and above (practical: 20+ Hz)",
+    "dynamic_range": ">50 dB"
+  },
+  "bci_relevance": "Rydberg electric field sensors operate at mV/m sensitivity. Neural surface electric fields (EEG-equivalent) are ~0.1-10 mV/m at scalp — within range. However, these are room-temperature vapor cells, sensitive to acoustic vibration and EMI, and have no demonstrated neural application. Conceptually interesting but NOT actionable for BCI without fundamental development. Magnetic sensing (OPM) remains dominant approach for noninvasive BCI.",
+  "independent_researcher_budget": "Rubidium vapor cell + laser setup: ~$5k-15k for single-channel. No commercial BCI product exists."
+}

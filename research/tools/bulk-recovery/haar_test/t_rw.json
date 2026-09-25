@@ -1,0 +1,29 @@
+{
+ "network": "haar_test/haar_chi2_seed1",
+ "info": {
+  "chi": "2",
+  "seed": "1",
+  "hfield": "nan",
+  "control": "C-HAAR",
+  "basin_clean": "n/a",
+  "d_sig": "nan",
+  "d_eps": "nan",
+  "E_inf": "nan",
+  "generated": "2026-09-22T16:34:18Z"
+ },
+ "top": {
+  "E0": NaN,
+  "E1": NaN,
+  "gap": NaN,
+  "herm": 0.0,
+  "source": "top.bin"
+ },
+ "N": 27,
+ "k": 2,
+ "x": 1,
+ "rewire": 3,
+ "host": "GuacIsXtra",
+ "pod": "",
+ "started": "2026-09-22T16:35:53Z",
+ "tail_tol": 1e-12
+}

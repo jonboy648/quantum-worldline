@@ -1,0 +1,15 @@
+{
+  "hw_id": "HW-2026-026",
+  "vendor": "Google Quantum AI",
+  "system_name": "Neutral Atom Program (dual-modality expansion)",
+  "qubit_count": null,
+  "fidelity_2q": null,
+  "announcement_date": "2026-03-24",
+  "headline": "Google Quantum AI expands to neutral atom computing: new team at CU Boulder under Dr. Adam Kaufman",
+  "details": "Announced March 2026. Google adding neutral atom program alongside superconducting roadmap. Led by JILA Fellow Dr. Adam Kaufman at CU Boulder. Three pillars: QEC, Modeling & Simulation, Hardware Development. Collaboration with QuEra (Google portfolio company). Neutral atoms easier to scale in qubit count; superconducting in circuit depth.",
+  "source_url": "https://blog.google/innovation-and-ai/technology/research/neutral-atom-quantum-computers/",
+  "relevance": 3,
+  "relevance_reason": "Google's dual modality strengthens neutral atom ecosystem. Modeling & Simulation pillar explicitly relevant to MERA-type holographic simulation. No immediate access path, but research collaboration possible.",
+  "access_path": "Google Quantum AI collaboration program. Monitor for research access announcements.",
+  "scan_date": "2026-04-26"
+}

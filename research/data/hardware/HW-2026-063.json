@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-063",
+  "organization": "USTC (Pan group; Lin, Li, Rui, Chen, Lu, Pan et al.)",
+  "processor": "Neutral-atom circuit with mid-circuit operations",
+  "date": "2026-03-02",
+  "source_url": "https://arxiv.org/abs/2603.01612",
+  "arxiv_id": "2603.01612",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": 0.9981,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Sustaining high-fidelity quantum logic in neutral-atom circuits via mid-circuit operations. Two-qubit controlled gate at raw 99.60(1)% fidelity, increased to 99.81(1)% via non-destructive erasure detection; fidelities held stable at ~99.8% across multiple operational rounds without observable degradation, using in-circuit Raman sideband cooling and qubit re-initialization (active entropy management against motional heating and atom loss). Below the Helios frontier (99.921%) so NOT a fidelity record. RELEVANCE 4/5: directly applicable to MULTI-LAYER neutral-atom MERA circuits, which require sustained fidelity across many layers and the repeated syndrome-extraction cycles this architecture targets. Does not change physics anchors. discovered_by hardware-tracker 2026-06-11."
+}

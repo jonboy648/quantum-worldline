@@ -1,0 +1,76 @@
+{
+  "id": "pytket_compile_chi3_8q",
+  "circuit": {
+    "n_qubits_total": 16,
+    "n_qubits_boundary_measured": 8,
+    "layout": {
+      "boundary_q0_q7": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "top_q8_q11": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "ancillas_q12_q15": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "n_unitaries": {
+      "U_top_4q": 1,
+      "W2_4q": 2,
+      "U2_4q": 2,
+      "W1_2q": 4,
+      "U1_2q": 4,
+      "SWAP_2q": 8
+    }
+  },
+  "source_theta": "D:\\quantum-worldline\\research\\data\\simulations\\theta_opt_SIM2026015.npy",
+  "seed": 42,
+  "results": {
+    "qiskit_decomp_time_s": 0.2519991397857666,
+    "pytket_convert_time_s": 0.23600339889526367,
+    "pytket_peephole_time_s": 6.209180593490601,
+    "pytket_rebase_time_s": 0.7516019344329834,
+    "pre_depth": 584,
+    "post_depth": 794,
+    "pre_counts": {
+      "U3": 964,
+      "CX": 523
+    },
+    "post_counts": {
+      "Rz": 753,
+      "PhasedX": 771,
+      "ZZPhase": 451
+    },
+    "n_1q_phasedx": 771,
+    "n_2q_zzphase": 451,
+    "n_rz": 753,
+    "n_m": 8,
+    "shots": 10000,
+    "hqc_per_run": 10647.0,
+    "runs_scope": 5,
+    "hqc_total": 53235.0
+  },
+  "formula": "HQC = 5 + (C/5000) * (N_1q + 10*N_2q + 5*N_M)",
+  "n_qubits_resubmission_doc": 14,
+  "n_qubits_actual_chi3": 16,
+  "n_2q_resubmission_doc_estimate": 36,
+  "notes": [
+    "16 qubits is the correct count for chi=3 8q MERA with 2 layers.",
+    "SIM-2026-019 used 14 qubits and N_2q=36, both estimates.",
+    "Helios native: ZZPhase + PhasedX + Rz; Rz is free under HQC.",
+    "Top-tensor prep is a U(16) 4-qubit unitary -- contributes most."
+  ]
+}

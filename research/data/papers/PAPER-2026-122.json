@@ -1,0 +1,28 @@
+{
+  "id": "PAPER-2026-122",
+  "title": "3D Ising criticality with Platonic lattice superconducting qubits",
+  "authors": [
+    "Liyang Sui",
+    "et al. (incl. Yi Yin)"
+  ],
+  "date": "2026-06-15",
+  "arxiv_id": "2606.16854",
+  "relevance": 3,
+  "abstract": "Digital quantum simulation of 3D Ising (Wilson-Fisher) criticality on superconducting qubits using CFT-informed variational state preparation.",
+  "tags": [
+    "3D-Ising",
+    "Wilson-Fisher",
+    "superconducting-qubits",
+    "quantum-simulation",
+    "state-prep"
+  ],
+  "key_claims": [
+    "CFT-informed variational prep of a 3D Ising critical state on hardware.",
+    "WRONG universality class/dimension for this project (3D WF, not the 2D minimal-model tower c=1/2, c=7/10).",
+    "Methods-adjacent to state-prep ambitions; WATCH-level."
+  ],
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.16854",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

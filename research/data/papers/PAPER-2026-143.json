@@ -1,0 +1,39 @@
+{
+ "source": "arxiv",
+ "discovered_by": "lead (HYP-033 prior-art gate, RESEARCH-DIRECTOR section 8)",
+ "discovered_date": "2026-09-18",
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "categories": [
+  "quant-ph"
+ ],
+ "id": "PAPER-2026-143",
+ "title": "Limits on the storage of quantum information in a volume of space",
+ "authors": [
+  "Steven T. Flammia",
+  "Jeongwan Haah",
+  "Michael J. Kastoryano",
+  "Isaac H. Kim"
+ ],
+ "date": "2016-10-19",
+ "arxiv_id": "1610.06169",
+ "relevance": 3,
+ "abstract": "Tradeoff bounds for approximate quantum error correcting codes on lattices. Introduces local approximate correctability and code distance with several equivalent formulations, generalizing exact error-correction criteria; bounds relate n, k, distance, the accuracy parameter and locality.",
+ "tags": [
+  "approximate-QEC",
+  "decoupling",
+  "recoverability",
+  "prior-art"
+ ],
+ "key_claims": [
+  "Source of the decoupling <=> recoverability duality that PAPER-2026-142 imports as its Theorem 1: erasure of A is locally correctable from AB iff ACR decouples into A and CR"
+ ],
+ "relevance_note": "Catalogued from the abstract only, NOT read. It is the origin of the observable HYP-033 uses (mutual information between a reference and a boundary region as a recoverability measure), so that observable is cited to it and to PAPER-2026-142, never claimed.",
+ "related_papers": [
+  "PAPER-2026-142"
+ ],
+ "source_url": "https://arxiv.org/abs/1610.06169"
+}

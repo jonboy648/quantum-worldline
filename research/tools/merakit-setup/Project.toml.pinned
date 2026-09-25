@@ -1,0 +1,30 @@
+name = "MERAKit"
+uuid = "002f668d-dbf0-4230-86cd-7736498d5b3f"
+authors = ["Markus Hauru <markus@mhauru.org>", "Jutho Haegeman <jutho.haegeman@ugent.be>"]
+version = "0.1.0"
+
+[deps]
+ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+KrylovKit = "0b1a1467-8014-51b9-945f-bf0ae24f4b77"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+NamedTupleTools = "d9ec5142-1e00-5aa0-9d6a-321866360f50"
+OptimKit = "77e91f04-9b3b-57a6-a776-40b61faaebe0"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+TensorKit = "07d1fe3e-3e46-537d-9eac-e9e13d0d4cec"
+TensorKitManifolds = "11fa318c-39cb-4a83-b1ed-cdc7ba1e3684"
+TensorOperations = "6aa20fa7-93e2-5fca-9bc0-fbd0db3c71a2"
+TupleTools = "9d95972d-f1c8-5527-a6e0-b4b365fa01f6"
+
+[compat]
+ArgParse = "^1.1.0"
+JLD2 = "^0.1.14"
+KrylovKit = "^0.5.2"
+NamedTupleTools = "^0.13.6"
+OptimKit = "0.1 - 1"
+TensorKit = "0.9 - 1"
+TensorKitManifolds = "0.6 - 1"
+TensorOperations = "^3"
+TupleTools = "^1.2"
+julia = "^1.5"

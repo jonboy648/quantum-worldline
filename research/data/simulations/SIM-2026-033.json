@@ -1,0 +1,140 @@
+{
+  "id": "SIM-2026-033",
+  "type": "classical",
+  "date": "2026-06-08",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage 1b proper: symmetry-resolved operator-basis scan for the force exponent at Ising (lam3=0) vs tricritical (lam3=0.856) points of the O'Brien-Fendley chain. Operator selected by reproducing the published Ising alpha~3.97 (validation gate), then applied identically at TCI.",
+  "circuit": {
+    "qubits": 16,
+    "script_path": "research/data/simulations/sim033_tci_operator_scan.py"
+  },
+  "hardware_target": "local CPU (exact statevector)",
+  "results": {
+    "ising_scan": {
+      "lam3": 0.0,
+      "E_gs": -40.03277580097017,
+      "rows": [
+        {
+          "op": "published(0.635,-0.026)",
+          "alpha": 3.97481895178691,
+          "alpha_err": 0.1450985392538394,
+          "n_fit": 10,
+          "dE_single": 3.506523189390684
+        },
+        {
+          "op": "X_only",
+          "alpha": 3.910014817627865,
+          "alpha_err": 0.15301827636027204,
+          "n_fit": 10,
+          "dE_single": 3.5041445059141907
+        },
+        {
+          "op": "ZZ_only",
+          "alpha": null,
+          "note": "degenerate",
+          "dE_single": 5.522402186404385
+        },
+        {
+          "op": "X+ZZ(energy)",
+          "alpha": 4.3805793525533705,
+          "alpha_err": 0.20878706673595257,
+          "n_fit": 10,
+          "dE_single": 7.167055288503235
+        },
+        {
+          "op": "X-ZZ",
+          "alpha": 4.930708375266591,
+          "alpha_err": 0.15984434098003497,
+          "n_fit": 10,
+          "dE_single": 0.7881114792103645
+        },
+        {
+          "op": "XZ+ZX_only",
+          "alpha": 4.11272389478006,
+          "alpha_err": 0.193698875695204,
+          "n_fit": 10,
+          "dE_single": 6.65669872788996
+        },
+        {
+          "op": "X+mix",
+          "alpha": 3.971839356020579,
+          "alpha_err": 0.14546538354806526,
+          "n_fit": 10,
+          "dE_single": 3.5064147489013067
+        }
+      ]
+    },
+    "tci_scan": {
+      "lam3": 0.856,
+      "E_gs": -32.70280774083235,
+      "rows": [
+        {
+          "op": "published(0.635,-0.026)",
+          "alpha": 1.331049878780708,
+          "alpha_err": 0.09092591163464253,
+          "n_fit": 10,
+          "dE_single": 0.46242697953490364
+        },
+        {
+          "op": "X_only",
+          "alpha": 1.3234644162091458,
+          "alpha_err": 0.09150780025861482,
+          "n_fit": 10,
+          "dE_single": 0.4595190696862659
+        },
+        {
+          "op": "ZZ_only",
+          "alpha": null,
+          "note": "degenerate",
+          "dE_single": 6.002217932089863
+        },
+        {
+          "op": "X+ZZ(energy)",
+          "alpha": 4.751000398575359,
+          "alpha_err": 0.3613379922958363,
+          "n_fit": 10,
+          "dE_single": 2.353296910621733
+        },
+        {
+          "op": "X-ZZ",
+          "alpha": 4.390820795065459,
+          "alpha_err": 0.12138595608873168,
+          "n_fit": 10,
+          "dE_single": 0.8635021409697714
+        },
+        {
+          "op": "XZ+ZX_only",
+          "alpha": 6.075685015162393,
+          "alpha_err": 0.3326843107833767,
+          "n_fit": 10,
+          "dE_single": 4.434793323977317
+        },
+        {
+          "op": "X+mix",
+          "alpha": 1.3307006850256755,
+          "alpha_err": 0.09095250939338698,
+          "n_fit": 10,
+          "dE_single": 0.46229440952066625
+        }
+      ]
+    },
+    "selected_operator": {
+      "op": "X+mix",
+      "alpha": 3.971839356020579,
+      "alpha_err": 0.14546538354806526,
+      "n_fit": 10,
+      "dE_single": 3.5064147489013067
+    },
+    "gate_pass": true,
+    "tci_alpha_selected": 1.3307006850256755,
+    "dichotomy": {
+      "universal": 4.0,
+      "tci_epsilon_prime": 0.4,
+      "tci_sigma_prime": 0.075
+    },
+    "verdict": "INCONCLUSIVE: validated op 'X+mix' (Ising 3.97) gives TCI alpha=1.33 -- matches neither 4.0 nor a clean TCI primary; needs N=20 or chi>=3 MERA (stage 2)."
+  },
+  "comparison": "classical_wins",
+  "notes": "c=7/10 gate already passed in SIM-2026-032 (c=0.726). This isolates the operator question.",
+  "wall_seconds": 16.47270441055298
+}

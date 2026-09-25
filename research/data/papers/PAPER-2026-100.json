@@ -1,0 +1,34 @@
+{
+  "id": "PAPER-2026-100",
+  "title": "Holographic Network and Traversable Parallel Universe",
+  "authors": [
+    "Yu Guo",
+    "Rong-Xin Miao"
+  ],
+  "date": "2026-01-29",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.21206",
+  "arxiv_id": "2601.21206",
+  "abstract": "We investigate how different conformal field theories connect through holographic networks using Gauss-Bonnet gravity. We prove that the junction condition on the Net-brane leads to conservation laws at network nodes and examine gravitational stability constraints. The work explores entropy proposals for these networks and analyzes two-point functions across network edges. A key finding is that AdS/NCFT provides a natural way to envision traversable parallel universes that have different geometries and physical laws. Unlike traversable wormholes, the parallel universe model satisfies all energy conditions.",
+  "relevance": 2,
+  "tags": [
+    "holographic-network",
+    "AdS-CFT",
+    "Gauss-Bonnet-gravity",
+    "parallel-universe",
+    "network-node",
+    "entropy",
+    "two-point-function"
+  ],
+  "key_claims": [
+    "Junction conditions on Net-branes give conservation laws at holographic network nodes",
+    "AdS/NCFT holographic network supports traversable parallel universe with different physical laws",
+    "Parallel universe model satisfies all energy conditions (unlike traversable wormholes)",
+    "Two-point functions computed across network edges",
+    "Relevant to multi-CFT holographic tensor network extensions of MERA"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

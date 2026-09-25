@@ -1,0 +1,43 @@
+{
+  "id": "SIM-2026-018",
+  "hypothesis": "HYP-2026-014",
+  "description": "Crofton thread density vs SIM-2026-016 sigma_by_dr: re-analysis of existing CMI data against sin(pi*dr/N) prediction",
+  "type": "classical_reanalysis",
+  "hardware_target": "CPU",
+  "n_qubits": 24,
+  "N": 24,
+  "status": "COMPLETE",
+  "verdict": "REFUTED",
+  "confidence": "high",
+  "circuit": {"qubits": 0, "depth": 0, "gates": 0},
+  "crofton_formula": "sigma_Crofton(dr) = C * sin(pi*dr/N), normalized at dr=1",
+  "sigma_measured": {
+    "1": 0.5379634123990387, "2": 0.4282789346067327, "3": 0.3163092243526942,
+    "4": 0.25496830607228826, "5": 0.21273413442870784, "6": 0.18066373211804965,
+    "7": 0.154835936251828, "8": 0.13317542700714674, "9": 0.1144500972351032,
+    "10": 0.09786760036461747, "11": 0.08288641247512232, "12": 0.06911733307722503
+  },
+  "sigma_crofton": {
+    "1": 0.5379634123990387, "2": 1.066722, "3": 1.577229,
+    "4": 2.060749, "5": 2.509009, "6": 2.914339,
+    "7": 3.269804, "8": 3.569322, "9": 3.807767,
+    "10": 3.981061, "11": 4.086238, "12": 4.121498
+  },
+  "crofton_max_residual_pct": 5863.0,
+  "crofton_mean_residual_pct": 2393.5,
+  "amplitude_ratio_measured": 7.7833,
+  "amplitude_ratio_crofton": 7.6613,
+  "amplitude_ratio_agreement_pct": 1.6,
+  "power_law_fit": {
+    "alpha_sigma": 0.8723,
+    "dalpha_sigma": 0.0358,
+    "chi2_per_dof": 0.0184,
+    "dr_range": "2..12"
+  },
+  "actual_sigma_profile": "power_law: sigma ~ dr^(-0.99) on log-log (dr=2..12), NOT sinusoidal",
+  "key_finding": "Amplitude ratio (7.78 vs 7.66, 1.6% agreement) is a coincidence. The Crofton sin(pi*dr/N) profile shape fails catastrophically (max residual 5863% at dr=12). sigma(dr) is a power law ~ dr^(-0.87), inconsistent with any sinusoidal Crofton form.",
+  "interpretation": "The SIM-2026-016 sigma data does NOT match the chi=3 Crofton tessellation prediction. The amplitude ratio agreement noted in HYP-2026-014 is numerical coincidence: sin(pi*12/24)/sin(pi*1/24) = 7.66 happens to match sigma(1)/sigma(12) = 7.78, but the intermediate points are wildly wrong. The data is better described as a power law (sigma ~ dr^(-0.87)) reflecting the CMI decay structure of the critical TFIM, not a Crofton sinusoidal density.",
+  "notes": "SIM-2026-016 used chi=2 MERA; a chi=3 re-test could give different sigma values. But the power-law form is robust and inconsistent with Crofton prediction regardless.",
+  "visualization_path": "research/data/simulations/SIM-2026-018_crofton_test.png",
+  "runtime_s": 2.1
+}

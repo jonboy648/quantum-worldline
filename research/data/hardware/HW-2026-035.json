@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-035",
+  "organization": "AOSense Inc.",
+  "processor": "Compact Cold-Atom Gravimeter",
+  "date": "2024-01-01",
+  "source_url": "https://aosense.com/products/atom-optic-sensors/gravimeter/",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Portable cold-atom gravimeter integrating all lasers, vacuum, electronics in sensor head + controller. Operating bandwidth: 20 Hz sampling rate (vs 0.1-1 Hz for lab systems). Designed for geophysical surveying, precision navigation, underground fluid monitoring. High-performance SWaP design: autonomous operation for weeks. Shipped to aerospace customer. Kasevich lab (Stanford) spin-off. Application to through-wall person detection: NOT physically plausible. A 70-kg person at 10m generates ~5 nGal differential gravity signal. AOSense gravimeter absolute precision ~1-10 uGal - person signal is 3 orders of magnitude below noise floor. Tunnel detection (meter-scale voids) is at the edge of capability for long integration times."
+}

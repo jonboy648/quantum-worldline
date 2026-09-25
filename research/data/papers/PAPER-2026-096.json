@@ -1,0 +1,37 @@
+{
+  "id": "PAPER-2026-096",
+  "title": "Engineering Quantum Many-Body Scars through Lattice Geometry",
+  "authors": [
+    "Erick Parra Verde",
+    "Kevin P. Mours",
+    "Johannes Zeiher",
+    "Ana Hudomal",
+    "Jad C. Halimeh"
+  ],
+  "date": "2026-05-06",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.05296",
+  "arxiv_id": "2605.05296",
+  "abstract": "We demonstrate that lattice structure can control quantum many-body scarring in the PXP model. Transforming a one-dimensional chain into a triangle-decorated lattice geometry causes the fully polarized state -- normally thermalizing in the PXP model -- to exhibit pronounced fidelity revivals and slow entanglement growth. The mechanism involves geometry-induced restructuring of the Hilbert space into hypercube subgraphs that enable coherent population transfer and stabilize an emergent approximate su(2) algebra. We propose experimental implementation using programmable Rydberg atom arrays with spatial light modulators, establishing lattice connectivity as a design principle for engineering non-ergodic dynamics in constrained quantum systems.",
+  "relevance": 2,
+  "tags": [
+    "PXP-model",
+    "quantum-many-body-scars",
+    "Rydberg-array",
+    "non-ergodic",
+    "blockade",
+    "Hilbert-space-structure",
+    "lattice-geometry"
+  ],
+  "key_claims": [
+    "Lattice geometry (triangle decoration) turns thermalizing PXP polarized state into scarred non-ergodic state",
+    "Mechanism: geometry-induced Hilbert space decomposition into hypercube subgraphs",
+    "Implementation pathway: Rydberg arrays with spatial light modulators",
+    "Relevant background: PXP Hamiltonian underlies blockade-MERA Rydberg holography (Sahay et al.)",
+    "Non-ergodicity engineering could affect hologron coherence times"
+  ],
+  "hardware_used": "Rydberg atom arrays with spatial light modulators (proposed)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

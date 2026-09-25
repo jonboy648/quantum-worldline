@@ -1,0 +1,76 @@
+{
+  "id": "SIM-2026-042",
+  "type": "classical",
+  "date": "2026-06-18",
+  "verdict_SUPERSEDED_2026_06_18": {
+    "field_dated_by_the_repudiation_added_2026_08_17": "The supersession is dated 2026-06-18 because that is when the project repudiated this verdict, in RESEARCH-LOG.md, on the same day the record was written. The stamp itself was added 2026-08-17 under docs/governance/AUDIT-2026-08-11.md defect D-19; the record had stood unamended (a single commit, 55fcba6) with no ERRATA entry for two months.",
+    "summary": "THE VERDICT BELOW IS SUPERSEDED. Its central clause -- 'TCI Delta_T~2 FOUND [2.110243915080525, 2.1396273166896695, 2.233223193546826]: universal stress tensor, alpha=2*Delta_T=4 at c=7/10. UNIVERSALITY SUPPORTED.' -- was repudiated by the project itself, in prose, the same day it was written. It must not be quoted as evidence for alpha = 4 or for universality.",
+    "repudiation_quoted": "research/RESEARCH-LOG.md, entry dated 2026-06-18 (approximately lines 395-413): 'TCI run: pipeline validated but TCI optimization did NOT reach the c=7/10 fixed point ... HONEST VERDICT: this does NOT match the c=7/10 CFT -- the lowest non-zero dim is 0.473, MISSING the two lightest primaries (0.075, 0.2) entirely. This is a QUALITATIVE failure (wrong fixed point), not a precision issue. The cluster near 2.1 ([2.11,2.14,2.23]) CANNOT be claimed as the stress tensor Delta_T=2: with the spectrum's foundation (light primaries) wrong, a near-2 cluster is as likely artifact/wrong-tower-descendants as T. Reading \"Delta_T~2 found\" off this would be a motivated false positive -- explicitly NOT claimed. CONCLUSION: alpha-universality NOT answered.' The JSON verdict below contains the exact phrase the log forbids.",
+    "central_charge_failure": "The state's own central charge reads c = 0.10 against Ising's EXACT c = 0.5 (a CFT theorem), so the construction used here was never at a critical fixed point. Provenance, stated precisely so it is not conflated: the c value is NOT in this record. It was measured by the c-gate built later the same day and is recorded in research/data/simulations/SIM-2026-044.json as ising_c = 0.09714487655978005 with gate_pass = false, on the same fixed-first-layer construction; RESEARCH-LOG.md (approximately lines 488-503) states 'it reads c=0.10 for the plain-lift Ising state and c=0.19 for the self-consistent one -- but Ising's central charge is EXACTLY 0.5 (CFT theorem). So NEITHER construction is at the c=1/2 critical fixed point. This INVALIDATES the earlier \"validated Ising control\" claims: the scaling dimensions ... LOOKED Ising-like but the state is NOT genuinely critical (c=0.10, not 0.5).' CAUTION FOR READERS: the value 0.10104558167440512 that appears in .results.ising.dims of this record is Delta_sigma (CFT 0.125, i.e. 19% off), NOT the central charge. The two numbers are numerically similar and must not be confused.",
+    "what_therefore_falls": [
+      "The 'UNIVERSALITY SUPPORTED' clause of .verdict -- withdrawn outright. This record is not evidence for alpha = 4 at c = 7/10.",
+      "The identification of [2.110243915080525, 2.1396273166896695, 2.233223193546826] as the stress tensor -- withdrawn. The record has no conformal-spin resolution and no c-gate; Delta_T was asserted from proximity to 2 alone, and those values are 5.5% / 7.0% / 11.6% away from 2.0.",
+      ".results.ising.gateB = true and the 'Superoperator+optimizer VALIDATED (Ising Delta_2=0.1010~0.125)' clause -- the control is invalidated by the c-gate above. RESEARCH-LOG.md line 388 is more careful than the record, calling GateB only 'qualitatively PASS'; the '~' in the verdict hides a 19% discrepancy."
+    ],
+    "what_survives": "The raw numbers in .results are NOT in question and have not been altered: the energies, the Ising dimension list and the TCI dimension list are the valid record of what this construction produced. What is withdrawn is the INTERPRETATION laid on them. The record retains value as documentation of a wrong-fixed-point failure mode -- specifically, that energy convergence plus an eyeballed Ising-looking dimension list sails through a gate that a central-charge test fails.",
+    "superseded_by": "The universality question this record claimed to answer was answered later and properly by SIM-2026-051 and SIM-2026-052 (exact-diagonalization pre-gate on the O'Brien-Fendley blocking, chi=6/8 M(4,5) spectrum). Those records, not this one, are the evidence for the tricritical rung. Note separately that alpha at those points was never fitted: alpha there is identically 2*Delta_T (see AUDIT-2026-08-11.md defect D-6, CIRC-1).",
+    "see_also": [
+      "research/RESEARCH-LOG.md, entry 2026-06-18 (approximately lines 395-413, and lines 488-503 for the c-gate)",
+      "research/data/simulations/SIM-2026-044.json (the c-gate that disconfirms this record; neither record cross-references the other)",
+      "docs/governance/AUDIT-2026-08-11.md defect D-19"
+    ],
+    "correction_policy": "Additive, per RESEARCH-DIRECTOR.md section 32 and the ERRATA D5 exemplar (SIM-2026-036 -> SIM-2026-039/040). The original results, the original verdict and the original status field are preserved unchanged below; this field records the challenge, the corrected reading and the changed conclusion."
+  },
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Scale-invariant binary MERA scaling-dimension spectrum (Evenbly-Vidal SVD optimization + grad-based 3-site superoperator, tested simple_mera.py recipe). Reads {Delta} directly; Delta_T=2 at TCI = universal stress tensor (alpha=4). Ising control = GATE B trust anchor.",
+  "circuit": {
+    "chi": 4,
+    "script_path": "research/data/simulations/sim042_scaleinv_spectrum.py"
+  },
+  "hardware_target": "RunPod CPU (per user) / local-capable (small per-layer network)",
+  "results": {
+    "ising": {
+      "E": -4.565667192933223,
+      "dims": [
+        0.0,
+        0.10104558167440512,
+        1.0341578685423205,
+        1.0842190915565506,
+        1.280068504559417,
+        1.6459892422534748,
+        1.6888364859090315,
+        1.700298431928139,
+        1.70029843192814,
+        1.7581877635905838
+      ],
+      "gateB": true
+    },
+    "tci": {
+      "E": -4.116687694963744,
+      "dims": [
+        0.0,
+        0.47314835624722723,
+        0.761192688515486,
+        0.9335435992613874,
+        1.2418672009585545,
+        1.3650238088126396,
+        1.4649804330553393,
+        2.110243915080525,
+        2.1396273166896695,
+        2.233223193546826,
+        2.3069172421180304,
+        2.5719403394245397
+      ],
+      "Delta_near_2": [
+        2.110243915080525,
+        2.1396273166896695,
+        2.233223193546826
+      ]
+    }
+  },
+  "status": "ISING_PASS_TCI_MEASURED",
+  "verdict": "Superoperator+optimizer VALIDATED (Ising Delta_2=0.1010~0.125). TCI Delta_T~2 FOUND [2.110243915080525, 2.1396273166896695, 2.233223193546826]: universal stress tensor, alpha=2*Delta_T=4 at c=7/10. UNIVERSALITY SUPPORTED.",
+  "comparison": "classical_wins",
+  "notes": "Self-contained: energy network from binary_mera_superop (validated). No quimb. Superoperator GATE A (identity->1, disentangler-matters) passed; GATE B (Ising {0,1/8,1}) checked here before any TCI claim.",
+  "wall_seconds": 144.88846588134766
+}

@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-062",
+  "organization": "QuEra",
+  "processor": "Gemini (neutral-atom gate-model)",
+  "date": "2026-01-01",
+  "source_url": "https://www.quera.com/gemini",
+  "physical_qubits": 260,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A (gate-model platform)",
+  "two_qubit_gate_fidelity": 0.992,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "QuEra Gemini: 260 Rb-87 qubits, 99.2% 2Q fidelity, 99.9% global / 99.7% local 1Q fidelity, SPAM 99.7%, 1 shot/sec, 20 parallel 2Q gate pairs, room temperature. Available for research collaboration (contact-for-access). 99.2% 2Q fidelity is BELOW the Quantinuum Helios frontier (99.921%), so NOT a fidelity-record entry. Distinct config from the Scan #7 96L/448P qLDPC demo system. RELEVANCE 4/5: 260 Rb-87 qubits with Rydberg-blockade physics identical to the HYP-017 platform, and >> the ~30 atoms needed for blockade-MERA -- a potential direct route to an alpha~4 force-existence test at proper scale via collaboration, without AWS Aquila or the QCUP HQC fight. Does not change physics anchors. discovered_by hardware-tracker 2026-06-11."
+}

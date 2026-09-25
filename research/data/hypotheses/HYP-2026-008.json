@@ -1,0 +1,113 @@
+{
+  "id": "HYP-2026-008",
+  "claim": "In a MERA circuit modeling the critical Ising chain, exciting boundary primaries of conformal dimension Delta=1 (stress tensor operators T(x) = -J sum_i Z_i Z_{i+1}, rather than spin primaries X_i) should produce inter-hologron forces with a 1/dr^4 power-law form rather than an exponential decay. This corresponds to spin-2 (graviton) virtual exchange as derived by Roux (2026, arXiv:2601.07382): his Liouville boundary CFT gives a graviton propagator ~ 1/|z_i - z_j|^(4 Delta) with Delta=1 for graviton modes. Scalar spin primaries (Delta=1/8 for Ising) give exponential forces (our current measurements). Stress-tensor primaries (Delta=1) would give power-law forces via 2D Liouville correlators.",
+  "confidence": "n/a (closed)",
+  "confidence_downgraded_2026_08_17": {
+    "from": "medium",
+    "to": "low",
+    "reason": "The status fell to NOT_ESTABLISHED on SIM-2026-072 but the confidence field was left at medium in the first remediation pass -- an inconsistency caught by the independent verifier. The confidence_rationale immediately below is SUPERSEDED IN FULL: its central sentence ('This is strong evidence for a power-law force consistent with spin-2 exchange') rests on the withdrawn alpha = 3.92 +/- 0.16, and its stated route to high confidence ('(a) chi=3 gives same alpha') is doubly void -- the chi=3 evaluation agreed only because it shares the same estimator artifact, and SIM-2026-072 further found that profile changes sign at dr=9,10 inside the published fit window, so its alpha = 4.071 is not a valid power-law fit at all. Confidence is low because the hypothesis's own registered discriminating test (V_T vs V_X) has never been run.",
+    "authority": "research/data/simulations/SIM-2026-072.json; docs/governance/AUDIT-2026-08-11.md D-2/D-3"
+  },
+  "confidence_rationale_SUPERSEDED_2026_08_17": "DO NOT QUOTE. Preserved per RESEARCH-DIRECTOR.md section 32 as the reasoning of record on 2026-03-18; every number in it is withdrawn.",
+  "confidence_rationale": "SIM-2026-011 measured alpha=3.92 +/- 0.16 for dr>=2, which is within 2% of the stress-tensor prediction alpha=4.0 (1.2 sigma). This is strong evidence for a power-law force consistent with spin-2 exchange. HOWEVER: the excitation used was the boundary-primary operator from Zou-Milsted-Vidal (epsilon sector, not the stress tensor T_mu_nu). The identification requires that this operator mediates stress-tensor-like exchange in the bulk, which is not explicitly proven. Confidence raised from low to medium pending resolution of this operator-identification question. Would rise to high if (a) chi=3 gives same alpha, or (b) explicit operator-dimension analysis confirms the epsilon primary maps to Delta_bulk=2 exchange.",
+  "source_findings": [
+    "PAPER-2026-023",
+    "PAPER-2026-009",
+    "PAPER-2026-010",
+    "HYP-2026-005",
+    "SIM-2026-011"
+  ],
+  "testable": true,
+  "test_design": "1. Take the optimized MERA ground state from SIM-2026-007 (penalty VQE, 16q). 2. Construct two-hologron states using stress-tensor boundary primaries: sigma^boundary_T(j) = -J * Z_j Z_{j+1} applied at sites j and j+k. 3. Compute the force profile V_T(dr) using the same energy-difference protocol as SIM-2026-002: V_T(dr) = E_2h - E_1h - E_1h where E_2h is energy with two stress-tensor excitations at separation dr. 4. Fit V_T(dr) to both power law (A/dr^b) and exponential (C1 - C2*exp(-dr/xi)). 5. Compare fit quality. If power law wins decisively (chi^2 ratio > 10), the prediction is supported.",
+  "refutation_criteria": "If V_T(dr) is indistinguishable from V_X(dr) (spin primary, Pauli-X) in both functional form and amplitude, the Roux graviton-vs-scalar distinction does not manifest at this MERA resolution. If V_T(dr) is exponential (not power law), the prediction is refuted.",
+  "hardware_required": "Local GPU (RTX 4060, WSL2) for statevector simulation of 16q MERA. RunPod if chi=3 is needed.",
+  "earliest_testable": "2026-Q1",
+  "feasibility_verdict": "TESTABLE_NOW",
+  "status": "CLOSED_UNTESTABLE_N_LE_24",
+  "justified_by": [
+    "SIM-2026-072"
+  ],
+  "justified_by_note": "The status now rests on SIM-2026-072, the re-analysis that withdrew the evidence this hypothesis had been advanced on. The records that formerly justified SUPPORTED -- SIM-2026-011-interaction, SIM-2026-015d, SIM-2026-017-statistics -- are superseded as to their alpha fits (see status_change_2026_08_17) and are retained below unaltered.",
+  "status_change_2026_08_17": {
+    "from": "SUPPORTED",
+    "to": "NOT_ESTABLISHED",
+    "date": "2026-08-17",
+    "authority": "research/data/simulations/SIM-2026-072.json (independent re-analysis), triggered by docs/governance/AUDIT-2026-08-11.md defects D-2 and D-3.",
+    "original_claim_preserved": "The record's claim, refutation_criteria, experimental_evidence and open_questions fields are left exactly as written. Per RESEARCH-DIRECTOR.md section 32 a correction preserves the original claim, the evidence available at the time, the challenge, the corrected analysis and the changed conclusion. This block supplies the last three.",
+    "evidence_at_the_time": "SIM-2026-011 measured alpha = 3.92 +/- 0.16 (dr >= 2, exact 24q TFIM) against the stress-tensor prediction 2*Delta_T = 4.0, a 1.96% deviation inside 1.2 sigma, with an exponential fit ruled out (xi = 0.63, 56% off l_AdS). Two further evaluations agreed: 3.97 (16q exact) and 4.07 (16q chi=3 MERA). On that basis the record was set SUPPORTED on 2026-03-18.",
+    "the_challenge": "The published fit is unweighted nonlinear least squares on F in LINEAR space, applied to a steeply falling profile. SIM-2026-072 shows the single point dr = 2 carries 95.8% of that objective, so the reported exponent is essentially the dr=2->3 local slope (4.2315), not a property of the profile. Changing only the error model and DISCARDING NO DATA gives alpha = 2.822 (relative-error weighting) or 2.890 (log-space OLS). Across 15 defensible estimator x window choices the published value is the MAXIMUM. The local log-slopes (2.035, 4.232, 2.603, 2.456, 2.461, 2.533, 2.658, 2.841, 3.102, 3.482, 4.064) show a spike at dr=2 and a rise at the far end bracketing a genuine intermediate plateau near 2.6; no dataset shows any flat region at 4. The three 'independent' evaluations move together under the same systematic (3.92->2.56, 3.97->2.75, 4.07->2.63 on dropping dr=2), because they share one observable, one operator, one window and one fitting routine. The record's own contact_term reasoning excludes dr=1 as an adjacent-site contact interaction; dr=2 is the unique separation at which a Hamiltonian bond still bridges the two operator supports, i.e. the next member of the same family.",
+    "corrected_analysis": "The measured quantity is the intermediate-separation exponent alpha = 2.6 +/- 0.2, stable across all three datasets and across estimator choice. The bootstrap on the published estimator gives mean 3.358, sigma 0.635 (reproducing this project's own SIM-2026-017 bootstrap of 3.369 +/- 0.6335, which was never quoted alongside the +/-0.16 covariance band).",
+    "changed_conclusion": "alpha = 3.92 +/- 0.16 is WITHDRAWN as a measurement. It does not support the stress-tensor identification: 2*Delta_T = 4 lies outside the plateau band. Nor does it support the scalar alternative: 2*Delta_epsilon = 2 is also outside it. The exchange channel is therefore OPEN. Status is NOT_ESTABLISHED rather than REFUTED because the hypothesis's own registered test was never run (see outstanding_killer_test): the stress-tensor prediction has not been tested and failed, it has not been tested at all.",
+    "note_on_counterfactual_novelty": "Per RESEARCH-DIRECTOR.md section 6 the correction raises rather than lowers the scientific content of this branch. alpha = 4 was fixed in advance by Delta_T = 2, a Virasoro theorem holding in every 2D CFT -- near-zero counterfactual novelty, the experiment could not have come out otherwise given a pure stress-tensor probe. alpha = 2.6 is predicted by neither candidate channel and is a real open question.",
+    "downstream_records_affected": [
+      "SIM-2026-011-interaction.json, SIM-2026-015d.json, SIM-2026-017-statistics.json -- alpha fits superseded (owner: sims remediation pass)",
+      "HYP-2026-002 -- experimental_evidence.power_law_fit_dr_ge2 carries the withdrawn 3.9218 (annotated 2026-08-17)",
+      "HYP-2026-011 -- claim text quotes dr^{-3.92} (annotated 2026-08-17)",
+      "HYP-2026-022 -- its [3.2, 4.8] acceptance window was anchored on the withdrawn value (annotated 2026-08-17)",
+      "HYP-2026-025, HYP-2026-027 -- their universality claims compare a force exponent at Ising to scaling dimensions elsewhere; the Ising anchor is withdrawn (annotated 2026-08-17)",
+      "PRD accession DV13971 (with editors), README headline, Zenodo record -- outside this pass's ownership"
+    ]
+  },
+  "outstanding_killer_test": {
+    "test": "V_T versus V_X channel discrimination -- exactly the test written into this record's own refutation_criteria on 2026-03-11 and never executed.",
+    "as_registered": "Build two-hologron states with stress-tensor boundary primaries (T = -J * Z_j Z_{j+1}) and, separately, with spin primaries (Pauli X), on the SAME state and through the SAME energy-difference protocol; compare V_T(dr) and V_X(dr) in functional form and amplitude. The hypothesis is refuted if the two are indistinguishable, or if V_T is exponential.",
+    "why_it_was_never_run": "SIM-2026-011 used the Zou-Milsted-Vidal epsilon-sector boundary primary, not the stress tensor, and no V_X comparison arm was ever built. The record's own experimental_evidence.operator_caveat says so plainly; the SUPPORTED status was nevertheless read off the single V_epsilon curve.",
+    "what_it_must_now_answer": "Whether the alpha = 2.6 +/- 0.2 plateau is channel-specific at all. Because 2.6 matches neither 2*Delta_T = 4 nor 2*Delta_epsilon = 2, a V_T/V_X split is now the discriminating measurement rather than a confirmatory one, and its outcome is genuinely open in the section 6 sense.",
+    "status": "MIS-SPECIFIED -- cannot discriminate as written (SIM-2026-074, 2026-08-24)",
+    "executed_2026_08_23": {
+      "record": "SIM-2026-073",
+      "preregistered": "research/tools/channel-test/PREREGISTRATION.md (commits aed9051/ba1b4ae, before the driver existed)",
+      "result": "alpha_T = 2.677 +/- 0.329, alpha_X = 2.340 +/- 0.100 on the pre-registered dr>=3 window at n=24. Separation 0.98 sigma, gap 0.337, amplitude ratio 4.5x.",
+      "verdict": "D_INDETERMINATE. Fails Outcome A (needs >3 sigma). Also fails Outcome B (channel-blind) because the amplitudes differ 4.5x and the gap 0.337 exceeds the 0.3 threshold, even though the exponents are within one sigma.",
+      "why_it_does_not_resolve": "The record's own criterion requires indistinguishability in BOTH functional form and amplitude. Form is nearly indistinguishable; amplitude is not. Additionally the T probe shows NO local-slope plateau at all -- its slope climbs monotonically 1.45 -> 11.97 -- so its fitted exponent describes a curve that is not a power law.",
+      "what_it_DOES_establish": "No probe tested produces an exponent consistent with 2*Delta_T = 4. Whole-window log-OLS: 3.46 (eps), 2.68 (T), 2.34 (X); plateaus 2.59 (eps), 2.16 (X). The stress-tensor identification this hypothesis rests on receives no support from the probe designed to demonstrate it.",
+      "limiting_systematic": "Open-boundary edge effect: all arms curve upward at large dr (eps slope reaches 19.51 at dr=16, where the far operator sits at site 22 of 23). Plus T's signal is 4.5x weaker than X's and hits the noise floor. Next step is PBC or a geometrically pre-registered edge-distance cut, plus a non-critical matched control.",
+      "status_effect": "None. Status remains NOT_ESTABLISHED and confidence low. An indeterminate killer test neither rescues nor refutes."
+    },
+    "mis_specification_2026_08_24": {
+      "finding": "This record's refutation_criteria names 'stress tensor T(x) = -J sum_i Z_i Z_{i+1}' versus 'spin primaries X_i'. Both labels are wrong AND the two operators are identical at criticality.",
+      "why": "Kramers-Wannier self-duality at h=1 maps Z_jZ_{j+1} <-> X_j, so both are the energy density epsilon (Delta=1). Verified numerically: identical vevs to 1e-15, identical force profiles to 1e-13 at every separation on a periodic ring. The test compared epsilon against epsilon.",
+      "correct_labels": "Z_jZ_{j+1} = energy density (Delta=1), not the stress tensor (spin-2; that is what the Koo-Saleur construction in SIM-067/068/069 builds). X_j = the energy density's dual partner, not the spin primary. The TRUE spin primary is Z_j (order parameter, Delta_sigma=1/8) and it appears nowhere in this record's design.",
+      "the_correct_test_is_currently_BLOCKED": "Z_j is Z2-ODD. Measured directly with P = prod_k X_k: |GS> parity +1, Z|GS> parity -1, ZZ|GS> parity +1. So single excitations sit in a different symmetry sector from dual excitations, and F = E_dual - E0 - 2*dE_single subtracts across sectors. The energy-difference observable is undefined for a Z2-odd probe. A redesigned observable is required.",
+      "effect_on_status": "None directly -- status remains NOT_ESTABLISHED, confidence low. But the record is now in a worse position than before: it lacks not only supporting evidence but a valid registered test. Designing that test is the blocking item.",
+      "supersedes": "executed_2026_08_23, which described the test as 'run once, underpowered'. It was not underpowered; it carried no signal."
+    }
+  },
+  "experimental_evidence_SUPERSEDED_2026_08_17": "The experimental_evidence block immediately below is preserved as the evidence available on 2026-03-18. Its alpha = 3.92 +/- 0.16, its 'measured_deviation: 1.96% (within 1.2 sigma)' and its 'exponential_fit_ruled_out' entry are all conditional on the unweighted-linear-space estimator that SIM-2026-072 showed to be the artifact. DO NOT QUOTE THESE NUMBERS. The corrected measurement is alpha = 2.6 +/- 0.2 with the channel OPEN.",
+  "experimental_evidence": {
+    "sim_id": "SIM-2026-011",
+    "result": "Power-law F(dr) ~ dr^{-alpha} with alpha=3.92 +/- 0.16 for dr>=2 on exact 24q TFIM ground state.",
+    "stress_tensor_prediction": "alpha = 2*Delta = 4.0 (for Delta=2 stress tensor, T_mu_nu)",
+    "measured_deviation": "1.96% (within 1.2 sigma)",
+    "exponential_fit_ruled_out": "xi=0.63, 56% off l_AdS -- power law is strongly preferred",
+    "operator_caveat": "Excitation used was Zou-Milsted-Vidal epsilon boundary primary (not the stress tensor T_mu_nu directly). The alpha=3.92 result is consistent with the stress-tensor prediction but does not constitute direct proof that the stress tensor is the mediating operator. Alternative explanation: the epsilon primary (Delta_CFT~1) maps to a bulk operator with effective Delta_bulk~2 due to MERA isometry renormalization.",
+    "contact_term": "dr=1 excluded (F=-2.352, contact interaction between adjacent sites -- not a propagating force).",
+    "data_file": "research/data/simulations/SIM-2026-011-interaction.json"
+  },
+  "section8_flag_2026_08_17": "The philosophical_implications field below contains an ungated priority formulation ('would constitute the first detection of spin-dependent exchange in a tensor-network simulation of emergent gravity'). Per RESEARCH-DIRECTOR.md section 8 no result may carry such a label until a literature gate has been run and recorded, and none has been run for this claim. It is preserved because it is conditional and interpretive rather than a stated result, and because section 32 forbids silently editing history -- but it must not be carried into any write-up in that form. The two conditions it depends on are both unmet: V_X was never measured (see outstanding_killer_test), and the exponent it rests on is withdrawn (see status_change_2026_08_17). The correct positioning, if this is ever run, is a comparison against the specific prior tensor-network force literature the project already cites -- Sahay, Lukin & Cotler on the exponential bulk form, and Zou, Milsted & Vidal for the boundary-primary construction the excitation is built from -- not a precedence formulation.",
+  "open_questions": [
+    "Does alpha converge to exactly 4.0 at chi=3, or is 3.92 a finite-bond-dimension artifact?",
+    "What is the effective conformal dimension of the epsilon primary in the MERA bulk frame?",
+    "Would a direct stress-tensor excitation (T_mu_nu = -J * ZZ) give the same alpha=4 or a different exponent?",
+    "Does the dr=1 contact term have a holographic interpretation (near-horizon physics)?"
+  ],
+  "philosophical_implications": "If stress-tensor hologrons produce power-law forces while spin hologrons produce exponential forces in the SAME MERA circuit, it would constitute the first detection of spin-dependent exchange in a tensor-network simulation of emergent gravity. In Roux's language, it would demonstrate that the Liouville vertex operator alpha (which determines conformal dimension and hence propagator power law) is physically meaningful and measurable. This would elevate the Roux/MERA connection from a mathematical analogy to an experimentally grounded identification. The alpha=3.92 result is striking because it emerges from a purely classical simulation of a 24-qubit spin chain -- it suggests that the distinction between scalar and graviton exchange is already encoded in the entanglement structure of the critical ground state.",
+  "created_date": "2026-03-11",
+  "last_updated": "2026-08-24",
+  "created_by": "theory-lead",
+  "source_analysis": "roux-superspace-analysis.md",
+  "speculative_flag": false,
+  "status_history": [
+    {
+      "date": "2026-09-07",
+      "from": "NOT_ESTABLISHED",
+      "to": "CLOSED_UNTESTABLE_N_LE_24",
+      "by": "SIM-2026-075 (pre-registered PREREGISTRATION-T.md @ 82b7b4e)"
+    }
+  ],
+  "refutation_criteria_REWRITTEN_2026_09_07": {
+    "design": "Two Z2-even local probes on the critical TFIM ring with chord distance: O_H = KW-even Hamiltonian density (leading T+Tbar, Delta 2) vs O_E = KW-odd partner (leading eps, Delta 1). Null: force = probe two-point function (alpha 4 vs 2). Deviation > 3 sigma AND > 0.5 after convergence across n = 16/20/24. Gates as controls: G1, G2, G4 (probe's own two-point exponent within 0.3 of 2 Delta), G5 (Koo-Saleur structural zeros), G7 (h=2 control clean).",
+    "outcome": "VOID at every size and in the one pre-registered retry (SIM-2026-075). Arm H fails G4 (two-point exponent 7.2 at n=24, not 4: lattice-scale modes dominate at n<=24); Arm E's force is identically zero at h=1 (structural blind spot of the energy-difference observable). HYP-2026-008 is therefore CLOSED as untestable at n <= 24 in this framework, per the pre-registration's own closure clause.",
+    "superseded_criteria": "The 2026-03-11 criteria (T = -J sum Z_iZ_{i+1} vs X_i) compared one operator to itself (ERRATA E8) and are void."
+  }
+}

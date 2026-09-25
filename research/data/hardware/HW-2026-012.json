@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-012",
+  "organization": "Google",
+  "processor": "Willow successor (unnamed)",
+  "date": "2026-12-01",
+  "source_url": "https://blog.google/innovation-and-ai/technology/research/google-willow-quantum-chip/",
+  "physical_qubits": 500,
+  "logical_qubits": 0,
+  "error_correction_ratio": "TBD",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": false,
+  "frontier_category": "physical_qubits",
+  "notes": "Google Quantum AI roadmap: successor to 105-qubit Willow processor, targeting 500-1,000 physical qubits by late 2026 or early 2027. Aims for coherence stability measured in days rather than microseconds. Based on superconducting transmon architecture with AlphaQubit neural-network decoder."
+}

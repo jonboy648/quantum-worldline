@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-007",
+  "title": "QuPepFold: Hybrid quantum-classical protein folding simulations for disordered proteins",
+  "authors": ["Akshay Uttarkar", "Vidya Niranjan"],
+  "date": "2026-02-01",
+  "source": "other",
+  "source_url": "https://phys.org/news/2026-02-quantum-ideas-messy-world-disordered.html",
+  "arxiv_id": "",
+  "abstract": "Develops QuPepFold, a modular Python package for hybrid quantum-classical protein folding simulations targeting intrinsically disordered proteins (IDPs). Maps peptide conformations onto tetrahedral lattice using binary directional codes. Uses VQE with CVaR objective function for noise reduction. Achieves over 90% fidelity reproducing ground-state energies on IonQ Aria-1. Works across multiple hardware platforms.",
+  "relevance": 4,
+  "tags": ["protein-folding", "biological-quantum", "VQE", "disordered-proteins", "hybrid-quantum-classical", "IonQ"],
+  "key_claims": [
+    "Over 90% fidelity reproducing ground-state energies on IonQ Aria-1",
+    "Targets intrinsically disordered proteins resistant to traditional methods",
+    "CVaR objective function for noise reduction in VQE",
+    "Democratizes quantum-classical protein folding for non-quantum-experts",
+    "Cross-platform compatibility: Qiskit, Braket simulators"
+  ],
+  "hardware_used": "IonQ Aria-1",
+  "qubit_count": 0,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-03-10"
+}

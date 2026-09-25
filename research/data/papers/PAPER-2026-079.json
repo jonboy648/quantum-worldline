@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-079",
+  "title": "Towards Ultra-High-Rate Quantum Error Correction with Reconfigurable Atom Arrays",
+  "authors": ["Chen Zhao", "Casey Duckering", "Andi Gu", "Nishad Maskara", "Hengyun Zhou"],
+  "date": "2026-04-17",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2604.16209",
+  "arxiv_id": "2604.16209",
+  "abstract": "Develops ultra-high-rate quantum error correcting codes co-designed with neutral atom (reconfigurable) hardware. Identifies structural conditions on affine permutation matrices that make encoding rates exceeding 1/2 compatible with efficient implementation, enabling syndrome extraction and atom rearrangement under realistic parallel control constraints. Demonstrated code instances: [[2304,1156,<=14]] at logical error rate 1.3e-13 per round, and [[1152,580,<=12]] at 2.9e-11 per round, both at physical noise p=0.1%. Approaches the teraquop regime.",
+  "relevance": 3,
+  "tags": ["quantum-error-correction", "neutral-atoms", "QuEra", "high-rate-codes", "logical-qubits", "reconfigurable-arrays", "teraquop", "fault-tolerant"],
+  "key_claims": [
+    "Encoding rates exceeding 50% achieved — substantially higher than typical ~10% surface code rates",
+    "[[2304,1156]] code achieves logical error rate 1.3e-13 per round at p=0.1% noise",
+    "Hardware co-design for neutral atom reconfigurable arrays (QuEra-style)",
+    "Approaches teraquop regime: 1 error per trillion operations",
+    "Relevant to Aquila-class hardware used in our HYP-017 design"
+  ],
+  "hardware_used": "Reconfigurable neutral atom arrays (QuEra Aquila class)",
+  "qubit_count": 2304,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15",
+  "supports_or_contradicts": "SUPPORTS — QEC breakthrough on the exact hardware class (QuEra neutral atoms) we targeted for HYP-017. Higher logical qubit counts at lower overhead increases future simulation capacity for MERA circuits on Aquila."
+}

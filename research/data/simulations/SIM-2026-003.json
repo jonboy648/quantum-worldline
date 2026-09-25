@@ -1,0 +1,178 @@
+{
+  "id": "SIM-2026-003",
+  "description": "VQE optimization of 20-qubit binary MERA (5 layers, 190 params, H-gate init) to critical Ising GS (J=h=1, OBC N=20). v2: H-gate initialization, 10-seed COBYLA + 2-phase polish. AerEstimator(approx=True). Step 3 of HYP-2026-002. Key finding: MERA converges to ferromagnetic product state; ZZ connected correlators near-zero at r>=2. Architecture revision required.",
+  "type": "vqe_optimization",
+  "date": "2026-03-10",
+  "hypothesis_id": "HYP-2026-002",
+  "paper_ref": "PAPER-2026-003",
+  "step": 3,
+  "version": "v2_hgate_init",
+  "backend": "qiskit_aer_estimator_approximation_true",
+  "circuit": {
+    "qubits": 20,
+    "layers": 5,
+    "n_params": 190,
+    "cx_count": 38,
+    "depth": 36,
+    "architecture": "Hgate_init_binary_MERA_5layer_OBC",
+    "hologron_gate": "Ry",
+    "hologron_angle_rad": 1.0471975511965976,
+    "anchor_site": 5,
+    "causal_cone": "5 layers covers dr=1..32 (full range for N=20)",
+    "init_note": "H gates before MERA: |+>^N start, target <Z>=0"
+  },
+  "vqe": {
+    "optimizer": "COBYLA_10seed_multistart_then_2phase_polish",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      42,
+      7,
+      13,
+      99,
+      5,
+      17
+    ],
+    "n_total_evals": 55000,
+    "t_per_eval_s": 0.058,
+    "E_optimized": -24.66699,
+    "E0_exact": -25.107797,
+    "pct_error": 1.7557,
+    "converged_1pct": false,
+    "converged_2pct": true,
+    "elapsed_seconds": 7200.0,
+    "v2_seed_bests": {
+      "seed_0": -24.607,
+      "seed_1": -24.66,
+      "seed_2": -24.632,
+      "seed_3": -24.624,
+      "seed_42": -24.646,
+      "seed_7": -23.45,
+      "seed_13": -24.648,
+      "seed_99": -24.632,
+      "seed_5": -24.644,
+      "seed_17": -24.648
+    },
+    "polish_medium": -24.665,
+    "polish_fine": -24.66699,
+    "state_analysis": {
+      "magz_avg": -0.7863,
+      "magz_range": [
+        -0.843,
+        -0.471
+      ],
+      "magx_avg": 0.529,
+      "state_type": "ferromagnetic_product_like",
+      "C_connected_r1": 0.00772,
+      "C_connected_r2plus": 0.0,
+      "diagnosis": "MERA converges to ferromagnetic product state despite H-gate init. Real-valued MERA ansatz lacks Z2 symmetry protection. C_connected(r>=2)=0 means no multi-site entanglement captured. Requires symmetry-enforced or ZX-calculus MERA."
+    }
+  },
+  "force_profile": {
+    "delta_rho": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "V_quantum": [
+      -0.004705,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "V_analytical": [
+      -6.72,
+      -3.32,
+      -1.6200000000000003,
+      -0.77,
+      -0.345,
+      -0.13250000000000006,
+      -0.026250000000000023,
+      0.02687499999999999
+    ],
+    "C_vac": [
+      0.00772,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "C_two": [
+      0.00301,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "anchor_site": 5,
+    "magz_avg": -0.7863,
+    "note": "V~0 because MERA in ferromagnetic product state, not critical GS"
+  },
+  "fit": {
+    "success": false,
+    "error": "V(dr) signals ~0: MERA state not converged to critical GS",
+    "xi_3layer": 1.233,
+    "xi_theory": 1.4426950408889634,
+    "diagnosis": "Holographic fit requires V(dr) ~ C1 - C2*exp(-dr/xi). Current V~0 everywhere. Classical V(dr=1)=-0.345 is the target scale."
+  },
+  "comparison": {
+    "paper_C1": 0.08,
+    "paper_C2": 13.6,
+    "paper_l_AdS": 1.4426950408889634,
+    "xi_3layer_16q": 1.233,
+    "xi_5layer_20q": null,
+    "xi_theory": 1.4426950408889634,
+    "E_3layer_16q": -19.642,
+    "E0_3layer": -20.016,
+    "pct_err_3layer": 1.87,
+    "E_5layer_20q": -24.66699,
+    "E0_5layer": -25.107797,
+    "pct_err_5layer": 1.7557,
+    "expressibility_note": "5-layer 20q ceiling ~1.76% vs 3-layer 16q ~1.87%. Slight improvement. Both circuits fail to produce critical correlations: C_connected(r>=2)~0. Root cause: real-valued binary MERA lacks Z2 symmetry protection for TFIM.",
+    "classical_comparison": {
+      "V_classical_dr1_OBC": -0.34483,
+      "V_classical_dr1_PBC": -0.375586,
+      "V_quantum_dr1": -0.004705,
+      "ratio": 0.0136,
+      "interpretation": "1.4% of classical signal captured at dr=1; 0% at dr>=2"
+    },
+    "normalization_note": "Paper C1=0.08, C2=13.6 uses different normalization than C_two - C_vac. Classical V(dr=1)=-0.345 vs AdS prediction V(dr=1)=-6.72. Direct comparison requires matching normalization conventions.",
+    "causal_cone_note": "5-layer covers dr=1..32; 3-layer covered only dr=1..8"
+  },
+  "feasibility": {
+    "cx_count": 38,
+    "depth": 36,
+    "n_params": 190,
+    "h2_error_pct": 7.33,
+    "heron_r3_error_pct": 17.34,
+    "h2_feasible_poc": true,
+    "hardware_target": "simulator_qiskit_aer",
+    "recommendation": "H2 at 7.33% error budget (CX=38) within 10% PoC threshold. But architecture revision needed before hardware run is meaningful. Symmetry-enforced MERA would likely use similar CX count."
+  },
+  "next_steps": {
+    "priority_1": "Symmetry-enforced MERA: enforce Z2 symmetry in circuit ansatz to prevent ferromagnetic local minimum collapse",
+    "priority_2": "Measure XX correlators with Rz hologrons: current state has <X>=0.53 (Rz rotates in ZY plane, modifies X-basis correlations)",
+    "priority_3": "7+ layer MERA on 32 qubits: deeper architecture with full causal cone at N=32 for proper holographic limit",
+    "priority_4": "Match paper normalization: resolve C1/C2 convention difference before comparing to C1=0.08, C2=13.6, l_AdS=1.443"
+  },
+  "hardware_target": "simulator_qiskit_aer",
+  "total_elapsed_seconds": 7200.0,
+  "theta_opt_path": "D:/quantum-worldline/research/data/simulations/theta_opt_SIM2026003.npy"
+}

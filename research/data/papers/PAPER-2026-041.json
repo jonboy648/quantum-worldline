@@ -1,0 +1,25 @@
+{
+  "id": "PAPER-2026-041",
+  "arxiv_id": "2601.21065",
+  "title": "Building Holographic Entanglement by Measurement",
+  "authors": ["Jonathan Jeffrey", "Lucien Gandarias", "Monika Schleier-Smith", "Brian Swingle"],
+  "published": "2026-01-30",
+  "journal": "arXiv preprint",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2601.21065",
+  "status": "WATCH",
+  "relevance": 3,
+  "topic": "Holographic entanglement / tensor network / quantum hardware preparation",
+  "summary": "Proposes a framework for preparing quantum states with holographic entanglement structure (obeying the Ryu-Takayanagi formula for a chosen bulk geometry) using only measurement-based operations. The bulk geometry is discretized into a coupling graph; evolving under this graph and measuring bulk nodes yields the desired boundary state. Works for hyperbolic disk and wormhole geometries. Requires only Gaussian operations + measurements -- implementable on photonic and cold-atom platforms.",
+  "key_findings": [
+    "Measurement-based preparation of RT-formula-obeying entanglement for arbitrary chosen bulk geometries",
+    "Only Gaussian operations and measurements required -- hardware-efficient",
+    "Demonstrated numerically for hyperbolic disk and wormhole geometries",
+    "Does not require solving Einstein equations -- geometry is an input, not an output"
+  ],
+  "project_relevance": "WATCH. Complementary approach to MERA for preparing holographic states. Their measurement-based preparation is hardware-efficient (Gaussian + measurement) vs our VQE approach. The hyperbolic geometry they target is the same geometry our MERA lives in. Not directly competing -- they aim at state preparation, we aim at probing emergent forces. Monitor for any future work on force measurements in their framework.",
+  "recommended_followup": "none",
+  "scan_date": "2026-03-18",
+  "scan_number": 5,
+  "competition_assessment": "Not competing. Different goal (state preparation vs force measurement). Different platform (photonic/cold-atom vs trapped-ion/superconducting)."
+}

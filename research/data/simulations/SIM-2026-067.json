@@ -1,0 +1,23 @@
+{
+  "id": "SIM-2026-067",
+  "hypothesis_id": "HYP-2026-027",
+  "related": ["SIM-2026-065", "SIM-2026-066", "SIM-2026-061"],
+  "date": "2026-07-19",
+  "type": "C_TTT Route B implementation + Ising validation (circle / Koo-Saleur matrix-element route)",
+  "hardware": "local CPU, sparse ED (scipy), N=8..18 spin-1/2 periodic chains. Driver research/tools/cttt-circle/qw_cttt_circle.py; design research/tools/merakit-setup/CTTT-ROUTE-B-CIRCLE-DESIGN.md.",
+  "goal": "Successor to Route A (SIM-066): extract C_TTT = 2*sqrt(2)/sqrt(c) with momentum as an ACTUAL quantum number. Realized on the periodic chain (circle), where conformal spin s is the exact translation eigenphase, not inside MERA.",
+  "design_evolution": "Original circle design (equal-time <hh>/<hhh> correlators with cylinder kinematics, KW-parity argument for zero eps-content of h) was FALSIFIED by ED within the hour: <hh>_conn is NEGATIVE, decays faster than the s(x)^4 cylinder form, and vanishes EXACTLY at antipodal separation (free-fermion closed form -(16/pi^2)/(4x^2-1)^2), while <eps eps>/s^2 and <sig sig>/s^(1/4) plateau perfectly and correlator-based C_sse extrapolates to 0.4996. The naive 'h contains a(T+Tbar) => positive a^2*c*s^4 tail' chiral bookkeeping fails on the equal-time slice -- sign/shape resolution left OPEN as a theory footnote. Pivoted same-day to the Koo-Saleur MATRIX-ELEMENT route (Milsted-Vidal): H_n = (N/2 pi v) sum_x e^{inx 2pi/N}(h_x - e0) ~ L_n + Lbar_{-n}; c_meas = 2|<T|H_{+-2}|0>|^2; C_TTT = 2 sqrt(2)/sqrt(c_meas). Literature anchor confirmed AFTER implementation: Zou-Milsted-Vidal (arXiv:1710.05397, PRL 121 230402) use exactly this c-formula.",
+  "method_notes": "(1) States resolved into exact (energy, Z2 charge, translation phase) eigenbases; Z2 resolution essential (sigma-tower level-2 descendants are accidentally degenerate with T at small N, sitting at s=+-2 in the odd sector). (2) T = LOWEST even-sector |s|=2 state; max-element identification tried and FALSIFIED (lattice band-edge states carry ~2x larger raw UV elements than T; KS suppression only applies to low CFT states -- Ising Delta->3 eps-tower s=2 state has element 0.96 vs T's 0.50 at N=12). (3) Chiral split is FREE: momentum conservation; wrong-chirality element <T|H_{-+2}|0> = Lbar_2|0>-type is a STRUCTURAL ZERO -- measured 0.0000 at every N (the G4-analog, and unlike Route A's G4 it cannot be satisfied vacuously). (4) C_sse pin via state-ratio <sigma|eps(0)|sigma>/<eps|eps(0)|0> (lattice normalization cancels).",
+  "results": {
+    "ising": "N=8..18, v=2 exact, 1/N^2 extrapolation: c_meas -> 0.49871 (target 0.5), C_TTT -> 3.9936 (target 4.000, 0.16%), C_sse -> 0.49996 (target 0.5), G4 wrong-chirality = 0.0000 at every N, momentum labels exact (+-2.00). ISING 4.000 GATE PASSED.",
+    "tci_of": "O'Brien-Fendley lam3=0.856 (project convention = 2x H_OF(lambda=0.428)), N=10..16: G1 spectrum matches TCI beautifully (sigma 0.071 vs 3/40, eps 0.195 vs 1/5, sigma' 0.876 vs 7/8, towers correct) but c_meas 1.45 -> 1.21, far from 0.7 and drifting slowly. NOT CONVERGED AT ED SIZES -- expected: TCI has L_{-2}eps at Delta=2.2 with the SAME quantum numbers as T (even, s=2), element contamination dies as ~N^{-0.2}; ZMV needed N<=128 with puMPS for this exact model. Velocity self-calibration also unreliable at these N (v_sigma~3.2 vs v_desc~3.5 inconsistent). Honest status: method validated, TCI needs puMPS-scale N."
+  },
+  "verdict": "ROUTE B VALIDATED ON ISING: C_TTT = 3.9936 vs 4.000 (0.16%) with all gates structural and passed -- the first successful C_TTT extraction in the program, after Route A's honest negative. TCI (the novel target 3.381) and Potts (3.162) require puMPS at N~64-128; NOTE (corrected 2026-07-20): there is NO public amilsted/puMPS package -- his public repos are evoMPS (Python TDVP) and ITensor/TDVP tooling. An earlier claim here that one existed was a web-search artifact, unverified. puMPS must be implemented (ZMV arXiv:1710.05397 gives the ansatz + Bloch-state construction) or approximated with MPSKit.jl / ITensorInfiniteMPS.jl. Retrospective insight: Route A (one-site MERA chi<=12) never had a chance at TCI -- even exact diagonalization needs N~128-scale IR resolution to separate T from L_{-2}eps.",
+  "files": [
+    "research/tools/cttt-circle/qw_cttt_circle.py",
+    "research/tools/cttt-circle/qw_cttt_circle_results_ising.json",
+    "research/tools/cttt-circle/qw_cttt_circle_results_of.json",
+    "research/tools/merakit-setup/CTTT-ROUTE-B-CIRCLE-DESIGN.md"
+  ],
+  "status": "COMPLETE (Ising gate passed; TCI/Potts continuation = IMPLEMENT puMPS per ZMV 1710.05397 or evaluate MPSKit.jl -- no public package exists, verified 2026-07-20)"
+}

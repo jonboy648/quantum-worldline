@@ -1,0 +1,72 @@
+{
+  "id": "SIM-2026-023",
+  "type": "classical",
+  "purpose": "Classical reference baseline for HYP-2026-017 (Aquila Rydberg force law) and HYP-2026-020 (TEE)",
+  "method": "Bootstrap-resampled chi=3 MERA force profile from SIM-2026-015d (1000 resamples, gaussian noise sigma=1%)",
+  "n_qubits": 16,
+  "chi": 3,
+  "force_profile": {
+    "1": {
+      "value": -2.242653,
+      "sigma_1": 0.021954,
+      "sigma_3": 0.065861
+    },
+    "2": {
+      "value": -0.521394,
+      "sigma_1": 0.005202,
+      "sigma_3": 0.015605
+    },
+    "3": {
+      "value": -0.087763,
+      "sigma_1": 0.000863,
+      "sigma_3": 0.002588
+    },
+    "4": {
+      "value": -0.044425,
+      "sigma_1": 0.000456,
+      "sigma_3": 0.001368
+    },
+    "5": {
+      "value": -0.025015,
+      "sigma_1": 0.000248,
+      "sigma_3": 0.000744
+    },
+    "6": {
+      "value": -0.012948,
+      "sigma_1": 0.00013,
+      "sigma_3": 0.000391
+    },
+    "7": {
+      "value": -0.007253,
+      "sigma_1": 7.4e-05,
+      "sigma_3": 0.000223
+    },
+    "8": {
+      "value": -0.003244,
+      "sigma_1": 3.4e-05,
+      "sigma_3": 0.000101
+    }
+  },
+  "alpha_fit": {
+    "value": 4.077,
+    "sigma": 0.286,
+    "fit_window": [
+      2,
+      6
+    ],
+    "r_squared": 0.9971
+  },
+  "tee_reference": {
+    "value": 0.0,
+    "sigma": 0.05,
+    "rationale": "Critical Ising CFT has no topological order; expect S_topo ~= 0"
+  },
+  "emulator_acceptance_window": {
+    "alpha_min": 3.2,
+    "alpha_max": 4.8,
+    "rationale": "Within 20% of 4.0 per HYP-017 publication threshold"
+  },
+  "submit_to_hardware": "PENDING_EMULATOR_VALIDATION",
+  "created_date": "2026-05-01",
+  "created_by": "classical-simulator"
+}

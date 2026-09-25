@@ -1,0 +1,44 @@
+{
+  "id": "HYP-2026-010",
+  "claim": "The 0.72% residual between measured holographic transport time and the null geodesic prediction (HYP-2026-006, CONFIRMED) is a virtual graviton exchange correction to the geodesic travel time, arising from Roux's (2026) Liouville boundary CFT. This correction shifts the effective conformal dimension of the transported excitation by delta_Delta = g_grav * alpha^2 * (Q - 2*alpha), where Q=2 (Liouville background charge) and g_grav is the graviton coupling. Because g_grav is set by the AdS curvature (Lambda = -1/l_AdS^2 in Roux's framework), the correction to transport time scales as l_AdS^2. Therefore: varying l_AdS by detuning the TFIM away from J/Omega=1 criticality should produce a residual delta_T/T that grows as l_AdS^2. At J/Omega=1 (our current measurement), l_AdS=1/log(2) ~ 1.443 and delta_T/T ~ 0.72%. At J/Omega=0.8 (off-critical), l_AdS increases and the residual should be larger.",
+  "confidence": "very_low",
+  "confidence_rationale": "TESTED (2026-03-12). Two approaches: (A) Wang & He boundary H + mass detuning delta*sum(Z_i) at 7 values, (B) Standard TFIM at 7 g values. Results: (A) delta=0 perfectly reproduces T=2.250, residual=-0.71% (confirms HYP-2026-006 consistency). Off-critical: transport time varies erratically (1.70, 1.95, 2.00 for negative delta; 3.30, 2.10, 0.55 for positive delta). No monotonic trend, no l_AdS^2 scaling. Transport signal degrades (dip amplitude increases) away from criticality. (B) TFIM shows ring propagation (T~3.8-5.2), completely different from Wang & He holographic transport (T=2.25). Confirms transport is MERA-specific. The 0.71% residual is likely a finite-size/discretization artifact, not a graviton correction.",
+  "source_findings": ["PAPER-2026-023", "HYP-2026-006", "PAPER-2026-010"],
+  "testable": true,
+  "test_design": "1. Run time-evolution simulations for 16q critical Ising MERA at 7 values of J/Omega: [0.75, 0.85, 0.90, 0.95, 1.00 (baseline), 1.05, 1.10]. At each J/Omega: (a) compute l_AdS from the MERA entanglement scaling (l_AdS = 1/log(2) at criticality; varies off-criticality). (b) Measure holographic transport time T_measured using Wang-He protocol: apply Y_i perturbation at boundary site i, time-evolve, measure rho^boundary_j[Y_j](t) and extract t_disappear and t_reappear. (c) Compute T_predicted = l_AdS * arccosh(1 + d^2 / (2*l_AdS^2)) for appropriate boundary separation d. (d) Compute residual = (T_measured - T_predicted) / T_predicted. 2. Fit residual vs l_AdS to power law. 3. Check if residual ~ l_AdS^2 is consistent with the data.",
+  "refutation_criteria": "If the residual shows no systematic J/Omega dependence (consistent with statistical noise at each J/Omega value), the hypothesis is refuted: the 0.72% is noise, not a Roux correction. If the residual scales as l_AdS^1 or l_AdS^0 rather than l_AdS^2, the specific Roux mechanism is wrong (though some correction may still exist).",
+  "test_results": {
+    "date": "2026-03-12",
+    "approach_A": {
+      "method": "Wang & He boundary H + delta*sum(Z_i) mass detuning",
+      "delta_values": [-0.3, -0.2, -0.1, 0.0, 0.1, 0.2, 0.3],
+      "transport_times": [2.0, 1.95, 1.70, 2.25, 3.30, 2.10, 0.55],
+      "residuals_pct": [-11.75, -13.95, -24.98, -0.71, 45.62, -7.33, -75.73],
+      "verdict": "No systematic scaling. Transport signal degrades off-criticality."
+    },
+    "approach_B": {
+      "method": "Standard TFIM: H = -sum Z_i Z_{i+1} - g sum X_i (PBC)",
+      "g_values": [0.75, 0.85, 0.90, 0.95, 1.00, 1.05, 1.10],
+      "transport_times": [5.20, 5.10, 5.00, 4.00, 3.80, 3.55, 3.45],
+      "verdict": "Ring propagation (T~L/2v), not holographic transport. Confirms Wang & He effect is MERA-specific."
+    },
+    "positive_finding": "TFIM vs Wang & He comparison proves T=2.25 holographic transport is genuinely different from 1D ring propagation (T~3.8). Strengthens HYP-2026-006.",
+    "data_file": "hyp010_criticality_scan.json",
+    "script": "hyp010_criticality_scan.py"
+  },
+  "hardware_required": "Local CPU only. 16q exact diagonalization + time evolution. ~5 min total.",
+  "earliest_testable": "2026-Q1",
+  "feasibility_verdict": "TESTED",
+  "feasibility_notes": "Test completed 2026-03-12. l_AdS^2 scaling NOT observed. The mass detuning approach (adding delta*sum(Z_i) to Wang & He H) disrupts the MERA critical structure, causing transport signal degradation rather than systematic transport time shift. A more refined test would require constructing off-critical MERA tensors (variational), which is substantially more complex.",
+  "philosophical_implications": "The negative result for l_AdS^2 scaling suggests the 0.72% residual is a discretization artifact (dt=0.05 time step, L=16 finite size), not a quantum gravity correction. However, the TFIM comparison provides an unexpected positive result: it demonstrates that the holographic transport is genuinely a MERA-specific effect (T=2.25 vs ring propagation T=3.8), not an artifact of the Hamiltonian structure. The excitation truly takes a shortcut through the emergent bulk geometry.",
+  "status": "inconclusive",
+  "justified_by": [],
+  "justified_by_note": "Added 2026-08-17 per audit D-10. DELIBERATELY EMPTY: the evidence for this hypothesis lives in research/data/simulations/hyp010_criticality_scan.json, which carries no SIM ID and is therefore not joinable to this record by the documented key. That is itself the defect -- a criticality scan that moves two headline claims has no simulation record. Assigning it an ID is outside this pass's ownership and is reported.",
+  "adverse_content_in_this_record_2026_08_17": "The test_results block above is more adverse to HYP-2026-006 than its own summary lines admit, and the audit (CLM-012, D-14) records this. (a) approach_A's verdict reads 'No systematic scaling', but the SAME block's detuning scan swings the transport time from 0.55 to 3.30 across delta in [-0.3, +0.3], i.e. residuals from -75.7% to +45.6%; that is a very large sensitivity to a parameter the transport claim treats as fixed, and it appears in no write-up. (b) approach_B's seven TFIM transport times (5.2, 5.1, 5.0, 4.0, 3.8, 3.55, 3.45 as g runs 0.75 -> 1.1) are STRICTLY MONOTONE in g. They are cited elsewhere as showing a 'non-systematic pattern' establishing that the MERA transport time is uniquely consistent with the AdS null geodesic. A strictly monotone sequence is not a non-systematic pattern, and the uniqueness claim does not follow from it. Neither observation is fixed here -- both are recorded so this record no longer reads as neutral support.",
+  "alternative_explanation": "Lin (PRL 2026, arXiv:2501.10691) thread embodiment framework predicts the 0.72% residual is a 1/N finite-size correction from thread discreteness, NOT an l_AdS^2 graviton correction. For a discrete MERA with N=16 boundary sites, the smooth geodesic is approximated by discrete tensor hops. Prediction: residual should scale as 1/N: ~0.71% at N=16, ~0.47% at N=24, ~0.35% at N=32. Test: run holographic_transport analytically at N=24 (minutes, no VQE). If residual drops to ~0.47%, Lin 1/N explanation confirmed and Roux graviton correction falsified.",
+  "created_date": "2026-03-11",
+  "last_updated": "2026-03-17",
+  "created_by": "theory-lead",
+  "source_analysis": "roux-superspace-analysis.md",
+  "speculative_flag": true
+}

@@ -1,0 +1,36 @@
+{
+  "id": "PAPER-2026-120",
+  "title": "Fast and Parallel High-Rate STAR Architecture for Megaquop Quantum Simulation",
+  "authors": [
+    "Refaat Ismail",
+    "Milan Kornjaca",
+    "Hong-Ye Hu",
+    "Nishad Maskara",
+    "Sheng-Tao Wang",
+    "Hengyun Zhou",
+    "Chen Zhao"
+  ],
+  "date": "2026-06-23",
+  "arxiv_id": "2606.25011",
+  "relevance": 5,
+  "abstract": "A fast, parallel, high-rate STAR (space-time-adaptive) architecture for fault-tolerant 'megaquop' quantum simulation on neutral atoms. Gives a concrete ~2,240 physical-qubit budget (~200 s/shot, ~5.5x space reduction vs surface-code STAR) for FT simulation of the 8x8 transverse-field Ising model.",
+  "tags": [
+    "fault-tolerant",
+    "neutral-atom",
+    "STAR-architecture",
+    "TFIM",
+    "QuEra",
+    "resource-estimate",
+    "megaquop"
+  ],
+  "key_claims": [
+    "~2,240 physical qubits for FT simulation of the 8x8 TFIM (same spin model as HYP-008/HYP-027).",
+    "Digital FT route to static holographic-force observables sidesteps the analog hologron-decay killer (R1) that shelved HYP-017.",
+    "Companion paper arXiv:2509.18294 (transversal STAR) is a required input and is uncatalogued."
+  ],
+  "seeds_hypothesis": "HYP-2026-029",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.25011",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

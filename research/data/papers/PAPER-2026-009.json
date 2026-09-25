@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-009",
+  "title": "Emergent Holographic Forces from Tensor Networks and Criticality",
+  "authors": ["Rahul Sahay", "Mikhail D. Lukin", "Jordan Cotler"],
+  "date": "2025-06-01",
+  "source": "prx",
+  "source_url": "https://doi.org/10.1103/PhysRevX.15.021078",
+  "arxiv_id": "2401.13595",
+  "abstract": "Formulates an efficiently implementable multi-scale entanglement renormalization ansatz (MERA) model of AdS/CFT providing a mapping between a (1+1)-dimensional critical spin system and a (2+1)-dimensional bulk theory. The bulk theory furnishes excitations (hologrons) with attractive interactions matching predictions for matter coupled to AdS gravity at long distances. Key parameters: l_AdS^{-1} = 0.69(1) ~ log(2), mc^2 = 2.5(1), C1 = 0.080(8), C2 = 13.6(8).",
+  "relevance": 5,
+  "tags": ["MERA", "holographic", "AdS/CFT", "hologron", "emergent-gravity", "tensor-network", "critical-Ising"],
+  "key_claims": [
+    "Hologron interaction potential matches AdS gravity predictions at long distances",
+    "Force is attractive, quasilocal, and position-dependent (not just distance)",
+    "l_AdS = 1/log(2) = 1.4427 emerges from binary MERA structure",
+    "Interaction potential: V_TN(|rho1-rho2|) ~ C1 - C2 * exp(-|rho1-rho2|/l_AdS)",
+    "Radial boost factor b_AdS encodes relativistic rest-frame corrections"
+  ],
+  "hardware_used": "classical MERA optimization",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

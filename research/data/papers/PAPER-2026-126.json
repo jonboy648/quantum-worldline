@@ -1,0 +1,27 @@
+{
+  "id": "PAPER-2026-126",
+  "title": "Breaking the bicycle frame: Coset-based quantum LDPC codes",
+  "authors": [
+    "Arda Aydin",
+    "Itzhak Tamo",
+    "Alexander Barg"
+  ],
+  "date": "2026-06-15",
+  "arxiv_id": "2606.17268",
+  "relevance": 2,
+  "abstract": "Coset-based two-block quantum LDPC code construction.",
+  "tags": [
+    "qLDPC",
+    "coset-codes",
+    "quantum-error-correction"
+  ],
+  "key_claims": [
+    "Two-block coset qLDPC construction.",
+    "No hyperbolic/holographic geometry -- does not advance the holographic-code-as-bulk-geometry angle.",
+    "WATCH-level; keeps the codes thread monitored."
+  ],
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.17268",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

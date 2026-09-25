@@ -1,0 +1,417 @@
+{
+  "n": 24,
+  "anchor": 6,
+  "E0": -30.1997123313003,
+  "rng_seed": 20260817,
+  "preregistration": "research/tools/channel-test/PREREGISTRATION.md",
+  "validation_gate": {
+    "checked": true,
+    "passed": true,
+    "max_rel_err": 1.4390761745341405e-11,
+    "detail": {
+      "1": {
+        "published": -2.351692205770835,
+        "recomputed": -2.351692205770803,
+        "rel_err": 1.359634693296267e-14
+      },
+      "2": {
+        "published": -0.5736905904286083,
+        "recomputed": -0.5736905904285763,
+        "rel_err": 5.573461312188543e-14
+      },
+      "3": {
+        "published": -0.10316809917935998,
+        "recomputed": -0.10316809917932801,
+        "rel_err": 3.099254843652424e-13
+      },
+      "4": {
+        "published": -0.04878358875105704,
+        "recomputed": -0.048783588751025064,
+        "rel_err": 6.55434008194235e-13
+      },
+      "5": {
+        "published": -0.028200650592275167,
+        "recomputed": -0.028200650592243193,
+        "rel_err": 1.133818633175898e-12
+      },
+      "6": {
+        "published": -0.018005777922400767,
+        "recomputed": -0.018005777922368793,
+        "rel_err": 1.7757868194867338e-12
+      },
+      "7": {
+        "published": -0.012184604917560904,
+        "recomputed": -0.01218460491752893,
+        "rel_err": 2.6241657670099572e-12
+      },
+      "8": {
+        "published": -0.008543928753709906,
+        "recomputed": -0.008543928753677932,
+        "rel_err": 3.742356008682858e-12
+      },
+      "9": {
+        "published": -0.006114281901496099,
+        "recomputed": -0.006114281901464125,
+        "rel_err": 5.229464984494861e-12
+      },
+      "10": {
+        "published": -0.004409850656966086,
+        "recomputed": -0.004409850656934111,
+        "rel_err": 7.250681620860707e-12
+      },
+      "11": {
+        "published": -0.0031643852148341978,
+        "recomputed": -0.0031643852148022233,
+        "rel_err": 1.0104466093228112e-11
+      },
+      "12": {
+        "published": -0.0022218714808168727,
+        "recomputed": -0.0022218714807848983,
+        "rel_err": 1.4390761745341405e-11
+      }
+    }
+  },
+  "arms": {
+    "eps": {
+      "F": {
+        "1": -2.351692205770803,
+        "2": -0.5736905904285763,
+        "3": -0.10316809917932801,
+        "4": -0.048783588751025064,
+        "5": -0.028200650592243193,
+        "6": -0.018005777922368793,
+        "7": -0.01218460491752893,
+        "8": -0.008543928753677932,
+        "9": -0.006114281901464125,
+        "10": -0.004409850656934111,
+        "11": -0.0031643852148022233,
+        "12": -0.0022218714807848983,
+        "13": -0.0014863929930406528,
+        "14": -0.0008980998667240669,
+        "15": -0.00042522452897841845,
+        "16": -0.00012073566888304299
+      },
+      "dropped_separations": {},
+      "n_dropped": 0,
+      "sign_flips_in_window": [],
+      "max_dr_valid": 16,
+      "sign_changes_below_window_informational": [],
+      "sign_note": "Reference sign taken at dr=3 (window start), not dr=1. Points below the window are contact terms and their sign is not evidence of anything. Truncation is at the first sign change at or after dr=3, which is also where the profile meets the numerical noise floor.",
+      "primary_window_dr_ge3": {
+        "n_pts": 14,
+        "alpha_log_ols": 3.45585798245202,
+        "sigma_fit": 0.30828002980915536,
+        "alpha_relerr": 3.8919313466621785,
+        "alpha_linear_unweighted_BANNED": 2.5767534988547327,
+        "bootstrap": {
+          "mean": 3.4895760463881085,
+          "std": 0.41854691303489544,
+          "n": 2000,
+          "sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence."
+        },
+        "amplitude_at_dr3": -0.10316809917932801
+      },
+      "secondary_window_dr_ge2": {
+        "alpha_log_ols": 3.4006449308295696
+      },
+      "local_slopes": [
+        {
+          "dr_mid": 1.5,
+          "slope": 2.035354489218875
+        },
+        {
+          "dr_mid": 2.5,
+          "slope": 4.231512124786995
+        },
+        {
+          "dr_mid": 3.5,
+          "slope": 2.603449433554577
+        },
+        {
+          "dr_mid": 4.5,
+          "slope": 2.4560374192340557
+        },
+        {
+          "dr_mid": 5.5,
+          "slope": 2.460775095051823
+        },
+        {
+          "dr_mid": 6.5,
+          "slope": 2.533361770675356
+        },
+        {
+          "dr_mid": 7.5,
+          "slope": 2.658193796025012
+        },
+        {
+          "dr_mid": 8.5,
+          "slope": 2.840762352775081
+        },
+        {
+          "dr_mid": 9.5,
+          "slope": 3.101603135245375
+        },
+        {
+          "dr_mid": 10.5,
+          "slope": 3.4821257616549124
+        },
+        {
+          "dr_mid": 11.5,
+          "slope": 4.0639391527863316
+        },
+        {
+          "dr_mid": 12.5,
+          "slope": 5.0222873110955515
+        },
+        {
+          "dr_mid": 13.5,
+          "slope": 6.798544975393704
+        },
+        {
+          "dr_mid": 14.5,
+          "slope": 10.836828838479992
+        },
+        {
+          "dr_mid": 15.5,
+          "slope": 19.50794206959615
+        }
+      ],
+      "plateau": {
+        "n_slopes": 6,
+        "mean_slope": 2.5920966445526505,
+        "tol_rel": 0.15
+      }
+    },
+    "T": {
+      "F": {
+        "1": -3.0156876754981745,
+        "2": -0.038406991710107974,
+        "3": -0.038325882444230075,
+        "4": -0.02523569516398183,
+        "5": -0.016906541300798494,
+        "6": -0.011771824671413356,
+        "7": -0.008460690027654039,
+        "8": -0.006217173194233538,
+        "9": -0.004627082072840238,
+        "10": -0.0034536075854063597,
+        "11": -0.0025547183646885685,
+        "12": -0.0018413793293632352,
+        "13": -0.0012557604494070063,
+        "14": -0.00075999519168235,
+        "15": -0.00033268088356308567,
+        "16": 1.5922112790889287e-05
+      },
+      "dropped_separations": {},
+      "n_dropped": 0,
+      "sign_flips_in_window": [
+        16
+      ],
+      "max_dr_valid": 15,
+      "sign_changes_below_window_informational": [],
+      "sign_note": "Reference sign taken at dr=3 (window start), not dr=1. Points below the window are contact terms and their sign is not evidence of anything. Truncation is at the first sign change at or after dr=3, which is also where the profile meets the numerical noise floor.",
+      "primary_window_dr_ge3": {
+        "n_pts": 13,
+        "alpha_log_ols": 2.677422682336466,
+        "sigma_fit": 0.22857552986270374,
+        "alpha_relerr": 2.828186728362897,
+        "alpha_linear_unweighted_BANNED": 1.860210644488583,
+        "bootstrap": {
+          "mean": 2.7121992244062114,
+          "std": 0.3285230680442667,
+          "n": 2000,
+          "sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence."
+        },
+        "amplitude_at_dr3": -0.038325882444230075
+      },
+      "secondary_window_dr_ge2": {
+        "alpha_log_ols": 2.253321521240624
+      },
+      "local_slopes": [
+        {
+          "dr_mid": 1.5,
+          "slope": 6.2949742442398176
+        },
+        {
+          "dr_mid": 2.5,
+          "slope": 0.005213935747179082
+        },
+        {
+          "dr_mid": 3.5,
+          "slope": 1.4525270177483163
+        },
+        {
+          "dr_mid": 4.5,
+          "slope": 1.7950725369639435
+        },
+        {
+          "dr_mid": 5.5,
+          "slope": 1.9854573209043567
+        },
+        {
+          "dr_mid": 6.5,
+          "slope": 2.1425672795615203
+        },
+        {
+          "dr_mid": 7.5,
+          "slope": 2.3074379344130675
+        },
+        {
+          "dr_mid": 8.5,
+          "slope": 2.5079068801835427
+        },
+        {
+          "dr_mid": 9.5,
+          "slope": 2.7762495667040836
+        },
+        {
+          "dr_mid": 10.5,
+          "slope": 3.1631182918447314
+        },
+        {
+          "dr_mid": 11.5,
+          "slope": 3.763037358049021
+        },
+        {
+          "dr_mid": 12.5,
+          "slope": 4.782117104383201
+        },
+        {
+          "dr_mid": 13.5,
+          "slope": 6.776389674718219
+        },
+        {
+          "dr_mid": 14.5,
+          "slope": 11.974112192026753
+        },
+        {
+          "dr_mid": 15.5,
+          "slope": 47.09551419386547
+        }
+      ],
+      "plateau": {
+        "n_slopes": 0,
+        "mean_slope": NaN,
+        "tol_rel": 0.15
+      }
+    },
+    "X": {
+      "F": {
+        "1": -3.276216304203224,
+        "2": -0.32371413638585267,
+        "3": -0.1732389676834316,
+        "4": -0.10123723384333871,
+        "5": -0.06477586520553302,
+        "6": -0.044279776180307096,
+        "7": -0.03175402899079671,
+        "8": -0.023587037688407975,
+        "9": -0.017981041384562246,
+        "10": -0.013966762637828367,
+        "11": -0.010986572724540622,
+        "12": -0.008702197200555872,
+        "13": -0.006899576793614415,
+        "14": -0.005439797778020505,
+        "15": -0.004236031834746967,
+        "16": -0.0032595754684052736
+      },
+      "dropped_separations": {},
+      "n_dropped": 0,
+      "sign_flips_in_window": [],
+      "max_dr_valid": 16,
+      "sign_changes_below_window_informational": [],
+      "sign_note": "Reference sign taken at dr=3 (window start), not dr=1. Points below the window are contact terms and their sign is not evidence of anything. Truncation is at the first sign change at or after dr=3, which is also where the profile meets the numerical noise floor.",
+      "primary_window_dr_ge3": {
+        "n_pts": 14,
+        "alpha_log_ols": 2.339924758334863,
+        "sigma_fit": 0.06662709705029535,
+        "alpha_relerr": 2.3445952513770707,
+        "alpha_linear_unweighted_BANNED": 2.0267120273284274,
+        "bootstrap": {
+          "mean": 2.353866555745903,
+          "std": 0.09977471726016766,
+          "n": 2000,
+          "sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence."
+        },
+        "amplitude_at_dr3": -0.1732389676834316
+      },
+      "secondary_window_dr_ge2": {
+        "alpha_log_ols": 2.211497657983709
+      },
+      "local_slopes": [
+        {
+          "dr_mid": 1.5,
+          "slope": 3.339238336960457
+        },
+        {
+          "dr_mid": 2.5,
+          "slope": 1.54190548406253
+        },
+        {
+          "dr_mid": 3.5,
+          "slope": 1.8673577408903765
+        },
+        {
+          "dr_mid": 4.5,
+          "slope": 2.0011043405020605
+        },
+        {
+          "dr_mid": 5.5,
+          "slope": 2.0864511962067405
+        },
+        {
+          "dr_mid": 6.5,
+          "slope": 2.157035174409558
+        },
+        {
+          "dr_mid": 7.5,
+          "slope": 2.2266097742634336
+        },
+        {
+          "dr_mid": 8.5,
+          "slope": 2.304061554502194
+        },
+        {
+          "dr_mid": 9.5,
+          "slope": 2.397838840872615
+        },
+        {
+          "dr_mid": 10.5,
+          "slope": 2.518162743934168
+        },
+        {
+          "dr_mid": 11.5,
+          "slope": 2.6789407119032553
+        },
+        {
+          "dr_mid": 12.5,
+          "slope": 2.8998952789807473
+        },
+        {
+          "dr_mid": 13.5,
+          "slope": 3.207727610619216
+        },
+        {
+          "dr_mid": 14.5,
+          "slope": 3.625228790055058
+        },
+        {
+          "dr_mid": 15.5,
+          "slope": 4.060055543482076
+        }
+      ],
+      "plateau": {
+        "n_slopes": 5,
+        "mean_slope": 2.1550524079767976,
+        "tol_rel": 0.15
+      }
+    }
+  },
+  "discrimination": {
+    "alpha_T": 2.677422682336466,
+    "alpha_X": 2.339924758334863,
+    "separation_sigma": 0.9829843881015363,
+    "abs_gap": 0.33749792400160317,
+    "amplitude_ratio": 4.520156005162318,
+    "VERDICT": "D_INDETERMINATE",
+    "reading": "Separation falls between the pre-registered thresholds, or form and amplitude disagree. Underpowered. Do NOT round toward A."
+  }
+}

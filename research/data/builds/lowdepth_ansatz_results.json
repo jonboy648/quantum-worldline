@@ -1,0 +1,138 @@
+{
+  "target_Cr": [
+    0.6407288619353761,
+    0.5546936598217761,
+    0.5197766556383132,
+    0.5097892929472765
+  ],
+  "target_exponent": -0.24346942322843776,
+  "chi2_reference": "flat ~0.70 (GHZ artifact, no power law)",
+  "chi3_reference": {
+    "zzphase": 451,
+    "fidelity": "exact"
+  },
+  "depths": [
+    {
+      "depth": 1,
+      "n_2q_gates": 4,
+      "zzphase_upper_bound": 12,
+      "rmse_vs_target": 0.4576401291398991,
+      "fitted_exponent": -8.265689863377856e-05,
+      "decaying": true,
+      "Cr": [
+        0.6407287071486627,
+        -5.551115123125783e-17,
+        0.0,
+        4.163336342344337e-17
+      ],
+      "verdict": "partial"
+    },
+    {
+      "depth": 2,
+      "n_2q_gates": 8,
+      "zzphase_upper_bound": 24,
+      "rmse_vs_target": 0.3640236582113484,
+      "fitted_exponent": -83.90180730083694,
+      "decaying": true,
+      "Cr": [
+        0.6407289827473537,
+        0.5546934542232983,
+        -2.0816681711721685e-17,
+        -2.2551405187698492e-17
+      ],
+      "verdict": "partial"
+    },
+    {
+      "depth": 3,
+      "n_2q_gates": 12,
+      "zzphase_upper_bound": 36,
+      "rmse_vs_target": 6.14874491255551e-08,
+      "fitted_exponent": -0.24346952270244845,
+      "decaying": true,
+      "Cr": [
+        0.6407288523155742,
+        0.5546935957522373,
+        0.5197765867571852,
+        0.5097892143294069
+      ],
+      "verdict": "POWER-LAW captured"
+    },
+    {
+      "depth": 4,
+      "n_2q_gates": 16,
+      "zzphase_upper_bound": 48,
+      "rmse_vs_target": 5.695073522100898e-07,
+      "fitted_exponent": -0.2434700768369135,
+      "decaying": true,
+      "Cr": [
+        0.6407282775286507,
+        0.5546943397580263,
+        0.5197770722237103,
+        0.5097898586031602
+      ],
+      "verdict": "POWER-LAW captured"
+    },
+    {
+      "depth": 5,
+      "n_2q_gates": 20,
+      "zzphase_upper_bound": 60,
+      "rmse_vs_target": 4.1684754249995395e-07,
+      "fitted_exponent": -0.2434686729744678,
+      "decaying": true,
+      "Cr": [
+        0.6407284195859342,
+        0.5546931759621438,
+        0.5197762199109636,
+        0.5097890183639576
+      ],
+      "verdict": "POWER-LAW captured"
+    },
+    {
+      "depth": 6,
+      "n_2q_gates": 24,
+      "zzphase_upper_bound": 72,
+      "rmse_vs_target": 2.1846879154805748e-07,
+      "fitted_exponent": -0.24346652910672553,
+      "decaying": true,
+      "Cr": [
+        0.6407287144742042,
+        0.5546933235655181,
+        0.519776823150496,
+        0.5097894604019029
+      ],
+      "verdict": "POWER-LAW captured"
+    },
+    {
+      "depth": 7,
+      "n_2q_gates": 28,
+      "zzphase_upper_bound": 84,
+      "rmse_vs_target": 5.235533815287219e-07,
+      "fitted_exponent": -0.2434692757693317,
+      "decaying": true,
+      "Cr": [
+        0.6407290860899203,
+        0.5546936750273564,
+        0.5197757385868571,
+        0.5097897456864185
+      ],
+      "verdict": "POWER-LAW captured"
+    },
+    {
+      "depth": 8,
+      "n_2q_gates": 32,
+      "zzphase_upper_bound": 96,
+      "rmse_vs_target": 2.606558611892535e-06,
+      "fitted_exponent": -0.2434658747311593,
+      "decaying": true,
+      "Cr": [
+        0.6407327634448995,
+        0.5546911090126069,
+        0.5197756060065338,
+        0.5097872081306567
+      ],
+      "verdict": "POWER-LAW captured"
+    }
+  ],
+  "min_depth_powerlaw": 3,
+  "min_zzphase_powerlaw": 36
+}

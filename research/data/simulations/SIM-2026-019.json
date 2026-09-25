@@ -1,0 +1,51 @@
+{
+  "id": "SIM-2026-019",
+  "hypothesis": "HYP-2026-013",
+  "description": "Helios fidelity threshold for alpha=4 force detection: noise model analysis for chi=3 8q MERA",
+  "type": "noise_model_simulation",
+  "hardware_target": "quantinuum_helios_simulation",
+  "n_qubits": 8,
+  "chi": 3,
+  "status": "COMPLETE",
+  "verdict": "PARTIALLY_REFUTED",
+  "confidence": "medium",
+  "circuit": {
+    "qubits": 8,
+    "depth": "estimated ~48",
+    "gates": 36,
+    "two_qubit_gates": 36,
+    "note": "estimated from chi=3 SU(4) decomposition, 2-layer MERA"
+  },
+  "helios_spec": {
+    "fidelity_per_gate": 0.99921,
+    "error_per_gate": 0.00079,
+    "connectivity": "all_to_all"
+  },
+  "noise_model": "depolarizing_channel_per_2q_gate",
+  "n_shots": 10000,
+  "sigma_shot": 0.01,
+  "cumulative_fidelity_helios": 0.9719,
+  "noise_floor_helios_pct": 2.81,
+  "force_signal_vs_noise": {
+    "dr=1": {"signal_est": 1.36, "snr": 44.4, "detectable": true},
+    "dr=2": {"signal_est": 0.317, "snr": 10.4, "detectable": true},
+    "dr=3": {"signal_est": 0.057, "snr": 1.9, "detectable": false, "note": "marginal, below 3-sigma"},
+    "dr=4": {"signal_est": 0.026, "snr": 0.85, "detectable": false},
+    "dr=5": {"signal_est": 0.014, "snr": 0.47, "detectable": false},
+    "dr=6": {"signal_est": 0.009, "snr": 0.29, "detectable": false}
+  },
+  "dr_max_helios": 2,
+  "fidelity_threshold_sweep": {
+    "99.0%": {"noise_floor_pct": 30.4, "dr_max": 1},
+    "99.5%": {"noise_floor_pct": 16.5, "dr_max": 1},
+    "99.8%": {"noise_floor_pct": 6.95, "dr_max": 2},
+    "99.921%": {"noise_floor_pct": 2.81, "dr_max": 2}
+  },
+  "hypothesis_claim": "Force detection feasible at dr=1..4 at Helios 99.921%",
+  "key_finding": "Hypothesis PARTIALLY REFUTED. Helios 99.921% achieves dr_max=2, not dr_max=4 as claimed. dr=3 (SNR=1.9x) falls below the 3-sigma threshold. A 2-point fit (dr=1,2) is insufficient to establish a power law. The hypothesis overestimated the signal amplitude at dr=3..4 by factor ~2x.",
+  "correction": "For 4-point alpha fit (dr=1..4), fidelity threshold is ~99.97-99.99% per gate (not 99.5% as hypothesized). Helios is insufficient for power-law detection. FT neutral atoms or error-corrected hardware required.",
+  "what_is_confirmed": "dr=1 (SNR 44x) and dr=2 (SNR 10x) are cleanly detectable on Helios. This is sufficient to confirm the EXISTENCE of attractive holographic forces but not to fit the power-law exponent.",
+  "recommendation": "Helios run: target dr=1..2 only as a force-existence proof. Frame as 'detecting holographic attraction' not 'measuring power-law exponent'. Full alpha measurement requires FT hardware.",
+  "visualization_path": "research/data/simulations/SIM-2026-019_helios_snr.png",
+  "runtime_s": 3.5
+}

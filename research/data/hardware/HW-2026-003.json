@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-003",
+  "organization": "IBM",
+  "processor": "Loon",
+  "date": "2025-11-12",
+  "source_url": "https://postquantum.com/industry-news/ibm-loon-nighthawk/",
+  "physical_qubits": 0,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A (experimental chip)",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": false,
+  "frontier_category": "error_rate",
+  "notes": "Experimental chip to verify stability of large-scale fault-tolerant components. Validates qLDPC code hardware building blocks for Kookaburra and beyond."
+}

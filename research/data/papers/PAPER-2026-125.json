@@ -1,0 +1,26 @@
+{
+  "id": "PAPER-2026-125",
+  "title": "Weak-field waveforms for generic relativistic orbits",
+  "authors": [
+    "Stefano De Angelis"
+  ],
+  "date": "2026-06-09",
+  "arxiv_id": "2606.11423",
+  "relevance": 2,
+  "abstract": "Worldline path-integral (Schwinger-Keldysh) computation of gravitational-wave waveforms for generic relativistic orbits in flat space.",
+  "tags": [
+    "worldline",
+    "path-integral",
+    "gravitational-waves",
+    "Schwinger-Keldysh",
+    "flat-space"
+  ],
+  "key_claims": [
+    "Demonstrates current worldline-PI technology, but in FLAT space (not hyperbolic/AdS).",
+    "Logged for worldline-sweep completeness; not actionable for HYP-027."
+  ],
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.11423",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

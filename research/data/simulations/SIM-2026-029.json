@@ -1,0 +1,237 @@
+{
+  "id": "SIM-2026-029",
+  "L_physical": 10,
+  "dt": 0.01,
+  "description": "Functional-form fit of finite-T holographic transport TIME T(beta) via the HYP-006 production extractor (parabolic sub-grid refinement, on-the-fly physical-half Y) on a Thermofield Double at L=10.",
+  "type": "classical",
+  "date": "2026-05-29",
+  "hypothesis_id": "HYP-2026-024",
+  "relates_to": [
+    "SIM-2026-027",
+    "SIM-2026-028"
+  ],
+  "hardware_target": "local_cpu",
+  "results": {
+    "verdict": "NONFLAT_BUT_NOT_WANG_HE",
+    "verdict_reason": "T(beta) is significantly non-flat (best=boltzmann, beats flat by Delta-AIC=16.7), but the Wang-He form is not the AIC-minimum. Temperature dependence is real; functional-form identification is ambiguous at L=10.",
+    "CORRECTED_INTERPRETATION_2026_05_29": "The raw verdict above OVERSTATES the result and must NOT be cited at face value. Honest reading after scrutiny: the transport TIME T(beta) is effectively FLAT. It varies only 1.4% across the entire physical thermal regime (beta=200 down to beta=1, over which the state goes from pure ground state to gs_pop=0.169). The full 3.3% 'total variation' is produced almost entirely by the single hottest point (beta=0.5), where the state is near-maximally mixed (N_eff=129) and the dip/reappear extraction is least reliable. The AIC 'preference' for Boltzmann is fitting a near-zero coefficient (a=-0.016, i.e. essentially the flat value with a microscopic correction); the Wang-He fit outright FAILED (R2=-0.67, covariance not estimable, params -> 1e-11). CONCLUSION: the transport-TIME channel does NOT carry the horizon signal at N=10. This DISSOCIATES from the transport-AMPLITUDE channel (SIM-027/028), which degraded 95% and beat the washout null control on the SAME TFD states. The functional-form / BTZ-curve claim is NOT supportable from the transport time at workstation-accessible sizes; do not put it in a paper. SCRIPT BUG: the verdict logic gates on Delta-AIC>4 over flat WITHOUT a magnitude floor, so it crowns a model on a sub-1.5% wiggle. A corrected gate must also require the fitted shape variation to exceed a physical threshold (e.g. >10% of T_cold) AND the chosen model's params to be non-degenerate.",
+    "honest_verdict": "TIME_OBSERVABLE_FLAT_AT_N10 (amplitude-vs-time dissociation; functional form not claimable)",
+    "T_cold_finite_size_anchor": 0.27372366817815497,
+    "cold_plateau_spread": 0.00020577405526224477,
+    "gate_A_plateau_pass": true,
+    "thermodynamic_limit_reference_T_null": 2.2661800709135966,
+    "spectral_gap": 0.12525765670907774,
+    "E_gs": -10.173905286853818,
+    "beta_ladder": [
+      {
+        "beta": 200.0,
+        "temperature": 0.005,
+        "transport_time": 0.2737235608295052,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2425018917189803,
+        "reappear_time": 1.5162254525484855,
+        "gs_population": 0.9999999999868137,
+        "participation_ratio": 1.0000000000263807,
+        "thermal_entropy": 3.436302159365783e-10,
+        "wall_time_s": 883.133392572403
+      },
+      {
+        "beta": 100.0,
+        "temperature": 0.01,
+        "transport_time": 0.27372366817815497,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2425019198718725,
+        "reappear_time": 1.5162255880500275,
+        "gs_population": 0.9999963681532855,
+        "participation_ratio": 1.0000072637198056,
+        "thermal_entropy": 4.9123514183948055e-05,
+        "wall_time_s": 802.9695146083832
+      },
+      {
+        "beta": 50.0,
+        "temperature": 0.02,
+        "transport_time": 0.2737798860587275,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2425165450270912,
+        "reappear_time": 1.5162964310858187,
+        "gs_population": 0.9980978810278747,
+        "participation_ratio": 1.0038114740048527,
+        "thermal_entropy": 0.01381667855918382,
+        "wall_time_s": 807.4258859157562
+      },
+      {
+        "beta": 20.0,
+        "temperature": 0.05,
+        "transport_time": 0.27496867310968187,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2440919951148932,
+        "reappear_time": 1.519060668224575,
+        "gs_population": 0.9245022828731209,
+        "participation_ratio": 1.1622442051090365,
+        "thermal_entropy": 0.2676331460515597,
+        "wall_time_s": 798.6053142547607
+      },
+      {
+        "beta": 10.0,
+        "temperature": 0.1,
+        "transport_time": 0.2735900996647216,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2510881916096908,
+        "reappear_time": 1.5246782912744123,
+        "gs_population": 0.7776984495097305,
+        "participation_ratio": 1.5285706683753129,
+        "thermal_entropy": 0.5304205000568487,
+        "wall_time_s": 804.3822829723358
+      },
+      {
+        "beta": 8.0,
+        "temperature": 0.125,
+        "transport_time": 0.2746940927364958,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2518037310764247,
+        "reappear_time": 1.5264978238129205,
+        "gs_population": 0.7311275680431446,
+        "participation_ratio": 1.6485514900483098,
+        "thermal_entropy": 0.5859854306319723,
+        "wall_time_s": 860.9355924129486
+      },
+      {
+        "beta": 5.0,
+        "temperature": 0.2,
+        "transport_time": 0.27692649812153824,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2525128759074113,
+        "reappear_time": 1.5294393740289496,
+        "gs_population": 0.6453109791195714,
+        "participation_ratio": 1.8675538135732566,
+        "thermal_entropy": 0.706534069672763,
+        "wall_time_s": 850.3279147148132
+      },
+      {
+        "beta": 3.0,
+        "temperature": 0.3333333333333333,
+        "transport_time": 0.27738608879052573,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2526253512860066,
+        "reappear_time": 1.5300114400765323,
+        "gs_population": 0.5462507845128449,
+        "participation_ratio": 2.269299252764187,
+        "thermal_entropy": 1.033340030854734,
+        "wall_time_s": 881.656742811203
+      },
+      {
+        "beta": 2.0,
+        "temperature": 0.5,
+        "transport_time": 0.2761188635406786,
+        "status": "OK",
+        "peak_time": 0.9400000000000001,
+        "dip_time": 1.2523258455586919,
+        "reappear_time": 1.5284447090993705,
+        "gs_population": 0.4291768993236079,
+        "participation_ratio": 3.2883964999859874,
+        "thermal_entropy": 1.6527950125568607,
+        "wall_time_s": 833.4759168624878
+      },
+      {
+        "beta": 1.0,
+        "temperature": 1.0,
+        "transport_time": 0.27619348753673845,
+        "status": "OK",
+        "peak_time": 0.9500000000000001,
+        "dip_time": 1.8493803878791477,
+        "reappear_time": 2.125573875415886,
+        "gs_population": 0.1692055403690161,
+        "participation_ratio": 14.990191442556453,
+        "thermal_entropy": 3.680179982833457,
+        "wall_time_s": 825.5296955108643
+      },
+      {
+        "beta": 0.5,
+        "temperature": 2.0,
+        "transport_time": 0.28268228812752005,
+        "status": "OK",
+        "peak_time": 0.4,
+        "dip_time": 0.6750409792965804,
+        "reappear_time": 0.9577232674241004,
+        "gs_population": 0.03624291645211825,
+        "participation_ratio": 128.81555334174286,
+        "thermal_entropy": 5.652609821878044,
+        "wall_time_s": 836.8588757514954
+      }
+    ],
+    "shape_fit": {
+      "wang_he": {
+        "params": [
+          1.0152654562644432e-11,
+          0.7185001891572582
+        ],
+        "k": 2,
+        "AIC": -93.34003402738902,
+        "BIC": -92.54424348179228,
+        "rss": 0.0015786286849987408,
+        "chi2_per_dof": 0.00017540318722208232,
+        "R2": -0.6680405529821094
+      },
+      "tanh": {
+        "params": [
+          0.02138395724570155
+        ],
+        "k": 1,
+        "AIC": -95.34004796127832,
+        "BIC": -94.94215268847995,
+        "rss": 0.001578626685323886,
+        "chi2_per_dof": 0.00015786266853238861,
+        "R2": -0.6680384400477746
+      },
+      "boltzmann": {
+        "params": [
+          -0.015675811076329347
+        ],
+        "k": 1,
+        "AIC": -117.635215241816,
+        "BIC": -117.23731996901763,
+        "rss": 0.00020798733167039959,
+        "chi2_per_dof": 2.0798733167039957e-05,
+        "R2": 0.7802324846687785
+      },
+      "flat": {
+        "params": [
+          1.0075812545106713
+        ],
+        "k": 1,
+        "AIC": -100.96817980317351,
+        "BIC": -100.57028453037515,
+        "rss": 0.0009463970658126273,
+        "chi2_per_dof": 9.463970658126274e-05,
+        "R2": 0.0
+      },
+      "_selection": {
+        "aic_min_model": "boltzmann",
+        "delta_aic_flat_minus_best": 16.667035438642486,
+        "delta_aic_flat_minus_wang_he": -7.628145775784489,
+        "wang_he_is_aic_min": false,
+        "wang_he_substantial_over_flat": false
+      }
+    },
+    "prespecified": {
+      "Delta": 1.0,
+      "models_locked": true
+    },
+    "total_wall_time_s": 9186.442408323288
+  },
+  "classical_baseline": {
+    "method": "Exact TFD on doubled 20-qubit register; HYP-006 production extractor",
+    "extractor": "parabolic sub-grid dip/reappear refinement, on-the-fly physical-half Y",
+    "finite_size_note": "Cold anchor is L-specific; HYP-006 T=2.250@N16, 1.55@N24 -> transport time is strongly finite-size dependent. Fit is on the SHAPE T(beta)/T_cold, not the absolute value."
+  },
+  "comparison": "classical_wins",
+  "notes": "SIM-2026-029 fits the transport-TIME functional form, complementing the extractor-independent amplitude result (SIM-027/028). Honest scope: the cold anchor is finite-size; the claim is about the temperature-dependent SHAPE."
+}

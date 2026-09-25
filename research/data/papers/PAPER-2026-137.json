@@ -1,0 +1,25 @@
+{
+  "id": "PAPER-2026-137",
+  "title": "Observation of gravity-like signatures in holographic codes on a quantum computer",
+  "authors": ["Biswas", "Cheng", "Karthikeyan", "Muñoz-Valencia", "Su", "Gharibyan", "Zhu", "Salton", "Epifanovsky", "Roetteler", "Monroe", "Preskill", "Linke", "Cao", "Noel"],
+  "date": "2026-07-13",
+  "arxiv_id": "2607.12047",
+  "relevance": 5,
+  "abstract": "First experimental implementation of the HaPPY hyperbolic holographic tensor-network QEC code on a trapped-ion quantum computer (IonQ/Duke-Maryland collaboration, Monroe/Preskill group). Reports the first experimental confirmation of the Faulkner-Lewkowycz-Maldacena (FLM) formula in this toy model -- a direct hardware test of bulk-to-boundary entanglement entropy correspondence -- plus non-stabilizerness (\"magic\") enrichment showing entropic precursors of emergent gravity, and a wormhole-like entropic construction.",
+  "tags": ["holographic-code", "HaPPY", "tensor-network", "trapped-ion", "FLM-formula", "AdS-CFT", "magic-state", "hardware-holography"],
+  "key_claims": [
+    "First trapped-ion hardware realization of a HaPPY hyperbolic holographic QEC code.",
+    "Experimentally confirms the FLM (quantum-corrected RT/bulk-boundary entropy) formula in this toy model on real hardware.",
+    "Adds non-stabilizerness (magic) to the code and observes entropic signatures interpreted as precursors of emergent gravity.",
+    "Constructs a wormhole-like entropic configuration within the same hardware run."
+  ],
+  "relevance_note": "Highest-relevance paper this cycle: direct hardware implementation of a holographic tensor-network code validating bulk-boundary entropy correspondence (FLM formula) -- the same MERA/holographic-force research line as our HYP-025/027/HYP-2026-030 and the C_TTT extraction work. Precedent that holographic-tensor-network circuits are runnable and diagnostically informative on today's trapped-ion hardware (Quantinuum/IonQ class), reinforcing HYP-013/029 feasibility framing. No direct alpha=4, transport, or C_sse measurement -- HaPPY code entropy structure, not our specific force/OPE observables -- so it does not confirm or contradict those anchors, but it is a strong cross-reference for any future 'run our force/OPE circuit on real hardware' proposal.",
+  "seeds_hypothesis": null,
+  "related_hypotheses": ["HYP-2026-013", "HYP-2026-025", "HYP-2026-027", "HYP-2026-029"],
+  "anchor_contradiction": "None.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2607.12047",
+  "discovered_by": "weekly-scan-16",
+  "discovered_date": "2026-07-19",
+  "note": "Submitted 2026-07-13, one day before scan #15's nominal window close; appears to have been missed by scan #15 and is picked up here."
+}

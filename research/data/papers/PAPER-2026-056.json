@@ -1,0 +1,21 @@
+{
+  "id": "PAPER-2026-056",
+  "title": "Fisher-Based Sensitivity Framework for Rydberg Atom Microwave Electrometry",
+  "authors": ["Chen-Rong Liu", "et al. (7 authors total)"],
+  "date": "2025-03-15",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2503.12007",
+  "arxiv_id": "2503.12007",
+  "abstract": "Develops a Fisher information framework for Rydberg-atom microwave electrometers exploiting EIT and AT splitting. Derives the fundamental quantum sensitivity limit. Shows Fisher-optimized sensitivity below 1 nV/cm/sqrt(Hz) is achievable with suppression of technical noise. Published in Phys. Rev. Applied 2026.",
+  "relevance": 3,
+  "tags": ["Rydberg-electrometry", "Fisher-information", "sensitivity-limit", "quantum-sensing"],
+  "key_claims": [
+    "Fisher-optimized sensitivity limit below 1 nV/cm/sqrt(Hz) in Cs vapor",
+    "Current experiments limited by technical noise, not fundamental quantum limit",
+    "Provides systematic framework for optimizing EIT readout parameters",
+    "Identifies path to 10-100x sensitivity improvement over current SOTA"
+  ],
+  "hardware_used": "Cs vapor cells (theory/analysis paper)",
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-04-26"
+}

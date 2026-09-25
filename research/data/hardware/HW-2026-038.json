@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-038",
+  "organization": "NIST (Kitching group)",
+  "processor": "Chip-Scale Atomic Magnetometer (CSAM) + MEMS Vapor Cell Platform",
+  "date": "2024-09-27",
+  "source_url": "https://www.nist.gov/noac/technology/magnetic-and-electric-fields/chip-scale-atomic-magnetometers",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "Kitching NIST chip-scale atomic magnetometer. Cell volume: 12 mm^3. Power: 195 mW. Sensitivity: 50 pT/sqrt(Hz) at 10 Hz (chip scale). Much less sensitive than SERF OPMs (10 fT) due to smaller cell volume and operation outside SERF regime. Recent 2024 PMC review confirms active state of chip-scale atomic devices field. MEMS vapor cell work for Rydberg sensors (2025 arXiv:2509.01911) is more demanding: higher temperature, optical access constraints. Practical chip-scale Rydberg sensor not yet commercially available as of 2026. Key message: chip-scale magnetometer (50 pT) vs lab SERF OPM (10 fT) vs SQUID (3 fT) - three orders of magnitude sensitivity range across form factors."
+}

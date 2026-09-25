@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-015",
+  "title": "Convergence and Quantum Advantage of Trotterized MERA for Strongly-Correlated Systems",
+  "authors": ["Qiang Miao", "Thomas Barthel"],
+  "date": "2025-02-11",
+  "source": "other",
+  "source_url": "https://quantum-journal.org/papers/q-2025-02-11-1631/",
+  "arxiv_id": null,
+  "abstract": "Demonstrates polynomial quantum advantage in comparison to classical MERA simulations by combining VQE with MERA using Trotter circuits. MERA causal structure reduces required qubits from linear to system-size independent. Improved convergence through layer-by-layer initialization and phase-diagram scanning. Brick-wall and parallel random-pair circuits yield similar accuracies.",
+  "relevance": 4,
+  "tags": ["MERA", "quantum-advantage", "Trotter", "VQE", "strongly-correlated", "quantum-hardware"],
+  "key_claims": [
+    "Polynomial quantum advantage over classical MERA simulations",
+    "Qubit count reduced from O(N) to system-size independent via causal structure",
+    "Layer-by-layer initialization improves convergence substantially",
+    "Average rotation angles can be reduced with negligible accuracy impact",
+    "Greater quantum advantage expected for higher-dimensional systems"
+  ],
+  "hardware_used": "simulation (Trotter circuits)",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

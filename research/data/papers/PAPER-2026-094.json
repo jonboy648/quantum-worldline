@@ -1,0 +1,39 @@
+{
+  "id": "PAPER-2026-094",
+  "title": "Variational Quantum Simulation of the Interacting Schwinger Model on a Trapped-Ion Quantum Processor",
+  "authors": [
+    "Christian Melzer",
+    "Stephan Schuster",
+    "Diego Alberto Olvera Millan",
+    "Janine Hilder",
+    "Ulrich Poschinger",
+    "Karl Jansen",
+    "Ferdinand Schmidt-Kaler"
+  ],
+  "date": "2025-04-29",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2504.20824",
+  "arxiv_id": "2504.20824",
+  "abstract": "We explore the multi-flavor lattice Schwinger model in one spatial dimension using variational quantum simulation on a shuttling-based trapped-ion quantum processor. We employ a parametric quantum circuit to identify ground states and map out quantum phase transitions. The fermionic sign problem makes this problem intractable for classical numerical methods even for small system sizes. We use quantum state tomography to analyze correlations in output states and determine the model's phase boundaries across the phase transition.",
+  "relevance": 3,
+  "tags": [
+    "Schwinger-model",
+    "lattice-gauge-theory",
+    "trapped-ion",
+    "variational-quantum-simulation",
+    "QFT-hardware",
+    "sign-problem",
+    "phase-transition"
+  ],
+  "key_claims": [
+    "Multi-flavor Schwinger model simulated on shuttling-based trapped-ion processor",
+    "Sign problem makes classical simulation intractable even at small sizes -- quantum advantage regime",
+    "Variational parametric circuits identify ground states across phase transition",
+    "Quantum state tomography extracts correlations and phase boundaries",
+    "Demonstrates QFT simulation on trapped-ion beyond single-flavor Schwinger model"
+  ],
+  "hardware_used": "Shuttling-based trapped-ion processor (Mainz group)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

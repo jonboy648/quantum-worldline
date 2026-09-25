@@ -1,0 +1,42 @@
+UNBLINDED REPORT (v3)
+
+[primary] usable networks: 8
+  network                m_L   m_R  m_half   gap  m09_L m09_R   w_L   w_R
+  chi6_h1.00_seed1      8.04  8.96  8.50 -0.00  3.90  5.21  7.87  7.61
+  chi6_h1.00_seed2      9.45  7.55  8.50  0.00  5.40  2.96  8.59  8.44
+  chi6_h1.00_seed3      8.85  8.15  8.50 -0.00  4.66  4.17  7.90  8.01
+  chi6_h1.00_seed4      9.35  7.65  8.50  0.00  5.98  3.56  7.31  7.43
+  chi6_h1.00_seed5      8.06  8.94  8.50 -0.00  3.74  5.67  7.57  7.37
+  chi6_h1.00_seed6      9.03  7.97  8.50  0.00  5.32  3.82  7.58  7.83
+  chi6_h1.00_seed7      8.99  8.01  8.50 -0.00  5.25  3.88  7.59  7.84
+  chi6_h1.00_seed8      7.80  9.20  8.50  0.00  3.79  5.44  7.75  7.54
+  seed mean             8.70  8.30  8.50        4.75  4.34  7.77  7.76   (m_half pinned by complementarity, not discriminating)
+
+[C-HAAR] usable networks: 8
+  network                m_L   m_R  m_half   gap  m09_L m09_R   w_L   w_R
+  haar_chi6_seed1       8.52  8.48  8.50  0.00  4.79  4.43  5.96  6.17
+  haar_chi6_seed2       8.51  8.49  8.50  0.00  4.56  4.72  6.15  5.98
+  haar_chi6_seed3       8.49  8.51  8.50  0.00  4.62  4.68  6.01  6.02
+  haar_chi6_seed4       8.49  8.51  8.50  0.00  4.37  4.60  6.30  6.15
+  haar_chi6_seed5       8.51  8.49  8.50  0.00  4.78  4.55  5.94  6.09
+  haar_chi6_seed6       8.49  8.51  8.50  0.00  4.50  4.80  6.13  5.95
+  haar_chi6_seed7       8.52  8.48  8.50  0.00  4.74  4.66  5.95  5.92
+  haar_chi6_seed8       8.50  8.50  8.50  0.00  4.63  4.56  6.06  6.12
+  seed mean             8.50  8.50  8.50        4.62  4.62  6.06  6.05   (m_half pinned by complementarity, not discriminating)
+
+[C-GAPPED] usable networks: 8
+  network                m_L   m_R  m_half   gap  m09_L m09_R   w_L   w_R
+  chi6_h1.50_seed1      9.63  7.37  8.50  0.00  6.06  4.26  6.37  6.68
+  chi6_h1.50_seed2      7.99  9.01  8.50  0.00  4.23  4.78  7.91  8.00
+  chi6_h1.50_seed3      9.34  7.66  8.50  0.00  2.60  2.68 10.03  9.82
+  chi6_h1.50_seed4      8.89  8.11  8.50 -0.00  5.77  5.12  6.11  6.11
+  chi6_h1.50_seed5      8.31  8.69  8.50 -0.00  5.35  3.68  7.50  7.97
+  chi6_h1.50_seed6      9.15  7.85  8.50  0.00  5.38  3.56  7.84  8.07
+  chi6_h1.50_seed7      7.60  9.40  8.50  0.00  5.13  5.17  6.71  6.70
+  chi6_h1.50_seed8      7.89  9.11  8.50  0.00  4.77  4.27  7.70  7.91
+  seed mean             8.60  8.40  8.50        4.91  4.19  7.52  7.66   (m_half pinned by complementarity, not discriminating)
+verdict primary: SMOOTH   (w interp  7.76, w grid  7.38)
+verdict C-GAPPED: SMOOTH   (w interp  7.59, w grid  7.31)
+verdict C-HAAR: SMOOTH   (w interp  6.06, w grid  6.00)   ** I6 FLAG: grid-point w gives NO REGISTERED PATTERN **
+G5: not evaluable (missing chi8 or chi6 aligned data)
+OUTCOME (I5): 4 (smooth; Level 2, or Level 3 negative if C-HAAR differs)

@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-036",
+  "organization": "QuSpin Inc.",
+  "processor": "QZFM Gen-3 Optically Pumped Magnetometer (OPM)",
+  "date": "2024-01-01",
+  "source_url": "https://quspin.com/products-qzfm/",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "Commercial SERF-regime OPM. Sensitivity: 10 fT/sqrt(Hz) at 3-100 Hz. No cryogenics required. Miniaturized chip-scale form factor. Commercially available 2024. Primary applications: MEG (brain imaging), MCG (heart imaging). Biomagnetic signal reference: MCG (heart) ~50 pT; MEG (brain) ~100 fT. At 10 fT/sqrt(Hz), MCG detectable with 1s integration, MEG requires ~1s with multiple sensors. Through-rock person detection: heart MCG at 1m range falls as r^-3 (dipole). At 10m: 50 pT * (0.1m/10m)^3 = 50 fT. At QuSpin sensitivity floor of 10 fT/sqrt(Hz), would require ~(50 fT / 10 fT/sqrt(Hz))^-2 ~ 0.04s integration in free space. HOWEVER: rock conductivity (sigma ~ 1e-4 to 1e-3 S/m) attenuates at skin depth. At 10 Hz through rock with sigma=1e-3: skin depth = 503*sqrt(1000/10) = 5030m. At 100 Hz: 1590m. CONCLUSION: ULF biomagnetic signals (1-100 Hz) penetrate hundreds of meters of rock with minimal attenuation. Fundamental physics supports ULF magnetometry for through-rock person sensing in principle, but requires near-zero ambient noise environment - not achieved in field conditions."
+}

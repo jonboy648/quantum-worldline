@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-002",
+  "organization": "IBM",
+  "processor": "Kookaburra",
+  "date": "2026-06-01",
+  "source_url": "https://www.ibm.com/quantum/blog/large-scale-ftqc",
+  "physical_qubits": 1386,
+  "logical_qubits": 0,
+  "error_correction_ratio": "qLDPC enabled",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "physical_qubits",
+  "notes": "First quantum processor module with qLDPC memory and attached logical processing unit (LPU). 1,386 qubits per chip; three chips linked via chip-to-chip couplers for 4,158-qubit combined system. Real-time qLDPC decoding under 480ns demonstrated. Foundation module for Cockatoo (2027) and Starling (2029) roadmap."
+}

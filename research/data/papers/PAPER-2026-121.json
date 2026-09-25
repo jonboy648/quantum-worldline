@@ -1,0 +1,29 @@
+{
+  "id": "PAPER-2026-121",
+  "title": "Degree of tensor train varieties via integral geometry",
+  "authors": [
+    "Andrea Rosana",
+    "Otto T. P. Schmidt"
+  ],
+  "date": "2026-06-10",
+  "arxiv_id": "2606.11847",
+  "relevance": 4,
+  "abstract": "Applies integral-geometry / Crofton machinery directly to tensor-train (MPS) varieties to compute their algebraic degree, with an accompanying Julia package.",
+  "tags": [
+    "integral-geometry",
+    "Crofton",
+    "tensor-train",
+    "MPS",
+    "algebraic-geometry",
+    "Julia"
+  ],
+  "key_claims": [
+    "Rigorous integral-geometry measure native to tensor-network parameter space.",
+    "Candidate fresh angle for the Crofton route (HYP-014/022 REFUTED only for the naive sin(pi*dr/N) boundary-length discretization).",
+    "Does NOT itself revive HYP-014/022 -- no alpha/transport/force claim; a methods lead only."
+  ],
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.11847",
+  "discovered_by": "weekly-scan-11",
+  "discovered_date": "2026-06-25"
+}

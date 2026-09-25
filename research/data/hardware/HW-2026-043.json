@@ -1,0 +1,23 @@
+{
+  "id": "HW-2026-043",
+  "name": "Twinleaf SERF Magnetometer (single-channel)",
+  "organization": "Twinleaf LLC (USA)",
+  "technology": "SERF OPM (alkali vapor)",
+  "type": "single-channel research OPM",
+  "date": "2024-2025",
+  "status": "COMMERCIAL (research instruments)",
+  "specs": {
+    "sensitivity": "~10 fT/sqrt(Hz) in shielded room",
+    "channels": "1 (single-axis)",
+    "bandwidth": "DC to ~1 kHz",
+    "operating_temp": "room temperature",
+    "form_factor": "bench instrument, not yet wearable"
+  },
+  "cost": {
+    "per_unit": "~$6,000-10,000 (estimated, from public Twinleaf pricing)",
+    "note": "Single-channel sensor + electronics; add mu-metal shielding ~$2-5k"
+  },
+  "deployment": "Live magnetocardiography demos. Used in academic labs as lowest-cost OPM entry point.",
+  "bci_relevance": "MOST ACCESSIBLE quantum magnetic sensor for independent researcher. At ~$8k + $5k shielding = $13k, leaves budget for recording electronics. Single-channel MCG/peripheral nerve sensing is achievable. Multi-channel brain MEG requires 50+ sensors ($400k+).",
+  "trl": 8
+}

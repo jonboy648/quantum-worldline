@@ -1,0 +1,96 @@
+{
+  "id": "SIM-2026-022",
+  "hypothesis": "HYP-2026-017",
+  "linked_hypothesis": "HYP-2026-020",
+  "description": "QuEra Aquila analog MERA protocol design and cost estimate for holographic force + TEE joint measurement",
+  "type": "resource_estimation_analytic",
+  "hardware_target": "quera_aquila_aws_braket",
+  "status": "DESIGNED",
+  "aquila_specs": {
+    "n_qubits": 256,
+    "programmable_sites": 256,
+    "connectivity": "analog_blockade_global_drive",
+    "blockade_radius_um": 9.76,
+    "blockade_radius_note": "C6=862 GHz*um^6 for 87Rb |70S>, Omega/2pi=1 MHz",
+    "coherence_time_us": 4.0,
+    "state_prep_fidelity": 0.995,
+    "readout_fidelity": 0.995,
+    "max_rabi_freq_MHz": 4.0,
+    "max_detuning_MHz": 125.0,
+    "braket_cost_per_shot_USD": 0.01,
+    "min_shots": 1,
+    "access": "AWS Braket (cloud), QuEra direct partnership",
+    "platform_type": "ANALOG - no discrete single-qubit gates; global Omega(t), Delta(t) pulses + local detuning"
+  },
+  "mera_16q_analog_protocol": {
+    "n_boundary_qubits": 16,
+    "n_total_atoms": 24,
+    "n_layers": 3,
+    "tweezer_geometry": "1D chain with bond sites offset in 2D plane for blockade isolation",
+    "estimated_runtime_us": 2.8,
+    "T2_headroom_us": 1.2,
+    "feasibility": "MARGINAL - within T2* but tight; Floquet echo recommended",
+    "analog_error_budget": "3-8% (coherent analog errors dominate over decoherence)",
+    "key_physics": "Blockade constraint naturally implements nearest-neighbor MERA isometry; no gate compilation needed",
+    "comparison_to_digital": "Helios uses 56 discrete CX gates; Aquila encodes same entanglement structure via 3 analog pulse layers",
+    "encoding_note": "MERA bond dimension chi=2 maps to nearest-neighbor blockade exclusion. chi=3 requires 3-atom cluster geometry."
+  },
+  "hyp017_force_budget": {
+    "dr_range": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "shots_per_dr": 1000,
+    "total_shots": 8000,
+    "cost_USD": 80.0,
+    "expected_dr_max_clean": 4,
+    "comparison_helios": {
+      "alpha": 4.07,
+      "dalpha": 0.18,
+      "dr_max": 4,
+      "sim_ref": "SIM-2026-015d"
+    },
+    "aquila_alpha_expected": 4.0,
+    "aquila_dalpha_expected": 0.3,
+    "publication_threshold": "alpha = 4.0 +/- 0.5, dr=2..5 above shot noise at 3-sigma"
+  },
+  "hyp020_tee_marginal": {
+    "method": "Kitaev-Preskill tripartite mutual information on same atomic array",
+    "partitions": [
+      "A (sites 1-4)",
+      "B (sites 5-8)",
+      "C (sites 9-12)",
+      "AB",
+      "BC",
+      "ABC"
+    ],
+    "shots_per_partition": 500,
+    "total_shots": 3000,
+    "cost_USD": 30.0,
+    "S_topo_formula": "S_topo = S_AB + S_BC - S_B - S_ABC",
+    "S_topo_expected": "-ln(2) = -0.693 for Z2 topological order",
+    "measurement": "Computational basis readout of all 16 boundary qubits simultaneously",
+    "publication_threshold": "S_topo consistent with -ln(2) at 2-sigma"
+  },
+  "total_cost_USD": 110.0,
+  "budget_remaining_USD": 390.0,
+  "circuit": {
+    "qubits": 24,
+    "depth": "analog (3 pulse layers, ~2.8 us total)",
+    "gates": "N/A - analog blockade dynamics",
+    "two_qubit_equivalent_interactions": 48,
+    "note": "Analog circuit; structure encoded in tweezer geometry and pulse sequence"
+  },
+  "verdict": "FEASIBLE_MARGINAL",
+  "confidence": "medium",
+  "comparison": "inconclusive_vs_helios",
+  "comparison_note": "Aquila analog errors (3-8%) larger than Helios (0.57%) but tests DIFFERENT physics: blockade dynamics vs gate-based MERA. Complementary, not redundant.",
+  "recommendation": "Proceed. Joint HYP-017+020 run. Main risk: T2* = 4us leaves 1.2us headroom. Mitigation: Floquet dynamical decoupling. Access via AWS Braket, no partnership required.",
+  "visualization_path": "research/data/simulations/SIM-2026-022_aquila_protocol.png"
+}

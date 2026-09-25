@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-050",
+  "arxiv_id": "2512.11967",
+  "title": "Holographic Representation of One-Dimensional Many-Body Quantum States via Isometric Tensor Networks",
+  "authors": ["Kaito Kobayashi", "Benjamin Sappler", "Frank Pollmann"],
+  "year": 2025,
+  "venue": "arxiv (cond-mat, quant-ph), submitted Dec 2025",
+  "submission_date": "2025-12-16",
+  "abstract_summary": "Introduces holographic isoTNS (isometric tensor network states): 1D lattice of isometric tensors with a physical horizontal axis and auxiliary holographic axis. Achieves volume-law entanglement at modest bond dimension, surpassing MPS. Can faithfully represent fermionic Gaussian states, Clifford states, and short-time-evolved states.",
+  "relevance": 3,
+  "relevance_reason": "Holographic axis in 1D isometric tensor network is structurally analogous to our MERA extra dimension. Volume-law capability at low bond dimension is relevant to chi=3 MERA expressivity.",
+  "connection_to_project": "The holographic isoTNS is a cousin of our MERA — both use an extra dimension for holographic encoding. The volume-law result suggests our chi=3 MERA may have additional expressivity headroom beyond current tests.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

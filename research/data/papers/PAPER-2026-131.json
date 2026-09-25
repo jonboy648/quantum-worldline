@@ -1,0 +1,36 @@
+{
+  "id": "PAPER-2026-131",
+  "title": "Holography and Kinematic Space for Gravitational Sub-regions in AdS",
+  "authors": [
+    "Debarshi Basu",
+    "Qiang Wen"
+  ],
+  "date": "2026-06-29",
+  "arxiv_id": "2606.30466",
+  "relevance": 3,
+  "abstract": "Extends Qiang Wen's partial-entanglement-entropy (PEE) thread program to kinematic space for gravitational subregions in AdS, with holographic tensor network models realizing surface-state correspondence and generalized entanglement wedges.",
+  "tags": [
+    "PEE-threads",
+    "kinematic-space",
+    "entanglement-wedge",
+    "surface-state-correspondence",
+    "holographic-tensor-network",
+    "integral-geometry"
+  ],
+  "key_claims": [
+    "PEE-thread/kinematic-space construction extended to gravitational subregions of AdS.",
+    "Holographic tensor network models realize surface-state correspondence and generalized entanglement wedges.",
+    "The networks reproduce RT/entropy (kinematic) data -- the same sector the project has already shown to be force-blind."
+  ],
+  "relevance_note": "WATCH. Structurally adjacent to the REFUTED HYP-022 PEE-thread/Kirillov-Crofton route (SIM-024 gave alpha=0.883, not 4): reproducing RT/entropy data is exactly the integral-geometry sector this project proved does NOT produce the alpha=4 stress-tensor force. Catalogue-only tracking entry: watch whether the PEE-tessellation program ever claims DYNAMICAL (force/stress-tensor) content; as-is it makes no such claim and has no anchor contact. Same lineage as HYP-026 (Synge distance geometric but force-blind).",
+  "seeds_hypothesis": null,
+  "related_hypotheses": [
+    "HYP-2026-022",
+    "HYP-2026-026"
+  ],
+  "anchor_contradiction": "None. Entropy/kinematic-space content only; does not claim force or stress-tensor dynamics, so it does not challenge the HYP-022 refutation or the alpha=4 anchors.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2606.30466",
+  "discovered_by": "weekly-scan-14",
+  "discovered_date": "2026-07-02"
+}

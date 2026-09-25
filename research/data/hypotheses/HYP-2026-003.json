@@ -1,0 +1,17 @@
+{
+  "id": "HYP-2026-003",
+  "claim": "AI-optimized lattice actions (PAPER-2026-004) applied to the worldline formalism could dramatically reduce the qubit requirements for quantum simulation of particle worldlines in curved spacetime, by finding fixed-point lattice actions that maintain accuracy on coarser discretizations of the spacetime manifold.",
+  "confidence": "low",
+  "source_findings": ["PAPER-2026-004", "PAPER-2026-006", "PAPER-2026-005"],
+  "testable": true,
+  "test_design": "Apply the TU Wien neural network action optimization to the worldline path integral discretization on a 1+1D curved spacetime lattice. Compare the accuracy of Hawking radiation tunneling rates (as in PAPER-2026-006) using standard vs AI-optimized lattice actions at matched coarse lattice spacing. Measure qubit savings for equivalent accuracy.",
+  "refutation_criteria": "If the AI-optimized actions provide less than 2x improvement in accuracy at matched lattice spacing, or if the fixed-point equations have no solution for the worldline formalism Lagrangian, the hypothesis is refuted.",
+  "hardware_required": "Classical computation for neural network training; quantum simulator for validation",
+  "earliest_testable": "2026 (classical validation), 2027 (quantum validation)",
+  "feasibility_verdict": "TESTABLE_NEAR_TERM",
+  "philosophical_implications": "If the mathematical structure of worldline path integrals admits AI-discoverable fixed-point formulations, this suggests that the continuum structure of spacetime has preferred discrete representations that are not obvious to human physicists but are accessible to machine learning. This would imply that the renormalization group flow has hidden simplicities that AI can exploit.",
+  "status": "proposed",
+  "created_date": "2026-03-10",
+  "last_updated": "2026-03-10",
+  "created_by": "theory-lead"
+}

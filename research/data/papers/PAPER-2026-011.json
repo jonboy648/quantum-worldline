@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-011",
+  "title": "Multi-particle quantum systems within the Worldline Monte Carlo formalism",
+  "authors": ["Ivan Ahumada", "Max Badcott", "James P. Edwards", "Craig McNeile", "Filippo Ricchetti", "Federico Grasselli", "Guido Goldoni", "Olindo Corradini", "Marco Palomino"],
+  "date": "2025-12-31",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2512.24942",
+  "arxiv_id": "2512.24942",
+  "abstract": "Extends the Worldline Monte Carlo computational method to simulate Feynman path integrals for multi-particle non-relativistic quantum systems. Demonstrates generation of multiple worldlines distributed according to free kinetic dynamics and simulation of inter-worldline interactions. Validated against exact Hamiltonian diagonalization. The approach is numerically exact, computationally efficient, and scales more favorably than numerical diagonalization with respect to discretization points and spatial dimensions.",
+  "relevance": 4,
+  "tags": ["worldline", "Monte-Carlo", "path-integral", "multi-particle", "Coulomb", "numerical-methods"],
+  "key_claims": [
+    "First extension of worldline Monte Carlo to multi-particle systems",
+    "Scales more favorably than numerical diagonalization",
+    "Validated against exact diagonalization for 2- and 3-particle systems",
+    "Immediately adaptable to relativistic quantum systems",
+    "Universal applicability: trajectory ensemble independent of potential"
+  ],
+  "hardware_used": "classical Monte Carlo",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

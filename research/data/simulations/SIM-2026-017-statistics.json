@@ -1,0 +1,272 @@
+{
+  "id": "SIM-2026-017",
+  "date": "2026-04-07",
+  "verdict_SUPERSEDED_2026_08_17": {
+    "summary": "THE POWER-LAW FIT AND ITS UNCERTAINTY IN THIS RECORD ARE SUPERSEDED by SIM-2026-072. alpha = 3.921759939402588 +/- 0.15898217437652562 is an ESTIMATOR ARTIFACT and is WITHDRAWN as stated. THE RAW DATA IN THIS RECORD ARE NOT IN QUESTION; only the fits are superseded.",
+    "superseded_fits": {
+      "power_law_fit": "alpha = 3.921759939402588 +/- 0.15898217437652562. WITHDRAWN as stated. The +/-0.15898 is a curve_fit covariance 1-sigma on a fit whose own .power_law_fit.statistics.chi2_reduced = 6.008041644879345 at dof 9 (p ~ 1e-7): a formally REJECTED fit. The manuscript quoted this interval and never the chi2_reduced.",
+      "bootstrap": "alpha_mean = 3.368996259743538, alpha_std = 0.6334909284110292, 95% CI [2.520000457778006, 4.1924200911181]. NOT superseded -- this is the record's own honest uncertainty, it is 4x the quoted +/-0.16, and SIM-2026-072 reproduced it independently (mean 3.358, sigma 0.635, 2000 resamples, seed 20260817). It was never surfaced in the manuscript. Note that the bootstrap mean sits 0.55 BELOW the point estimate, which is itself the signature of the single-point leverage described under cause.",
+      "anchor_dependence": "alpha = 3.930905464752202 (anchor 4), 3.9217599388092395 (6), 3.922707354558577 (8), 3.9485107095333234 (12); .anchor_dependence.consistency.alpha_spread = 0.02675077072408394. All four carry the same defect and the agreement is VOID AS A CONTROL: every anchor fixes dr_min = 2, so all four fits are dominated by the same single point and the control has no branch on which it could fail."
+    },
+    "cause": "The fit is unweighted nonlinear least squares on F in LINEAR space. Because |F| falls by three orders of magnitude across the dr>=2 window, the single point dr=2 carries 95.8% of the least-squares objective (96.0% and 96.3% in the two companion datasets of SIM-2026-015d). The reported exponent is therefore, to within 8%, the dr=2->3 local log-slope (4.2315), not a property of the profile. Changing NOTHING but the error model, and DISCARDING NO DATA, gives alpha = 2.822 (relative-error weighting) or 2.890 (log-space OLS) on the identical window. dr=2 is also the unique separation at which a Hamiltonian bond bridges the two operator supports, i.e. a contact term of the same family for which dr=1 was already excluded.",
+    "corrected_result": "CORRECTED MEASUREMENT: alpha = 2.6 +/- 0.2, with the EXCHANGE CHANNEL OPEN -- 2*Delta_T = 4 (stress tensor) is excluded by the intermediate-separation plateau, and 2*Delta_epsilon = 2 (scalar) also lies outside the plateau band. The local log-slopes of the .data.F_values in this record run 2.035, 4.232, 2.603, 2.456, 2.461, 2.533, 2.658, 2.841, 3.102, 3.482, 4.064: 6 consecutive slopes flat to +/-7.5% centred on 2.592, bracketed by a dr=2 spike and a far-end rise.",
+    "alpha_equals_2_exclusion_does_not_survive": "At the quoted +/-0.15898 the exclusion of scalar exchange (alpha = 2) reads ~12 sigma. At this record's OWN bootstrap sigma = 0.6334909284110292 it is ~2.2 sigma, and under any dr>=3 window the point estimate itself falls to ~2.56. The exclusion must not be restated at the 12-sigma figure.",
+    "not_superseded_here": "The model comparison (.exponential_fit, .model_comparison, delta_AIC = 11.024477486787845 favouring the power law over a pure exponential) is NOT withdrawn by SIM-2026-072, which did not re-run it. It should nonetheless be read with the disclosure that chi2 and AIC in this record are computed under different error models, and the preference is for the FUNCTIONAL FORM only, not for any particular exponent.",
+    "raw_data_NOT_in_question": "ONLY THE FITS ARE SUPERSEDED. The raw arrays -- .data.dr_values, .data.F_values (copied from SIM-2026-011-interaction .F_interaction_avg) and the .anchor_dependence.results.*.F_values profiles -- are NOT in question, have NOT been altered, and remain the valid record of the measurement. SIM-2026-072 re-analysed exactly these values and reproduced the original fit before diverging, which rules out an implementation difference as the cause.",
+    "see_also": [
+      "research/data/simulations/SIM-2026-072.json (the authority for the corrected number)",
+      "docs/governance/AUDIT-2026-08-11.md defects D-2 and D-3",
+      "research/tools/force-reanalysis/qw_alpha_reanalysis.py (re-analysis driver, seed 20260817)"
+    ],
+    "correction_policy": "Additive, per RESEARCH-DIRECTOR.md section 32 and the ERRATA D5 exemplar (SIM-2026-036 -> SIM-2026-039/040). The original data, the original fits and the original status field are preserved unchanged below; this field records the challenge, the corrected analysis and the changed conclusion."
+  },
+  "description": "Goodness-of-fit statistics for 24q force profile: chi^2, AIC, BIC, bootstrap, anchor dependence",
+  "hypothesis": "HYP-2026-008",
+  "source_sim": "SIM-2026-011",
+  "data": {
+    "dr_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "F_values": [
+      -0.5736905904286083,
+      -0.10316809917935998,
+      -0.04878358875105704,
+      -0.028200650592275167,
+      -0.018005777922400767,
+      -0.012184604917560904,
+      -0.008543928753709906,
+      -0.006114281901496099,
+      -0.004409850656966086,
+      -0.0031643852148341978,
+      -0.0022218714808168727
+    ],
+    "n_points": 11,
+    "note": "dr >= 2, from SIM-2026-011 F_interaction_avg"
+  },
+  "power_law_fit": {
+    "model": "F(dr) = A * dr^{-alpha}",
+    "A": -8.672712867793416,
+    "dA": 0.9919659010031011,
+    "alpha": 3.921759939402588,
+    "dalpha": 0.15898217437652562,
+    "statistics": {
+      "chi2": 54.07237480391411,
+      "chi2_reduced": 6.008041644879345,
+      "AIC": -102.14521318643727,
+      "BIC": -101.34942264084053,
+      "RSS": 0.0007089896976666486,
+      "n_points": 11,
+      "n_params": 2,
+      "dof": 9,
+      "max_abs_residual": 0.013512847805998637,
+      "rms_residual": 0.00802830049753908
+    }
+  },
+  "exponential_fit": {
+    "model": "F(dr) = B * exp(-dr/xi)",
+    "B": -13.689196035470133,
+    "dB": 3.3043099821536357,
+    "xi": 0.6299264704444585,
+    "dxi": 0.04661533058103755,
+    "statistics": {
+      "chi2": 1012636274.8776577,
+      "chi2_reduced": 112515141.65307307,
+      "AIC": -91.12073569964943,
+      "BIC": -90.32494515405268,
+      "RSS": 0.001931527117672488,
+      "n_points": 11,
+      "n_params": 2,
+      "dof": 9,
+      "max_abs_residual": 0.024870768774007426,
+      "rms_residual": 0.013251165017984741
+    }
+  },
+  "model_comparison": {
+    "delta_AIC_exp_minus_pl": 11.024477486787845,
+    "delta_BIC_exp_minus_pl": 11.024477486787845,
+    "preferred_by_AIC": "power_law",
+    "preferred_by_BIC": "power_law"
+  },
+  "bootstrap": {
+    "n_resamples": 1000,
+    "n_success": 1000,
+    "n_failed": 0,
+    "alpha_mean": 3.368996259743538,
+    "alpha_std": 0.6334909284110292,
+    "alpha_median": 3.43950146631464,
+    "alpha_95CI_lo": 2.520000457778006,
+    "alpha_95CI_hi": 4.1924200911181,
+    "stress_tensor_in_CI": true,
+    "A_mean": -5.933434139379341,
+    "A_std": 3.2988522899991177
+  },
+  "anchor_dependence": {
+    "anchors_tested": [
+      4,
+      6,
+      8,
+      12
+    ],
+    "results": {
+      "4": {
+        "n_points": 11,
+        "dr_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "F_values": {
+          "1": -2.3291719110216604,
+          "2": -0.5618347893764053,
+          "3": -0.10103879171266783,
+          "4": -0.04733307600365322,
+          "5": -0.02712771107986711,
+          "6": -0.017194334769683906,
+          "7": -0.01157233049772799,
+          "8": -0.008092029910514498,
+          "9": -0.005796878488126822,
+          "10": -0.004209179840181321,
+          "11": -0.003068221687207995,
+          "12": -0.0022218714808914797
+        },
+        "alpha": 3.930905464752202,
+        "dalpha": 0.1548081358050417,
+        "A": -8.54828626406662,
+        "dA": 0.9517722089275711,
+        "chi2_reduced": 6.000150318330049,
+        "fit_failed": false
+      },
+      "6": {
+        "n_points": 11,
+        "dr_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "F_values": {
+          "1": -2.351692205770803,
+          "2": -0.5736905904285763,
+          "3": -0.10316809917932801,
+          "4": -0.048783588751025064,
+          "5": -0.028200650592243193,
+          "6": -0.018005777922368793,
+          "7": -0.01218460491752893,
+          "8": -0.008543928753677932,
+          "9": -0.006114281901464125,
+          "10": -0.004409850656934111,
+          "11": -0.0031643852148022233,
+          "12": -0.0022218714807848983
+        },
+        "alpha": 3.9217599388092395,
+        "dalpha": 0.15898217272133183,
+        "A": -8.672712864208835,
+        "dA": 0.9919658866322384,
+        "chi2_reduced": 6.00804162963973,
+        "fit_failed": false
+      },
+      "8": {
+        "n_points": 11,
+        "dr_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "F_values": {
+          "1": -2.362318014998227,
+          "2": -0.5791013711808937,
+          "3": -0.1040316440612159,
+          "4": -0.049333015609843045,
+          "5": -0.02856510167264048,
+          "6": -0.01823047122021748,
+          "7": -0.01229123714414726,
+          "8": -0.008543928753621088,
+          "9": -0.0060131789483470754,
+          "10": -0.00420917984016711,
+          "11": -0.0028629784643428025,
+          "12": -0.0018179352799769788
+        },
+        "alpha": 3.922707354558577,
+        "dalpha": 0.15924416091837082,
+        "A": -8.760208107708252,
+        "dA": 1.0035925690454066,
+        "chi2_reduced": 4.918032448341498,
+        "fit_failed": false
+      },
+      "12": {
+        "n_points": 9,
+        "dr_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "F_values": {
+          "1": -2.3649736268077284,
+          "2": -0.5791013711809896,
+          "3": -0.1037075499437421,
+          "4": -0.04878358875094335,
+          "5": -0.02778366101381735,
+          "6": -0.017194334769669695,
+          "7": -0.010966361346305575,
+          "8": -0.006885016818515055,
+          "9": -0.003967774652593903,
+          "10": -0.0017602826063232158
+        },
+        "alpha": 3.9485107095333234,
+        "dalpha": 0.16831498910819417,
+        "A": -8.920369302525621,
+        "dA": 1.0792153971055078,
+        "chi2_reduced": 1.6696746543521728,
+        "fit_failed": false
+      }
+    },
+    "consistency": {
+      "alpha_spread": 0.02675077072408394,
+      "avg_1sigma": 0.16033736463823464,
+      "spread_over_sigma": 0.16684052893373333,
+      "obc_contamination": "subdominant"
+    }
+  },
+  "runtime_s": 789.2651028633118,
+  "hardware": "local_cpu",
+  "status": "COMPLETE"
+}

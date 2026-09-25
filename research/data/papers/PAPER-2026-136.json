@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-136",
+  "title": "Conformal Nature of Quantum Phase Transitions via Fuzzy Three-Sphere Regularization",
+  "authors": ["Meng", "Hu", "Zhu"],
+  "date": "2026-07-13",
+  "arxiv_id": "2607.11371",
+  "relevance": 3,
+  "abstract": "Extends the fuzzy-sphere program to (3+1)-D via fuzzy three-sphere Landau-level regularization, and explicitly extracts Yang-Lee (non-unitary) critical spectra, verifying state-operator correspondence at a non-Hermitian critical point.",
+  "tags": ["fuzzy-sphere", "Yang-Lee", "non-unitary", "state-operator-correspondence", "radial-quantization", "non-Hermitian"],
+  "key_claims": [
+    "Sphere regularization + radial quantization cleanly accesses non-unitary (Yang-Lee) CFT operator content.",
+    "State-operator correspondence verified at a non-Hermitian critical point via Landau-level projection.",
+    "Worked example is (3+1)-D, not the 2D M(2,5) minimal model."
+  ],
+  "relevance_note": "WATCH / TOOLING for HYP-2026-028. A THIRD regularization strategy for non-unitary conformal data, alongside the periodic PT-chain route (PAPER-133, 2606.16785) and non-Hermitian MERA: sphere regularization sidesteps the PT-breaking edge that closed our exact-diagonalization route (SIM-053/055). Method inspiration only until someone does the 2D fuzzy-circle analog for M(2,5); no usable spectra for our chain. No bearing on the alpha=4, transport, or C_sse anchors.",
+  "seeds_hypothesis": null,
+  "related_hypotheses": ["HYP-2026-028"],
+  "anchor_contradiction": "None.",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2607.11371",
+  "discovered_by": "weekly-scan-15",
+  "discovered_date": "2026-07-14"
+}

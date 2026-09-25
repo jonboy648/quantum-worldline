@@ -1,0 +1,15 @@
+{
+  "id": "HW-2026-067",
+  "organization": "Pasqal",
+  "processor": "Orion QPU (system 'SOL') at CINECA, Italy",
+  "date": "2026-06-11",
+  "source_url": "https://thequantuminsider.com/2026/06/11/pasqal-inaugurates-italys-first-neutral-atom-quantum-computer-third-system-europe/",
+  "physical_qubits": 140,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": "physical_qubits",
+  "notes": "DEPLOYMENT milestone, not a new hardware spec. Pasqal inaugurated Italy's first neutral-atom quantum computer (third Pasqal EuroHPC system in Europe, after France and Germany): a 140-qubit Orion QPU ('SOL') tightly coupled to the EuroHPC Leonardo supercomputer at CINECA, Bologna. Supports CUDA-Q and Qiskit workflows via an open-source QRMI interface. No new gate-fidelity or logical-qubit numbers reported; 140q Orion is an existing Pasqal spec. Access requires EuroHPC/CINECA affiliation. RELEVANCE 2/5: neutral-atom 140q could host our 8q force circuits, but likely analog/digital hybrid and no fidelity data given. Related Pasqal records: HW-2026-011 (250q advantage), HW-2026-047 (Fresnel gen). Discovered_by hardware-tracker 2026-06-16."
+}

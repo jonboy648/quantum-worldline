@@ -1,0 +1,96 @@
+{
+  "id": "SIM-2026-034",
+  "type": "classical",
+  "date": "2026-06-16",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Proper stress-tensor channel via Koo-Saleur (Milsted-Vidal 1706.01436): force between energy-momentum density fluctuations O_j=h_j-<h_j> at the Ising vs tricritical points of the O'Brien-Fendley chain, with T-state identification by conformal spin 2. Supersedes the local-operator scans SIM-033/033b (wrong operator space).",
+  "circuit": {
+    "qubits": 14,
+    "script_path": "research/data/simulations/sim034_koosaleur_stress_tensor.py"
+  },
+  "hardware_target": "local CPU (exact statevector + momentum diagonalization)",
+  "results": {
+    "ising": {
+      "lam3": 0.0,
+      "E0": -35.72561708152208,
+      "low_spectrum": [
+        -35.72561708152208,
+        -35.50098189987876,
+        -33.93418546386865,
+        -33.720814428228216,
+        -33.720814428227975,
+        -32.18766877705411,
+        -32.18766877705402,
+        -32.18766877705389
+      ],
+      "low_momenta": [
+        4.0102045788418233e-17,
+        -8.38277704131394e-17,
+        -5.121466088641398e-17,
+        -0.32110311408570447,
+        0.321607893959998,
+        0.008023443043251737,
+        -0.42967472097956605,
+        0.9374074050146746
+      ],
+      "T_found": false,
+      "Delta_T_check": null,
+      "alpha": 1.3264618487851938,
+      "alpha_err": 0.9068357724883574,
+      "n_fit": 5,
+      "F": {
+        "1": -8.059069845785363,
+        "2": 0.34474260149714553,
+        "3": 0.48416731206653196,
+        "4": 0.13548259807275187,
+        "5": 0.0382765550770614,
+        "6": 0.007430592054255669
+      }
+    },
+    "tci": {
+      "lam3": 0.856,
+      "E0": -28.41602173351711,
+      "low_spectrum": [
+        -28.41602173351711,
+        -28.309127050985854,
+        -28.122234221766835,
+        -27.085925685521786,
+        -26.83122634116049,
+        -26.831226341160214,
+        -26.532063611514925,
+        -26.53206361151398
+      ],
+      "low_momenta": [
+        7.054094801336478e-17,
+        -1.1197167604176803e-16,
+        3.8652574253898476e-17,
+        -1.1402509404899852e-16,
+        -0.8319055488312114,
+        0.8322648611344646,
+        -0.7271869381448584,
+        0.7272534809824681
+      ],
+      "T_found": false,
+      "Delta_T_check": null,
+      "alpha": 4.41249644122165,
+      "alpha_err": 0.2317018013298729,
+      "n_fit": 5,
+      "F": {
+        "1": -5.3461334171111154,
+        "2": -5.614335037940062,
+        "3": -0.8881012989163164,
+        "4": 0.401223679542845,
+        "5": -0.013344324580486955,
+        "6": -0.07238384294507583
+      }
+    },
+    "gate_pass": false,
+    "dichotomy": {
+      "universal": 4.0
+    },
+    "verdict": "VALIDATION_FAILED: Ising stress-tensor-channel alpha=1.3264618487851938 outside (3.4, 4.6); density-fluctuation channel not validated at N=14. (Try larger N or refine the T identification.)"
+  },
+  "comparison": "classical_wins",
+  "notes": "O_j=h_j-<h_j> is the stress-tensor (energy) density fluctuation; its momentum modes are the Koo-Saleur H_n. This is the channel T lives in by construction.",
+  "wall_seconds": 2.6152257919311523
+}

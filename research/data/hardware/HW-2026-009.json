@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-009",
+  "organization": "Quantinuum",
+  "processor": "Helios",
+  "date": "2025-11-05",
+  "source_url": "https://arxiv.org/abs/2511.05465",
+  "physical_qubits": 98,
+  "logical_qubits": 94,
+  "error_correction_ratio": "~1:1 (iceberg codes, 2 ancilla per block)",
+  "two_qubit_gate_fidelity": 0.99921,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "logical_qubits",
+  "notes": "98-qubit QCCD trapped-ion (137Ba+). Junction-based architecture with rotatable ion storage ring. Single-qubit gate infidelity 2.5e-5, two-qubit gate infidelity 7.9e-4, SPAM infidelity 4.8e-4. Successor to H2 (56 qubits). Demonstrated 94 logical qubits (error-detection) and 48 logical qubits (concatenated error-correction) with beyond-break-even performance. Logical gate error rate ~1e-4."
+}

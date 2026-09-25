@@ -1,0 +1,61 @@
+[2026-09-07T21:53:49Z] creating CPU pod qw-sim077-09071653
+waiting for ssh on pod vt7llchg21epev (timeout 15m0s)
+ssh on pod vt7llchg21epev ready after 18s: ssh reachable at 213.173.110.22:19521
+[2026-09-07T21:54:20Z] pod vt7llchg21epev at 213.173.110.22:19521, costPerHr=0.24
+Warning: Permanently added '[213.173.110.22]:19521' (ED25519) to the list of known hosts.
+48
+               total        used        free      shared  buff/cache   available
+Mem:             251          40         106           0         107         211
+Python 3.12.3
+Warning: Permanently added '[213.173.110.22]:19521' (ED25519) to the list of known hosts.
+Warning: Permanently added '[213.173.110.22]:19521' (ED25519) to the list of known hosts.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2.1.2 1.18.1
+Warning: Permanently added '[213.173.110.22]:19521' (ED25519) to the list of known hosts.
+[2026-09-07T21:54:40Z] running C1 on vt7llchg21epev
+Warning: Permanently added '[213.173.110.22]:19521' (ED25519) to the list of known hosts.
+C1 L=10 hz=0.0    R=   6 delta=  0: Im mean -0.0000 (pred 0.2618) no  [11s]
+C1 L=10 hz=0.0    R=   6 delta=  2: Im mean +0.0653 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.0    R=   6 delta=  5: Im mean +0.0427 (pred 0.2618) no  [11s]
+C1 L=10 hz=0.05   R=   6 delta=  0: Im mean +0.2072 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.05   R=   6 delta=  2: Im mean +0.6030 (pred 0.2618) no  [11s]
+C1 L=10 hz=0.05   R=   6 delta=  5: Im mean +0.0931 (pred 0.2618) no  [12s]
+C1 L=10 hz=0.02   R=   6 delta=  0: Im mean +0.0385 (pred 0.2618) no  [11s]
+C1 L=10 hz=0.02   R=   6 delta=  2: Im mean +0.1769 (pred 0.2618) no  [13s]
+C1 L=10 hz=0.02   R=   6 delta=  5: Im mean +0.1145 (pred 0.2618) no  [9s]
+C1 L=10 hz=0.01   R=   6 delta=  0: Im mean +0.0098 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.01   R=   6 delta=  2: Im mean +0.0926 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.01   R=   6 delta=  5: Im mean +0.0665 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.005  R=   6 delta=  0: Im mean +0.0025 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.005  R=   6 delta=  2: Im mean +0.0721 (pred 0.2618) no  [10s]
+C1 L=10 hz=0.005  R=   6 delta=  5: Im mean +0.0491 (pred 0.2618) no  [13s]
+C1 L=12 hz=0.0    R=   8 delta=  0: Im mean +0.0000 (pred 0.2618) no  [157s]
+C1 L=12 hz=0.0    R=   8 delta=  2: Im mean +0.0580 (pred 0.2618) no  [114s]
+C1 L=12 hz=0.0    R=   8 delta=  5: Im mean +0.0466 (pred 0.2618) no  [150s]
+C1 L=12 hz=0.05   R=   8 delta=  0: Im mean -0.6863 (pred 0.2618) no  [155s]
+C1 L=12 hz=0.05   R=   8 delta=  2: Im mean -0.6156 (pred 0.2618) no  [147s]
+C1 L=12 hz=0.05   R=   8 delta=  5: Im mean +0.0321 (pred 0.2618) no  [158s]
+C1 L=12 hz=0.02   R=   8 delta=  0: Im mean -2.2698 (pred 0.2618) no  [145s]
+C1 L=12 hz=0.02   R=   8 delta=  2: Im mean +0.3144 (pred 0.2618) no  [152s]
+C1 L=12 hz=0.02   R=   8 delta=  5: Im mean +0.1957 (pred 0.2618) no  [162s]
+C1 L=12 hz=0.01   R=   8 delta=  0: Im mean +0.8684 (pred 0.2618) no  [156s]
+C1 L=12 hz=0.01   R=   8 delta=  2: Im mean +0.1199 (pred 0.2618) no  [157s]
+C1 L=12 hz=0.01   R=   8 delta=  5: Im mean +0.1034 (pred 0.2618) no  [147s]
+C1 L=12 hz=0.005  R=   8 delta=  0: Im mean +5.3232 (pred 0.2618) no  [129s]
+C1 L=12 hz=0.005  R=   8 delta=  2: Im mean +0.0730 (pred 0.2618) no  [142s]
+C1 L=12 hz=0.005  R=   8 delta=  5: Im mean +0.0622 (pred 0.2618) no  [152s]
+C1 L=14 hz=0.0    R=   8 delta=  0: Im mean +0.0000 (pred 0.2618) no  [2579s]
+C1 L=14 hz=0.0    R=   8 delta=  2: Im mean +0.0719 (pred 0.2618) no  [2747s]
+C1 L=14 hz=0.0    R=   8 delta=  5: Im mean +0.0357 (pred 0.2618) no  [2680s]
+C1 L=14 hz=0.0    R=  10 delta=  0: Im mean +0.0000 (pred 0.2618) no  [2761s]
+C1 L=14 hz=0.0    R=  10 delta=  2: Im mean -0.0634 (pred 0.2618) no  [2799s]
+C1 L=14 hz=0.0    R=  10 delta=  5: Im mean +0.0452 (pred 0.2618) no  [2735s]
+C1 L=14 hz=0.05   R=   8 delta=  0: Im mean +0.1356 (pred 0.2618) no  [2140s]
+C1 L=14 hz=0.05   R=   8 delta=  2: Im mean -0.5835 (pred 0.2618) no  [2056s]
+C1 L=14 hz=0.05   R=   8 delta=  5: Im mean -0.0217 (pred 0.2618) no  [2710s]
+C1 L=14 hz=0.05   R=  10 delta=  0: Im mean -5.2636 (pred 0.2618) no  [2931s]
+C1 L=14 hz=0.05   R=  10 delta=  2: Im mean -0.4422 (pred 0.2618) no  [2422s]
+C1 L=14 hz=0.05   R=  10 delta=  5: Im mean -0.0585 (pred 0.2618) no  [2043s]
+C1 L=14 hz=0.02   R=   8 delta=  0: Im mean +1.0529 (pred 0.2618) no  [1942s]
+C1 L=14 hz=0.02   R=   8 delta=  2: Im mean +0.4599 (pred 0.2618) no  [2697s]
+[2026-09-08T09:54:41Z] deleting pod vt7llchg21epev

@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-030",
+  "title": "Absence of barren plateaus and scaling of gradients in the energy optimization of isometric tensor network states",
+  "authors": ["Thomas Barthel", "Qiang Miao"],
+  "date": "2025-03-21",
+  "source": "other",
+  "source_url": "https://arxiv.org/abs/2304.00161",
+  "arxiv_id": "2304.00161",
+  "abstract": "Proves that variational optimization of matrix product states (MPS), tree tensor networks (TTN), and the multiscale entanglement renormalization ansatz (MERA) are free of barren plateaus for extensive Hamiltonians with finite-range interactions. Establishes analytical gradient variance scaling guarantees using Riemannian optimization framework with Haar-random initialization. Key result: MERA gradient variance scales polynomially (not exponentially) with system size, providing mathematical trainability guarantee for tensor-network-based VQE.",
+  "relevance": 5,
+  "tags": ["MERA", "barren-plateaus", "trainability", "gradient-scaling", "tensor-networks", "VQE", "theoretical-guarantee", "MPS", "TTN"],
+  "key_claims": [
+    "MERA optimization is provably free of barren plateaus",
+    "Gradient variance scales polynomially with system size for MERA",
+    "Same guarantee holds for MPS and tree tensor networks",
+    "Riemannian formulation simplifies analytical evaluation",
+    "Provides analytical motivation for specific initialization schemes",
+    "Published in Communications in Mathematical Physics (2025)"
+  ],
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

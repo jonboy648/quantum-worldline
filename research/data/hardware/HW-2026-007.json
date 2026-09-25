@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-007",
+  "organization": "Microsoft",
+  "processor": "Majorana 1",
+  "date": "2025-02-19",
+  "source_url": "https://azure.microsoft.com/en-us/blog/quantum/2025/02/19/microsoft-unveils-majorana-1-the-worlds-first-quantum-processor-powered-by-topological-qubits/",
+  "physical_qubits": 8,
+  "logical_qubits": 0,
+  "error_correction_ratio": "N/A (topological protection)",
+  "two_qubit_gate_fidelity": 0.0,
+  "coherence_time_us": 0,
+  "max_circuit_depth": 0,
+  "is_frontier": true,
+  "frontier_category": "error_rate",
+  "notes": "World's first QPU powered by Topological Core using Majorana Zero Modes. 8 topological qubits. InAs/Al semiconductor-superconductor heterostructure. Designed to scale to 1 million qubits on single chip. Part of DARPA US2QC program. Controversial: no peer-reviewed paper yet; Nature paper by 160+ researchers accompanies press release. New Denmark lab to fabricate Majorana chip cores."
+}

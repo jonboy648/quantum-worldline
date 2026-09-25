@@ -1,0 +1,19 @@
+{
+  "id": "SIM-2026-063",
+  "hypothesis_id": "HYP-2026-025",
+  "related": ["SIM-2026-057", "SIM-2026-059", "SIM-2026-062"],
+  "date": "2026-07-04",
+  "type": "chi-escalation (Z3-symmetric Potts, RunPod)",
+  "hardware": "RunPod CPU pod jhhcxxp82pa1js (cpu3c, 32 vCPU, 64GB, $0.96/hr, ~10.6h total session ~$10.20, pod killed + verified). qw_potts_z3.jl, 6 seeds x 3000 LBFGS each at chi=9 (3,3,3) and chi=12 (4,4,4), single-thread BLAS.",
+  "goal": "Resolve the HYP-025 caveat: dense chi=8 (SIM-059) had Delta_sigma ~30% below the CFT 2/15=0.1333; diagnosis was chi-starvation of the c=4/5 tower. Test whether chi=10-12 with the validated Z3-symmetric driver (SIM-062) recovers the full conformal tower.",
+  "verdict": "RESOLVED -- Delta_sigma converges to the CFT value at chi=12. HYP-025 caveat CLOSED; upgrade SUPPORTED (clean, full tower).",
+  "results": {
+    "chi9": "3/6 clean: Dsig=0.1372/0.1430/0.1635, Deps=0.813-0.853, alpha=4.01-4.07 (wall 8537 s)",
+    "chi12": "2/6 clean: Dsig=0.1324/0.1351 (CFT 0.1333, within 1.5%), Deps=0.8039/0.8057 (CFT 0.8, within 0.7%), Delta_T=2.0004/2.0023 -> alpha=4.001/4.005 (wall 24740 s)",
+    "chi_progression": "Dsig 0.089 (chi6, SIM-062) -> 0.137-0.164 (chi9) -> 0.132-0.135 (chi12): the chi-starvation diagnosis was exactly right",
+    "basin_rate": "clean rate stays ~1/3 at higher chi (3/6, 2/6) -- the Z3 sector gate auto-identifies clean basins; sigma/sigma-bar degeneracy exact throughout"
+  },
+  "interpretation": "The 3-state Potts c=4/5 universality-ladder rung is now CLEAN: full tower (sigma=2/15, eps=4/5, T=2) matches CFT in all three measured operators, and alpha=2*Delta_T=4.00 at the third unitary class. Ladder complete with clean spectra: Ising c=1/2, tricritical c=7/10, Potts c=4/5 -- all alpha=4.",
+  "files": ["scratchpad potts_chi9.log / potts_chi12.log", "research/tools/MERAKit.jl/qw_potts_z3.jl"],
+  "status": "COMPLETE"
+}

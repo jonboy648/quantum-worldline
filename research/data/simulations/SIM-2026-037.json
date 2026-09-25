@@ -1,0 +1,33 @@
+{
+  "id": "SIM-2026-037",
+  "type": "classical",
+  "date": "2026-06-17",
+  "hypothesis_id": "HYP-2026-027",
+  "description": "Stage-2b: attempt to escape the SIM-036 chi=3 product-state collapse (ERRATA D5) using CHEAP levers only -- an init-scale sweep (random*{0.3,0.6,1.0} x 2 seeds) plus a one-round entanglement-warmup objective (loss = <H> - 0.5*S_half, then anneal to pure energy). Gate enforces energy AND entanglement AND overlap. Did NOT attempt a true DMRG/MPS seed (that is the next step).",
+  "circuit": {
+    "qubits": 16,
+    "chi": 3,
+    "n_params": 1246,
+    "script_path": "research/data/simulations/sim037_seeded_tci_mera.py",
+    "theta_checkpoint": "research/data/simulations/theta_seeded_SIM2026037.npy"
+  },
+  "hardware_target": "local CPU",
+  "results": {
+    "E_exact": -32.702808,
+    "S_half_exact": 0.1795,
+    "best_checkpoint_evaluated": {
+      "E_mera": -32.557445,
+      "rel_err_pct": 0.4445,
+      "overlap": 0.9096,
+      "S_half": 0.0001,
+      "S_ratio": 0.0007,
+      "gate_pass": false
+    },
+    "note_on_completeness": "Run was killed at ~4h50m after the best-so-far checkpoint stalled for >2h (trial 1 finished ~11:38, no improvement by 13:51). The remaining trials were not allowed to finish because the best completed trial already reproduced the SIM-036 near-product collapse (S_half 0.0001 ~= SIM-036's 0.0002) -- the cheap levers demonstrably do not escape the basin, so further trials would only re-confirm it at multi-hour cost. The full 6-trial JSON the script would have written was therefore authored by hand from the evaluated checkpoint.",
+    "status": "SEEDING_INSUFFICIENT_TRY_MPS_SEED",
+    "verdict": "CHEAP seeding (init-scale sweep + soft one-round entanglement penalty) does NOT escape the chi=3 product-state collapse. Best trial: S_half 0.0001 vs exact 0.1795 (0.07% of the true entanglement), essentially identical to SIM-036's collapsed minimum. This is the fallback ERRATA D5 explicitly anticipated. Conclusion: a TRUE DMRG/MPS seed is required -- initialize the MERA isometries/disentanglers from the chi<=6 MPS ground state (cheap to obtain at N=16) rather than from random*scale. Do NOT escalate to chi>=4 yet: chi=3 has the capacity (99.99% of the exact TCI GS per ERRATA D5); the obstruction is purely the optimizer landscape, and a structured seed is the correct tool, not more bond dimension."
+  },
+  "comparison": "classical_wins",
+  "notes": "Attacks initialization/landscape (the real SIM-036 failure), not bond dimension. Negative but decisive: rules out the cheap shortcut, narrows HYP-027 to the true-MPS-seed path. Likely cause of failure: half_S gradient ~= 0 AT the product state, so a soft penalty cannot push the optimizer uphill out of the basin it already sits in; one warmup round at lambda=0.5 is too weak before the 4 energy rounds pull it back to product. quimb-based DMRG seed is the next instrument.",
+  "wall_seconds_partial": 17400
+}

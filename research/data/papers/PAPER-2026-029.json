@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-029",
+  "title": "Probing Entanglement Scaling Across a Quantum Phase Transition on a Quantum Computer",
+  "authors": ["Qiang Miao", "Tianyi Wang", "Kenneth R. Brown", "Thomas Barthel", "Marko Cetina"],
+  "date": "2025-08-24",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2412.18602",
+  "arxiv_id": "2412.18602",
+  "abstract": "First demonstration of log-law scaling of subsystem entanglement entropies at criticality on a digital quantum computer. Uses MERA circuits on a trapped-ion quantum computer with 15 Yb-171 ions, employing binary 1D MERA with bond dimension chi=2 and up to T=5 layers (12 qubits used). Studies the transverse-field Ising model (TFIM) across its quantum phase transition, observing Z2 symmetry breaking in the ferromagnetic phase and universal scaling near the critical point. Classically pre-optimized MERA tensors, symmetry-constrained gate compilation.",
+  "relevance": 5,
+  "tags": ["MERA", "entanglement-scaling", "quantum-hardware", "trapped-ion", "TFIM", "criticality", "log-law", "phase-transition", "chi2"],
+  "key_claims": [
+    "First log-law entanglement scaling at criticality on quantum hardware",
+    "Binary MERA chi=2 up to T=5 layers on 12-qubit trapped-ion system",
+    "Symmetry-constrained gate compilation preserves Z2 and time-reversal symmetry",
+    "MERA proven free of barren plateaus (cite Barthel-Miao 2025)",
+    "All-to-all connectivity of trapped ions simplifies MERA circuit implementation",
+    "L=96 critical Ising model probed with just 12 qubits via MERA holographic structure"
+  ],
+  "hardware_used": "Trapped-ion (15 Yb-171 ions, Sandia HOA-2.1.1)",
+  "qubit_count": 12,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

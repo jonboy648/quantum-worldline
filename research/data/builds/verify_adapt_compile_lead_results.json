@@ -1,0 +1,29 @@
+{
+  "n_generators": 25,
+  "n_2q_generators": 25,
+  "heuristic_75": 75,
+  "routes_zzphase": {
+    "naive_rebase": 50,
+    "fullpeephole": 42,
+    "greedy_pauli_simp": 33,
+    "pauli_simp": 48,
+    "quantinuum_backend_optlvl2": "ERR:DeviceNotAvailable:H1-1LE"
+  },
+  "best_zzphase": 33,
+  "angle_invariance_seeds": [
+    33,
+    33,
+    33,
+    33,
+    33,
+    33,
+    33,
+    33
+  ],
+  "chi3_451": 451,
+  "chi3_qubits": 16,
+  "adapt_qubits": 8,
+  "ratio_best": 13.666666666666666,
+  "apples_to_apples": false,
+  "note": "451 = 16q 2-layer holographic MERA; ADAPT = 8q bare GS prep. Ratio is informational only."
+}

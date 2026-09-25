@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-051",
+  "arxiv_id": "2603.19726",
+  "title": "Advances in the Worldline Approach to Quantum Field Theory: Strong Fields, Amplitudes and Gravity",
+  "authors": ["Filippo Fecit"],
+  "year": 2026,
+  "venue": "arxiv (hep-th), PhD thesis, submitted Mar 2026",
+  "submission_date": "2026-03-20",
+  "abstract_summary": "PhD thesis collecting works on worldline formalism in QFT: strong field interactions, scattering amplitudes, heat kernel expansions, and perturbative gravity. Covers scalar to spin-2 particles in worldline path integral approach.",
+  "relevance": 2,
+  "relevance_reason": "Worldline formalism in QFT is the mathematical cousin of our worldline project name. However, this is perturbative QFT worldlines, not lattice/holographic worldlines.",
+  "connection_to_project": "The worldline formalism (first-quantized approach) is mathematically related to geodesic lengths in AdS, which connect to our transport protocol. The heat kernel methods are used in AdS propagators. Low direct relevance to current experiments.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

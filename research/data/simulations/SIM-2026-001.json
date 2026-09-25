@@ -1,0 +1,124 @@
+{
+  "id": "SIM-2026-001",
+  "description": "MERA holographic force verification for HYP-2026-002. Binary MERA (16 qubits, 3 layers) with Ry hologron excitations. Compared against exact diagonalization (20-site critical Ising) and AdS analytical prediction from Sahay-Lukin-Cotler (PRX 2026).",
+  "type": "comparison",
+  "date": "2026-03-10",
+  "hypothesis_id": "HYP-2026-002",
+  "paper_ref": "PAPER-2026-003",
+  "circuit": {
+    "qubits": 16,
+    "depth": 15,
+    "gates": 103,
+    "cx_count": 29,
+    "u_count": 74,
+    "gate_breakdown": { "cx": 29, "u": 74 },
+    "n_params": 146,
+    "layers": 3,
+    "architecture": "binary_MERA_disentanglers_isometries",
+    "hologron_gate": "Ry",
+    "hologron_angle_rad": 1.0471975511965976,
+    "script_path": "D:/quantum-worldline/research/data/simulations/mera_circuit_hyp002.py"
+  },
+  "hardware_target": "quantinuum_h2",
+  "hardware_feasibility": {
+    "h2_qubit_capacity": 56,
+    "circuit_qubits": 16,
+    "headroom_qubits": 40,
+    "h2_cx_fidelity": 0.998,
+    "accumulated_cx_error_pct": 5.64,
+    "verdict": "FEASIBLE — 16q well within H2 56q capacity; error budget 5.6% is tight but acceptable for PoC",
+    "note": "Full 24-qubit version has ~13% CX error budget; remains H2-feasible. 32q pushes to 24%."
+  },
+  "results": {
+    "quantum": {
+      "backend": "qiskit-aer statevector (exact)",
+      "elapsed_seconds": 4.72,
+      "n_shots_h2_estimate": 1024,
+      "delta_rho_values": [1, 2, 3, 4, 5, 6, 7, 8],
+      "V_quantum": [
+        -0.08400795833165552,
+        0.07152002680675953,
+        0.16662176884870974,
+        0.080385519988777,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "error_bars": [0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125],
+      "causal_cone_limit": 4,
+      "causal_cone_note": "Circuit has zero inter-site entanglement beyond dr=4 at depth 15 / 3 layers. Requires 5+ MERA layers to probe full separation range."
+    },
+    "classical_baseline": {
+      "backend": "scipy eigsh Lanczos (exact)",
+      "elapsed_seconds": 14.63,
+      "system": "critical_transverse_field_Ising_20_sites",
+      "J": 1.0,
+      "h": 1.0,
+      "ground_state_energy": -25.107797111623753,
+      "anchor_site": 5,
+      "delta_rho_values": [1, 2, 3, 4, 5, 6, 7, 8],
+      "raw_connected_correlators": [
+        0.6069560401265943,
+        0.49256266531516246,
+        0.4270691989891311,
+        0.3811056488319524,
+        0.3453828137314715,
+        0.3157599998601303,
+        0.28997979294724885,
+        0.26660771582805975
+      ],
+      "fitted_C1": 0.23199256900886708,
+      "fitted_C2": -0.5030008390805493,
+      "fitted_xi": 3.2294272515537323,
+      "xi_vs_l_AdS_discrepancy": "ED xi=3.23 vs theory l_AdS=1.44 (factor 2.2x). Likely sources: (1) open boundary conditions in ED vs periodic in MERA, (2) 20-site finite-size effects, (3) correlator normalization mismatch between raw C(r) and MERA V scale."
+    },
+    "analytical": {
+      "model": "V = C1 - C2 * exp(-delta_rho / l_AdS)",
+      "C1": 0.080,
+      "C2": 13.6,
+      "l_AdS": 1.4426950408889634,
+      "C1_err": 0.008,
+      "C2_err": 0.8,
+      "source": "Sahay, Lukin, Cotler (PRX 2026), PAPER-2026-003"
+    }
+  },
+  "comparison": "inconclusive",
+  "comparison_notes": "Circuit shape (attractive at dr=1, oscillating at dr=2-4) consistent with existence of holographic force. Absolute scale and sign differ from AdS prediction because MERA params are pre-initialized (not variationally optimized to critical Ising ground state). ED xi mismatch (3.23 vs 1.44) points to finite-size and boundary effects. Full verification requires: (1) VQE optimization of MERA params, (2) 5+ MERA layers for full causal cone coverage, (3) periodic boundary conditions in ED.",
+  "findings": [
+    {
+      "id": "FIND-001",
+      "severity": "critical_circuit_fix",
+      "description": "Rz hologrons give V=0 identically because Rz commutes with ZZ observable. Must use Ry (or Rx) for non-commuting hologron excitations. This is a fundamental physics constraint, not a bug.",
+      "action": "Updated circuit to use Ry(pi/3) hologrons. mera_circuit_hyp002.py patched."
+    },
+    {
+      "id": "FIND-002",
+      "severity": "design_constraint",
+      "description": "MERA causal cone at depth 15 / 3 layers limits entanglement reach to dr<=4 on a 16-qubit chain. Sites at dr>=5 show V=0 (no entanglement propagated).",
+      "action": "Increase to 5 MERA layers for 24-qubit full circuit. This doubles depth to ~30 and CX count to ~58, still H2-feasible."
+    },
+    {
+      "id": "FIND-003",
+      "severity": "requires_optimization",
+      "description": "Pre-initialized MERA params (analytically motivated, not VQE-optimized) produce wrong absolute scale. chi^2/dof=12204, indicating ~200-sigma disagreement per point. Parameters must be optimized to approximate the critical Ising ground state.",
+      "action": "Run VQE with energy minimization on qiskit-aer before H2 submission. Estimated 500-1000 VQE iterations."
+    },
+    {
+      "id": "FIND-004",
+      "severity": "informational",
+      "description": "H2 hardware submission is feasible at 16q. Accumulated CX error budget is 5.64% for the PoC circuit, within acceptable range for a proof-of-concept. Full 24q circuit budget is 13.3%, still viable.",
+      "action": "After VQE optimization, submit to Quantinuum H2 with explicit user approval per CLAUDE.md rules."
+    }
+  ],
+  "next_steps": [
+    "Run VQE energy minimization on qiskit-aer to optimize 146 MERA parameters to critical Ising ground state",
+    "Extend to 5 MERA layers (24 qubits) to probe full dr=1..8 separation range within causal cone",
+    "Run ED with periodic boundary conditions and larger system (N>=28) to reduce finite-size xi mismatch",
+    "After optimization confirms force profile shape, request user approval for Quantinuum H2 hardware submission",
+    "Correlate xi extraction from MERA circuit fit against l_AdS=1.4427 as key falsifiable prediction"
+  ],
+  "visualization_path": "D:/quantum-worldline/research/data/simulations/SIM-2026-001_comparison.png",
+  "visualization_path_2": "D:/quantum-worldline/research/data/simulations/SIM-2026-001_circuit_analysis.png",
+  "notes": "Simulation uses analytically-motivated MERA parameters, not VQE-optimized. Results are proof-of-concept for circuit architecture validity, not final experimental data. Hardware submission requires explicit user approval."
+}

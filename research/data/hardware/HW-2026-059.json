@@ -1,0 +1,17 @@
+{
+  "id": "HW-2026-059",
+  "organization": "University of Sydney (Biercuk group; Makadia, Jee, Shankar, Wolf et al.)",
+  "processor": "Rotating Penning-trap beryllium ion crystal (site-selective control)",
+  "date": "2026-05-31",
+  "source_url": "https://arxiv.org/abs/2606.00940",
+  "arxiv_id": "2606.00940",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Programmable site-selective spin control in rotating Penning-trap ion crystals. Demonstrates single-qubit Rz(pi) at 94.6% gate fidelity with 1.2% nearest-neighbor crosstalk across large rotating beryllium ion crystals, enabling spatially structured spin patterns and dual-quadrature Ramsey sensing. RELEVANCE 2/5: large-ion-crystal addressing advance; a different hardware modality (Penning trap) from our trapped-ion/neutral-atom focus. Does not change physics anchors."
+}

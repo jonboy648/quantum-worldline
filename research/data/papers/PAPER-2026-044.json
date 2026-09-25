@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-044",
+  "arxiv_id": "2512.19452",
+  "title": "Holographic Tensor Networks as Tessellations of Geometry",
+  "authors": ["Qiang Wen", "Mingshuai Xu", "Haocheng Zhong"],
+  "year": 2025,
+  "venue": "arxiv (hep-th), submitted Dec 2025, revised Apr 2026",
+  "submission_date": "2025-12-22",
+  "abstract_summary": "Constructs holographic tensor networks from partial-entanglement-entropy (PEE) threads (bulk geodesics with specific density distribution) that generate a perfect tessellation of AdS space. Three variants: EPR-pair networks, HaPPY-like perfect tensor networks, and random PEE networks. Minimal cuts reproduce exact Ryu-Takayanagi formula. Connects Crofton formula to holographic tensor network geometry.",
+  "relevance": 4,
+  "relevance_reason": "PEE threads = bulk geodesics connects directly to Lin 2025 thread analysis in our memory. The tessellation approach provides a geometric framework for understanding why our chi=3 MERA gives correct RT formula to 0.15%.",
+  "connection_to_project": "Extends Lin 2025 thread picture (already in our knowledge base) with explicit tensor network construction. Thread density distribution via Crofton formula is the mathematical bridge between our kinematic space analysis and the MERA force profile.",
+  "status": "NOVEL",
+  "scan_date": "2026-04-26"
+}

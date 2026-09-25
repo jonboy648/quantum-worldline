@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-052",
+  "organization": "IonQ / DARPA",
+  "processor": "IonQ diamond-core quantum memory (modular networking component)",
+  "date": "2026-04-14",
+  "source_url": "https://www.ionq.com/news/ionq-selected-for-darpas-heterogeneous-architectures-for-quantum-harq-program",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Announced 2026-04-14. IonQ selected for DARPA's Heterogeneous Architectures for Quantum (HARQ) program. HARQ aims to build networked quantum computers combining distinct qubit types (trapped ions, neutral atoms, superconducting) into high-performance modular architectures. IonQ's role: quantum memories fabricated from quantum-grade synthetic diamond, designed for datacenter-scale interconnects and long-distance entanglement distribution. HARQ is a platform-agnostic networking program — NOT a single-vendor hardware initiative. This is a government validation of IonQ's modular networking roadmap, not a new QPU specification. RELEVANCE TO OUR WORK: Low direct relevance for near-term MERA experiments. Strategically important: if HARQ succeeds, it creates heterogeneous quantum computing infrastructure (trapped-ion + neutral atom hybrid) that would be ideal for fault-tolerant holographic MERA circuits combining the high-fidelity gate operations of trapped ions with the large qubit counts of neutral atoms. Timeline: HARQ is a multi-year DARPA program; deployable results expected 2028-2030."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-006",
+  "title": "Simulation of the massless Dirac field in 1+1D curved spacetime",
+  "authors": ["Zhilong Liu", "Run-Qiu Yang", "Heng Fan", "Jieci Wang"],
+  "date": "2025-01-01",
+  "source": "other",
+  "source_url": "https://link.springer.com/article/10.1007/s11433-025-2696-3",
+  "arxiv_id": "2411.15695",
+  "abstract": "Maps the massless Dirac equation in 1+1D curved spacetime to a controllable quantum simulation model applicable to various observers' perspectives. Performs numerical simulations of Simpson spacetime and calculates tunneling rates in Painleve and Schwarzschild coordinates that align closely with theoretical predictions of Hawking radiation.",
+  "relevance": 4,
+  "tags": ["curved-spacetime", "Dirac-field", "Hawking-radiation", "Simpson-spacetime", "quantum-simulation", "worldline"],
+  "key_claims": [
+    "Maps massless Dirac equation in curved spacetime to controllable quantum simulation model",
+    "Applicable to various observer perspectives (Painleve and Schwarzschild coordinates)",
+    "Tunneling rates align closely with Hawking radiation predictions",
+    "Demonstrates Simpson spacetime simulation numerically"
+  ],
+  "hardware_used": "Numerical simulation",
+  "qubit_count": 0,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-03-10"
+}

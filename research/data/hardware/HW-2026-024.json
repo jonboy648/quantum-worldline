@@ -1,0 +1,16 @@
+{
+  "hw_id": "HW-2026-024",
+  "vendor": "Quantinuum",
+  "system_name": "Helios + RIKEN H2 deployment",
+  "qubit_count": 98,
+  "qubit_count_logical": 94,
+  "fidelity_2q": 0.99921,
+  "announcement_date": "2026-04-01",
+  "headline": "Quantinuum H2 delivered to RIKEN Japan; Helios IPO filing; Singapore partnership",
+  "details": "In Apr 2026: H2 delivered to RIKEN (Japan) for Reimei-Fugaku hybrid quantum-supercomputer. Quantinuum confidentially filed S-1 for IPO (Feb 2026). Singapore National Quantum Office strategic partnership announced. Helios still flagship: 98 physical / 94 logical qubits, 99.921% 2Q fidelity. Research access via application.",
+  "source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-commercial-launch-of-new-helios-quantum-computer-that-offers-unprecedented-accuracy-to-enable-generative-quantum-ai-genqai",
+  "relevance": 5,
+  "relevance_reason": "Helios is our primary target for running MERA circuits (already in QCUP application). New RIKEN deployment means second Quantinuum site with H2 access. IPO filing signals commercial scaling.",
+  "access_path": "QCUP PHY204 (declined, resubmit after SciPost publication). Direct Helios application at quantinuum.com. H2 via RIKEN collaboration (academic route).",
+  "scan_date": "2026-04-26"
+}

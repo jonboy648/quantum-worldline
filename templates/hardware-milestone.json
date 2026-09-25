@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "organization", "processor", "date", "source_url"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^HW-\\d{4}-\\d{3,}$" },
+    "organization": { "type": "string" },
+    "processor": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "source_url": { "type": "string" },
+    "physical_qubits": { "type": "integer" },
+    "logical_qubits": { "type": "integer" },
+    "error_correction_ratio": { "type": "string" },
+    "two_qubit_gate_fidelity": { "type": "number" },
+    "coherence_time_us": { "type": "number" },
+    "max_circuit_depth": { "type": "integer" },
+    "is_frontier": { "type": "boolean" },
+    "frontier_category": { "type": "string", "enum": ["physical_qubits", "logical_qubits", "error_rate", "coherence", "circuit_depth"] },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "PAPER-2026-072",
+  "title": "Quantum Optical Techniques for Biomedical Imaging",
+  "authors": ["multiple"],
+  "date": "2025-11",
+  "source": "arxiv:2511.03935",
+  "domain": "quantum optics / biomedical imaging",
+  "status": "WATCH",
+  "relevance": 2,
+  "summary": "Review of quantum optical imaging techniques (QOCT, sub-shot-noise imaging, entangled multiphoton microscopy, ghost imaging, multi-parameter imaging). Most at TRL 2-4 (proof-of-concept). Photon pair rates 10^5-10^7/s vs classical 10^13-10^15/s — orders of magnitude slower, limiting practical throughput. No neural/BCI applications discussed.",
+  "key_numbers": {
+    "trl": "2-4 for most techniques",
+    "photon_pair_rate": "10^5-10^7 pairs/s (vs classical 10^13-10^15/s)",
+    "resolution_advantage": "QOCT: 2x axial resolution improvement"
+  },
+  "bci_relevance": "Quantum optical imaging for BCIs is not viable on <$20k budget and not near-term. Throughput penalty (8 orders of magnitude) eliminates real-time neural imaging application. WATCH only.",
+  "independent_researcher_budget": "Not feasible. Entangled photon sources ~$50k+, SPAD arrays ~$20k+. Not in scope."
+}

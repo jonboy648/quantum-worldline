@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-049",
+  "organization": "IonQ",
+  "processor": "6th-gen 256-qubit chip-based trapped-ion system",
+  "date": "2026-05-13",
+  "source_url": "https://stockstoday.com/ionq-charts-new-territory-with-urban-planning-and-radar-as-first-256-qubit-system-ships-to-cambridge/",
+  "physical_qubits": 256,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Reported 2026-05-13: IonQ's first 256-qubit 6th-generation chip-based trapped-ion system 'has left the lab' and is in transit to University of Cambridge Cavendish Laboratory (Ray Dolby Centre). Partnership announced 2026-03-11 (captured in prior scans). 6th-gen design uses electronics rather than lasers for qubit control, leveraging semiconductor manufacturing. No gate fidelity benchmark released for the 256q system yet — Tempo (#AQ 64, 99.99% 2Q fidelity) is the current performance record but uses fewer qubits. If 256q maintains Tempo-level fidelity, it enables 8+ layer MERA circuits. NOTES: Physical delivery vs operational deployment date TBD. No fidelity claims made for the 256q system as shipped. Availability: research access (Cambridge partnership only at this stage). RELEVANCE TO OUR WORK: If 256q system achieves Tempo-level 99.99% 2Q fidelity after commissioning, it becomes the strongest NISQ platform for deep MERA holographic circuits (L=768 sites, 8+ layers). Monitor commissioning results."
+}

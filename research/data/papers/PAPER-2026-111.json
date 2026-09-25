@@ -1,0 +1,41 @@
+{
+  "id": "PAPER-2026-111",
+  "title": "Experimental observation of conformal field theory spectra",
+  "authors": [
+    "Xiangkai Sun",
+    "Yuan Le",
+    "Stephen Naus",
+    "Richard Bing-Shiun Tsai",
+    "Lewis R. B. Picard",
+    "Sara Murciano",
+    "Michael Knap",
+    "Jason Alicea",
+    "Manuel Endres"
+  ],
+  "date": "2026-01-22",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.16275",
+  "arxiv_id": "2601.16275",
+  "abstract": "Conformal field theories (CFTs) feature prominently in high-energy physics, statistical mechanics, and condensed matter. For example, CFTs govern emergent universal properties of systems tuned to quantum phase transitions, including their entanglement, correlations, and low-energy excitation spectra. Much of the rich structure predicted by CFTs nevertheless remains unobserved in experiment. Here we directly observe the energy excitation spectra of emergent CFTs at quantum phase transitions -- recovering universal energy ratios characteristic of the underlying field theories -- on a programmable Rydberg atom array. We resolve the spectra of both the Ising CFT and the tricritical Ising CFT, and use boundary-condition control to toggle between distinct CFT spectra.",
+  "relevance": 5,
+  "tags": [
+    "rydberg",
+    "ising-cft",
+    "tricritical-ising-cft",
+    "hardware-realization",
+    "cft-spectrum",
+    "quantum-phase-transition",
+    "hyp-017-substrate",
+    "endres"
+  ],
+  "key_claims": [
+    "Direct experimental observation of Ising CFT and tricritical Ising CFT energy excitation spectra on a programmable Rydberg atom array, recovering universal energy ratios",
+    "Boundary-condition control toggles between distinct CFT spectra",
+    "DIRECT SUBSTRATE VALIDATION for HYP-017: confirms 2D Ising CFT criticality is experimentally realized and spectrally resolvable on the exact Rydberg platform our alpha~4 force test targets -- HYP-017 is not chasing a phantom critical point",
+    "No contradiction to any anchor; strengthens hardware-feasibility case for the substrate. Should be cited in any HYP-017 revival or QCUP submission"
+  ],
+  "hardware_used": "Programmable Rydberg atom array (Endres lab, Caltech)",
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-06-11"
+}

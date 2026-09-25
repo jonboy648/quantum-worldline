@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-024",
+  "title": "A Monte Carlo Approach to the Worldline Formalism in Curved Space",
+  "authors": ["Olindo Corradini", "Maurizio Muratori"],
+  "date": "2020-06-04",
+  "source": "other",
+  "source_url": "https://arxiv.org/abs/2006.02911",
+  "arxiv_id": "2006.02911",
+  "abstract": "Develops a numerical method to evaluate worldline path integrals on curved Euclidean spaces sampled with Monte Carlo techniques. Modifies the YLOOPS algorithm with a quadratic stabilizing term to improve convergence. Tests on D-dimensional maximally symmetric spaces. Treats non-flat metric effects as interaction terms. Uses time-slicing discretization relative to proper time. Validated against analytical heat kernel calculations. Published in JHEP 11 (2020) 169.",
+  "relevance": 4,
+  "tags": ["worldline", "Monte-Carlo", "curved-spacetime", "heat-kernel", "maximally-symmetric", "numerical", "YLOOPS"],
+  "key_claims": [
+    "First numerical worldline Monte Carlo on curved Euclidean spaces",
+    "Works on D-dimensional maximally symmetric spaces (including D-spheres and D-hyperboloids)",
+    "Non-flat metric effects treated as interaction terms in perturbative expansion",
+    "Validated against analytical heat kernel calculations",
+    "Time-slicing discretization relative to proper time parallels quantum path integral construction",
+    "CRITICAL for HYP-2026-007: provides the methodology for worldline MC on hyperbolic lattice"
+  ],
+  "hardware_used": "classical numerical (Monte Carlo)",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

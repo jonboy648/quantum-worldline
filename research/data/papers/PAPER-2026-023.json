@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-023",
+  "title": "Superspace worldline formalism approach to Quantum Gravity: dimensional reduction and Holography",
+  "authors": ["Jean-Baptiste Roux"],
+  "date": "2026-01-13",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.07382",
+  "arxiv_id": "2601.07382",
+  "abstract": "Demonstrates that the Hamiltonian formulation of quantum gravity takes the form of a worldline formalism within superspace using ADM formalism. Shows the Keldysh partition function reduces to Euclidean 3D gravity and connects to a 2D CFT generating functional through gauge field formalism. Through the Chern-Simons/Liouville correspondence, calculates the exchange of virtual gravitons between two massive probes from the cosmological boundary. The functional exhibits a minimal time-lapse proportional to the square root of the cosmological constant.",
+  "relevance": 4,
+  "tags": ["worldline", "quantum-gravity", "superspace", "holography", "dimensional-reduction", "CFT", "Chern-Simons"],
+  "key_claims": [
+    "Quantum gravity Hamiltonian formulation IS a worldline formalism in superspace",
+    "Keldysh partition function reduces to Euclidean 3D gravity",
+    "Connects to 2D CFT via Chern-Simons/Liouville correspondence",
+    "Calculates virtual graviton exchange between massive probes from cosmological boundary",
+    "Minimal time-lapse proportional to sqrt(cosmological constant) -- fundamental constraint on temporal evolution",
+    "Directly bridges worldline methods to holographic physics via dimensional reduction"
+  ],
+  "hardware_used": "analytical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

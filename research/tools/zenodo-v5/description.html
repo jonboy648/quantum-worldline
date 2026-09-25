@@ -1,0 +1,80 @@
+<p><strong>CORRECTION NOTICE (v5, 2026-09-06). The central result of v1-v4 is WITHDRAWN. This record has not been peer reviewed.</strong></p>
+<p><em>Issued 2026-09-06 by the author (v5 of this record). This notice
+was added to the archived record; the manuscript itself is unaltered.
+This record has not been peer reviewed.</em></p>
+<p><strong>What is wrong</strong></p>
+<p>The force exponent reported here as alpha = 3.92 +/- 0.16 is an
+artifact of the fitting procedure, not a property of the data. The fit
+was unweighted least squares in linear space applied to a steeply
+falling profile, which places 95.8 percent of its objective on the
+single point at the shortest retained separation. Re-fitting the same
+data with nothing discarded, changing only the error model, gives 2.82
+(relative-error weighting) or 2.89 (log-space regression). Across
+fifteen combinations of standard estimator and fit window the exponent
+spans 2.53 to 3.92, and the value published here is the largest of
+them.</p>
+<p><strong>What the data show
+instead, and how firmly</strong></p>
+<p>The retraction is certain. The replacement is not. On the open
+24-site chain the same data give alpha = 2.6 +/- 0.2, where the interval
+is the spread of a plateau in the local logarithmic slope over six
+consecutive separations, not a statistical error (the bootstrap error on
+the published fit to the same data is 0.63); the plateau value was
+reproduced at 2.5921 by a separately written implementation run on the
+same recorded state (SIM-2026-073). This is a single geometry at a
+single size. On a 24-site periodic ring, analysed with chord distance as
+pre-registered, two probes that are both energy-density-like (Delta = 1)
+give 1.83 and 2.37 against a CFT two-point value of 2 (SIM-2026-074):
+one size, not converged, disagreeing with each other by 29 percent, and
+not attributable to a single operator channel. <strong>No corrected
+exponent is established. The exchange channel is an open
+question.</strong> Treat 2.6 +/- 0.2 as the provisional open-chain
+value, not as a result.</p>
+<p><strong>Also withdrawn or voided</strong></p>
+<ul>
+<li><strong>alpha = 3.92 +/- 0.16 (24 sites) and alpha = 3.97 +/- 0.15 (16 sites, exact) from stress-tensor exchange.</strong> Was: headline result and its first corroboration. Now: withdrawn. Why: the same estimator artifact: both move in lockstep under it (3.92 to 2.56, 3.97 to 2.75 on dropping the contact point), because they share one observable, one fit window and one fitting routine.</li>
+<li><strong>scalar exchange (alpha = 2) excluded.</strong> Was: stated as excluded at about 12 sigma. Now: withdrawn. Why: the 12 sigma used the covariance error 0.16; at the bootstrap error 0.63 computed before release the exclusion is about 2.2 sigma, and under any window starting at separation 3 the point estimate itself falls to about 2.56.</li>
+<li><strong>alpha = 4 is universal; alpha = 4.00 at Ising, tricritical Ising and Potts.</strong> Was: confirmed at three classes. Now: withdrawn; the operator towers at all three classes stand. Why: the exponent was measured only at Ising and inherited by the other two; the towers are spectra, not forces.</li>
+<li><strong>third independent evaluation alpha = 4.07 (chi = 3 MERA), and with it the statement that this was the first holographic force measurement from an optimized tensor network state.</strong> Was: supporting evidence and a priority claim. Now: both withdrawn. Why: the profile changes sign inside its own fit window and cannot be a fixed-sign power law; the priority claim rests on that evaluation alone and was never gated against prior work.</li>
+<li><strong>the discriminating test: stress tensor (Z_j Z_j+1) versus spin primary (X_j).</strong> Was: registered killer test. Now: void. Why: at the critical point these are one operator, related by exact Kramers-Wannier self-duality. Measured on the periodic ring: identical expectation values to 1e-15 and identical force profiles to 1e-13 at 14 sites, 2.4e-9 at 24 sites (SIM-2026-074). Open boundaries break the duality, which is why the open-chain run of this test (SIM-2026-073) showed a spurious difference between the two arms. The test compared the energy density to itself. Neither label was correct: Z_j Z_j+1 is the energy density, not the stress tensor; X_j is its dual, not the spin primary.</li>
+<li><strong>transport time T = (pi/2) l_AdS to 1.2 percent as a geometric prediction.</strong> Was: confirmed. Now: measurement stands (T = 2.239 at N = 16); geometric reading not established. Why: l_AdS cancels in the cited derivation, which also gives pi rather than the pi/2 the manuscript compares against; the chi = 3 estimate of l_AdS gives a 57 percent miss; the transport driver never applies a MERA.</li>
+</ul>
+<p>The true spin primary Z_j was never in the design, and the direct
+replacement test is blocked: Z_j is odd under the Z2 symmetry, so the
+energy-difference observable used throughout this work subtracts across
+symmetry sectors and is undefined for it. A replacement test using two
+Z2-even probes has been pre-registered (PREREGISTRATION-T.md, committed
+before its driver) and run; its result is deliberately not part of this
+correction and will appear in a later version.</p>
+<p><strong>Not previously reported</strong></p>
+<p>The published fit has a reduced chi-squared of 6.008 on 9 degrees of
+freedom, and a bootstrap standard deviation of 0.63 rather than the
+quoted 0.16. Both were computed before release and omitted.</p>
+<p><strong>What is unaffected</strong></p>
+<p>Of the claims in this record: the two-phase optimization method, the
+chi = 3 criticality threshold, the exact-diagonalization gates, the
+measured OPE coefficient C_sigma-sigma-epsilon = 0.50 +/- 0.03 against
+the exact 1/2, and the conformal towers at all three classes. Not part
+of this record, mentioned only because they are sometimes read together
+with it: the later C_TTT stress-tensor self-coupling measurements
+(SIM-2026-067/068/069, dated after this record) and the matched
+off-critical ring control (SIM-2026-074) are unaffected by this
+correction and make no claim about the force exponent.</p>
+<p><strong>How the
+error was found and what this record contains</strong></p>
+<p>The error was found by the author’s own internal adversarial audit,
+not by a reviewer; the journal submission it was found after is closed,
+and no review of this work has taken place. Files in this record: the
+full re-analysis (SIM-2026-072.json, driver, figure), the pre-registered
+chain test (SIM-2026-073.json) and ring test (SIM-2026-074.json) with
+both pre-registrations as committed before the runs, the runnable
+drivers with their shared module and the negative test suite for their
+validation gates, and the error register (ERRATA.md).</p>
+<p>Concept DOI 10.5281/zenodo.19660302 always resolves to the current
+version.</p>
+
+<p><em>The abstract of the original manuscript follows unchanged, for the record. Every claim in
+it about the force exponent should be read against the correction above.</em></p>
+
+
+<p>We report results from classical simulation of critical spin chains that establish quantitative physical content in the MERA-AdS correspondence. First, the interaction energy between boundary-primary excitations follows a power law F(dr) ~ dr^(-alpha) with three consistent evaluations yielding alpha = 3.92 +/- 0.16 (24q), 3.97 +/- 0.15 (16q), and 4.07 +/- 0.18 (16q chi=3 MERA), all consistent with stress-tensor exchange (alpha = 2*Delta_T = 4) and inconsistent with scalar exchange (alpha = 2); the exponent is explained by the Ising CFT fusion rule eps x eps = [1]. Because Delta_T = 2 is fixed by conformal symmetry in every unitary 2D CFT, alpha = 4 is universal: we confirm this at two further fixed points - the tricritical Ising model (c = 7/10), where a scale-invariant MERA recovers the full M(4,5) primary spectrum (Delta_sigma = 0.092, Delta_eps = 0.204, Delta_T = 1.999), and the three-state Potts model (c = 4/5), where a Z3-symmetric MERA at chi = 12 recovers Delta_sigma = 0.134, Delta_eps = 0.805, Delta_T = 2.001 - giving alpha = 4.00 at all three universality classes. Second, the holographic transport time matches the AdS_3 null geodesic prediction T = (pi/2) l_AdS to 1.2% at N = 16 sites on a time-grid-converged measurement, with the residual shrinking from 2.8% at N = 12. Third, we introduce a two-phase optimization method (ALM + Z2 projection) for Z2-symmetric MERA ground states at 24 qubits. Fourth, extending the MERA bond dimension from chi=2 to chi=3 overcomes the expressibility barrier, achieving 0.15% energy error at 16 qubits and enabling the first holographic force measurement from an optimized tensor network state. The OPE coefficient is also measured directly from the fixed-point tensors: C_sigma-sigma-eps = 0.50 +/- 0.03 against the exact Ising value 1/2. A hardware path is designed for Quantinuum Helios (57 CNOTs, 0.57% logical error).</p><p><strong>Version 4 changes (relative to v3):</strong></p><ul><li>Transport: N=16 residual restated as the time-grid-converged value of -1.21% (dt = 1e-3), with -2.78% at N=12 showing the finite-size trend; the 0.72% figure in v3 was an artifact of the dt = 0.05 integration grid and is now labeled as such. The N=24 transport point carries a new reliability caveat (double-lobe trace structure).</li><li>The l_AdS comparison table is recomputed against the converged transport time (best fit 1.425, deviation 1.21%).</li><li>Effective-mass derivation rewritten in a consistent AdS3 convention m^2 l^2 = Delta(Delta-2); m_eff = 0.693 = 1/l_AdS follows from Delta = 1 exactly.</li><li>NEW: universality section extended to a third fixed point - a Z3-symmetric MERA at chi = 12 recovers the three-state Potts (c = 4/5) tower, giving alpha = 4.00 at all three universality classes (c = 1/2, 7/10, 4/5).</li><li>NEW: the OPE coefficient C_sigma-sigma-eps = 0.50 +/- 0.03 measured directly from the fixed-point tensors, with C_sigma-sigma-sigma = 0 at machine precision as the Z2 structural check.</li><li>Supplemental table row SIM-007 annotated (record lost; script preserved); data availability expanded; Zenodo DOI added to the front matter.</li></ul>

@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-008",
+  "title": "Computing Efficiently in QLDPC Codes (SHYPS Codes)",
+  "authors": ["Photonic Inc. research team"],
+  "date": "2025-02-11",
+  "source": "other",
+  "source_url": "https://photonic.com/news/shyps-codes-announcement/",
+  "arxiv_id": "",
+  "abstract": "First demonstration of computation using SHYPS QLDPC codes, solving a decades-long challenge. SHYPS codes use non-local connectivity to encode multiple logical qubits in a single code block for up to 20x fewer physical qubits per logical qubit. Single-shot error checking per logical operation dramatically decreases clock cycle and runtime. Requires Photonic's Entanglement First architecture for the high connectivity needed.",
+  "relevance": 4,
+  "tags": ["qLDPC", "SHYPS", "error-correction", "fault-tolerant", "photonic", "overhead-reduction"],
+  "key_claims": [
+    "First to demonstrate computation using SHYPS QLDPC codes",
+    "Up to 20x fewer physical qubits per logical qubit compared to surface codes",
+    "Single-shot error checking per logical operation",
+    "Requires non-local connectivity for implementation",
+    "Addresses decades-long challenge of computing within QLDPC codes"
+  ],
+  "hardware_used": "Photonic Entanglement First architecture (theoretical/design)",
+  "qubit_count": 0,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-03-10"
+}

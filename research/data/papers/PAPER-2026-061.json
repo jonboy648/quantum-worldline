@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-061",
+  "title": "Emergent Holographic Forces from Tensor Networks and Criticality",
+  "authors": ["Sahay", "Lin", "Cotler", "et al."],
+  "date": "2024-01-25",
+  "source": "arxiv",
+  "source_url": "https://doi.org/10.1103/PhysRevX.15.021078",
+  "arxiv_id": "2401.13595",
+  "abstract": "Demonstrates emergent holographic forces from MERA tensor networks applied to critical spin chains. The PXP Hamiltonian of the Rydberg chain furnishes an Ising CFT, requiring a modified MERA that accounts for local Rydberg blockade constraints. Bulk excitations have attractive interactions matching matter coupled to AdS gravity at long distances. Holographic circuit realizable in current Rydberg tweezer arrays. Published Phys. Rev. X 2025.",
+  "relevance": 5,
+  "tags": ["MERA", "holographic-forces", "Rydberg-blockade", "PXP-Hamiltonian", "Ising-CFT", "AdS-CFT", "neutral-atom-simulator", "math-bridge"],
+  "key_claims": [
+    "PXP Rydberg Hamiltonian = Ising CFT in disguise — modified MERA needed for blockade constraints",
+    "Bulk excitations show attractive interactions matching AdS gravity at long distances",
+    "Holographic circuit directly realizable on Rydberg tweezer arrays TODAY",
+    "Stress-energy tensor contributions to potentials match AdS gravity calculations",
+    "DIRECT CONNECTION to quantum-worldline project: same MERA/Ising-CFT/holographic-force framework"
+  ],
+  "hardware_used": "Rydberg tweezer arrays (proposed implementation)",
+  "discovered_by": "math-bridge",
+  "discovered_date": "2026-04-26"
+}

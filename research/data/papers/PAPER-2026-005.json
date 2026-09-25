@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-005",
+  "title": "Digital quantum simulation of cosmological particle creation with IBM quantum computers",
+  "authors": ["Jia-Qi Gong", "Ji-Chong Yang"],
+  "date": "2025-11-20",
+  "source": "nature",
+  "source_url": "https://www.nature.com/articles/s41598-025-87015-6",
+  "arxiv_id": "2502.14021",
+  "abstract": "Digital quantum simulation of free fermions in 1+1D de Sitter expanding spacetime using Jordan-Wigner transformation and Trotter decomposition. Analyzes fermion number density, correlation functions, polarization, and chiral condensation. Observes momentum redshift from cosmic expansion. Massless fermions show conformal invariance. Massive fermion effects fit scaling relation 1 + alpha*(t*exp(ht))^3 with alpha approximately -0.0303. Finite-volume effects minimal at 0.3%.",
+  "relevance": 4,
+  "tags": ["spacetime-simulation", "de-Sitter", "cosmological-particle-creation", "expanding-universe", "fermion-field", "worldline"],
+  "key_claims": [
+    "Simulated fermion field dynamics in 1+1D FLRW expanding spacetime with scale factor g(t) = exp(ht)",
+    "Massless fermions show conformal invariance - no expansion effects detected",
+    "Massive fermion effects follow scaling 1 + alpha*(t*exp(ht))^3, alpha ~ -0.0303",
+    "Chiral condensation decreases under expansion",
+    "8-qubit simulation with 40 Trotter steps on Qiskit simulator; real hardware implementation awaits error correction"
+  ],
+  "hardware_used": "Qiskit simulator (8 qubits, classical)",
+  "qubit_count": 8,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-03-10"
+}

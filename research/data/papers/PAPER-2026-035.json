@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-035",
+  "arxiv_id": "2512.23009",
+  "title": "Symmetry-Preserving Variational Quantum Simulation of the Heisenberg Spin Chain on Noisy Quantum Hardware",
+  "authors": ["(multiple, see arXiv:2512.23009)"],
+  "published": "2025-12",
+  "url": "https://arxiv.org/abs/2512.23009",
+  "status": "CONFIRMED",
+  "relevance": 4,
+  "topic": "MERA circuit optimization convergence",
+  "summary": "Demonstrates symmetry-preserving VQE on actual NISQ hardware for the Heisenberg spin chain. Key insight: deviation from exact results arises from controlled symmetry constraints rather than optimization failure. Validates that symmetry-preserving gate sets are practically viable on hardware.",
+  "key_findings": [
+    "Symmetry-constrained VQE circuits achieve correct ground states on noisy hardware",
+    "Deviation from exact results quantified as a function of symmetry constraint strength",
+    "Error arises from symmetry constraints, not optimizer failure — confirms our SIM-2026-008 diagnosis",
+    "Applicable to spin-1/2 chains with Z2 or other discrete symmetries"
+  ],
+  "project_relevance": "Directly validates our SIM-2026-008 hypothesis that parity-preserving gate sets are viable. Confirms that the ~3.33% energy floor in SIM-2026-008c is a structural consequence of symmetry enforcement, not optimizer failure — exactly what we found. The paper's framework for quantifying symmetry-constraint-induced error gap could help us predict what energy floor to expect at 24q.",
+  "recommended_followup": "theory",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

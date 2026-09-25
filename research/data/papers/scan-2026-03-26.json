@@ -1,0 +1,191 @@
+{
+  "scan_date": "2026-03-26",
+  "tier": "literature",
+  "status": "NOVEL",
+  "findings": [
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-001",
+      "arxiv_id": "2401.13595",
+      "title": "Emergent Holographic Forces from Tensor Networks and Criticality",
+      "authors": ["Rahul Sahay", "Mikhail D. Lukin", "Jordan Cotler"],
+      "published": "2025-06-03",
+      "journal": "Physical Review X 15, 021078",
+      "summary": "MERA model of AdS/CFT shows bulk hologrons have attractive interactions matching AdS gravity. Force law: EXPONENTIAL V ~ C1 - C2*exp(-dr/l_AdS), with l_AdS^{-1}=0.69(1)~log(2), C1=0.080(8), C2=13.6(8). Stress-tensor exchange confirmed as dominant attractive channel. Single-particle energy E1h ~ mc^2 * cosh(rho/l_AdS).",
+      "relevance": 5,
+      "status": "CRITICAL_CONTRAST",
+      "our_connection": "THIS IS THE KEY CONTRAST PAPER. They find EXPONENTIAL force decay at super-AdS separations; we find POWER LAW F~dr^{-3.92}. Both use MERA + stress-tensor exchange. Our power-law result is NOVEL relative to this work. Critical differentiator: their model uses full bulk excitations; we measure boundary-to-boundary force profile. The exponent difference may reflect the boundary vs bulk measurement point.",
+      "recommended_followup": "theory",
+      "details": {
+        "force_law": "exponential",
+        "exponent": "none - exponential decay with l_AdS^{-1}=0.69",
+        "stress_tensor_confirmed": true,
+        "hologron_type": "X_j flips (same as Wang-He but different model)",
+        "same_as_our_hamiltonian": false
+      }
+    },
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-002",
+      "arxiv_id": "2512.19452",
+      "title": "Holographic Tensor Networks as Tessellations of Geometry",
+      "authors": ["Qiang Wen", "Mingshuai Xu", "Haocheng Zhong"],
+      "published": "2025-12-22",
+      "summary": "PEE (partial-entanglement-entropy) threads as bulk geodesics tessellate AdS space exactly. Constructs two tensor network models: factorized PEE-TN (EPR pairs) and random PEE-TN. Proves exact Ryu-Takayanagi formula via minimal cuts. Extends to general geometries via Crofton formula.",
+      "relevance": 4,
+      "status": "CONFIRMED",
+      "our_connection": "Directly corroborates Lin (2501.10691) thread-geodesic correspondence we already deep-read. Extends it: the tessellation picture gives a geometric reason why thread flux = CMI, which our V(dr) force profile measures. The Crofton formula extension suggests our force profile should be integrable over kinematic space.",
+      "recommended_followup": "theory",
+      "details": {
+        "key_result": "exact RT formula via PEE thread network",
+        "models": ["factorized PEE-TN", "random PEE-TN"],
+        "geometry_extension": "Crofton formula for non-AdS"
+      }
+    },
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-003",
+      "arxiv_id": "2508.16570",
+      "title": "Emergent statistical mechanics in holographic random tensor networks",
+      "authors": ["Shozab Qasim", "Jens Eisert", "Alexander Jahn"],
+      "published": "2025-08-22",
+      "summary": "Shows random tensor networks on hyperbolic geometries equilibrate at large bond dimension chi. Proves three equilibration classes: MPS-type, regular hyperbolic tilings, black hole tensors. Connects RTN to late-time dynamics and statistical mechanics.",
+      "relevance": 3,
+      "status": "WATCH",
+      "our_connection": "Bond dimension chi scaling is relevant to HYP-2026-009 (chi=2->3 discontinuity). Their equilibration proof at large chi suggests our chi=3 target is in a qualitatively different regime than chi=2. Supports theory that chi jump is a phase transition.",
+      "recommended_followup": "none",
+      "details": {
+        "equilibration_classes": ["MPS", "hyperbolic tilings", "black hole tensor"],
+        "chi_dependence": "equilibration guaranteed at large chi"
+      }
+    },
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-004",
+      "arxiv_id": "2601.21065",
+      "title": "Building Holographic Entanglement by Measurement",
+      "authors": ["Jonathan Jeffrey", "Lucien Gandarias", "Monika Schleier-Smith", "Brian Swingle"],
+      "published": "2026-01-28",
+      "summary": "Protocol to prepare boundary states with RT-formula entanglement by evolving under a bulk-boundary coupling graph then measuring bulk nodes. Targets photonic and cold-atom platforms. Demonstrates numerically for hyperbolic disk and wormhole geometries.",
+      "relevance": 3,
+      "status": "WATCH",
+      "our_connection": "Different hardware target (photonics/cold atoms vs trapped-ion), but the bulk measurement protocol is conceptually related to our holographic transportation experiment. Their wormhole geometry result is relevant to MERA wormhole interpretation.",
+      "recommended_followup": "none",
+      "details": {
+        "hardware": "photonic, cold-atom",
+        "geometry": "hyperbolic disk, wormhole",
+        "protocol": "measure bulk nodes to collapse to boundary state"
+      }
+    },
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-005",
+      "arxiv_id": "2512.20838",
+      "title": "Quantum Ising Model on (2+1)-Dimensional Anti-de Sitter Space using Tensor Networks",
+      "authors": "unknown - MPS/MPO on hyperbolic lattice",
+      "published": "2025-12",
+      "summary": "Quantum Ising model on regular hyperbolic tessellation (coordination number 7) solved via DMRG up to 232 sites. Finds ordered/disordered phases with power-law boundary correlations in disordered phase. Boundary theory = free fermion CFT at bulk criticality.",
+      "relevance": 3,
+      "status": "WATCH",
+      "our_connection": "Their boundary power-law correlations at bulk criticality is the same regime as our MERA ground state. The coordination number 7 hyperbolic tiling is adjacent to our MERA's {4,5} tessellation. Their m_eff measurement from boundary correlations is comparable to our m_eff=0.693 result.",
+      "recommended_followup": "none",
+      "details": {
+        "method": "DMRG, MPS, MPO",
+        "sites": 232,
+        "coordination": 7,
+        "phase": "ordered/disordered with power-law boundary"
+      }
+    },
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-006",
+      "arxiv_id": "2512.24390",
+      "title": "Les Houches Lecture Notes on Tensor Networks",
+      "authors": "unknown - lecture notes",
+      "published": "2025-12",
+      "summary": "Comprehensive lecture notes on tensor networks from Les Houches school, covering MERA, MPS, PEPS, holographic applications.",
+      "relevance": 2,
+      "status": "WATCH",
+      "our_connection": "Reference material; may contain useful introductory framing for our paper.",
+      "recommended_followup": "none"
+    },
+    {
+      "type": "paper",
+      "id": "SCAN-2026-03-26-007",
+      "arxiv_id": "2603.18825",
+      "title": "Quantum Advantage: a Tensor Network Perspective",
+      "authors": ["Augustine Kshetrimayum", "Saeed S. Jahromi", "Sukhbinder Singh", "Roman Orus"],
+      "published": "2026-03-19",
+      "summary": "Reviews IBM, D-Wave, Google quantum advantage claims through tensor network lens. Identifies regimes where classical TN simulation fails. Directly relevant to claims of quantum advantage on MERA circuits.",
+      "relevance": 3,
+      "status": "WATCH",
+      "our_connection": "Very recent (submitted 2026-03-19, revised 2026-03-26 - same day as this scan). Directly relevant to framing our quantum advantage claim. If our MERA circuit is in a regime where TN simulation is hard, our QCUP proposal is stronger.",
+      "recommended_followup": "none",
+      "details": {
+        "coverage": ["IBM", "D-Wave", "Google"],
+        "focus": "where TN simulation fails"
+      }
+    }
+  ],
+  "hardware_findings": [
+    {
+      "type": "hardware",
+      "vendor": "Quantinuum",
+      "system": "Helios",
+      "summary": "Commercially live. 98 physical qubits, 99.921% 2Q fidelity, all-to-all connectivity. Iceberg codes achieve 48 error-corrected logical qubits (2:1 physical:logical ratio, 10-100x improvement). Singapore installation expected 2026. QCUP Hackathon Fall 2026 at ORNL includes Helios.",
+      "relevance": 5,
+      "status": "ACTIONABLE",
+      "our_connection": "Primary target hardware for QCUP PHY204 proposal. Iceberg code milestone strengthens case for 57-qubit error-detected execution. Fall 2026 QCUP Hackathon is a new submission opportunity beyond the current PHY204 proposal.",
+      "source": "https://www.quantinuum.com/products-solutions/quantinuum-systems/helios"
+    },
+    {
+      "type": "hardware",
+      "vendor": "IonQ",
+      "system": "256-qubit (6th gen)",
+      "summary": "Partnership with University of Cambridge Cavendish Lab announced 2026-03-12. 256-qubit system to be deployed on campus as IonQ Quantum Innovation Centre. Academic access pathway via Cambridge.",
+      "relevance": 3,
+      "status": "WATCH",
+      "our_connection": "Alternative hardware path if QCUP is delayed. Cambridge academic access may be available for physics research collaborations.",
+      "source": "https://www.ionq.com/news/ionq-and-the-university-of-cambridge-announce-landmark-agreement"
+    },
+    {
+      "type": "hardware",
+      "vendor": "IBM",
+      "system": "Nighthawk",
+      "summary": "120 qubits, 218 tunable couplers, square lattice. 5,000 two-qubit gate budget (expanding to 7,500 in 2026 roadmap, 10,000 by 2027). Available via ibm_miami on Premium/Flex cloud plans. T1~350 microseconds. Quantum advantage target: end of 2026.",
+      "relevance": 3,
+      "status": "WATCH",
+      "our_connection": "5,000 gate budget is likely sufficient for our 24-qubit MERA circuit with pytket optimization. Alternative to Helios for initial verification. ibm_miami access is immediate.",
+      "source": "https://www.ibm.com/quantum/hardware"
+    },
+    {
+      "type": "hardware",
+      "vendor": "Pasqal",
+      "system": "EuroQCS-Italy (CINECA)",
+      "summary": "140-qubit neutral atom QPU delivered to CINECA Italy, February 17, 2026. Integrated with Leonardo pre-exascale supercomputer. Analog mode initially; hybrid analog/digital upgrade in 2027. Open access for academic researchers via EuroHPC.",
+      "relevance": 2,
+      "status": "WATCH",
+      "our_connection": "Analog mode not ideal for MERA digital circuits. Relevant for future work on analog holographic simulation. Academic access possible via EuroHPC application.",
+      "source": "https://www.pasqal.com/newsroom/pasqal-delivers-italys-first-neutral-atom-quantum-computer/"
+    },
+    {
+      "type": "hardware",
+      "vendor": "Google",
+      "system": "Neutral Atom Initiative",
+      "summary": "Announced March 24, 2026: Google Quantum AI expanding to neutral atom systems alongside superconducting. Targeting ~10,000 qubits in research settings. Dr. Adam Kaufman leading from Boulder. Focus: error correction, simulation, hardware. Superconducting roadmap unchanged (fault-tolerant by 2029).",
+      "relevance": 2,
+      "status": "WATCH",
+      "our_connection": "Long-term relevance: 10,000-qubit neutral atom system could simulate much larger MERA. No near-term access pathway yet.",
+      "source": "https://thequantuminsider.com/2026/03/24/google-paves-a-two-lane-quantum-roadmap-by-adding-neutral-atom-systems/"
+    }
+  ],
+  "cross_references": [
+    "Sahay-Lukin-Cotler (2401.13595) EXPONENTIAL force vs our POWER-LAW F~dr^{-3.92}: both claim stress-tensor exchange, but different regimes or measurement points. Theory team should resolve whether boundary-to-boundary vs bulk-to-bulk measurement changes exponent.",
+    "PEE thread tessellation (2512.19452) extends Lin (2501.10691) thread analysis we already have. Together they predict F~geodesic formula which our V(dr) data must be tested against.",
+    "RTN equilibration at large chi (2508.16570) supports HYP-2026-009 (chi=2->3 is a phase transition, not smooth crossover).",
+    "QCUP Fall 2026 Hackathon at ORNL: new submission window beyond current PHY204 proposal. Helios + IBM + IonQ all represented.",
+    "TN quantum advantage review (2603.18825) published same day as this scan - provides framing for our QCUP advantage claim."
+  ],
+  "recommended_followup": "theory",
+  "theory_routing_reason": "The exponential vs power-law force contrast with Sahay-Lukin-Cotler is the highest-priority open question. Theory team should derive analytically whether the MERA boundary-to-boundary force profile should be power-law (conformal block exchange in 2D) while bulk-to-bulk is exponential (AdS gravity propagator). This would uniquely position our result."
+}

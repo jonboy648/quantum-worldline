@@ -1,0 +1,29 @@
+{
+  "id": "HW-2026-018",
+  "system": "Quantinuum Helios",
+  "vendor": "Quantinuum",
+  "announced": "2025-11-05",
+  "launched_commercial": "2026-Q1",
+  "status": "COMMERCIALLY AVAILABLE",
+  "qubits": 98,
+  "qubit_type": "trapped ion (all-to-all connected)",
+  "gate_fidelity_1q": 0.999975,
+  "gate_fidelity_2q": 0.99921,
+  "logical_qubits": 94,
+  "error_code": "iceberg codes",
+  "connectivity": "all-to-all",
+  "access": "cloud and on-premise",
+  "key_facts": [
+    "98 physical → 94 logical qubits at ~1:1 ratio — first system to cross this threshold",
+    "99.921% two-qubit gate fidelity across all qubit pairs",
+    "Commercial launch paired with NVIDIA Grace Blackwell for hybrid HPC-quantum workloads",
+    "Early access partners included SoftBank Corp. and JPMorgan Chase",
+    "Singapore deployment planned for 2026 — Quantinuum R&D hub established",
+    "Quantinuum filing for IPO (registration statement submitted confidentially)"
+  ],
+  "mera_relevance": "Helios is our primary hardware target for MERA circuit execution. The 94 logical qubits enable 40q+ MERA circuits with error protection — sufficient for 5-layer MERA on 32-40 sites. The all-to-all connectivity eliminates SWAP overhead that would plague superconducting alternatives. Commercial availability now confirmed — partnership application is the next step.",
+  "target_circuits": ["32q 3-layer MERA (140 CNOTs, 1.39% energy error per helios-mera-design.md)", "boundary-primary force measurement on logical qubits"],
+  "source": "https://www.quantinuum.com/press-releases/quantinuum-announces-commercial-launch-of-new-helios-quantum-computer-that-offers-unprecedented-accuracy-to-enable-generative-quantum-ai-genqai",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

@@ -1,0 +1,10 @@
+{
+  "id": "SIM-2026-044",
+  "date": "2026-06-18",
+  "hypothesis_id": "HYP-2026-027",
+  "chi": 4,
+  "ising_c": 0.09714487655978005,
+  "gate_pass": false,
+  "description": "Co-optimized transitional-layer scale-invariant MERA; c-gate validation on Ising.",
+  "notes": "Fixes the non-criticality (c=0.10) of the fixed-first-layer construction."
+}

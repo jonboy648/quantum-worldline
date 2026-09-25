@@ -1,0 +1,127 @@
+{
+  "id": "SIM-2026-076",
+  "hypothesis_id": "HYP-2026-032",
+  "date": "2026-09-07",
+  "status": "COMPLETE (registered Level 1: VOID; Level 2 findings recorded; exploratory scan labeled)",
+  "preregistration": "research/tools/timelike-ee/PREREGISTRATION-HYP032.md (approved by Jon 2026-09-07, committed before code); construction in ROUTE-X-DERIVATION.md (committed before the driver)",
+  "driver": "research/tools/timelike-ee/qw_tlee_level1.py (+ tlee_delta_scan.py); results tlee_level1_results.json, tlee_delta_scan_L1024.json",
+  "object": "tau_A = Tr_B[exp(i (R_H + i delta) H)] / Tr, critical TFIM open chain (c = 1/2, v = 2, R = 2 R_H), interval of T0 sites centred; pseudo entropy S = -Tr tau_A log tau_A",
+  "REGISTERED_OUTCOMES": {
+    "EXACT_gate": "PASS. Route G (Gaussian, free Majorana, imaginary temperature) reproduces the exact full-diagonalization spectrum of tau_A to 1e-11 (Hausdorff) at L = 10, 12, R_H = 3, 4. Note recorded: S itself is branch-dependent (per-eigenvalue vs per-mode principal branch differ by O(1) whenever eigenvalues wrap the negative real axis), so the gate was implemented on the branch-free spectrum; both S conventions are reported.",
+    "L1_delta0": "VOID. At delta = 0 (the literal definition) neither part of eq. (2.7) is reproduced at L = 512, R = 12/16/24: Re S has no CFT form (window slopes 16-145 against 1/6; END and SYM controls fail by O(100)) and Im S = 0 to 1e-14.",
+    "L2a": "DISAGREE, with proof. The literal lattice transition matrix has EXACTLY real pseudo entropy: V = prod_j Y_j prod_(j even) X_j is a local unitary with V H V(dag) = -H (verified norm(V H V(dag) + H) = 0 at L = 8), so tau_A(R) is similar within A to tau_A(-R) = tau_A(R)(dag), its spectrum is closed under conjugation (Hausdorff 8e-15), and -sum lam log lam is real in any conjugation-symmetric branch convention. The continuum i pi c / 6 of PAPER-139 eq. (2.7) is therefore not a property of this lattice object; it arises in the analytic continuation of the closed form (the -i in sinh(pi T0/(i R))) or from a symmetry-breaking regulator.",
+    "L2b": "Written negative stands (plain MERA: no time direction, integer cuts).",
+    "L3": "NOT RUN: the pre-registration forbids it after a Level-1 VOID."
+  },
+  "EXPLORATORY_post_hoc_labeled": {
+    "what": "PAPER-139 regulator R -> R + i delta, i.e. the operator exp(iRH) exp(-delta H) (their eq. 2.43 argument (R + i delta) Omega/2 equals our (delta - iR) eps/2). Their Fig. 6 reports Im S approaching pi c / 6 only as delta grows, with instability. Scanned here exactly at c = 1/2, L = 1024, R = 50 and 100, delta = 1..50.",
+    "real_part": "REPRODUCED with the regulator: slope of Re S against log((R/pi) sin(pi T0/R)) = 0.1689 (R=50, delta=2), 0.1701 (R=100, delta=5), 0.1705 (R=100, delta=10) against 1/6 = 0.1667: within 2-3 percent, two-parameter form confirmed.",
+    "imaginary_part": "NOT REPRODUCED. abs(Im S) <= 0.017 over the window at every delta from 2 to 50, sign flipping with delta, and <= 0.0014 on the stable small-T0 region; the prediction is pi/12 = 0.2618. No approach toward pi/12 with increasing delta at c = 1/2.",
+    "scan": {
+      "R50.0_d1.0": {
+        "slope": 0.1996957334007815,
+        "Im_mean_win": -0.09950175369283398,
+        "Im_std_win": 0.049479298632191984,
+        "Im_mean_small": -0.032836261320218704,
+        "Im_std_small": 0.008206711774070483
+      },
+      "R50.0_d2.0": {
+        "slope": 0.1689428049491247,
+        "Im_mean_win": 0.001345029871415576,
+        "Im_std_win": 0.002380117717294493,
+        "Im_mean_small": -0.000676681334960644,
+        "Im_std_small": 0.00012961160960421885
+      },
+      "R50.0_d5.0": {
+        "slope": 0.1718895095775794,
+        "Im_mean_win": 0.010755307029692221,
+        "Im_std_win": 0.008963111030436049,
+        "Im_mean_small": 0.0008672403294196973,
+        "Im_std_small": 0.0004142305002260757
+      },
+      "R50.0_d10.0": {
+        "slope": 0.1830296095026762,
+        "Im_mean_win": 0.01670251497897125,
+        "Im_std_win": 0.013662776383005623,
+        "Im_mean_small": 0.0013922104881036023,
+        "Im_std_small": 0.0006639508590534262
+      },
+      "R50.0_d20.0": {
+        "slope": 0.20144688616299503,
+        "Im_mean_win": 0.015825177020861555,
+        "Im_std_win": 0.012593894379740959,
+        "Im_mean_small": 0.0013888462679100986,
+        "Im_std_small": 0.0006607289326052648
+      },
+      "R50.0_d50.0": {
+        "slope": 0.20981134045428446,
+        "Im_mean_win": 0.004156086170303922,
+        "Im_std_win": 0.0032706494308109677,
+        "Im_mean_small": 0.0003729683765384717,
+        "Im_std_small": 0.0001772144858871596
+      },
+      "R100.0_d1.0": {
+        "slope": 0.38254497903494056,
+        "Im_mean_win": -0.3985177827881467,
+        "Im_std_win": 0.2446324878290218,
+        "Im_mean_small": -0.07684149147532206,
+        "Im_std_small": 0.031882766448193677
+      },
+      "R100.0_d2.0": {
+        "slope": 0.21854222427631692,
+        "Im_mean_win": -0.12613619046059246,
+        "Im_std_win": 0.09335268385859137,
+        "Im_mean_small": -0.016624302834067357,
+        "Im_std_small": 0.006781026562618729
+      },
+      "R100.0_d5.0": {
+        "slope": 0.17009530220152624,
+        "Im_mean_win": 0.0010410335116612013,
+        "Im_std_win": 0.0015748721658697044,
+        "Im_mean_small": -0.0009114819579807238,
+        "Im_std_small": 0.00012258621760824603
+      },
+      "R100.0_d10.0": {
+        "slope": 0.17050587761334873,
+        "Im_mean_win": 0.009972777580294986,
+        "Im_std_win": 0.008866043514298656,
+        "Im_mean_small": 0.0005966751636207711,
+        "Im_std_small": 0.00044808487835736597
+      },
+      "R100.0_d20.0": {
+        "slope": 0.1787552000266913,
+        "Im_mean_win": 0.015552861552224165,
+        "Im_std_win": 0.013516940174520141,
+        "Im_mean_small": 0.0010519824907573327,
+        "Im_std_small": 0.0007164253902119391
+      },
+      "R100.0_d50.0": {
+        "slope": 0.19594809993672202,
+        "Im_mean_win": 0.012236494078701794,
+        "Im_std_win": 0.010310540158780392,
+        "Im_mean_small": 0.0008810448822984005,
+        "Im_std_small": 0.0005989392202909475
+      }
+    }
+  },
+  "key_findings": [
+    "1. The Gaussian route is an exact evaluation of the transition-matrix definition for the TFIM (spectrum identity to 1e-11); there is no lattice prescription in this construction, unlike the continuum-dispersion substitution of PAPER-139.",
+    "2. Im S == 0 EXACTLY for the literal object exp(iRH) on the critical TFIM, by the chiral symmetry V H V(dag) = -H. Proven and verified. This holds for every R, T0, L.",
+    "3. With the regulator exp(-delta H), the REAL part of the timelike entanglement entropy follows (c/3) log((R/pi) sin(pi T0/R)) at c = 1/2 in both parameters, to 2-3 percent (exploratory, L = 1024).",
+    "4. With the same regulator the IMAGINARY part stays at the 1e-2 level or below and does not approach pi c/6 up to delta = 50 (exploratory). At c = 1/2 on this lattice, Im S = i pi c/6 is not observed in an exact evaluation of the regulated operator.",
+    "5. The pseudo entropy at imaginary temperature is branch-ambiguous on the lattice whenever eigenvalues of tau_A wrap the negative real axis; per-eigenvalue and per-mode principal branches differ by O(1) in Re S. Any lattice claim about Im S must state its branch convention."
+  ],
+  "claim_level": "Level 1 (real part reproduction, exploratory) and Level 2 (method: findings 2, 4, 5). No Level 3 content. No novelty claim without the section-8 gate; finding 2 is a two-line symmetry argument and may well be known; finding 4 contradicts the qualitative expectation stated for a scalar in PAPER-139 Fig. 6, at a different c and with an exact rather than prescribed evaluation.",
+  "counterfactual_novelty": "Registered outcome space: L1 PASS / VOID; L2a AGREE / DISAGREE. Both non-trivial outcomes occurred (VOID, DISAGREE). The exact-zero imaginary part was not anticipated.",
+  "budget_used": "one session, ~0 USD",
+  "decision_required_from_Jon": "The pre-registration stops here (Level-1 VOID forbids Level 3; the budget clause requires a new decision). Options: (a) close HYP-032 as recorded; (b) amend the pre-registration to make the imaginary part the registered question (is there ANY consistent lattice construction at c = 1/2 whose exact evaluation gives i pi c/6, and if not, what does emergent time mean operationally?); (c) proceed to the Level-3 network leg on the REAL part only, under an amended pre-registration.",
+  "files": [
+    "research/tools/timelike-ee/PREREGISTRATION-HYP032.md",
+    "research/tools/timelike-ee/ROUTE-X-DERIVATION.md",
+    "research/tools/timelike-ee/qw_tlee_level1.py",
+    "research/tools/timelike-ee/tlee_delta_scan.py",
+    "research/tools/timelike-ee/tlee_level1_results.json",
+    "research/tools/timelike-ee/tlee_delta_scan_L1024.json",
+    "research/tools/timelike-ee/tlee_level1_full.log"
+  ]
+}

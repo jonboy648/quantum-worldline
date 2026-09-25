@@ -1,0 +1,278 @@
+{
+  "critical": {
+    "n": 12,
+    "h": 1.0,
+    "label": "EXPERIMENT 1 -- CRITICAL",
+    "E0": -15.322595151080792,
+    "preregistration": "PREREGISTRATION-T.md @ 82b7b4e",
+    "G1": {
+      "abs_diff": 1.3322676295501878e-15,
+      "pass": true
+    },
+    "window": [
+      3,
+      5
+    ],
+    "arms": {
+      "H": {
+        "gates_passed": false,
+        "gate_note": "VOID ARM: failed a per-arm gate (see G2_pass / G4_pass / G5_pass). Barred from every verdict.",
+        "dropped_separations": {},
+        "n_dropped": 0,
+        "F_full": {
+          "1": -4.062108910921399,
+          "2": 0.1551520906125159,
+          "3": 0.2239674532428655,
+          "4": 0.05415611066960402,
+          "5": 0.009624712228767152,
+          "6": 1.9539925233402755e-13,
+          "7": 0.009624712228585963,
+          "8": 0.05415611066973369,
+          "9": 0.22396745324206613,
+          "10": 0.15515209061237378
+        },
+        "two_point_full": {
+          "1": -0.1769724789258944,
+          "2": -0.006540041787475052,
+          "3": -0.0010144608142911953,
+          "4": -0.00022022612858924506,
+          "5": -3.778483009153351e-05,
+          "6": -4.948474898076871e-15,
+          "7": -3.778483009169218e-05,
+          "8": -0.00022022612858663522,
+          "9": -0.001014460814285204,
+          "10": -0.006540041787466042
+        },
+        "G2_ring_symmetry_max_rel": 1.882533142972164e-11,
+        "G2_pass": true,
+        "G4_two_point_exponent_chord": 10.168328956359913,
+        "G4_two_point_slopes": [
+          7.5343482171229335,
+          16.14639458994775
+        ],
+        "G4_expected_2Delta": 4.0,
+        "G4_abs_dev": 6.168328956359913,
+        "G4_pass": false,
+        "alpha_chord": 9.700487274517558,
+        "sigma_fit": 2.249909725120643,
+        "bootstrap_sigma": 0.0,
+        "bootstrap_sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence.",
+        "alpha_chord_relerr_crosscheck": 9.918269611761666,
+        "plateau_n": 0,
+        "plateau_value": NaN,
+        "chord_slopes": [
+          7.0024764189192945,
+          15.823875245673046
+        ],
+        "amplitude_at_dr3": 0.2239674532428655,
+        "power_r2": 0.9489510408269637,
+        "exp_xi": 0.6354922224772821,
+        "exp_r2": 0.9968195057556309,
+        "better_model": "exponential",
+        "G5_pass": false
+      },
+      "E": {
+        "gates_passed": false,
+        "gate_note": "VOID ARM: failed a per-arm gate (see G2_pass / G4_pass / G5_pass). Barred from every verdict.",
+        "dropped_separations": {},
+        "n_dropped": 0,
+        "F_full": {
+          "1": -3.7794582985526723,
+          "2": -8.881784197001252e-15,
+          "3": -1.2434497875801753e-14,
+          "4": -8.881784197001252e-15,
+          "5": -1.5987211554602254e-14,
+          "6": -1.0658141036401503e-14,
+          "7": -1.2434497875801753e-14,
+          "8": -1.4210854715202004e-14,
+          "9": -7.105427357601002e-15,
+          "10": -1.4210854715202004e-14
+        },
+        "two_point_full": {
+          "1": 0.7330817942091964,
+          "2": 0.12577695122869867,
+          "3": 0.0585298041703482,
+          "4": 0.038118156951028326,
+          "5": 0.03036367705008817,
+          "6": 0.028259232781102133,
+          "7": 0.03036367705007862,
+          "8": 0.03811815695102183,
+          "9": 0.05852980417035743,
+          "10": 0.12577695122860574
+        },
+        "G2_ring_symmetry_max_rel": 0.42857142857142855,
+        "G2_pass": false,
+        "G4_two_point_exponent_chord": 2.1055417555859304,
+        "G4_two_point_slopes": [
+          2.1153256342602544,
+          2.0833363278867454
+        ],
+        "G4_expected_2Delta": 2.0,
+        "G4_abs_dev": 0.10554175558593037,
+        "G4_pass": true,
+        "alpha_chord": -0.4946155060668194,
+        "sigma_fit": 1.7965021486571284,
+        "bootstrap_sigma": NaN,
+        "bootstrap_sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence.",
+        "alpha_chord_relerr_crosscheck": -0.13257919044350303,
+        "plateau_n": 0,
+        "plateau_value": NaN,
+        "chord_slopes": [
+          1.6596852843449106,
+          -5.384002633211338
+        ],
+        "amplitude_at_dr3": -1.2434497875801753e-14,
+        "power_r2": 0.07046081690823214,
+        "exp_xi": Infinity,
+        "exp_r2": 0.18153792824573844,
+        "better_model": "exponential",
+        "G5_pass": false
+      }
+    },
+    "G5": {
+      "pass": {
+        "H": false,
+        "E": false
+      },
+      "reason": "no even |s|=2 state among the 14 lowest"
+    },
+    "usable_arms": [],
+    "verdict": null,
+    "verdict_note": "Single-size run. No verdict is drawn here by design: convergence across n = 16, 20, 24 is judged by qw_stress_converge.py per PREREGISTRATION-T.md."
+  },
+  "control": {
+    "n": 12,
+    "h": 2.0,
+    "label": "MATCHED CONTROL (h=2)",
+    "E0": -25.525138302048095,
+    "preregistration": "PREREGISTRATION-T.md @ 82b7b4e",
+    "G1": {
+      "abs_diff": 4.440892098500626e-16,
+      "pass": true
+    },
+    "window": [
+      3,
+      5
+    ],
+    "arms": {
+      "H": {
+        "gates_passed": true,
+        "gate_note": "PASSED per-arm gates.",
+        "dropped_separations": {},
+        "n_dropped": 0,
+        "F_full": {
+          "1": -7.120013273775225,
+          "2": -0.2873557969737526,
+          "3": 0.023301065262170795,
+          "4": 0.0024732129516529255,
+          "5": -0.000804921039886608,
+          "6": -0.0012208545063074894,
+          "7": -0.0008049210416594121,
+          "8": 0.0024732129525943947,
+          "9": 0.02330106526659037,
+          "10": -0.28735579697096547
+        },
+        "two_point_full": {
+          "1": -0.15960286376661895,
+          "2": -0.00351467077135513,
+          "3": -0.00026732162997843666,
+          "4": -1.9068080542586937e-05,
+          "5": 8.741467319421492e-06,
+          "6": 1.187227265794312e-05,
+          "7": 8.741467344731162e-06,
+          "8": -1.9068080568587606e-05,
+          "9": -0.00026732163004293725,
+          "10": -0.0035146707713627234
+        },
+        "G2_ring_symmetry_max_rel": 2.2024571825966818e-09,
+        "G2_pass": true,
+        "G4_two_point_exponent_chord": 11.225795784539086,
+        "G4_two_point_slopes": [
+          13.024236739504522,
+          7.144065836115005
+        ],
+        "G4_expected_2Delta": 4.0,
+        "G4_abs_dev": 7.225795784539086,
+        "G4_pass": null,
+        "alpha_chord": 10.824688899650281,
+        "sigma_fit": 0.1993510659372087,
+        "bootstrap_sigma": 1.778261780257982e-15,
+        "bootstrap_sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence.",
+        "alpha_chord_relerr_crosscheck": 17.98408952897511,
+        "plateau_n": 0,
+        "plateau_value": NaN,
+        "chord_slopes": [
+          11.063743531028813,
+          10.28213205589449
+        ],
+        "amplitude_at_dr3": 0.023301065262170795,
+        "power_r2": 0.999660953702402,
+        "exp_xi": 0.5942635432805401,
+        "exp_r2": 0.9643706999897098,
+        "better_model": "power"
+      },
+      "E": {
+        "gates_passed": true,
+        "gate_note": "PASSED per-arm gates.",
+        "dropped_separations": {},
+        "n_dropped": 0,
+        "F_full": {
+          "1": -8.494641873075476,
+          "2": -0.3190412975429968,
+          "3": -0.02549295085083969,
+          "4": -0.003848581724856359,
+          "5": -0.0011682592986268503,
+          "6": -0.000827663898011366,
+          "7": -0.0011682592988115914,
+          "8": -0.00384858172540703,
+          "9": -0.025492950850797058,
+          "10": -0.3190412975411494
+        },
+        "two_point_full": {
+          "1": 0.3389384795624047,
+          "2": 0.01310004503349993,
+          "3": 0.0014380896842683955,
+          "4": 0.00028499186316082456,
+          "5": 0.0001281083769007961,
+          "6": 0.00010685045368807269,
+          "7": 0.0001281083769749623,
+          "8": 0.0002849918632202655,
+          "9": 0.0014380896841721274,
+          "10": 0.013100045033232307
+        },
+        "G2_ring_symmetry_max_rel": 1.581336536458706e-10,
+        "G2_pass": true,
+        "G4_two_point_exponent_chord": 7.782124761011198,
+        "G4_two_point_slopes": [
+          7.9839682467549435,
+          7.324022092486087
+        ],
+        "G4_expected_2Delta": 2.0,
+        "G4_abs_dev": 5.782124761011198,
+        "G4_pass": null,
+        "alpha_chord": 9.813632445126991,
+        "sigma_fit": 0.4065881997966026,
+        "bootstrap_sigma": 3.556523560515964e-15,
+        "bootstrap_sigma_interpretation": "Resampling spread over an EXACT-diagonalization profile. There is no sampling noise in an exact spectrum, so this sigma measures DEPARTURE FROM A POWER LAW across the window, not statistical uncertainty. It feeds the pre-registered D > 3 sigma threshold, which is therefore a statement about fit quality, not about statistical confidence.",
+        "alpha_chord_relerr_crosscheck": 9.823786032565375,
+        "plateau_n": 0,
+        "plateau_value": NaN,
+        "chord_slopes": [
+          9.326066493230607,
+          10.920208973087378
+        ],
+        "amplitude_at_dr3": -0.02549295085083969,
+        "power_r2": 0.9982864170741882,
+        "exp_xi": 0.6487425343784856,
+        "exp_r2": 0.9831757110396059,
+        "better_model": "power"
+      }
+    },
+    "verdict": "CONTROL_CLEAN",
+    "contaminated_arms": [],
+    "contamination_band": [
+      1.5,
+      4.5
+    ]
+  }
+}

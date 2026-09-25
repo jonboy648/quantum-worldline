@@ -1,0 +1,22 @@
+{
+  "id": "PAPER-2026-018",
+  "title": "Worldline instantons for nonperturbative particle production by space and time dependent gravitational fields",
+  "authors": ["Philip Semren", "Greger Torgrimsson"],
+  "date": "2025-08-01",
+  "source": "other",
+  "source_url": "https://arxiv.org/abs/2508.01901",
+  "arxiv_id": "2508.01901",
+  "abstract": "Develops a technique using worldline instantons to determine the momentum distribution of particles created by gravitational fields that vary across both space and time. Instantons are 'open' with complex middle section representing formation region and endpoints depicting asymptotic particle trajectories. Extends worldline instanton formalism from electromagnetic to gravitational pair production.",
+  "relevance": 3,
+  "tags": ["worldline", "instanton", "pair-production", "gravitational", "curved-spacetime", "nonperturbative"],
+  "key_claims": [
+    "Worldline instanton approach extended to gravitational particle production",
+    "Handles both space and time dependent gravitational fields",
+    "Open instantons with complex formation region",
+    "Sophisticated WKB approximation for complicated field configurations"
+  ],
+  "hardware_used": "analytical/numerical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

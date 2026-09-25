@@ -1,0 +1,34 @@
+{
+  "id": "PAPER-2026-092",
+  "title": "Scaling at Chiral Clock Criticality via Entanglement Renormalization",
+  "authors": [
+    "Shiyong Guo",
+    "Brian Swingle"
+  ],
+  "date": "2026-04-21",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2604.19876",
+  "arxiv_id": "2604.19876",
+  "abstract": "We employ the Multiscale Entanglement Renormalization Ansatz (MERA) to study the Z3 chiral clock model. Using the variational principle to construct a MERA representation of the model's ground state, we extract scaling dimensions and critical exponents along the critical line. We investigate how scaling data evolves across the critical line as the chiral parameter varies, demonstrating MERA's effectiveness in capturing the complex low-energy physics of the chiral clock model.",
+  "relevance": 4,
+  "tags": [
+    "MERA",
+    "entanglement-renormalization",
+    "chiral-clock-model",
+    "critical-exponents",
+    "scaling-dimensions",
+    "CFT",
+    "tensor-network"
+  ],
+  "key_claims": [
+    "MERA accurately extracts scaling dimensions and critical exponents along the Z3 chiral clock critical line",
+    "Demonstrates MERA's effectiveness beyond Ising CFT to Z3 universality classes",
+    "Variational MERA captures complex low-energy physics including chiral deformations",
+    "Provides methodological template for applying MERA to non-Ising CFTs relevant to holography",
+    "Brian Swingle co-author -- same group as holographic entanglement paper 2601.21065"
+  ],
+  "hardware_used": null,
+  "qubit_count": null,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-050",
+  "organization": "eleQtron GmbH (Germany, University of Siegen spin-off)",
+  "processor": "MAGIC trapped-ion QPU (microwave-controlled)",
+  "date": "2026-05-05",
+  "source_url": "https://thequantuminsider.com/2026/05/05/eleqtron-secures-e57-million-in-series-a-funding-round/",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": "N/A",
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": 10000000,
+  "max_circuit_depth": null,
+  "is_frontier": false,
+  "frontier_category": null,
+  "notes": "Announced 2026-05-05: eleQtron secured €57 million (~$61.5M USD) Series A funding led by Schwarz Digits with European Innovation Council participation. eleQtron uses MAGIC (MAgnetic Gradient Induced Coupling) technology — microwave-based control of trapped-ion qubits rather than lasers, enabling lower crosstalk and world-record coherence times (up to ~10 seconds = 10,000,000 us). Functional systems with 'up to dozens of qubits' deployed to DLR and Forschungszentrum Jülich for cloud access. Architecture features all-to-all qubit connectivity. Company claims world-record low crosstalk between adjacent qubits. Order backlog of €54M indicates early commercial demand. NEW VENDOR: eleQtron is a European trapped-ion competitor to IonQ and Quantinuum, using microwave rather than laser control. IMPORTANT CAVEATS: Exact qubit count and gate fidelity not publicly released. Coherence time claim (10 s) is from company marketing materials; independent benchmarking not available. No published gate fidelity numbers. The 2Q fidelity record remains 99.99% (IonQ Tempo). RELEVANCE TO OUR WORK: Low direct relevance for MERA holographic circuits (qubit count unclear, fidelity unverified). Interesting as European access path if DLR collaborations open. The MAGIC microwave approach eliminates laser-induced dephasing — potentially cleaner coherence for deep circuits if fidelity is competitive. Monitor first benchmarked results."
+}

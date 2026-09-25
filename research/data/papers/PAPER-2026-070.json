@@ -1,0 +1,19 @@
+{
+  "id": "PAPER-2026-070",
+  "title": "Multimodal fusion of magnetoencephalography and photoacoustic imaging based on optical pump: Trends for wearable and noninvasive Brain-Computer interface",
+  "authors": ["Chai, et al."],
+  "date": "2025",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0956566325001952",
+  "journal": "Biosensors and Bioelectronics",
+  "domain": "BCI / OPM-MEG / photoacoustics / multimodal",
+  "status": "NOVEL",
+  "relevance": 4,
+  "summary": "First paper to formally propose and compare OPM-MEG + photoacoustic imaging (PAI) fusion for wearable BCI. Both modalities share optically pumped laser infrastructure. OPM-MEG provides temporal resolution (ms); PAI provides spatial resolution (sub-mm hemodynamics). Shared laser source reduces hardware complexity. No prototype demonstrated — conceptual/review-level paper.",
+  "key_numbers": {
+    "temporal_resolution": "OPM-MEG: millisecond",
+    "spatial_resolution_PAI": "sub-mm",
+    "laser_shared": "optically pumped pulsed source for both modalities"
+  },
+  "bci_relevance": "NOVEL architecture idea: single laser platform enabling both quantum magnetic sensing AND hemodynamic optical imaging. Unique to this paper. No commercial product or lab prototype exists. Suitable for independent researcher to prototype at single-channel level.",
+  "independent_researcher_budget": "Single-channel OPM (QuSpin QZFM Gen.2 ~$7.7k) + low-cost PAI transducer + pulsed laser: total ~$15-18k. ACTIONABLE under $20k budget for 1-channel proof-of-concept."
+}

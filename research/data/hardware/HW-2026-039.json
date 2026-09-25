@@ -1,0 +1,25 @@
+{
+  "id": "HW-2026-039",
+  "name": "QuSpin QZFM Gen.2 / Neuro-1",
+  "organization": "QuSpin Inc. (USA)",
+  "technology": "SERF OPM (alkali vapor)",
+  "type": "wearable OPM-MEG sensor",
+  "date": "2024-2025",
+  "status": "COMMERCIAL",
+  "specs": {
+    "sensitivity": "<50 fT/sqrt(Hz) (intrinsic); 5-15 fT/sqrt(Hz) in shielded environment",
+    "channels_per_sensor": "2D dual-axis (QZFM Gen.2); 3D triaxial (Neuro-1)",
+    "bandwidth": "up to 500+ Hz (QZFM Gen.2); ~150 Hz (Neuro-1)",
+    "latency_28Hz": "4.0 ms (QZFM Gen.2); 8.7-9.3 ms (Neuro-1)",
+    "operating_temp": "room temperature",
+    "form_factor": "sensor head ~2 cm, worn against scalp"
+  },
+  "cost": {
+    "per_sensor": "~$7,700 (at quantity 32)",
+    "system_32ch": "~$247k",
+    "shielded_room": "~$50-200k additional (mu-metal)",
+    "note": "Individual sensor units likely $8-12k retail; full MEG array $250k+"
+  },
+  "deployment": "50-sensor QuSpin OPM-MEG array operational (announced 2024). Widely used in research.",
+  "bci_relevance": "LEADING platform for independent-researcher-accessible quantum BCI sensing. Single QZFM Gen.2 sensor at ~$7.7k is within $20k budget including electronics. fT-class sensitivity achievable in mu-metal shielding."
+}

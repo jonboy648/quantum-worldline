@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-043",
+  "arxiv_id": "2412.18602",
+  "title": "Probing Entanglement Scaling Across a Quantum Phase Transition on a Quantum Computer",
+  "authors": ["Qiang Miao", "Tianyi Wang", "Kenneth R. Brown", "Thomas Barthel", "Marko Cetina"],
+  "year": 2025,
+  "venue": "arxiv (quant-ph), preprint Dec 2024 rev Aug 2025",
+  "submission_date": "2024-12-24",
+  "abstract_summary": "First demonstration of log-law entanglement entropy scaling at criticality on a digital quantum computer, using MERA tensor networks on a fully-connected trapped-ion system. Holographic subsystem tomography reveals quantum phase transition with spontaneous symmetry breaking. Can accurately represent infinite systems with few qubits.",
+  "relevance": 5,
+  "relevance_reason": "Direct experimental MERA on trapped-ion hardware (same hardware family as Quantinuum Helios). Demonstrates precisely the type of experiment our paper proposes. Shows MERA captures critical CFT physics on current hardware.",
+  "connection_to_project": "This is the experimental realization closest to our proposed Helios experiment. Barthel is co-author — connects to Miao & Barthel 2025 (PAPER-2026 index) Trotterized MERA convergence proof. Validates our hardware approach.",
+  "status": "CONFIRMED",
+  "scan_date": "2026-04-26"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "HW-2026-034",
+  "organization": "Infleqtion / NASA",
+  "processor": "Quantum Gravity Sensor for Space (Bose-Einstein condensate gravimeter)",
+  "date": "2026-02-10",
+  "source_url": "https://infleqtion.com/infleqtion-and-nasa-to-fly-the-worlds-first-quantum-gravity-sensor-to-space/",
+  "physical_qubits": null,
+  "logical_qubits": null,
+  "error_correction_ratio": null,
+  "two_qubit_gate_fidelity": null,
+  "coherence_time_us": null,
+  "max_circuit_depth": null,
+  "is_frontier": true,
+  "frontier_category": "coherence",
+  "notes": "Cold-atom BEC gravimeter. First space flight of quantum gravity sensor announced Feb 2026 with NASA. Applications: polar ice cap monitoring, underground tunnel burrowing detection, nuclear material movement tracking. Infleqtion first flew gravitational sensor with NASA in 2018. NOTE: subsurface detection capability here is gravimetric, NOT through-wall RF/magnetic sensing. A 70kg person at 10m distance creates gravity signal ~8 nGal (estimation: delta_g = G*m/r^2 ~ 6.67e-11 * 70 / 100 ~ 4.7e-11 m/s^2 ~ 4.7 nGal). State-of-art BEC gravimeters reach ~1 uGal absolute, ~1 nGal in gradiometer mode on long integration. Person-scale detection at meter range is at the noise floor - implausible for real-time tracking. Mountain-penetration claims are NOT supported by these sensitivity numbers for person detection."
+}

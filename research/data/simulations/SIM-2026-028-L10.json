@@ -1,0 +1,278 @@
+{
+  "id": "SIM-2026-028",
+  "description": "Null control for SIM-2026-027: compares finite-T transport amplitude A(beta) for the holographic Wang-He critical-Ising boundary vs a non-holographic paramagnetic control on the same TFD L=8 register + beta ladder. Tests whether the SIM-2026-027 amplitude degradation is holographic horizon absorption or generic thermal washout.",
+  "type": "classical",
+  "date": "2026-05-28",
+  "hypothesis_id": "HYP-2026-024",
+  "relates_to": "SIM-2026-027",
+  "hardware_target": "local_cpu",
+  "results": {
+    "verdict": "HOLOGRAPHIC_SIGNAL_BEYOND_WASHOUT",
+    "verdict_reason": "After dividing out the generic sqrt(purity) decoherence scaling, the holographic and control A_tilde(beta) curves still differ by 373.6% (>15%). The SIM-2026-027 degradation contains structure NOT explained by generic thermal washout -- consistent with (though still not proof of) holographic horizon absorption.",
+    "holographic_hamiltonian": "Wang-He critical Ising: (L/4pi) sum_j [X_{j-1}Z_jX_{j+1} - X_jX_{j+1}], PBC",
+    "control_hamiltonian": "Paramagnet: - sum_j X_j - 0.2 sum_j Z_jZ_{j+1}, PBC (gapped, non-critical, no holography)",
+    "holographic_gap": 0.12525765670907774,
+    "control_gap": 1.6000000373224381,
+    "beta_ladder": [
+      100.0,
+      20.0,
+      8.0,
+      5.0,
+      3.0,
+      2.0,
+      1.0,
+      0.5,
+      0.25
+    ],
+    "max_gap_raw_normalized": 0.4397783035529629,
+    "max_gap_washout_normalized": 3.736448468151306,
+    "spearman_beta_A_holo": 1.0,
+    "spearman_beta_A_control": 1.0,
+    "normalized_curves": {
+      "beta": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        8.0,
+        20.0,
+        100.0
+      ],
+      "holo_A_norm": [
+        0.03503291730269683,
+        0.07400506179399628,
+        0.223606880535957,
+        0.5173964266380996,
+        0.6409982661404862,
+        0.7186870735593308,
+        0.773783886182675,
+        0.9284037474448017,
+        1.0
+      ],
+      "control_A_norm": [
+        0.19111918040213413,
+        0.3706371855454416,
+        0.6633851840889199,
+        0.9356711587846555,
+        0.9892846643400164,
+        0.9996835315181085,
+        0.9999980684054158,
+        0.9999999999999929,
+        1.0
+      ],
+      "holo_A_washout_norm": [
+        0.7913516246302357,
+        0.8399317535047373,
+        0.8657393851026974,
+        0.938239982786372,
+        0.9656086833558604,
+        0.9821432105620084,
+        0.9935034104012385,
+        1.0008845888621367,
+        1.0
+      ],
+      "control_A_washout_norm": [
+        4.527800092781542,
+        4.433230666193246,
+        2.17110632627109,
+        1.1430446287479512,
+        1.0220391677027238,
+        1.000644420649257,
+        1.0000039869011488,
+        1.0000000000000093,
+        1.0
+      ]
+    },
+    "holographic_ladder": [
+      {
+        "beta": 100.0,
+        "temperature": 0.01,
+        "A_integrated_global": 0.04024548247048061,
+        "A_peak_global": 0.02012631376236632,
+        "gs_population": 0.9999963681532855,
+        "purity": 0.9999927363329557,
+        "participation_ratio": 1.0000072637198056,
+        "thermal_entropy": 4.9123514183948055e-05
+      },
+      {
+        "beta": 20.0,
+        "temperature": 0.05,
+        "A_integrated_global": 0.037364056743318275,
+        "A_peak_global": 0.01843212629022656,
+        "gs_population": 0.9245022828731209,
+        "purity": 0.8604043759514246,
+        "participation_ratio": 1.1622442051090365,
+        "thermal_entropy": 0.2676331460515597
+      },
+      {
+        "beta": 8.0,
+        "temperature": 0.125,
+        "A_integrated_global": 0.03114130582730521,
+        "A_peak_global": 0.014791490594289386,
+        "gs_population": 0.7311275680431446,
+        "purity": 0.6065931249564401,
+        "participation_ratio": 1.6485514900483098,
+        "thermal_entropy": 0.5859854306319723
+      },
+      {
+        "beta": 5.0,
+        "temperature": 0.2,
+        "A_integrated_global": 0.028923908020693057,
+        "A_peak_global": 0.013989461952936804,
+        "gs_population": 0.6453109791195714,
+        "purity": 0.5354598045486383,
+        "participation_ratio": 1.8675538135732566,
+        "thermal_entropy": 0.706534069672763
+      },
+      {
+        "beta": 3.0,
+        "temperature": 0.3333333333333333,
+        "A_integrated_global": 0.0257972844835654,
+        "A_peak_global": 0.01239032816705807,
+        "gs_population": 0.5462507845128449,
+        "purity": 0.4406646672015251,
+        "participation_ratio": 2.269299252764187,
+        "thermal_entropy": 1.033340030854734
+      },
+      {
+        "beta": 2.0,
+        "temperature": 0.5,
+        "A_integrated_global": 0.020822868818552945,
+        "A_peak_global": 0.01008476122637677,
+        "gs_population": 0.4291768993236079,
+        "purity": 0.3040995816667063,
+        "participation_ratio": 3.2883964999859874,
+        "thermal_entropy": 1.6527950125568607
+      },
+      {
+        "beta": 1.0,
+        "temperature": 1.0,
+        "A_integrated_global": 0.00899916679088871,
+        "A_peak_global": 0.006805772270317752,
+        "gs_population": 0.1692055403690161,
+        "purity": 0.0667102887799716,
+        "participation_ratio": 14.990191442556453,
+        "thermal_entropy": 3.680179982833457
+      },
+      {
+        "beta": 0.5,
+        "temperature": 2.0,
+        "A_integrated_global": 0.002978369417157112,
+        "A_peak_global": 0.004286071041008573,
+        "gs_population": 0.03624291645211825,
+        "purity": 0.007763037723768009,
+        "participation_ratio": 128.81555334174286,
+        "thermal_entropy": 5.652609821878044
+      },
+      {
+        "beta": 0.25,
+        "temperature": 4.0,
+        "A_integrated_global": 0.0014099166591954823,
+        "A_peak_global": 0.0025206903172833393,
+        "gs_population": 0.008427849998090776,
+        "purity": 0.001959794148579543,
+        "participation_ratio": 510.2576720747937,
+        "thermal_entropy": 6.557881085833744
+      }
+    ],
+    "control_ladder": [
+      {
+        "beta": 100.0,
+        "temperature": 0.01,
+        "A_integrated_global": 0.0528191688527805,
+        "A_peak_global": 0.020929717054646402,
+        "gs_population": 0.9999999999999996,
+        "purity": 1.0,
+        "participation_ratio": 1.0,
+        "thermal_entropy": 5.212990933220977e-68
+      },
+      {
+        "beta": 20.0,
+        "temperature": 0.05,
+        "A_integrated_global": 0.052819168852780124,
+        "A_peak_global": 0.020929717054646226,
+        "gs_population": 0.9999999999999825,
+        "purity": 0.9999999999999671,
+        "participation_ratio": 1.0000000000000329,
+        "thermal_entropy": 5.575229427306336e-13
+      },
+      {
+        "beta": 8.0,
+        "temperature": 0.125,
+        "A_integrated_global": 0.052819066827560004,
+        "A_peak_global": 0.02092970141625066,
+        "gs_population": 0.9999940815222745,
+        "purity": 0.9999881630907552,
+        "participation_ratio": 1.000011837049359,
+        "thermal_entropy": 8.515283102418346e-05
+      },
+      {
+        "beta": 5.0,
+        "temperature": 0.2,
+        "A_integrated_global": 0.05280245325059889,
+        "A_peak_global": 0.020927014196542876,
+        "gs_population": 0.9990396236701795,
+        "purity": 0.9980803814928146,
+        "participation_ratio": 1.0019233105296732,
+        "thermal_entropy": 0.009263453696404918
+      },
+      {
+        "beta": 3.0,
+        "temperature": 0.3333333333333333,
+        "A_integrated_global": 0.0522531937292416,
+        "A_peak_global": 0.020829620219060645,
+        "gs_population": 0.9678681642448448,
+        "purity": 0.9369307104055911,
+        "participation_ratio": 1.0673147852813007,
+        "thermal_entropy": 0.2094332600894444
+      },
+      {
+        "beta": 2.0,
+        "temperature": 0.5,
+        "A_integrated_global": 0.04942137292652351,
+        "A_peak_global": 0.020270002685479425,
+        "gs_population": 0.8163316080891829,
+        "purity": 0.6700699029447742,
+        "participation_ratio": 1.492381609150438,
+        "thermal_entropy": 0.9525626485372157
+      },
+      {
+        "beta": 1.0,
+        "temperature": 1.0,
+        "A_integrated_global": 0.03503945405282553,
+        "A_peak_global": 0.016638230754795168,
+        "gs_population": 0.27606921561797393,
+        "purity": 0.09336182876750404,
+        "participation_ratio": 10.711015553157896,
+        "thermal_entropy": 3.632858049774059
+      },
+      {
+        "beta": 0.5,
+        "temperature": 2.0,
+        "A_integrated_global": 0.019576748086444017,
+        "A_peak_global": 0.010702439524919394,
+        "gs_population": 0.04392761772146885,
+        "purity": 0.006989680447941527,
+        "participation_ratio": 143.0680568944324,
+        "thermal_entropy": 5.791875829318226
+      },
+      {
+        "beta": 0.25,
+        "temperature": 4.0,
+        "A_integrated_global": 0.01009475626066534,
+        "A_peak_global": 0.005906293551235477,
+        "gs_population": 0.0088467928020716,
+        "purity": 0.0017816978689589953,
+        "participation_ratio": 561.2623876484046,
+        "thermal_entropy": 6.617454554471816
+      }
+    ],
+    "total_wall_time_s": 3226.105226755142
+  },
+  "comparison": "classical_wins",
+  "notes": "Honest-broker null control mandated by the intent review of SIM-2026-027. Designed to be able to KILL the holographic interpretation. A WASHOUT_DOMINATES verdict is the correct, publishable outcome if the amplitude sign is generic.",
+  "finite_size_crosscheck_of": "SIM-2026-028",
+  "L_physical": 10
+}

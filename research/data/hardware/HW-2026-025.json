@@ -1,0 +1,15 @@
+{
+  "hw_id": "HW-2026-025",
+  "vendor": "IonQ",
+  "system_name": "IonQ 256q at Cambridge Cavendish / IonQ Quantum Innovation Centre",
+  "qubit_count": 256,
+  "fidelity_2q": null,
+  "announcement_date": "2026-03-11",
+  "headline": "IonQ + University of Cambridge: 256q 6th-gen chip-based system at Ray Dolby Centre (Cavendish)",
+  "details": "Announced 2026-03-11. IonQ's 6th-generation chip-based 256-qubit system to be installed at Cambridge's Cavendish Laboratory (Ray Dolby Centre). UK's most powerful quantum computer at a university. Research focus includes quantum chemistry, materials, optimization, and quantum communications.",
+  "source_url": "https://www.ionq.com/news/ionq-and-the-university-of-cambridge-announce-landmark-agreement-to-establish-innovation-centre-for-quantum-technology-commercialization",
+  "relevance": 4,
+  "relevance_reason": "256q trapped-ion with all-to-all connectivity (IonQ architecture). 6th-gen chip-based system has improved gate fidelity. Cambridge academic access path. Holographic simulation is in the stated research scope.",
+  "access_path": "IonQ Quantum Innovation Centre at Cambridge — contact through Cambridge academic channels. IonQ cloud access also available.",
+  "scan_date": "2026-04-26"
+}

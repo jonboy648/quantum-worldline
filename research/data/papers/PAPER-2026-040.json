@@ -1,0 +1,26 @@
+{
+  "id": "PAPER-2026-040",
+  "arxiv_id": "2603.04584",
+  "title": "Fault-tolerant execution of error-corrected quantum algorithms",
+  "authors": ["Michael A. Perlin", "Zichang He", "Anthony Alexiades Armenakas", "Pablo Andres-Martinez", "Tianyi Hao", "Dylan Herman", "Yuwei Jin", "Karl Mayer", "Chris Self", "David Amaro", "Ciaran Ryan-Anderson", "Ruslan Shaydulin"],
+  "published": "2026-03-05",
+  "journal": "arXiv preprint (JPMorganChase / Quantinuum)",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2603.04584",
+  "status": "WATCH",
+  "relevance": 3,
+  "topic": "Quantum hardware / fault-tolerant quantum computation / Quantinuum Helios",
+  "summary": "First end-to-end demonstration of fault-tolerant execution of complete quantum algorithms (QAOA and HHL) on Quantinuum H2 and Helios processors using the [[7,1,3]] Steane code. QAOA circuits up to 12 logical (97 physical) qubits with 2132 physical 2-qubit gates still show better-than-random performance. Demonstrates FT logical T-gate implementation, active QEC cycles, and repeat-until-success state preparation on live hardware.",
+  "key_findings": [
+    "End-to-end FT execution of QAOA (5-8 logical qubits) and HHL on Quantinuum H2 and Helios",
+    "12 logical (97 physical) qubits with 2132 physical 2-qubit gates: better-than-random performance achieved",
+    "Steane [[7,1,3]] code used throughout; increasing T-gate count and QAOA layers still improves performance",
+    "Active QEC cycles and repeat-until-success state prep demonstrated as critical capabilities",
+    "Helios enables higher qubit counts than H2 for the same logical circuit"
+  ],
+  "project_relevance": "WATCH. Confirms Helios is operational for algorithmic use (not just error correction benchmarks). The 2132 physical 2-qubit gate budget with 97 physical qubits is directly relevant to our planned MERA circuit: our 32q/3L design has 57 CX gates (well within this budget). The demonstrated tolerance for deep circuits with QEC suggests our 0.9% error budget estimate is conservative. Does not change our circuit design but strengthens the hardware access case.",
+  "recommended_followup": "none",
+  "scan_date": "2026-03-18",
+  "scan_number": 5,
+  "competition_assessment": "Not competing. Different application domain (optimization/linear algebra vs holographic physics). Strengthens hardware access case."
+}

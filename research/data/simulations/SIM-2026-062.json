@@ -1,0 +1,20 @@
+{
+  "id": "SIM-2026-062",
+  "hypothesis_id": "HYP-2026-025",
+  "related": ["SIM-2026-057", "SIM-2026-059", "SIM-2026-061"],
+  "date": "2026-07-03",
+  "type": "method-validation (Z3-symmetric Potts driver, pre-RunPod)",
+  "hardware": "local CPU (Z3Space(0=>2,1=>2,2=>2) chi=6, 6 seeds x 2500 LBFGS, wall 3025 s)",
+  "goal": "Port the 3-state Potts driver to Z3-symmetric tensors (v4/SIM-061 pattern) so the approved RunPod chi=10-12 run buys clean sector-resolved data instead of the dense basin lottery (2/8 clean at chi=8, SIM-059).",
+  "what_was_built": "qw_potts_z3.jl: charge-basis Potts H injected into a Z3-graded TensorMap via an empirically derived fusion-tree index map, machine-precision gate vs the dense reference (err 1.75e-15). Sector-resolved dims: sigma in charge-1 (=charge-2 conjugate, degeneracy exact by construction), eps/T in charge-0.",
+  "verdict": "VALIDATED as the RunPod payload. 4/6 clean basins (2.7x the dense rate); clean-basin observables tightly clustered.",
+  "results": {
+    "clean_seeds": "1-4: Dsig=0.0871-0.0896, Deps=0.7754-0.7900 (CFT 0.8), D_T=2.019-2.028 -> alpha=4.038-4.055",
+    "bad_seeds": "5 (Dsig=0.579), 6 (Dsig=0.351) -- basin lottery reduced, not eliminated; sector gate auto-rejects",
+    "alpha": "4.04-4.06 across all clean basins = 4th independent Potts confirmation of alpha=2*Delta_T~4 (HYP-025)",
+    "Delta_sigma_status": "0.089 at chi=6(2,2,2) vs CFT 2/15=0.1333 -- chi-starved exactly as SIM-057/059 diagnosed (dense chi=8 gave 0.094); the chi=10-12 escalation is the fix and is now GO"
+  },
+  "next": "RunPod combined session (task #3): Potts Z3 chi=10 (3,3,3)/chi=12 (4,4,4) multi-seed for Delta_sigma -> 0.133 (HYP-025 clean), + Ising OPE Z2(5,5)/(6,6) tight C_sse, + C_TTT h+p route (design: CTTT-SPIN-RESOLUTION-DESIGN.md; targets 2*sqrt(2)/sqrt(c): Ising 4.000, TCI 3.381, Potts 3.162). Bootstrap: merakit-setup/ kit, Julia 1.8, many-core box, single-thread BLAS per seed.",
+  "files": ["research/tools/MERAKit.jl/qw_potts_z3.jl", "research/tools/merakit-setup/qw_potts_z3.jl", "scratchpad potts_z3_chi6.log"],
+  "status": "COMPLETE (RunPod unlocked)"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-022",
+  "title": "Bulk-boundary correspondence from hyper-invariant tensor networks",
+  "authors": ["Rafal Bistron", "Mykhailo Hontarenko", "Karol Zyczkowski"],
+  "date": "2024-09-03",
+  "source": "prx",
+  "source_url": "https://arxiv.org/abs/2409.02029",
+  "arxiv_id": "2409.02029",
+  "abstract": "Introduces a tensor network framework designed to simulate the AdS/CFT correspondence. The construction integrates bulk indices within the network architecture to uphold key features of the HaPPY code, including complementary recovery. Successfully reproduces boundary CFT two-point and three-point correlation functions. Considers the image of any bulk operator. Published in Physical Review D 111, 026006 (2025).",
+  "relevance": 3,
+  "tags": ["tensor-network", "holography", "AdS-CFT", "HaPPY-code", "bulk-boundary", "correlation-functions"],
+  "key_claims": [
+    "Hyper-invariant tensor network simulates AdS/CFT correspondence",
+    "Reproduces boundary CFT two-point and three-point correlation functions",
+    "Integrates bulk indices while maintaining HaPPY code features",
+    "Provides explicit methods for efficient correlation function calculations",
+    "Published in Phys. Rev. D 111, 026006 (2025)"
+  ],
+  "hardware_used": "analytical/numerical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

@@ -1,0 +1,23 @@
+
+============================================================================
+EXPERIMENT 1 -- CRITICAL  --  n=20, h=1.0, PBC ring
+============================================================================
+  GS in 15s   |E0/n - exact| = 6.66e-16  -> G1 PASS
+  H    4.9s  force alpha_chord= 7.426+/-1.778  plateau 0@nan  | two-point exp= 7.657 (want 4) G4 False  G2 PASS (2.6e-10)  R2 pow=0.8974 exp=0.9939
+  E    4.3s  force alpha_chord= 0.336+/-0.843  plateau 0@nan  | two-point exp= 2.059 (want 2) G4 True  G2 FAIL (1.0e+00)  R2 pow=0.0393 exp=0.0707
+  G5 in 168s: pass={'H': True, 'E': False}  H ratio=9.57e-14 (ref 2.192e-01)  E ratio=8.71e-03 (ref 3.988e+00)
+     states: {'eps_E-E0': 0.6276727658227621, 'T_E-E0': 1.2476178383348966, 'T_pair_split': 1.4210854715202004e-13, 'Delta_T_over_Delta_eps': 1.9876883405949626, 'max_sector_leak': 4.1365235342067986e-15}
+
+============================================================================
+MATCHED CONTROL (h=2)  --  n=20, h=2.0, PBC ring
+============================================================================
+  GS in 11s   |E0/n - exact| = 2.66e-15  -> G1 PASS
+  H    4.8s  force alpha_chord=13.049+/-2.187  plateau 0@nan  | two-point exp=13.745 (want 4) G4 None  G2 PASS (4.6e-09)  R2 pow=0.9203 exp=0.9549
+  E    6.9s  force alpha_chord=12.066+/-1.625  plateau 0@nan  | two-point exp=11.261 (want 2) G4 None  G2 PASS (1.1e-09)  R2 pow=0.9712 exp=0.9830
+
+############################################################################
+  CONTROL: CONTROL_CLEAN   usable arms at h=1: []
+  H: force alpha_chord = 7.426 +/- 1.778   two-point exponent = 7.657 (null 4)   VOID ARM
+  E: force alpha_chord = 0.336 +/- 0.843   two-point exponent = 2.059 (null 2)   VOID ARM
+############################################################################
+wrote D:\quantum-worldline\research\tools\channel-test\stress_test_n20_results.json  (215s)

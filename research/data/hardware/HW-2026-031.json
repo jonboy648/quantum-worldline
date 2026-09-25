@@ -1,0 +1,15 @@
+{
+  "hw_id": "HW-2026-031",
+  "vendor": "PsiQuantum",
+  "system_name": "Omega platform (silicon photonic) — utility-scale target Feb 2026",
+  "qubit_count": null,
+  "fidelity_2q": null,
+  "announcement_date": "2026-02-10",
+  "headline": "PsiQuantum targets utility-scale delivery Feb 2026; Omega platform; $1B+ raised; Chicago site groundbreaking",
+  "details": "PsiQuantum targets utility-scale quantum computer delivery by Feb 10, 2026. Omega platform: silicon nitride photonic chip integrating superconducting single photon detectors, sources, and optical switch. CEO transition: Victor Peng (Interim CEO), co-founder Jeremy O'Brien to Executive Chairman. Chicago site groundbreaking. Japan partnership with Tokyo/Mitsubishi Chemical for workforce training. Aiming for 1M qubits by 2027.",
+  "source_url": "https://www.psiquantum.com/news-import",
+  "relevance": 1,
+  "relevance_reason": "Photonic architecture is fundamentally different from trapped-ion/neutral-atom and does not naturally run our MERA circuit design. Monitor for unexpected breakthroughs.",
+  "access_path": "Not currently available for academic research circuits. Monitor commercial release timeline.",
+  "scan_date": "2026-04-26"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PAPER-2026-028",
+  "title": "Noise Resilience and Robust Convergence Guarantees for the Variational Quantum Eigensolver",
+  "authors": ["Mirko Legnini", "Julian Berberich"],
+  "date": "2026-01-23",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2601.16758",
+  "arxiv_id": "2601.16758",
+  "abstract": "Characterizes the effect of different coherent and incoherent noise processes on optimal VQE parameters and costs. Extends existing global convergence guarantees for VQE to noisy settings under local surjectivity and smoothness conditions. Provides theoretical framework for understanding how quantum circuit noise affects variational optimization, with numerical validation using PennyLane.",
+  "relevance": 3,
+  "tags": ["VQE", "noise-resilience", "convergence-guarantees", "optimization", "noisy-quantum", "theoretical"],
+  "key_claims": [
+    "Characterizes how coherent and incoherent noise shift optimal VQE parameters",
+    "Extends VQE convergence guarantees to noisy settings",
+    "Requires local surjectivity and smoothness conditions for guarantees",
+    "Numerical validation on PennyLane framework"
+  ],
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-14"
+}

@@ -1,0 +1,30 @@
+{
+  "experiment": "holographic_transportation",
+  "hypothesis_id": "HYP-2026-006",
+  "boundary_sites": 16,
+  "hamiltonian": "Wang_He_H_boundary (Eq 1)",
+  "E_gs": -25.979936579544773,
+  "perturbation": {
+    "Omega": 5.0,
+    "M": 0,
+    "sigma_t": 0.4,
+    "sigma_phi": 0.4,
+    "A": 0.11253953951963826
+  },
+  "time_evolution": {
+    "dt": 0.05,
+    "t_max": 6.0,
+    "n_steps": 120
+  },
+  "transport_signature": {
+    "peak_time": 0.7000000000000001,
+    "dip_time": 2.5,
+    "dip_amplitude": 0.0010661389775845967,
+    "reappear_time": 4.75,
+    "reappear_amplitude": 0.02221504549935552,
+    "transport_time": 2.25,
+    "predicted_transport_time": 4.532360141827193,
+    "ratio_measured_predicted": 0.49643010034346613
+  },
+  "total_time_s": 56.78879737854004
+}

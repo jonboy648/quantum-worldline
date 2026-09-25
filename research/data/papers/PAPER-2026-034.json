@@ -1,0 +1,24 @@
+{
+  "id": "PAPER-2026-034",
+  "arxiv_id": "q-2025-02-11-1631",
+  "doi": "10.22331/q-2025-02-11-1631",
+  "title": "Convergence and quantum advantage of Trotterized MERA for strongly-correlated systems",
+  "authors": ["Qiang Miao", "Thomas Barthel"],
+  "published": "2025-02-11",
+  "journal": "Quantum (journal), vol. 9, p. 1631",
+  "url": "https://quantum-journal.org/papers/q-2025-02-11-1631/",
+  "status": "CONFIRMED",
+  "relevance": 5,
+  "topic": "MERA circuit optimization convergence",
+  "summary": "Proves convergence guarantees for Trotterized MERA applied to strongly-correlated quantum many-body systems, enabling layer-by-layer initialization on real quantum hardware with relatively small qubit counts. Directly addresses our Z2 symmetry convergence problem in SIM-2026-008.",
+  "key_findings": [
+    "Layer-by-layer initialization provably improves convergence over random starts for MERA",
+    "Trotterized MERA maintains the causal structure that makes MERA efficient for quantum circuits",
+    "Quantum advantage demonstrated for problems that are classically intractable with tensor networks",
+    "Small qubit counts (comparable to 16-24q) shown sufficient for nontrivial demonstrations"
+  ],
+  "project_relevance": "This is the Miao & Barthel paper we identified in the SIM-2026-008 design phase. Its layer-by-layer init strategy is already incorporated into SIM-2026-008's design. The convergence proof strengthens the theoretical basis for our ALM warm-start approach in SIM-2026-008b/c. The 'quantum advantage' claim is directly relevant to our Helios hardware target.",
+  "recommended_followup": "theory",
+  "scan_date": "2026-03-17",
+  "scan_number": 4
+}

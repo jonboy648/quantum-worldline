@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Worldline — A Research Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Spline+Sans+Mono:wght@400;500;600&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#e8e4d8; --ink-dim:#9a958a; --ink-faint:#615d54;
+  --bg:#0a0c0f; --bg2:#11151a; --panel:#141a21; --line:#222a33;
+  --teal:#4fd6c4; --teal-dim:#2a8c80; --gold:#e0b863; --rose:#e0795f;
+  --grid:rgba(79,214,196,.06);
+  --serif:"Fraunces",serif; --read:"Newsreader",serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--read);
+  font-size:18px; line-height:1.7; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.5;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,214,196,.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(224,184,99,.05), transparent 60%);
+}
+/* grain */
+body::after{
+  content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:0 32px}
+
+/* ---- progress rail ---- */
+#rail{position:fixed; top:0; left:0; height:2px; width:0; z-index:50;
+  background:linear-gradient(90deg,var(--teal),var(--gold)); transition:width .1s linear}
+
+/* ---- hero ---- */
+header{min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+  position:relative; padding:80px 0}
+.eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+  color:var(--teal); margin-bottom:28px; opacity:0; animation:rise .9s .1s forwards}
+h1{font-family:var(--serif); font-weight:300; font-size:clamp(46px,9vw,108px);
+  line-height:.96; letter-spacing:-.02em; margin-bottom:8px}
+h1 .l{display:block; opacity:0; animation:rise 1s forwards}
+h1 .l:nth-child(1){animation-delay:.18s}
+h1 .l:nth-child(2){animation-delay:.30s; font-style:italic; color:var(--gold)}
+h1 .l:nth-child(3){animation-delay:.42s}
+.sub{max-width:600px; margin-top:34px; font-size:21px; color:var(--ink-dim); line-height:1.6;
+  opacity:0; animation:rise 1s .6s forwards}
+.sub b{color:var(--ink); font-weight:500}
+.herometa{display:flex; gap:36px; margin-top:48px; flex-wrap:wrap; font-family:var(--mono);
+  font-size:12.5px; color:var(--ink-faint); opacity:0; animation:rise 1s .8s forwards}
+.herometa span{display:flex; flex-direction:column; gap:4px}
+.herometa span b{color:var(--teal); font-size:24px; font-weight:600; font-family:var(--serif)}
+.scrollcue{position:absolute; bottom:32px; left:0; font-family:var(--mono); font-size:11px;
+  letter-spacing:.25em; color:var(--ink-faint); text-transform:uppercase;
+  opacity:0; animation:rise 1s 1.1s forwards, pulse 2.4s 2s infinite}
+@keyframes rise{from{opacity:0; transform:translateY(24px)}to{opacity:1; transform:none}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:.9}}
+
+/* ---- section scaffold ---- */
+section{padding:90px 0; position:relative}
+.tag{font-family:var(--mono); font-size:11.5px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--teal-dim); margin-bottom:18px; display:flex; align-items:center; gap:14px}
+.tag::before{content:""; width:30px; height:1px; background:var(--teal-dim)}
+h2{font-family:var(--serif); font-weight:400; font-size:clamp(30px,5vw,52px); line-height:1.04;
+  letter-spacing:-.015em; margin-bottom:26px; max-width:18ch}
+h2 em{font-style:italic; color:var(--gold)}
+.lede{font-size:21px; color:var(--ink-dim); max-width:62ch; margin-bottom:18px}
+p{max-width:64ch; color:var(--ink-dim); margin-bottom:18px}
+p b,p strong{color:var(--ink); font-weight:500}
+.reveal{opacity:0; transform:translateY(30px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1; transform:none}
+
+mark{background:linear-gradient(transparent 60%, rgba(79,214,196,.22) 0); color:var(--ink); padding:0 2px}
+.num{font-family:var(--mono); color:var(--teal); font-weight:500}
+.eq{font-family:var(--mono); color:var(--gold); font-size:.92em}
+
+.divider{height:1px; background:linear-gradient(90deg,transparent,var(--line) 20%,var(--line) 80%,transparent);
+  margin:0; border:0}
+
+footer{padding:70px 0 60px; border-top:1px solid var(--line); color:var(--ink-faint);
+  font-family:var(--mono); font-size:12.5px; line-height:2}
+footer a{color:var(--teal-dim); text-decoration:none; border-bottom:1px dotted var(--teal-dim)}
+footer .big{font-family:var(--serif); font-size:22px; color:var(--ink); margin-bottom:20px; letter-spacing:-.01em}
+
+::selection{background:rgba(224,184,99,.25); color:#fff}
+
+/* idea boxes */
+.ideaboxes{display:flex; align-items:stretch; gap:14px; margin-top:40px; flex-wrap:wrap}
+.ibox{flex:1; min-width:200px; background:var(--panel); border:1px solid var(--line);
+  border-radius:4px; padding:22px}
+.ih{font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:12px}
+.ip{font-size:15.5px; color:var(--ink-dim); line-height:1.55}
+.iarrow{display:flex; align-items:center; color:var(--teal-dim); font-size:22px}
+@media(max-width:720px){.iarrow{transform:rotate(90deg); justify-content:center}}
+
+/* plot */
+.plot{margin:42px 0 22px; background:linear-gradient(180deg,var(--bg2),var(--panel));
+  border:1px solid var(--line); border-radius:6px; overflow:hidden}
+.plot-head{display:flex; justify-content:space-between; align-items:center; gap:16px;
+  padding:18px 22px; border-bottom:1px solid var(--line); flex-wrap:wrap}
+.plot-title{font-family:var(--serif); font-size:20px; font-style:italic}
+.plot-toggle{display:flex; gap:6px; background:var(--bg); border:1px solid var(--line);
+  border-radius:30px; padding:4px}
+.plot-toggle button{font-family:var(--mono); font-size:12px; color:var(--ink-dim);
+  background:none; border:none; padding:7px 14px; border-radius:24px; cursor:pointer;
+  transition:all .25s}
+.plot-toggle button:hover{color:var(--ink)}
+.plot-toggle button.on{background:var(--teal); color:#06120f; font-weight:600}
+.plot-body{padding:14px 10px 4px}
+#chart{width:100%; height:auto; display:block}
+.plot-foot{display:flex; justify-content:space-between; align-items:center; gap:16px;
+  padding:14px 22px 20px; flex-wrap:wrap}
+.legend{font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); display:flex;
+  align-items:center; flex-wrap:wrap; gap:4px}
+.dot{display:inline-block; width:9px; height:9px; border-radius:50%; margin:0 4px 0 8px; vertical-align:baseline}
+.dot.data{background:var(--teal)} .dot.fit{background:var(--gold)} .dot.bad{background:var(--rose)}
+.readout{font-family:var(--mono); font-size:13px; color:var(--teal)}
+.cap{font-size:15px; color:var(--ink-faint); max-width:72ch; line-height:1.6}
+
+/* result cards */
+.cardgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:40px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:26px 24px;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s}
+.card:hover{transform:translateY(-6px); border-color:var(--teal-dim);
+  box-shadow:0 18px 40px -24px rgba(79,214,196,.5)}
+.cnum{font-family:var(--serif); font-size:46px; font-weight:400; color:var(--teal); line-height:1; letter-spacing:-.02em}
+.cnum span{font-size:17px; color:var(--ink-faint); font-family:var(--mono); margin-left:4px}
+.clab{font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold); margin:14px 0 10px}
+.cnote{font-size:14.5px; color:var(--ink-dim); line-height:1.55}
+@media(max-width:720px){.cardgrid{grid-template-columns:1fr}}
+
+/* two-col + h3 */
+.twocol{display:grid; grid-template-columns:1fr 1fr; gap:34px; margin:34px 0 8px}
+@media(max-width:720px){.twocol{grid-template-columns:1fr}}
+h3{font-family:var(--serif); font-weight:500; font-size:23px; line-height:1.2; margin-bottom:12px; color:var(--ink)}
+h3+p{font-size:16.5px}
+
+/* kill grid */
+.killgrid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:36px 0 24px}
+@media(max-width:720px){.killgrid{grid-template-columns:1fr}}
+.kill{background:var(--panel); border:1px solid var(--line); border-left:2px solid var(--gold);
+  border-radius:4px; padding:20px 22px}
+.kt{font-family:var(--serif); font-style:italic; font-size:18px; color:var(--ink); margin-bottom:8px}
+.kx{font-size:14.5px; color:var(--ink-dim); line-height:1.55}
+
+/* ledger bars */
+.ledger{margin:34px 0; display:flex; flex-direction:column; gap:14px}
+.lrow{display:grid; grid-template-columns:230px 1fr 90px; align-items:center; gap:16px}
+@media(max-width:720px){.lrow{grid-template-columns:1fr; gap:4px}}
+.lk{font-family:var(--mono); font-size:12.5px; color:var(--ink-dim)}
+.lbar{height:14px; background:var(--bg); border:1px solid var(--line); border-radius:8px; overflow:hidden}
+.lbar span{display:block; height:100%; background:var(--rose); border-radius:8px; width:0;
+  transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.lv{font-family:var(--mono); font-size:14px; color:var(--rose); text-align:right}
+
+/* pull quote */
+.pull{font-family:var(--serif); font-weight:300; font-size:clamp(24px,3.6vw,34px); line-height:1.32;
+  font-style:italic; color:var(--ink); border:0; margin:40px 0 0; padding:30px 0 0;
+  border-top:1px solid var(--line); max-width:24ch}
+.pull b{color:var(--teal); font-style:normal; font-weight:500}
+
+@media(max-width:720px){ body{font-size:16.5px} .wrap{padding:0 22px} h2{max-width:none} }
+</style>
+</head>
+<body>
+<div style="background:#fee;border:2px solid #c00;padding:12px;margin:12px;font-weight:bold;color:#600">RETRACTION NOTICE (2026-08-17): the force exponent alpha = 3.92 +/- 0.16 stated in this document is an ESTIMATOR ARTIFACT (95.8% of the fit objective sits on one point). The measured value is 2.6 +/- 0.2 and the channel is open. Interpretations built on alpha = 4 (graviton / stress-tensor exchange) are withdrawn. See research/ERRATA.md and the Zenodo v5 correction, doi:10.5281/zenodo.22080720.</div>
+<div id="rail"></div>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Independent Research · 2026 · Quantum Gravity from Tensor Networks</div>
+  <h1>
+    <span class="l">The shape of</span>
+    <span class="l">gravity, drawn</span>
+    <span class="l">from a quantum chain.</span>
+  </h1>
+  <p class="sub">A two-year computational investigation into whether <b>spacetime and the force of gravity can emerge from quantum entanglement</b> — and a published result that says, at least in miniature, they can.</p>
+  <div class="herometa">
+    <span><b>4</b>headline results</span>
+    <span><b>~4.0</b>measured force exponent</span>
+    <span><b>32</b>simulations run</span>
+    <span><b>1</b>published preprint</span>
+  </div>
+  <div class="scrollcue">scroll to begin ↓</div>
+</header>
+
+<main id="main">
+
+<section>
+  <div class="tag reveal">Where this began</div>
+  <h2 class="reveal">It started with a question that sounds like science fiction.</h2>
+  <p class="lede reveal">Could the fabric of space — and gravity itself — not be fundamental at all, but something that <em>emerges</em> from the way quantum information is woven together?</p>
+  <p class="reveal">This isn't a fringe idea. It's one of the most active frontiers in theoretical physics, known as <b>holography</b>: the conjecture that a universe with gravity can be perfectly encoded on its lower-dimensional boundary, like a 3D hologram stored on a 2D film. The deep version of the claim is that <b>geometry is made of entanglement</b> — that distance, curvature, and gravitational attraction are bookkeeping for how quantum systems are correlated.</p>
+  <p class="reveal">The trouble with a beautiful idea is testing it. This project set out to do exactly that — not with a particle accelerator, but with a <b>quantum tensor network</b> simulated on ordinary computers, asking a sharp, falsifiable question: <mark>if you build the simplest possible "toy universe" this way, does a real gravitational force appear inside it — and does it have the precise mathematical form Einstein's theory demands?</mark></p>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="tag reveal">The core idea, in plain terms</div>
+  <h2 class="reveal">A chain of quantum bits, folded into a <em>space</em>.</h2>
+  <p class="reveal">Picture a row of quantum bits — a "spin chain" — tuned to a delicate critical point, the knife-edge between two phases of matter. A mathematical structure called <b>MERA</b> (a multi-scale entanglement renormalization ansatz) organizes that chain into <b>layers</b>, each one coarser than the last.</p>
+  <p class="reveal">Here is the remarkable part: those layers behave like the <b>extra dimension of a curved space</b>. The flat quantum chain lives on the boundary; the stack of layers builds an emergent, hyperbolic "bulk" — the same geometry that describes the space around a black hole. The boundary is the hologram; the bulk is the gravity it encodes.</p>
+  <p class="reveal">If holography is right, then putting two disturbances on the boundary chain should make them <b>attract each other through the bulk</b> — a genuine emergent force. The whole project hangs on one measurable thing: <mark>the exact way that attraction weakens with distance.</mark></p>
+  <div class="ideaboxes reveal">
+    <div class="ibox"><div class="ih">Boundary</div><div class="ip">A critical quantum spin chain — the "hologram." Flat, 1-dimensional, made only of entangled qubits.</div></div>
+    <div class="iarrow">→</div>
+    <div class="ibox"><div class="ih">Bulk</div><div class="ip">The MERA layers stacked above it form a curved, higher-dimensional space — the "gravity."</div></div>
+    <div class="iarrow">→</div>
+    <div class="ibox" style="border-color:var(--teal-dim)"><div class="ih" style="color:var(--teal)">The test</div><div class="ip">Two pokes on the boundary should pull together. <b>How fast does the pull fade with distance?</b></div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="tag reveal">The headline result</div>
+  <h2 class="reveal">The force fades as distance to the <em>fourth power</em>. That number is the whole game.</h2>
+  <p class="reveal">In Einstein's gravity, the carrier of the force between these particular excitations is the <b>stress-energy tensor</b> — and the math of the boundary theory makes an unambiguous prediction: the attraction must weaken as <span class="eq">1 / distance⁴</span>. Not squared (that would mean an ordinary scalar field). Not exponential. Exactly the fourth power.</p>
+  <p class="reveal">We measured it three independent ways. <mark>All three landed on 4.0.</mark> Drag the slider below to see the measured force, and watch how badly the "wrong physics" curves miss the data.</p>
+
+  <figure class="plot reveal">
+    <div class="plot-head">
+      <div class="plot-title">Holographic force vs. separation</div>
+      <div class="plot-toggle" id="toggle">
+        <button data-k="exact24" class="on">24-qubit exact</button>
+        <button data-k="exact16">16-qubit exact</button>
+        <button data-k="mera">χ=3 MERA</button>
+      </div>
+    </div>
+    <div class="plot-body">
+      <svg id="chart" viewBox="0 0 720 420" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Force versus distance, log-log"></svg>
+    </div>
+    <div class="plot-foot">
+      <div class="legend"><i class="dot data"></i> measured data &nbsp; <i class="dot fit"></i> best-fit power law &nbsp; <i class="dot bad"></i> 1/r² scalar (ruled out)</div>
+      <div class="readout" id="readout"></div>
+    </div>
+  </figure>
+  <p class="cap reveal">Log-log axes: a straight line means a power law, and its <b>slope is the exponent</b>. The data hug the fourth-power line and clearly reject the second-power one. The statistical model comparison prefers the power law over an exponential decay by a decisive margin (<span class="num">ΔAIC ≈ 11</span>), and a 1000-sample bootstrap keeps the stress-tensor value <span class="num">4</span> inside the confidence interval.</p>
+
+  <div class="cardgrid reveal">
+    <div class="card">
+      <div class="cnum">3.92<span>±0.16</span></div>
+      <div class="clab">24-qubit exact diagonalization</div>
+      <div class="cnote">The cleanest measurement, on the full quantum state. 12 clean attractive data points.</div>
+    </div>
+    <div class="card">
+      <div class="cnum">3.97<span>±0.15</span></div>
+      <div class="clab">16-qubit exact</div>
+      <div class="cnote">An independent system size — a check that the result isn't a fluke of one configuration.</div>
+    </div>
+    <div class="card">
+      <div class="cnum">4.07<span>±0.18</span></div>
+      <div class="clab">χ=3 MERA tensor network</div>
+      <div class="cnote">The first force measured from the holographic network itself — the structure standing in for gravity.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="tag reveal">Two more signatures</div>
+  <h2 class="reveal">It wasn't just the force. Two other fingerprints of curved space showed up.</h2>
+  <div class="twocol">
+    <div class="reveal">
+      <h3>A signal travels like light through curved space.</h3>
+      <p>Send a ripple along the boundary chain and time how long it takes to cross. Holography predicts that time is set by the bulk geometry — specifically <span class="eq">T = (π/2) × ℓ</span>, where ℓ is the emergent radius of curvature. We measured it and got agreement to about <span class="num">1.2%</span>. The signal moves exactly as if it were crossing a real curved spacetime.</p>
+    </div>
+    <div class="reveal">
+      <h3>A massless boundary excitation gains weight in the bulk.</h3>
+      <p>An excitation that is "massless" on the boundary should acquire a specific <b>effective mass</b> once viewed as a particle living in the curved bulk. The number predicted by the conformal field theory is <span class="num">0.693</span>. The number the tensor network actually produced was <span class="num">0.670</span> — a match to <span class="num">3.5%</span>.</p>
+    </div>
+  </div>
+  <p class="reveal" style="margin-top:10px">Three different observables — a force, a travel time, and a mass — all independently pointing at the same emergent geometry. That convergence is what turned a hopeful idea into a publishable result.</p>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="tag reveal" style="color:var(--gold)">The part most people skip</div>
+  <h2 class="reveal">We spent as much effort trying to <em>break</em> the result as to find it.</h2>
+  <p class="lede reveal">A finding you haven't attacked isn't a finding — it's a hope. So the project ran a standing adversarial process: every promising result was handed to independent reviewers whose only job was to kill it.</p>
+  <div class="killgrid reveal">
+    <div class="kill"><div class="kt">A tempting shortcut, ruled out</div><div class="kx">An "integral-geometry" route looked like it reproduced the force — until the full curve was checked and disagreed catastrophically. Killed. A coincidence in one number had masqueraded as physics.</div></div>
+    <div class="kill"><div class="kt">A hardware experiment, called off</div><div class="kx">A planned $115 run on a real quantum computer was cancelled when a smoke test showed the measurement was structurally wrong before any money was spent. The gate worked exactly as designed.</div></div>
+    <div class="kill"><div class="kt">Our own published number, corrected</div><div class="kx">A later, finer simulation showed one headline precision claim (a "0.72%" agreement) was a measurement-grid artifact; the honest value is ~1.2%. The result <b>survives</b> — it just got more honest. Logged in an errata file.</div></div>
+    <div class="kill"><div class="kt">A self-inflicted error, caught</div><div class="kx">A full-project audit found that our own verification layer had once inverted a baseline comparison. We caught it ourselves, before any reviewer could. That's the system working.</div></div>
+  </div>
+  <p class="reveal">This is the texture of real research: most ideas die, the survivors are stronger for it, and the discipline is in writing down the deaths.</p>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="tag reveal">The newest chapter</div>
+  <h2 class="reveal">Can we do this on a <em>real</em> quantum computer?</h2>
+  <p class="reveal">The simulations are settled. The frontier question is whether the force can be detected on actual quantum hardware — the kind of "experimental quantum gravity" that, to our knowledge, <b>no one has done yet</b>.</p>
+  <p class="reveal">The honest blocker has been noise: today's machines fumble enough gates that the signal can drown. So the recent work attacked the cost. An adaptive circuit-design method (<b>ADAPT-VQE</b>) found a recipe that prepares the right quantum state and carries the force in just <span class="num">33</span> delicate operations — versus <span class="num">451</span> for the original network. <mark>A genuine ~14× reduction</mark>, verified by a real compiler against a real hardware gate set.</p>
+  <div class="ledger reveal">
+    <div class="lrow"><span class="lk">Original network (real compile)</span><span class="lbar"><span style="width:100%"></span></span><span class="lv">451 gates</span></div>
+    <div class="lrow"><span class="lk">Adaptive circuit (real compile)</span><span class="lbar"><span style="width:7.3%;background:var(--teal)"></span></span><span class="lv" style="color:var(--teal)">33 gates</span></div>
+  </div>
+  <p class="reveal">It isn't a clean win yet — the cheap recipe is fragile to imperfect calibration, and it stops scaling past the smallest size. But the door that looked welded shut turned out to be merely heavy. And a new route opened: a <b>260-qubit neutral-atom machine with a collaboration program</b>, which could run this physics at proper scale without the usual institutional gatekeeping.</p>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="tag reveal">What it adds up to</div>
+  <h2 class="reveal">A small, honest "yes" to a very large question.</h2>
+  <p class="lede reveal">In the simplest universe we can build out of quantum entanglement, a gravitational force appears — with the exact distance-law Einstein's theory requires, confirmed by three independent measurements and backed by two more geometric signatures.</p>
+  <p class="reveal">That doesn't prove our universe works this way. It proves the <b>mechanism is real and measurable</b> in a controlled setting — and it lays down a concrete, falsifiable path toward seeing it on quantum hardware. The work is published with an open dataset, every dead end is recorded alongside every success, and the next experiment is already scoped.</p>
+  <blockquote class="pull reveal">"Geometry is made of entanglement" went from a slogan to a number you can measure: <b>4.0</b>.</blockquote>
+</section>
+
+<footer class="reveal">
+  <div class="big">Quantum Worldline</div>
+  Independent research · Jon Cackler<br>
+  Published preprint &amp; open dataset — Zenodo DOI <a href="https://doi.org/10.5281/zenodo.19661227">10.5281/zenodo.19661227</a><br>
+  Methods: exact diagonalization, MERA tensor networks, adaptive variational circuits, multi-agent literature &amp; verification.<br>
+  <span style="color:var(--ink-faint)">This review is generated from the project's own data of record. Figures reflect verified simulation results; uncertainties are 1σ.</span>
+</footer>
+</div>
+<script id="appdata" type="application/json">
+{
+  "datasets":{
+    "exact24":{"label":"24-qubit exact","alpha":3.92,"dalpha":0.16,
+      "r":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "F":[2.4657,0.6376,0.2614,0.1271,0.0707,0.0438,0.0290,0.0203,0.0148,0.0112,0.0087,0.0069]},
+    "exact16":{"label":"16-qubit exact","alpha":3.97,"dalpha":0.15,
+      "r":[1,2,3,4,5,6,7],
+      "F":[2.41,0.604,0.241,0.118,0.0648,0.0398,0.0262]},
+    "mera":{"label":"χ=3 MERA","alpha":4.07,"dalpha":0.18,
+      "r":[1,2,3,4,5,6,7,8],
+      "F":[2.55,0.611,0.236,0.114,0.0623,0.0379,0.0249,0.0173]}
+  }
+}
+</script>
+<script>
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById('appdata').textContent);
+  var NS = "http://www.w3.org/2000/svg";
+  var chart = document.getElementById('chart');
+  var W=720,H=420, m={l:64,r:24,t:24,b:54};
+  var iw=W-m.l-m.r, ih=H-m.t-m.b;
+
+  // log-log domain (fixed so toggles are comparable)
+  var rMin=1, rMax=12, fMin=0.005, fMax=3;
+  var lx=function(r){return m.l + (Math.log10(r)-Math.log10(rMin))/(Math.log10(rMax)-Math.log10(rMin))*iw;};
+  var ly=function(f){return m.t + (Math.log10(fMax)-Math.log10(f))/(Math.log10(fMax)-Math.log10(fMin))*ih;};
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);(parent||chart).appendChild(e);return e;}
+
+  function powerline(A,alpha,color,dash,w){
+    var d="",first=true;
+    for(var r=rMin;r<=rMax;r*=1.04){ var f=A*Math.pow(r,-alpha); if(f<fMin*0.6)continue;
+      d+=(first?"M":"L")+lx(r).toFixed(1)+" "+ly(f).toFixed(1)+" "; first=false; }
+    el("path",{d:d,fill:"none",stroke:color,"stroke-width":w||2,"stroke-dasharray":dash||"","stroke-linecap":"round"});
+  }
+
+  function render(key){
+    chart.innerHTML="";
+    var ds=DATA.datasets[key];
+    // grid + axis ticks (log decades + integer r)
+    [0.01,0.1,1].forEach(function(f){
+      el("line",{x1:m.l,y1:ly(f),x2:W-m.r,y2:ly(f),stroke:"var(--grid)","stroke-width":1});
+      el("text",{x:m.l-12,y:ly(f)+4,fill:"var(--ink-faint)","font-size":12,"text-anchor":"end","font-family":"var(--mono)"}).textContent=(f<1?f.toString():"1");
+    });
+    [1,2,3,4,6,8,12].forEach(function(r){
+      el("line",{x1:lx(r),y1:m.t,x2:lx(r),y2:H-m.b,stroke:"var(--grid)","stroke-width":1});
+      el("text",{x:lx(r),y:H-m.b+22,fill:"var(--ink-faint)","font-size":12,"text-anchor":"middle","font-family":"var(--mono)"}).textContent=r;
+    });
+    // axis labels
+    el("text",{x:m.l+iw/2,y:H-8,fill:"var(--ink-dim)","font-size":13,"text-anchor":"middle","font-family":"var(--mono)"}).textContent="separation  r  (log)";
+    var yl=el("text",{x:18,y:m.t+ih/2,fill:"var(--ink-dim)","font-size":13,"text-anchor":"middle","font-family":"var(--mono)",transform:"rotate(-90 18 "+(m.t+ih/2)+")"});yl.textContent="|force|  (log)";
+
+    var A=ds.F[0]*Math.pow(ds.r[0],ds.alpha); // normalize fit through first point
+    // wrong-physics curve (1/r^2), anchored at same first point
+    powerline(ds.F[0]*Math.pow(ds.r[0],2),2,"var(--rose)","6 5",1.6);
+    // best-fit power law
+    powerline(A,ds.alpha,"var(--gold)","",2.4);
+    // data points
+    ds.r.forEach(function(r,i){
+      if(ds.F[i]<fMin*0.6)return;
+      var c=el("circle",{cx:lx(r),cy:ly(ds.F[i]),r:5,fill:"var(--teal)",stroke:"#06120f","stroke-width":1.5});
+      c.style.filter="drop-shadow(0 0 5px rgba(79,214,196,.7))";
+    });
+    document.getElementById('readout').textContent="fitted slope  α = "+ds.alpha.toFixed(2)+" ± "+ds.dalpha.toFixed(2)+"   (theory: 4.00)";
+  }
+
+  var cur="exact24"; render(cur);
+  document.getElementById('toggle').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    [].forEach.call(this.children,function(x){x.classList.remove('on');});
+    b.classList.add('on'); cur=b.dataset.k; render(cur);
+  });
+
+  // ledger bars: capture target widths, zero them, restore when scrolled into view
+  document.querySelectorAll('.ledger .lbar span').forEach(function(s){
+    s.dataset.w = s.style.width || "0"; s.style.width = "0";
+  });
+
+  // scroll reveals (+ trigger ledger fill when a ledger enters)
+  var io=new IntersectionObserver(function(ents){
+    ents.forEach(function(en){ if(!en.isIntersecting) return;
+      en.target.classList.add('in');
+      if(en.target.classList.contains('ledger')){
+        en.target.querySelectorAll('.lbar span').forEach(function(s){ s.style.width=s.dataset.w; });
+      }
+      io.unobserve(en.target);
+    });
+  },{threshold:.15,rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll('.reveal').forEach(function(x){io.observe(x);});
+  // the ledger div isn't a .reveal itself; observe it directly for the fill
+  var L=document.querySelector('.ledger'); if(L) io.observe(L);
+
+  // progress rail
+  var rail=document.getElementById('rail');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    rail.style.width=(scrollY/h*100)+"%";
+  },{passive:true});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "id": "PAPER-2026-020",
+  "title": "Composite AdS geodesics for CFT correlators and timelike entanglement entropy",
+  "authors": ["Hardik Bohra", "Allic Sivaramakrishnan"],
+  "date": "2025-11-27",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2511.22168",
+  "arxiv_id": "2511.22168",
+  "abstract": "Investigates recovering timelike worldlines in AdS from CFT data to model holographic reconstruction of physical observers. Presents a bulk extremization procedure that determines composite timelike-spacelike geodesics connecting timelike-separated boundary points. Demonstrated agreement in Poincare AdS, generic global AdS boundary points, and BTZ black hole solutions. In the BTZ case, the timelike segment probes behind the event horizon. Refines methods for computing timelike entanglement entropy in AdS3/CFT2.",
+  "relevance": 4,
+  "tags": ["AdS-CFT", "geodesic", "timelike", "entanglement-entropy", "holography", "transport-time", "worldline"],
+  "key_claims": [
+    "Composite timelike-spacelike geodesics connect timelike-separated boundary points in AdS",
+    "Geodesic length agrees with CFT correlator measurements at boundary points",
+    "Timelike segments can probe behind BTZ black hole event horizons",
+    "Provides refined framework for computing timelike entanglement entropy",
+    "Key connection: composite geodesics may explain factor-of-2 discrepancies when only spacelike geodesics are considered for transport time predictions"
+  ],
+  "hardware_used": "analytical",
+  "qubit_count": 0,
+  "discovered_by": "worldline-orchestrator",
+  "discovered_date": "2026-03-11"
+}

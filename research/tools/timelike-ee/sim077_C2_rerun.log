@@ -1,0 +1,17 @@
+C2 L=512 R=  50 delta=  0: tracked Im -349.3997+/-176.3627 no | principal Im -0.0000 | path gate PASS (min|cosh| 3.8e-03)  [60s]
+C2 L=512 R=  50 delta=  2: tracked Im -0.0529+/-0.0577 no | principal Im -0.0143 | path gate PASS (min|cosh| 1.3e-01)  [42s]
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+C2 L=512 R=  50 delta=  5: tracked Im +nan+/-nan no | principal Im +0.0107 | path gate PASS (min|cosh| 3.2e-01)  [51s]
+C2 L=512 R= 100 delta=  0: tracked Im -547.8152+/-185.6495 no | principal Im +0.0000 | path gate PASS (min|cosh| 4.1e-03)  [349s]
+C2 L=512 R= 100 delta=  2: tracked Im +nan+/-nan no | principal Im -0.2235 | path gate PASS (min|cosh| 7.0e-02)  [291s]
+  logp = logp + np.log((p / p_prev).astype(complex)); logq = logq + np.log((qq / q_prev).astype(complex))
+C2 L=512 R= 100 delta=  5: tracked Im +nan+/-nan no | principal Im -0.0311 | path gate PASS (min|cosh| 1.6e-01)  [301s]
+C2 L=1024 R=  50 delta=  0: tracked Im -350.0827+/-176.9527 no | principal Im +0.0000 | path gate PASS (min|cosh| 5.1e-04)  [222s]
+C2 L=1024 R=  50 delta=  2: tracked Im -0.0074+/-0.0030 no | principal Im +0.0013 | path gate PASS (min|cosh| 1.3e-01)  [98s]
+C2 L=1024 R=  50 delta=  5: tracked Im +0.0107+/-0.0090 no | principal Im +0.0108 | path gate PASS (min|cosh| 3.1e-01)  [93s]
+C2 L=1024 R= 100 delta=  0: tracked Im -612.0870+/-228.2194 no | principal Im -0.0000 | path gate FAIL (min|cosh| 2.9e-04)  [1033s]
+C2 L=1024 R= 100 delta=  2: tracked Im +nan+/-nan no | principal Im -0.1261 | path gate PASS (min|cosh| 6.5e-02)  [463s]
+C2 L=1024 R= 100 delta=  5: tracked Im +nan+/-nan no | principal Im +0.0010 | path gate PASS (min|cosh| 1.6e-01)  [509s]
+wrote /workspace/tlee/sim077_C2.json

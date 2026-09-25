@@ -1,0 +1,9 @@
+chi 6
+seed 4
+hfield nan
+control C-HAAR
+basin_clean n/a
+d_sig nan
+d_eps nan
+E_inf nan
+generated 2026-09-22T17:34:43Z

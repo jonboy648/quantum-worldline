@@ -1,0 +1,15 @@
+{
+  "id": "PAPER-2026-052",
+  "arxiv_id": "2603.09717",
+  "title": "Entanglement Measure Response to Modular Flow and Chiral Topological Phases",
+  "authors": ["(search result, full authors not retrieved)"],
+  "year": 2026,
+  "venue": "arxiv (hep-th, cond-mat), Mar 2026",
+  "submission_date": "2026-03-10",
+  "abstract_summary": "Investigates response of entanglement measures to real-time dynamics driven by modular flow (modular Hamiltonian). Proposes generalization of the Renyi modular commutator. Connects to chiral topological phases.",
+  "relevance": 3,
+  "relevance_reason": "Modular flow as a driver of entanglement dynamics is directly related to our holographic transport protocol — the boundary excitation in our transport undergoes modular flow. The modular commutator generalization could provide new observables.",
+  "connection_to_project": "Our transport protocol perturbs boundary with Y coupling and observes Y response. Modular flow generates the entanglement flow in holography. This paper's modular commutator could be used to diagnose holographic transport efficiency.",
+  "status": "WATCH",
+  "scan_date": "2026-04-26"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "description", "type", "date"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^SIM-\\d{4}-\\d{3,}$" },
+    "description": { "type": "string" },
+    "type": { "type": "string", "enum": ["quantum", "classical", "comparison"] },
+    "date": { "type": "string", "format": "date" },
+    "hypothesis_id": { "type": "string" },
+    "circuit": {
+      "type": "object",
+      "properties": {
+        "qubits": { "type": "integer" },
+        "depth": { "type": "integer" },
+        "gates": { "type": "integer" },
+        "script_path": { "type": "string" }
+      }
+    },
+    "hardware_target": { "type": "string" },
+    "results": { "type": "object" },
+    "classical_baseline": { "type": "object" },
+    "comparison": { "type": "string", "enum": ["advantage", "parity", "classical_wins", "inconclusive"] },
+    "visualization_path": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

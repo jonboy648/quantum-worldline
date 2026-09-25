@@ -1,0 +1,34 @@
+{
+  "id": "PAPER-2026-090",
+  "title": "Time-resolved digital quantum simulation of cosmological particle creation in a de Sitter-radiation transition",
+  "authors": [
+    "Hamzeh Alavirad"
+  ],
+  "date": "2026-05-02",
+  "source": "arxiv",
+  "source_url": "https://arxiv.org/abs/2605.04099",
+  "arxiv_id": "2605.04099",
+  "abstract": "We present a time-resolved digital quantum simulation of cosmological particle creation during a de Sitter-radiation FLRW transition. We discretize the conformal-time evolution and implement the dynamics as a Trotterized sequence of short-time circuit blocks. Using a four-qubit single-excitation encoding, we compare results from matrix-Trotter evolution, noiseless statevector simulation, and Qiskit Aer simulation. Simulator results are consistent with analytic benchmarks. However, quantitative hardware reconstruction of the particle spectrum remains beyond current NISQ performance, with hardware errors around 0.01 in magnitude.",
+  "relevance": 3,
+  "tags": [
+    "quantum-simulation",
+    "curved-spacetime",
+    "de-Sitter",
+    "cosmological-particle-creation",
+    "IBM-quantum",
+    "NISQ",
+    "Trotterization",
+    "QFT-hardware"
+  ],
+  "key_claims": [
+    "First time-resolved digital simulation of de Sitter to radiation cosmological transition",
+    "Four-qubit Trotterized circuit tracks particle pair production during non-adiabatic transition",
+    "Noiseless simulator matches analytic benchmarks well",
+    "Current IBM NISQ hardware insufficient: errors ~0.01, below threshold for quantitative particle spectrum",
+    "Demonstrates path toward hardware QFT simulation of curved-spacetime particle creation"
+  ],
+  "hardware_used": "IBM Quantum (NISQ, specific chip not stated)",
+  "qubit_count": 4,
+  "discovered_by": "physics-scanner",
+  "discovered_date": "2026-05-15"
+}
