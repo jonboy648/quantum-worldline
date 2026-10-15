@@ -58,7 +58,7 @@ See "Notable since scan #7" below for the earlier reconciliation.
 | Logical memory error rate (qLDPC simulated) | 1.3e-13 per logical per round | QuEra / Harvard | qLDPC neutral-atom design | Apr 2026 |
 | Two-qubit gate fidelity | 99.99% (four nines) | IonQ | Tempo (EQC) | Oct 2025 |
 | Coherence time | 350 us | IBM | Nighthawk | Jan 2026 |
-| Circuit depth | 5,000 gates | IBM | Nighthawk | Jan 2026 |
+| Circuit depth | **7,500+ gates** (accurate observable estimation with PEA mitigation) | IBM | **Nighthawk r2** | **Aug 2026** | [FRONTIER UPDATE 2026-10-15: was 5,000 gates (Nighthawk, Jan 2026). Source: https://www.ibm.com/quantum/blog/nighthawk-r2 (2026-08-31), restated in IBM Q3 2026 update (2026-10-07). HW-2026-076]
 | Circuit depth (target) | 7,500 gates | IBM | Nighthawk iteration | End 2026 |
 | Quantum volume | 2^25 (33.5M) | Quantinuum | H2 | 2025 |
 | Algorithmic qubits | 64 | IonQ | Tempo | 2026 |

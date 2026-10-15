@@ -1,0 +1,57 @@
+{
+ "id": "PAPER-2026-152",
+ "title": "Algebraic Tensor Network Renormalization and Holographic duality",
+ "authors": [
+  "Chenqi Meng",
+  "Tian Lan",
+  "Zhengcheng Gu"
+ ],
+ "date": "2026-10-06",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2610.08787",
+ "arxiv_id": "2610.08787",
+ "categories": [
+  "cond-mat.stat-mech",
+  "math-ph"
+ ],
+ "abstract": "R-TNR: builds the constraints of a fusion category R into local tensor spaces and preserves them under Loop-TNR. Initial tensors flow to stable gapless fixed points without fine-tuning for Ising, tricritical Ising and three-state Potts. Resolves conformal towers by anyon sector (tube category, Turaev-Viro 'holographic' picture) and extracts scaling dimensions, spins and magnitudes of sector-resolved closed-string structure constants. Presented as a 'topological bootstrap': finite categorical + geometric input recovers the IR CFT data.",
+ "relevance": 4,
+ "verdict": "ACTIONABLE",
+ "tags": [
+  "fixed-point-tensor",
+  "TNR",
+  "Loop-TNR",
+  "structure-constants",
+  "tricritical-Ising",
+  "three-state-Potts",
+  "Ising",
+  "fusion-category",
+  "Turaev-Viro"
+ ],
+ "key_claims": [
+  "Ising (R=Ising, chi_RG=36, N_RG=20): all nine doubled primaries resolved; |C_sigma-sigma-epsilon| = 0.500424 vs 0.5",
+  "Structure-constant accuracy relies on 3 fitted 'collar length' parameters per model (Ising: fitted from 24 table entries); out-of-fit rms relative error 0.0599% Ising (75 channels), 0.157% TCI (22 channels; 0.943% incl. the Delta=3 field), 0.399% Potts (28 channels). Without collar corrections: 0.496% / 2.486% / 3.836%",
+  "Stress tensor / C_TTT NOT computed (T-Tbar appears only as the irrelevant correction in the hole-collapse argument); descendant accuracy explicitly weaker",
+  "'Holographic' here means the Turaev-Viro / symmetry-topological-order bulk, NOT an emergent AdS geometry",
+  "Structure-constant and tube-category code not yet in TNRKit.jl (scheme specified explicitly in the paper)"
+ ],
+ "relevance_note": "Full text grep-read (key sections, not line by line). Same three universality classes as our C_TTT ladder (SIM-067/068/069) and OPE pipeline (SIM-061 C_sigma-sigma-epsilon = 0.5075), same data class (primary structure constants). Their Ising C_sigma-sigma-epsilon is ~20x closer to 0.5 than ours, but uses chi_RG=36 classical 2D TNR plus 3 fitted collar parameters, where SIM-061 fits nothing; the comparison must be stated with that asymmetry. Does NOT pre-empt C_TTT (they never compute stress-tensor 3-point data). No anchor contradiction: both agree with exact CFT values. ACTIONABLE: any write-up of SIM-061 or the C_TTT ladder must cite this and must not describe our primary-OPE accuracy as competitive. Also relevant to the trunk question (RESEARCH-DIRECTOR section 29): a second, unrelated meaning of 'holographic tensor network' (topological bulk) that reproduces CFT data with no geometric content; a philosophy-of-physics write-up on network-sensitive observables should cite it. Same group lineage as PAPER-2026-135 (c=1 fixed-point tensors).",
+ "related_hypotheses": [
+  "HYP-2026-027",
+  "HYP-2026-025",
+  "HYP-2026-030"
+ ],
+ "related_papers": [
+  "PAPER-2026-135"
+ ],
+ "related_simulations": [
+  "SIM-2026-061",
+  "SIM-2026-067",
+  "SIM-2026-068",
+  "SIM-2026-069"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "scan #21 (lead-run sequential arXiv export API + arxiv.org search fallback)",
+ "discovered_date": "2026-10-08"
+}

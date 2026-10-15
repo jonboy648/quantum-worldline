@@ -1,0 +1,41 @@
+{
+ "id": "HW-2026-077",
+ "title": "Infleqtion Sqale: 30 entangled logical qubits on 80 neutral atoms (10 x [[8,3,2]], error detection with post-selection), IQP circuit with 4 logical CCZ gates",
+ "vendor": "Infleqtion",
+ "organization": "Infleqtion",
+ "processor": "Sqale (neutral-atom QPU)",
+ "date": "2026-09-24",
+ "source_url": "https://infleqtion.com/demonstration-of-30-logical-qubits-on-sqale/",
+ "relevance": 3,
+ "summary": "Infleqtion press release (8-K Ex. 99.1, 2026-09-24) and technical write-up by CTO Pranav Gokhale (same date). 80 atoms in 10 blocks of 8 encode 30 logical qubits. Each block is prepared in the |000> state of the distance-3 [[8,3,3]] code, and the experiments themselves use the distance-2 [[8,3,2]] encoding. Handling is error detection with post-selection; a lost atom is reconstructed from parity constraints in post-processing. The benchmark is an IQP circuit entangling all 30 logical qubits: about 1,000 physical operations, 136 physical two-qubit gates and 4 transversal logical CCZ gates. Reported metric: a hit fraction of about 25% against a 0.024% uniform-random baseline (about 1,000x). No logical fidelity, acceptance rate, physical gate fidelity or mid-circuit measurement for this run. A full paper is promised 'in the coming weeks'.",
+ "tags": [
+  "Infleqtion",
+  "Sqale",
+  "neutral-atom",
+  "logical-qubits",
+  "error-detection",
+  "post-selection",
+  "non-Clifford"
+ ],
+ "physical_qubits": 80,
+ "logical_qubits": 30,
+ "error_correction_ratio": "8:3 (~2.67:1) with a distance-2 error-detecting code; not error correction",
+ "is_frontier": false,
+ "key_specs": {
+  "code": "[[8,3,2]] for the experiments (blocks prepared in [[8,3,3]])",
+  "blocks": "10 x 8 atoms",
+  "circuit": "IQP, 4 logical CCZ, ~1,000 physical ops, 136 physical 2q gates",
+  "metric": "hit fraction ~25% vs 0.024% uniform baseline",
+  "mid_circuit_measurement": "not used (listed as future work)",
+  "paper": "none yet (promised)"
+ },
+ "secondary_sources": [
+  "https://www.sec.gov/Archives/edgar/data/0002007825/000162828026063328/infq-20260924xexx991.htm",
+  "https://quantumcomputingreport.com/infleqtion-achieves-30-entangled-logical-qubits-on-sqale-neutral-atom-quantum-processor/"
+ ],
+ "actionable": "Not a frontier. It is below Quantinuum's 94 error-detected logical qubits (Helios, Feb 2026) and QuEra/Harvard's 96 error-corrected (Jan 2026), and its 8:3 overhead comes from a distance-2 detection code, so it is not comparable to the knowledge base's error-correction ratio row. It counts as a demonstrated logical-qubit result only in the error-detected, post-selected sense, with vendor-only evidence so far. Re-check when the paper appears.",
+ "notes": "Details were checked against Infleqtion's own write-up, not only press coverage. The comparison-to-baseline metric is the vendor's; no independent reproduction exists yet.",
+ "source": "press-release",
+ "discovered_by": "hardware-refresh-2026-10-15 (scan #21 hardware gap)",
+ "discovered_date": "2026-10-15"
+}

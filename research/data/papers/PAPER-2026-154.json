@@ -1,0 +1,43 @@
+{
+ "id": "PAPER-2026-154",
+ "title": "Relative entropy of entanglement and tripartite minimal surface",
+ "authors": [
+  "Takato Mori",
+  "Beni Yoshida"
+ ],
+ "date": "2026-09-30",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2609.38815",
+ "arxiv_id": "2609.38815",
+ "categories": [
+  "hep-th",
+  "gr-qc",
+  "math-ph",
+  "quant-ph"
+ ],
+ "abstract": "Proposes E_R(rho_AB) = [Area(Gamma_min) - Area(gamma_AB)]/4G_N with Gamma_min the minimal bulk tripartition surface. Proves the upper bound for general random tensor networks via a separable state built on Gamma_min; proves the matching lower bound for networks of one, two and three Haar-random tensors. Tripartition surfaces can form a tri-junction.",
+ "relevance": 3,
+ "verdict": "WATCH",
+ "tags": [
+  "random-tensor-network",
+  "relative-entropy-of-entanglement",
+  "minimal-surface",
+  "Haar",
+  "multipartite"
+ ],
+ "key_claims": [
+  "Holographic E_R = tripartition-surface area minus RT area at leading order",
+  "Rigorous in small Haar-random networks; upper bound for general RTN"
+ ],
+ "relevance_note": "Abstract only. Another entropic (state-functional) quantity given a minimal-surface dual in random tensor networks; context for HYP-033's Haar control and for the trunk-question distinction between state functionals and network-sensitive observables. No finite-chi optimized-network content.",
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "related_papers": [
+  "PAPER-2026-153"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "scan #21 (lead-run sequential arXiv export API + arxiv.org search fallback)",
+ "discovered_date": "2026-10-08"
+}

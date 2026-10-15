@@ -1,0 +1,35 @@
+{
+ "id": "HW-2026-079",
+ "title": "Fault-tolerant ripple-carry addition on Quantinuum Helios-1 with [[8,3,2]] + [[4,2,2]] error-detecting codes: 1-bit adder logical failure (6.0 +/- 5.9)e-5 vs (3.5 +/- 1.3)e-3 unencoded; 4-5-bit adders just above threshold",
+ "vendor": "Quantinuum (Helios-1 hardware); experiment by an external team",
+ "organization": "Quantinuum hardware; authors Nelson, Landahl, Baczewski",
+ "processor": "Helios-1",
+ "date": "2026-10-09",
+ "source_url": "https://arxiv.org/abs/2610.14202",
+ "relevance": 3,
+ "summary": "Nelson, Landahl and Baczewski (arXiv:2610.14202, submitted 2026-10-09) run a universal fault-tolerant architecture built on two error-detecting codes, [[8,3,2]] and [[4,2,2]], on Helios-1. They compile ripple-carry adders for classical inputs up to five bits. An extra check that uncomputes a workspace qubit raises the effective fault distance of many circuit locations from two to four. After burst-error filtering, one-bit addition showed a single logical failure, an estimated logical failure rate of (6.0 +/- 5.9)e-5. Unencoded one-bit addition on the same hardware failed at (3.5 +/- 1.3)e-3. Two- and three-bit adders also improved over unencoded; four- and five-bit adders ran just above threshold.",
+ "tags": [
+  "Quantinuum",
+  "Helios",
+  "trapped-ion",
+  "logical-algorithm",
+  "error-detection",
+  "post-selection",
+  "below-unencoded"
+ ],
+ "error_correction_ratio": "[[8,3,2]] 8:3 and [[4,2,2]] 2:1 (distance-2 error detection, not correction)",
+ "is_frontier": false,
+ "key_specs": {
+  "codes": "[[8,3,2]] and [[4,2,2]] (error detecting)",
+  "workload": "ripple-carry adders, 1-5-bit classical inputs",
+  "one_bit_logical_failure": "(6.0 +/- 5.9)e-5 after burst-error filtering (one observed failure)",
+  "one_bit_unencoded_failure": "(3.5 +/- 1.3)e-3",
+  "crossover": "1-3-bit adders below unencoded; 4-5-bit just above threshold",
+  "platform": "Quantinuum Helios-1"
+ },
+ "actionable": "Encoded arithmetic beats unencoded on the project's anchor machine, but only at small sizes, and the headline rate rests on one failure event (about 98% relative uncertainty) with detection plus post-selection ('burst-error filtering'). It is not comparable to the knowledge base's logical-gate-error row, so no frontier change. For HYP-029-style budgets it only shows that distance-2 encoded arithmetic works below the unencoded rate at 1-3 bits.",
+ "notes": "Numbers were checked against the arXiv abstract (export API, 2026-10-15). The abstract gives no physical error rate or threshold value despite the 'below-threshold' title. 'Threshold' appears to mean the encoded-versus-unencoded crossover (a pseudo-threshold); the full text was not read to confirm this.",
+ "source": "arxiv-preprint",
+ "discovered_by": "hardware-refresh-2026-10-15 (scan #21 hardware gap)",
+ "discovered_date": "2026-10-15"
+}

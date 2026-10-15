@@ -1,0 +1,45 @@
+{
+ "id": "HW-2026-076",
+ "title": "IBM Nighthawk r2: accurate observable estimation on 7,500+ gate circuits; independent fast qubit reset usable mid-circuit; 25x Heron circuit throughput; on IBM Quantum Platform",
+ "vendor": "IBM",
+ "organization": "IBM",
+ "processor": "Nighthawk r2 (120 qubits; e.g. ibm_phoenix)",
+ "date": "2026-08-31",
+ "source_url": "https://www.ibm.com/quantum/blog/nighthawk-r2",
+ "relevance": 3,
+ "summary": "IBM Quantum blog (Haas, McKay, Davis, 2026-08-31). Nighthawk r2 keeps 120 programmable qubits on the square lattice, with 218 couplers and 120 dissipative reset elements (458 quantum elements in all). The new reset pulls a qubit's effective T1 from a median of about 200 us to about 25 ns on demand. It lowers initialization error about 25x, leaves neighbours undisturbed and works mid-circuit. The chip runs 100,000+ circuits per second, against about 4,000 for Heron, and keeps 'Heron-class gate fidelity' (no number given). It 'has demonstrated accurate observable estimation using Probabilistic Error Amplification (PEA) on circuits containing 7,500 gates', which was the 2026 IBM roadmap milestone. Available on IBM Quantum Platform. IBM's Q3 2026 update (2026-10-07) repeats '7,500+ gate circuits' and access on all paid plan tiers.",
+ "tags": [
+  "IBM",
+  "Nighthawk",
+  "superconducting",
+  "circuit-size",
+  "mid-circuit-reset",
+  "dynamic-circuits",
+  "cloud"
+ ],
+ "physical_qubits": 120,
+ "coherence_time_us": 200,
+ "max_circuit_depth": 7500,
+ "is_frontier": true,
+ "frontier_category": "circuit_depth",
+ "key_specs": {
+  "programmable_qubits": 120,
+  "couplers": 218,
+  "reset_elements": 120,
+  "circuit_size_demonstrated": "7,500+ gates, accurate observable estimation with PEA error mitigation",
+  "throughput": "100,000+ circuits/s (Heron ~4,000/s)",
+  "reset": "effective T1 ~200 us median -> ~25 ns on demand; ~25x lower initialization error; neighbour-safe; available mid-circuit",
+  "two_qubit_fidelity": "not stated ('Heron-class')",
+  "access": "IBM Quantum Platform; Q3 2026 update says all paid plan tiers"
+ },
+ "correction_to": [
+  "HW-2026-001",
+  "HW-2026-020"
+ ],
+ "window_note": "Announced 2026-08-31, inside scan #20's window, but scan #20 did not record it. It is recorded now as a correction: HW-2026-001 and HW-2026-020 both give 5,000 gates as current and 7,500 as a target. Two in-window sources confirm it. One is the IBM Q3 2026 update (https://www.ibm.com/quantum/blog/whats-new-q3-2026, 2026-10-07). The other is arXiv:2609.28657 (Sedrakyan et al., 2026-09-23): random-circuit sampling on Nighthawk r2 (ibm_phoenix), 61 qubits, F_XEB(36) = 2.3e-3, with r2 fidelity reported as more than 10x r1 at fixed depth. That paper's quantum-advantage claim is unreviewed.",
+ "actionable": "Replaces the knowledge-base circuit-depth row (5,000 -> 7,500+). HW-2026-020 judged the 5,000-gate budget too small for a 5-layer 24-qubit MERA with mitigation; 7,500 is the first IBM budget at that scale on a cloud machine. Caveats: (1) the 7,500 figure is mitigated observable estimation (PEA), not raw circuit fidelity; (2) IBM publishes no two-qubit fidelity for r2, so this is not a fidelity record, and Helios stays the fidelity anchor; (3) IBM lists access for paid plans; whether the project's account reaches r2 was not checked. Fast mid-circuit reset is relevant to any mid-circuit-measurement MERA preparation.",
+ "notes": "Coherence value is the median T1 quoted in the blog (~200 us). It does not supersede the 350 us Nighthawk entry in the knowledge base.",
+ "source": "vendor-blog",
+ "discovered_by": "hardware-refresh-2026-10-15 (scan #21 hardware gap)",
+ "discovered_date": "2026-10-15"
+}

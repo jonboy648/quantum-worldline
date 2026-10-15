@@ -1,11 +1,11 @@
 # Outline: philosophy-of-physics paper on the trunk question
 
-**Status:** OUTLINE ONLY, drafted 2026-09-23 by the Philosophy Agent for Jon Cackler. Not a draft paper.
+**Status:** OUTLINE, drafted 2026-09-23. **Draft 1 written 2026-10-15: `TRUNK-PAPER-DRAFT.md`** (this outline is now the plan of record, the draft is the text).
 **Target venue:** PhilSci-Archive (preprint), then a philosophy-of-physics journal if it holds up.
 **Author:** Jon Cackler, independent researcher, Ames, Iowa.
 **Governing standard:** `docs/governance/RESEARCH-DIRECTOR.md` (§5 claim levels, §6 counterfactual novelty,
 §7 independence ledger, §8 novelty gate, §29 trunk question, §33-34 state vs representation).
-**Citation rule:** every reference is marked VERIFY. Jon checks each one before any text is written.
+**Citation rule:** references verified 2026-10-08 (26 correct, 5 corrected, 0 missing). Any reference added later is checked the same way before it is cited.
 **HYP-033 UNBLINDED 2026-09-24: OUTCOME 4 (SMOOTH), Level 2** (`research/data/simulations/SIM-2026-079.json`). §7 takes that branch; the table below is kept as the registered record.
 
 ## Working title
@@ -62,7 +62,7 @@ Per section: **claim**, **move**, **evidence** (repo paths; quote numbers from t
   Rickles and Teh on AdS/CFT and emergence; Huggett and Wüthrich on empirical coherence; Crowther on
   inter-theory relations. Then the physics of MERA-as-geometry (Swingle; Vidal) and its critics
   (Bao et al.; Milsted and Vidal's light-cone reading; Beny on causal structure).
-- **Evidence.** None from the project; this section is literature only. Every item VERIFY.
+- **Evidence.** None from the project; this section is literature only. All items verified 2026-10-08.
 
 ### §3 A distinction: state functionals versus network-sensitive observables
 
@@ -257,48 +257,50 @@ isometric network on this graph belongs in §7 whatever the outcome: it is a cle
 - **Language.** No "novel", "first", "to our knowledge" (RESEARCH-DIRECTOR §8). No "geometry", "wedge"
   or "emergent" for HYP-033 outcomes 1, 3 or 4 (preregistration "Banned" list).
 
-## Candidate references (ALL MARKED VERIFY)
+## References (ALL VERIFIED 2026-10-08 against Crossref/arXiv: `REFERENCES-VERIFIED-2026-10-08.md`; Wimsatt 1981 page range unresolved, 123-162 vs 124-163)
 
 (H)/(M) = high/medium confidence the work exists as described. (repo) = already cited in project records.
 
 **Philosophy of emergence and holography**
-- Butterfield, J. (2011). "Less is different: emergence and reduction reconciled." *Found. Phys.* 41, 1065-1135. VERIFY (H)
-- De Haro, S., Mayerson, D., Butterfield, J. (2016). "Conceptual aspects of gauge/gravity duality." *Found. Phys.* 46, 1381-1425. VERIFY (H)
-- De Haro, S. (2017). "Dualities and emergent gravity: gauge/gravity duality." *Stud. Hist. Phil. Mod. Phys.* 59, 109-125. VERIFY (M)
-- Dieks, D., van Dongen, J., de Haro, S. (2015). "Emergence in holographic scenarios for gravity." *Stud. Hist. Phil. Mod. Phys.* 52, 203-216. VERIFY (H)
-- Rickles, D. (2013). "AdS/CFT duality and the emergence of spacetime." *Stud. Hist. Phil. Mod. Phys.* 44, 312-320. VERIFY (H)
-- Teh, N. J. (2013). "Holography and emergence." *Stud. Hist. Phil. Mod. Phys.* 44, 300-311. VERIFY (H)
-- Huggett, N., Wuthrich, C. (2013). "Emergent spacetime and empirical (in)coherence." *Stud. Hist. Phil. Mod. Phys.* 44, 276-285. VERIFY (H)
-- Crowther, K. (2016). *Effective Spacetime: Understanding Emergence in Effective Field Theory and Quantum Gravity.* Springer. VERIFY (H)
-- Crowther, K. (2018). "Inter-theory relations in quantum gravity: correspondence, reduction and emergence." *Stud. Hist. Phil. Mod. Phys.* 63, 74-85. VERIFY (M)
-- Jaksland, R. (c. 2021). "Entanglement as the world-making relation: distance from entanglement." *Synthese*. VERIFY (M; year and volume uncertain; the closest philosophy paper on geometry-from-entanglement found in memory)
-- Redhead, M. (1975). "Symmetry in intertheory relations." *Synthese* 32, 77-112. (origin of "surplus structure") VERIFY (M)
+- Butterfield, J. (2011). "Less is different: emergence and reduction reconciled." *Found. Phys.* 41, 1065-1135.
+- De Haro, S., Mayerson, D., Butterfield, J. (2016). "Conceptual aspects of gauge/gravity duality." *Found. Phys.* 46, 1381-1425.
+- De Haro, S. (2017). "Dualities and emergent gravity: gauge/gravity duality." *Stud. Hist. Phil. Mod. Phys.* 59, 109-125.
+- Dieks, D., van Dongen, J., de Haro, S. (2015). "Emergence in holographic scenarios for gravity." *Stud. Hist. Phil. Mod. Phys.* 52, 203-216.
+- Rickles, D. (2013). "AdS/CFT duality and the emergence of spacetime." *Stud. Hist. Phil. Mod. Phys.* 44, 312-320.
+- Teh, N. J. (2013). "Holography and emergence." *Stud. Hist. Phil. Mod. Phys.* 44, 300-311.
+- Huggett, N., Wuthrich, C. (2013). "Emergent spacetime and empirical (in)coherence." *Stud. Hist. Phil. Mod. Phys.* 44, 276-285.
+- Crowther, K. (2016). *Effective Spacetime: Understanding Emergence in Effective Field Theory and Quantum Gravity.* Springer.
+- Crowther, K. (2018). "Inter-theory relations in quantum gravity: correspondence, reduction and emergence." *Stud. Hist. Phil. Mod. Phys.* 63, 74-85.
+- Jaksland, R. (2021). "Entanglement as the world-making relation: distance from entanglement." *Synthese* 198(10), 9661-9693. doi:10.1007/s11229-020-02671-7 (online 2020-05-18).
+- Redhead, M. (1975). "Symmetry in intertheory relations." *Synthese* 32, 77-112. (origin of "surplus structure")
 
 **Confirmation, severity, independence**
-- Mayo, D. (1996). *Error and the Growth of Experimental Knowledge.* University of Chicago Press. VERIFY (H)
-- Mayo, D. (2018). *Statistical Inference as Severe Testing.* Cambridge University Press. VERIFY (H)
-- Hitchcock, C., Sober, E. (2004). "Prediction versus accommodation and the risk of overfitting." *Brit. J. Phil. Sci.* 55, 1-34. VERIFY (H)
-- Wimsatt, W. C. (1981). "Robustness, reliability, and overdetermination." In Brewer & Collins (eds), *Scientific Inquiry and the Social Sciences.* Jossey-Bass. VERIFY (M)
-- Stegenga, J. (2009). "Robustness, discordance, and relevance." *Phil. Sci.* 76, 650-661. VERIFY (M)
-- Dardashti, R., Thebault, K., Winsberg, E. (2017). "Confirmation via analogue simulation: what dumb holes could tell us about gravity." *Brit. J. Phil. Sci.* 68, 55-89. VERIFY (H)
-- Dawid, R. (2013). *String Theory and the Scientific Method.* Cambridge University Press. (non-empirical confirmation, as a foil) VERIFY (H)
+- Mayo, D. (1996). *Error and the Growth of Experimental Knowledge.* University of Chicago Press.
+- Mayo, D. (2018). *Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars.* Cambridge University Press.
+- Hitchcock, C., Sober, E. (2004). "Prediction versus accommodation and the risk of overfitting." *Brit. J. Phil. Sci.* 55, 1-34.
+- Wimsatt, W. C. (1981). "Robustness, reliability, and overdetermination." In Brewer & Collins (eds), *Scientific Inquiry and the Social Sciences.* Jossey-Bass.
+- Stegenga, J. (2009). "Robustness, discordance, and relevance." *Phil. Sci.* 76, 650-661.
+- Dardashti, R., Thebault, K., Winsberg, E. (2017). "Confirmation via analogue simulation: what dumb holes could tell us about gravity." *Brit. J. Phil. Sci.* 68, 55-89.
+- Dawid, R. (2013). *String Theory and the Scientific Method.* Cambridge University Press. (non-empirical confirmation, as a foil)
 
 **Physics: tensor networks, holography, recovery**
-- Vidal, G. (2007). "Entanglement renormalization." *Phys. Rev. Lett.* 99, 220405. VERIFY (H)
-- Swingle, B. (2012). "Entanglement renormalization and holography." *Phys. Rev. D* 86, 065007. VERIFY (H)
-- Almheiri, A., Dong, X., Harlow, D. (2015). "Bulk locality and quantum error correction in AdS/CFT." *JHEP* 04, 163. VERIFY (H)
-- Pastawski, F., Yoshida, B., Harlow, D., Preskill, J. (2015). "Holographic quantum error-correcting codes." *JHEP* 06, 149. arXiv:1503.06237 (repo). VERIFY (H)
-- Hayden, P., Nezami, S., Qi, X.-L., Thomas, N., Walter, M., Yang, Z. (2016). "Holographic duality from random tensor networks." *JHEP* 11, 009. arXiv:1601.01694 (repo). VERIFY author list (M)
-- Bao, N., Cao, C., Carroll, S. M., Chatwin-Davies, A., Hunter-Jones, N., Pollack, J., Remmen, G. N. (2015). "Consistency conditions for an AdS/MERA correspondence." *Phys. Rev. D* 91, 125036. arXiv:1504.06632 (repo). VERIFY author list (M)
-- Beny, C. (2013). "Causal structure of the entanglement renormalization ansatz." *New J. Phys.* 15, 023020. VERIFY (M)
-- Milsted, A., Vidal, G. arXiv:1812.00529 (repo; MERA geometry as a light cone). VERIFY title and journal (M)
-- Kim, I. H., Kastoryano, M. J. (2017). "Entanglement renormalization, quantum error correction, and bulk causality." *JHEP* 04, 040. arXiv:1701.00050 (repo, catalogued PAPER-2026-142). VERIFY journal (M)
-- Cao, C., Carroll, S. M., Michalakis, S. (2017). "Space from Hilbert space: recovering geometry from bulk entanglement." *Phys. Rev. D* 95, 024031. VERIFY (H)
-- Belavin, A. A., Polyakov, A. M., Zamolodchikov, A. B. (1984). "Infinite conformal symmetry in two-dimensional quantum field theory." *Nucl. Phys. B* 241, 333-380. VERIFY (H)
+- Vidal, G. (2007). "Entanglement renormalization." *Phys. Rev. Lett.* 99, 220405.
+- Swingle, B. (2012). "Entanglement renormalization and holography." *Phys. Rev. D* 86, 065007.
+- Almheiri, A., Dong, X., Harlow, D. (2015). "Bulk locality and quantum error correction in AdS/CFT." *JHEP* 04, 163.
+- Pastawski, F., Yoshida, B., Harlow, D., Preskill, J. (2015). "Holographic quantum error-correcting codes: toy models for the bulk/boundary correspondence." *JHEP* 06, 149. arXiv:1503.06237 (repo).
+- Hayden, P., Nezami, S., Qi, X.-L., Thomas, N., Walter, M., Yang, Z. (2016). "Holographic duality from random tensor networks." *JHEP* 11, 009. arXiv:1601.01694 (repo).
+- Bao, N., Cao, C., Carroll, S. M., Chatwin-Davies, A., Hunter-Jones, N., Pollack, J., Remmen, G. N. (2015). "Consistency conditions for an AdS multiscale entanglement renormalization ansatz correspondence." *Phys. Rev. D* 91, 125036. arXiv:1504.06632 (repo).
+- Beny, C. (2013). "Causal structure of the entanglement renormalization ansatz." *New J. Phys.* 15, 023020.
+- Milsted, A., Vidal, G. (2018). "Geometric interpretation of the multi-scale entanglement renormalization ansatz." arXiv:1812.00529 (preprint; no journal version).
+- Kim, I. H., Kastoryano, M. J. (2017). "Entanglement renormalization, quantum error correction, and bulk causality." *JHEP* 04, 040. arXiv:1701.00050 (repo, catalogued PAPER-2026-142).
+- Cao, C., Carroll, S. M., Michalakis, S. (2017). "Space from Hilbert space: recovering geometry from bulk entanglement." *Phys. Rev. D* 95, 024031.
+- Scan #21, MUST CITE: arXiv:2610.00478, "Algebraic structure in holographic tensor networks" (PAPER-2026-153): cut-like algebra structure proven for idealized random networks; finite chi set aside. Frame §7 against it. Verify authors/venue before citing.
+- arXiv:2610.08787, "Algebraic Tensor Network Renormalization and Holographic duality" (PAPER-2026-152): cite in §4 beside C_sse = 0.5075 (they reach 0.5004 with 3 fitted parameters). Verify authors/venue before citing.
+- Belavin, A. A., Polyakov, A. M., Zamolodchikov, A. B. (1984). "Infinite conformal symmetry in two-dimensional quantum field theory." *Nucl. Phys. B* 241, 333-380.
 
 **Project artifacts (self-citations)**
 - Cackler, J. Zenodo v5 correction, DOI 10.5281/zenodo.22080720 (retraction of alpha = 3.92). Re-check the public record before citing (CLAUDE.md external-status rule).
 - `docs/governance/RESEARCH-DIRECTOR.md`, `docs/governance/AUDIT-2026-08-11.md`,
   `research/data/audit/valuable-questions-2026-09-14/FINAL-REPORT.md`, `research/ERRATA.md`. The repo is
-  private as of 2026-09-07; decide whether to make these citable (public mirror or a Zenodo deposit)
-  before posting, since a PhilSci-Archive reader cannot check a private path.
+  PUBLIC since 2026-09-25 (github.com/jonboy648/quantum-worldline, one-commit snapshot), so these paths are
+  citable. For a stable citation, deposit a tagged snapshot on Zenodo before posting (a GitHub path can move).

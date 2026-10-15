@@ -1,25 +1,26 @@
 {
- "id": "HYP-2026-033",
- "title": "Bulk operator recovery in an optimized ternary MERA: does recoverability of an inserted bulk leg track the causal cone or the minimal cut?",
- "date_proposed": "2026-09-18",
- "status": "TESTED 2026-09-24 (SIM-2026-079): OUTCOME 4, SMOOTH -- the registered expected outcome. Level 2. Recovery onset in the optimized MERA (m_0.9 4.55) is indistinguishable from Haar-random networks (4.62); not cone, not cut. G5 not evaluable (chi 8 OOM). No geometric language per the kill conditions.",
- "confidence": "medium (chi 6 only; 8 seeds per arm; G1-G3 24/24)",
- "origin": "2026-09-14 valuable-questions review, proposal P4 with P1's control folded in. Jon ruled 'both, recovery first' on 2026-09-18.",
- "claim": "For a reference R_low maximally entangled with the lower open end of a cut second-layer bond, the boundary region needed to recover it (m_half along the family A_m) is set by the minimal cut in the optimized critical-Ising MERA and not in a Haar-random network of the same graph. Only that outcome is a Level-4 candidate. The expected outcome is a smooth curve (Level 2, or Level 3 negative).",
- "preregistration": "research/tools/bulk-recovery/PREREGISTRATION-HYP033.md (design approved 2026-09-21, committed before tensor code; becomes final only after G0)",
- "killer_test": "Gauge-covariant by construction: f(A) = I(R_low:A)/2S(R_low), invariant under a unitary on the bond (gate G3, void if it fails). Cone-like m_half <= 2; cut-like 7 to 10; smooth w > 6. Cut-like in both MERA and C-HAAR is a graph property, Level 2.",
- "counterfactual_novelty": "Four outcomes genuinely possible. Honest prior: outcome 4 (smooth), then 3. Outcome 2 is unlikely.",
- "prior_art_gate": {
-  "PAPER-2026-142": "bounds only, silent on where recovery fails; wedge reconstruction left open; pre-empts depth-monotone protection, the approximate-code statement and the observable",
-  "PAPER-2026-143": "origin of the decoupling/recoverability observable; abstract only, not read",
-  "arXiv:1601.01694": "minimal-cut recovery for random tensors at large bond dimension: why C-HAAR is mandatory"
- },
- "design_findings_2026_09_21": "v1 attached the reference to both open ends; the upper half is a state functional and v1's G1 would have failed. Fixed to R_low only. Graph count: cone and cut predictors differ by 8 sites at k=2, 2 sites at k=1; k=2 registered.",
- "budget": "Local first. Pod only if G0 shows a need. Cap 25 USD.",
- "related": [
-  "HYP-2026-006",
-  "HYP-2026-026",
-  "HYP-2026-032"
- ],
- "next_artifact": "None registered. Open: Jon's C-REWIRE ruling (moot for a positive claim); any follow-up on the post-hoc width/asymmetry difference needs its own pre-registration."
+  "id": "HYP-2026-033",
+  "title": "Bulk operator recovery in an optimized ternary MERA: does recoverability of an inserted bulk leg track the causal cone or the minimal cut?",
+  "date_proposed": "2026-09-18",
+  "status": "TESTED 2026-09-24 (SIM-2026-079): OUTCOME 4, SMOOTH -- the registered expected outcome. Level 2. Recovery onset in the optimized MERA (m_0.9 4.55) is indistinguishable from Haar-random networks (4.62); not cone, not cut. G5 not evaluable (chi 8 OOM). No geometric language per the kill conditions.",
+  "confidence": "medium (chi 6 only; 8 seeds per arm; G1-G3 24/24)",
+  "origin": "2026-09-14 valuable-questions review, proposal P4 with P1's control folded in. Jon ruled 'both, recovery first' on 2026-09-18.",
+  "claim": "For a reference R_low maximally entangled with the lower open end of a cut second-layer bond, the boundary region needed to recover it (m_half along the family A_m) is set by the minimal cut in the optimized critical-Ising MERA and not in a Haar-random network of the same graph. Only that outcome is a Level-4 candidate. The expected outcome is a smooth curve (Level 2, or Level 3 negative).",
+  "preregistration": "research/tools/bulk-recovery/PREREGISTRATION-HYP033.md (design approved 2026-09-21, committed before tensor code; becomes final only after G0)",
+  "killer_test": "Gauge-covariant by construction: f(A) = I(R_low:A)/2S(R_low), invariant under a unitary on the bond (gate G3, void if it fails). Cone-like m_half <= 2; cut-like 7 to 10; smooth w > 6. Cut-like in both MERA and C-HAAR is a graph property, Level 2.",
+  "counterfactual_novelty": "Four outcomes genuinely possible. Honest prior: outcome 4 (smooth), then 3. Outcome 2 is unlikely.",
+  "prior_art_gate": {
+    "PAPER-2026-142": "bounds only, silent on where recovery fails; wedge reconstruction left open; pre-empts depth-monotone protection, the approximate-code statement and the observable",
+    "PAPER-2026-143": "origin of the decoupling/recoverability observable; abstract only, not read",
+    "arXiv:1601.01694": "minimal-cut recovery for random tensors at large bond dimension: why C-HAAR is mandatory"
+  },
+  "design_findings_2026_09_21": "v1 attached the reference to both open ends; the upper half is a state functional and v1's G1 would have failed. Fixed to R_low only. Graph count: cone and cut predictors differ by 8 sites at k=2, 2 sites at k=1; k=2 registered.",
+  "budget": "Local first. Pod only if G0 shows a need. Cap 25 USD.",
+  "related": [
+    "HYP-2026-006",
+    "HYP-2026-026",
+    "HYP-2026-032"
+  ],
+  "next_artifact": "None registered. Open: Jon's C-REWIRE ruling (moot for a positive claim); any follow-up on the post-hoc width/asymmetry difference needs its own pre-registration.",
+  "post_hoc_followup_2026_10_08": "NOT PURSUED. The optimized-network curves are broader (w 7.76 vs Haar 6.06) and seed-asymmetric (m_0.9 left 4.75 / right 4.34). Both were seen only after unblinding, so they are POST-HOC and cannot be tested on the same data. Testing them needs a new pre-registration and a new RunPod run at chi=6, the only size that fits in memory (chi 8 OOM at 62 GB), where sharp minimal-cut behaviour is not expected anyway. Recommendation accepted by Jon 2026-10-08 ('run through it all'). Reopen only with a new pre-registration at larger chi."
 }

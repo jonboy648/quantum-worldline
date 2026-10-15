@@ -1,6 +1,6 @@
 # NEXT SESSION — Start Here
 
-**Last updated:** 2026-09-23. **Branch:** `public-release`; Jon said "okay to push" 2026-09-23 and origin/main was fast-forwarded to public-release (repo still PRIVATE; never push local `master`, its history holds an old RunPod key; never commit .mcp.json or paper drafts .tex/.pdf/.html).
+**Last updated:** 2026-09-25. **Branch:** `public-release`, pushed to PRIVATE origin `quantum-worldline-archive`. The PUBLIC repo `jonboy648/quantum-worldline` is a separate one-commit snapshot (see #-4). Never push local `master` (old RunPod key); never commit .mcp.json or paper drafts .tex/.pdf/.html.
 **Read order:** this file → `docs/governance/RESEARCH-DIRECTOR.md` (the governing standard) → `docs/governance/AUDIT-2026-08-11.md` → memory `MEMORY.md` → `TASKS.md` → `research/RESEARCH-LOG.md` → `research/ERRATA.md`.
 
 ---
@@ -11,7 +11,29 @@
   G5 not evaluable (chi 8 OOM, Jon ruled T1); I7 approved by Jon. Report: `research/tools/bulk-recovery/runpod_033/UNBLINDED_REPORT_v3.txt`.
 - Next: trunk-paper outline takes the outcome-4 branch (`docs/philosophy/TRUNK-PAPER-OUTLINE.md`); ask Jon re C-REWIRE (moot for a
   positive claim); post-hoc width/asymmetry difference is NOT claimed and needs its own pre-registration if pursued.
-- Before making the repo public: see #-2 item 3. Chapter 1 audio unfinished (Jon, 2026-09-23); no credits without his go.
+- **REPO PUBLIC 2026-09-25 (Jon: fresh public repo).** https://github.com/jonboy648/quantum-worldline is a ONE-COMMIT
+  public snapshot of public-release@2a70f15 (the URL Zenodo v5 cites; JOSS six-month clock starts 2026-09-25).
+  The working repo's full history moved to PRIVATE `jonboy648/quantum-worldline-archive`; local `origin` now points
+  there. Histories are unrelated: to update the public repo, `git archive HEAD` into a clone of the public repo,
+  commit, push. Never push the archive history (old emails/PDFs) or local `master` (old RunPod key) to the public repo.
+  Third-party PDFs + correspondence are untracked and gitignored (still on disk).
+- OLD RUNPOD KEY (rpa_TX2C...): still LIVE (API 200, checked 2026-10-08), only in local `master` history, on no remote.
+  Jon 2026-10-08: "drop the runpod key its fine" -- do NOT raise revocation again. The one rule that keeps it fine:
+  never push local `master` anywhere.
+- 2026-10-15 (later): DRAFT 1 COMPLETE, ~11k words, all four checks applied (positions: 2 wrong + 10 reworded fixed;
+  fact-check: 26 items verified at source and fixed, incl. PRD rejection found 08-17 not 08-23 (CLAUDE.md corrected);
+  novelty gate: partial prior statements for all 3 claims, cited; paper claims only the application + combined dilemma).
+  OPEN before posting: Redhead 1975 pp. 86-89 (library), read Ney 2021, Jon approves AI-use disclosure, Zenodo snapshot
+  of repo for stable citations, update public snapshot repo so cited paths exist there.
+- 2026-10-15: TRUNK PAPER DRAFT 1 WRITTEN: `docs/philosophy/TRUNK-PAPER-DRAFT.md` (~8.3k words, §1 and §3-§10 +
+  limitations/disclosure/refs; §2 waits on the positions check). Running/landed checks: POSITIONS-CHECK (cited authors'
+  positions vs texts), NOVELTY-GATE (§8 gate on the central argument), DRAFT1-FACTCHECK (numbers/quotes vs records),
+  hardware refresh (gap from scan #21). 2610.00478 = Sahu, van der Heijden, Van Raamsdonk, Zibakhsh; 2610.08787 = Meng,
+  Lan, Gu; both preprints, no journal (checked 10-15). Jon must approve the AI-use disclosure wording before posting.
+- 2026-10-08: scan #21 done (PAPER-152..155; must-cite 152/153; next PAPER-156). Trunk-paper references ALL VERIFIED
+  (`docs/philosophy/REFERENCES-VERIFIED-2026-10-08.md`, 5 corrected). HYP-033 post-hoc follow-up NOT PURSUED.
+  NEXT: draft the trunk paper from `docs/philosophy/TRUNK-PAPER-OUTLINE.md` (authors/venue of 2610.00478 + 2610.08787 still to check).
+- C-REWIRE DROPPED (prereg open question 5, 2026-09-24). Chapter 1 audio PAUSED by Jon 2026-09-25.
 
 ## ⚡ HOT STATE #-3 (2026-09-22): HYP-033 REGISTERED AND RUNNING ON RUNPOD. SUPERSEDES #-2 item 2.
 
@@ -76,7 +98,7 @@
    Pre-registration before code. No driver exists yet for insertion, recovery, rewiring or gauge orbit.
    The review's key finding: every "geometric" observable so far (F, T, Synge) is a functional of
    the exact state and never touched a network, which is why no matched control ever separated anything.
-3. **REPO PUBLIC: PUSHED 2026-09-23 (README corrected), STILL PRIVATE.** Before flipping public: tracked arXiv PDFs in research/downloads/, outreach emails, cover letter, and possible uncorrected 3.92 in knowledge-base.md / learning guides / Synge note. Original note: Jon said make it public (starts the JOSS six-month
+3. **SUPERSEDED: repo went public 2026-09-25 as a fresh snapshot, see #-4.** Before flipping public: tracked arXiv PDFs in research/downloads/, outreach emails, cover letter, and possible uncorrected 3.92 in knowledge-base.md / learning guides / Synge note. Original note: Jon said make it public (starts the JOSS six-month
    clock). GitHub was last pushed 2026-06-17; `main`'s README line 13 asserts alpha = 3.92 with no
    correction and 29 files carry 3.92. Going public as-is republishes the retracted headline. It
    needs a push of the corrected state first, and this file's standing rule is never push. Ask Jon.

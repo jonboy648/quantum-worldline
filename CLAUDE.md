@@ -41,8 +41,8 @@ Audit artifacts live in `research/data/audit/`; the standing audit is
 
 **Never report the status of anything outside this repo from an internal note. Check the source.**
 
-On 2026-08-23 the project discovered that PRD had rejected accession DV13971 on **2026-08-12** -- 11
-days earlier. Three internal records (`TASKS.md`, memory `paper_status.md`, `RESEARCH-LOG.md:1031`)
+On **2026-08-17** the project discovered that PRD had rejected accession DV13971 on **2026-08-12** -- 5
+days earlier. (Date corrected 2026-10-15 from the commit history: commit 0bdb172 recorded the discovery on 2026-08-17, five days late; this section was written on 2026-08-23 and originally said 08-23 and 11 days.) Three internal records (`TASKS.md`, memory `paper_status.md`, `RESEARCH-LOG.md:1031`)
 all confidently said "With editors". All three were written by the same process on the same day from
 a single lookup. They agreed with each other and with nothing external. A withdrawal letter was
 drafted and nearly sent to an editor who had already closed the file.

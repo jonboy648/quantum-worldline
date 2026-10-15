@@ -1,0 +1,43 @@
+{
+ "id": "PAPER-2026-155",
+ "title": "Terminal-Register Certification for Finite-Measurement Learning of Multiscale Quantum States",
+ "authors": [
+  "Bhvain Makwana",
+  "Kashyap Patel",
+  "Manjunath Joshi",
+  "Jaideep Mulherkar"
+ ],
+ "date": "2026-09-27",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2609.33567",
+ "arxiv_id": "2609.33567",
+ "categories": [
+  "quant-ph",
+  "cs.LG"
+ ],
+ "abstract": "Learns 1D pure states with an inverse binary MERA whose coarse-grained-away qubits are measured together at a terminal register; finite-shot certificate with a noise-aware implementation budget. On an open-boundary TFIM ground state, a frozen 8-qubit schedule reaches mean fidelity 0.996886 (60/60 held-out runs > 0.99). At n=16, MERA beats a causal-cone-complete, parameter-matched local circuit in all 30 paired comparisons (fidelity, long-range error, energy, entropy) despite the local circuit's 2.62x gate exposure; no run met the stationarity criterion.",
+ "relevance": 3,
+ "verdict": "WATCH",
+ "tags": [
+  "MERA",
+  "TFIM",
+  "state-learning",
+  "causal-cone",
+  "matched-control",
+  "hardware-protocol"
+ ],
+ "key_claims": [
+  "Inverse-MERA learning with terminal measurement reproduces the sequential bit-string distribution",
+  "Parameter-matched causal-cone-complete local circuit loses 30/30 to MERA at n=16 (unconverged)"
+ ],
+ "relevance_note": "Abstract only. Binary (not ternary) MERA on TFIM at 8-16 qubits with a matched local-circuit control, the control design RESEARCH-DIRECTOR section 19 asks for. Possible protocol reference for a hardware MERA-prep leg (Helios path); touches no anchor. The MERA-vs-local advantage comes from unconverged optimizations, so it is weak evidence.",
+ "related_hypotheses": [
+  "HYP-2026-033",
+  "HYP-2026-029"
+ ],
+ "related_papers": [],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "scan #21 (lead-run sequential arXiv export API + arxiv.org search fallback)",
+ "discovered_date": "2026-10-08"
+}

@@ -1,0 +1,49 @@
+{
+ "id": "PAPER-2026-153",
+ "title": "Algebraic structure in holographic tensor networks",
+ "authors": [
+  "Abhisek Sahu",
+  "Jeremy van der Heijden",
+  "Mark Van Raamsdonk",
+  "Rana Zibakhsh"
+ ],
+ "date": "2026-09-30",
+ "source": "arxiv",
+ "source_url": "https://arxiv.org/abs/2610.00478",
+ "arxiv_id": "2610.00478",
+ "categories": [
+  "hep-th",
+  "gr-qc",
+  "quant-ph"
+ ],
+ "abstract": "Tests the proposal (2511.21852) that generalized entanglement wedges carry subalgebras of observables, using holographic tensor networks. A generalized-entanglement-wedge analogue is a region with no containing region of fewer boundary legs. In the large-bond-dimension limit each such region has a canonical boundary subalgebra; intersections, joins and commutants are related to geometric operations on network regions; an algebraic entropy obeys monotonicity and SSA; a type II_1 algebra is built from a sequence of random tensor networks with growing bond dimension (ultraproduct).",
+ "relevance": 4,
+ "verdict": "WATCH",
+ "tags": [
+  "holographic-tensor-network",
+  "random-tensor-network",
+  "entanglement-wedge",
+  "von-Neumann-algebra",
+  "minimal-cut",
+  "bulk-reconstruction",
+  "HYP-033"
+ ],
+ "key_claims": [
+  "In isometric / large-D random tensor networks, extremal regions (minimal boundary-leg count) have canonically associated boundary subalgebras",
+  "Algebraic operations on these subalgebras track geometric operations on network regions; non-isometric maps 'proceed through a minimal cut'",
+  "Analysis ASSUMES exact isometry of extremal-region maps; approximate isometries at finite D are explicitly set aside",
+  "No MERA, no optimized (energy-minimized) network, no numerics"
+ ],
+ "relevance_note": "Full text grep-read. This is the formal statement of the 'cut-like' picture in the idealized regime (exact isometries, D -> infinity). HYP-033 (SIM-2026-079, outcome 4) found that an optimized chi=6 MERA is NOT cut-like and is indistinguishable from Haar at that chi, a finite-chi, optimized-network regime this paper explicitly excludes. So it neither pre-empts nor contradicts HYP-033; it is the idealized baseline that HYP-033's 'cut' outcome represented. Must-cite for any HYP-033 write-up and for a philosophy-of-physics piece on state functionals vs network-sensitive observables (a network-region -> algebra map is a network-sensitive object, but it is only established where the network is ideal). v1 2026-09-30, v2 2026-10-02.",
+ "related_hypotheses": [
+  "HYP-2026-033"
+ ],
+ "related_papers": [
+  "PAPER-2026-148",
+  "PAPER-2026-149"
+ ],
+ "anchor_contradiction": null,
+ "seeds_hypothesis": null,
+ "discovered_by": "scan #21 (lead-run sequential arXiv export API + arxiv.org search fallback)",
+ "discovered_date": "2026-10-08"
+}

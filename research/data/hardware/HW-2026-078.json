@@ -1,0 +1,35 @@
+{
+ "id": "HW-2026-078",
+ "title": "Independent QEC-primitive benchmark across 10 QPUs (IBM, IQM, Quantinuum): mid-circuit-measurement cost at 30-50 qubit width; Helios-1 lambda_eff ~0.2% direct, 0.22% -> 0.41% with MCM; on IBM, MCM degrades results ~10x relative to the no-MCM protocol",
+ "vendor": "Quantinuum (Helios-1, H2-1) compared with IBM and IQM; independent study (Juelich Supercomputing Centre)",
+ "organization": "Juelich Supercomputing Centre (independent benchmark)",
+ "processor": "Helios-1 and H2-1 (Quantinuum); IBM devices incl. ibm_kingston, ibm_fez, ibm_boston, ibm_phoenix; IQM devices",
+ "date": "2026-10-05",
+ "source_url": "https://arxiv.org/abs/2610.05928",
+ "relevance": 3,
+ "summary": "Montanez-Barrera and Michielsen (arXiv:2610.05928, submitted 2026-10-05) benchmark QEC primitives: parity extraction, mid-circuit measurement (MCM), reset, feed-forward and scheduling. They use an MCM implementation of linear-ramp QAOA whose approximation-ratio decay with depth defines an effective two-qubit depolarizing rate lambda_eff. Ten QPUs (IBM, IQM, Quantinuum) ran circuits with up to 2950 MCMs. Code-structured runs on Helios-1 and H2-1 reached 81 (surface code), 91 (color code) and 48 (bivariate-bicycle qLDPC) data qubits with up to 480 MCMs. On ibm_phoenix the benchmark tracked d=3 surface-code memory performance across chip regions.",
+ "tags": [
+  "Quantinuum",
+  "Helios",
+  "IBM",
+  "IQM",
+  "mid-circuit-measurement",
+  "benchmark",
+  "QEC-primitives",
+  "independent"
+ ],
+ "is_frontier": false,
+ "key_specs": {
+  "helios1_direct_lambda_eff": "about 0.2% (0.17-0.28%), roughly independent of chain length",
+  "helios1_mcm_lambda_eff": "0.22 +/- 0.04% at 30 qubits -> 0.41 +/- 0.05% at 50 qubits (attributed to partial serialization; at most 16 qubits processed at once)",
+  "h2_1_mcm_lambda_eff": "0.49 +/- 0.24% at 30 qubits",
+  "ibm_direct_lambda_eff": "0.30-0.80% across devices (1D chain)",
+  "ibm_mcm_penalty": "MCM degradation 'approximately an order of magnitude larger' than without MCM; weak size dependence over 10-60 qubits",
+  "largest_runs": "81/91/48 data qubits (surface/color/BB) with up to 480 MCMs on Quantinuum; 1D chains to 60 qubits (IBM) and 50 (Helios-1); up to 2950 MCMs in the study"
+ },
+ "actionable": "A measured, third-party cost for mid-circuit measurement at this project's working width (30-50 qubits) on its anchor machine. Any MCM-based MERA or transport circuit on Helios should budget lambda_eff of about 0.2-0.4% per two-qubit-gate equivalent, roughly doubling from 30 to 50 qubits as operations serialize. The paper reports that on IBM QPUs, adding MCMs degrades the result by about an order of magnitude relative to the same protocol without them. On Quantinuum, the extra MCM cost is 'comparable to that arising from two-qubit gate errors'. Quantinuum's blog (2026-10-08) says Helios was about 13x better at 30 and about 8x better at 50 data qubits than 'the comparable superconducting result'. Those ratios were not found in the paper text that was read, so treat them as the vendor's reading.",
+ "notes": "The lambda_eff values were checked against the text of the arXiv HTML (v1) on 2026-10-15; shot counts were 1000 on IBM and 50 on Quantinuum. The headline in the vendor blog is a press interpretation; the paper itself gives per-device rates and figures. An ibm_boston 10-qubit value in the text is ambiguous and is not recorded here.",
+ "source": "arxiv-preprint",
+ "discovered_by": "hardware-refresh-2026-10-15 (scan #21 hardware gap)",
+ "discovered_date": "2026-10-15"
+}
